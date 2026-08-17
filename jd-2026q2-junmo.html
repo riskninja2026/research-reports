@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>京东 2026年第二季度全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">京东集团 9618.HK / JD.O ｜ 全景尽调 ｜ 数据截止 2026年8月17日</div>
+    <h1>利润拐点已现，<br>复苏拐点未定</h1>
+    <p class="lede">单二季度合并经营利润由亏转盈，并非核心零售已经恢复增长，而是毛利结构改善、营销收缩与外卖减亏共同作用。<b>市场可能低估平台化带来的利润弹性，也可能低估 Joybuy 与 CECONOMY 对现金和利润口径的再扰动。</b></p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">合并毛利率改善｜单二季度同比</div>
+        <div class="big a">+1.24pt</div>
+        <div class="cap">结构和供应链效率先于收入恢复，利润改善具有经营基础。</div>
+      </div>
+      <div>
+        <div class="tag">新业务经营亏损｜上半年同比</div>
+        <div class="big b">+25.5%</div>
+        <div class="cap">外卖单体减亏尚未抵销其他投入，分部内部仍未形成同向改善。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="financials" data-junmo-role="basic-financials">
+  <div class="slabel">财务底图</div>
+  <h2>五年平台化抬升毛利，2025年的新业务投入打断了利润复利</h2>
+  <p>京东以自营零售获得交易规模，以平台、广告和物流服务提高变现与毛利，再把供应链能力复用于即时零售、下沉市场和海外业务。2021—2024年，服务化与费用效率共同推动利润率逐步提高；2025年投入强度上升后，经营利润与现金转换同时出现断层。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">单二季度收入</div><div class="v">3,464.01<span class="u">亿元</span></div><div class="d"><span class="down">同比 −2.9%</span></div></div>
+    <div class="cell"><div class="k">单二季度毛利｜推算</div><div class="v">593.07<span class="u">亿元</span></div><div class="d"><span class="up">同比 +4.7%</span></div></div>
+    <div class="cell"><div class="k">单二季度毛利率</div><div class="v">17.12%</div><div class="d"><span class="up">同比扩大</span></div></div>
+    <div class="cell"><div class="k">单二季度经营利润</div><div class="v">45.47<span class="u">亿元</span></div><div class="d"><span class="up">利润率 1.31%</span><span class="up">上年同期亏损</span></div></div>
+    <div class="cell"><div class="k">单二季度归母净利润</div><div class="v">71.29<span class="u">亿元</span></div><div class="d"><span class="up">净利率 2.06%</span><span class="up">同比 +15.4%</span></div></div>
+    <div class="cell"><div class="k">摊薄每股收益｜ADS</div><div class="v">5.01<span class="u">元</span></div><div class="d"><span>普通股 2.51元</span><span class="up">同比 +20.7%</span></div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>单二季度现金流比较，单位：亿元人民币；净资本开支及自由现金流采用公司定义。</caption>
+      <thead><tr><th>项目</th><th>2025Q2</th><th>2026Q2</th><th>同比</th></tr></thead>
+      <tbody>
+        <tr><td>经营活动现金流量净额</td><td>244.09</td><td>377.18</td><td class="up">+54.52%</td></tr>
+        <tr><td>净资本开支</td><td>30.32</td><td>55.20</td><td class="down">+82.06%</td></tr>
+        <tr class="grp"><td>公司口径自由现金流</td><td>220.18</td><td>318.35</td><td class="up">+44.59%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>五个完整财年：毛利复利快于收入，自由现金流代理在2025年骤降</h3>
+  <div class="tblscroll">
+    <table class="tbl" data-financials="history">
+      <caption>金额为亿元人民币；摊薄每股收益为元/普通股。现金资本开支代理来自现金流量表；自由现金流代理定义为经营现金流减该资本开支。</caption>
+      <thead><tr><th>年度</th><th>收入</th><th>毛利</th><th>毛利率</th><th>经营利润</th><th>经营利润率</th><th>归母净利润</th><th>归母净利率</th><th>摊薄EPS</th><th>ROE</th><th>经营现金流</th><th>资本开支代理</th><th>自由现金流代理</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>9,515.92</td><td>1,290.66</td><td>13.56%</td><td>41.41</td><td>0.44%</td><td>−35.60</td><td>−0.37%</td><td>−1.15</td><td>−1.80%</td><td>423.01</td><td>222.78</td><td>200.23</td></tr>
+        <tr><td>2022</td><td>10,462.36</td><td>1,470.73</td><td>14.06%</td><td>197.23</td><td>1.89%</td><td>103.80</td><td>0.99%</td><td>3.21</td><td>4.92%</td><td>578.19</td><td>229.13</td><td>349.06</td></tr>
+        <tr><td>2023</td><td>10,846.62</td><td>1,597.04</td><td>14.72%</td><td>260.25</td><td>2.40%</td><td>241.67</td><td>2.23%</td><td>7.61</td><td>10.86%</td><td>595.21</td><td>200.15</td><td>395.06</td></tr>
+        <tr><td>2024</td><td>11,588.19</td><td>1,838.68</td><td>15.87%</td><td>387.36</td><td>3.34%</td><td>413.59</td><td>3.57%</td><td>13.43</td><td>17.55%</td><td>580.95</td><td>138.19</td><td>442.76</td></tr>
+        <tr><td>2025</td><td>13,090.85</td><td>2,100.28</td><td>16.04%</td><td>27.74</td><td>0.21%</td><td>196.31</td><td>1.50%</td><td>6.45</td><td>8.45%</td><td>189.91</td><td>141.84</td><td>48.07</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">2021—2025年总收入年均复合增速处于高个位数，毛利 CAGR 为12.94%，服务收入 CAGR 为20.36%。毛利按收入减营业成本推算；ROE 按平均归母权益计算。ROIC 未机械列示，因为集团同时持有大量现金和权益投资，且上市子公司存在非控制性权益，单一合并口径会掩盖资本占用主体。</p>
+
+  <h3>最新运行率：收入稳定，利润与现金转换仍未回到同一节奏</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>损益及现金流项目为LTM 2026Q2，单位：亿元人民币；BVPS为2026年6月30日时点值。LTM按2025全年减2025H1、再加2026H1桥接。</caption>
+      <thead><tr><th>收入</th><th>毛利</th><th>毛利率</th><th>经营利润</th><th>经营利润率</th><th>归母净利润</th><th>归母净利率</th><th>经营现金流</th><th>公司口径FCF</th><th>ROE</th><th>BVPS</th></tr></thead>
+      <tbody><tr><td>13,134.38</td><td>2,178.74</td><td>16.59%</td><td>14.54</td><td>0.11%</td><td>147.94</td><td>1.13%</td><td>511.17</td><td>314.15</td><td>6.63%</td><td>81.52元</td></tr></tbody>
+    </table>
+  </div>
+
+  <div data-financials="segments">
+    <h3>报告分部：零售仍是利润池，新业务仍是投资池</h3>
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>收入为亿元人民币；2026Q2构成按抵销前分部收入计算。经营利润率位于未分配项目之前；股权激励、收购无形资产摊销、业务合作安排及罚款均不归入分部。</caption>
+        <thead><tr><th>分部</th><th>2023收入</th><th>2025收入</th><th>两年CAGR</th><th>2026Q2收入</th><th>抵销前构成</th><th>收入同比</th><th>经营利润率</th></tr></thead>
+        <tbody>
+          <tr><td>京东零售</td><td>9,453.43</td><td>11,263.99</td><td>9.16%</td><td>2,953.83</td><td>80.54%</td><td>−4.7%</td><td>4.56%</td></tr>
+          <tr><td>京东物流</td><td>1,666.25</td><td>2,171.46</td><td>14.16%</td><td>641.02</td><td>17.48%</td><td>+24.3%｜口径变更</td><td>3.53%</td></tr>
+          <tr><td>新业务</td><td>266.17</td><td>492.82</td><td>36.07%</td><td>72.60</td><td>1.98%</td><td>−47.6%｜口径变更</td><td>−135.73%</td></tr>
+          <tr class="grp"><td>分部间抵销</td><td>未列示</td><td>未列示</td><td>不可比</td><td>−203.44</td><td>不适用</td><td>不适用</td><td>不适用</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>收入子类：服务化是最稳定的结构变化</h3>
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>收入为亿元人民币；四年复合增速覆盖2021—2025年。</caption>
+        <thead><tr><th>收入子类</th><th>2021</th><th>2025</th><th>四年CAGR</th><th>2025收入占比</th><th>2026Q2</th><th>最新同比</th></tr></thead>
+        <tbody>
+          <tr><td>电子产品及家用电器</td><td>4,925.92</td><td>6,051.31</td><td>5.28%</td><td>46.23%</td><td>1,578.86</td><td>−11.8%</td></tr>
+          <tr><td>日用百货</td><td>3,230.63</td><td>4,186.71</td><td>6.70%</td><td>31.98%</td><td>1,092.29</td><td>+5.6%</td></tr>
+          <tr><td>平台及广告服务</td><td>721.18</td><td>1,071.31</td><td>10.40%</td><td>8.18%</td><td>308.60</td><td>+8.3%</td></tr>
+          <tr><td>物流及其他服务</td><td>638.19</td><td>1,781.52</td><td>29.26%</td><td>13.61%</td><td>484.26</td><td>+5.9%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p class="small">口径边界：现行三分部历史只追溯至2023年，2026Q2物流与新业务同比含口径变更。年度资本开支代理来自现金流量表中的物业设备软件及无形资产、土地使用权和在建工程现金支出；公司季度自由现金流采用扣除处置所得及消费信贷应收影响后的另一口径，两者不串联。BVPS为归母权益除期末流通普通股。LTM EPS不作加减桥接，因为各期加权平均股数不同。公司未披露可支持五年横向比较的区域收入，也未给用户、GMV及单位经济绝对值。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">用户变现</div>
+  <h2>3P快于1P，缺失的take rate决定平台化成色</h2>
+  <p>行业高基数确有客观依据：国家统计局口径下，限额以上家电零售从2025年上半年的 <span class="up">+30.7%</span> 转为2026年上半年的 <span class="down">−7.4%</span>，同期网上商品零售仍增长 <span class="up">4.8%</span>。京东的数码家电承压并非纯粹丢份额，但通信器材行业仍增长 <span class="up">14.4%</span>，也说明「高基数」不能解释所有品类落差。</p>
+
+  <p>更重要的变化发生在变现侧。管理层称季度活跃客户、MAU 与 PLUS 会员均保持双位数增长，且3P GMV已连续三个季度快于1P、占比继续提高。平台与广告收入领先商品收入，意味着相同流量可以贡献更高毛利；但公司没有给出用户绝对值、留存、GMV、take rate 或商户ROI，现阶段仍只能验证方向，不能验证变现强度。</p>
+
+  <div class="flowbox">
+    <svg viewBox="0 0 900 300" role="img" aria-label="单二季度经营利润改善由毛利增量、经营费用节约和物业收益增量共同构成" xmlns="http://www.w3.org/2000/svg">
+      <text x="36" y="38" fill="#122A4B" font-size="22" font-weight="700">单二季度经营利润桥</text>
+      <text x="36" y="64" fill="#6D7B88" font-size="13">亿元人民币｜推算｜框宽不编码金额</text>
+      <rect x="36" y="98" width="220" height="112" fill="#122A4B"/>
+      <text x="58" y="132" fill="#FFFFFF" font-size="15">毛利增量</text>
+      <text x="58" y="178" fill="#FFFFFF" font-size="34" font-weight="700">+26.67</text>
+      <polygon points="274,143 302,143 302,131 326,154 302,177 302,165 274,165" fill="#8FA8CC"/>
+      <rect x="340" y="98" width="220" height="112" fill="#2C6A57"/>
+      <text x="362" y="132" fill="#FFFFFF" font-size="15">经营费用节约</text>
+      <text x="362" y="178" fill="#FFFFFF" font-size="34" font-weight="700">+25.59</text>
+      <polygon points="578,143 606,143 606,131 630,154 606,177 606,165 578,165" fill="#8FA8CC"/>
+      <rect x="644" y="98" width="220" height="112" fill="#A32B57"/>
+      <text x="666" y="132" fill="#FFFFFF" font-size="15">物业收益增量</text>
+      <text x="666" y="178" fill="#FFFFFF" font-size="34" font-weight="700">+1.80</text>
+      <line x1="36" y1="244" x2="864" y2="244" stroke="#C9D0D8" stroke-width="1"/>
+      <text x="36" y="274" fill="#3C4A56" font-size="15">营销收缩是费用端主因，履约与研发增加则吸收了部分收益。</text>
+    </svg>
+    <div class="flow-note"><div class="badge">54.06亿元</div><div>上述三类变化完整解释了合并经营结果由亏转盈。它既不是单一裁员故事，也不是收入带动的经营杠杆，而是毛利结构与资源再分配共同作用。</div></div>
+  </div>
+
+  <p>非美国公认会计准则经营利润为54.83亿元，比报告口径高9.36亿元：股权激励和收购无形资产摊销分别加回10.66亿元、2.74亿元，物业出售收益则扣回4.04亿元。非美国公认会计准则归母净利润为89.30亿元，另受投资公允价值变动、减值及税务调整影响。调整后利润更适合观察经营趋势，但股权激励仍会形成真实稀释，不能因为被加回就忽略。</p>
+
+  <div class="callout"><b>利润耐久性边界：</b>毛利结构、广告变现与履约效率必须能够抵销销售恢复时重新增加的营销投入；仅靠压缩预算，不能证明增量资本回报已经改善。</div>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">物流效率</div>
+  <h2>物流增长很快，但即时配送改列让表面增速高于真实扩张</h2>
+  <p>京东物流收购原属新业务的本地即时配送业务后，自2026年起把原内部配送收入转为对平台第三方商家的外部收入；新业务则同步减少相关外部收入。这个变化提高了京东物流的报告收入，也压低了新业务的报告收入，不能把两端的同比全部视为有机变化。</p>
+  <div class="grid">
+    <div class="cell"><div class="k">运营仓库</div><div class="v">&gt;1,600<span class="u">个</span></div><div class="d">截至2025年末</div></div>
+    <div class="cell"><div class="k">管理总建筑面积</div><div class="v">&gt;3,400<span class="u">万平方米</span></div><div class="d">含云仓</div></div>
+    <div class="cell"><div class="k">亚洲一号园区</div><div class="v">45<span class="u">个</span></div><div class="d">覆盖30个城市</div></div>
+    <div class="cell"><div class="k">物流与新业务收入合计</div><div class="v up">+9.1%</div><div class="d">单二季度同比校验</div></div>
+    <div class="cell"><div class="k">物流经营利润增速</div><div class="v up">+15.6%</div><div class="d">单二季度同比</div></div>
+    <div class="cell"><div class="k">容量利用率及单票成本</div><div class="v">未披露</div><div class="d">缺同口径季度序列</div></div>
+  </div>
+  <p>全职与众包能力合并、无人车常态化运营及即时配送密度提升，理论上可以摊薄末端成本；但仓网规模不等于有效吞吐，公司没有给容量利用率、维护性资本开支或单票成本，管理层也未披露剔除德邦和口径变更后的利润率。下一步应观察外部客户收入、网络密度与单位成本能否同步改善。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">新业务</div>
+  <h2>外卖在止血，Joybuy在加码，新业务尚未形成统一的盈利方向</h2>
+  <p>电话会的最强增量是外卖单位经济改善：补贴金额/单下降、履约效率提高，佣金与广告贡献上升。问题在于公司仍把外卖、Joybuy、京喜、京东产发及其他海外业务装在同一分部，外卖的改善无法与其他投资单独核对。</p>
+  <div class="grid">
+    <div class="cell"><div class="k">外卖亏损收窄｜管理层口径</div><div class="v up">&gt;50%</div><div class="d">单二季度同比</div></div>
+    <div class="cell"><div class="k">新业务分部亏损收窄｜推算</div><div class="v up">33.3%</div><div class="d">单二季度同比</div></div>
+    <div class="cell"><div class="k">Joybuy收入变化</div><div class="v">2季翻倍</div><div class="d">管理层口径</div></div>
+    <div class="cell"><div class="k">Joybuy欧洲可触达消费者</div><div class="v">&gt;4,000<span class="u">万</span></div><div class="d">管理层口径，非活跃客户</div></div>
+    <div class="cell"><div class="k">京喜季度活跃客户增速</div><div class="v up">&gt;40%</div><div class="d">同比，未披露绝对值</div></div>
+    <div class="cell"><div class="k">京喜新增用户贡献</div><div class="v">四成</div><div class="d">占集团新增活跃客户</div></div>
+  </div>
+  <p>分部减亏幅度低于外卖单体，说明其他项目仍在消耗外卖释放的利润。Joybuy收入在两季内翻倍，亏损率环比改善，但绝对亏损仍扩大，未来投资还会增加；管理层没有回答分析师关于下半年及明年预算的问题。京喜带来新增用户，却没有留存、跨品类转化与贡献利润数据。</p>
+  <div class="callout"><b>分部信息缺口：</b>外卖的单位经济改善与Joybuy、京喜的新增投入被合并披露，现有数据无法拆分各项目的现金消耗；在管理层补充分项目损益前，分部改善仍无法归因。</div>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">资本纪律</div>
+  <h2>净现金足够承受试错，真正约束是现金质量与每股价值</h2>
+  <p>过去十二个月公司口径自由现金流同比改善 <span class="up">211.8%</span>，管理层把原因归于应收回款加快及以旧换新相关现金流出正常化。与此同时，存货周转放慢、应付账期延长，表明部分现金来自营运资金时点，而非全部来自利润永久提升。</p>
+  <div class="grid">
+    <div class="cell"><div class="k">广义净现金｜不含租赁</div><div class="v up">1,651.66<span class="u">亿元</span></div><div class="d">现金、受限现金及短期投资减计息债务</div></div>
+    <div class="cell"><div class="k">流动比率</div><div class="v">1.14×</div><div class="d">较年初下降</div></div>
+    <div class="cell"><div class="k">债务/LTM EBITDA代理</div><div class="v down">5.87×</div><div class="d">新业务亏损压低分母</div></div>
+    <div class="cell"><div class="k">存货周转天数</div><div class="v down">40.5<span class="u">天</span></div><div class="d">TTM</div></div>
+    <div class="cell"><div class="k">应付账款周转天数</div><div class="v down">64.2<span class="u">天</span></div><div class="d">TTM</div></div>
+    <div class="cell"><div class="k">应收账款周转天数</div><div class="v">8.6<span class="u">天</span></div><div class="d">TTM</div></div>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>偿债条款以2025年末最后完整披露为主，金额为亿元人民币；2026年6月末计息债务总额为698.92亿元。</caption>
+      <thead><tr><th>债务节点</th><th>本金或担保额</th><th>利率/权利</th><th>风险边界</th></tr></thead>
+      <tbody>
+        <tr><td>2026年到期优先票据</td><td>35.14</td><td>票面3.875%，无担保</td><td>一年内到期</td></tr>
+        <tr><td>2029年到期可转换票据</td><td>140.58</td><td>票面0.25%，持有人2027年可按面值回售</td><td>需预留回售流动性</td></tr>
+        <tr><td>有抵押借款｜2025年末</td><td>199.33</td><td>抵押资产381.38</td><td>主要为在建工程、楼宇、土地及子公司股权</td></tr>
+        <tr><td>短期债务｜2025年末</td><td>80.14</td><td>加权平均年利率1.7%</td><td>半年后综合融资成本未披露</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>债务倍数触发了财务预警的机械阈值，但分母被新业务亏损压低，资产端仍有2,350.58亿元现金、受限现金及短期投资。优先票据契约限制留置权及重大资产合并出售，公司未披露量化财务契约或最新余量。真正的压力情景是新业务现金消耗、并购交割与回购同时发生，并碰上可转换票据回售；当前净现金尚能覆盖这一组合，但不能替代到期管理。</p>
+  <p>现金质量还涉及京东科技。2025年集团向该关联方无追索权转让企业应收款720.32亿元，法律形式上实现终止确认；公司称交易按正常商业条款定价，但投资者仍需验证信用风险是否真正转移，以及回款加快是否依赖关联安排。</p>
+
+  <h3>回购是真回报，净缩股才是结果；创始人控制仍应进入折价</h3>
+  <p>从2023年至2026年上半年，回购与宣告股息合计超过同期普通股外部融资，京东对母公司普通股股东实现累计净回馈。管理层强调毛回购规模，但股权激励、行权与库存股时点会吞掉一部分效果，因此净流通股才是每股价值的最终检验。</p>
+  <div class="grid">
+    <div class="cell"><div class="k">累计股东回馈</div><div class="v up">≈130<span class="u">亿美元</span></div><div class="d">回购加宣告股息</div></div>
+    <div class="cell"><div class="k">上半年毛回购比例</div><div class="v up">2.5%</div><div class="d">相对年初流通股</div></div>
+    <div class="cell"><div class="k">期末净流通股变化</div><div class="v up">−1.97%</div><div class="d">半年净减少</div></div>
+    <div class="cell"><div class="k">股权激励/归母净利</div><div class="v down">24.1%</div><div class="d">2025年</div></div>
+    <div class="cell"><div class="k">刘强东经济持股</div><div class="v">12.7%</div><div class="d">截至2026年3月18日</div></div>
+    <div class="cell"><div class="k">刘强东投票权</div><div class="v down">73.1%</div><div class="d">不同投票权架构</div></div>
+  </div>
+  <p>2025年度股息约14亿美元，相当于当年归母净利润的49.9%，TTM自由现金流覆盖约3.3倍；现有回购授权尚余原计划的20%。回报政策没有固定派息率，仍取决于董事会酌情决定。</p>
+  <p>激励稀释不能只看费用。2025年末未归属RSU与未行使期权合计9,442.92万股，相当于年末流通股的3.44%；同年股权激励费用47.26亿元，其中延长期权行权期带来9.14亿元一次性费用。刘强东当年获授500万份期权与1,000万份RSU，期权行权价为每股17.175美元，两类奖励均按五年服务期归属而没有披露业绩门槛；相关费用约占集团股权激励费用28.9%。2026年上半年股权激励费用19.79亿元，同比下降18.4%，但未来费用与实际稀释仍需分别跟踪。</p>
+  <p>治理端，B类普通股每股拥有20票，使经济权益与控制权明显分离。京东科技由创始人控制，2025年集团向其采购支付处理及其他服务155.11亿元，约占集团收入1.18%；交易具有业务实质且由审计委员会审批，但公平定价无法仅凭公司陈述独立验证。2026年上半年另确认国家市场监管总局罚款6.35亿元，实际计入一季度，提示平台商家资质审查并非抽象合规风险。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">并购事件</div>
+  <h2>收购价格不贵，低利润与欧盟审查才是交易的真实成本</h2>
+  <p>CECONOMY拥有 MediaMarkt 与 Saturn，在欧洲以大型门店、电商和服务组成全渠道网络。若交割，京东会获得显著的海外收入入口，但必须把这部分收购增长与 Joybuy 的有机扩张分开；否则并表后的收入跳升会掩盖核心业务真实增速。</p>
+  <p>交易采用面向全体股东的现金要约，不以京东股份支付，因此对价本身不直接稀释京东股本；过桥融资的最终再融资结构仍未披露。年报未将CECONOMY列为报告期关联方，现有公开披露也未显示交易前存在关联关系。</p>
+  <div class="grid">
+    <div class="cell"><div class="k">京东已锁定权益</div><div class="v">59.8%</div><div class="d">股权及投票权</div></div>
+    <div class="cell"><div class="k">现金对价</div><div class="v">13.35<span class="u">亿欧元</span></div><div class="d">年报期后事项</div></div>
+    <div class="cell"><div class="k">与合作方合计持股</div><div class="v">85.2%</div><div class="d">含Convergenta保留权益</div></div>
+    <div class="cell"><div class="k">过桥融资额度</div><div class="v down">20<span class="u">亿欧元</span></div><div class="d">交割资金上限</div></div>
+    <div class="cell"><div class="k">目标公司年度销售额</div><div class="v">231<span class="u">亿欧元</span></div><div class="d">FY2024/25</div></div>
+    <div class="cell"><div class="k">目标公司调整后EBIT率</div><div class="v down">1.64%</div><div class="d">低利润零售资产</div></div>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>目标公司口径及交易派生；股权价值倍数并非企业价值倍数。</caption>
+      <thead><tr><th>观察量</th><th>结果</th><th>解释边界</th></tr></thead>
+      <tbody>
+        <tr><td>调整后EBIT</td><td>3.78亿欧元</td><td>排除非经常项目及组合变化</td></tr>
+        <tr><td>租赁调整后自由现金流</td><td>3.37亿欧元</td><td>单年现金流，不保证可持续或可上划</td></tr>
+        <tr><td>反推100%股权价值/调整后EBIT</td><td>5.91×</td><td>未扣目标公司净债务与租赁</td></tr>
+        <tr><td>京东对价/归属自由现金流</td><td>6.62×</td><td>按已锁定权益机械计算</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout"><b>监管节点：</b>欧盟委员会于2026年5月28日依据《外国补贴条例》启动深入调查，重点审查优惠融资、税收激励或补助是否扭曲收购与合并后的竞争，法定决定期限为2026年10月2日。截至数据截止日未见交割；电话会上管理层面对相关提问只回答Joybuy，没有更新审批、预算或整合安排。</div>
+  <p>当前缺少交割后的购买价分摊、商誉、净债务、备考EPS、BVPS及自由现金流，也缺少门店、仓网、采购、品牌和IT整合边界。资金承受力不是最紧的约束；监管附加条件、交割延迟及低利润业务无法产生协同，才是价值创造的失败路径。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">市场定价</div>
+  <h2>盈利倍数反映低增长预期，账面价值定价却要求长期ROE重返两位数</h2>
+  <p>同业只用于识别市场定价，不用于套用中位数：京东是自营零售加物流，阿里以平台与云为主，美团以本地服务为主且预测利润仍为负。京东的估值矛盾在于，现金收益率看似便宜，账面价值定价却已隐含明显的回报率修复。</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Wind盘中快照，2026年8月17日14:18 HKT；Wind「总市值2」字段含限售股，股价为港元，总市值为亿港元。</caption>
+      <thead><tr><th>公司</th><th>股价</th><th>总市值</th><th>PE TTM</th><th>预测PE</th><th>PB LF</th><th>股息率</th></tr></thead>
+      <tbody>
+        <tr><td>京东集团-SW</td><td>114.10</td><td>3,215.67</td><td>18.879×</td><td>11.255×</td><td>1.275×</td><td>3.43%</td></tr>
+        <tr><td>阿里巴巴-W</td><td>123.20</td><td>23,623.60</td><td>19.696×</td><td>20.353×</td><td>1.952×</td><td>0.84%</td></tr>
+        <tr><td>美团-W</td><td>88.05</td><td>5,437.50</td><td>−11.931×</td><td>−50.560×</td><td>3.202×</td><td>未返回</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">同业表只说明市场如何给不同商业模式定价，不用中位数直接套算京东。Wind总市值字段隐含约28.18亿股，高于港交所披露的27.56亿股已发行股本；下述京东估值统一采用期末26.88亿股流通股，并按1港元兑0.86496元人民币换算，避免分母混用。</p>
+
+  <h3>三年框架只约束关键变量，不伪装成精确预测</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2026—2028年经营与现金情景；均为研究假设，不是管理层指引。</caption>
+      <thead><tr><th>情景</th><th>京东零售收入CAGR</th><th>零售经营利润率</th><th>新业务路径</th><th>年度自由现金流</th></tr></thead>
+      <tbody>
+        <tr><td>压力</td><td>不高于2%</td><td>低于4%</td><td>年亏损到2028年仍高于200亿元</td><td>低于250亿元</td></tr>
+        <tr><td>基准</td><td>3%—6%</td><td>约5%</td><td>三年内亏损至少减半</td><td>300—450亿元</td></tr>
+        <tr><td>上行</td><td>高个位数</td><td>接近长期目标</td><td>2028年前后达到自我造血</td><td>高于500亿元</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">收入区间以行业低速增长、第三方平台化和管理层第三季度转正承诺为边界；利润率上限低于管理层长期「高个位数」目标；现金流区间同时约束营运资金回吐和新业务投入。估值表不把这些情景机械平均。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">Wind隐含预测EPS</div><div class="v">HK$10.14</div><div class="d">预测期未披露</div></div>
+    <div class="cell"><div class="k">当前公司口径FCF收益率</div><div class="v up">11.84%</div><div class="d">按港交所期末流通股</div></div>
+    <div class="cell"><div class="k">当前PB隐含长期ROE</div><div class="v">12.69%</div><div class="d">Ke 11%、g 3%</div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>三种估值方法独立观察，不作机械平均；价格均为港元/普通股。</caption>
+      <thead><tr><th>方法</th><th>压力情景</th><th>基准情景</th><th>上行情景</th><th>核心假设</th></tr></thead>
+      <tbody>
+        <tr><td>预测盈利倍数</td><td>HK$91</td><td>HK$122</td><td>HK$152</td><td>9× / 12× / 15×</td></tr>
+        <tr><td>自由现金流收益率</td><td>HK$97</td><td>HK$135</td><td>HK$169</td><td>14% / 10% / 8%</td></tr>
+        <tr><td>P/B—ROE剩余收益</td><td>HK$47</td><td>HK$106</td><td>HK$151</td><td>0.50× / 1.125× / 1.60×</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>盈利倍数法最依赖零售收入按承诺恢复；现金流法最容易被应付账期与以旧换新时点误导；剩余收益法则揭示结构性下行：若长期ROE无法覆盖股权成本，净现金也只能延缓而不能消除估值压缩。当前价格位于盈利与现金流基准锚之下、剩余收益基准锚之上，分歧来自市场究竟相信短期修复还是长期资本回报。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">最终判断</div>
+  <h2>当前价格没有押注新业务成功，也没有留下深度折价</h2>
+  <div class="finds">
+    <div class="find good"><div class="t">核心零售确认</div><p>2026Q3收入实际转正，且绝对经营利润同步同比增长；只满足一个条件不算确认。</p></div>
+    <div class="find good"><div class="t">平台变现确认</div><p>未来一季披露GMV、take rate或商户ROI中的至少1项，并与广告增速同向。</p></div>
+    <div class="find warn"><div class="t">新业务失败边界</div><p>下一季分部亏损无法在同比、环比2个方向同时改善，说明内部投入仍相互抵销。</p></div>
+    <div class="find warn"><div class="t">现金质量失败边界</div><p>存货与应付账期正常化后，经营现金流连续2季走弱，近期改善便不能视为常态。</p></div>
+    <div class="find warn"><div class="t">并购失败边界</div><p>交割后6个月仍未披露协同、购买价分摊和备考回报，低价收购也可能成为低回报扩张。</p></div>
+    <div class="find good"><div class="t">每股价值确认</div><p>未来2个季末净流通股继续下降，且股息仍由可重复现金流覆盖。</p></div>
+  </div>
+  <div class="quote">决定估值上限的不是利润能否反弹，而是利润恢复后要由谁分享——新业务、管理层，还是普通股股东。</div>
+  <p><strong>最终判断：</strong>三种估值基准把当前价格夹在中间，安全边际来自现金与成熟业务，而不是对增长的低估。最强反方观点是服务化、3P和供应链效率足以让利润长期先于收入扩张；真正的确认路径，是核心零售增长、绝对利润与新业务减亏在下一份季报中同时成立。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">方法来源</div>
+  <h2>关键判断都能回到中文公告、管理层原话或明确算式</h2>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>来源分工与证据边界。</caption>
+      <thead><tr><th>证据层</th><th>主要材料</th><th>在报告中的用途</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr><td>会计事实</td><td>港交所中文Q2、Q1公告及2021—2025年报</td><td>财务、分部、现金、债务、股本与关联交易</td><td>公告采用美国公认会计准则；Q2及Q1未经审计</td></tr>
+        <tr><td>管理层主张</td><td>2026Q2电话会逐字稿</td><td>用户、3P、外卖、Joybuy与前瞻承诺</td><td>未披露绝对用户数及完整单位经济</td></tr>
+        <tr><td>市场定价</td><td>Wind盘中快照及人民币汇率</td><td>股价、倍数、同业与情景输入</td><td>供应商总市值口径未用于京东估值</td></tr>
+        <tr><td>外部验证</td><td>国家统计局、欧盟委员会及CECONOMY官方资料</td><td>行业基数、监管进度与目标公司经营数据</td><td>并购尚无交割后备考报表</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>主要原始材料：<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0813/2026081300918_c.pdf">京东2026年第二季度及中期业绩公告</a>、<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0512/2026051200786_c.pdf">京东2026年第一季度业绩公告</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0416/2026041601497_c.pdf">京东2025年报</a>、<a href="https://www.stats.gov.cn/sj/zxfbhjd/202607/t20260715_1964127.html">国家统计局上半年消费数据</a>、<a href="https://germany.representation.ec.europa.eu/nachrichten-und-veranstaltungen/pressemitteilungen/drittstaatliche-subventionen-kommission-leitet-eingehende-untersuchung-zur-geplanten-ubernahme-von-2026-05-28_de">欧盟委员会外国补贴审查公告</a>及<a href="https://www.ceconomy-mms.com/en/article/ceconomy-wachst-202425-im-dritten-jahr-in-folge">CECONOMY FY2024/25官方结果</a>。其余四份中文年报沿用同一港交所披露链。</p>
+  <p class="small">推算方法：毛利=收入−营业成本；单二季度、LTM及利润桥均由公告期数机械桥接；年度现金流代理=经营活动现金流量净额−现金资本开支代理；ROE按平均归母权益；BVPS按期末流通普通股；分部构成按抵销前收入；估值分别采用预测EPS倍数、公司口径自由现金流收益率及P/B—ROE剩余收益。管理层未披露的用户、GMV、单位经济、并购备考数据及Wind预测期均未填补。</p>
+</section>
+
+<footer>
+  <p>数据截止2026年8月17日；年度财务报表经审计，季度及中期公告未经审计。完整来源、口径和推算边界见上节，计算账本与证据账本随本地报告保存。</p>
+  <p>市场价格、汇率与预测倍数均为时点数据，可能在报告发布后变化。本报告仅用于研究讨论，不构成投资建议。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
