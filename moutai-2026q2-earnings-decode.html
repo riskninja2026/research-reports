@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>贵州茅台 2026Q2 业绩拆解</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">贵州茅台 600519.SH ｜ 2026 年第二季度及中期业绩 ｜ 公告日 2026.08.15</div>
+    <h1>i茅台接管了渠道，<br>却没有接住 Q2 增长</h1>
+    <p class="lede">上半年营业收入仍增长 1.47%，归母净利润只降 1.95%，标题看起来只是行业下行期的一次小波动。<b>把半年拆回单季，判断会变</b>：Q2 收入与利润同时转负，而 i茅台的爆发更像渠道迁移，尚未变成等量的新需求。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">渠道迁移 · Q2 i茅台收入同比</div>
+        <div class="big a">+283%</div>
+        <div class="cap">推算 187.11 亿元，占 Q2 主营业务收入 50.9%；H1 同比 +274.2%。</div>
+      </div>
+      <div>
+        <div class="tag">利润表 · Q2 归母净利润同比</div>
+        <div class="big b">−6.9%</div>
+        <div class="cap">推算 172.74 亿元；同期营业收入 −5.1%，毛利率同比 −1.16pt。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on">
+  <div class="slabel">概览</div>
+  <h2>Q1 托住了半年，Q2 已经转负</h2>
+  <p>2026Q1 营业收入同比增长 6.54%，归母净利润增长 1.47%。将半年报累计数扣除一季报后，Q2 的收入、毛利和利润全部下降。<strong>营业收入的半年正增长全部来自 Q1。</strong></p>
+  <div class="grid">
+    <div class="cell"><div class="k">营业收入</div><div class="v">367.94<span class="u">亿</span></div>
+      <div class="d"><span class="down">同比 −5.1%</span><span>H1 +1.47%</span></div></div>
+    <div class="cell"><div class="k">毛利</div><div class="v">328.41<span class="u">亿</span></div>
+      <div class="d"><span class="down">同比 −6.4%</span><span>成本 +6.4%</span></div></div>
+    <div class="cell"><div class="k">毛利率</div><div class="v">89.26<span class="u">%</span></div>
+      <div class="d"><span class="down">同比 −1.16pt</span><span>Q1 89.76%</span></div></div>
+    <div class="cell"><div class="k">营业利润</div><div class="v">238.74<span class="u">亿</span></div>
+      <div class="d"><span class="down">同比 −7.2%</span><span>利润率 64.9%</span></div></div>
+    <div class="cell"><div class="k">归母净利润</div><div class="v">172.74<span class="u">亿</span></div>
+      <div class="d"><span class="down">同比 −6.9%</span><span>净利率 47.0%</span></div></div>
+    <div class="cell"><div class="k">扣非归母净利润</div><div class="v">172.24<span class="u">亿</span></div>
+      <div class="d"><span class="down">同比 −7.1%</span><span>占归母 99.7%</span></div></div>
+  </div>
+  <p class="small">Q2 均为推算：2026H1 累计数减 2026Q1；上年 Q2 同理。公司未单列 Q2，且两份当期报告均未经审计。Q1 含春节旺季，环比不作为趋势判断。</p>
+  <div class="callout">
+    <b>利润下滑不是一次性项目造成的。</b>推算 Q2 归母与扣非归母只相差 0.50 亿元，约占归母净利润 0.29%；扣非跌幅反而更大。
+  </div>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">渠道</div>
+  <h2>i茅台的增量，95.6% 被别处的减量抵消</h2>
+  <p>H1 i茅台收入同比增加 295.03 亿元，但「其他直销」减少 175.51 亿元，批发代理减少 106.46 亿元，主营业务收入最终只增加 13.06 亿元。<strong>平台高增长首先证明茅台有能力搬动渠道，还没有证明终端需求同比例增加。</strong></p>
+
+  <div class="flowbox">
+    <svg viewBox="0 0 720 400" role="img" aria-label="2025H1 到 2026H1 主营业务收入的渠道迁移桥：i茅台增加，其他直销和批发代理减少">
+      <line x1="20" y1="260" x2="700" y2="260" stroke="#0F1A22" stroke-width="1"/>
+      <text x="8" y="264" font-family="ui-monospace,monospace" font-size="11" fill="#6D7B88">0</text>
+
+      <rect x="40" y="117.0" width="80" height="143.0" fill="#9AA6B2"/>
+      <text x="80" y="107" text-anchor="middle" font-family="ui-monospace,monospace" font-size="17" font-weight="600" fill="#0F1A22">893.53</text>
+      <line x1="120" y1="117.0" x2="170" y2="117.0" stroke="#9AA6B2" stroke-width="1" stroke-dasharray="3 3"/>
+
+      <rect x="170" y="69.8" width="80" height="47.2" fill="#2C6A57"/>
+      <text x="210" y="59.8" text-anchor="middle" font-family="ui-monospace,monospace" font-size="17" font-weight="600" fill="#0F1A22">+295.03</text>
+      <line x1="250" y1="69.8" x2="300" y2="69.8" stroke="#9AA6B2" stroke-width="1" stroke-dasharray="3 3"/>
+
+      <rect x="300" y="69.8" width="80" height="28.1" fill="#A32B57"/>
+      <text x="340" y="59.8" text-anchor="middle" font-family="ui-monospace,monospace" font-size="17" font-weight="600" fill="#0F1A22">−175.51</text>
+      <line x1="380" y1="97.9" x2="430" y2="97.9" stroke="#9AA6B2" stroke-width="1" stroke-dasharray="3 3"/>
+
+      <rect x="430" y="97.9" width="80" height="17.0" fill="#A32B57"/>
+      <text x="470" y="87.9" text-anchor="middle" font-family="ui-monospace,monospace" font-size="17" font-weight="600" fill="#0F1A22">−106.46</text>
+      <line x1="510" y1="114.9" x2="560" y2="114.9" stroke="#9AA6B2" stroke-width="1" stroke-dasharray="3 3"/>
+
+      <rect x="560" y="114.9" width="80" height="145.1" fill="#122A4B"/>
+      <text x="600" y="104.9" text-anchor="middle" font-family="ui-monospace,monospace" font-size="17" font-weight="600" fill="#0F1A22">906.59</text>
+
+      <text x="80" y="286" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="13" fill="#3C4A56">2025H1</text>
+      <text x="80" y="305" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="13" fill="#3C4A56">主营收入</text>
+      <text x="210" y="286" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="13" fill="#3C4A56">i茅台</text>
+      <text x="210" y="305" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="13" fill="#3C4A56">增量</text>
+      <text x="340" y="286" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="13" fill="#3C4A56">其他直销</text>
+      <text x="340" y="305" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="13" fill="#3C4A56">减量</text>
+      <text x="470" y="286" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="13" fill="#3C4A56">批发代理</text>
+      <text x="470" y="305" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="13" fill="#3C4A56">减量</text>
+      <text x="600" y="286" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="13" fill="#3C4A56">2026H1</text>
+      <text x="600" y="305" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="13" fill="#3C4A56">主营收入</text>
+      <text x="700" y="376" text-anchor="end" font-family="ui-monospace,monospace" font-size="11" fill="#6D7B88">单位：亿元</text>
+    </svg>
+    <div class="flow-note">
+      <div class="badge">95.6%</div>
+      <div>i茅台的 295.03 亿元增量中，约 281.97 亿元被其他渠道减量抵消。推算方法：其他直销＝直销收入−i茅台收入；各项均比较 2026H1 与 2025H1。</div>
+    </div>
+  </div>
+
+  <h3>Q2 的主力茅台酒接近平，系列酒拖累更重</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>推算 Q2，单位：亿元；分类数据原披露单位为万元</caption>
+      <thead><tr><th>项目</th><th>2026Q2</th><th>2025Q2</th><th>同比</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="4">按产品</td></tr>
+        <tr><td>茅台酒</td><td>317.20</td><td>320.32</td><td class="down">−1.0%</td></tr>
+        <tr><td>系列酒</td><td>50.53</td><td>67.40</td><td class="down">−25.0%</td></tr>
+        <tr class="grp"><td colspan="4">按渠道</td></tr>
+        <tr><td>直销</td><td>224.58</td><td>167.89</td><td class="up">+33.8%</td></tr>
+        <tr><td>批发代理</td><td>143.15</td><td>219.83</td><td class="down">−34.9%</td></tr>
+        <tr><td>其中：i茅台</td><td>187.11</td><td>48.90</td><td class="up">+282.6%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Q2 分类数由 H1 减 Q1 推算，受万元级披露精度影响；i茅台是直销的子集，不应与直销相加。</p>
+  <div class="quote">平台成交暴增说明渠道已经变了，不代表总需求已经回来了。</div>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">毛利</div>
+  <h2>渠道结构本该抬升毛利率，结果反而少了 1.74 个百分点</h2>
+  <p>直销占 H1 主营收入的比例从 44.8% 升至 57.3%，而上年直销毛利率比批发代理高 4.08pt。若只改变渠道结构、保持上年各渠道毛利率，H1 综合毛利率应升至 91.81%。实际只有 89.56%。<strong>问题不是直销占比太高，而是主要产品与渠道的毛利率都在退。</strong></p>
+
+  <div class="rows">
+    <div class="row"><div class="nm">直销<span>93.55% → 92.93%</span></div>
+      <div class="track"><div class="fill" style="width:100%"></div></div>
+      <div class="fig">92.93%<span class="down">−0.62pt</span></div></div>
+    <div class="row"><div class="nm">茅台酒<span>93.85% → 92.28%</span></div>
+      <div class="track"><div class="fill soft" style="width:99.3%"></div></div>
+      <div class="fig">92.28%<span class="down">−1.57pt</span></div></div>
+    <div class="row"><div class="nm">综合<span>91.30% → 89.56%</span></div>
+      <div class="track"><div class="fill alt" style="width:96.4%"></div></div>
+      <div class="fig">89.56%<span class="down">−1.74pt</span></div></div>
+    <div class="row"><div class="nm">批发代理<span>89.47% → 85.02%</span></div>
+      <div class="track"><div class="fill alt" style="width:91.5%"></div></div>
+      <div class="fig">85.02%<span class="down">−4.45pt</span></div></div>
+    <div class="row"><div class="nm">系列酒<span>77.59% → 73.59%</span></div>
+      <div class="track"><div class="fill alt" style="width:79.2%"></div></div>
+      <div class="fig">73.59%<span class="down">−4.00pt</span></div></div>
+  </div>
+  <p class="small">H1 毛利率＝1−营业成本÷营业收入；对比基期为 2025H1。条形长度编码 2026H1 毛利率，以直销 92.93% 为 100%。</p>
+
+  <div class="callout">
+    <b>渠道迁移其实带来了约 +51bp 的结构红利。</b>按上年渠道毛利率反推，直销占比上升应把综合毛利率从 91.30% 推至 91.81%；各渠道自身毛利率下滑再拉低约 226bp，最终净降 174bp。该拆解是分析口径，不是公司披露的价格、销量或成本桥。
+  </div>
+  <p>Q2 的信号更直接：营业收入下降 5.14%，营业成本却增长 6.38%，毛利率降至 89.26%。公司只解释为销量增加及生产成本增加，没有披露单瓶售价、销量或产品组合桥，因此无法把压力精确分给价格、投放结构和单位成本。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">现金</div>
+  <h2>经营现金流涨九倍，卖酒只解释了小部分</h2>
+  <p>推算 Q2 经营现金流从 43.10 亿元升至 437.81 亿元，同比多出 394.71 亿元。四个明确的财务公司资金项目贡献了其中 353.11 亿元，解释 89.5% 的增量。<strong>这主要是财务公司资金头寸释放，不是同等规模的白酒现金利润。</strong></p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>推算 Q2 现金流，单位：亿元</caption>
+      <thead><tr><th>项目</th><th>2026Q2</th><th>2025Q2</th><th>变化</th></tr></thead>
+      <tbody>
+        <tr><td>经营活动现金流净额</td><td>437.81</td><td>43.10</td><td class="up">+915.8%</td></tr>
+        <tr><td>四项财务公司资金影响</td><td>+258.72</td><td>−94.38</td><td>+353.11</td></tr>
+        <tr class="grp"><td>剔除四项后的剩余现金流</td><td>179.08</td><td>137.48</td><td class="up">+30.3%</td></tr>
+        <tr><td>销售商品、提供劳务收到的现金</td><td>420.29</td><td>389.43</td><td class="up">+7.9%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">四项为客户存款、客户贷款及垫款、存放央行和同业款项、拆出资金；按现金流入/流出方向机械剔除。剩余现金流不是公司定义的「核心经营现金流」，仍可能包含其他财务公司项目。</p>
+  <div class="callout">
+    <b>H1 的结论更极端。</b>四项资金变动解释了经营现金流同比增量的 98.9%；机械剔除后，剩余现金流为 393.42 亿元，同比仅增长 1.7%，而不是报表上的 +438.84%。正面信号仍在：Q2 销货收现同比增长 7.9%，客户回款没有随收入同步恶化。
+  </div>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">资产负债表</div>
+  <h2>预收款没有继续恶化，但也还没有重新蓄水</h2>
+  <p>合同负债从年末 80.07 亿元降至 Q1 的 30.27 亿元，H1 回到 31.78 亿元；也就是说，Q2 只增加了 1.50 亿元。公司明确把下降归因于市场化改革、销售模式变化和预收政策调整，因此不能直接等同于需求崩塌。<strong>但在 Q2 收入转负时，它也还不是一座明显的未来收入水库。</strong></p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">合同负债</div><div class="v">31.78<span class="u">亿</span></div>
+      <div class="d"><span class="down">较年末 −60.3%</span><span class="up">较 Q1 +5.0%</span></div></div>
+    <div class="cell"><div class="k">存货</div><div class="v">613.17<span class="u">亿</span></div>
+      <div class="d"><span>较年末 −0.2%</span><span>较 Q1 +1.0%</span></div></div>
+    <div class="cell"><div class="k">国内经销商</div><div class="v">2,307<span class="u">家</span></div>
+      <div class="d"><span>H1 净减 46</span><span class="up">Q2 推算净增 209</span></div></div>
+  </div>
+  <p>经销商表面上半年只净减 46 家，过程却很剧烈：Q1 国内新增 6 家、减少 261 家；推算 Q2 新增 214 家、只再减少 5 家。公司称变动主要来自系列酒经销商。渠道清洗集中在 Q1，Q2 已进入补网阶段，下一步要看新增经销商能否转成收入和预收款。</p>
+  <p>公司厂内存货总额几乎没变，自制半成品增加、在产品和原料减少，更像生产阶段转换，而不是成品堆积。这个口径看不到经销商与终端库存，不能据此排除渠道库存风险。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">定价</div>
+  <h2>第二次提价把修复任务推给了下半年</h2>
+  <p>3 月 31 日起，飞天茅台 2026 的销售合同价提高 100 元，自营零售价提高 40 元。价格上调覆盖了整个 Q2，但推算茅台酒收入仍下降约 1%，系列酒下降 25%，综合毛利率也继续承压。7 月 18 日，公司再次把合同价和 i茅台零售价各提高 100 元。<strong>第二次提价不再只是利好，它成了 H2 必须兑现的增长条件。</strong></p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>飞天 53%vol 500ml 贵州茅台酒（2026），单位：元/瓶</caption>
+      <thead><tr><th>生效日</th><th>价格口径</th><th>调整前</th><th>调整后</th><th>幅度</th></tr></thead>
+      <tbody>
+        <tr><td>2026-03-31</td><td>销售合同价</td><td>1,169</td><td>1,269</td><td class="up">+8.6%</td></tr>
+        <tr><td>2026-03-31</td><td>自营体系零售价</td><td>1,499</td><td>1,539</td><td class="up">+2.7%</td></tr>
+        <tr><td>2026-07-18</td><td>销售合同价</td><td>1,269</td><td>1,369</td><td class="up">+7.9%</td></tr>
+        <tr><td>2026-07-18</td><td>i茅台平台零售价</td><td>1,539</td><td>1,639</td><td class="up">+6.5%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">价格来自公司 2026 年 3 月 31 日与 7 月 18 日重大事项公告。半年报没有披露单品销量，无法据此精确测算提价对收入和利润的贡献。</p>
+
+  <h3>估值不贵，但财报前已经反弹</h3>
+  <div class="grid">
+    <div class="cell"><div class="k">8 月 14 日收盘价</div><div class="v">1,341.99<span class="u">元</span></div>
+      <div class="d"><span class="down">当日 −0.98%</span><span>沪深 300 +0.04%</span></div></div>
+    <div class="cell"><div class="k">市盈率 TTM</div><div class="v">20.28<span class="u">倍</span></div>
+      <div class="d"><span>五年分位 16.45%</span><span>总市值 1.68 万亿</span></div></div>
+    <div class="cell"><div class="k">股息率</div><div class="v">3.88<span class="u">%</span></div>
+      <div class="d"><span class="up">20 日 +7.10%</span><span>沪深 300 +3.02%</span></div></div>
+  </div>
+  <p>Wind 收录的 7 月卖方点评把下半年修复的重点放在提价与渠道改革。财报发布前 20 个交易日，贵州茅台已经跑赢沪深 300 约 4.1pt；低估值提供了一层缓冲，但近期反弹也意味着市场已经提前计入部分 H2 改善。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">判断</div>
+  <h2>现在要验证的不是渠道有没有变，而是改革能否重新带来增长</h2>
+  <div class="finds">
+    <div class="find warn">
+      <div class="t">Q2 已经转负</div>
+      <p>营业收入 −5.1%，归母净利润 −6.9%。若 Q3 仍为负增长，H1 的「韧性」更多只是 Q1 留下的基数。</p>
+    </div>
+    <div class="find good">
+      <div class="t">核心品相对抗跌</div>
+      <p>推算 Q2 茅台酒收入约 −1.0%，显著好于系列酒的 −25.0%；同期销货收现仍增长 7.9%。</p>
+    </div>
+    <div class="find warn">
+      <div class="t">迁移不是新增</div>
+      <p>H1 i茅台增量的 95.6% 被其他直销与批发减量抵消；Q2 i茅台已占主营收入 50.9%。</p>
+    </div>
+    <div class="find warn">
+      <div class="t">毛利底尚未确认</div>
+      <p>H1 综合毛利率下降 174bp，批发代理下降 445bp。提价能否抵消单位成本和产品结构压力，是 H2 的关键。</p>
+    </div>
+    <div class="find good">
+      <div class="t">渠道重建已启动</div>
+      <p>推算 Q2 国内经销商净增 209 家，合同负债环比回升 5.0%；幅度还小，但最坏的调整集中在 Q1。</p>
+    </div>
+    <div class="find good">
+      <div class="t">回购执行但增厚有限</div>
+      <p>30 亿元回购接近上限执行并注销 218.86 万股，减少股本约 0.175%；兑现度高，规模不足以改写盈利趋势。</p>
+    </div>
+  </div>
+
+  <h3>重定价假设：先看下一交易日，再看 Q3 的联动</h3>
+  <p>半年报在周五收盘后发布，目前没有财报后的交易数据，无法判断首日定价是否充分。接下来几周，重点是盈利预测是否因 Q2 下滑而下修、又是否被 7 月提价抵消。本文的判断可被明确证伪：<strong>如果 Q3 单季收入恢复正增长、毛利率同比缺口继续收窄，同时合同负债连续第二季环比回升</strong>，那么「i茅台主要是渠道迁移、需求尚未修复」的判断就应当撤回。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">附录</div>
+  <h2>关键数字速查</h2>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>金额单位：亿元人民币；毛利率除外。Q2 均为累计数相减推算。</caption>
+      <thead><tr><th>项目</th><th>2026Q2</th><th>2025Q2</th><th>Q2 同比</th><th>2026H1</th><th>H1 同比</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="6">利润表</td></tr>
+        <tr><td>营业收入</td><td>367.94</td><td>387.88</td><td class="down">−5.1%</td><td>907.03</td><td class="up">+1.5%</td></tr>
+        <tr><td>营业总收入</td><td>375.75</td><td>396.50</td><td class="down">−5.2%</td><td>922.78</td><td class="up">+1.3%</td></tr>
+        <tr><td>营业成本</td><td>39.53</td><td>37.16</td><td class="down">+6.4%</td><td>94.74</td><td class="down">+21.8%</td></tr>
+        <tr><td>毛利</td><td>328.41</td><td>350.72</td><td class="down">−6.4%</td><td>812.29</td><td class="down">−0.5%</td></tr>
+        <tr><td>毛利率</td><td>89.26%</td><td>90.42%</td><td class="down">−1.16pt</td><td>89.56%</td><td class="down">−1.74pt</td></tr>
+        <tr><td>营业利润</td><td>238.74</td><td>257.32</td><td class="down">−7.2%</td><td>614.11</td><td class="down">−2.2%</td></tr>
+        <tr><td>归母净利润</td><td>172.74</td><td>185.55</td><td class="down">−6.9%</td><td>445.17</td><td class="down">−2.0%</td></tr>
+        <tr><td>扣非归母净利润</td><td>172.24</td><td>185.40</td><td class="down">−7.1%</td><td>444.64</td><td class="down">−2.0%</td></tr>
+        <tr class="grp"><td colspan="6">产品与渠道</td></tr>
+        <tr><td>茅台酒收入</td><td>317.20</td><td>320.32</td><td class="down">−1.0%</td><td>777.24</td><td class="up">+2.8%</td></tr>
+        <tr><td>系列酒收入</td><td>50.53</td><td>67.40</td><td class="down">−25.0%</td><td>129.34</td><td class="down">−6.0%</td></tr>
+        <tr><td>直销收入</td><td>224.58</td><td>167.89</td><td class="up">+33.8%</td><td>519.62</td><td class="up">+29.9%</td></tr>
+        <tr><td>批发代理收入</td><td>143.15</td><td>219.83</td><td class="down">−34.9%</td><td>386.97</td><td class="down">−21.6%</td></tr>
+        <tr><td>i茅台收入</td><td>187.11</td><td>48.90</td><td class="up">+282.6%</td><td>402.64</td><td class="up">+274.2%</td></tr>
+        <tr class="grp"><td colspan="6">现金流</td></tr>
+        <tr><td>销货收现</td><td>420.29</td><td>389.43</td><td class="up">+7.9%</td><td>984.22</td><td class="up">+3.5%</td></tr>
+        <tr><td>经营活动现金流净额</td><td>437.81</td><td>43.10</td><td class="up">+915.8%</td><td>706.91</td><td class="up">+438.8%</td></tr>
+        <tr><td>剔除四项后的剩余现金流</td><td>179.08</td><td>137.48</td><td class="up">+30.3%</td><td>393.42</td><td class="up">+1.7%</td></tr>
+        <tr><td>现金资本开支</td><td>2.27</td><td>6.95</td><td>−67.3%</td><td>8.32</td><td>−47.9%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">产品、渠道与 i茅台 Q2 数值由万元级披露的 H1 减 Q1 推算；「剔除四项后的剩余现金流」为分析调整口径，方法见现金章节，并非公司披露的非公认会计准则指标。</p>
+</section>
+
+<footer>
+  <p>数据来源：《贵州茅台酒股份有限公司 2026 年半年度报告》（2026-08-15，上交所披露，未经审计）、《贵州茅台酒股份有限公司 2026 年第一季度报告》（2026-04-25，未经审计）、2025 年半年度报告与第一季度报告；公司 2026-03-31、2026-07-18 重大事项公告。价格与估值数据来自 Wind，截止 2026-08-14 收盘。</p>
+  <p>本页推算项目包括：单独 Q2 利润表、产品与渠道数据、i茅台占比、H1 渠道增减桥、渠道结构对毛利率的反事实拆解、财务公司四项现金流剔除口径、Q2 经销商变动及资本回报比例；均已在正文标注方法，可能与公司未来披露口径存在差异。本页为财务数据整理与分析，不构成投资建议。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>

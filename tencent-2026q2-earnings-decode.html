@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>腾讯控股 2026 Q2 业绩拆解</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">腾讯控股 700.HK ｜ 2026 年第二季及中期业绩 ｜ 公告 2026.08.12 · 市场复盘 2026.08.13</div>
+    <h1>管理层把腾讯拆成两家公司，<br>市场先给烧钱的那家定了价</h1>
+    <p class="lede">单看管理层希望你采用的口径，这是近两年成色最好的一个季度：剔除新 AI 产品后，非国际财务报告准则经营盈利同比增长 19%，利润率抬升近 3 个百分点。<b>但绩后首个交易日，股价放量下跌 3.7%</b>——市场越过了印钞的那家腾讯，直接为烧钱的那家开出价格。这一页解释市场在为什么定价，以及这个定价合不合理。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">剔除新 AI 产品 · Non-IFRS 经营盈利同比</div>
+        <div class="big a">+19%</div>
+        <div class="cap">861 亿元，对应利润率 42%（同比 +2.8pt）。含 AI 的报表口径为 756.36 亿元、+9%。</div>
+      </div>
+      <div>
+        <div class="tag">绩后首日 · 股价表现（来源：Wind）</div>
+        <div class="big b">−3.7%</div>
+        <div class="cap">收报 444.60 港元，成交 175 亿港元、约为平日的 2.4 倍；较绩前大行目标价中枢（650–780 港元）低约 38%。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- 01 -->
+<section class="reveal on">
+  <div class="slabel">概览</div>
+  <h2>先弄清市场在跌什么</h2>
+  <p>利润表本身给不出下跌 3.7% 的理由。单季收入 2,047.85 亿元，同比 +11%、环比 +4%，略高于市场预期；毛利率从 56.9% 抬到 57.8%；国内游戏 +17%——七月那场「游戏流水下滑」的传闻虚惊，被这份财报正式证伪。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">收入</div><div class="v">2,047.85<span class="u">亿</span></div><div class="d"><span class="up">同比 +11%</span><span class="up">环比 +4%</span></div></div>
+    <div class="cell"><div class="k">毛利</div><div class="v">1,184.33<span class="u">亿</span></div><div class="d"><span class="up">同比 +13%</span></div></div>
+    <div class="cell"><div class="k">毛利率</div><div class="v">57.8<span class="u">%</span></div><div class="d"><span>去年同期 56.9%</span></div></div>
+    <div class="cell"><div class="k">经营盈利</div><div class="v">672.76<span class="u">亿</span></div><div class="d"><span class="up">同比 +12%</span></div></div>
+    <div class="cell"><div class="k">归母净利</div><div class="v">560.22<span class="u">亿</span></div><div class="d"><span>同比 +0.7%</span></div></div>
+    <div class="cell"><div class="k">Non-IFRS 归母</div><div class="v">684.15<span class="u">亿</span></div><div class="d"><span class="up">同比 +9%</span></div></div>
+  </div>
+
+  <div class="callout">
+    <b>归母净利只增 0.7%、低于市场一致预期约 4%——先把这个数摘出去。</b>缺口几乎全部来自分占联营公司的 99.93 亿元亏损（去年同期为 44.73 亿元盈利）：一家非上市被投公司估值上升，其可转换可赎回优先股需要重估，会计规则要求腾讯按持股分摊这笔「亏损」。被投公司越值钱，账面亏损越大；Non-IFRS 口径下同项为 63.59 亿元盈利，与去年同期基本持平。这是会计规则在替被投公司的估值上涨记账，与经营无关——市场也没有为它定价。真正被定价的东西，在现金流量表和资产负债表里。
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="reveal on">
+  <div class="slabel">拆分</div>
+  <h2>两家公司：一家 +19%，一家每季烧 105 亿</h2>
+  <p>电话会上，总裁刘炽平直接给出了阅读框架：「可以把腾讯拆成两个业务看——一个是现有核心业务，增长扎实、经营杠杆明显；另一个是正在搭建的 AI 原生新业务，包括自研模型、新应用和配套算力。」<strong>把公司一分为二的，是管理层自己</strong>；财报里那条「剔除新 AI 产品」的披露口径，就是这道分割线。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">核心业务经营盈利（剔除新 AI）</div><div class="v">861<span class="u">亿</span></div><div class="d"><span class="up">同比 +19%</span><span class="up">环比 +2%</span></div></div>
+    <div class="cell"><div class="k">新 AI 产品的经营拖累（推算）</div><div class="v">≈105<span class="u">亿</span></div><div class="d"><span class="down">2025Q2 约为 31 亿</span></div></div>
+    <div class="cell"><div class="k">报表 Non-IFRS 经营盈利</div><div class="v">756.36<span class="u">亿</span></div><div class="d"><span class="up">同比 +9%</span></div></div>
+  </div>
+
+  <div class="cols">
+    <div class="col"><div class="val">31</div><div class="bar gray" style="height:29.7%"></div></div>
+    <div class="col"><div class="val">88</div><div class="bar" style="height:84.0%"></div></div>
+    <div class="col"><div class="val">105</div><div class="bar" style="height:100%"></div></div>
+  </div>
+  <div class="collabels">
+    <div><b>2025Q2</b>约 31 亿</div>
+    <div><b>2026Q1</b>约 88 亿</div>
+    <div><b>2026Q2</b>约 105 亿</div>
+  </div>
+  <p class="small" style="margin-top:14px">单位：亿元人民币。口径为「剔除新 AI 产品后 Non-IFRS 经营盈利」减「报表 Non-IFRS 经营盈利」，历史两点按公告披露的同比 +19%、环比 +2% 反推。电话会上摩根大通分析师直接引用「一季度约 88 亿、二季度约 105 亿」提问，管理层照此口径作答——推算值已被管理层实质确认。</p>
+
+  <p>拖累一年放大三倍多，且仍在环比扩大。管理层为它给出的估值框架也在电话会上说得很直白：这是<strong>「今明两年的一次性投入包」，不应只对照经营现金流，而应综合对照账上现金、投资组合、经营现金流与审慎的举债空间</strong>。这句话是本季财报真正的分水岭——它把这笔钱从「经常性成本」的框架里拿了出来，更接近一笔用整张资产负债表出资的风险投资。绩后首日的下跌，本质上是市场对这个新框架的第一次报价。</p>
+</section>
+
+<!-- 03 -->
+<section class="reveal on">
+  <div class="slabel">收入</div>
+  <h2>印钞的那家公司，成色比表面还好</h2>
+  <p>三大板块全部正增长：营销服务 +22%，金融科技及企业服务 +9%，增值服务 +8%；社交网络 +0.8% 至 325 亿元，视频号总使用时长同比增长超 20%。增长的结构比总量更值得看。</p>
+
+  <div class="rows">
+    <div class="row"><div class="nm">增值服务<span>占收入 48%</span></div><div class="track"><div class="fill" style="width:100%"></div></div><div class="fig">984.14<span class="up">+8%</span></div></div>
+    <div class="row"><div class="nm">金融科技及企业服务<span>占收入 30%</span></div><div class="track"><div class="fill soft" style="width:61.3%"></div></div><div class="fig">602.86<span class="up">+9%</span></div></div>
+    <div class="row"><div class="nm">营销服务<span>占收入 21%</span></div><div class="track"><div class="fill alt" style="width:44.3%"></div></div><div class="fig">435.65<span class="up">+22%</span></div></div>
+    <div class="row"><div class="nm">其他<span>占收入 1%</span></div><div class="track"><div class="fill soft" style="width:2.6%"></div></div><div class="fig">25.20<span class="up">+37%</span></div></div>
+  </div>
+  <p class="small">单位：亿元人民币，百分比为同比。</p>
+
+  <h3>广告 +22%，但管理层自己按住了外推的手</h3>
+  <p>营销服务是增长引擎，驱动是 eCPM 与曝光量双升、AI 推荐系统参数规模大幅扩容。但电话会上 James Mitchell 主动降温：「广告增速过去起起落落，将来也会——<strong>不要做直线外推</strong>」，并点出两个技术性细节：广告平台游戏（如全球下载量第一的《Arrows》）本季为营销服务贡献了约 2 个百分点增速，同时拖低国际游戏分部增速约 4 个百分点——收入在分部之间「搬家」，是本季读数里容易看漏的一层；中国消费与广告市场依旧偏弱，是外部约束。</p>
+
+  <h3>游戏：传闻证伪，国内 +17%</h3>
+  <p>本土市场游戏 473 亿元、同比 +17%，《三角洲行动》《无畏契约》系列与《洛克王国：世界》为主要贡献；国际市场 186 亿元，名义 −0.8%、固定汇率 +4%，Supercell 部分游戏下滑仍是单点拖累。</p>
+
+  <h3>云：本场电话会最实的增量信息</h3>
+  <p>云业务收入增速从一季度的「高十几」加快到二季度的「低二十几」个百分点（电话会口径），且是量价齐升：<strong>5 月对腾讯云全线提价并显著收缩折扣</strong>——存储芯片等投入成本上涨给了全行业提价理由。James 同时披露了一个会计机制：WorkBuddy 用户支出以订阅为主，现金先收、收入后确认，「现金收款正在大幅爬坡」，将随年内逐步转化为云收入。这是 AI 投入在收入侧兑现的第一个可验证信号——属于管理层电话会陈述，报表要到下半年才能对账。</p>
+</section>
+
+<!-- 04 SIGNATURE -->
+<section class="reveal on">
+  <div class="slabel">现金</div>
+  <h2>一个季度，净现金少了 887 亿</h2>
+  <p>本季有一笔约 514 亿元的现金支出，在利润表上完全看不见。公告给了两个口径：自由现金流 −138 亿元；若剔除算力采购预付款，则为 +376 亿元。<strong>两个口径的差，就是一次性锁进未来算力供给的预付金额——约 514 亿元，相当于当季经营活动净流入（527 亿元）的 98%</strong>。在此之外，资本开支付款 593 亿元本身已超过经营现金流。净现金的变化把这一切汇总成一张图：</p>
+
+  <div class="flowbox">
+    <svg viewBox="0 0 720 400" role="img" aria-label="2026年第二季净现金变化桥：从3月末1,469亿元到6月末582亿元">
+      <line x1="20" y1="246" x2="700" y2="246" stroke="#0F1A22" stroke-width="1"/>
+      <text x="20" y="240" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#6D7B88">0</text>
+
+      <g stroke="#9AA6B2" stroke-width="1" stroke-dasharray="3 3">
+        <line x1="120" y1="40.0" x2="170" y2="40.0"/>
+        <line x1="250" y1="123.2" x2="300" y2="123.2"/>
+        <line x1="380" y1="181.5" x2="430" y2="181.5"/>
+        <line x1="510" y1="164.4" x2="560" y2="164.4"/>
+      </g>
+
+      <rect x="40" y="40.0" width="80" height="206.0" fill="#122A4B"/>
+      <rect x="170" y="40.0" width="80" height="83.2" fill="#A32B57"/>
+      <rect x="300" y="123.2" width="80" height="58.4" fill="#A32B57"/>
+      <rect x="430" y="164.4" width="80" height="17.1" fill="#2C6A57"/>
+      <rect x="560" y="164.4" width="80" height="81.6" fill="#122A4B"/>
+
+      <g font-family="ui-monospace,Menlo,monospace" font-size="17" font-weight="600" text-anchor="middle">
+        <text x="80" y="32.0" fill="#122A4B">1,469</text>
+        <text x="210" y="32.0" fill="#A32B57">−593</text>
+        <text x="340" y="115.2" fill="#A32B57">−416</text>
+        <text x="470" y="156.4" fill="#2C6A57">+122</text>
+        <text x="600" y="156.4" fill="#122A4B">582</text>
+      </g>
+
+      <g font-family="-apple-system,PingFang SC,sans-serif" font-size="13" fill="#3C4A56" text-anchor="middle">
+        <text x="80" y="326">净现金</text><text x="80" y="345">3月31日</text>
+        <text x="210" y="326">资本开支</text><text x="210" y="345">付款</text>
+        <text x="340" y="326">派付2025年</text><text x="340" y="345">度股息</text>
+        <text x="470" y="326">其他净额</text><text x="470" y="345">（推算）</text>
+        <text x="600" y="326" font-weight="600" fill="#122A4B">净现金</text><text x="600" y="345" fill="#122A4B">6月30日</text>
+      </g>
+      <text x="700" y="380" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#6D7B88" text-anchor="end">单位：亿元人民币</text>
+    </svg>
+    <div class="flow-note">
+      <div class="badge">30%?</div>
+      <div>管理层为这 514 亿预付给出的安全垫，是电话会上刘炽平的一句话：数月前订购的算力，「今天转手卖出，利润超过 30%」。这句话被用来论证下行保护（最坏情况可通过腾讯云按成本回收甚至更高价出租）。<b>但它是口头断言，无法从报表验证</b>——本页按「管理层陈述」标注，不作为事实使用。</div>
+    </div>
+  </div>
+
+  <div class="quote">市场没有质疑腾讯赚钱的能力，它在为「赚来的钱从此去哪儿」重新定价。</div>
+
+  <p>把镜头拉长到半年：净利润增长 11%，经营现金流却只多了 1.8%（1,540.61 亿元对上年同期 1,512.65 亿元）。差额的去向并不神秘——钱提前付给了算力。图中 +122 亿的「其他净额」为推算残差：经营净流入与新增借款，扣除回购付款、媒体内容与租赁付款等之后的合计。</p>
+</section>
+
+<!-- 05 -->
+<section class="reveal on">
+  <div class="slabel">报表</div>
+  <h2>资产负债表在替利润表扛账</h2>
+  <p>本季利润表上的 AI 成本约 105 亿，但更大的账不在利润表——它们先落在资产端，再按折旧慢慢回来。</p>
+  <div class="rows">
+    <div class="row"><div class="nm">非流动预付款项<span>245 → 912 亿</span></div><div class="track"><div class="fill alt" style="width:100%"></div></div><div class="fig">+272%<span>算力预付为主</span></div></div>
+    <div class="row"><div class="nm">物业、设备及器材<span>1,499 → 1,989 亿</span></div><div class="track"><div class="fill alt" style="width:12.1%"></div></div><div class="fig">+33%<span>数据中心与服务器</span></div></div>
+  </div>
+  <p class="small">柱长按较 2025 年 12 月 31 日增幅等比绘制。</p>
+
+  <p>负债端同步加杠杆：有息负债（借款加应付票据）单季从 3,868 亿元增至 4,530 亿元，净增 662 亿元、+17%。6 月通过全球中期票据计划发行四批优先票据，合计 24.5 亿美元与 150 亿元人民币——以 10 年期为主、最长拉至 2046 与 2056 年，人民币批次票息低至 2.50%。<strong>负债的久期以十年计，服务器的折旧以年计——本季买入的算力将在未来 8–12 个季度持续压住毛利率，折旧坡道约在 2027 年前后见顶</strong>（服务器与数据中心按 4–6 年摊销，为行业惯例假设）。这与「一次性投入包」的说法并不矛盾：投入是一次性的，成本是分期的。</p>
+</section>
+
+<!-- 06 -->
+<section class="reveal on">
+  <div class="slabel">回报</div>
+  <h2>股东回报，正式成为残差项</h2>
+  <div class="grid">
+    <div class="cell"><div class="k">上半年回购支出（人民币口径，推算）</div><div class="v">≈214<span class="u">亿</span></div><div class="d"><span class="down">去年同期约 336 亿，约 −36%</span></div></div>
+    <div class="cell"><div class="k">本季派付股息（2025 年度）</div><div class="v">416<span class="u">亿</span></div><div class="d"><span>每股 5.30 港元</span></div></div>
+    <div class="cell"><div class="k">中期股息</div><div class="v">0</div><div class="d"><span class="down">未宣派</span></div></div>
+  </div>
+  <p>港元口径：上半年以 244.08 亿港元回购 5,003.11 万股。从权益变动表剔除「注销上年已回购库存股」的部分后，本期实际回购支出约 214 亿元人民币，去年同期同口径约 336 亿元——收缩超过三分之一。这不是执行波动，而是明说的政策：电话会上美银分析师问资本配置顺位，James 的回答是，若资本开支回报更优，「流向回购的现金可能会更少」。把回购定位成残差项的，是管理层自己。加上未宣派中期股息，本季的资本配置顺位已经写得很清楚：<strong>算力 &gt; 股息 &gt; 回购</strong>。对一只过去两年部分靠回购叙事支撑的股票，这是估值框架层面的变化，不是季度波动。</p>
+</section>
+
+<!-- 07 -->
+<section class="reveal on">
+  <div class="slabel">问答</div>
+  <h2>电话会上，七个问题其实是同一个</h2>
+  <p>71 分钟的电话会，七位分析师提问，压力高度集中——四家机构的问题绕着同一件事：钱花出去了，什么时候、以什么形式回来。</p>
+  <div class="tblscroll">
+  <table class="tbl">
+    <caption>问答压力图：据 2026.08.12 电话会逐字记录整理；「提问」为围绕该主题发问的机构家数</caption>
+    <thead><tr><th>主题</th><th>提问</th><th>应答要点</th><th>判定</th></tr></thead>
+    <tbody>
+      <tr><td>资本开支的回收路径</td><td>4</td><td>一次性投入包</td><td>无数字承诺</td></tr>
+      <tr><td>AI 变现时点</td><td>2</td><td>不给指引</td><td>回避量化</td></tr>
+      <tr><td>小微与微信生态</td><td>2</td><td>十倍类比</td><td>愿景型</td></tr>
+      <tr><td>云的利润率</td><td>1</td><td>5 月已提价</td><td>最实的增量</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>四条线的应答细节：资本开支线（Bernstein、高盛、美银、大摩），管理层给出「今明两年一次性投入包」的框架与「转租算力可兜底」的下行保护，但没有任何数字承诺；变现时点线（大摩、摩根大通），明确拒绝指引，只说「看到突破机会才加码」；小微线（UBS、花旗），以 QQ 到微信的十倍类比回应，蚕食风险被整体否认；云利润率线（UBS）反而给了最实的信息——5 月全线提价并收缩折扣、MaaS 毛利率已接近云整体。</p>
+  <p>语气上的增量比内容更值得记录：James 主动披露，一季度约 88 亿与二季度约 105 亿的 AI 投入，<strong>内部投向结构已经大改</strong>——因为「识别到 WorkBuddy 正在突破」，预算向它激进集中、其他新 AI 产品被降级。拖累不只是在变大，还在换目标；这让「一次性投入包」的边界更难从外部验证。管理层不给指引的纪律没有变。</p>
+</section>
+
+<!-- 08 -->
+<section class="reveal on">
+  <div class="slabel">判断</div>
+  <h2>盯住五件事，外加一条证伪线</h2>
+  <div class="finds">
+    <div class="find warn">
+      <div class="t">拖累在变大，也在换向</div>
+      <p>新 AI 产品每季拖累约 105 亿元且环比仍在扩大，投向已向 WorkBuddy 集中。三季度的数字是「今明两年一次性」这一说法的第一块试金石。</p>
+    </div>
+    <div class="find good">
+      <div class="t">核心盘的经营杠杆是真的</div>
+      <p>剔除 AI 后利润率 42%、同比 +2.8pt；广告 +22%、国内游戏 +17%、云加速至低二十几个百分点——三个引擎同时在线。</p>
+    </div>
+    <div class="find warn">
+      <div class="t">现金弹药在变薄</div>
+      <p>净现金一季度从 1,469 亿降到 582 亿，有息负债同期净增 662 亿至 4,530 亿。若三季度再现 500 亿级的算力预付，净现金将逼近清零，「净现金公司」的标签面临摘除。</p>
+    </div>
+    <div class="find good">
+      <div class="t">云的量价齐升是新变量</div>
+      <p>5 月提价 + 增速加快 + 订阅现金先行（递延机制），是 AI 投入在收入侧兑现的第一个可从报表验证的信号——下半年云收入见分晓。</p>
+    </div>
+    <div class="find warn">
+      <div class="t">回报残差化已成政策</div>
+      <p>回购支出人民币口径约 −36%、中期股息未宣派，管理层明言资本开支优先。回购节奏从此是腾讯资本配置最灵敏的实时信号，值得逐月盯。</p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:26px">
+    <b>定价合理性与证伪线。</b>绩后首日 −3.7%、成交放大至平日 2.4 倍，对应的不是利润不及预期（那部分是联营重估，市场已看穿），而是资本开支从「阶段性上行」升格为「结构性承诺」的确认——幅度与信息量大体相称，不算过度反应。未来一个季度盯三件事：三季度的 AI 拖累数字是否守住「一次性投入包」的边界；云增速能否续升以兑现现金先行的订阅；回购节奏是否回升。<b>证伪线</b>：若资本开支口径不变而股价收复 461.60 港元（绩前收盘价），说明市场已接受用风投逻辑为这笔投入定价，本页「市场只给烧钱公司定价」的判断即告失效。
+  </div>
+</section>
+
+<!-- 09 -->
+<section class="reveal on">
+  <div class="slabel">附表</div>
+  <h2>关键数据速查</h2>
+  <div class="tblscroll">
+  <table class="tbl">
+    <caption>单位：百万元人民币，未经审核；≈ 号数值为公告按亿元圆整口径</caption>
+    <thead><tr><th>项目</th><th>2026Q2</th><th>2026Q1</th><th>2025Q2</th><th>2026H1</th><th>2025H1</th></tr></thead>
+    <tbody>
+      <tr class="grp"><td colspan="6">利润表</td></tr>
+      <tr><td>收入</td><td>204,785</td><td>196,458</td><td>184,504</td><td>401,243</td><td>364,526</td></tr>
+      <tr><td>毛利</td><td>118,433</td><td>111,265</td><td>105,013</td><td>229,698</td><td>205,506</td></tr>
+      <tr><td>经营盈利</td><td>67,276</td><td>67,375</td><td>60,104</td><td>134,651</td><td>117,670</td></tr>
+      <tr><td>归母净利</td><td>56,022</td><td>58,093</td><td>55,628</td><td>114,115</td><td>103,449</td></tr>
+      <tr><td>Non-IFRS 经营盈利</td><td>75,636</td><td>75,627</td><td>69,248</td><td>151,263</td><td>138,568</td></tr>
+      <tr><td>Non-IFRS 归母净利</td><td>68,415</td><td>67,905</td><td>63,052</td><td>136,320</td><td>124,381</td></tr>
+      <tr><td>剔除新 AI 产品 Non-IFRS 经营盈利</td><td>≈86,100</td><td>≈84,400</td><td>≈72,350</td><td>—</td><td>—</td></tr>
+      <tr class="grp"><td colspan="6">分部收入</td></tr>
+      <tr><td>增值服务</td><td>98,414</td><td>96,110</td><td>91,368</td><td>194,524</td><td>183,501</td></tr>
+      <tr><td>营销服务</td><td>43,565</td><td>38,171</td><td>35,762</td><td>81,736</td><td>67,615</td></tr>
+      <tr><td>金融科技及企业服务</td><td>60,286</td><td>59,885</td><td>55,536</td><td>120,171</td><td>110,443</td></tr>
+      <tr><td>其他</td><td>2,520</td><td>2,292</td><td>1,838</td><td>4,812</td><td>2,967</td></tr>
+      <tr class="grp"><td colspan="6">现金与投入</td></tr>
+      <tr><td>资本开支</td><td>52,784</td><td>31,936</td><td>19,107</td><td>84,720</td><td>46,583</td></tr>
+      <tr><td>自由现金流</td><td>≈−13,800</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><td>经营活动现金流</td><td>≈52,700</td><td>≈101,400</td><td>—</td><td>154,061</td><td>151,265</td></tr>
+      <tr><td>净现金（期末）</td><td>58,191</td><td>146,860</td><td>74,592</td><td>58,191</td><td>74,592</td></tr>
+      <tr><td>研发开支</td><td>27,278</td><td>22,542</td><td>20,251</td><td>49,820</td><td>39,161</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="small">2026Q1 分部收入、研发开支与经营活动现金流均为上半年累计数减第二季数推算；「剔除新 AI 产品」行中 2026Q2 为披露值，2026Q1 与 2025Q2 两列按公告披露的同比 +19%、环比 +2% 反推；标 ≈ 的数值来自公告的亿元级圆整披露或推算，精度低于其余百万元级数值。</p>
+</section>
+
+<footer>
+  <p>数据来源：（1）腾讯控股有限公司《截至二零二六年六月三十日止三个月及六个月业绩公布》，2026 年 8 月 12 日于香港联合交易所发布，中期财务资料未经审核、已按国际审阅业务准则第 2410 号审阅；（2）2026 年 8 月 12 日业绩电话会逐字记录（经 earningscalls.dev 获取，时长约 71 分钟），管理层引语由英文原文译出；（3）股价与成交数据来自 Wind（截至 2026 年 8 月 13 日收盘），绩前目标价区间与市场一致预期引自公开报道（金吾财讯、Investing.com 等，2026 年 8 月 12–13 日）。</p>
+  <p>本页推算数值——新 AI 产品拖累序列（31/88/105 亿）、隐含算力预付（约 514 亿）、净现金桥中的「其他净额」（+122 亿）、回购支出人民币口径（约 214 亿对约 336 亿，已剔除注销上年库存股部分，约 −36%）、2026Q1 分部及现金流数据——均基于披露口径反推，方法已在正文与脚注注明，与公司口径可能存在差异。折旧年限按服务器/数据中心 4–6 年的行业惯例假设，非公司披露。管理层电话会陈述（如算力转售利润率超 30%）未经报表验证，均已按「管理层陈述」标注。本页为财务数据整理与分析，不构成任何投资建议。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
