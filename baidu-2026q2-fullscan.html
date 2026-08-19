@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>百度集团 2026Q2 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">百度集团-SW 9888.HK｜全景尽调｜财务截至2026年6月30日｜行情截至2026年8月19日10:04 HKT</div>
+    <h1>AI收入已经成形，<br>现金回报仍待兑现。</h1>
+    <p class="lede">百度的AI收入已经足以抵消大部分旧业务收缩，但合并增长、毛利与自由现金流尚未同步拐头。<b>这不是AI转型失败，而是收入证明先于资本回报到来；当前估值要求投资者判断这段时间差会收窄，还是继续消耗账面流动性。</b></p>
+    <div class="dual">
+      <div>
+        <div class="tag">单二季度收入迁移｜按公司取整口径推算</div>
+        <div class="big a">≈70%</div>
+        <div class="cap">AI新业务增量抵消了传统与其他业务收入降幅的大部分，但还没有推动一般性业务恢复增长。</div>
+      </div>
+      <div>
+        <div class="tag">单二季度自由现金流｜经营现金流减固定资产采购</div>
+        <div class="big b">−79.5亿</div>
+        <div class="cap">经营现金转正仍不足以覆盖本季算力投入，收入迁移尚未转成所有者现金。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">财务底图</div>
+  <h2>五年收入近乎停滞，2026H1同时呈现利润正常化与高再投资</h2>
+  <p>百度集团以搜索与信息流广告、智能云、AI应用、自动驾驶等构成「百度一般性业务」，并合并独立上市的爱奇艺。财报只把两者列为报告分部；AI新业务、传统业务与其他属于同一套互斥三分法，在线营销与其他收入则是另一套交叉视图，其中AI原生营销也属于在线营销，不能重复相加。2025年资产减值又打断了GAAP利润可比性，因此下表并列报告利润、调整后利润与资本开支后的现金。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">单二季度收入</div><div class="v">313.25<span class="u">亿元</span></div><div class="d"><span class="down">同比 −4.24%</span><span>未经审计</span></div></div>
+    <div class="cell"><div class="k">单二季度毛利</div><div class="v">122.27<span class="u">亿元</span></div><div class="d"><span class="down">同比 −14.83%</span><span>毛利率 39.03%</span></div></div>
+    <div class="cell"><div class="k">单二季度经营利润</div><div class="v">30.24<span class="u">亿元</span></div><div class="d"><span class="down">同比 −7.72%</span><span>利润率 9.65%</span></div></div>
+    <div class="cell"><div class="k">单二季度归母净利润</div><div class="v">23.19<span class="u">亿元</span></div><div class="d"><span class="down">同比 −68.33%</span><span>净利率 7.40%</span></div></div>
+    <div class="cell"><div class="k">非GAAP归母净利润</div><div class="v">25.73<span class="u">亿元</span></div><div class="d"><span class="down">同比 −46.34%</span><span>调整后口径</span></div></div>
+    <div class="cell"><div class="k">单二季度经营现金流</div><div class="v">34.36<span class="u">亿元</span></div><div class="d"><span class="up">上年同期为净流出</span><span>未扣资本开支</span></div></div>
+  </div>
+
+  <h3>最新每股与资本回报参照</h3>
+  <div class="grid">
+    <div class="cell"><div class="k">H1稀释每ADS收益</div><div class="v">14.50<span class="u">元</span></div><div class="d"><span>一份ADS代表八股A类普通股</span></div></div>
+    <div class="cell"><div class="k">H1年化ROE代理</div><div class="v">4.3<span class="u">%</span></div><div class="d"><span>归母利润年化 / 平均归母权益</span></div></div>
+    <div class="cell"><div class="k">每股归母权益（近似）</div><div class="v">99.95<span class="u">元</span></div><div class="d"><span>期末权益 / H1基本加权股数</span></div></div>
+  </div>
+
+  <h3>五年合并轨迹</h3>
+  <div class="tblscroll">
+    <table class="tbl" data-financials="history">
+      <caption>完整财年；金额为人民币亿元，每股收益列按ADS。自由现金流代理＝经营活动现金流量净额−购买固定资产；ROE以期初、期末平均归母权益计算。</caption>
+      <thead><tr><th>年度</th><th>收入</th><th>毛利 / 毛利率</th><th>经营利润 / 利润率</th><th>归母净利润 / 净利率</th><th>稀释每ADS收益（元）</th><th>ROE</th><th>经营现金流</th><th>资本开支</th><th>FCF代理</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>1,244.93</td><td>601.79 / 48.34%</td><td>105.18 / 8.45%</td><td>102.26 / 8.21%</td><td>28.07</td><td>5.19%</td><td>201.22</td><td>108.96</td><td>92.26</td></tr>
+        <tr><td>2022</td><td>1,236.75</td><td>597.40 / 48.30%</td><td>159.11 / 12.87%</td><td>75.59 / 6.11%</td><td>19.85</td><td>3.48%</td><td>261.70</td><td>82.86</td><td>178.84</td></tr>
+        <tr><td>2023</td><td>1,345.98</td><td>695.67 / 51.69%</td><td>218.56 / 16.24%</td><td>203.15 / 15.09%</td><td>55.08</td><td>8.70%</td><td>366.15</td><td>111.90</td><td>254.25</td></tr>
+        <tr><td>2024</td><td>1,331.25</td><td>670.23 / 50.35%</td><td>212.70 / 15.98%</td><td>237.60 / 17.85%</td><td>65.91</td><td>9.37%</td><td>212.34</td><td>81.34</td><td>131.00</td></tr>
+        <tr><td>2025</td><td>1,290.79</td><td>566.43 / 43.88%</td><td>−58.23 / −4.51%</td><td>55.89 / 4.33%</td><td>11.78</td><td>2.11%</td><td>−30.13</td><td>120.73</td><td>−150.86</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">2021—2025收入CAGR为+0.91%，毛利CAGR为−1.51%。2025年经营利润包含161.90亿元核心资产组减值；该项不是商誉减值。每股账面值采用近似分母，只作分析参照。</p>
+
+  <h3>上半年与LTM：利润正常化和现金消耗必须并列</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>金额为人民币亿元；LTM＝2025全年＋2026H1−2025H1。</caption>
+      <thead><tr><th>期间</th><th>收入</th><th>毛利 / 毛利率</th><th>经营利润 / 利润率</th><th>归母净利润</th><th>非GAAP归母</th><th>经营现金流</th><th>资本开支</th><th>FCF代理</th></tr></thead>
+      <tbody>
+        <tr><td>2026H1</td><td>634.00</td><td>247.13 / 38.98%</td><td>62.17 / 9.81%</td><td>57.64</td><td>69.05</td><td>61.06</td><td>173.06</td><td>−112.00</td></tr>
+        <tr><td>LTM</td><td>1,273.14</td><td>520.35 / 40.87%</td><td>−73.91 / −5.81%</td><td>−36.86</td><td>145.82</td><td>99.71</td><td>226.79</td><td>−127.08</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div data-financials="segments">
+    <h3>报告分部与内部业务层级</h3>
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>单二季度报告分部；金额为人民币亿元。历史CAGR为2021—2025收入复合增速。</caption>
+        <thead><tr><th>分部</th><th>收入 / 同比</th><th>毛利 / 毛利率</th><th>经营利润 / 利润率</th><th>历史CAGR</th><th>经济角色</th></tr></thead>
+        <tbody>
+          <tr><td>百度一般性业务</td><td>251.83 / −4.07%</td><td>112.01 / 44.48%</td><td>31.31 / 12.43%</td><td>+1.87%</td><td>搜索、云、AI应用与智能驾驶</td></tr>
+          <tr><td>爱奇艺</td><td>62.87 / −5.14%</td><td>10.37 / 16.49%</td><td>−1.05 / −1.67%</td><td>−2.78%</td><td>会员、广告与内容发行</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>2026H1百度一般性业务的内部管理口径；金额为人民币亿元，按公告取整，未经审计。AI原生营销与在线营销交叉，不能重复相加。</caption>
+        <thead><tr><th>业务层级</th><th>收入</th><th>同比</th><th>已披露的经济边界</th></tr></thead>
+        <tbody>
+          <tr><td>核心AI新业务</td><td>≈261</td><td>+36.6%</td><td>未披露独立利润、资产与现金流</td></tr>
+          <tr><td>└ 智能云基础设施</td><td>≈161</td><td>+64.3%</td><td>规模与使用量已披露，绝对利润率未披露</td></tr>
+          <tr><td>└ AI应用</td><td>≈50</td><td>持平</td><td>采用快于变现</td></tr>
+          <tr><td>└ AI原生营销服务</td><td>≈49</td><td>+14.0%</td><td>与在线营销口径重叠</td></tr>
+          <tr><td>传统业务</td><td>≈206</td><td>−26.2%</td><td>主要为传统广告与相关产品线</td></tr>
+          <tr><td>其他</td><td>≈45</td><td>−6.3%</td><td>公司未进一步拆分</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p class="small">分部收入在抵销前列示；单二季度两分部合计与合并收入的差额来自分部间抵销。2025年第四季度起「百度核心」更名为「百度一般性业务」，历史分部总额已回溯，内部新旧业务口径则没有完整五年可比序列。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">结构迁移</div>
+  <h2>AI增量正在弥补旧业务收缩，尚未把集团带回增长</h2>
+  <p>AI新业务已经越过「可忽略的试验收入」阶段，但本季更像旧收入替代，而不是新增利润池。2025年该收入池达到400亿元、同比增长48%；真正未完成的，是证明新收入能以不低于旧搜索广告的毛利率和现金转换率扩张。</p>
+
+  <div class="flowbox">
+    <svg viewBox="0 0 820 300" role="img" aria-label="百度一般性业务单二季度收入从上年约263亿元，经AI新业务增加、传统和其他业务减少后降至约252亿元">
+      <text x="30" y="34" font-size="15" fill="#6D7B88">百度一般性业务收入桥｜人民币十亿元，按公告取整</text>
+      <rect x="36" y="85" width="130" height="130" fill="#122A4B"/>
+      <text x="101" y="135" text-anchor="middle" font-size="15" fill="#FFFFFF">2025Q2</text>
+      <text x="101" y="175" text-anchor="middle" font-size="30" font-weight="700" fill="#FFFFFF">26.3</text>
+      <line x1="166" y1="150" x2="665" y2="150" stroke="#9AA6B2" stroke-width="2"/>
+      <rect x="228" y="105" width="105" height="74" fill="#2C6A57"/>
+      <text x="280" y="134" text-anchor="middle" font-size="14" fill="#FFFFFF">AI新业务</text>
+      <text x="280" y="162" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">+2.5</text>
+      <rect x="365" y="150" width="105" height="94" fill="#A32B57"/>
+      <text x="417" y="182" text-anchor="middle" font-size="14" fill="#FFFFFF">传统业务</text>
+      <text x="417" y="214" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">−3.2</text>
+      <rect x="502" y="150" width="105" height="54" fill="#8FA8CC"/>
+      <text x="554" y="176" text-anchor="middle" font-size="14" fill="#FFFFFF">其他业务</text>
+      <text x="554" y="197" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">−0.4</text>
+      <rect x="665" y="90" width="120" height="125" fill="#122A4B"/>
+      <text x="725" y="137" text-anchor="middle" font-size="15" fill="#FFFFFF">2026Q2</text>
+      <text x="725" y="176" text-anchor="middle" font-size="30" font-weight="700" fill="#FFFFFF">25.2</text>
+    </svg>
+    <div class="flow-note"><span class="badge">净减1.1</span><span>AI新增收入仍小于传统与其他业务合计流失；图中使用公司按十亿元取整的管理口径，和会计分部之间存在舍入差。</span></div>
+  </div>
+
+  <h3>占比过半并不等于完成转换</h3>
+  <p><strong>第一阶段已完成：</strong>AI收入的绝对体量足以改变集团结构。<strong>第二阶段尚未完成：</strong>公司没有给AI新业务独立毛利、经营利润、资产或现金流，因此无法验证其单位经济。随着传统业务缩小，AI占比还会被动上升；真正的拐点应是AI增量持续超过旧业务流失，并让合并毛利与自由现金流一同改善。</p>
+  <p class="small">内部三分法与财报分部并非同一套分类；本节只用于解释收入迁移，不把未经审计的管理口径当成可独立估值的分部。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">云芯能力</div>
+  <h2>云的增长质量正在改善，算力投入回报仍无法验收</h2>
+  <p>智能云是本季最清晰的增长引擎：客户数量、既有客户使用量和GPU业务占比都在上升，管理层也称利润与利润率同比改善。问题不是需求有没有，而是高增长能否在持续算力投入后留下足够资本回报。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">智能云基础设施收入</div><div class="v">73<span class="u">亿元</span></div><div class="d"><span class="up">同比 +50%</span><span>单二季度</span></div></div>
+    <div class="cell"><div class="k">GPU云收入增速</div><div class="v">+283<span class="u">%</span></div><div class="d"><span>上季增速为184%</span><span>管理层口径</span></div></div>
+    <div class="cell"><div class="k">千帆外部token收入</div><div class="v">&gt;9<span class="u">×</span></div><div class="d"><span>仍占云收入较小部分</span><span>电话会增量</span></div></div>
+  </div>
+
+  <h3>组合改善是好信号，但没有绝对利润率就不能确认ROIC</h3>
+  <p>管理层称GPU云利润率高于CPU云，且下半年云增速有望保持强劲、甚至加速。这一说法方向上支持组合提价，却没有披露GPU收入占比、客户集中度、合同期限、绝对分部利润率或投入资本。调用量增长也只有在单位推理成本下降、付费留存提高后，才会成为可持续利润。</p>
+
+  <h3>文心路线改为应用驱动，技术领先仍待外部验证</h3>
+  <p>李彦宏在首轮问答中承认基础模型竞争格局变化快、文心此前存在试错，当前路线是把搜索、数字人、秒哒和智能体的应用反馈反哺模型。回答解释了资源配置选择，却没有给出同口径基准测试、版本里程碑、人才补强或交付时间表，不能据此确认文心已经回到技术第一梯队。</p>
+
+  <h3>昆仑芯只能给选择权，不能先给精确估值</h3>
+  <p>自研芯片强化了百度从芯片、飞桨、大模型到应用的全栈协同，但公司没有披露昆仑芯外部收入比例、毛利率、出货、产能约束或关联交易定价。分析师直接询问分拆上市里程碑时，管理层仅称流程仍在进行；拟上市地、百度保留持股、融资规模与用途、审批、稀释、关联交易及交割条件也尚未披露。在正式分拆材料和独立财务出现前，SOTP不给昆仑芯单独价值。</p>
+  <div class="callout"><b>电话会回答边界：</b>云的增长方向和利润改善得到回答；集团利润率路径、下半年资本开支预算、利用率、回收期和昆仑芯交易时间表均未回答。</div>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">搜索变现</div>
+  <h2>搜索选择先修产品、后谈变现，广告底部因此继续后移</h2>
+  <p>管理层没有把广告压力完全归因于宏观，而是明确承认两件事：AI聊天产品正在争夺用户时间，百度自己也在AI搜索改造期间主动克制变现。产品体验可能因此改善，但利润修复的时间被推迟。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">在线营销收入</div><div class="v">131<span class="u">亿元</span></div><div class="d"><span class="down">同比 −19%</span><span>单二季度</span></div></div>
+    <div class="cell"><div class="k">百度App月活用户</div><div class="v">6.44<span class="u">亿</span></div><div class="d"><span>2026年6月</span><span>流量基础仍大</span></div></div>
+    <div class="cell"><div class="k">文心助手日活增速</div><div class="v">+83<span class="u">%</span></div><div class="d"><span>日均对话轮次超过3×</span><span>电话会口径</span></div></div>
+  </div>
+
+  <h3>用户增长与广告收入之间出现了新的断点</h3>
+  <p>AI答案减少传统链接点击后，竞价广告的位置、转化路径和商业负载都需要重构。参与度上升证明用户愿意使用新形态，却没有证明广告加载、转化率或每用户收入已经恢复。管理层预计2026年下半年广告仍承压，也没有给出商业化时间表。</p>
+  <p class="small">公司未披露AI搜索留存率、回答采用率、广告加载率、转化率或ARPU；因此本节只确认「产品使用改善、变现仍待验证」，不把管理层定性满意度当成财务证据。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">应用出海</div>
+  <h2>应用采用快于收入，Robotaxi的下一关是单城经济</h2>
+  <p>百度文库、网盘、数字人和智能体已出现真实使用信号，但从试用、付费到续费和利润的链条仍不完整。萝卜快跑则跨过了技术示范阶段，接下来更重要的不是覆盖城市数，而是监管恢复、订单密度和单车回报。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">AI应用收入</div><div class="v">25<span class="u">亿元</span></div><div class="d"><span class="up">同比 +3%</span><span>单二季度</span></div></div>
+    <div class="cell"><div class="k">文库及网盘AI渗透增速</div><div class="v">+27.4<span class="u">%</span></div><div class="d"><span>AI DAU渗透率</span><span>同比</span></div></div>
+    <div class="cell"><div class="k">全无人运营订单</div><div class="v">≈100<span class="u">万单</span></div><div class="d"><span>单二季度</span><span>电话会口径</span></div></div>
+  </div>
+
+  <h3>产品采用有信号，付费质量仍是空白</h3>
+  <p>某数字人客户在一个季度后把部署规模扩大至约2.5倍，秒哒六月月活较三月增长67%；公司仍未披露付费用户、续费率、客单价、毛利率或获客成本。应用收入微增而使用量更快，说明采用已经发生，价值实现尚未同步。</p>
+
+  <h3>海外里程碑多，国内监管调整更值得跟踪</h3>
+  <p>萝卜快跑已覆盖28个城市，累计自动驾驶里程超过3.5亿公里，其中全无人里程超过2.4亿公里。电话会同时披露，部分国内城市因监管考虑短期调整运营，八月开始恢复；公司没有点名城市、暂停范围或财务影响。平均每1,440万公里一次安全气囊弹出的公司口径缺少统一事故定义与同业基准。</p>
+  <p class="small">管理层称曾在一个低车费城市实现单位经济盈亏平衡，并认为海外高车费有利，但未披露车队规模、单车成本、利用率、远程安全运营费用或合作分成。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">现金治理</div>
+  <h2>流动性足以支撑投入，资本纪律决定多少真正属于股东</h2>
+  <p>百度的GAAP利润降幅被投资、汇兑与税率波动放大，但调整后利润也在下降；经营现金虽转正，算力投入仍令自由现金流为负。账面资金提供投资耐力，却不等于可以立即分配给股东的现金。</p>
+
+  <h3>利润降幅的主要放大器在经营线以下</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>单二季度利润质量桥；金额为人民币亿元。</caption>
+      <thead><tr><th>项目</th><th>2025Q2</th><th>2026Q2</th><th>解释</th></tr></thead>
+      <tbody>
+        <tr><td>其他收益总计净额</td><td>48.63</td><td>1.84</td><td>利息、汇兑、权益法及其他项目合计收缩</td></tr>
+        <tr><td>有效税率</td><td>10.8%</td><td>31.2%</td><td>放大税后利润降幅</td></tr>
+        <tr><td>归母净利润同比减少</td><td colspan="2">50.03</td><td>其中其他收益减少46.79</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>资本开支远高于折旧，维护与增长边界尚未披露</h3>
+  <div class="grid">
+    <div class="cell"><div class="k">H1资本开支 / 折旧摊销</div><div class="v">3.84<span class="u">×</span></div><div class="d"><span>算力投资高峰</span><span>公司FCF只扣固定资产采购</span></div></div>
+    <div class="cell"><div class="k">年化经营ROIC代理</div><div class="v">6.53<span class="u">%</span></div><div class="d"><span>低于多数互联网股权资本成本假设</span></div></div>
+    <div class="cell"><div class="k">较窄口径净现金</div><div class="v">1,368.72<span class="u">亿元</span></div><div class="d"><span>不含经调整长期投资</span><span>未扣未来现金消耗</span></div></div>
+  </div>
+  <p>管理层在电话会只强调项目ROI原则，没有提供已承诺与已支付资本、维护与增长性投入、投产时点、算力利用率、增量利润、下半年预算或回收期。ROIC代理＝年化H1经营利润×（1−21.7%有效税率）÷平均经营投入资本；投入资本取归母权益、少数权益、可赎回少数权益与有息债务之和，再扣较窄流动性资产。公司没有披露WACC，因此该代理只显示回报缺口，不能直接当成项目IRR结论。</p>
+
+  <h3>净现金不等于没有债务约束</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>截至2026年6月末；金额为人民币亿元。</caption>
+      <thead><tr><th>项目</th><th>数值</th><th>判断边界</th></tr></thead>
+      <tbody>
+        <tr><td>有息债务</td><td>1,038.60</td><td>占总资产22.10%</td></tr>
+        <tr><td>其中：一年内到期</td><td>303.77</td><td>短借、流动长期借款及流动票据</td></tr>
+        <tr><td>其中：长期部分</td><td>734.83</td><td>长期借款、票据及可转债</td></tr>
+        <tr><td>租赁负债</td><td>90.37</td><td>需与融资口径一并观察</td></tr>
+        <tr><td>债务 / LTM经调整EBITDA</td><td>4.89×</td><td>接近压力观察线，但宽窄口径均为净现金</td></tr>
+        <tr><td>含租赁后的同口径比率</td><td>5.31×</td><td>说明投入节奏比短期偿付更重要</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">数字平台的租赁负债不是主要融资来源，但属于固定合同义务，因此同时列示含租赁和不含租赁口径。含租赁比率越过5倍观察线；较窄净现金和2.33×流动比率使短期再融资并非核心风险，真正压力变量是高投入持续多久。</p>
+  <p class="small">2025年报给出的债务合同付款（含估计利息）为：一年内287.04亿元、1—3年247.10亿元、3—5年203.81亿元、五年以上219.45亿元；该年末梯度与上表2026H1账面本金不是同一口径。主要美元银团借款固定利率为1.71%；百度母公司存续票据票息约0%—4.875%，爱奇艺PAG及2028可转票据分别为6.00%及6.50%。多数百度母公司优先票据无财务约束，交叉违约门槛为1亿美元与权益2.5%孰高。截至2025年末未发生相关违约。若子公司现金恶化触发交叉加速，或高投入使再融资窗口收窄，净现金缓冲才会转成偿债压力。</p>
+
+  <h3>回购要扣除激励，控制权要计入折价</h3>
+  <p>现行50亿美元回购授权只执行了2.59亿美元，即5.18%；H1股份支付为12.72亿元，基本加权股数同比减少0.6%，稀释加权股数却增加0.5%。2025年新授限制性股份5,579万股，授予日加权平均公允价值11美元；年末未归属股份9,406万股，尚未确认成本38亿元、预计约2.9年摊销。计划由薪酬委员会按个别协议设定归属条件，未披露统一的ROIC或每股价值门槛；现任董事及高管各自持有量均不足流通股1%，绝大部分未行使奖励归于「其他个人」合计。评价回购应看注销、再发行和全面摊薄股数的净变化。</p>
+  <p>董事会已在2026Q1采纳股息政策，并预计年内宣布首次派息；本季仍未给金额、除权日或固定支付率，实际分配继续取决于董事会、法律实体与现金上划条件。</p>
+  <p>2025年VIE贡献集团外部收入的一半；李彦宏截至2026年1月底控制约59.9%投票权。香港转双重主要上市拟在8月26日提交股东大会、目标年内生效，并为潜在港股通作准备；它可能改善流动性，却不会自动改善盈利或VIE现金上划能力。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">市场定价</div>
+  <h2>经营价值倍数较低，现金恢复要求并不低</h2>
+  <p>港股在业绩后首个交易日仍处盘中，不能把即时跌幅当成完整收盘反应；美国存托股已给出方向一致的完整事件日。估值的核心变量已经从AI收入标签转向广告下滑、资本开支和现金转换需要多久恢复。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">9888.HK盘中</div><div class="v">87.80<span class="u">港元</span></div><div class="d"><span class="down">−13.16%</span><span>10:04 HKT</span></div></div>
+    <div class="cell"><div class="k">BIDU.O完整事件日</div><div class="v">90.87<span class="u">美元</span></div><div class="d"><span class="down">−12.73%</span><span>8月18日收盘</span></div></div>
+    <div class="cell"><div class="k">事件后估值截面</div><div class="v">0.77<span class="u">×PB</span></div><div class="d"><span>预测PE 15.19×</span><span>TTM PE无意义</span></div></div>
+  </div>
+
+  <h3>估值参照不等于经营可比</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Wind同一时点；美国证券使用上一完整交易日收盘。百度之外的同业仅作业务组合定价参照。</caption>
+      <thead><tr><th>公司</th><th>预测PE</th><th>PB</th><th>PS（推算）</th><th>年初至今</th></tr></thead>
+      <tbody>
+        <tr><td>阿里巴巴 9988.HK</td><td>20.60×</td><td>1.97×</td><td>2.06×</td><td>−11.97%</td></tr>
+        <tr><td>腾讯控股 0700.HK</td><td>14.82×</td><td>3.07×</td><td>4.42×</td><td>−25.52%</td></tr>
+        <tr><td>快手-W 1024.HK</td><td>10.21×</td><td>1.77×</td><td>1.01×</td><td>−39.53%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">腾讯、阿里与快手分别偏社交游戏、电商云和短视频，和百度的搜索、云、自动驾驶及爱奇艺组合不存在统一的用户、毛利或资本强度口径，报告因此不制造一张失真的经营排名表。搜索竞争与云效率已在各自章节比较机制；本表只检验市场定价范围，不直接决定分部倍数。</p>
+
+  <h3>资产负债表—经营价值桥</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>按事件后市值2,067.3亿元重建；金额为人民币亿元。少数股权以账面值代理。</caption>
+      <thead><tr><th>口径</th><th>归属母公司净金融资产代理</th><th>每股港元</th><th>隐含经营EV</th><th>EV / LTM经调整EBITDA</th></tr></thead>
+      <tbody>
+        <tr><td>广义</td><td>1,468.6</td><td>62.37</td><td>598.8</td><td>2.82×</td></tr>
+        <tr><td>保守</td><td>1,044.9</td><td>44.38</td><td>1,022.4</td><td>4.81×</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">广义口径接受公司定义的全部现金及投资；保守口径剔除经调整长期投资。两者都不是清算底价：资金可动用性、VIE上划、投资变现和持续现金消耗均受约束。</p>
+
+  <h3>Q2运行率SOTP：不计昆仑芯独立选择权</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>金额为人民币亿元；Q2收入按四倍年化，仅作估值尺，不是公司指引。各业务倍数为分析假设。</caption>
+      <thead><tr><th>业务</th><th>Q2年化收入</th><th>基础倍数</th><th>基础经营EV</th><th>假设边界</th></tr></thead>
+      <tbody>
+        <tr><td>智能云基础设施</td><td>292</td><td>2.0×</td><td>584.0</td><td>承认增长，折价未披露利润率与资本强度</td></tr>
+        <tr><td>AI应用</td><td>100</td><td>1.8×</td><td>180.0</td><td>采用信号强，变现与续费未披露</td></tr>
+        <tr><td>AI原生营销</td><td>104</td><td>0.9×</td><td>93.6</td><td>避免与在线营销重复加总</td></tr>
+        <tr><td>传统及其他业务</td><td>508</td><td>0.5×</td><td>254.0</td><td>旧业务收缩且其他披露有限，合并采用低倍数</td></tr>
+        <tr><td>爱奇艺</td><td>251.5</td><td>0.4×</td><td>100.6</td><td>按合并分部计入，不另加上市持股市值</td></tr>
+        <tr class="grp"><td>经营EV合计</td><td>—</td><td>—</td><td>1,212.2</td><td>不含昆仑芯独立价值</td></tr>
+        <tr class="grp"><td>加保守净金融资产后权益价值</td><td>—</td><td>—</td><td>2,257.1</td><td>已按前表扣减可赎回及普通少数权益账面代理</td></tr>
+        <tr class="grp"><td>每股基础值</td><td>—</td><td>—</td><td>95.9港元</td><td>非资产出售情景，不另计税项泄漏</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">每股净金融资产与SOTP使用截至2026年1月31日约27.2202亿股流通普通股及0.86502人民币/港元汇率作为代理分母；公司未披露Q2期末全面摊薄股数，若后续稀释扩大，每股价值会相应下调。</p>
+
+  <h3>三年经营—现金路径</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>金额为人民币亿元；每股价值为港元。收入、EBITDA、FCF、资本回报和终值均为分析情景，不是管理层指引。</caption>
+      <thead><tr><th>情景</th><th>收入 2026E→2028E</th><th>经调整EBITDA路径</th><th>FCF路径</th><th>终值倍数 / 折现率</th><th>现值/股</th></tr></thead>
+      <tbody>
+        <tr><td>悲观</td><td>1,220→1,196→持平</td><td>207→179→167</td><td>2026—27均−250；2028 −200</td><td>4× / 12%</td><td>34.9</td></tr>
+        <tr><td>基础</td><td>1,250→1,288→1,352</td><td>238→258→284</td><td>−180→−80→+50</td><td>6× / 11%</td><td>81.9</td></tr>
+        <tr><td>乐观</td><td>1,280→1,370→1,493</td><td>256→301→358</td><td>−120→+30→+120</td><td>8× / 10%</td><td>126.8</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>SOTP与三年路径不应简单平均；后者更严厉地计入现金消耗。合理的基础区间是<strong>82—96港元</strong>，现价位于其中。悲观至乐观的总范围很宽，说明估值最敏感的变量不是收入标签，而是现金转换率。</p>
+  <p>反向推导显示，当前价格要求2028年经调整EBITDA约313亿元，相对LTM约213亿元需17.8%年复合增长；若以正常化FCF估值，经营业务还需要形成68—85亿元正现金，即相对当前负值改善约195—212亿元。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">最终判断</div>
+  <h2>这是一笔等待现金兑现的转型估值，不是现金堆出来的深度折价</h2>
+  <p>百度已经证明AI可以形成有规模的收入池，也具备承受投资周期的资产负债表；尚未证明的是，新收入能否在旧广告下滑时保持合并毛利，并把算力投入转为每股自由现金流。当前价格大致处于谨慎基础价值内，向上空间需要经营兑现，向下风险来自现金恢复继续延后。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">搜索商业化确认</div><p>若2026Q4在线营销降幅收窄至9%以内——即回到个位数区间——同时披露可复核的加载率或转化率，变现底部才算形成。</p></div>
+    <div class="find good"><div class="t">现金拐点确认</div><p>若截至2027H1连续两个季度自由现金流为正，以两个季度排除单季营运资金时点，流动性才重新接近可分配价值。</p></div>
+    <div class="find good"><div class="t">云芯价值确认</div><p>若2027年内正式文件披露昆仑芯独立财务、外部客户与交易结构，才满足把分拆选择权纳入估值的最低证据。</p></div>
+    <div class="find warn"><div class="t">基础情景失效</div><p>若2027年经调整EBITDA低于220亿元，或全年FCF少于−100亿元，任一项出现即越过模型的基础—悲观分界。</p></div>
+    <div class="find warn"><div class="t">Robotaxi扩张失效</div><p>若2027年仍没有至少一个海外城市披露单位经济，且国内监管调整未完成恢复，连最低单城验证样本都不成立。</p></div>
+    <div class="find warn"><div class="t">每股回报失效</div><p>若截至2027H1稀释股数仍未下降、首次股息又无明确金额，回购授权不能抵消激励与现金消耗。</p></div>
+  </div>
+
+  <h3>最强反方</h3>
+  <p>最强的反方不是「AI没有需求」，而是云业务可能同时获得高速增长与利润率提升，搜索主动延后变现也可能换来更高留存；一旦资本开支见顶、广告跌幅收窄，低经营倍数会迅速显得过度悲观。反过来，如果使用量继续快于付费、昆仑芯和萝卜快跑缺少独立经济性，所谓低估值只是对现金消耗时间的折价。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">方法来源</div>
+  <h2>财务以港交所中文公告为准，电话会只补充经营边界</h2>
+  <p>财务控制源为百度集团在香港联交所发布的<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0818/2026081801093_c.pdf">《2026年第二季度业绩公告》</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0518/2026051800585_c.pdf">《2026年第一季度业绩公告》</a>及2021—2025年经审计年度报告。季度与上半年数据为未经审计美国公认会计原则口径；市场数据来自Wind，港股仍处业绩后首个交易日盘中，故没有把盘中价格写成收盘价。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>证据层级与使用边界。</caption>
+      <thead><tr><th>材料</th><th>用途</th><th>边界</th></tr></thead>
+      <tbody>
+        <tr><td>港交所中文公告及年报</td><td>财务、分部、业务KPI、治理与资本事项</td><td>内部AI三分法按公告取整且未经审计</td></tr>
+        <tr><td>earningscalls.dev逐字稿</td><td>七轮问答、管理层经营增量与未回答项</td><td>财务数不以逐字稿替代；转写不稳的产品名未使用</td></tr>
+        <tr><td>Wind</td><td>价格、风险、同业与汇率</td><td>港股时点为盘中；不可比或未同步更新字段未作核心输入</td></tr>
+        <tr><td>分析计算</td><td>LTM、FCF代理、ROE/ROIC、EV桥、SOTP与三年情景</td><td>财务公式使用原始精度；AI内部业务只能使用公告取整值；情景不是公司指引</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">单二季度采用公司直接披露数；LTM按「2025全年＋2026H1−2025H1」计算。FCF代理仅扣购买固定资产，不含无形资产、并购和投资；SOTP按收入倍数并使用保守净金融资产，三年路径按终值EV/EBITDA折现，两种方法只做区间协调、不做简单平均。</p>
+</section>
+
+<footer>
+  <p>数据截止：财务文件2026年8月18日，行情2026年8月19日页首时点。主要来源：百度集团港交所中文公告及经审计年报、2026Q2业绩电话会逐字稿、Wind市场数据。当前季度及上半年未经审计。</p>
+  <p>推算包括毛利、利润率、CAGR、LTM、自由现金流代理、ROE/ROIC、净金融资产、经营EV、情景估值及反向隐含预期；因会计口径、汇率、盘中价格和管理层内部口径可能变化，结果仅供研究，不构成投资建议。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
