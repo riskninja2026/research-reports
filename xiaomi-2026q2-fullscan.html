@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>小米集团 2026Q2 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">小米集团-W 01810.HK｜全景尽调｜财务截止 2026.06.30 · 行情截止 2026.08.19收盘</div>
+    <h1>高端化是真的，<br>兑现为利润还不是。</h1>
+    <p class="lede">小米Q2最容易被误读成旧硬件向汽车与AI的顺利迁移：手机提价、汽车放量、模型调用上升都是真的。<b>但收入迁移尚未成为利润与现金迁移</b>——核心硬件毛利下滑、创新业务仍亏损，AI回报也没有单列。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">手机ASP同比｜产品结构</div>
+        <div class="big a">+25.9%</div>
+        <div class="cap">主动收缩中低端出货并提高高端机型占比，价格与结构保护了收入。</div>
+      </div>
+      <div>
+        <div class="tag">经调整净利润同比｜单二季度</div>
+        <div class="big b">−42.6%</div>
+        <div class="cap">本季利润降幅远大于收入，说明提价、放量和用户增长尚未穿透成本与投入。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">财务底图</div>
+  <h2>五年规模已跨台阶，本季利润与现金同时退坡</h2>
+  <p>小米以手机作为流量入口，以IoT扩展设备生态，以互联网服务完成高毛利变现，并以汽车与AI开辟第二曲线。2021—2025年的规模和归母利润明显增长，但2026Q2核心硬件与创新业务的毛利共同收缩；互联网服务仍增长、配套业务仅微利，报表已从扩张转入回报验证期。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">单二季度收入</div><div class="v">1,089.22<span class="u">亿元</span></div><div class="d"><span class="down">同比 −6.1%</span></div></div>
+    <div class="cell"><div class="k">单二季度毛利</div><div class="v">216.09<span class="u">亿元</span></div><div class="d"><span class="down">同比 −17.2%</span></div></div>
+    <div class="cell"><div class="k">单二季度经营利润</div><div class="v">108.70<span class="u">亿元</span></div><div class="d"><span class="down">同比 −19.1%</span></div></div>
+    <div class="cell"><div class="k">单二季度归母净利润</div><div class="v">94.62<span class="u">亿元</span></div><div class="d"><span class="down">同比 −20.5%</span></div></div>
+    <div class="cell"><div class="k">单二季度经营现金流</div><div class="v">38.42<span class="u">亿元</span></div><div class="d"><span class="down">同比 −83.7%</span></div></div>
+    <div class="cell"><div class="k">单二季度自由现金流代理</div><div class="v">2.22<span class="u">亿元</span></div><div class="d"><span class="down">同比 −98.8%</span></div></div>
+  </div>
+
+  <div class="grid">
+    <div class="cell"><div class="k">稀释每股收益</div><div class="v">0.36<span class="u">元</span></div><div class="d"><span>单二季度</span></div></div>
+    <div class="cell"><div class="k">上半年年化ROE代理</div><div class="v">10.6<span class="u">%</span></div><div class="d"><span>归母利润 / 平均归母权益</span></div></div>
+    <div class="cell"><div class="k">每股归母权益代理</div><div class="v">10.47<span class="u">元</span></div><div class="d"><span>上半年加权股数口径</span></div></div>
+  </div>
+
+  <h3>五年合并轨迹</h3>
+  <div class="tblscroll">
+    <table class="tbl" data-financials="history">
+      <caption>除稀释每股收益为元/股外，其余金额为人民币亿元；利润列同时列示利润率。自由现金流代理＝经营现金流−资本开支。</caption>
+      <thead><tr><th>年度</th><th>收入</th><th>毛利 / 率</th><th>经营利润 / 率</th><th>归母净利润 / 率</th><th>稀释每股收益</th><th>ROE</th><th>经营现金流</th><th>资本开支</th><th>自由现金流代理</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>3,283.09</td><td>582.61 / 17.7%</td><td>260.29 / 7.9%</td><td>193.39 / 5.9%</td><td>0.76</td><td>14.8%</td><td>97.85</td><td>71.69</td><td>26.16</td></tr>
+        <tr><td>2022</td><td>2,800.44</td><td>475.77 / 17.0%</td><td>28.16 / 1.0%</td><td>24.74 / 0.9%</td><td>0.10</td><td>1.8%</td><td>−43.90</td><td>58.00</td><td>−101.89</td></tr>
+        <tr><td>2023</td><td>2,709.70</td><td>574.76 / 21.2%</td><td>200.09 / 7.4%</td><td>174.75 / 6.4%</td><td>0.69</td><td>11.4%</td><td>413.00</td><td>76.62</td><td>336.38</td></tr>
+        <tr><td>2024</td><td>3,659.06</td><td>765.60 / 20.9%</td><td>245.03 / 6.7%</td><td>236.58 / 6.5%</td><td>0.93</td><td>13.4%</td><td>392.95</td><td>104.80</td><td>288.15</td></tr>
+        <tr><td>2025</td><td>4,572.87</td><td>1,018.06 / 22.3%</td><td>479.01 / 10.5%</td><td>416.43 / 9.1%</td><td>1.56</td><td>18.31%</td><td>341.42</td><td>181.57</td><td>159.85</td></tr>
+        <tr class="grp"><td>2021—25 CAGR</td><td>8.6%</td><td>15.0%</td><td>16.5%</td><td>21.1%</td><td>—</td><td>—</td><td>36.7%*</td><td>26.2%</td><td>不具稳态意义</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">五年CAGR按首末值与四个间隔计算；经营现金流序列在2022年为负，该首末值结果不代表平滑增长。2024年起报告分部改为「手机×AIoT」及「智能电动汽车及AI等创新业务」，2025年再把AI纳入创新分部名称。</p>
+
+  <h3>上半年与LTM：报表利润仍为正，自由现金流已经为负</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>人民币亿元；LTM＝2025全年＋2026H1−2025H1。</caption>
+      <thead><tr><th>期间</th><th>收入</th><th>毛利 / 率</th><th>归母净利润</th><th>经调整净利润</th><th>经营现金流</th><th>资本开支</th><th>自由现金流代理</th></tr></thead>
+      <tbody>
+        <tr><td>2026H1</td><td>2,080.63</td><td>434.19 / 20.87%</td><td>141.86</td><td>122.91</td><td>20.50</td><td>68.95</td><td>−48.44</td></tr>
+        <tr><td>LTM至Q2</td><td>4,381.00</td><td>937.18 / 21.4%</td><td>330.00</td><td>299.51</td><td>81.38</td><td>174.54</td><td>−93.16</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div data-financials="segments">
+    <h3>五个业务池：收入结构与利润结构并不相同</h3>
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>2026Q2；人民币亿元。前四项组成「手机×AIoT」报告分部，第五项为另一报告分部。</caption>
+        <thead><tr><th>业务池</th><th>收入</th><th>占比</th><th>同比</th><th>毛利</th><th>毛利率</th><th>可比收入CAGR</th></tr></thead>
+        <tbody>
+          <tr><td>智能手机</td><td>421.19</td><td>38.7%</td><td>−7.5%</td><td>35.99</td><td>8.5%</td><td>2021—25 −2.8%</td></tr>
+          <tr><td>IoT与生活消费产品</td><td>312.78</td><td>28.7%</td><td>−19.2%</td><td>62.72</td><td>20.1%</td><td>2021—25 +9.73%</td></tr>
+          <tr><td>互联网服务</td><td>90.44</td><td>8.3%</td><td>−0.6%</td><td>69.42</td><td>76.8%</td><td>2021—25 +7.3%</td></tr>
+          <tr><td>手机×AIoT其他</td><td>15.85</td><td>1.4%</td><td>+16.3%</td><td>0.03</td><td>0.2%</td><td>不具稳态意义</td></tr>
+          <tr><td>汽车及AI等创新业务</td><td>248.96</td><td>22.9%</td><td>+17.1%</td><td>47.92</td><td>19.2%</td><td>2024—25 +223.8%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p class="small">最新业绩未经审核。产品CAGR只对口径可比的完整年度计算；创新业务仅有2024—2025两个完整年度，不能与此前「其他」拼接。BVPS代理以加权平均股数而非期末流通股计算，只用于趋势参照。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">手机毛利</div>
+  <h2>提价保护了收入，没有保护单机毛利</h2>
+  <p>本季手机策略不是简单涨价，而是主动收缩中低端量、提高中国大陆及境外高端机型占比。结果是出货降幅远大于收入降幅，但核心部件涨价仍穿透到毛利端：高端化存在，定价权尚未完整成立。</p>
+
+  <div class="flowbox">
+    <svg viewBox="0 0 760 210" role="img" aria-label="小米2026Q2集团收入增量桥，手机与AIoT收入减少106.67亿元，汽车及AI收入增加36.33亿元，只抵消前者约34.1%">
+      <text x="20" y="24" fill="#122A4B" font-size="16" font-weight="600">集团收入增量桥｜2026Q2同比</text>
+      <text x="20" y="77" fill="#3C4A56" font-size="14">手机×AIoT</text>
+      <rect x="150" y="50" width="240" height="42" fill="#A32B57"></rect>
+      <text x="165" y="77" fill="#FFFFFF" font-size="15" font-weight="600">−106.67亿元</text>
+      <text x="20" y="147" fill="#3C4A56" font-size="14">汽车及AI</text>
+      <rect x="390" y="120" width="81.7" height="42" fill="#2C6A57"></rect>
+      <text x="483" y="147" fill="#2C6A57" font-size="15" font-weight="600">+36.33亿元</text>
+      <line x1="390" y1="40" x2="390" y2="180" stroke="#6D7B88" stroke-width="1" stroke-dasharray="4 4"></line>
+      <text x="374" y="202" fill="#6D7B88" font-size="12">零增量</text>
+    </svg>
+    <div class="flow-note"><div class="badge">34.1%</div><div>创新业务只填回手机×AIoT收入缺口约三分之一，集团净收入仍少70.34亿元。图宽按绝对增量最大项标准化；正向宽度＝36.33÷106.67×240≈81.7。</div></div>
+  </div>
+
+  <div class="rows">
+    <div class="row"><div class="nm">销量下降拖累<span>按去年ASP静态计算</span></div><div class="track"><div class="fill alt" style="width:100%"></div></div><div class="fig">−120.20亿元</div></div>
+    <div class="row"><div class="nm">价格结构补偿<span>本期ASP提升贡献</span></div><div class="track"><div class="fill" style="width:72.1%"></div></div><div class="fig">+86.67亿元</div></div>
+  </div>
+  <p class="small">推算显示价格与产品结构抵消约72.1%的销量下滑所造成收入拖累。Q2手机出货3,120万台，同比下降26.5%；ASP为1,351元。</p>
+
+  <h3>成本传导快于结构升级</h3>
+  <p>单机毛利由约123.1元降至115.4元；中国大陆3,000元以上机型销量占比已接近三分之一，并提高4.5个百分点。也就是说，高价段占比提升是真实的，但仍不足以覆盖存储等核心部件成本。</p>
+  <p>Q1电话会中，管理层给出的路径正是以ASP和结构缓冲成本，并承认成本不能线性转嫁。Q2把此前未量化的成本敏感度显性化：核心器件上涨已穿透至单机毛利，而公司出货降幅也明显大于全球市场约6%的降幅。Omdia口径下仍居全球第三，但相对出货失速比名次更值得跟踪。</p>
+  <p><strong>下一检验：</strong>Q3需要同时看到出货降幅收窄、单机毛利回升和高端份额稳定；若只有价格继续上升而量与毛利继续下降，高端化将更接近防守而非增长。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">生态变现</div>
+  <h2>连接规模继续扩张，互联网才是利润锚</h2>
+  <p>AIoT的用户和设备网络仍在增长，但中国补贴退坡、核心器件涨价与618促销压住硬件利润；互联网服务则以不足一成收入贡献近三分之一集团毛利。生态的价值已经存在，问题是连接规模没有稳定转化为新增收入。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">AIoT连接设备</div><div class="v">11.608<span class="u">亿台</span></div><div class="d"><span class="up">同比 +17.4%</span></div></div>
+    <div class="cell"><div class="k">五件以上设备用户</div><div class="v">2,460<span class="u">万</span></div><div class="d"><span class="up">同比 +20.2%</span></div></div>
+    <div class="cell"><div class="k">米家APP月活</div><div class="v">1.241<span class="u">亿</span></div><div class="d"><span>同比继续增长</span></div></div>
+    <div class="cell"><div class="k">小爱同学月活</div><div class="v">1.749<span class="u">亿</span></div><div class="d"><span class="up">同比 +14.2%</span></div></div>
+    <div class="cell"><div class="k">境外互联网收入</div><div class="v">29<span class="u">亿元</span></div><div class="d"><span>占该业务 32.1%</span></div></div>
+    <div class="cell"><div class="k">AIoT毛利率环比</div><div class="v">−5.1<span class="u">pt</span></div><div class="d"><span class="down">器件成本与促销</span></div></div>
+  </div>
+  <p class="small">2026年连接设备统计只排除手机和平板，过往还排除笔记本；跨年用户序列存在定义断点。公司未披露设备留存、跨品类复购或每连接设备利润。</p>
+
+  <h3>用户增长和收入增长之间出现断点</h3>
+  <p>全球手机月活7.665亿，中国大陆月活1.977亿；广告收入同比增长4.8%，但游戏及其他增值服务下滑，使互联网总收入基本停滞。更合理的解释不是生态失效，而是海外低变现用户占比、服务组合与ARPU共同稀释了用户增长。</p>
+  <p>Q1电话会强调海外扩品类与渠道，Q2只给出境外IoT「高速增长」的定性信息，没有绝对收入或利润；这一承诺只能判为方向兑现、回报未验证。若下一期仍只披露连接数而不披露留存、ARPU或贡献利润，生态协同的估值置信度不应提高。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">汽车效率</div>
+  <h2>交付放量改善亏损，尚未跨过回报拐点</h2>
+  <p>汽车数量增长是真实的，经营亏损也环比收窄；但车型组合下沉使ASP下降，核心零部件与AI成本又压缩分部毛利。规模经济正在发生，尚未强到足以证明汽车与AI已经成为新的利润池。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">Q2汽车交付</div><div class="v">104,199<span class="u">辆</span></div><div class="d"><span class="up">同比 +28.2%</span></div></div>
+    <div class="cell"><div class="k">汽车ASP</div><div class="v">229,312<span class="u">元</span></div><div class="d"><span class="down">同比 −9.6%</span></div></div>
+    <div class="cell"><div class="k">创新分部经营亏损</div><div class="v">26<span class="u">亿元</span></div><div class="d"><span class="up">Q1为31亿元</span></div></div>
+    <div class="cell"><div class="k">创新业务Q2资本开支</div><div class="v">23.83<span class="u">亿元</span></div><div class="d"><span>约占集团本季三分之二</span></div></div>
+    <div class="cell"><div class="k">H2历史目标余量</div><div class="v">≈36.5<span class="u">万辆</span></div><div class="d"><span>若Q1所述全年55万辆仍有效</span></div></div>
+    <div class="cell"><div class="k">H2所需月均交付</div><div class="v">≈6.08<span class="u">万辆</span></div><div class="d"><span>约为Q2月均的1.75倍</span></div></div>
+  </div>
+  <p class="small">创新分部同时包含AI等业务，不能把分部亏损除以交付量后称为「单车亏损」。全年交付目标来自Q1电话会，Q2公告没有重新确认，因此只作为高难度目标检验。</p>
+
+  <h3>9月车型催化剂必须用单位经济验收</h3>
+  <p>两款增程SUV计划于9月上市，为下半年量增提供产品周期，但公司尚未披露订单、设计产能、产能利用率或车型级毛利。Q1管理层承诺的「新车型推量、供应链降本」只兑现了前半段；正式定价、订单转交付、混合ASP与分部毛利才决定后半段。</p>
+  <p>汽车出海仍是远期选择权。Q1电话会给出的窗口是2027年下半年先进入发达市场，Q2没有新增海外汽车网点或收入；境外消费电子新零售门店不能当作汽车销售网络，也不应计入近期基准销量。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">AI与海外</div>
+  <h2>产品落地与调用数据越来越多，利润贡献仍无法拆分</h2>
+  <p>MiMo调用、XRING芯片和海外零售网络都在扩张，但三者共同缺少可独立核验的利润与现金回报。技术采用与地域增长可以提高选择权，不能替代收入、毛利、留存和资本回收期。</p>
+
+  <h3>AI已经产生收入，但还没有可估值的单位经济</h3>
+  <div class="grid">
+    <div class="cell"><div class="k">Q2研发开支</div><div class="v">92.31<span class="u">亿元</span></div><div class="d"><span class="down">同比 +18.9%</span></div></div>
+    <div class="cell"><div class="k">2026年AI计划投入</div><div class="v">160<span class="u">亿元</span></div><div class="d"><span>年度计划，不是本季费用</span></div></div>
+    <div class="cell"><div class="k">MiMo-V2.5周调用量</div><div class="v">10.5<span class="u">万亿token</span></div><div class="d"><span>使用证据，不是回报证据</span></div></div>
+  </div>
+  <p>MiMo收入只被纳入约10亿元的创新业务「其他」收入，且与售后服务等项目混合；推理成本、毛利、付费用户和留存均未拆分。Q1电话会已明确商业闭环尚未形成、投资以ROI为前提，Q2新增的是使用与投入，关键未知数仍未消除。</p>
+  <p>XRING O1证明自研芯片能力，但公司只披露集团2026—2030年累计研发投入超过2,000亿元，没有拆出芯片预算，也没有披露搭载量、良率、BOM节约或外部销售。现阶段更合理的处理是不给独立精确估值，等待成本节约或外部收入出现。</p>
+
+  <h3>海外收入增长，海外利润仍不可见</h3>
+  <div class="rows">
+    <div class="row"><div class="nm">中国大陆以外<span>Q2收入与同比</span></div><div class="track"><div class="fill" style="width:56.3%"></div></div><div class="fig">392.54亿元<span class="up">+7.0%</span></div></div>
+    <div class="row"><div class="nm">中国大陆<span>Q2收入与同比</span></div><div class="track"><div class="fill alt" style="width:100%"></div></div><div class="fig">696.68亿元<span class="down">−12.1%</span></div></div>
+  </div>
+  <p>海外已贡献36.0%的季度收入，境外新零售门店超过640家；销售推广费上升也部分来自该网络扩张。公司未披露海外营业利润、现金流或门店回收期，因此只能确认增收，不能确认海外提高了集团回报率。</p>
+  <p>季度文件也没有把海外增长拆成内生扩张与收购贡献，未量化汇率敏感度、本地生产经济性、属地税负或资金汇回约束。欧洲与印度是主要来源地区，但没有地区利润表和现金桥，无法判断收入增长是否被汇兑、渠道投入或本地化成本抵消。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">现金治理</div>
+  <h2>净现金足以支撑投入，每股价值仍取决于现金纪律</h2>
+  <p>短期偿付不是核心矛盾：流动性资产远高于借款。真正的问题是利润转成现金的能力下降、原材料库存前移，以及回购能否持续抵消配售、股权激励和可转债带来的稀释。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">借款 / 资产</div><div class="v">7.6<span class="u">%</span></div><div class="d"><span>远低于财务压力阈值</span></div></div>
+    <div class="cell"><div class="k">流动比率</div><div class="v">1.49<span class="u">x</span></div><div class="d"><span>流动资产 / 流动负债</span></div></div>
+    <div class="cell"><div class="k">借款 / LTM EBITDA代理</div><div class="v">0.83<span class="u">x</span></div><div class="d"><span>无机械偿债压力触发</span></div></div>
+  </div>
+
+  <h3>呈报利润受到投资收益帮助，经营现金依赖营运资金对冲</h3>
+  <p>Q2非国际财务报告准则调节表中的投资公允价值变动净额为负55.34亿元，意味着呈报利润包含相应投资收益；这解释了归母净利润为何好于经调整口径，却不是经营改善。现金端，存货与预付款及其他应收项目分别形成95亿元和41亿元占用，贸易应付款增加带来162亿元流入，供应商信用暂时抵消了前两项拖累。下一期若应付款不再增长，经营现金的真实恢复必须来自库存与回款。</p>
+
+  <h3>库存总量变化不大，结构已经明显前移</h3>
+  <p>原材料由239.74亿元增至452.60亿元，而制成品由500.95亿元降至331.66亿元；上半年计提存货减值44.62亿元，同时因出售转出46.31亿元。供应链准备和汽车爬坡可以解释一部分前移，但后续动销、采购价和减值才决定这是不是有效库存。</p>
+
+  <h3>回购价格有利，净稀释尚未被证明</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>资本配置与控制权；股数、金额和持股口径的时点不同，不作机械相减。</caption>
+      <thead><tr><th>事项</th><th>披露值</th><th>对每股价值的含义</th></tr></thead>
+      <tbody>
+        <tr><td>2025配售及认购</td><td>8.00亿股 @ HK$53.25</td><td>募集约426亿港元，形成先融资后回购的比较基准</td></tr>
+        <tr><td>2026年至8月13日回购</td><td>3.775亿股 / HK$116.66亿</td><td>均价HK$30.90；现价低10.9%，但回购量仍小于既往配售</td></tr>
+        <tr><td>Q2潜在摊薄</td><td>7.849亿股 / 基本股数3.05%</td><td>RSU、期权及可转债共同扩大完全摊薄分母</td></tr>
+        <tr><td>上半年股份支付</td><td>23.21亿元</td><td>2025年授予对应潜在新股1.879亿股；年度及季度公开摘要不足以验证当前归属条件、费用节奏、受益人集中度与价值创造门槛</td></tr>
+        <tr><td>上半年股息</td><td>不宣派</td><td>直接股东回报完全依赖回购与每股价值增长</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>2021—2025年公司均未宣派股息。2025全年至2026H1累计回购约172.48亿港元，相当于2025年配售募集资金约40.5%；在这一可比窗口内，公司仍是净融资方，低价回购尚未完全逆转股份扩张。</p>
+  <p>雷军在2025年末控制约61.0%一般事项投票权，并同时担任董事长、CEO及汽车业务CEO；VIE承载外资受限业务，贡献约24.1%集团收入。2025年集团向小米金融集团提供金融服务的实际交易额为43.08亿元，低于88.53亿元年度上限，独立董事及核数师已确认；在没有定价偏离证据时，不应把关联交易直接定性为利益输送。</p>
+  <p>印度税务、关税及外汇调查使部分银行资金受限，听证未结且未作重大拨备，最终罚款或现金影响仍无法估计。风险解除标志是资金解冻、最终裁决及相应拨备落地；在此之前，估值只扣除已受限金额，不自行假设额外罚款。现金充足不能消除控制权、合同安排与监管的尾部折价。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">市场估值</div>
+  <h2>汽车已经不是免费期权，现价要求利润重新加速</h2>
+  <p>公告后首个完整交易日收于HK$27.52，上涨5.12%；结合长期高Beta与深回撤，这更像低位预期修复，而非风险结构逆转。按分部经济性拆分，当前价格给汽车与AI的经营价值已略高于本报告牛市倍数，并要求集团利润在未来两年重新加速。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Wind截至2026-08-19港股收盘；多窗口收益未作年化。</caption>
+      <thead><tr><th>市场证据</th><th>5日</th><th>20日</th><th>60日</th><th>120日</th><th>250日</th><th>年初至今</th></tr></thead>
+      <tbody>
+        <tr><td>股价收益</td><td>+4.40%</td><td>+3.15%</td><td>−8.27%</td><td>−24.73%</td><td>−46.77%</td><td>−29.97%</td></tr>
+        <tr><td>风险与交易</td><td colspan="2">事件日成交额 HK$90.86亿</td><td colspan="2">相对恒指Beta 1.6887</td><td colspan="2">一年最大回撤 −63.97%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>港股截至2026-08-19收盘，苹果截至8月18日美股收盘；P/S为TTM口径，预测PE采用Wind当期一致预期。不同业务模式和会计边界不可直接套用整体倍数。</caption>
+      <thead><tr><th>参照公司</th><th>主要参照</th><th>P/S</th><th>TTM PE</th><th>预测PE</th><th>使用边界</th></tr></thead>
+      <tbody>
+        <tr><td>联想集团</td><td>低毛利硬件</td><td>0.53x</td><td>58.87x</td><td>19.56x</td><td>手机与IoT销售倍数下界，利润基数偏低</td></tr>
+        <tr><td>苹果</td><td>高端硬件＋服务</td><td>9.69x</td><td>35.09x</td><td>未返回</td><td>高端经济性上界，不能直接套给小米手机</td></tr>
+        <tr><td>腾讯</td><td>互联网平台</td><td>4.35x</td><td>15.01x</td><td>15.07x</td><td>只校验互联网利润倍数</td></tr>
+        <tr><td>比亚迪</td><td>规模化整车</td><td>0.98x</td><td>26.32x</td><td>17.09x</td><td>成熟汽车盈利参照</td></tr>
+        <tr><td>小鹏</td><td>亏损成长型纯电</td><td>1.05x</td><td>亏损</td><td>亏损</td><td>汽车成长但未稳定盈利的参照</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Wind完整财年经营轨迹；方括号依次为2023、2024、2025，所有数值均为百分比。</caption>
+      <thead><tr><th>参照公司</th><th>收入同比</th><th>毛利率</th><th>营业利润率</th><th>执行含义</th></tr></thead>
+      <tbody>
+        <tr><td>联想集团</td><td>[−13.5,−8.2,+21.5]</td><td>[17.0,17.2,16.1]</td><td>[4.4,3.5,3.5]</td><td>硬件恢复收入未同步抬升利润率</td></tr>
+        <tr><td>苹果</td><td>[−2.8,+2.0,+6.4]</td><td>[44.1,46.2,46.9]</td><td>[29.8,31.5,32.0]</td><td>高端硬件与服务经济性的上界</td></tr>
+        <tr><td>腾讯</td><td>[+9.8,+8.4,+13.9]</td><td>[48.1,52.9,56.2]</td><td>[25.5,30.3,32.6]</td><td>互联网利润池持续扩张的参照</td></tr>
+        <tr><td>比亚迪</td><td>[+42.0,+29.0,+3.5]</td><td>[20.2,19.4,17.7]</td><td>[4.9,4.6,2.8]</td><td>整车规模增长放缓且利润率回落</td></tr>
+        <tr><td>小鹏</td><td>[+14.2,+33.2,+87.7]</td><td>[1.5,14.3,18.9]</td><td>[−37.1,−18.3,−5.8]</td><td>高增长与亏损收窄可以并存</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>SOTP先拆业务，再处理现金、投资与成本</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>基准情景；TTM收入及估值为人民币亿元。互联网以规范化营业利润估值。</caption>
+      <thead><tr><th>价值单元</th><th>TTM收入</th><th>基准假设</th><th>经营价值</th></tr></thead>
+      <tbody>
+        <tr><td>智能手机</td><td>1,767.00</td><td>基准销售倍数</td><td>795.15</td></tr>
+        <tr><td>IoT与生活消费产品</td><td>1,081.08</td><td>基准销售倍数</td><td>756.76</td></tr>
+        <tr><td>互联网服务</td><td>377.79</td><td>规范化利润与基准倍数</td><td>1,579.14</td></tr>
+        <tr><td>手机×AIoT其他</td><td>45.28</td><td>固定值</td><td>20.00</td></tr>
+        <tr><td>汽车及AI</td><td>1,109.86</td><td>基准销售倍数</td><td>943.38</td></tr>
+        <tr class="grp"><td>经营业务EV</td><td>—</td><td>分项合计</td><td>4,094.43</td></tr>
+        <tr><td>公司口径现金储备</td><td>—</td><td>含定存、投资及理财</td><td>+2,193.00</td></tr>
+        <tr><td>借款（假设可转债转换后）</td><td>—</td><td>摊薄分母与债务口径一致</td><td>−341.99</td></tr>
+        <tr><td>印度受限资金</td><td>—</td><td>当前已知监管扣减</td><td>−35.36</td></tr>
+        <tr class="grp"><td>摊薄口径净金融资产</td><td>—</td><td>以上三项按未舍入数合计</td><td>+1,815.66</td></tr>
+        <tr><td>投资账面值</td><td>—</td><td>长期投资组合</td><td>+919.58</td></tr>
+        <tr><td>减：现金储备已含理财</td><td>—</td><td>防止资产重复确认</td><td>−117.19</td></tr>
+        <tr><td>去重后投资组合</td><td>—</td><td>按基准折价确认</td><td>+441.31</td></tr>
+        <tr><td>总部、底层AI等成本现值</td><td>—</td><td>分析假设</td><td>−500.00</td></tr>
+        <tr><td>非控股权益</td><td>—</td><td>扣减</td><td>−1.19</td></tr>
+        <tr class="grp"><td>基准股权价值</td><td>—</td><td>摊薄分母与汇率换算前</td><td>5,850.21</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>三情景估值不是简单平均；每股分母为Q2摊薄加权265.08777亿股，换算采用2026-08-18 CFETS的HKD/CNY 0.85965。</caption>
+      <thead><tr><th>假设 / 结果</th><th>熊</th><th>基准</th><th>牛</th></tr></thead>
+      <tbody>
+        <tr><td>手机EV/收入</td><td>0.30x</td><td>0.45x</td><td>0.65x</td></tr>
+        <tr><td>IoT EV/收入</td><td>0.50x</td><td>0.70x</td><td>1.00x</td></tr>
+        <tr><td>互联网利润率 / 倍数</td><td>32% / 8x</td><td>38% / 11x</td><td>42% / 14x</td></tr>
+        <tr><td>汽车及AI EV/收入</td><td>0.55x</td><td>0.85x</td><td>1.20x</td></tr>
+        <tr><td>手机×AIoT其他价值</td><td>0亿元</td><td>20亿元</td><td>50亿元</td></tr>
+        <tr><td>净金融资产确认比例</td><td>80%</td><td>100%</td><td>100%</td></tr>
+        <tr><td>投资组合确认比例</td><td>35%</td><td>55%</td><td>75%</td></tr>
+        <tr><td>总部等成本扣减</td><td>700亿元</td><td>500亿元</td><td>350亿元</td></tr>
+        <tr class="grp"><td>每股价值</td><td>HK$16.15</td><td>HK$25.67</td><td>HK$34.66</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">公司未披露手机、IoT与互联网各自营业利润；互联网规范化利润率、分部倍数、投资折价及总部成本均为分析假设。分部参照分别来自联想、苹果、腾讯、比亚迪和小鹏，不能用单一「小米同业」整体套倍数。</p>
+
+  <h3>现价反推：市场已经预付一部分生态协同</h3>
+  <p>保持其他基准假设不变，现价倒推出汽车及AI经营价值1,365亿元，相当于1.23x TTM收入，略高于本报告牛市EV/收入假设。比亚迪与小鹏的Wind P/S属于股权市值口径，只作市场背景，不与这项分部EV倍数直接比较。较高倍数成立的条件不是交付继续增长，而是生态获客、汽车毛利和AI变现形成可核验的利润。</p>
+  <p>另一条反向估值显示：沿用三年情景的基准折现与终值框架，市场要求2028年经调整净利润约446亿元，相对当前LTM隐含18.3%的复合增速；若只有70%转成所有者收益，终点现金利润约312亿元。基准值略低于现价，意味着当下缺乏基准安全边际。</p>
+
+  <h3>三年经营与现金路径</h3>
+  <p>现金模型先用报告口径和公司管理口径校准：上半年按管理账目调整后的经营现金流约60亿元，扣除资本开支后仍为负8.95亿元。分析用经营现金流代理＝经调整净利润×现金转化率；分析用自由现金流代理再扣资本开支，不冒充公司指引。</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>三条路径的关键驱动；方括号按项目所示期间依次排列。分部增速、净利率及现金转化率均为百分比，资本开支为人民币亿元。</caption>
+      <thead><tr><th>驱动</th><th>熊</th><th>基准</th><th>牛</th></tr></thead>
+      <tbody>
+        <tr><td>2026H2手机收入同比</td><td>−12%</td><td>−5%</td><td>持平</td></tr>
+        <tr><td>2026H2 IoT收入同比</td><td>−8%</td><td>持平</td><td>+5%</td></tr>
+        <tr><td>2026H2互联网收入同比</td><td>持平</td><td>+3%</td><td>+6%</td></tr>
+        <tr><td>2026H2汽车及AI收入同比</td><td>+5%</td><td>+12%</td><td>+20%</td></tr>
+        <tr><td>2027 / 28分部收入增速向量</td><td>手机[−4,−2]；IoT[0,+2]；互联网[+1,+2]；汽车AI[+4,+5]</td><td>手机[0,+2]；IoT[+5,+7]；互联网[+4,+6]；汽车AI[+14,+18]</td><td>手机[+3,+4]；IoT[+9,+11]；互联网[+7,+9]；汽车AI[+25,+30]</td></tr>
+        <tr><td>其他业务2026H2 / 27 / 28增速</td><td>[0,0,0]</td><td>[+2,+2,+2]</td><td>[+5,+5,+5]</td></tr>
+        <tr><td>经调整净利率2026 / 27 / 28</td><td>[5.0,4.5,4.0]</td><td>[6.0,6.6,7.2]</td><td>[6.8,8.2,9.5]</td></tr>
+        <tr><td>经营现金转化率2026 / 27 / 28</td><td>[80,75,80]</td><td>[105,112,120]</td><td>[115,125,135]</td></tr>
+        <tr><td>2026 / 27 / 28资本开支</td><td>140 / 120 / 100</td><td>160 / 170 / 180</td><td>190 / 240 / 280</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>人民币亿元；每年依次为「收入 / 经调整净利润 / 分析用自由现金流代理」。终值路线与SOTP分别校验，不作等权平均。</caption>
+      <thead><tr><th>情景</th><th>2026</th><th>2027</th><th>2028</th><th>折现每股价值</th></tr></thead>
+      <tbody>
+        <tr><td>熊</td><td>4,264 / 213 / 31</td><td>4,247 / 191 / 23</td><td>4,303 / 172 / 38</td><td>HK$7.08</td></tr>
+        <tr><td>基准</td><td>4,422 / 265 / 119</td><td>4,658 / 307 / 174</td><td>5,041 / 363 / 256</td><td>HK$22.39</td></tr>
+        <tr><td>牛</td><td>4,552 / 310 / 166</td><td>5,045 / 414 / 277</td><td>5,756 / 547 / 458</td><td>HK$41.23</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">终值分别使用12x、18x与22x的2028经调整PE，以11%要求回报折现，并按摊薄股数及港元汇率换算。基准要求硬件逐步止跌、汽车在后两年转正及营运资金正常化；牛市还要求AI提高ARPU或硬件利润。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">最终判断</div>
+  <h2>这是等待回报兑现的生态估值，不是汽车免费的硬件折价</h2>
+  <p>多头最强证据是互联网毛利锚、充足净现金、汽车亏损收窄，以及跨设备生态可能降低获客成本；空头最强证据是核心硬件毛利、自由现金流和创新业务利润同时尚未完成迁移。当前更合理的结论是中性偏谨慎：价格已反映一部分协同，下一轮上修必须由利润和现金证明。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">手机上行确认</div><p>2026Q3手机毛利率回到9.7%以上，同时出货降幅收窄；该门槛约为本季水平向2025全年水平修复的中点，只有量、价、单机毛利共振才说明高端化创造增量价值。</p></div>
+    <div class="find good"><div class="t">创新回报确认</div><p>2026Q4前汽车及AI季度经营亏损降至15亿元以内，并披露MiMo收入、留存或单位推理成本至少一项；相对本季需再收窄约四成，才进入基准情景2027年转正轨道。</p></div>
+    <div class="find warn"><div class="t">现金逻辑失效</div><p>2026H2自由现金流代理继续为负，且原材料存货升破520亿元；该水平较期末再高约一成半，意味着投入与供应链占用仍快于核心业务供血。</p></div>
+    <div class="find warn"><div class="t">每股价值失效</div><p>2027年前完全摊薄股数不能降至260亿股以下，同时回购继续低于激励与融资稀释；该门槛较估值摊薄分母低约2%，用于验证回购是否真正传导到每股价值。</p></div>
+  </div>
+  <p><strong>决策边界：</strong>手机毛利与创新业务亏损改善是估值上修的共同必要条件；现金预警出现应下调现金确认比例，摊薄预警则直接扩大每股估值分母，而不是用净现金维持原判断。现价高于基准但仍在完整情景区间内；结论置信度中等，受Q2逐字稿与分部营业利润缺失限制。</p>
+</section>
+
+<section class="reveal on">
+  <div class="slabel">方法来源</div>
+  <h2>财务以港交所中文公告为准，电话会只检验承诺</h2>
+  <p>核心财务、分部、地区、现金流和期后事项均以港交所中文文件为控制源；Wind只用于冻结事件日行情、风险及同业截面。所有推算先在独立计算账本中勾稽，再进入读者稿。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>主要证据源与用途。</caption>
+      <thead><tr><th>来源</th><th>日期 / 状态</th><th>用途</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0818/2026081801015_c.pdf">港交所2026Q2及中期业绩公告（中文）</a></td><td>2026-08-18 / 未经审核</td><td>最新财务、业务KPI、地区、现金流与治理</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042800527_c.pdf">港交所2025年度报告（中文）</a></td><td>2026-04-28 / 经审核年度</td><td>治理、VIE、供应链、长期研发与风险</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0526/2026052600771_c.pdf">港交所2026Q1业绩公告（中文）</a></td><td>2026-05-26 / 未经审核</td><td>季度桥与创新业务经营亏损比较</td></tr>
+        <tr><td><a href="https://ir.mi.com/static-files/bdeea0b9-246c-45be-8cb4-ab4faaddf80a">小米Q2官方演示稿</a></td><td>2026-08-18 / 公司材料</td><td>业务展示、用户KPI及定义脚注复核</td></tr>
+        <tr><td><a href="https://ir.mi.com/events/event-details/2026-interim-results-announcement">小米Q2官方投资者活动页</a></td><td>2026-08-18 / 已举行</td><td>电话会存在性与时间核验</td></tr>
+        <tr><td>earningscalls.dev Q1逐字稿</td><td>2026-05-26 / Call ID 32351</td><td>只作历史承诺基线；存在转写及口译误差</td></tr>
+        <tr><td>Wind金融数据</td><td>2026-08-19 / 港股收盘</td><td>事件日、多窗口风险、同业估值及2023—2025完整财年经营比率</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout"><b>电话会边界：</b>小米已举行Q2官方投资者音频会，但截至分析日，earningscalls.dev尚未上架该季逐字稿，公开播放器也没有可读取的文字轨。本报告因此不臆造Q2问答，只用供应商可取得的Q1逐字稿建立历史承诺，并以Q2公告检验兑现情况。</div>
+  <p class="small">主要推算：单二季度利润项目来自半年数与Q1差额，经营现金流与资本开支采用Q2公告直接披露值；LTM来自全年数加减同期半年；自由现金流代理为经营活动现金流量净额减资本开支；手机价格—销量桥、汽车目标压力测试、净金融资产去重、SOTP和反向利润均使用未舍入输入。行情截止2026年8月19日港股收盘；汇率取前一日CFETS最新观测。本文不构成投资建议。</p>
+</section>
+
+<footer>
+  <p>数据截止：财务文件2026年8月18日，行情2026年8月19日港股收盘。主要来源：香港交易所披露易、小米投资者关系材料、Wind金融数据服务及earningscalls.dev可得的Q1逐字稿。</p>
+  <p>所有同比、CAGR、LTM、ROE、BVPS、自由现金流代理、SOTP与情景估值均为分析推算；公司未披露的分部营业利润、AI单位经济、海外利润及车型级毛利不得视为已验证事实。不构成投资建议。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
