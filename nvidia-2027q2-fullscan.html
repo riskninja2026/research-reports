@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>NVIDIA FY2027 Q2 Full Diligence</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Iowan Old Style","Georgia","Times New Roman","Songti SC","Source Han Serif SC",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">NVIDIA NVDA · FULL DILIGENCE · FINANCIALS THROUGH 26 JULY 2026 · MARKET THROUGH 26 AUGUST</div>
+    <h1>The moat is widening.<br>The balance sheet is underwriting it.</h1>
+    <p class="lede">NVIDIA's second quarter confirms extraordinary demand, platform breadth and a fast Vera Rubin handoff. <b>But the company is no longer only selling compute: it is also reserving supply, buying cloud capacity, extending customer terms and guaranteeing infrastructure.</b> The equity now requires underwriting both a technology monopoly and an increasingly consequential credit-allocation engine.</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">OPERATING CASH FLOW / GAAP NET INCOME</div>
+        <div class="big a">40.3%</div>
+        <div class="cap">Accounting earnings accelerated faster than quarterly cash conversion.</div>
+      </div>
+      <div>
+        <div class="tag">CONTINGENT SUPPORT / LIQUID FINANCIAL RESOURCES</div>
+        <div class="big b">1.9×</div>
+        <div class="cap">Maximum gross guarantees relative to cash and marketable debt securities.</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<div class="tldr" aria-label="Executive summary">
+  <ul>
+    <li><b>Demand:</b> hyperscaler growth, a live Rubin transition and a China-free outlook keep the operating thesis intact.</li>
+    <li><b>Earnings quality:</b> core leverage improved, but investment gains and weaker working-capital conversion lifted accounting income faster than owner cash.</li>
+    <li><b>Capital perimeter:</b> supply reservations, cloud purchases, leases, equity stakes and guarantees are economically connected but legally different exposures.</li>
+    <li><b>Governance:</b> buybacks offset current dilution, while customer financing and related ecosystem investments raise the burden on board oversight.</li>
+    <li><b>Valuation:</b> the market is not pricing a demand collapse; the debate is how much margin, cash conversion and credit risk survive normalization.</li>
+  </ul>
+</div>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">FINANCIAL MAP · FIVE-YEAR RECORD</div>
+  <h2>Revenue doubled; cash conversion did not</h2>
+  <p>NVIDIA is a Delaware corporation listed on Nasdaq. It designs accelerated-computing systems as a fabless platform company, then monetizes processors, networking, systems and software through direct customers such as cloud providers, original-design manufacturers, system integrators and AI model builders. The two statutory segments are Compute &amp; Networking and Graphics. The market-platform view below is a management sales taxonomy, not a second set of accounting segments. The 13-week quarter is unaudited under U.S. GAAP; fiscal 2027 contains an extra week in the fourth quarter.</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">Q2 revenue</div><div class="v">96.221<span class="u">USD bn</span></div><div class="d"><span class="up">+105.9% YoY</span></div></div>
+    <div class="cell"><div class="k">Gross profit</div><div class="v">72.142<span class="u">USD bn</span></div><div class="d"><span>75.0% margin</span></div></div>
+    <div class="cell"><div class="k">Operating income</div><div class="v">63.734<span class="u">USD bn</span></div><div class="d"><span>66.2% margin</span></div></div>
+    <div class="cell"><div class="k">GAAP net income</div><div class="v">59.688<span class="u">USD bn</span></div><div class="d"><span>62.0% margin · EPS $2.46</span></div></div>
+    <div class="cell"><div class="k">Operating cash flow</div><div class="v">24.077<span class="u">USD bn</span></div><div class="d"><span>Quarterly cash generation</span></div></div>
+    <div class="cell"><div class="k">Company-defined FCF</div><div class="v">21.341<span class="u">USD bn</span></div><div class="d"><span class="up">+58.7% YoY</span></div></div>
+  </div>
+
+  <h3>Five-year income record</h3>
+  <div class="tblscroll" data-financials="history">
+    <table class="tbl" data-financials="history">
+      <caption>Audited U.S.-GAAP income record · USD billions; diluted EPS, capital expenditure, company-defined free cash flow and ROE continue in the adjacent narrow tables</caption>
+      <thead><tr><th>Fiscal year</th><th>Revenue</th><th>Gross profit / margin</th><th>Operating income / margin</th><th>Net income / margin</th></tr></thead>
+      <tbody>
+        <tr><td>2022</td><td>26.914</td><td>17.475 / 64.9%</td><td>10.041 / 37.3%</td><td>9.752 / 36.2%</td></tr>
+        <tr><td>2023</td><td>26.974</td><td>15.356 / 56.9%</td><td>4.224 / 15.7%</td><td>4.368 / 16.2%</td></tr>
+        <tr><td>2024</td><td>60.922</td><td>44.301 / 72.7%</td><td>32.972 / 54.1%</td><td>29.760 / 48.8%</td></tr>
+        <tr><td>2025</td><td>130.497</td><td>97.858 / 74.99%</td><td>81.453 / 62.4%</td><td>72.880 / 55.8%</td></tr>
+        <tr><td>2026</td><td>215.938</td><td>153.463 / 71.07%</td><td>130.387 / 60.4%</td><td>120.067 / 55.6%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll" data-financials="history">
+    <table class="tbl" data-financials="history">
+      <caption>Split-adjusted diluted earnings per share · USD</caption>
+      <thead><tr><th>Fiscal year</th><th>Diluted EPS</th></tr></thead>
+      <tbody>
+        <tr><td>2022</td><td>$0.385</td></tr>
+        <tr><td>2023</td><td>$0.174</td></tr>
+        <tr><td>2024</td><td>$1.19</td></tr>
+        <tr><td>2025</td><td>$2.94</td></tr>
+        <tr><td>2026</td><td>$4.90</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>From FY2022 through FY2026, revenue compounded at <strong>68.30%</strong>, while gross profit, operating income and net income compounded at 72.15%, 89.83% and 87.32%. The scale-up therefore created operating leverage despite the FY2023 gaming and inventory reset.</p>
+
+  <div class="tblscroll" data-financials="history">
+    <table class="tbl">
+      <caption>Cash conversion and return on average equity · USD billions; ROE is analyst-derived</caption>
+      <thead><tr><th>Fiscal year</th><th>Operating cash flow</th><th>Capex purchases</th><th>Company-defined FCF</th><th>ROE proxy</th></tr></thead>
+      <tbody>
+        <tr><td>2022</td><td>9.108</td><td>0.976</td><td>8.049</td><td>44.8%</td></tr>
+        <tr><td>2023</td><td>5.641</td><td>1.833</td><td>3.750</td><td>17.9%</td></tr>
+        <tr><td>2024</td><td>28.090</td><td>1.069</td><td>26.947</td><td>91.5%</td></tr>
+        <tr><td>2025</td><td>64.089</td><td>3.236</td><td>60.724</td><td>119.2%</td></tr>
+        <tr><td>2026</td><td>102.718</td><td>6.042</td><td>96.575</td><td>101.5%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Company-defined free cash flow equals operating cash flow less purchases of property, equipment and intangible assets and related principal payments; the small principal payment is included in each displayed FCF but shown outside the capex-purchases column. ROE divides net income by average beginning and ending equity. FY2022 and FY2023 EPS are adjusted for the June 2024 ten-for-one split. Four-year CAGRs use unrounded endpoints.</p>
+
+  <h3>Quarter sequence and latest run rate</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Quarterly reported results and LTM bridge · USD billions</caption>
+      <thead><tr><th>Period</th><th>Revenue</th><th>Gross margin</th><th>Operating income</th><th>Net income</th><th>Company FCF</th></tr></thead>
+      <tbody>
+        <tr><td>Q2 FY2026</td><td>46.743</td><td>72.4%</td><td>28.440</td><td>26.422</td><td>13.450</td></tr>
+        <tr><td>Q1 FY2027</td><td>81.615</td><td>74.9%</td><td>53.536</td><td>58.321</td><td>48.554</td></tr>
+        <tr class="grp"><td>LTM through Q2 FY2027</td><td>302.970</td><td>74.7%</td><td>197.579</td><td>192.880</td><td>126.886</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">LTM equals FY2026 plus FY2027 first half less FY2026 first half. LTM operating margin is 65.214%, while free cash flow remained above two-fifths of revenue. LTM net income includes large equity-security gains and is not normalized owner earnings. Latest-period book value is US$228.984 billion, or approximately US$9.48 per period-end share; annualized first-half ROE is about 122%, but mark-to-market gains inflate the numerator.</p>
+
+  <h3>Two revenue maps serve different decisions</h3>
+  <div data-financials="segments">
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>Q2 FY2027 market platforms · USD billions; current taxonomy was introduced in Q1 and only displayed comparisons were recast</caption>
+        <thead><tr><th>Market platform</th><th>Revenue</th><th>Group mix</th><th>Q/Q</th><th>Y/Y</th><th>Decision use</th></tr></thead>
+        <tbody>
+          <tr><td>Hyperscale</td><td>48.710</td><td>50.6%</td><td>+13%</td><td>+102%</td><td>Direct cloud and large-scale infrastructure demand</td></tr>
+          <tr><td>ACIE</td><td>40.313</td><td>41.9%</td><td>+25%</td><td>+138%</td><td>AI clouds, industrial, enterprise and sovereign demand</td></tr>
+          <tr class="grp"><td>Data Center</td><td>89.023</td><td>92.5%</td><td>Derived above</td><td>+117%</td><td>Hyperscale plus ACIE</td></tr>
+          <tr><td>Edge Computing</td><td>7.198</td><td>7.5%</td><td>+13%</td><td>+27%</td><td>Workstations, gaming PCs and edge systems</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>Statutory segments · Q2 USD billions; FY2022–FY2026 CAGR uses reported endpoints</caption>
+        <thead><tr><th>Reportable segment</th><th>Q2 revenue</th><th>Segment operating income</th><th>Segment margin</th><th>FY22–26 revenue CAGR</th></tr></thead>
+        <tbody>
+          <tr><td>Compute &amp; Networking</td><td>88.299</td><td>62.696</td><td>71.004%</td><td>104.6%</td></tr>
+          <tr><td>Graphics</td><td>7.922</td><td>3.899</td><td>49.2%</td><td>9.1%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p class="small">ACIE means AI Clouds, Industrial &amp; Enterprise. One company was moved from ACIE to Hyperscale in Q2, and the displayed comparisons were recast. Statutory segment income excludes corporate SBC, unallocated infrastructure, acquisition and other items, so its margins do not reconcile directly to the consolidated margin.</p>
+
+</section>
+
+<section class="reveal on" id="product">
+  <div class="slabel">PRODUCT · R&amp;D · CUDA</div>
+  <h2>Rubin is early; the lifecycle stack is the moat</h2>
+  <p>The handoff is now the near-term architecture test. Filed disclosures do not supply product-level yield or margin, so the transition must appear without another inventory charge or a deeper consolidated-margin reset.</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Roadmap and commercialization evidence at the results cutoff</caption>
+      <thead><tr><th>Layer</th><th>Evidence</th><th>What remains unproven</th></tr></thead>
+      <tbody>
+        <tr><td>Blackwell Ultra</td><td>Majority of system shipments and vast majority of revenue</td><td>System-level unit volume, ASP and customer utilization</td></tr>
+        <tr><td>Vera Rubin</td><td>Production began; management targets a material next-quarter contribution</td><td>Yield, HBM configuration, realized mix and gross margin</td></tr>
+        <tr><td>Networking</td><td>Call corroborates sequential acceleration; Spectrum-X Ethernet rose 2.6× Y/Y</td><td>Networking dollars and product-level profitability</td></tr>
+        <tr><td>CUDA lifecycle</td><td>One architecture spans training, post-training, inference, networking and edge</td><td>Independent cost per useful token across normalized workloads</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>R&amp;D is expensed; infrastructure is the fastest-growing input</h3>
+  <p>Quarterly R&amp;D expense reached <strong>US$7.054 billion</strong>, up 64% year on year. Compute-infrastructure expense increased 127% and compensation increased 30%. The filing therefore shows real economic spend rather than capitalized internal R&amp;D, but it does not disclose architecture-level return on investment. The better productivity test is whether annual cadence raises useful-token output, networking attach and customer utilization faster than memory, power and software costs.</p>
+  <p>At FY2026 year-end, 31,000 of roughly 42,000 employees worked in R&amp;D. NVIDIA reports numerous issued and pending patents with expiries from March 2026 through June 2045, but no patent count or patent-level revenue. Protection comes from patents, trade secrets and licenses together. The non-exclusive Groq technology license is the clearest return-risk example: its US$2.5 billion developed-technology asset must be integrated into commercial products, while the larger goodwill component cannot itself prove a moat.</p>
+
+  <div class="plain"><span class="pl">PLAIN ENGLISH</span><p>CUDA is not just an API. The defensible layer is the production lifecycle around kernels, inference engines, memory management, routing, collectives, networking and system integration. Porting code can be easier than reproducing performance, reliability and utilization. That advantage must still be re-earned workload by workload against custom accelerators and rival merchant silicon.</p></div>
+
+  <h3>Memory moves the margin trough</h3>
+  <p>The call says gross margin should bottom at 71%–72% in Q4 FY2027 and settle at 72%–73% in FY2028 after pricing actions. Samsung and SK hynix independently describe HBM4 commercialization and tight server-memory supply, which supports the direction of the constraint. It does not verify NVIDIA's HBM content, supplier shares or Rubin bill of materials. Failure means either margin misses the trough or price increases weaken demand.</p>
+</section>
+
+<section class="reveal on" id="industry">
+  <div class="slabel">INDUSTRY · CHINA · OVERSEAS</div>
+  <h2>Demand is strong, but the buyers are financing it</h2>
+  <p>Official buyer disclosures corroborate the demand side of NVIDIA's call: cloud revenue is accelerating and AI infrastructure spending remains exceptional. They also show the counterweight. Free cash flow is falling at some buyers, debt and equity funding are rising, and customer-designed accelerators remain a workload-specific alternative. Strong compute demand and financing strain can coexist.</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Official hyperscaler evidence · latest reported quarter or fiscal year; periods differ</caption>
+      <thead><tr><th>Buyer ecosystem</th><th>Demand evidence</th><th>Capital evidence</th><th>Investment read</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm">Alphabet</a></td><td>Google Cloud +82%</td><td>Q2 capex US$44.9bn; FCF −US$5.9bn</td><td>Capacity demand is real; funding intensity is rising</td></tr>
+        <tr><td><a href="https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast">Microsoft</a></td><td>Azure +43%</td><td>FY2026 PP&amp;E additions US$115.9bn</td><td>Large backlog and construction pipeline</td></tr>
+        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260630xex991.htm">Amazon</a></td><td>AWS +37%</td><td>Q2 cash capex US$53.1bn; TTM FCF −US$7.6bn</td><td>Growth is fast; cash burden is visible</td></tr>
+        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm">Meta</a></td><td>AI infrastructure remains strategic</td><td>Q2 capex US$31.1bn; 2026 guide US$130–145bn</td><td>Internal demand is large but concentrated</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">The companies use different cloud, capex and free-cash-flow definitions. The table tests direction and financing capacity, not NVIDIA revenue attribution. Custom-silicon share is not independently quantified here.</p>
+
+  <h3>China is excluded from the base case</h3>
+  <p>H200 shipments under U.S. licenses were less than 1% of quarterly Data Center revenue. First-half results include a US$0.4 billion H200 inventory and purchase-obligation charge. Licensed units must pass through a U.S. inspection and incur a 25% tariff that NVIDIA says it cannot pass to customers. The next-quarter outlook includes no China Data Center compute revenue.</p>
+  <p>The loss is not only near-term sales. NVIDIA says effective foreclosure helps rival hardware and developer ecosystems, including deployments of globally relevant open models on competing platforms. China therefore remains scenario upside, not base-case revenue, and may become a source of global competition even if licensing later improves.</p>
+
+  <h3>Reported geography is a billing map, not consumption</h3>
+  <p>Customers headquartered outside the United States represented 38% of Q2 revenue. NVIDIA explicitly warns that direct-customer headquarters can differ from end customer and shipment location. The same limitation applies to concentration: one direct customer was 16% of Q2 revenue, but a separately described AI research company may buy cloud services through several direct and indirect channels.</p>
+  <p>Currency translation is not the load-bearing overseas risk. Substantially all sales are denominated in U.S. dollars, while forward contracts hedge mainly operating expenses and monetary balances; first-half contract gains, losses and fair values were not significant. Nearly all cash held abroad can be used in the United States without additional federal tax, except approximately US$1.7 billion that could incur foreign or state tax on repatriation. Export licensing and offshore manufacturing therefore matter more than reported foreign-exchange noise.</p>
+</section>
+
+<section class="reveal on" id="quality">
+  <div class="slabel">EARNINGS QUALITY · NON-GAAP</div>
+  <h2>Operating leverage is real; GAAP income overstates the run rate</h2>
+  <p>Core profitability strengthened, but the below-the-line contribution became unusually large. Quarterly net equity-security gains equaled 10.87% of pretax income. For the first half they reached US$23.707 billion, or 16.76% of pretax income. Those gains belong to the investment portfolio, not recurring accelerator economics.</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Q2 earnings-quality bridge · USD billions except margins</caption>
+      <thead><tr><th>Item</th><th>Reported value</th><th>Economic reading</th></tr></thead>
+      <tbody>
+        <tr><td>Equity-security gains</td><td>7.771</td><td>Mark-to-market and transaction gains; non-operating</td></tr>
+        <tr><td>Non-GAAP net income</td><td>53.954</td><td>Excludes equity gains but now includes SBC</td></tr>
+        <tr><td>Stock-based compensation</td><td>2.027</td><td>Real compensation cost retained in the new non-GAAP definition</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>NVIDIA changed the non-GAAP definition in Q1 FY2027 and recast comparisons: stock-based compensation is no longer excluded. That improves comparability with economic owner earnings. It also means the remaining GAAP/non-GAAP gap is driven more visibly by equity gains, acquisition costs and tax effects rather than a routine SBC add-back.</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">Positive interpretation</div><p>Gross margin held near three-quarters while operating expense was only 8.8% of revenue. The platform is converting exceptional growth into operating leverage.</p></div>
+    <div class="find warn"><div class="t">Necessary adjustment</div><p>Raw TTM P/E uses earnings inflated by security gains. A filing-derived gain-adjusted proxy is roughly 31.8–32.8× at the after-hours price.</p></div>
+  </div>
+</section>
+
+<section class="reveal on" id="credit">
+  <div class="slabel">CASH · CREDIT · CALL</div>
+  <h2>NVIDIA is becoming a credit allocator</h2>
+  <p>Quarterly cash conversion weakened even as earnings rose. Accounts receivable increased faster than revenue because selected investment-grade customers received longer terms for large, multi-quarter builds. Inventory also rose ahead of Rubin. Neither movement proves bad demand, but together they transfer more timing and counterparty risk onto NVIDIA.</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Working-capital and customer-credit indicators · USD billions unless stated</caption>
+      <thead><tr><th>Indicator</th><th>Latest</th><th>Change / comparison</th><th>Boundary</th></tr></thead>
+      <tbody>
+        <tr><td>Accounts receivable</td><td>63.059</td><td>+63.9% from FY2026 year-end</td><td>Includes terms of 90 days to one year for qualifying builds</td></tr>
+        <tr><td>Days sales outstanding</td><td>60 days</td><td>45 days sequentially</td><td>Company metric; not a default forecast</td></tr>
+        <tr><td>Top-five A/R concentration</td><td>70%</td><td>≈US$44.1bn using rounded shares</td><td>Direct customers, not ultimate end users</td></tr>
+        <tr><td>Inventory</td><td>31.575</td><td>+47.5% from year-end</td><td>Rubin build plus supply positioning</td></tr>
+        <tr><td>Q2 FCF / GAAP NI</td><td>35.8%</td><td>Far below the annual run rate</td><td>Taxes and working capital are major drivers</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Liquidity and the investment book</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Quarter-end balance-sheet bridge · USD billions</caption>
+      <thead><tr><th>Component</th><th>Carrying value</th><th>Valuation treatment</th></tr></thead>
+      <tbody>
+        <tr><td>Cash + marketable debt securities</td><td>56.586</td><td>Liquid financial resources</td></tr>
+        <tr><td>Debt</td><td>33.366</td><td>Fully deducted</td></tr>
+        <tr class="grp"><td>Conservative net cash</td><td>23.220</td><td>Added once in FCFF valuation</td></tr>
+        <tr><td>Marketable equity</td><td>42.783</td><td>Scenario haircut</td></tr>
+        <tr><td>Public equity in other assets</td><td>4.957</td><td>Locked / long-term classification</td></tr>
+        <tr><td>Non-marketable equity</td><td>47.898</td><td>Cost/observable-transaction valuation risk</td></tr>
+        <tr><td>Equity-method infrastructure investments</td><td>3.300</td><td>Financing-ecosystem exposure</td></tr>
+        <tr class="grp"><td>Reconciled equity-investment footprint</td><td>98.938</td><td>Not operating cash; counted once</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Three contractual populations, not one debt number</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Gross disclosed contractual perimeter · USD billions; populations are not presented as additive expected cash use</caption>
+      <thead><tr><th>Population</th><th>Amount</th><th>Composition</th><th>Economic boundary</th></tr></thead>
+      <tbody>
+        <tr><td>Primary scheduled commitments</td><td>366.0</td><td>Supply/capacity 279; cloud 29; own leases 25; equity 25; capex 8</td><td>Timing, cancellation and resale rights vary</td></tr>
+        <tr><td>Additional agreements</td><td>56.0</td><td>AI-cloud contracts 36; third-party leases 20</td><td>Filing supplies no overlap reconciliation</td></tr>
+        <tr><td>Maximum gross guarantees</td><td>108.5</td><td>Existing AI-cloud support plus the phased SB Energy/OpenAI cap</td><td>Contingent ceiling, not booked debt or expected loss</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The US$105 billion SB Energy guarantee was signed after quarter-end and phases across nine sites when ready-for-service conditions are met, first expected in FY2029. It declines with tenant payments and can terminate under specified credit conditions. The existing guarantee pool has US$0.712 billion of escrow mitigation. If a customer defaults, however, NVIDIA may assume long leases, bear ongoing costs or make substantial payments; indemnity recovery may be delayed or incomplete.</p>
+  <p>The separate ambition to mobilize more than US$500 billion of third-party infrastructure capital is based on preliminary, nonbinding memoranda. Capital providers underwrite projects independently, and NVIDIA may offer project-specific residual-value support. It is a financing funnel, not funded capacity.</p>
+
+  <h3>The call answered the roadmap and deflected the cash question</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Earnings-call Q&amp;A audit · eight analyst questions were present</caption>
+      <thead><tr><th>Question</th><th>Management answer</th><th>Unresolved decision variable</th></tr></thead>
+      <tbody>
+        <tr><td>Why guide FY2028 now?</td><td>Preliminary growth outlook is supply-constrained; customer forecasts imply more</td><td>Unconstrained demand and exact product bridge</td></tr>
+        <tr><td>How much cash and what return hurdle?</td><td>CEO defended platform durability; CFO emphasized early supply timing</td><td>Annual cash schedule, IRR, credit threshold and loss probability</td></tr>
+        <tr><td>Which supply constraint is worst?</td><td>The entire chain is challenged</td><td>Memory, foundry, networking, power and construction ranking</td></tr>
+        <tr><td>Why finance custom-silicon customers?</td><td>Strategic relationship and platform-confidence framing</td><td>Conflict economics and customer-level return</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout"><b>Transcript boundary:</b> the available full call text is a third-party, speaker-tagged transcript with obvious ASR errors in product and company names. SEC filings, the release and official presentation control every numeral and spelling. The call controls only management intent and the answer-quality audit.</div>
+</section>
+
+<section class="reveal on" id="allocation">
+  <div class="slabel">CAPITAL ALLOCATION · SBC · GOVERNANCE</div>
+  <h2>Buybacks offset dilution; investments change the risk budget</h2>
+  <p>NVIDIA remains a net capital returner over the cycle, but the current allocation mix is changing. From FY2022 through the first half of FY2027, cash repurchases and dividends totaled approximately US$141.7 billion. Employee-plan proceeds plus net debt issuance over the same window were about US$29.1 billion. The flow ratio is roughly 4.9×, but it does not erase the present debt stock or the growing investment and commitment perimeter.</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>First-half capital allocation · USD billions</caption>
+      <thead><tr><th>Item</th><th>H1 FY2027</th><th>Interpretation</th></tr></thead>
+      <tbody>
+        <tr><td>Company-defined FCF</td><td>69.895</td><td>Before treating SBC as owner cost</td></tr>
+        <tr><td>Cash repurchases</td><td>39.044</td><td>More than current employee issuance</td></tr>
+        <tr><td>Cash dividends</td><td>6.290</td><td>Quarterly dividend increased to $0.25/share</td></tr>
+        <tr><td>Equity-security purchases</td><td>42.404</td><td>Strategic and customer-ecosystem allocation</td></tr>
+        <tr><td>Debt proceeds</td><td>24.896</td><td>New senior notes; not operating cash</td></tr>
+        <tr><td>SBC expense</td><td>3.954</td><td>Economic compensation cost</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Quarterly repurchases exceeded gross employee-plan issuance by 2.94×. The share bridge was 24.221 billion opening shares plus 32 million issued, less 12 million withheld for tax and 94 million repurchased, leaving 24.147 billion. Net shares fell 0.31%. One quarter of buyback offset does not settle future dilution.</p>
+
+  <h3>Equity pay has real hurdles and a long expense tail</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Latest proxy and quarter-end award economics; named-executive data do not describe the full employee pool</caption>
+      <thead><tr><th>Control</th><th>Disclosed evidence</th><th>Investment reading</th></tr></thead>
+      <tbody>
+        <tr><td>Award price</td><td>No options outstanding since FY2024; RSUs and PSUs have no exercise price</td><td>ESPP buys at 85% of the lower offering- or purchase-date fair value</td></tr>
+        <tr><td>FY2026 grant concentration</td><td>69.186m maximum-potential shares: NEOs 1.5057%; directors 0.0312%; other employees 98.4631%</td><td>PSUs are counted at maximum payout; employee-level concentration is not disclosed</td></tr>
+        <tr><td>Single-year PSU hurdle</td><td>Non-GAAP operating income US$46bn / US$71bn / US$96bn</td><td>Threshold / base / stretch; no award below threshold</td></tr>
+        <tr><td>Multi-year PSU hurdle</td><td>Relative TSR at 25th / 50th / 75th percentile</td><td>Three-year test; CEO payout cap 150%, other named executives 200%</td></tr>
+        <tr><td>Outstanding-award bridge</td><td>189m opening + 49m grants − 63m vested − 7m cancelled = 168m</td><td>Gross awards remain larger than the one-quarter share-count decline</td></tr>
+        <tr><td>Expense timing</td><td>US$19.4bn aggregate unearned SBC; weighted periods are 2.6 years for RSU/PSU/market PSU awards and 0.9 years for ESPP</td><td>Attribution differs by award; this is not a straight-line cash claim</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">The CEO receives only performance stock units; other named executives receive half their target equity as service-only RSUs. The FY2026 stretch goals were automatically reduced after new H20 controls, but realized performance also exceeded the original stretch levels. One weakness remains: the single-year executive metric adds SBC back, reducing discipline over the equity-pay cost itself.</p>
+
+  <h3>Founder influence is economic, not majority control</h3>
+  <p>The March proxy reports Jen-Hsun Huang with 3.58% beneficial ownership and all directors and executive officers with 3.94%. Huang's figure includes foundation shares in which the proxy says he has no pecuniary interest. NVIDIA had nine independent directors and Huang at the proxy date, with an independent lead director; a July appointment later expanded the board. The structure gives the founder strategic influence without voting control.</p>
+  <p>External-holder dates are not aligned. Vanguard's proxy-reproduced position was 7.31% at the end of March 2026; BlackRock's 7.43% figure rests on a split-adjusted holding dated December 2023 and is not a current register. The dates matter more than the apparent ranking.</p>
+  <p>Board risk oversight explicitly covers business-model, supply-chain, investment and regulatory risks. NVIDIA nevertheless discloses no Chief Compliance Officer, while export controls and customer financing have become more material. Related-person transactions require Nominating and Corporate Governance Committee approval. The proxy also discloses employment of Huang's two adult children under comparable-role compensation processes; neither reports directly to him.</p>
+  <p>The Huang Foundation separately agreed to buy CoreWeave GPU compute for university and nonprofit donations, while NVIDIA planned ordinary-course free engineering services for certain recipients. The proxy does not quantify NVIDIA's service cost and does not characterize foundation spending as NVIDIA revenue, expense or donation. The relationship is a perception and conflict-monitoring item, not evidence of circular revenue.</p>
+
+  <h3>Competition inquiries are broad; China is further advanced</h3>
+  <p>NVIDIA continues to receive information requests from competition regulators in the European Union, United States, United Kingdom, China and South Korea. The requests cover GPU sales, supply allocation, foundation-model investments and partnerships, roadmaps, and customer and supplier agreements. France is also examining whether gaming and data-center GPUs are separate product categories.</p>
+  <p>China's stage is more advanced. On 15 September 2025, regulators published a preliminary finding that NVIDIA's export-control-compliant degraded products discriminated against Chinese customers and violated terms of the Mellanox approval. Potential remedies include financial penalties and restrictions or orders affecting networking products, services and operations. The filing does not separately disclose a maximum exposure or accrual for these competition matters. Closure requires a formal disposition without remedies, or a disclosed order, penalty or operating restriction.</p>
+  <p class="small">A March 2026 court order certified a shareholder class concerning alleged 2017–2018 channel-inventory and crypto-demand statements; damages remain unspecified and NVIDIA continues to defend the case. It is a governance reminder, not a quantified valuation deduction.</p>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">MARKET · FORECAST · VALUATION</div>
+  <h2>The price discounts execution, not a demand collapse</h2>
+  <p>NVIDIA closed the pre-release regular session at US$209.66. At 20:01 ET, the after-hours indication was US$219.53, up 4.71%, implying about US$5.301 trillion on the filing share count. After-hours is not a settled next-day price. The reaction rewards the guide while retaining a discount for margins, cash conversion and customer financing.</p>
+
+  <h3>Price trend: long-cycle leadership, short-cycle fatigue</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Front-adjusted regular-close price returns through 26 August 2026; benchmark spreads are price returns, not annualized alpha</caption>
+      <thead><tr><th>Horizon</th><th>NVIDIA</th><th>Nasdaq 100</th><th>SOX</th></tr></thead>
+      <tbody>
+        <tr><td>20 trading days</td><td>+10.34%</td><td>+7.47%</td><td>+11.14%</td></tr>
+        <tr><td>60 trading days</td><td>−6.44%</td><td>−4.23%</td><td>−10.45%</td></tr>
+        <tr><td>Year to date</td><td>+12.56%</td><td>+15.74%</td><td>+63.93%</td></tr>
+        <tr><td>Three years</td><td>+356.49%</td><td>+95.59%</td><td>+232.16%</td></tr>
+        <tr><td>Five years</td><td>+853.35%</td><td>+91.28%</td><td>+244.51%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <caption>Technical and liquidity map at the regular close; monitoring heuristic, not intrinsic value</caption>
+      <thead><tr><th>Signal</th><th>Evidence</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>Moving averages</td><td>Below the 5-, 10- and 20-day averages; above the 60-, 120- and 250-day averages</td><td>Weak short trend inside an intact medium- and long-term trend</td></tr>
+        <tr><td>Liquidity</td><td>179.9m shares and US$38.08bn traded; 1.54× and 1.52× their 20-day averages</td><td>Results-day turnover was elevated; after-hours turnover was unavailable</td></tr>
+        <tr><td>Monitoring levels</td><td>Support at the 60-day area, then US$202.55 and US$191.5–193; resistance at US$215.6–217.6, then US$227.92 / US$232.01 / US$236.27</td><td>Price must reclaim short averages and recent swing highs to confirm momentum</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">NVIDIA has recently lagged the semiconductor cycle but retains exceptional multi-year relative strength. The post-results indication would reclaim the short averages, yet its trading volume was not available. Support and resistance are monitoring zones, not valuation inputs.</p>
+
+  <h3>Peers clarify the economics, not the multiple</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Three completed years from issuer filings · growth and profitability; fiscal calendars and product scope differ</caption>
+      <thead><tr><th>Company / period</th><th>Revenue CAGR</th><th>Gross-margin path</th><th>Operating-margin path</th></tr></thead>
+      <tbody>
+        <tr><td>NVIDIA · FY24–26</td><td>88.3%</td><td>−1.65pt end to end</td><td>+6.26pt end to end</td></tr>
+        <tr><td>AMD · FY23–25</td><td>23.6%</td><td>46.1% → 49.35% → 49.5%</td><td>1.8% → 7.4% → 10.7%</td></tr>
+        <tr><td>Broadcom · FY23–25</td><td>33.6%</td><td>68.9% → 63.0% → 67.8%</td><td>45.2% → 26.1% → 39.9%</td></tr>
+        <tr><td>TSMC · CY23–25</td><td>32.7%</td><td>54.4% → 56.1% → 59.9%</td><td>42.6% → 45.7% → 50.8%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Research intensity across the same issuer-filing windows</caption>
+      <thead><tr><th>Company / period</th><th>R&amp;D / revenue path</th></tr></thead>
+      <tbody>
+        <tr><td>NVIDIA · FY24–26</td><td>−5.6pt end to end</td></tr>
+        <tr><td>AMD · FY23–25</td><td>25.9% → 25.04% → 23.4%</td></tr>
+        <tr><td>Broadcom · FY23–25</td><td>14.7% → 18.1% → 17.2%</td></tr>
+        <tr><td>TSMC · CY23–25</td><td>8.4% → 7.1% → 6.5%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>NVIDIA scaled much faster while retaining the panel's highest margin ceiling. AMD tests merchant accelerators, Broadcom tests custom silicon and networking, and TSMC tests manufacturing value capture; none is a full substitute. Broadcom's total-company path is VMware-distorted: its semiconductor-solutions revenue compounded at 14.4%, with a final segment operating margin of 57.6% that excludes unallocated acquisition costs and SBC.</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Regular-close market snapshot on 26 August 2026; Wind multiples use each vendor denominator</caption>
+      <thead><tr><th>Company</th><th>Raw TTM P/E</th><th>Last-fiscal P/B</th><th>TTM P/S</th><th>Dividend yield</th></tr></thead>
+      <tbody>
+        <tr><td>NVIDIA</td><td>26.3×</td><td>22.1×</td><td>16.7×</td><td>0.13%</td></tr>
+        <tr><td>AMD</td><td>122.0×</td><td>11.7×</td><td>19.0×</td><td>n/a</td></tr>
+        <tr><td>Broadcom</td><td>57.7×</td><td>19.3×</td><td>22.4×</td><td>0.88%</td></tr>
+        <tr><td>TSMC</td><td>31.2×</td><td>10.8×</td><td>15.6×</td><td>0.66%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Raw peer P/E is not a valuation verdict. NVIDIA's denominator contains security gains, AMD remains recovery-sensitive, and Broadcom's mix changed with VMware. P/S is definitionally cleaner but still misses the decisive margin differences, so the scenario model does not import a peer multiple mechanically.</p>
+
+  <h3>Three-year operating and owner-cash framework</h3>
+  <p>Owner free cash flow to the firm, or owner FCFF, treats SBC as an economic expense: it starts with after-tax operating profit, adds depreciation, then deducts capex and incremental working-capital absorption without adding SBC back. This is stricter than conventional cash FCF and makes extended customer terms explicit.</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Scenario revenue assumptions · each growth sequence is FY28 / FY29 / FY30</caption>
+      <thead><tr><th>Case</th><th>FY27 revenue anchor</th><th>Revenue growth</th></tr></thead>
+      <tbody>
+        <tr><td>Bear</td><td>$395bn</td><td>50% / 5% / flat</td></tr>
+        <tr><td>Base</td><td>$410bn</td><td>70% / 1.18× / 10%</td></tr>
+        <tr><td>Bull</td><td>$425bn</td><td>80% / 30% / 20%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Scenario margin and discount assumptions · margin sequences are FY28 / FY29 / FY30; operating margin includes SBC</caption>
+      <thead><tr><th>Case</th><th>Gross margin</th><th>GAAP operating margin</th><th>WACC / terminal g</th></tr></thead>
+      <tbody>
+        <tr><td>Bear</td><td>70% / 65% / 60%</td><td>61% / 56% / 50%</td><td>11.0% / 2.5%</td></tr>
+        <tr><td>Base</td><td>72.5% / 70% / 67%</td><td>64.7% / 62.3% / 59%</td><td>9.5% / 350bp</td></tr>
+        <tr><td>Bull</td><td>73% / 72% / 70%</td><td>66% / 65.2% / 63.2%</td><td>8.5% / 4.5%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">WACC means weighted average cost of capital; g means perpetual growth. The middle Base revenue factor multiplies the prior-year level rather than expressing a margin. The Base FY28 growth rate is the call's preliminary, supply-constrained management outlook. Bear still assumes strong growth because it tests lower margins, weaker cash conversion and stranded capital rather than inventing a demand collapse.</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Cash-conversion operating assumptions · Base shows the absolute path; Bear and Bull show changes from Base</caption>
+      <thead><tr><th>Case</th><th>Tax rate</th><th>D&amp;A / sales</th><th>Capex / sales</th><th>NWC / incremental revenue</th></tr></thead>
+      <tbody>
+        <tr><td>Base</td><td>17.5% / 18.0% / 19.0%</td><td>1.2% through FY29; 1.3% in FY30</td><td>3.0% / 3.5% / 4.0%</td><td>15% each year</td></tr>
+        <tr><td>Bear vs Base</td><td>+1.5pt in FY28; +2pt thereafter</td><td>Unchanged in FY28; +0.1pt in FY29 and FY30</td><td>+0.5pt each year</td><td>+1,000bp / +500bp / unchanged</td></tr>
+        <tr><td>Bull vs Base</td><td>−150bp through FY29; −200bp in FY30</td><td>1.1% each year</td><td>2.8% in FY28; +0.2pt each year</td><td>−5pt / −7pt / −9pt</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Non-operating holdings and scheduled-commitment assumptions · Base is absolute; transformations are exact</caption>
+      <thead><tr><th>Case</th><th>Equity holdings recognized</th><th>Scheduled commitments stranded</th></tr></thead>
+      <tbody>
+        <tr><td>Base</td><td>70%</td><td>5%</td></tr>
+        <tr><td>Bear vs Base</td><td>50%</td><td>3× Base</td></tr>
+        <tr><td>Bull vs Base</td><td>90%</td><td>None</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Maximum-guarantee expected-loss assumptions</caption>
+      <thead><tr><th>Case</th><th>Guarantee expected loss</th></tr></thead>
+      <tbody>
+        <tr><td>Base</td><td>5%</td></tr>
+        <tr><td>Bear vs Base</td><td>4× Base</td></tr>
+        <tr><td>Bull vs Base</td><td>None</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">NWC means working capital: each percentage is the share of incremental revenue absorbed by receivables, inventory and other operating balances. D&amp;A means depreciation and amortization. The model therefore links customer-credit terms and inventory build directly to owner cash rather than assuming accounting growth converts one-for-one.</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Scenario outputs · USD billions; each sequence is FY28 / FY29 / FY30</caption>
+      <thead><tr><th>Case</th><th>Revenue</th><th>Owner FCFF</th><th>Owner FCFF margin</th><th>Capital-risk haircut</th><th>Case falsifier</th></tr></thead>
+      <tbody>
+        <tr><td>Bear</td><td>592.5 / 622.1 / unchanged</td><td>229.8 / 256.0 / 226.5</td><td>38.8% / 41.1% / 36.4%</td><td>85.0</td><td>Margins recover while commitments sell through</td></tr>
+        <tr><td>Base</td><td>697.0 / 822.5 / 904.7</td><td>316.4 / 382.4 / 395.6</td><td>45.4% / 46.5% / 43.7%</td><td>26.5</td><td>FY28 growth misses 60% or GM stays below 72%</td></tr>
+        <tr><td>Bull</td><td>765.0 / 994.5 / 1,193.4</td><td>377.1 / 504.2 / 589.0</td><td>49.3% / 50.7% / 49.4%</td><td>0</td><td>Supply, power or customer capital blocks the ramp</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Capital-risk haircut applies the displayed rates to US$422 billion of scheduled commitments and to the maximum-guarantee population defined in “NVIDIA is becoming a credit allocator.” These are analyst stress assumptions, not expected losses or reported liabilities.</p>
+
+  <h3>Two methods, one explicit balance-sheet bridge</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Normalized-earnings cross-check inputs at FY29</caption>
+      <thead><tr><th>Input</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
+      <tbody>
+        <tr><td>Normalized diluted EPS</td><td>$11.35</td><td>$17.40</td><td>$22.78</td></tr>
+        <tr><td>Scenario diluted shares, billions</td><td>24.65</td><td>24.30</td><td>23.95</td></tr>
+        <tr><td>Target P/E</td><td>16×</td><td>22×</td><td>28×</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Per-share value at the results date · methods are reconciled, not averaged</caption>
+      <thead><tr><th>Method</th><th>Bear</th><th>Base</th><th>Bull</th><th>Load-bearing input</th></tr></thead>
+      <tbody>
+        <tr><td>Economic FCFF DCF</td><td>$105.51</td><td>$254.03</td><td>$551.46</td><td>Owner cash margin and terminal duration</td></tr>
+        <tr><td>FY29 normalized earnings</td><td>$148.00</td><td>$321.10</td><td>$537.82</td><td>Normalized earnings and a two-year discount</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The DCF adds the conservative net cash from the balance-sheet bridge once and recognizes the scenario share of US$93.940 billion in non-operating equity holdings. The separately classified locked public position is left unrecognized rather than added twice. The earnings cross-check retains normalized net interest, so it does not add net cash again; it excludes security gains and adds the haircutted holdings once. It multiplies FY29 normalized earnings by the displayed P/E, discounts two years, then divides by the current 24.285 billion diluted-share base. Both methods apply the same capital-risk deduction.</p>
+  <p>Holding all Base assumptions except first-year growth constant, the after-hours price implies FY28 revenue growth of about <strong>46.457%</strong>, below management's preliminary outlook. This does not prove undervaluation. The market may be discounting guidance credibility, gross-margin durability, working-capital drag, commitment losses or a lower terminal multiple.</p>
+</section>
+
+<section class="reveal on" id="risks">
+  <div class="slabel">RISKS · MONITORING</div>
+  <h2>The operating thesis is intact; the evidentiary burden is higher</h2>
+  <div class="finds">
+    <div class="find good"><div class="t">Strongest evidence for</div><p>Data Center, cloud demand and architecture cadence remain exceptional. Rubin is already shipping, and the outlook excludes a China recovery.</p></div>
+    <div class="find warn"><div class="t">Strongest evidence against</div><p>Part of future demand depends on NVIDIA investments, extended terms, cloud purchases, leases or guarantees whose returns and loss probabilities are undisclosed.</p></div>
+    <div class="find"><div class="t">Alternative explanation</div><p>Capacity contracts and credit support may simply secure scarce supply and accelerate solvent customers, while third-party capital absorbs most infrastructure risk.</p></div>
+    <div class="find"><div class="t">Resolution path</div><p>Track sell-through, utilization, receivable aging, commitment reduction, realized guarantee cash, Rubin mix and normalized gross margin together.</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Observable validation map; thresholds are analyst tests, not company guidance</caption>
+      <thead><tr><th>Variable</th><th>Confirms</th><th>Breaks</th></tr></thead>
+      <tbody>
+        <tr><td>Rubin transition</td><td>Material Q3 mix with stable inventory provisions</td><td>Mix delay, yield issue or another large charge</td></tr>
+        <tr><td>Gross margin</td><td>FY2028 recovery into management's stated range</td><td>Q4 below the stated trough or no FY2028 recovery</td></tr>
+        <tr><td>Customer financing</td><td>Cloud commitments decline as third parties use capacity</td><td>Assumed leases, payments or indemnity receivables rise</td></tr>
+        <tr><td>Hyperscaler demand</td><td>Cloud growth and capex remain aligned</td><td>Capex cuts coincide with cloud/backlog slowdown</td></tr>
+        <tr><td>CUDA economics</td><td>Normalized production cost per useful token retains a lead</td><td>Custom or rival silicon closes the gap across major workloads</td></tr>
+        <tr><td>China ecosystem</td><td>Approved competitive product restores developer access</td><td>Domestic ecosystems expand globally while foreclosure persists</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">FINAL JUDGMENT</div>
+  <h2>Constructive, but no longer a pure platform multiple</h2>
+  <p class="quote">NVIDIA still owns the strongest operating evidence in AI infrastructure. The new discount rate belongs to credit allocation, not to demand.</p>
+  <p>At the post-results indication, the Base framework spans US$254–321 per share. The Bear range is US$106–148, while the Bull methods converge near US$538–551. The asymmetry supports a constructive long-term view, but not a low-risk earnings chase: only the lower Base endpoint offers a modest margin of safety, and the Bear downside is large.</p>
+  <div class="callout"><b>Stance:</b> positive with a higher risk classification. The thesis strengthens if the next-quarter guide converts into Rubin mix, cash and stable receivable quality while scheduled commitments decline through use. It weakens if the disclosed margin trough is breached or contingent support begins turning into assumed leases and cash payments.</div>
+  <p><strong>Strongest counterargument:</strong> management's preliminary FY2028 growth outlook is supply-constrained, and the balance-sheet structures may create a second revenue stream with limited realized loss. <strong>Failure boundary:</strong> customer-financed demand, weaker cash conversion and lower margins persisting together would invalidate the premium platform valuation. Confidence is medium because the operating disclosures are strong but customer-level utilization, returns and credit economics are absent.</p>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">METHOD · SOURCES</div>
+  <h2>SEC filings control the numbers; the call controls intent</h2>
+  <p>The Form 10-Q controls quarter-end financial, contractual and risk facts. The filed release and CFO commentary control quarter comparisons, non-GAAP reconciliations and outlook. The official presentation supplies the product narrative. The third-party transcript is used only for management claims and Q&amp;A behavior.</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Primary and decision-useful companion sources</caption>
+      <thead><tr><th>Source</th><th>Use</th><th>Authority boundary</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm">FY2027 Q2 Form 10-Q</a></td><td>Statements, segments, customers, investments, contracts and risks</td><td>Unaudited U.S. GAAP interim filing</td></tr>
+        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm">Filed earnings release</a></td><td>Quarter comparisons, outlook and non-GAAP bridge</td><td>Furnished 8-K exhibit</td></tr>
+        <tr><td><a href="https://s201.q4cdn.com/141608511/files/doc_financials/2027/Q227/Q2FY27-CFO-Commentary.pdf">Official CFO commentary</a></td><td>DSO, inventory, commitments and guarantees</td><td>Management commentary; not audited</td></tr>
+        <tr><td><a href="https://s201.q4cdn.com/141608511/files/doc_financials/2027/Q227/NVDA-F2Q27-Quarterly-Presentation-final-1.pdf">Official investor presentation</a></td><td>Quarter map, platform and Rubin evidence</td><td>Management presentation</td></tr>
+        <tr><td><a href="https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2026/NVIDIA-2nd-Quarter-FY27-Financial-Results/default.aspx">Official earnings event</a></td><td>Webcast control for the vendor call text</td><td>No issuer-written transcript at cutoff</td></tr>
+        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm">FY2026</a> · <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm">FY2024</a> · <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm">FY2023</a> · <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm">FY2022 Forms 10-K</a></td><td>Audited history, R&amp;D and patents</td><td>PwC-audited annual filings; split-adjusted EPS where needed</td></tr>
+        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000036/nvda-20260512.htm">2026 proxy statement</a></td><td>Ownership, board and related-person governance</td><td>Ownership dates differ by holder</td></tr>
+        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm">AMD</a> · <a href="https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm">Broadcom</a> · <a href="https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm">TSMC</a></td><td>Three-year peer operating trajectories</td><td>Issuer filings control; fiscal calendars and scope differ</td></tr>
+        <tr><td><a href="https://news.samsung.com/global/samsung-electronics-announces-second-quarter-2026-results">Samsung</a> · <a href="https://news.skhynix.com/en/q2-2026-business-results/">SK hynix</a></td><td>HBM4 and memory-supply corroboration</td><td>No NVIDIA allocation or supplier-share proof</td></tr>
+        <tr><td>Wind Financial Data Service</td><td>Regular close, after-hours, peers and market cross-checks</td><td>SEC values override accounting conflicts</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">All derived figures are reproduced in deterministic ledgers. Segment CAGRs use filed endpoints. LTM equals FY2026 plus FY2027 H1 less FY2026 H1. Gain-adjusted P/E removes a pre-tax or illustrative after-tax range rather than claiming a company non-GAAP measure. DCF forecasts are annual from FY2028 through FY2030; terminal value begins after FY2030. Commitment and guarantee haircuts are scenario losses, not reclassifications of gross amounts as debt.</p>
+  <div class="callout"><b>Known gaps:</b> NVIDIA does not disclose networking dollars, ultimate end-customer concentration, customer-level utilization, contract overlap, guarantee recovery timing or independent CUDA cost-per-token benchmarks. Missing values remain missing.</div>
+</section>
+
+<footer>
+  <p>Financial data through 26 July 2026; issuer and call evidence through 26 August; market through the 20:01 ET after-hours indication on 26 August 2026. Sources: NVIDIA, SEC filings, official peer disclosures, earnings-call evidence and Wind.</p>
+  <p>This report is for research discussion. CAGRs, LTM, FCF, owner FCFF, gain-adjusted P/E, stress losses, forecasts and intrinsic values are analyst calculations and do not constitute company guidance or investment advice.</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
