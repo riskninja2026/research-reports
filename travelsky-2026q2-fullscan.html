@@ -202,6 +202,29 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   .reveal{opacity:1;transform:none;transition:none}
 }
 :focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
 </style>
 </head>
 <body>
@@ -210,18 +233,18 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <div class="wrap">
     <div class="eyebrow">中国民航信息网络 00696.HK ｜ 全景尽调 ｜ 港交所中期业绩 2026.08.24</div>
     <h1>账面折价很深，<br>核心平台却没有增长</h1>
-    <p class="lede">收入、利润与现金流都在上升，表面上是一份稳健的中期答卷。<b>真正的分歧在于，增长主要来自项目验收和智能产品，航空信息平台本身仍是量稳价弱；大额资金能否转成股东回报也没有答案。</b>因此，低估值有资产支撑，但重估仍需经营与分配共同兑现。</p>
+    <p class="lede">收入、利润、现金流都在涨，表面上是一份稳健的中期答卷。<b>但拆开看：增长主要来自机场项目验收和智能产品，作为主业的航空信息平台仍是"客流微增、收入反降"；账上的大笔资金能不能变成股东回报，也还没有答案。</b>便宜是真的，有资产托底；但要重估，得等经营和分红同时给出证据。</p>
 
     <div class="dual">
       <div>
         <div class="tag">可归属流动资源 / 按H股价计总市值</div>
         <div class="big a">53%</div>
-        <div class="cap">扣除客户备付金后，现金与银行产品仍覆盖逾半股权市值。</div>
+        <div class="cap">扣掉替客户保管的钱之后，公司自己的现金和银行理财，仍相当于股票总市值的一半以上。</div>
       </div>
       <div>
         <div class="tag">平台收入 / 处理量代理</div>
         <div class="big b">−2.0%</div>
-        <div class="cap">处理量略增，单位收入代理却回落；它不是公司收费单价。</div>
+        <div class="cap">处理的旅客量微增，平摊到每人次的收入却在回落——注意这是分析代理，不是公司的收费单价。</div>
       </div>
     </div>
   </div>
@@ -229,10 +252,38 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
 <main class="wrap">
 
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，读这里</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>中国民航体系的核心IT服务商。它运营的订座离港核心系统服务41家中国航司和400多家境外航司，另做机票分销、票款结算清算、机场信息化项目和出行智能产品。母公司隶属国务院国资委，三大国有航空集团既是它的大客户、也是它的股东。</li>
+      <li><b>本期成绩：</b>上半年收入41.12亿元（+5.6%），<span class="g">归母净利润</span>（归属上市公司股东的净利润）15.43亿元（+6.6%），经营现金流大增85%。数字都在改善。</li>
+      <li><b>但增长换了来源：</b>主业航空信息平台收入反而<b>下降1.7%</b>（旅客处理量只增0.3%），补上缺口的是机场数字化项目（+43.5%）——这类收入按项目验收确认，天生波动，去年就曾大降两成。</li>
+      <li><b>一个容易踩的坑：</b>账上现金88.3亿加银行理财60.2亿，合计超过148亿元，看似"半个市值都是钱"。但其中约19.8亿是替客户保管的备付金，再减去约10.0亿借款，估值口径只认118.7亿；另有账外约25.4亿保险股权和基金，变现路径不明，干脆不算。而且这些钱分不分给股东，由国资控股股东和董事会说了算。</li>
+      <li><b>结论：</b><b>中性</b>。市盈率约9.2倍、市净率0.89倍，都在五年最低位附近，便宜有依据；但基准估值HK$8.89–9.88，下端几乎贴着现价HK$8.825——重估要等核心平台量价转正、现金兑现成分红。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>民航体系里的"基础设施收费方"</h2>
+  <p>把它想成民航业里一层看不见的基础设施：它运营的<span class="g">订座离港系统（ETD）</span>为41家中国航司和400多家境外航司处理订票、值机和登机离港，并与全部国际<span class="g">GDS</span>（全球机票分销系统）互联。生意的主线可以这样看：</p>
+  <div class="steps">
+    <div class="step"><div class="n">环节 1</div><b>航司付服务费</b><p>航空公司按业务处理与技术服务付费——这是主业"航空信息平台"，处理量和单位收入共同决定收入。</p></div>
+    <div class="step"><div class="n">环节 2</div><b>票款走它结算</b><p>机票代理卖出的票款经它<span class="g">结算清算</span>，公司从中收取服务费。</p></div>
+    <div class="step"><div class="n">环节 3</div><b>机场买它的项目</b><p>机场数字化系统按项目建设、<span class="g">验收</span>后才确认收入——所以这块收入一年高一年低，取决于验收落在哪一期。</p></div>
+    <div class="step"><div class="n">环节 4</div><b>结果：钱沉淀在账上</b><p>多年利润沉淀成大量现金和银行理财；这些钱怎么用、分不分，成了估值的核心问题。</p></div>
+  </div>
+  <p>此外还有航旅智能产品、信息网络及数字基础设施等业务线，占比见下文收入结构表。再记两件结构性事实。第一，<b>股权结构</b>：它是在内地注册、香港上市的<span class="g">H股</span>公司，H股只占总股本31.87%，其余是母公司（29.55%）和国航、南航、东航、中国移动等体系的内资股——<b>大客户同时是大股东</b>：这可能降低系统被替换的风险，也可能反过来让价格和分红受"体系内"考量约束。第二，<b>披露结构</b>：公司不公布各业务线的毛利，不公布平台收费价格，中期也没有完整现金流量表——很多关键判断只能用"分析代理"逼近，文中都会标明。带<span class="g">虚线下划线</span>的术语可在文末「名词速查」查阅。</p>
+  <p>行业背景一句话：疫情三年民航客流大幅下滑，公司利润在FY2021处于五年谷底，2023—2025随客流修复大幅回升。如今客流修复的红利正在消退，真正的考题是：客流不再高增长之后，这家公司靠什么继续增长——这正是本报告的主线。</p>
+</section>
+
 <section class="reveal on" id="financials" data-fullscan-role="basic-financials">
   <div class="slabel">基础财务</div>
   <h2>疫情修复把利润抬到新台阶，本期增长开始换来源</h2>
-  <p>公司是中国注册的H股发行人，面向航空公司、机场、票务代理、旅游企业与行业机构提供订座离港、分销、结算清算、机场数字化和智能产品。航空公司按业务处理与技术服务付费，机场项目还受完工验收节奏影响；母公司为中国民航信息集团，实际控制人为国务院国资委。集团大部分收入来自中国，未披露可审计的地区利润分拆。</p>
+  <p>公司是中国注册的H股发行人，客户包括航空公司、机场、票务代理、旅游企业和行业机构；航空公司按业务处理与技术服务付费，机场项目收入受完工验收节奏影响。母公司为中国民航信息集团，实际控制人为国务院国资委。集团大部分收入来自中国，没有披露可审计的地区利润分拆。</p>
 
   <div class="grid" data-financials="consolidated">
     <div class="cell"><div class="k">2026H1 营业收入</div><div class="v">41.121<span class="u">亿元</span></div><div class="d"><span class="up">同比 +5.59%</span></div></div>
@@ -245,7 +296,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
   <div class="tblscroll">
     <table class="tbl">
-      <caption>2026H1每股与回报指标｜人民币元/股，ROE除外</caption>
+      <caption>2026H1每股与回报指标｜人民币元/股，ROE除外；EPS＝每股盈利，ROE＝净资产收益率，BVPS＝每股净资产</caption>
       <thead><tr><th>基本及摊薄EPS</th><th>年化ROE（推算）</th><th>期末BVPS（推算）</th><th>口径</th></tr></thead>
       <tbody><tr><td>0.53</td><td>12.59%</td><td>8.554</td><td>ROE按平均归母权益并机械年化</td></tr></tbody>
     </table>
@@ -253,7 +304,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
   <div class="tblscroll">
     <table class="tbl">
-      <caption>LTM损益与现金桥｜FY2025 + 2026H1 − 2025H1；人民币亿元</caption>
+      <caption>LTM损益与现金桥｜FY2025 + 2026H1 − 2025H1；人民币亿元；LTM＝最近十二个月滚动口径；CFO＝经营现金流，CAPEX＝资本开支</caption>
       <thead><tr><th>营业收入</th><th>毛利 / 率</th><th>营业利润 / 率</th><th>归母净利润 / 率</th><th>EPS</th><th>CFO / CAPEX / FCF代理</th></tr></thead>
       <tbody><tr><td>89.835</td><td>47.038 / 52.36%</td><td>27.559 / 30.68%</td><td>24.369 / 27.13%</td><td>0.833元</td><td>约40.445 / 10.508 / 29.937</td></tr></tbody>
     </table>
@@ -293,13 +344,20 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </table>
     </div>
   </div>
-  <p class="small">最新公告只覆盖2026年上半年，港交所没有可比Q1财务报告，故不推算单二季度。毛利为收入减营业成本；自由现金流代理为经营现金流减公司披露资本开支。2026H1公告没有完整现金流量表，现金指标来自管理层讨论并有四舍五入。FY2022采用后续年报重述；新收入分类只可直接比较FY2024—25及两期H1，不能倒拼五年分类CAGR。</p>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>五年轨迹是一条"深坑爬出"的曲线：疫情期间利润率一度只有一成，ROE最低2.98%；随客流修复，FY2025归母净利润升到23.42亿元、ROE回到10.12%。注意收入在FY2024已经见顶（88.23亿元），FY2025微降——<b>修复驱动的增长正在退潮</b>。</p>
+    <p>本期收入还能+5.6%，靠的是结构切换：占收入57%的主业平台<b>降了1.7%</b>，占比不到15%的机场数字化<b>涨了43.5%</b>、一项就贡献了83.65%的净增收。换句话说，增长的接力棒从"稳定的过路费"交到了"波动的项目单"手里——这是全篇最重要的一张表。</p>
+    <p>两个阅读提醒：港交所没有一季度财务报告，所以拆不出单二季度；中期公告也没有完整现金流量表，现金数字来自管理层讨论，是约数。</p>
+  </div>
+  <p class="small">毛利为收入减营业成本；自由现金流代理为经营现金流减公司披露资本开支。FY2022采用后续年报重述；新收入分类只可直接比较FY2024—25及两期H1，不能倒拼五年分类CAGR（CAGR＝复合年均增速）。</p>
 </section>
 
 <section class="reveal on" id="profit">
   <div class="slabel">盈利机制</div>
   <h2>毛利改善是真，报告利润仍混有项目阶段与税款时点</h2>
-  <p>机场数字化项目在本期确认了更多收入，却处于外购软硬件投入较低的阶段，直接改善集团毛利。与此同时，上年较大的信用减值转回不再重复，压低了报告营业利润增幅；重点软件企业退税又降低所得税费用。三者方向相反，单看归母增长会遗漏利润的真实组成。</p>
+  <p>本期利润里有三股方向相反的力，单看"归母+6.6%"会全部错过。第一股向上：机场项目恰好处在外购软硬件投入较少的阶段，成本低、确认的收入多，直接推高集团毛利。第二股向下：上年有一笔较大的<span class="g">信用减值转回</span>（以前计提的坏账准备收回来、计入利润），今年没有重复，营业利润的同比增速被这个高基数压低。第三股向上：收到上年度重点软件企业退税，所得税费用下降。</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -322,12 +380,17 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     <div class="find"><div class="t">研发没有停</div><p>研发费用为1.917亿元，同比增长15.23%；费用率上升说明成本改善并非依靠全面削减研发。</p></div>
     <div class="find warn"><div class="t">资格仍需续期</div><p>高新技术企业资格须在2026年重新认定；公司已启动申请并按优惠税率计提，但结果与后续退税时点仍是利润变量。</p></div>
   </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>把噪音剔掉之后的干净读法：两期都扣掉减值转回，<b>经营利润其实增长13.87%</b>——比表面的+2.92%好看，这是本期利润质量的真实底色。但要记两个"时点因素"：机场项目现在的低成本阶段不会永远持续；税率降到10.27%依赖高新技术企业资格和软件退税，<b>资格2026年就要重新认定</b>，续不上利润会直接受损。</p>
+  </div>
 </section>
 
 <section class="reveal on" id="throughput">
   <div class="slabel">量价与新业务</div>
   <h2>核心平台没有吃到客流弹性，新增长则更依赖项目验收</h2>
-  <p>航空信息平台仍是收入主体，但处理量仅轻微增长，收入反而下降。公司提到外航收入受汇率影响，却没有披露价格、航线结构、非量相关服务与会计重分类的桥。机场数字化和智能产品补上了增长，但项目覆盖数与平台上线数不能替代付费、续费和毛利证据。</p>
+  <p>主业的量价拆开看：旅客处理量还在微增，收入却在下降。公司提到外航收入受汇率影响，但没有披露价格、航线结构、非量相关服务和会计重分类之间的完整桥。补上增长的机场数字化和智能产品，目前能验证的是"有项目、有覆盖"，还不能验证"有毛利、有续费"。</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -349,12 +412,17 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     <div class="find"><div class="t">智能化采用</div><p>智慧机场、人脸识别、行李跟踪与中转平台覆盖继续扩大，低空经济和航空新零售也在推进；合同金额、续费率和贡献利润仍未披露。</p></div>
     <div class="find warn"><div class="t">最重要的缺口</div><p>公司没有给航空信息平台的价格、客户结构或贡献利润，也没有给新业务的毛利与现金回收。当前只能验证采用，不能验证长期单位经济。</p></div>
   </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>主业的问题一句话：<b>客流回来了，钱没跟着回来</b>。处理量3.72亿人次只增0.3%，平摊到每人次的收入代理从约6.46元降到约6.32元——量停、价弱。而顶上来的机场项目收入，去年全年还降过20.8%，今年上半年又+43.5%：<b>这不是一条能画直线外推的增长曲线</b>，本期反弹首先是验收恰好落在这半年。真正缺的是价格、续费率和分业务毛利这三样披露——没有它们，谁也无法证明新增长"赚不赚钱"。</p>
+  </div>
 </section>
 
 <section class="reveal on" id="balance">
   <div class="slabel">现金与资产</div>
-  <h2>现金回收明显改善，但“账上钱”仍要区分可用、受限与投资</h2>
-  <p>本期经营现金改善与应收下降方向一致，资产负债表没有偿债压力。公司披露的现金等价物仍包含客户备付金；估值中的流动资源从现金等价物中另行扣除该客户资金，再加交易性银行产品并扣除借款。定期存单、保险股权和私募基金也不计入。即便如此，资本分配仍由控股股东和董事会决定，不能把资源余额直接当作股东现金。</p>
+  <h2>现金回收明显改善，但"账上钱"仍要区分可用、受限与投资</h2>
+  <p>本期经营现金流改善与应收账款下降方向一致，资产负债表没有偿债压力。但读它的"账上钱"必须分三层：公司披露的现金等价物里含有替客户保管的<span class="g">备付金</span>；估值用的"流动资源"把这部分客户资金扣掉，再加上交易性银行产品、减去借款；定期存单、保险股权和私募基金则完全不计入。即便算清了，钱怎么用仍由控股股东和董事会决定——<b>资源余额不能直接当作股东现金</b>。</p>
 
   <div class="grid">
     <div class="cell"><div class="k">现金及现金等价物</div><div class="v">88.298<span class="u">亿元</span></div><div class="d"><span>管理层披露</span></div></div>
@@ -391,13 +459,18 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p class="small">公司没有在当前业绩公告提供完整现金流量表，故无法把现金改善完整拆成应收、备付金、应付与税款返还。半年现金转换很强，但不应永久化。</p>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>账上的"钱"分三层看：<b>①可用的</b>——估值只认118.7亿元（约合每股HK$4.69，见估值章）；<b>②别人的</b>——19.8亿元客户备付金，是代收的票款，不是公司财产；<b>③锁着的</b>——保险股权加基金账面约25.4亿元，变现路径不明，估值直接不算。</p>
+    <p>收钱能力这半年确实变好：应收账款降了11.6%、一年以上的陈年应收降了23.5%、坏账准备反而提得更足。但有两个保留：欠钱的大头（占净额59.63%）是关联方——也就是那些既当客户又当股东的航空集团，这部分没有按<span class="g">组合拨备</span>处理（即没有对这组应收统一按比例计提坏账准备）；而且没有完整现金流量表，无法把现金改善拆出来源。<b>半年的好转，先别当成永久</b>。</p>
+  </div>
 </section>
 
 <section class="reveal on" id="governance">
   <div class="slabel">治理与分配</div>
   <h2>航空公司既是客户也是股东，现金归属取决于分配纪律</h2>
-  <p>中国民航信息集团是第一大股东，国有航空集团与中国移动也持有大额内资股；H股只占总股本的一部分。客户与股东利益可能降低系统替换风险，却也可能约束价格与资本回报。关联应收正在回落是正面证据，但无组合拨备不等于没有信用与治理风险。</p>
+  <p>中国民航信息集团是第一大股东，国有航空集团与中国移动也持有大额内资股；H股只占总股本的一部分。客户与股东利益绑定，可能降低系统被替换的风险，代价是价格和资本回报也可能被"体系内"考量约束。关联应收正在回落是正面证据，但没有组合拨备，不等于没有信用与治理风险。</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -416,7 +489,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
   <div class="tblscroll">
     <table class="tbl">
-      <caption>五年股东回报｜人民币元/股；派息率按公司正式政策分母</caption>
+      <caption>五年股东回报｜人民币元/股；派息率按公司正式政策分母；DPS＝每股股息</caption>
       <thead><tr><th>财年</th><th>DPS</th><th>母公司净利润口径派息率</th><th>集团归母口径参考</th><th>FCF代理 / 现金股息</th></tr></thead>
       <tbody>
         <tr><td>FY2021</td><td>0.055</td><td>40.2%</td><td>29.2%</td><td>12.89x</td></tr>
@@ -427,7 +500,6 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p class="small">现行政策通常每年派发一次末期股息，现金总额约占母公司净利润35%—45%；不是集团归母利润的同名比率。FY2021—25累计现金股息约22.912亿元，股本与股份数没有增加，窗口内没有新股融资，因此公司是净资本返还者；但其中一年没有获得当年FCF代理覆盖。2026H1不派中期股息，符合“一次末期”惯例，本身不是分红削减信号。</p>
 
   <div class="finds">
     <div class="find good"><div class="t">审计师轮换有解释</div><p>立信连续服务8年后，公司经公开招标改聘大信，股东会以99.83%赞成通过；前任确认没有分歧或未决事项，当前证据不支持把轮换解读为审计争议。</p></div>
@@ -435,17 +507,26 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     <div class="find warn"><div class="t">客户集中仍在</div><p>FY2025最大客户贡献14.2%收入，且三大航空集团都是股东。合作稳定性较强，但定价、回款与独立决策需持续核查。</p></div>
     <div class="find"><div class="t">分配是最直接的治理验证</div><p>资产负债表已经不缺流动性。真正能降低控制折价的不是继续积累资金，而是稳定执行末期分配并说明闲置资金用途。</p></div>
   </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>分红要看懂一个口径陷阱：公司政策说的"派息35%—45%"，分母是<b>母公司报表的净利润</b>，不是投资者常看的集团归母净利润——按后者算，实际派息率只有约34.5%。好消息是股息连年上调（每股0.055元→0.276元），五年累计派了约22.9亿元，期间没有增发过一股，<b>公司是净给钱的</b>（其中FY2023一年的股息未获当年FCF代理覆盖）。中期不派息属于"一年只派一次末期"的惯例，本身不是削减信号。</p>
+    <p>治理面上，一件事有交代（审计师轮换经公开招标、前任确认无分歧），一件事悬着（董事会任期2023年2月就到了，至今没完成换届），一件事要持续盯（对关联方中航信移动科技的云服务协议：有保底费0.40亿元、有上限、有审批流程，但没有第三方报价对照——流程合规不等于定价一定公允）。</p>
+  </div>
   <div class="callout"><b>持续关联交易专项：</b>公司续订向中航信移动科技提供云计算及系统服务的三年协议，并可再自动续三年；年度保底费为0.40亿元，FY2026—28上限依次为0.78、0.93和1.12亿元。公告披露单位费率、跨部门审批、约定的年度核数师审阅及四名董事回避，但没有匹配的第三方报价或分部毛利，因此只能证明流程约束，不能独立证明定价完全公允。</div>
 </section>
 
-<section class="reveal on" id="market">
-  <div class="slabel">市场定价</div>
-  <h2>结果后股价反弹，估值仍在历史低位附近</h2>
-  <p>业绩发布日收市价为HK$8.340；次日10:17 HKT报HK$8.825，上涨5.82%。以最新公告后的LTM利润与期末归母权益自算，P/E为9.18倍，P/B为0.893倍，上一财年股息率为3.61%。Wind显示的0.935倍P/B沿用年末账面值，故不用于本报告的最新资产估值。</p>
+<section class="reveal on" id="valuation">
+  <div class="slabel">市场定价 · 预测与估值</div>
+  <h2>便宜有据可查，但重估的钥匙在现金兑现</h2>
+  <p>给它估值要回答三个问题：市场现在给什么价？这个价便宜在哪、为什么便宜？三年后按情景值多少钱？下面按四步走。</p>
+
+  <h3>第一步 · 市场现在给什么价</h3>
+  <p>业绩发布日收市价为HK$8.340；次日10:17 HKT报HK$8.825，上涨5.82%。以最新公告后的LTM利润与期末归母权益自算，<span class="g">P/E</span>（市盈率）为9.18倍，<span class="g">P/B</span>（市净率）为0.893倍，上一财年<span class="g">股息率</span>为3.61%。Wind显示的0.935倍P/B沿用年末账面值，故不用于本报告的最新资产估值。</p>
 
   <div class="tblscroll">
     <table class="tbl">
-      <caption>业绩发布日收盘的五年估值位置｜Wind 2026-08-24；次日盘中价格不混入</caption>
+      <caption>业绩发布日收盘的五年估值位置｜Wind 2026-08-24；次日盘中价格不混入；五年分位＝当前数值在过去五年里的排位</caption>
       <thead><tr><th>指标</th><th>发布日数值</th><th>五年分位</th><th>解释</th></tr></thead>
       <tbody>
         <tr><td>P/E TTM</td><td>9.052x</td><td>0.00%</td><td>样本期最低附近</td></tr>
@@ -455,18 +536,27 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     </table>
   </div>
 
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>三个指标说同一件事：<b>这只股票正处在自己五年历史上最便宜的位置附近</b>——市盈率分位0%（五年里没更低过）、市净率不到0.9倍（股价低于每股净资产）、股息率接近五年最高。便宜是事实；问题是市场按"折价"给它定价已经很久，折的是增长停滞、国企治理和趴着不动的资金。所以"便宜"本身不构成买入理由，要看折价的原因会不会消失。</p>
+  </div>
+
+  <h3>第二步 · 为什么不套同业倍数</h3>
   <div class="finds">
     <div class="find good"><div class="t">低估值有公司自身历史支持</div><p>利润倍数与账面倍数都在五年低位附近，说明市场已计入增长、治理与资金效率折价，而非按软件平台高倍数定价。</p></div>
     <div class="find warn"><div class="t">同业倍数不能硬套</div><p>Sabre是Wind覆盖内最接近的航空交易与解决方案公司，但其净资产为负，返回财务还存在货币元数据异常；只作业务参照，不作倍数锚。</p></div>
     <div class="find"><div class="t">市场反应只证明预期改善</div><p>结果次日早盘上涨确认财务好于部分悲观预期，但盘中价格与低流动性可能放大波动，不能从涨幅反推投资者的单一动机。</p></div>
     <div class="find"><div class="t">真正可比的是自身兑现</div><p>缺少口径干净的全球同业后，估值应更多依赖公司自己的ROE、现金分配与核心平台量价，而不是扩大同业名单制造精确感。</p></div>
   </div>
-</section>
 
-<section class="reveal on" id="valuation">
-  <div class="slabel">预测与估值</div>
-  <h2>低估值提供有限上行，现金解锁决定估值斜率</h2>
-  <p>三年情景把收入、归母利润、自由现金流代理和分配率放在同一条路径上。熊市假设核心量价继续疲弱、项目毛利回落；基准假设新业务增长延续但不过度外推，现金转换回到常态；牛市则要求平台与项目业务同时改善。所有数字都是分析假设，不是公司指引。</p>
+  <h3>第三步 · 三年情景与两种估值方法</h3>
+  <p>先设三种剧本，再用两种方法各算一遍价值、互相印证。剧本：熊市假设核心量价继续疲弱、项目毛利回落；基准假设新业务增长延续但不过度外推、现金转换回到常态；牛市要求平台与项目业务同时改善。所有数字都是分析假设，不是公司指引。</p>
+  <div class="steps">
+    <div class="step"><div class="n">方法 A</div><b>资产支持盈利法</b><p>先把利润洗干净——LTM归母利润扣掉净财务、投资与公允价值收益（按15%税率处理），得到核心盈利21.988亿元：把"生意赚的钱"与"钱生的钱"分开，只给生意定价，资产另外加。再用FY2027E利润乘情景P/E，加上打折后的流动资源，折现1.35年。</p></div>
+    <div class="step"><div class="n">方法 B</div><b>P/B—ROE法</b><p>合理P/B =（ROE − g）÷（Ke − g）：净资产的回报越高于股东要求的回报（Ke），净资产就该值越高的倍数。这是以期末每股净资产为起点的静态映射，不是三年现金流折现；闲置资金的低回报已体现在ROE里，所以不再另加净现金。</p></div>
+    <div class="step"><div class="n">怎么读</div><b>两法互证，不取平均</b><p>方法A把"资产值多少"和"生意值多少"分开算；方法B检验"净资产的赚钱能力配得上几倍账面"。两法结论接近，说明估值不依赖单一口径。</p></div>
+  </div>
+  <p class="small">式中符号：<b>Ke（权益成本）</b>是股东承担该股风险要求的最低年回报率，风险越高取值越高；<b>g（长期增长率）</b>是修复期后的永续增速。流动资源折合每股约HK$4.69，按情景兑现50%/80%/100%，且不含受限存款、保险股权、私募基金和定期存单。</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -505,14 +595,26 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     </table>
   </div>
 
-  <div class="callout"><b>资产支持盈利法：</b>LTM归母利润先扣除按15%税率处理的净财务、投资与公允价值收益，得到21.988亿元核心盈利；再用FY2027E利润、情景倍数和流动资源折现1.35年。扣除客户备付金后的流动资源折合每股HK$4.69，仍按情景打折，且不加入其他受限存款、保险股权、私募基金或定期存单。</div>
-  <div class="callout"><b>P/B—ROE法：</b>P/B是市净率，ROE是净资产收益率，Ke是权益成本，g是长期增长率；公式为P/B = (ROE − g) / (Ke − g)。这是以2026H1期末BVPS为起点的静态规范化映射，不是三年现金流现值模型。它把低回报的闲置资金直接反映在ROE中，所以估值后不再加净现金。基准价值带相对盘中价只有个位数至低双位数空间，仍不足以忽略熊市回撤。</div>
+  <h3>把三档价值放在一把尺上</h3>
+  <div class="rows" aria-label="情景价值与现价对比">
+    <div class="row"><div class="nm">熊市<span>核心量价继续疲弱</span></div><div class="track"><div class="fill alt" style="width:41.3%"></div></div><div class="fig">HK$5.42<span class="down">两法5.42–6.24 · 较现价−39%~−29%</span></div></div>
+    <div class="row"><div class="nm">现价<span>2026-08-25 10:17盘中</span></div><div class="track"><div class="fill soft" style="width:67.3%"></div></div><div class="fig">HK$8.825<span>市场价</span></div></div>
+    <div class="row"><div class="nm">基准<span>新业务延续、现金转常态</span></div><div class="track"><div class="fill" style="width:67.8%"></div></div><div class="fig">HK$8.89<span class="up">两法8.89–9.88 · 较现价+1%~+12%</span></div></div>
+    <div class="row"><div class="nm">牛市<span>平台与项目同时改善</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$13.11<span class="up">两法13.11–14.37 · 较现价+49%~+63%</span></div></div>
+  </div>
+  <p class="small">条形按各情景资产支持盈利法数值相对牛市HK$13.11的比例绘制；涨跌幅按现价HK$8.825与两法区间端点计算。</p>
+
+  <h3>第四步 · 这个价格意味着什么</h3>
+  <div class="plain">
+    <span class="pl">一句话总结</span>
+    <p>现价HK$8.825<b>几乎贴着基准估值的下端（8.89）</b>，离基准上端也只有约12%的空间；而一旦落入熊市剧本，下行是三到四成。也就是说，静态的便宜已经被市场给到了，<b>再往上走不能靠"更便宜"，只能靠证据</b>：核心平台的量和价同时转正、全年自由现金流覆盖利润九成以上、FY2026末期每股股息达到0.30元以上并说明大额闲置资金的用途。在这些出现之前，风险收益不对称度不足——中性。</p>
+  </div>
 </section>
 
 <section class="reveal on" id="decision">
   <div class="slabel">最终判断</div>
   <h2>中性：价格已接近基准价值，重估要等现金兑现</h2>
-  <p>基准两种映射的一端几乎贴近现价，另一端也只有低双位数上行，而熊市折价更深。当前不是靠静态便宜即可获得对称回报的机会；在核心量价或资金分配出现新证据前，不预付新业务高增长。结论置信度为中等。</p>
+  <p>基准两种映射的一端几乎贴近现价，另一端也只有低双位数上行，而熊市折价更深。当前不是靠静态便宜就能获得对称回报的机会；在核心量价或资金分配出现新证据之前，不预付新业务的高增长。结论置信度为中等。</p>
 
   <div class="finds">
     <div class="find good"><div class="t">经营确认</div><p>下一期航空信息平台收入增速应不低于处理量增速，且二者同时为正；否则核心量价改善仍未成立。</p></div>
@@ -522,6 +624,46 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   </div>
 
   <div class="callout"><b>最强反方观点：</b>市场可能低估了机场数字化与智能产品的结构升级，也低估了国产核心系统带来的长期成本与安全优势。若新业务毛利可复制、核心量价恢复、末期股息继续增长，本报告对项目时点和资金效率的折价会显得过度保守。</div>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · 快速检索</div>
+  <h2>读懂一家民航IT公司需要的词</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
+      <tbody>
+        <tr><td>订座离港系统（ETD）</td><td>航空公司订票、值机、登机离港共用的核心处理系统；航司按业务处理与技术服务付费——公司的主业。</td></tr>
+        <tr><td>GDS</td><td>全球机票分销系统，连接航司与全球票务代理的交易网络；公司与全部国际GDS互联。</td></tr>
+        <tr><td>结算清算</td><td>机票代理卖票后，票款经统一渠道对账、划转给航司的过程；公司从中收取服务费。</td></tr>
+        <tr><td>验收（项目收入）</td><td>工程类合同在客户确认完工验收时才确认收入，所以机场数字化收入落在哪一期有很大偶然性。</td></tr>
+        <tr><td>H股 / 内资股</td><td>同一家内地公司在香港上市流通的股份（H股）与不上市流通的境内股份；本公司H股仅占31.87%。</td></tr>
+        <tr><td>归母净利润</td><td>归属于上市公司股东的净利润，扣除了子公司少数股东应占部分。</td></tr>
+        <tr><td>信用减值转回</td><td>以前计提的坏账准备后来收回，转回当期利润——一次性的利润来源，不是经营改善。</td></tr>
+        <tr><td>高新技术企业资格</td><td>让公司按优惠税率纳税的官方认定，需定期重新认定；本公司须在2026年续期。</td></tr>
+        <tr><td>客户备付金</td><td>结算业务中替客户暂管的票款，计入公司现金但不属于公司，估值时必须剔除。</td></tr>
+        <tr><td>受限存款</td><td>被指定用途或监管锁定、不能自由动用的存款。</td></tr>
+        <tr><td>流动资源（估值口径）</td><td>本报告自定义的"真正可用的钱"：现金等价物 − 客户备付金 + 交易性银行产品 − 借款 = 118.737亿元。</td></tr>
+        <tr><td>自由现金流（FCF）代理</td><td>经营现金流减资本开支的近似值，衡量生意每年真正多出来的现金；"代理"表示由披露数据推算。</td></tr>
+        <tr><td>应收账款 / 周转天数</td><td>客户欠的钱 / 按收入折算平均要多少天才收回（本报告约182天，含项目与结算口径影响）。</td></tr>
+        <tr><td>关联方</td><td>与公司存在控制或重大影响关系的机构——这里主要是身兼股东的航空集团和母公司体系。</td></tr>
+        <tr><td>组合拨备</td><td>对一组应收账款按比例统一计提的坏账准备；公司对关联方应收没有做组合计提。</td></tr>
+        <tr><td>派息率（两个口径）</td><td>公司政策的35%—45%以母公司报表净利润为分母；投资者常用的集团归母口径算出来约34.5%——看股息先对口径。</td></tr>
+        <tr><td>DPS</td><td>每股股息。本公司惯例每年只派一次末期股息。</td></tr>
+        <tr><td>P/E（市盈率）</td><td>股价 ÷ 每股盈利，为一元利润付的价格；TTM表示按最近十二个月利润计算。</td></tr>
+        <tr><td>P/B（市净率）</td><td>股价 ÷ 每股净资产；低于1倍（"破净"）表示市价低于账面净资产。</td></tr>
+        <tr><td>股息率</td><td>每股股息 ÷ 股价，持股一年拿到的现金回报率。</td></tr>
+        <tr><td>五年分位</td><td>当前估值在过去五年数据里的排位；0%即五年最低。</td></tr>
+        <tr><td>ROE</td><td>净资产收益率＝净利润 ÷ 净资产，股东资金的年回报率。</td></tr>
+        <tr><td>BVPS</td><td>每股净资产（账面价值）。</td></tr>
+        <tr><td>Ke（权益成本）</td><td>股东承担该股票风险所要求的最低年回报率；风险越高，Ke越高，估值越低。</td></tr>
+        <tr><td>g（长期增长率）</td><td>假设的永续增速，用于P/B—ROE公式。</td></tr>
+        <tr><td>LTM / TTM</td><td>最近十二个月滚动合计，用于消除半年报的季节性。</td></tr>
+        <tr><td>CAGR</td><td>复合年均增速：把起点到终点的总增长折算成"每年稳定增长多少"。</td></tr>
+        <tr><td>持续关联交易</td><td>与关联方之间常年发生的生意，须按上市规则设上限、走审批并披露。</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <section class="reveal on" id="methods">
@@ -543,7 +685,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p class="small">本报告的业绩证据截止2026-08-24，行情另取次日10:17 HKT快照。发行人把中期全球投资者线上说明会安排在2026-08-25；行情取数时没有已完成问答或逐字稿可用，Fullscan抓取器以696:HK查询亦返回“no matching call”。同日演示稿未纳入本版，以维持业绩证据截止边界。所有调整利润、单位收入、流动资源、三年情景、估值与证伪阈值均为分析推算，不是公司指引。</p>
+  <p class="small">本报告的业绩证据截止2026-08-24，行情另取次日10:17 HKT快照。发行人把中期全球投资者线上说明会安排在2026-08-25；行情取数时没有已完成问答或逐字稿可用，Fullscan抓取器以696:HK查询亦返回"no matching call"。同日演示稿未纳入本版，以维持业绩证据截止边界。所有调整利润、单位收入、流动资源、三年情景、估值与证伪阈值均为分析推算，不是公司指引。</p>
 </section>
 
 <footer>

@@ -202,6 +202,29 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   .reveal{opacity:1;transform:none;transition:none}
 }
 :focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
 </style>
 </head>
 <body>
@@ -216,12 +239,12 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       <div>
         <div class="tag">Q2 OPERATING CASH FLOW · YOY</div>
         <div class="big a">+18.6%</div>
-        <div class="cap">Cash generation strengthened as investment intensity rose.</div>
+        <div class="cap">The business still turns sales into cash at a faster rate than a year ago.</div>
       </div>
       <div>
         <div class="tag">Q2 ATTRIBUTABLE NET INCOME · YOY</div>
         <div class="big b">−11.6%</div>
-        <div class="cap">An unexplained other loss and higher tax reversed the operating gain.</div>
+        <div class="cap">Yet the bottom line fell — an unexplained loss and higher tax erased the operating gain.</div>
       </div>
     </div>
   </div>
@@ -229,10 +252,38 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
 <main class="wrap">
 
+<section class="reveal on" id="tldr">
+  <div class="slabel">THE THIRTY-SECOND VERSION</div>
+  <h2>If you read only one screen, read this one</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>Who PDD is:</b> the company behind Pinduoduo, China's discount-shopping app, and Temu, its international arm. It mostly does not sell goods itself — merchants do, and they pay PDD for advertising and per-order services. It trades on Nasdaq at US$87.07 per ADS (its U.S.-listed share unit — defined in the primer below).</li>
+      <li><b>The state of the business:</b> still a profit machine. Q2 revenue was RMB112.4bn (+8.1%), operating profit RMB27.8bn at a 24.7% margin, and operating cash flow grew 18.6%. The balance sheet holds RMB456bn of cash and short-term investments — about US$67bn — with no reported borrowings.</li>
+      <li><b>The catch this quarter:</b> net income still <b>fell 11.6%</b>. An unexplained RMB7.4bn "other loss" plus higher tax wiped out the operating improvement, and the company would not say what the loss was.</li>
+      <li><b>The trap for a new reader:</b> PDD reports everything as <b>one segment</b>. You cannot see whether Temu makes or loses money; there are no user counts, no merchandise volume, no disclosure of the platform's cut of each sale. The stock looks cheap, but the cheapness cannot be verified.</li>
+      <li><b>The verdict:</b> watchlist, not a clean buy. The models value the ADS at US$59–70 in the bear case and US$112–113 in the base case; the US$87.07 quote sits between them. A better entry needs either real disclosure or a mechanism that returns some of the cash pile to shareholders.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">PRIMER · THREE MINUTES ON THE BUSINESS</div>
+  <h2>PDD sells attention to merchants, not goods to shoppers</h2>
+  <p>PDD runs a <span class="g">marketplace</span>: outside merchants list and sell the goods, and PDD charges the merchants. That is why its accounting customers are merchants, not shoppers, and why its revenue is a fraction of the merchandise value flowing through the apps. The money arrives through two lines: <b>online marketing services</b> (merchants pay for visibility, like search ads) and <b>transaction services</b> (per-order commissions and fulfillment-related fees).</p>
+  <div class="steps">
+    <div class="step"><div class="n">STEP 1</div><b>Shoppers come for price</b><p>Pinduoduo and Temu aggregate demand for inexpensive goods. Using the apps is free for consumers.</p></div>
+    <div class="step"><div class="n">STEP 2</div><b>Merchants compete</b><p>16.8 million active merchants (2025) fight for placement in front of those shoppers.</p></div>
+    <div class="step"><div class="n">STEP 3</div><b>PDD charges the merchants</b><p>Advertising for visibility, plus transaction and fulfillment fees on each order.</p></div>
+    <div class="step"><div class="n">STEP 4</div><b>Profit piles up as cash</b><p>PDD owns little inventory or infrastructure itself, so profit converts to cash instead of warehouses.</p></div>
+  </div>
+  <p>Two structural facts matter before any table. First, the <b>listing structure</b>: what you buy on Nasdaq is an <span class="g">ADS</span> — a receipt representing four Class A ordinary shares of a Cayman Islands parent, which controls the mainland-China operating companies through contracts (a <span class="g">VIE</span> structure) rather than direct ownership. Second, the <b>disclosure structure</b>: Pinduoduo and Temu are reported together as a single e-commerce <span class="g">segment</span>. The company discloses no split of revenue or profit between China and abroad, no <span class="g">GMV</span>, no user counts and no <span class="g">take rate</span>. Terms with a <span class="g">dotted underline</span> are defined in the glossary near the end.</p>
+  <p>Industry background: Chinese e-commerce growth has matured, and PDD's international arm Temu — which grew by shipping cheap parcels directly from China — now faces tariffs and platform regulation in its biggest Western markets. PDD's answer is "localization": building local merchant networks and warehouses abroad. That transition is the central bet of this report, and it is happening inside the one segment you cannot see.</p>
+</section>
+
 <section class="reveal on" id="financials" data-fullscan-role="basic-financials">
   <div class="slabel">FINANCIAL MAP</div>
   <h2>The engine stabilized; the income statement did not</h2>
-  <p>PDD Holdings operates Pinduoduo and Temu, but reports a single e-commerce-services segment. Merchants are the accounting customers. Online marketing and transaction services are revenue streams, not platform segments, and the filing supplies no Pinduoduo, Temu or geographic profit split. The Cayman parent trades on the Nasdaq Global Select Market; each ADS represents four Class A ordinary shares. The latest quarter is unaudited and prepared under U.S. GAAP.</p>
+  <p>PDD runs two platforms — Pinduoduo and Temu — but its accounts show only one segment. Its paying customers are merchants, not shoppers. "Online marketing" and "transaction services" are two revenue lines, not a platform split, and the filing gives no Pinduoduo/Temu or geographic profit breakdown. The Cayman parent trades on the Nasdaq Global Select Market; each ADS represents four Class A ordinary shares. The latest quarter is unaudited, under U.S. GAAP.</p>
 
   <div class="grid" data-financials="consolidated">
     <div class="cell"><div class="k">Q2 revenue</div><div class="v">112.358<span class="u">RMB bn</span></div><div class="d"><span class="up">+8.1% YoY</span></div></div>
@@ -273,7 +324,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   </div>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>Audited per-ADS inputs and analyst return measures · ROE in percent; EPS and BVPS in RMB per ADS</caption>
+      <caption>Audited per-ADS inputs and analyst return measures · ROE in percent (return on shareholders' equity); EPS (earnings per share) and BVPS (book value per share) in RMB per ADS</caption>
       <thead><tr><th>FY</th><th>ROE</th><th>Diluted EPS / ADS</th><th>BVPS / ADS</th></tr></thead>
       <tbody>
         <tr><td>2021</td><td>11.5%</td><td>5.44</td><td>59.4</td></tr>
@@ -289,7 +340,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <h3>Latest rolling diagnostics</h3>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>Last twelve months through June 2026 · RMB billions except ROE</caption>
+      <caption>Last twelve months (LTM) through June 2026 · RMB billions except ROE</caption>
       <thead><tr><th>Period</th><th>Revenue</th><th>Operating profit</th><th>Attributable NI</th><th>OCF</th><th>ROE</th></tr></thead>
       <tbody>
         <tr><td>LTM through Jun. 2026</td><td>450.776</td><td>98.553</td><td>92.076</td><td>111.895</td><td>22.7%</td></tr>
@@ -309,6 +360,12 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
+
+  <div class="plain">
+    <span class="pl">PLAIN ENGLISH</span>
+    <p>The five-year story: revenue multiplied nearly 4.6 times in four years — from RMB94bn to RMB432bn — and along the way PDD became the most profitable operator in its e-commerce peer group by operating margin, with returns on shareholders' equity above 40% at the 2024 peak. <b>2025 was the first down year</b>: operating profit fell about 14% in the year the company stepped up spending on its transitions — though the single-segment accounts make it impossible to see exactly where the money went.</p>
+    <p>This quarter continues the slower era: growth of 8.1% against a four-year average of 46% means <b>the hypergrowth phase is over</b>. Profitability is still excellent — roughly a quarter of every revenue yuan becomes operating profit — and cash keeps piling up. Two gaps to note: the release does not disclose capital spending, so free cash flow for the quarter cannot be computed; and every "gross profit", "ROE" and "BVPS" figure here is analyst-derived from the filings, not a number the company itself reports.</p>
+  </div>
   <p class="small">The displayed marketing CAGR is not a pure advertising measure. Its recast 2021 base includes RMB7.246 billion of direct merchandise sales, which fell to RMB0.209 billion in 2022 before becoming immaterial.</p>
   <p class="small">Gross profit is revenue less cost of revenue; each margin divides the named profit by revenue. Four-year CAGR uses (2025 value / 2021 value)<sup>1/4</sup> − 1 on unrounded inputs, and stream mix divides stream revenue by total revenue. Annual ROE divides attributable net income by average beginning-and-ending parent equity; LTM ROE uses June 2025 and June 2026 equity. BVPS per ADS equals period-end parent equity divided by ordinary shares, multiplied by four. Annual FCF proxy is operating cash flow less purchases of property, equipment, software and intangible assets; it is not a company KPI. LTM equals FY2025 plus H1 2026 less H1 2025. Exact June BVPS is unavailable because the interim release omits period-end shares. Cash-adjusted ROIC is not meaningful because the conventional invested-capital denominator is negative.</p>
 </section>
@@ -316,7 +373,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 <section class="reveal on">
   <div class="slabel">INVESTMENT LOGIC · MONETIZATION</div>
   <h2>Transaction services carry growth while marketing stalls</h2>
-  <p>Transaction services supplied <strong>76.9% of the quarterly revenue increase</strong>. By contrast, marketing growth remained low despite management's claim that merchant health is improving. The signal is not a Temu take rate: the accounts combine platforms, services, incentives and geographies, while consumer incentives can reduce revenue or enter marketing expense depending on their terms.</p>
+  <p>Transaction services supplied <strong>76.9% of the quarterly revenue increase</strong>; advertising barely grew, even though management says merchants are getting healthier. Be careful what you read into that shift: it is not a Temu take rate. The accounts blend both platforms, several service types, subsidies and geographies — and consumer subsidies can either reduce revenue or show up as marketing expense, depending on how each is structured.</p>
 
   <div class="stacks">
     <div class="stack">
@@ -343,17 +400,23 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     </table>
   </div>
   <h3>Domestic demand is slower than PDD, but market share is not observable</h3>
-  <p>China's official first-half online-goods retail sales increased 4.8%. PDD's consolidated first-half revenue rose 9.5%. The comparison supports relative growth, not a market-share claim: PDD includes cross-border activity, uses merchant-service revenue rather than merchandise value, and no longer discloses current users, GMV or platform-level engagement.</p>
+  <p>China's official online-goods retail sales grew 4.8% in the first half; PDD's revenue grew 9.5%. That says PDD grew faster than the market backdrop — it does not prove market-share gains, because PDD's number includes cross-border business, measures merchant fees rather than merchandise value, and the company no longer discloses users, GMV or engagement to check against.</p>
   <h3>Low statistical beta does not make the operating model defensive</h3>
-  <p><strong>Statistical beta.</strong> A two-year weekly regression against the Nasdaq Composite produces a beta of 0.58 and an R-squared of 6.1%. The low fit matters more than the point estimate: broad Nasdaq moves explain little of PDD's stock path. This is price beta, not operating defensiveness.</p>
-  <p><strong>Operating cyclicality.</strong> Fee revenue remains exposed to retail demand and merchant budgets. Localization adds fulfillment and regulatory costs, while the debt-free balance sheet limits financing cyclicality.</p>
-  <p><strong>Competitive excess return.</strong> Merchant breadth and transaction monetization remain positive evidence. Yet PDD withholds users, GMV, retention, take rate and stream margins, so competitive alpha is suggestive rather than proven.</p>
+  <p><strong>Statistical beta.</strong> Regressed weekly against the Nasdaq Composite over two years, PDD's beta is 0.58 with an R-squared of just 6.1%. The second number is the important one: the index explains almost none of PDD's price moves. PDD's price path is mostly unexplained by the index — and that is a statement about price behavior, not proof the business is defensive.</p>
+  <p><strong>Operating cyclicality.</strong> The business itself still moves with retail demand and merchant ad budgets. Localization adds fulfillment and compliance costs; the debt-free balance sheet at least limits how much financing amplifies the cycle.</p>
+  <p><strong>Competitive excess return.</strong> The breadth of the merchant base and the growth of transaction fees are genuine positives. But with users, GMV, retention, take rate and per-line margins all withheld, a durable competitive edge can be suggested — not proven.</p>
+
+  <div class="plain">
+    <span class="pl">PLAIN ENGLISH</span>
+    <p>PDD's two revenue lines are behaving very differently. <b>Advertising grew only 3.5%</b>, while per-order transaction services grew 13.3% and delivered 76.9% of the quarter's entire revenue increase. The growth is therefore coming from per-order fees rather than from merchants bidding more for ads — and what that shift means for profit cannot be checked from outside, because PDD does not disclose the profitability of either line.</p>
+    <p>And note how little you are allowed to see: merchant statistics are updated once a year, and there is no per-platform breakdown. The "beta" paragraph above says something simple — PDD's share price marches to its own drummer (policy headlines, disclosure events), not to the tech index — so index-level calm offers no shelter here.</p>
+  </div>
 </section>
 
 <section class="reveal on">
   <div class="slabel">NEW BUSINESS · BRAND</div>
   <h2>Temu localization increases control before it proves returns</h2>
-  <p>Management's ambition to “build another PDD” over three years is an umbrella aspiration, not a revenue or profit target. The <strong>RMB100 billion support program</strong> is a separate merchant-and-ecosystem initiative. First-party brands are one supply-chain execution arm, and their initial rollout has taken longer than management expected.</p>
+  <p>Management's ambition to “build another PDD” over three years is an aspiration, not a revenue or profit target. The <strong>RMB100 billion support program</strong> is a separate merchant-and-ecosystem initiative, not that ambition's budget. First-party brands are one execution arm of the supply-chain push — and their initial rollout has already taken longer than management expected.</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -369,14 +432,19 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   </div>
 
   <h3>The call supplied direction, not economics</h3>
-  <p>The earningscalls.dev transcript contains <strong>14 explicit or embedded analyst sub-questions</strong>. Only three received direct qualitative answers; six were partial and five were unanswered. Management did not quantify EU order exposure, first-party financial impact or pricing, warehouse ownership and return hurdles, merchant advertising willingness, or the full-year revenue outlook.</p>
+  <p>Score the earnings call like an exam. The transcript contains <strong>14 explicit or embedded analyst sub-questions</strong>: three got direct answers — qualitative only — six got partial answers, and five got none. And the topics management left unquantified are exactly what an investor most needs: EU order exposure, the financial impact and pricing of first-party brands, warehouse ownership and return hurdles, merchants' willingness to buy ads, and the full-year revenue outlook.</p>
   <div class="callout"><b>Transcript control:</b> the English interpretation is for reference and the original Chinese prevails. The transcript's “third-party brand” phrase conflicts with the official first-party initiative, and its RMB156.4 billion cash figure is wrong. Filing and release figures control.</div>
+
+  <div class="plain">
+    <span class="pl">PLAIN ENGLISH</span>
+    <p>Management is asking shareholders to fund three expensive transitions at once — localizing Temu abroad, launching its own product brands (<span class="g">first-party</span>, meaning PDD itself owns and sells the goods, a break from the pure marketplace model), and a RMB100bn merchant-support program. What is the expected return on any of them? <b>Nobody outside the company knows.</b> Analysts asked 14 questions on the call; only 3 got direct answers. You are being asked to trust, not to verify — that asymmetry is priced throughout this report.</p>
+  </div>
 </section>
 
 <section class="reveal on">
   <div class="slabel">EARNINGS QUALITY</div>
   <h2>Core operations improved; an unexplained loss broke the bridge</h2>
-  <p>Gross margin expanded 1.4 percentage points, but operating margin slipped 0.1 point. Gross-profit growth therefore absorbed a faster rise in operating expenses without producing operating leverage.</p>
+  <p>Gross margin improved 1.4 percentage points — yet operating margin slipped 0.1 point. Translation: the extra gross profit was entirely eaten by operating costs growing faster than revenue. Scale is not currently producing operating leverage.</p>
   <div class="tblscroll">
     <table class="tbl">
       <caption>Q2 operating-cost mechanics · year-on-year change</caption>
@@ -392,7 +460,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   </div>
 
   <h3>Below the operating line, one undisclosed item dominated</h3>
-  <p>The year-on-year profit bridge is exact at the release's RMB-million precision. Higher operating profit, interest and investment income, and a smaller foreign-exchange loss were more than offset by the swing in other income, a weaker equity-investee result and greater tax expense.</p>
+  <p>The bridge below reconciles exactly at the release's RMB-million precision. Three items pushed profit up — better operations, more investment income, a smaller currency loss. Three pulled it down harder: the swing in "other income", a weaker result from equity-method investees, and more tax.</p>
   <div class="tblscroll">
     <table class="tbl">
       <caption>Q2 2026 versus Q2 2025 contribution to net-income change · RMB billions</caption>
@@ -409,16 +477,22 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p>PDD did not disclose the composition of the <strong>RMB7.399 billion quarterly other loss</strong>, and the call did not discuss it. Attribution to the DSA decision, a domestic fine, subsidies, investments or litigation would be speculation. The tax-expense-to-pretax ratio also rose to 18.3% from 13.6%.</p>
+  <p>So what is the <strong>RMB7.399 billion quarterly "other loss"</strong>? PDD does not say, and the call did not discuss it. Guessing — the DSA decision, a domestic fine, subsidies, investments, litigation — would be speculation, so this report leaves it unattributed. Separately, tax took 18.3% of pretax income, up from 13.6%.</p>
 
   <h3>Portfolio income is too volatile to capitalize</h3>
-  <p>Interest and investment income moved from a RMB0.632 billion loss in Q1 to RMB13.505 billion income in Q2. The official non-GAAP definition removes share-based compensation only; it does not normalize this volatility or the unidentified loss. Reported and adjusted profit therefore answer different questions, and neither substitutes for a platform-level return bridge.</p>
+  <p>How volatile is the portfolio? Interest and investment income swung from a RMB0.632 billion loss in Q1 to RMB13.505 billion of income in Q2 — a fourteen-billion swing in one quarter. PDD's official adjusted ("non-GAAP") profit strips out stock compensation only; it does not smooth this volatility or explain the unidentified loss. So neither the reported nor the adjusted number tells you what the platforms durably earn.</p>
+
+  <div class="plain">
+    <span class="pl">PLAIN ENGLISH</span>
+    <p>Follow the bridge table like a bank statement. The core business earned RMB2.0bn <b>more</b> than a year ago, and the investment portfolio added RMB3.1bn more. So why did net income fall RMB3.6bn? Because a <b>RMB7.5bn negative swing labeled only "other income / loss"</b> — the company will not say what it is — plus RMB1.3bn of extra tax swallowed the gains.</p>
+    <p>Second caution: the RMB13.5bn of quarterly investment income is the cash pile earning returns, and it swung from a loss to a large gain within two quarters. Treat that line like lottery winnings, not salary — it tells you little about next quarter, which is why the valuation later prices the operating business and the cash pile separately.</p>
+  </div>
 </section>
 
 <section class="reveal on">
   <div class="slabel">CASH · BALANCE SHEET · RETURNS</div>
   <h2>Liquidity removes financing risk, not capital-allocation risk</h2>
-  <p>Cash and short-term investments reached <strong>RMB456.414 billion</strong>. After lease liabilities, a deliberately narrow net-cash proxy is RMB451.570 billion; it excludes restricted cash and the long-dated investment pool. The balance sheet carries no reported interest-bearing borrowings, so near-term solvency is not the issue. Fungibility and deployment are.</p>
+  <p>Cash and short-term investments reached <strong>RMB456.414 billion</strong>. Subtract lease liabilities and a deliberately narrow net-cash figure is RMB451.570 billion — a count that excludes restricted cash and the longer-dated investment pool. With no reported interest-bearing borrowings, the question is not whether PDD can pay its bills. The questions are whether the money can move — across borders, out of restricted accounts — and what it will be spent on.</p>
 
   <div class="grid">
     <div class="cell"><div class="k">Restricted cash</div><div class="v">77.274<span class="u">RMB bn</span></div><div class="d"><span>Not discretionary</span></div></div>
@@ -438,17 +512,23 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p>The interim release omits purchases of property and equipment, so current free cash flow is unavailable. The PP&amp;E jump is a monitoring signal, not a capex estimate and not proof that the new office, data centers or warehouses caused it.</p>
+  <p>The release omits capital-spending figures, so free cash flow cannot be computed this quarter. The +264% jump in property and equipment is worth watching — but by itself it is neither a capex estimate nor proof that the new office, data centers or warehouses caused it.</p>
 
   <h3>Retained cash has no contractual shareholder yield</h3>
-  <p>PDD has never paid a cash dividend and says it has no foreseeable plan to do so. The annual filing and current disclosures identify no equity-repurchase program. Equity offerings from 2018 through 2020 raised about US$8.6 billion net. Against zero dividends or disclosed buybacks, PDD remains a cumulative net recipient of shareholder equity capital on a cash-return basis. Separately, US$3.0 billion of convertible-note principal was debt funding and has matured; it is not included in the equity-capital comparison.</p>
-  <p>Period-end ordinary shares rose <strong>12.6% from 2021 through 2025</strong>, while first-half financing cash flow rounded to nil. A liquid balance sheet protects the strategy; it does not by itself compound value per ADS.</p>
+  <p>Has any of this cash ever reached shareholders? No. PDD has never paid a dividend and says it has no foreseeable plan to; no buyback program is disclosed. Meanwhile the 2018–2020 share offerings raised about US$8.6 billion net — so in pure cash terms, shareholders have put more equity money into PDD than they have ever taken out. (A separate US$3.0 billion of convertible-note principal was debt, now matured, and is kept out of this equity comparison.)</p>
+  <p>The share count also rose <strong>12.6% from 2021 through 2025</strong>, while this half's financing cash flow rounded to zero. The takeaway: a fortress balance sheet protects management's strategy — it does not, by itself, make each ADS worth more.</p>
+
+  <div class="plain">
+    <span class="pl">PLAIN ENGLISH</span>
+    <p>PDD sits on roughly <b>US$67bn of cash and short-term investments with no reported borrowings</b>. So why isn't the stock a simple bargain? Because shareholders have never received any of it: <b>no dividend ever, no buyback program</b>, while the share count has grown 12.6% since 2021. In cash terms, shareholders have historically put more equity money in than they have taken out.</p>
+    <p>There is also a geography problem: part of the pile sits in restricted accounts (RMB77bn) and inside mainland-China entities whose net assets (RMB126bn, in the governance section) cannot legally be handed straight to the offshore parent. That is why the valuation section refuses to count the pile at 100 cents on the dollar.</p>
+  </div>
 </section>
 
 <section class="reveal on">
   <div class="slabel">POLICY, LITIGATION &amp; RISK</div>
   <h2>The cross-border model now pays for access twice</h2>
-  <p>The EU's interim rule adds a <strong>€3 customs duty for each distinct tariff category</strong> in a direct-to-consumer parcel below €150, from July 2026 to July 2028. Separately, the European Commission fined Temu €200 million for an inadequate DSA systemic-risk assessment. The required remediation can affect assortment, merchant screening, conversion and compliance cost even when the cash fine is easily affordable.</p>
+  <p>Two European hits landed at once. First, from July 2026 to July 2028, every direct-to-consumer parcel under €150 pays a <strong>€3 customs duty for each distinct tariff category</strong> it contains. Second, the European Commission fined Temu €200 million for an inadequate systemic-risk assessment under the DSA. The cash fine is easily affordable; the remediation may be the real cost, because it can reach assortment, merchant screening, conversion and compliance spend.</p>
 
   <div class="flowbox">
     <svg viewBox="0 0 900 180" role="img" aria-label="Regulatory cost transmission from parcel duty and platform enforcement to PDD economics">
@@ -487,12 +567,17 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     </table>
   </div>
   <p class="small">The call did not discuss the DSA decision or the SAMR food-safety action. Their remediation costs and operating effects remain undisclosed.</p>
+
+  <div class="plain">
+    <span class="pl">PLAIN ENGLISH</span>
+    <p>Temu's original trick — shipping small parcels straight from Chinese factories to Western doorsteps, mostly duty-free — is being legislated away. The U.S. suspended the <span class="g">de minimis</span> duty-free exemption; the EU now charges €3 per tariff category on small parcels and fined Temu €200m under its platform-safety law (<span class="g">DSA</span>), with ongoing compliance obligations. <b>The model now pays twice</b>: duties on the old cross-border route, and heavy build-out costs for the new localized route. None of these costs is quantified anywhere in PDD's disclosure — they land somewhere inside the single segment.</p>
+  </div>
 </section>
 
 <section class="reveal on">
   <div class="slabel">GOVERNANCE · EQUITY INCENTIVES</div>
   <h2>No live super-vote, yet cash access and incentives remain contractual</h2>
-  <p>All outstanding shares were Class A at the latest ownership date; the authorized Class B mechanism is dormant rather than abolished. ADS holders own the Cayman parent, while the mainland VIE is controlled through contracts. Restricted net assets and cross-border controls limit how confidently consolidated liquidity can be treated as offshore shareholder cash.</p>
+  <p>On paper the voting structure is clean: every outstanding share was Class A at the latest ownership date — though the authorized super-voting Class B mechanism is dormant, not abolished. What an ADS holder owns is the Cayman parent; the mainland business is tied to it by VIE contracts. Between restricted net assets and cross-border capital controls, the consolidated cash pile cannot be confidently treated as offshore shareholder money.</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -538,16 +623,23 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p>Options generally vest one quarter per year over four years. Shares acquired through vested options cannot be transferred without consent during the first three years after vesting; the company treats that restriction as an additional service period. RSUs use four-year service schedules. The weighted option exercise price was nominal at US$0.0065 per ordinary share, while 2025 RSU grants had a US$29.9743 weighted grant-date fair value.</p>
-  <p>Directors and executive officers held roughly one-fifth of gross outstanding awards, with co-CEO Lei Chen holding most of that block. The filings disclose service vesting but no ROIC, per-ADS-value or other quantified performance hurdle. Year-end shares increased 2.2% in 2025 and no buyback offset was disclosed, so lower expense does not establish lower annual dilution.</p>
+  <p>The mechanics of the stock pay: options vest one quarter per year over four years, and even vested shares cannot be transferred without consent for three more years — the company counts that lock-up as extra service time. RSUs vest over four-year schedules. Note the exercise price on options: a nominal US$0.0065 per ordinary share, while 2025 RSU grants carried a US$29.9743 weighted fair value at grant.</p>
+  <p>Who gets it: directors and executive officers hold roughly one-fifth of outstanding awards, most of that with co-CEO Lei Chen. What must they achieve to earn it? Only continued service — the filings disclose no ROIC, per-ADS-value or other quantified performance hurdle. With year-end shares up 2.2% in 2025 and no buyback offset disclosed, a lower SBC expense does not establish lower annual dilution.</p>
   <p>Board continuity is another near-term test: independent director Ivonne Rietjens died in August, and the board said it would review committee composition. The filing reported effective internal controls and an unqualified audit opinion; the auditor change in 2025 did not include a reported disagreement.</p>
+
+  <div class="plain">
+    <span class="pl">PLAIN ENGLISH</span>
+    <p>Three things a first-time reader should absorb here. First, <b>what you legally own</b>: an ADS is a claim on a Cayman holding company; the China business is tied to it by contracts (the VIE), and RMB126bn of mainland net assets are legally restricted from simply flowing offshore. Second, <b>who is in charge</b>: founder Zheng Huang's entities hold the largest block (24.8%) and Tencent 13.8%; all shares currently carry one vote each, though a dormant super-voting class could be revived. Third, <b>pay</b>: stock compensation expense fell 33%, but outstanding awards equal 7.2% of the share count, options are granted at a token US$0.0065 exercise price — essentially free stock for insiders — and none of it is tied to performance targets.</p>
+  </div>
 </section>
 
-<section class="reveal on">
-  <div class="slabel">PEERS · PRICING · FORECAST</div>
+<section class="reveal on" id="valuation">
+  <div class="slabel">PEERS · PRICING · VALUATION</div>
   <h2>The market prices decay before the filing proves it</h2>
-  <p>PDD closed the completed release-day session at <strong>US$87.07</strong>, down 1.48%, after opening above the prior close and reversing. Turnover was US$1.204 billion on 13.63 million ADS. The response confirms debate rather than capitulation: the price remains above its medium-term support average but below most longer moving averages.</p>
+  <p>Valuing PDD means answering two separate questions: what is the <b>operating business</b> worth, and how much of the <b>financial-asset pool (RMB548bn, about US$81bn)</b> should shareholders actually be credited with? This section walks through both in four steps: where the price stands, how it compares with peers, what the models say, and what the current price implicitly assumes.</p>
 
+  <h3>Step 1 · What the market pays now</h3>
+  <p>On results day PDD opened higher, reversed, and closed at <strong>US$87.07</strong>, down 1.48%, with US$1.204 billion traded across 13.63 million ADS. Read the reversal as a live argument, not a verdict: the price still sits above its medium-term support average but below most longer moving averages.</p>
   <div class="tblscroll">
     <table class="tbl">
       <caption>Price context through 24 August 2026 completed session</caption>
@@ -562,7 +654,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     </table>
   </div>
 
-  <h3>Calendar-year trajectories show different investment cycles</h3>
+  <h3>Step 2 · Against peers: highest margin, lowest multiple, least transparency</h3>
   <div class="tblscroll">
     <table class="tbl">
       <caption>Consolidated GAAP revenue growth / operating margin; Wind forward P/E at 24 August close</caption>
@@ -575,8 +667,6 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     </table>
   </div>
   <p class="small">The periods are calendar-consistent, but the economics are not. PDD reports net merchant-service revenue in one segment; JD recognizes first-party retail gross and owns logistics; Amazon includes AWS. Controls: <a href="https://ir.jd.com/static-files/49187ae4-e146-4887-81d8-51561e1ae37a">JD FY2024</a>, <a href="https://ir.jd.com/news-releases/news-release-details/jdcom-announces-second-quarter-and-interim-2026-results">JD Q2 2026</a> and <a href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx">Amazon Q2 2026</a>.</p>
-
-  <h3>Additional legal peers widen the current valuation context</h3>
   <div class="tblscroll">
     <table class="tbl">
       <caption>Calendar Q2 2026 operating data; Wind valuation snapshot at 24 August close</caption>
@@ -590,10 +680,19 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     </table>
   </div>
   <p>PDD trades at a <strong>66% discount to the profitable-peer median forward P/E</strong>. The discount is directionally meaningful, but importing the median would also import AWS, fintech and Latin American growth. PDD's unusual combination is the highest group operating margin, the lowest multiple and the least segment transparency.</p>
+  <div class="plain">
+    <span class="pl">PLAIN ENGLISH</span>
+    <p><span class="g">Forward P/E</span> is the price divided by next year's expected earnings — the lower it is, the less you pay per dollar of expected profit. PDD costs <b>7.8× expected earnings while every profitable peer costs 11× to 49×</b>, even though PDD has the best operating margin in the group. Markets rarely leave that gap open by accident: the low multiple is the price of the missing disclosure, the regulatory attack on Temu, and a cash pile shareholders may never touch. The steps below try to turn that intuition into numbers.</p>
+  </div>
 
-  <h3>Two valuation methods converge only after a cash-access haircut</h3>
-  <p>The broad net financial assets (NFA) proxy is <strong>RMB547.953 billion</strong>: cash, short-term investments and the other non-current asset pool, less leases, with restricted cash excluded. It is not excess cash. The model recognizes only a scenario-dependent share to reflect unidentified assets, operating reserves and cross-border access. GAAP EBIT already includes SBC. Each value uses Q2's 1.4735 billion diluted weighted-average ADS as a valuation proxy because a June period-end fully diluted count is unavailable.</p>
-  <p>The operating cases begin with the first-half demand bridge: consolidated growth exceeded China's online-goods baseline, but marketing slowed and current market share is unknown. The bear case assumes policy costs overwhelm localization benefits. The base case extends high-single-digit growth as transaction services offset marketing. The bull case requires localization, first-party execution and monetization to reaccelerate together.</p>
+  <h3>Step 3 · The model: value the business, then add a haircut cash pile</h3>
+  <p class="small">Vocabulary for the tables: <b>EBIT</b> is operating profit. <b>NOPAT</b> is EBIT after tax, and <b>FCFF</b> (free cash flow to the firm) is the cash the business generates after tax and reinvestment. A <b>DCF</b> (discounted cash flow) totals those future cash flows in today's money; the <b>required return</b> is the annual return an investor demands for the risk (higher risk → higher rate → lower value), and the <b>terminal value</b> captures everything beyond the forecast years at a modest permanent growth rate. <b>EV</b> (enterprise value) is the market's price for the operating business after separating out net financial assets. <b>NFA credit</b> is the fraction of the financial-asset pool the scenario treats as truly belonging to shareholders.</p>
+  <div class="steps">
+    <div class="step"><div class="n">STEP 3A</div><b>Value the operating business</b><p>Project three years of revenue growth and EBIT margin per scenario, convert to free cash flow, fade toward a terminal state, and discount everything back at the required return (a DCF).</p></div>
+    <div class="step"><div class="n">STEP 3B</div><b>Add the cash pile — with a haircut</b><p>The net financial assets proxy is RMB547.953bn, but only 55–85% is credited by scenario, reflecting unidentified assets, operating reserves and uncertain cross-border access.</p></div>
+    <div class="step"><div class="n">STEP 3C</div><b>Cross-check with a multiple</b><p>Apply a 5–10× EV/EBIT multiple to forecast 2027 operating profit, add the same cash credit, and confirm both methods roughly agree.</p></div>
+  </div>
+  <p>The three scenarios start from what the first half actually showed: growth above China's online-goods baseline, a slowing ad line, and unknowable market share. Bear assumes policy costs overwhelm what localization saves. Base simply extends high-single-digit growth, with transaction services continuing to offset weak marketing. Bull needs three things to fire together: localization, first-party execution and a monetization pickup.</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -639,13 +738,28 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p class="small">FCFF equals EBIT multiplied by one minus the tax ratio and by the NOPAT-to-FCFF conversion. For 2029 and 2030, revenue growth and EBIT margin move one-third and two-thirds from 2028 toward terminal growth and terminal margin. Terminal 2031 FCFF equals 2030 revenue multiplied by one plus terminal growth, terminal EBIT margin, one minus tax and the cash-conversion ratio; terminal value divides that cash flow by required return less terminal growth. The DCF is anchored to 30 June: FY2026 FCFF less an H1 proxy based on reported H1 operating profit of RMB47.330 billion forms the displayed H2 stub, discounted at half a year; full 2027–30 flows use 1.5-to-4.5-year timing. The 2027 cross-check applies the displayed EV/EBIT multiple and then adds the same recognized NFA. Both methods use RMB6.7851 per US$1 and are reconciled, not averaged.</p>
+  <p class="small">FCFF equals EBIT multiplied by one minus the tax ratio and by the NOPAT-to-FCFF conversion. For 2029 and 2030, revenue growth and EBIT margin move one-third and two-thirds from 2028 toward terminal growth and terminal margin. Terminal 2031 FCFF equals 2030 revenue multiplied by one plus terminal growth, terminal EBIT margin, one minus tax and the cash-conversion ratio; terminal value divides that cash flow by required return less terminal growth. The DCF is anchored to 30 June: FY2026 FCFF less an H1 proxy based on reported H1 operating profit of RMB47.330 billion forms the displayed H2 stub, discounted at half a year; full 2027–30 flows use 1.5-to-4.5-year timing. The 2027 cross-check applies the displayed EV/EBIT multiple and then adds the same recognized NFA. Both methods use RMB6.7851 per US$1 and are reconciled, not averaged. The broad net financial assets (NFA) proxy is RMB547.953 billion: cash, short-term investments and the other non-current asset pool, less leases, with restricted cash excluded; it is not excess cash, and GAAP EBIT already includes SBC. Each value uses Q2's 1.4735 billion diluted weighted-average ADS as a valuation proxy because a June period-end fully diluted count is unavailable.</p>
 
+  <h3>The three DCF values on one ruler</h3>
+  <div class="rows" aria-label="Scenario values versus the market price">
+    <div class="row"><div class="nm">Bear<span>Policy costs overwhelm localization</span></div><div class="track"><div class="fill alt" style="width:30.5%"></div></div><div class="fig">$59.1<span class="down">−32% vs price</span></div></div>
+    <div class="row"><div class="nm">Market price<span>24 Aug 2026 close</span></div><div class="track"><div class="fill soft" style="width:44.9%"></div></div><div class="fig">$87.07<span>quote</span></div></div>
+    <div class="row"><div class="nm">Base<span>High-single-digit growth holds</span></div><div class="track"><div class="fill" style="width:58.0%"></div></div><div class="fig">$112.4<span class="up">+29% vs price</span></div></div>
+    <div class="row"><div class="nm">Bull<span>Localization and monetization reaccelerate</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">$193.9<span class="up">+123% vs price</span></div></div>
+  </div>
+  <p class="small">Bars are drawn proportionally to the bull DCF value of $193.9; percentage gaps use the $87.07 close. The EV/EBIT cross-check brackets the same story: $69.9 / $113.1 / $178.9.</p>
+
+  <h3>Step 4 · What the current price implicitly assumes</h3>
   <div class="finds">
     <div class="find good"><div class="t">What the price embeds</div><p>With the base margin and asset-credit assumptions, the reverse DCF requires revenue to contract 2.72% annually through 2030. Under the bear asset credit, required growth is only 0.86%.</p></div>
     <div class="find warn"><div class="t">Alternative explanation</div><p>At mid-single-digit growth and the base asset credit, the current price implies a 15.69% EBIT margin. The discount can express structural cost, inaccessible cash, or both.</p></div>
   </div>
-  <p>After the asset haircut, current enterprise value is 4.94× LTM operating profit. If the operating business deserves the base-case multiple shown above, the market recognizes only 33% of the broad financial-asset proxy. That is why the “cheap cash pile” and “cheap franchise” arguments cannot both be granted in full.</p>
+  <p>One more way to see the same tension: after the asset haircut, today's enterprise value equals just 4.94× the last twelve months' operating profit. Grant the business the base-case multiple instead, and the arithmetic forces the other side down — the market would then be crediting only 33% of the broad financial-asset proxy. Cheap business or cheap cash pile: the current price lets you claim one, not both in full.</p>
+
+  <div class="plain">
+    <span class="pl">THE BOTTOM LINE</span>
+    <p>A "reverse DCF" runs the machine backwards: instead of asking what PDD is worth, it asks <b>what the US$87.07 price already assumes</b>. The answer: if you trust the base-case margins and cash credit, today's price assumes revenue <b>shrinks</b> about 2.7% a year through 2030 — for a company still growing 8%. That is genuine pessimism embedded in the price. But the price is also a package deal: it grants the business only ~5× operating profit <b>or</b> it grants only a third of the cash pile — you cannot claim the stock is cheap on both counts at once. Against the bear value of $59–70, the risk-reward is positive but not lopsided, which is why the verdict is a watchlist, not a buy.</p>
+  </div>
 </section>
 
 <section class="reveal on">
@@ -669,15 +783,50 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p>The central asymmetry is evidentiary. One-segment reporting may conceal Temu profit as easily as loss, but neither outcome is verifiable. Until management connects reinvestment to per-ADS returns, shareholders must demand a discount for the missing bridge.</p>
+  <p>Note the peculiar shape of this risk: it is about evidence, not direction. The single segment could be hiding a profitable Temu just as easily as a loss-making one — neither can be verified from outside. Until management connects its reinvestment to per-ADS returns, shareholders must demand a discount for the missing bridge.</p>
 </section>
 
 <section class="reveal on">
   <div class="slabel">FINAL JUDGMENT</div>
   <h2>Watchlist, not a clean value call</h2>
-  <p>PDD offers real balance-sheet protection, but the investment case asks shareholders to underwrite several capital-intensive transitions without platform economics or a capital-return mechanism. The bear range is US$59–70 per ADS and the base range is US$112–113. The market quote lies between them; the spread is driven mainly by the NFA credit and EBIT durability. The valuation is attractive enough to monitor, not transparent enough to treat as a high-conviction compounder.</p>
+  <p>The balance sheet offers real protection. But the investment case asks shareholders to fund several capital-intensive transitions at once — with no platform-level economics disclosed and no mechanism for cash to come back. The models say US$59–70 per ADS in the bear case and US$112–113 in the base case; the market quote sits between them, and where it lands mostly depends on how much of the asset pool is credited and how durable the operating margin proves. Attractive enough to watch closely; not transparent enough to hold as a high-conviction compounder.</p>
   <div class="callout"><b>Stance:</b> wait for operating proof. A stronger entry requires either disclosure that localized Temu and first-party initiatives earn positive contribution returns, or a durable mechanism that converts retained financial assets into per-ADS value.</div>
-  <p><strong>Strongest counterargument:</strong> the single-segment accounts may be hiding a profitable global engine, and abundant liquidity lets management adapt without external financing. <strong>Failure boundary:</strong> repeated sub-base growth and margin together with continued silence on cash deployment would invalidate the recovery case. Confidence is medium-low because the relevant platform economics and original-language call record are unavailable.</p>
+  <p><strong>Strongest counterargument:</strong> the opaque accounts may be concealing a profitable global engine, and the cash pile lets management adapt without ever asking markets for money. <strong>Failure boundary:</strong> growth and margins repeatedly below the base case, together with continued silence on what the cash is for, would break the recovery case. Confidence is medium-low — the platform economics and the original-language call record simply are not available.</p>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">GLOSSARY · IN ORDER OF APPEARANCE</div>
+  <h2>The terms you need for a platform company</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>Term</th><th>Plain-English meaning</th></tr></thead>
+      <tbody>
+        <tr><td>ADS</td><td>American Depositary Share — the Nasdaq-traded receipt for foreign shares. One PDD ADS represents four Class A ordinary shares of the Cayman parent.</td></tr>
+        <tr><td>Marketplace</td><td>A platform where outside merchants sell the goods. The platform earns fees, not the retail price — so its revenue is far smaller than the goods flowing through it.</td></tr>
+        <tr><td>First-party (1P)</td><td>The opposite model: the platform itself owns and sells the inventory. PDD's new "first-party brands" push is a step in this direction.</td></tr>
+        <tr><td>Online marketing services</td><td>PDD's advertising line: merchants pay for visibility and traffic.</td></tr>
+        <tr><td>Transaction services</td><td>PDD's per-order line: commissions and fulfillment-related fees charged on each sale.</td></tr>
+        <tr><td>Segment</td><td>A business unit a company reports separately. PDD reports only ONE segment, so Pinduoduo and Temu economics cannot be separated by outsiders.</td></tr>
+        <tr><td>GMV</td><td>Gross merchandise value — total value of goods sold through a platform. PDD no longer discloses it.</td></tr>
+        <tr><td>Take rate</td><td>Platform revenue divided by GMV — the platform's cut of each transaction. Not computable for PDD without GMV.</td></tr>
+        <tr><td>VIE</td><td>Variable interest entity — the contractual structure that lets an offshore listed parent consolidate a mainland-China business it cannot directly own.</td></tr>
+        <tr><td>OCF</td><td>Operating cash flow — cash actually generated by running the business, before investment spending.</td></tr>
+        <tr><td>LTM</td><td>Last twelve months — a rolling one-year total that smooths out seasonality.</td></tr>
+        <tr><td>ROE</td><td>Return on equity — net income divided by shareholders' equity; the yearly return earned on shareholders' capital.</td></tr>
+        <tr><td>BVPS</td><td>Book value per share — net assets divided by the share count.</td></tr>
+        <tr><td>SBC</td><td>Share-based compensation — paying employees in stock or options. An expense to shareholders through dilution even when no cash leaves.</td></tr>
+        <tr><td>EBIT</td><td>Earnings before interest and tax — operating profit; the profit of the business itself, ignoring the investment portfolio.</td></tr>
+        <tr><td>FCFF</td><td>Free cash flow to the firm — cash the operating business produces after tax and reinvestment; the raw material of a DCF.</td></tr>
+        <tr><td>DCF</td><td>Discounted cash flow — a valuation that adds up forecast future cash flows in today's money, using a required return as the exchange rate between future and present.</td></tr>
+        <tr><td>Terminal value</td><td>The DCF's estimate of all value beyond the explicit forecast years, assuming a modest permanent growth rate.</td></tr>
+        <tr><td>EV / EV-EBIT</td><td>Enterprise value — the price of the operating business after separating net financial assets. EV/EBIT says how many years of operating profit the market pays for it.</td></tr>
+        <tr><td>NFA</td><td>Net financial assets — the broad financial-asset pool (RMB547.953bn proxy here) valued separately from the operating business.</td></tr>
+        <tr><td>Forward P/E</td><td>Price divided by next year's expected earnings — how many dollars you pay per dollar of expected profit.</td></tr>
+        <tr><td>De minimis</td><td>The small-parcel duty-free customs exemption Temu's cross-border model relied on; now suspended in the U.S.</td></tr>
+        <tr><td>DSA</td><td>The EU's Digital Services Act — the platform-safety law under which Temu was fined €200m.</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <section class="reveal on">

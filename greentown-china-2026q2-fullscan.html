@@ -202,6 +202,29 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   .reveal{opacity:1;transform:none;transition:none}
 }
 :focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
 </style>
 </head>
 <body>
@@ -216,12 +239,12 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       <div>
         <div class="tag">自投项目回款率 · 公司口径</div>
         <div class="big a">101%</div>
-        <div class="cap">上半年回款超过同期签约额，显示销售现金秩序仍在。</div>
+        <div class="cap">上半年实际收回的售房款超过同期签约额——卖出去的房子，钱收得回来。</div>
       </div>
       <div>
         <div class="tag">物业销售毛利率 · 公司口径</div>
         <div class="big b">9.7%</div>
-        <div class="cap">回款有序并未阻止旧项目把结转盈利压至个位数。</div>
+        <div class="cap">但每100元售房收入，扣掉地价和建安成本后只剩9.7元——旧项目把利润压到了个位数。</div>
       </div>
     </div>
   </div>
@@ -229,10 +252,39 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
 <main class="wrap">
 
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，读这里</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>绿城是谁：</b>杭州起家的全国性住宅开发商，以产品品质著称；央企中交集团是第一大股东（持股28.881%），这层背景让它借钱便宜、被市场视为"不会倒"的一类房企。</li>
+      <li><b>现状一句话：</b>房子卖得动、钱收得回（上半年回款率101%），短期不缺现金；但赚钱能力大幅恶化——上半年归属上市公司股东的净利润只有<span class="num">0.82</span>亿元，2025年全年也只有<span class="num">0.71</span>亿元，几乎贴地。</li>
+      <li><b>为什么不赚钱：</b>现在交付结算的，主要是前几年高价拿地的旧项目；房价下行后毛利被压到个位数，还要持续计提减值（提前确认"卖不回本"的损失）。</li>
+      <li><b>两个容易踩的坑：</b>新闻里的"销售额"是签约金额，不是财报收入；集团利润也不全归上市公司股东——合并报表总权益中约三分之二属于合作方（非控股权益）。看绿城，永远要看"归母"那一行。</li>
+      <li><b>估值结论：</b>股价HK$8.03只有每股净资产的一半（0.5倍市净率），看似便宜；但倒推可知市场已经假设利润会修复到2025年的三十多倍。基准情景目标HK$9.60、悲观HK$2.67、乐观HK$13.31——输赢大致对称，判断为<b>中性</b>。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>房企的钱，是"先收后赚"的</h2>
+  <p>绿城的主业有两块。<b>自投开发</b>：自己出钱拿地、盖房、卖房，赚售价与成本的差价，是收入和风险的大头。<b>代建</b>：替政府或其他业主管理开发项目，只收服务费、基本不占用自有资金，由已单独上市的子公司绿城管理（09979.HK）经营。此外还有少量酒店和收租物业。</p>
+  <p>理解房企财报，最重要的是下面这条时间线——钱和利润不是同时发生的：</p>
+  <div class="steps">
+    <div class="step"><div class="n">STEP 1</div><b>拿地</b><p>成本在这一刻基本锁定。今天的利润，取决于两三年前拿地贵不贵。</p></div>
+    <div class="step"><div class="n">STEP 2</div><b>盖房 · 预售签约</b><p>客户买期房、签合同付款，形成「合同销售」。预售款的相当部分进入银行监管账户，专款保交楼。</p></div>
+    <div class="step"><div class="n">STEP 3</div><b>交付「结转」</b><p>之后房子建成交付，签约款才正式计入利润表收入。这一步叫结转。</p></div>
+    <div class="step"><div class="n">STEP 4</div><b>结算利润 · 分给股东</b><p>扣成本、减值和税后，再按项目股权比例分掉合作方的份额，剩下才是「归母利润」。</p></div>
+  </div>
+  <p class="small">由此产生本报告反复出现的两组区分：①「合同销售」是经营指标、「收入」是财报科目，两者相隔较长时间（常以年计）；②「期内利润」是合并报表总数、「归母净利润」才是上市公司股东真正分到的部分。文中带<span class="g">虚线下划线</span>的术语，可在文末「名词速查」统一查阅。</p>
+  <p>行业背景：2021年以来中国房地产进入深度调整，多家民营房企债务违约、行业销售大幅萎缩；活下来的主要是央国企背景与少数稳健民企。绿城属于"信用好、卖得动，但利润被上一轮高价土地严重侵蚀"的类型——这也是全篇报告的主线矛盾：<b>现金流的安全，先于利润的修复到来。</b></p>
+</section>
+
 <section class="reveal on" id="financials" data-fullscan-role="basic-financials">
   <div class="slabel">基础财务 · 合并与分部地图</div>
   <h2>规模扩张了四年，普通股东盈利几乎回到原点</h2>
-  <p>绿城中国是以住宅开发为主、兼营代建、酒店和投资物业的香港上市控股公司；中交集团为第一大股东。开发业务按交付结转收入，代建主要赚取服务费，因此合同销售、合并收入与归母利润并非同一口径。最新中期财务按国际财务报告准则编制，未经审核，但已由毕马威独立审阅。</p>
+  <p>绿城中国是一家香港上市的控股公司：主业是自己投资盖房卖房，另外做代建、酒店和收租物业；第一大股东是央企中交集团。读它的报表先记住一件事：开发业务要等房子交付时才把签约款<span class="g">结转</span>成收入，代建则主要赚服务费——所以"合同销售""合并收入"和<span class="g">归母利润</span>是三个不同的口径，不能互相代替。最新中期财务按国际财务报告准则编制，未经审核，但已由毕马威独立审阅。</p>
 
   <div class="grid" data-financials="consolidated">
     <div class="cell"><div class="k">2026H1 收入</div><div class="v">394.81<span class="u">亿元</span></div><div class="d"><span class="down">同比 −26.02%</span></div></div>
@@ -245,9 +297,9 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
   <div class="tblscroll">
     <table class="tbl">
-      <caption>2026H1普通股每股与回报指标</caption>
+      <caption>2026H1普通股每股与回报指标 · EPS＝每股盈利；ROE＝净资产收益率（股东资金的年回报率）；BVPS＝每股净资产</caption>
       <thead><tr><th>基本EPS</th><th>年化普通股ROE代理</th><th>期末BVPS</th><th>口径</th></tr></thead>
-      <tbody><tr><td>人民币三分</td><td>0.47%</td><td>人民币13.82元</td><td>ROE按期初期末普通股权益均值计算</td></tr></tbody>
+      <tbody><tr><td>人民币0.03元</td><td>0.47%</td><td>人民币13.82元</td><td>ROE按期初期末普通股权益均值计算</td></tr></tbody>
     </table>
   </div>
 
@@ -296,7 +348,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <h3>最新滚动口径</h3>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>截至2026年6月的最近十二个月 · 人民币亿元；EPS为人民币元</caption>
+      <caption>截至2026年6月的最近十二个月（LTM）· 人民币亿元；EPS为人民币元</caption>
       <thead><tr><th>期间</th><th>收入</th><th>毛利</th><th>经营利润代理</th><th>税前利润</th><th>归母利润</th><th>EPS</th></tr></thead>
       <tbody><tr><td>LTM</td><td>1,410.79</td><td>157.00</td><td>58.73</td><td>29.38</td><td>−0.57</td><td>−0.023</td></tr></tbody>
     </table>
@@ -316,13 +368,20 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>五年看下来：收入从1,002亿涨到1,550亿，规模扩张了一半；但归母净利润从44.69亿一路跌到0.71亿——<b>增收不增利，而且利润几乎归零</b>。原因主要是毛利率：集团整体毛利率从18.1%被压到11.9%，今年上半年只有11.1%（其中卖房业务本身仅9.7%），扣掉费用、减值和合作方分成后所剩无几。</p>
+    <p>最近十二个月合计（LTM那行）归母利润是<b>负0.57亿元</b>——也就是说，按滚动一年看，公司此刻处于微亏状态。分部表则显示：占收入九成的开发主业上半年分部业绩是负数，真正稳定赚钱的反而是只占收入3.6%的代建（项目管理）。</p>
+    <p>还有一个信息缺口值得知道：中期公告没有披露现金流量表，所以上半年"真实的现金进出"外界无法核验，表格里相应位置标注为未披露。</p>
+  </div>
   <p class="small">经营利润代理为税前利润加财务费用、再减合营及联营公司业绩，不是公司KPI。ROE按普通股口径盈利除以平均普通股权益；早期永久证券造成口径断点。资本开支代理包括物业、设备、无形资产和投资物业购置，自由现金流代理再扣该金额。CAGR按首尾年度的四次方根计算。分部业绩是管理层采用的税后口径，不等于经营利润。</p>
 </section>
 
 <section class="reveal on" id="profit">
   <div class="slabel">盈利能力 · 结转与归属</div>
   <h2>量价同时下滑，归属结构放大了利润错觉</h2>
-  <p>物业发展贡献了集团收入减少额的绝大部分。结转面积下滑只是第一层，均价与项目组合造成的拖累更大；费用压降和合联营收益改善都不足以抵消。更关键的是，合并利润并不天然归属于上市公司普通股东，非控股权益和项目层权益结构必须单独检验。</p>
+  <p>收入为什么下滑？几乎全部出在卖房主业上。第一层原因是交付的房子变少了；更大的拖累来自均价和项目组合——交付的房子也更便宜了。省费用和合作项目的改善都补不回这个缺口。还有一层更关键：合并报表的利润并不天然属于上市公司股东，<span class="g">非控股权益</span>（合作方在项目公司中的股权）分走多少，必须单独检验。</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -357,13 +416,19 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     <div class="cell"><div class="k">非控股股东应占利润</div><div class="v">0.07<span class="u">亿元</span></div><div class="d"><span>比较期为 10.02 亿元</span></div></div>
     <div class="cell"><div class="k">非控股权益 / 总权益</div><div class="v">67.5%</div><div class="d"><span>项目层资本占大头</span></div></div>
   </div>
-  <p>旧库存去化金额本身可以观察，但公司没有公开相应目标的分母，不能独立核验“超额完成”。因此，库存销量并非盈利见底证据；只有新结转项目的毛利、减值和归母权益比例同步改善，才构成反转。</p>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>收入为什么少了135亿？拆开看：交付的房子少了12.4%，交付房子的均价又低了16.9%——<b>量价齐跌，价格的拖累更大</b>。减值方面，今年计提的总量与去年相近（约19亿），但结构变了：对合作项目应收款的信用损失在增加，说明风险正从"自己的存货"转向"合作方还不还得上钱"。</p>
+    <p>归属结构是本节最重要的一课：集团上半年总利润0.89亿元里，归上市公司股东0.82亿、合作方只分到0.07亿；而去年同期合作方分走了10.02亿元、股东只留约2.1亿（按披露的降幅推算）。绿城大量项目是合作开发，<b>利润先按项目股权分给合作方，剩下的才轮到上市公司股东</b>——合并报表的利润规模因此常常"看上去比实际归你的多"。</p>
+  </div>
+  <p>公司说旧库存"超额完成"去化——卖掉的金额看得到，但目标本身没公布，外界无法核验"超额"二字。所以别把"库存卖得动"当成盈利见底的证据；真正的反转信号是三件事同时改善：新结转项目的毛利、减值和归母权益比例。</p>
 </section>
 
 <section class="reveal on" id="projects">
   <div class="slabel">房地产专项 · 销售、土地与交付</div>
   <h2>单二季度销售仍在收缩，新地块把希望推向未来</h2>
-  <p>港交所没有第一季度财务报表，所以无法推算单二季度收入或利润。下表只把公司披露的上半年累计运营数减去一季度累计运营数；两端都是约数，结果只能用于判断销售方向。签约运营口径还包括合营、联营及代建项目，不能替代合并收入。</p>
+  <p>先说清一个数据限制：港交所披露里没有它的一季度财务报表，二季度的收入和利润算不出来。下表用"上半年累计减一季度累计"粗略推出二季度的销售——两头都是约数，只能看方向，不能当精确值。另外，销售数据的口径包括合营、联营和<span class="g">代建</span>项目，和财报收入不是一回事。</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -404,7 +469,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p>新增土地成本约占管理层估计货值的四成，这是前置压力测试，不是项目毛利率。公司还有较大的已售未结转资源与合同负债，可为后续交付提供可见度；但项目毛利、权益比例和减值决定最终能有多少进入归母利润。</p>
+  <p>新拿的地，成本大约是管理层估计货值的四成——这只是一个前置的压力参考，不等于项目将来的毛利率。公司手里还有不小的<span class="g">已售未结转</span>资源和<span class="g">合同负债</span>，未来的收入看得见；但最终有多少能落进归母利润，取决于项目毛利、权益比例和减值这三个变量。</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -420,6 +485,12 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     </table>
   </div>
 
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>这一节看的是"未来的收入"。方向上，今年二季度签约仍在收缩（自投销售额约−21%）；但公司手里攒着<b>1,669亿元"已售未结转"</b>——已经卖掉、还没交付的房子，未来会随交付陆续转成财报收入，收入端有底。</p>
+    <p>真正的问题不是"有没有收入"，而是"<b>这些收入能剩下多少利润</b>"——这取决于当年拿地的成本与交付时的房价之差。好消息是上半年新拿的22块地94%位于一二线城市（公司披露口径）、平均权益比例提高到81%（意味着未来利润更多归上市公司股东）；坏消息是公司没有披露这些新项目的预期毛利，一切要等开盘和交付验证。</p>
+  </div>
+
   <div class="finds">
     <div class="find good"><div class="t">交付缓冲</div><p>全年计划竣工面积与已售未结转资源为后续收入提供项目基础，合同负债也继续增加。</p></div>
     <div class="find warn"><div class="t">经济性缺口</div><p>下半年可售货源大多位于高能级城市，但公司没有给出项目级售价、毛利或资本回收期。</p></div>
@@ -428,8 +499,8 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
 <section class="reveal on" id="liquidity">
   <div class="slabel">债务压力专项 · 现金质量与关联方</div>
-  <h2>短债表面有覆盖，融资边界比“总借贷”更宽</h2>
-  <p>房地产存货、监管资金和项目公司少数股权，使传统净现金判断失真。公司披露的现金短债比包含受限制存款；报告另做一个压力口径，只扣销售监管资金，用来观察短债缓冲。这不是公司KPI，也不代表监管资金永久不可使用。</p>
+  <h2>短债表面有覆盖，融资边界比"总借贷"更宽</h2>
+  <p>看房企的"净现金"很容易看错：存货压着钱、<span class="g">监管资金</span>动不了、项目公司里还有合作方的份额。公司披露的<span class="g">现金短债比</span>（现金÷一年内到期债务）把受限存款也算进现金；本报告另算一个更严的压力口径——只扣掉销售监管资金——来观察短债缓冲。这是分析口径，不是公司KPI，也不代表监管资金永远不能用。</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -451,7 +522,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     </table>
   </div>
 
-  <h3>“总借贷”之外仍有融资性质的负债</h3>
+  <h3>"总借贷"之外仍有融资性质的负债</h3>
   <div class="tblscroll">
     <table class="tbl">
       <caption>最新可得融资边界 · 人民币亿元；年报口径项目在H1未单独更新</caption>
@@ -463,7 +534,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p>中期公告没有更新供应商融资分项，也没有披露债务契约余量。公司“总借贷”指标因此适合观察银行、票据和债务工具，却不是全部融资义务的完整边界。</p>
+  <p>中期公告没有更新供应商融资的分项，也没披露债务契约还剩多少余量。所以"总借贷"这个数，看银行贷款、票据和债券够用，但它不是公司全部融资义务的完整边界。</p>
 
   <h3>关联方应收减应付的分析差额已超过归母权益</h3>
   <div class="tblscroll">
@@ -480,13 +551,20 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p>总借贷相当于最近十二个月经营利润代理的二十余倍，机械触发债务专项；但开发商更应看现金短债覆盖、融资成本、抵押和销售回款。五月发行的境外优先票据用于再融资，说明渠道仍在，不过绝对票息明显高于集团平均成本。</p>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>核心问题一句话：<b>短期还债的钱够不够？</b>账面现金618.65亿、一年内要还302.99亿，表面是2.04倍覆盖；但现金里有236.13亿是预售监管资金——被监管锁在项目账户里保交楼的钱，不能随便挪用。把这部分剔掉，覆盖率降到<b>1.26倍</b>：够用，但不宽裕，而且比去年年末在收紧（短债从247亿升到303亿）。</p>
+    <p>另外两个进阶要点：①报表"总借贷"1,308亿之外，还有约95亿元供应商融资等"类债务"没算进去；②绿城借给合作项目的钱（应收关联方717.57亿）比欠合作项目的钱多出<b>434.87亿元</b>——这个差额已经超过上市公司股东权益总额（350.86亿）。合作方能不能把钱还回来，是比明面债务更大的变数，也是前文信用减值上升的出处。</p>
+    <p>积极面：融资渠道仍在（平均成本降到3.2%，还能在境外发新债），央企背景在这里体现得最实在。不过5月发的美元票据票息7.0%，明显高于集团平均成本——境外市场对它的定价并不便宜。</p>
+  </div>
+  <p class="small">总借贷相当于最近十二个月经营利润代理的二十余倍，机械触发债务专项；但开发商更应看现金短债覆盖、融资成本、抵押和销售回款。</p>
 </section>
 
 <section class="reveal on" id="governance">
   <div class="slabel">资本分配 · 治理 · 股权激励</div>
   <h2>国资背景提供融资信用，却不能替代归母现金回报</h2>
-  <p>中交集团是最大股东，但上市公司仍通过大量项目公司、合营联营与非控股资本经营。治理分析的核心不是标签，而是现金上划、关联余额、定价控制和普通股东最终所得。期后换帅是执行观察点，不应被写成已经兑现的经营改善。</p>
+  <p>中交集团是最大股东，但真正的生意散落在大量项目公司和合营、联营实体里。所以看治理不能只看"央企"标签，要看四件实的：现金上划（项目公司的钱能不能调回母公司）、关联往来余额、定价怎么定，以及普通股东最后能拿到什么。七月的换帅是待观察的执行变量，不能提前写成已经兑现的经营改善。</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -535,23 +613,28 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p>金融服务框架采用市场定价、独立报价、年度审计和独立董事复核，历史使用量也很低，因此现有证据不能推断利益输送。股东批准完善了程序链，却没有消除关联项目回款、母公司现金可支配性和廉署程序的后续验证要求。</p>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>对普通股东最直接的事实是：<b>不分红了</b>。每股股息从FY2021的0.46元到FY2024的0.30元（期间曾上调、随后连续收缩），2025年起干脆停派——过去"至少有股息托底"的逻辑不再成立。管理层激励也值得留意：期权（按约定价格买入公司股票的权利）行使价为HK$10.34、还要求市价再高30%才能行使，说明激励指向股价修复；但归属条件里没有ROE或现金回报门槛。</p>
+    <p>两件治理事件需要跟踪而非下结论：6月廉政公署搜查了香港办公室（涉及一名已离任人士，目前没有任何指控结论，也不能推断公司有责任）；7月换帅，赵晖一人身兼主席与行政总裁。与央企股东的存款、信贷框架各有50亿元上限，程序上有独立董事复核——现有证据不支持"利益输送"的推断，但关联项目的回款和母公司对现金的实际支配权，仍是要持续验证的问题。</p>
+  </div>
   <div class="callout"><b>期后治理：</b>赵晖在七月出任主席、执行董事兼行政总裁，江峰任执行董事兼执行总裁。角色集中有利于执行责任清晰，也提高了董事会监督和继任机制的重要性。</div>
 </section>
 
 <section class="reveal on" id="scenarios">
   <div class="slabel">三年情景 · 盈利与现金路径</div>
   <h2>决定价值的不是销售规模，而是归母利润的转换率</h2>
-  <p>情景从自投签约销售、结转收入、毛利、减值、费用、合联营结果、税和非控股股东利润逐层走到归母利润。现金与债务路径另作资产负债约束。所有输入都是分析假设，不是管理层指引或市场一致预期；上半年公告没有现金流量表，因此现金路径的置信度低于利润表路径。</p>
+  <p>下面是分析师自设的三种剧本——悲观（Bear）、基准（Base）、乐观（Bull），不是公司指引，也不是市场一致预期。每个剧本从自投签约销售出发，逐层走到归母利润：销售 → 结转收入 → 毛利 → 减值、费用、合联营结果 → 税 → 扣掉合作方应占利润。现金与债务路径另作资产负债约束。上半年公告没有现金流量表，因此现金路径的置信度低于利润表路径。</p>
 
   <div class="tblscroll">
     <table class="tbl">
       <caption>2026E / 2027E / 2028E核心经营假设 · 人民币十亿元；毛利率除外</caption>
       <thead><tr><th>情景</th><th>自投签约销售</th><th>收入</th><th>毛利率</th><th>减值及公允价值损失</th><th>归母净利润</th></tr></thead>
       <tbody>
-        <tr><td>Bear</td><td>105 / 100 / 95</td><td>105 / 100 / 98</td><td>10.5% / 10.3% / 百分之十点五</td><td>4.5 / 4.2 / 3.8</td><td>−1.44 / −1.30 / −0.69</td></tr>
+        <tr><td>Bear</td><td>105 / 100 / 95</td><td>105 / 100 / 98</td><td>10.5% / 10.3% / 10.5%</td><td>4.5 / 4.2 / 3.8</td><td>−1.44 / −1.30 / −0.69</td></tr>
         <tr><td>Base</td><td>120 / 125 / 130</td><td>110 / 115 / 122</td><td>11.2% / 12.0% / 12.8%</td><td>3.8 / 3.0 / 2.4</td><td>0.50 / 1.84 / 3.20</td></tr>
-        <tr><td>Bull</td><td>130 / 140 / 150</td><td>118 / 130 / 140</td><td>11.8% / 百分之十二点八 / 13.8%</td><td>3.0 / 2.3 / 1.7</td><td>1.96 / 3.74 / 5.51</td></tr>
+        <tr><td>Bull</td><td>130 / 140 / 150</td><td>118 / 130 / 140</td><td>11.8% / 12.8% / 13.8%</td><td>3.0 / 2.3 / 1.7</td><td>1.96 / 3.74 / 5.51</td></tr>
       </tbody>
     </table>
   </div>
@@ -563,8 +646,8 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       <thead><tr><th>情景</th><th>其他收入及收益</th><th>销售行政费率</th><th>财务费用</th><th>合联营结果</th><th>税率</th><th>非控股股东利润</th></tr></thead>
       <tbody>
         <tr><td>Bear</td><td>1.6 / 1.6 / 1.6</td><td>全期5.2%</td><td>2.5 / 2.4 / 2.3</td><td>−1.0 / −0.7 / −0.5</td><td>42%</td><td>0.6 / 0.7 / 0.8</td></tr>
-        <tr><td>Base</td><td>1.7 / 1.8 / 1.9</td><td>百分之五 / 4.9% / 4.8%</td><td>2.3 / 2.2 / 2.1</td><td>0.0 / 0.3 / 0.6</td><td>与熊市相同</td><td>0.9 / 1.1 / 1.3</td></tr>
-        <tr><td>Bull</td><td>1.8 / 1.9 / 2.0</td><td>百分之四点八 / 4.7% / 4.6%</td><td>2.2 / 2.1 / 2.0</td><td>0.4 / 0.7 / 1.0</td><td>40%</td><td>1.2 / 1.5 / 1.8</td></tr>
+        <tr><td>Base</td><td>1.7 / 1.8 / 1.9</td><td>5.0% / 4.9% / 4.8%</td><td>2.3 / 2.2 / 2.1</td><td>0.0 / 0.3 / 0.6</td><td>42%</td><td>0.9 / 1.1 / 1.3</td></tr>
+        <tr><td>Bull</td><td>1.8 / 1.9 / 2.0</td><td>4.8% / 4.7% / 4.6%</td><td>2.2 / 2.1 / 2.0</td><td>0.4 / 0.7 / 1.0</td><td>40%</td><td>1.2 / 1.5 / 1.8</td></tr>
       </tbody>
     </table>
   </div>
@@ -581,6 +664,11 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>三个剧本的核心差异只有一个问题：<b>未来三年房子卖得动吗、卖得贵吗？</b>悲观剧本里销售继续缩、毛利率原地踏步、减值不退，公司连续三年亏损；基准剧本里销售企稳回升、毛利率慢慢修复到12.8%，2028年归母利润回到约32亿元（回到2023年附近的水平）；乐观剧本则回到约55亿元（超过2021年高点）。下一节的估值，就分别建立在这三个剧本上。</p>
+  </div>
   <p class="small">三条年度路径是资产负债表约束，不是公司指引，也不是从未披露的中期现金流量表推导出的现金流预测。现金仍包含受限及销售监管资金，实际可调度安全垫更低。</p>
 
   <div class="finds">
@@ -591,9 +679,10 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
 <section class="reveal on" id="valuation">
   <div class="slabel">市场定价 · 同业 · 估值</div>
-  <h2>破净不是便宜的充分条件，市场已预付一部分修复</h2>
-  <p>结果在香港收市后发布，所以下表是次日早盘快照，不是完整收市反应。市盈率因滚动归母利润接近零而失真，主方法改用归母账面与常态ROE；另以当前账面去并表敏感性检查上市代建子公司是否被重复计价。</p>
+  <h2>股价已打五折，但市场其实预付了一部分修复</h2>
+  <p>先说方法：通常给股票估值用市盈率（股价÷每股盈利），但绿城的盈利已接近于零、滚动十二个月甚至为负，市盈率算出来没有意义。所以本节改用<span class="g">市净率P/B</span>（股价÷每股净资产）作为主尺子，并把"净资产值不值钱"的问题交给<span class="g">ROE</span>（净资产的年回报率）来回答。结果在香港收市后发布，下表是次日早盘快照，不是完整收市反应。</p>
 
+  <h3>第一步：市场现在给绿城什么价？</h3>
   <div class="tblscroll">
     <table class="tbl">
       <caption>03900.HK结果后市场快照 · 2026-08-26 09:42:05 HKT；汇率采用当日人民银行中间价</caption>
@@ -601,9 +690,13 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       <tbody><tr><td>HK$8.030</td><td>+1.71%</td><td>HK$203.93亿元</td><td>HK$15.9677</td><td>0.50289倍</td><td>6.53%</td><td>人民币22.91亿元</td></tr></tbody>
     </table>
   </div>
-  <p>反向计算的意思是：若股权成本取中性假设、长期增长保持温和，现价要求公司最终恢复到数十亿元级的归母利润。市场并非只给清算或生存价值，因此利润修复失败仍有明显下行空间。</p>
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>股价HK$8.03，每股账面净资产HK$15.97——市场只按<b>净资产的五折</b>定价（P/B约0.50倍）。"破净"说明市场不相信账面资产都能足额变成现金：旧库存可能继续减值，借给合作方的钱可能收不全。</p>
+    <p>但注意反过来算的结果（把下文第三步的估值公式反着用：已知价格，倒推市场隐含的盈利假设）：即便打五折，这个价格也隐含公司常态每年要赚约<b>22.91亿元</b>归母利润（表中"隐含常态归母利润"）——是2025年全年0.71亿的三十多倍，而最近十二个月实际是亏损的。换句话说，<b>市场没有按"清算价"或"生存价"给绿城定价，而是已经预付了一部分"利润会修复"的剧本</b>。如果修复不发生，现价并不是底。</p>
+  </div>
 
-  <h3>行业共同下行，但利润质量已明显分化</h3>
+  <h3>第二步：和同行比，贵还是便宜？</h3>
   <div class="tblscroll">
     <table class="tbl">
       <caption>可比开发商FY2025相对FY2024 · 财务与销售来自港交所；P/B为2026-08-26早盘Wind快照</caption>
@@ -611,14 +704,49 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       <tbody>
         <tr><td>中国海外发展</td><td>−19.1%</td><td>−9.2%</td><td>15.5%</td><td>−18.8%</td><td>34.2%</td><td>0.360倍</td></tr>
         <tr><td>华润置地</td><td>−10.5%</td><td>+0.9%</td><td>21.2%</td><td>−0.5%</td><td>39.2%</td><td>0.775倍</td></tr>
-        <tr><td>龙湖集团</td><td>−37.5%</td><td>−23.7%</td><td>百分之九点七</td><td>−90.2%</td><td>52.2%</td><td>0.274倍</td></tr>
+        <tr><td>龙湖集团</td><td>−37.5%</td><td>−23.7%</td><td>9.7%</td><td>−90.2%</td><td>52.2%</td><td>0.274倍</td></tr>
         <tr><td>越秀地产</td><td>−7.3%</td><td>+0.1%</td><td>7.8%</td><td>−94.7%</td><td>54.9%</td><td>0.251倍</td></tr>
       </tbody>
     </table>
   </div>
-  <p>绿城FY2025自投销售、收入和归母利润分别下滑约一成、低个位数及九成以上，净负债率高于表内四家；其当前P/B只低于华润。2026H1运营公告中，中海与华润销售转正，绿城、龙湖和越秀仍收缩，后两家另发盈利预警。周期是共同背景，却不能解释公司之间的毛利、杠杆和普通股东回报差异。</p>
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>把四家可比放在一起：华润置地是行业优等生——毛利率21.2%、利润几乎没掉，市场给0.78倍净资产；中海毛利率15.5%、杠杆最低，反而只给0.36倍；龙湖、越秀利润跌去九成以上，只值0.25–0.27倍。绿城的0.50倍<b>只低于华润、高于其余三家</b>——但绿城FY2025毛利率11.9%、年末净负债率66.4%（2026年6月底已降至63.9%），盈利与杠杆指标其实都不占优。多出来的估值，市场买的是<b>央企背景与交付信用</b>，而不是当下的盈利能力。2026H1运营数据里，中海与华润销售已转正，绿城、龙湖、越秀仍在收缩，后两家另发盈利预警。</p>
+  </div>
 
-  <h3>上市代建子公司是资产，不是免费附加项</h3>
+  <h3>第三步：用"净资产 × 合理倍数"定价（P/B–ROE法）</h3>
+  <p>主估值方法三步走，和上一节的三个剧本一一对应：</p>
+  <div class="steps">
+    <div class="step"><div class="n">STEP 1</div><b>估常态盈利能力</b><p>取各剧本2028年的"常态ROE"——届时净资产每年能稳定赚多少。Base剧本为8.2%。</p></div>
+    <div class="step"><div class="n">STEP 2</div><b>换算合理P/B</b><p>公式：合理P/B =（ROE − g）÷（Ke − g）。赚得越多、越确定，净资产该值的倍数越高。</p></div>
+    <div class="step"><div class="n">STEP 3</div><b>乘净资产、折回今天</b><p>用合理P/B乘届时每股净资产，再按2.349年折现回估值日，得到目标价。</p></div>
+  </div>
+  <p class="small">式中两个符号：<b>Ke（股权成本）</b>是股东承担这只股票风险所要求的最低年回报率，风险越高取值越高（悲观剧本取13.5%、乐观取10.5%）；<b>g（长期增长率）</b>是利润修复完成后的永续增速，三个剧本统一取1.5%。用Base剧本代入：（8.2% − 1.5%）÷（11.5% − 1.5%）= 0.67倍，再乘届时净资产并折现，得HK$9.60。折现＝把未来的价值按每年Ke的要求回报率换算成今天的价值；2.349年即估值日到2028年末的时间距离。模型从六月底归母账面出发，2026年只加入下半年利润增量，其后滚存年度归母利润。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>与经营情景连接的P/B—ROE主估值 · 港元/股</caption>
+      <thead><tr><th>情景</th><th>Ke</th><th>2028常态ROE</th><th>公式P/B</th><th>采用P/B</th><th>目标价值</th></tr></thead>
+      <tbody>
+        <tr><td>Bear</td><td>13.5%</td><td>−2.2%</td><td>−0.30倍</td><td>0.25倍下限</td><td>HK$2.67</td></tr>
+        <tr><td>Base</td><td>11.5%</td><td>8.2%</td><td>0.67倍</td><td>采用公式值</td><td>HK$9.60</td></tr>
+        <tr><td>Bull</td><td>10.5%</td><td>12.7%</td><td>1.24倍</td><td>0.80倍上限</td><td>HK$13.31</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">悲观剧本ROE为负、公式失效，改按可比开发商低端的0.25倍净资产托底，代表"仍能融资交付"而非清算；乐观剧本按公式该给1.24倍，但压到0.80倍上限，避免把阶段性利润修复按过高倍数永久资本化。</p>
+
+  <h3>把三个目标价放在一把尺上</h3>
+  <div class="rows" aria-label="目标价与现价对比">
+    <div class="row"><div class="nm">Bear 悲观<span>修复失败 · 0.25倍净资产托底</span></div><div class="track"><div class="fill alt" style="width:20.1%"></div></div><div class="fig">HK$2.67<span class="down">较现价 −67%</span></div></div>
+    <div class="row"><div class="nm">现价<span>2026-08-26 早盘</span></div><div class="track"><div class="fill soft" style="width:60.3%"></div></div><div class="fig">HK$8.03<span>市场价</span></div></div>
+    <div class="row"><div class="nm">Base 基准<span>2028年ROE修复到8.2%</span></div><div class="track"><div class="fill" style="width:72.1%"></div></div><div class="fig">HK$9.60<span class="up">较现价 +20%</span></div></div>
+    <div class="row"><div class="nm">Bull 乐观<span>2028年ROE修复到12.7%</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$13.31<span class="up">较现价 +66%</span></div></div>
+  </div>
+  <p class="small">条形长度按各价格相对乐观目标HK$13.31的比例绘制；涨跌幅按现价HK$8.03计算。</p>
+
+  <h3>第四步：别忘了里面还装着一家上市公司</h3>
+  <p>绿城旗下的代建子公司<b>绿城管理（09979.HK）</b>本身就是一家独立上市公司，绿城持股72%。按市价折算，这笔股权相当于每股绿城约HK$1.05、约占绿城市值13%。估值时要把它单独拎出来算一遍，避免"母公司便宜"其实只是"子公司值钱"的重复计算。下面的<span class="g">去并表</span>敏感性就是这个用途——它用今天的账面和市价做健全性检查，<b>不是三年后的目标价</b>。</p>
   <div class="tblscroll">
     <table class="tbl">
       <caption>绿城管理09979.HK去并表桥 · 港交所财务与同日市场快照</caption>
@@ -632,23 +760,6 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-
-  <h3>主估值连接三年经营，账面归属只做敏感性</h3>
-  <p><strong>P/B—ROE主法：</strong>ROE是归母净资产收益率，P/B是市净率，Ke是股权成本，g是长期增长率。合理P/B等于（ROE减g）除以（Ke减g）。三种情景的g统一为1.5%。模型从六月底归母账面出发，2026年只加入全年预测减实际上半年利润后的下半年增量；其后滚存年度归母利润，用2028常态ROE定价，再按2.349年折回估值日。</p>
-  <p><strong>当前账面去并表敏感性：</strong>先用剔除绿城管理后的剩余业务归母账面乘假设P/B，再加控股折价后的上市股权价值。剩余业务还包括酒店、投资物业和其他业务，并非纯开发业务。该计算固定使用当前账面和子公司市值，不连接三年预测，也不构成第二个终值；合并账面已含债务，不能再次机械扣净债。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>与经营情景连接的P/B—ROE主估值 · 港元/股</caption>
-      <thead><tr><th>情景</th><th>Ke</th><th>2028常态ROE</th><th>公式P/B</th><th>采用P/B</th><th>目标价值</th></tr></thead>
-      <tbody>
-        <tr><td>Bear</td><td>13.5%</td><td>−2.2%</td><td>−0.30倍</td><td>0.25倍下限</td><td>HK$2.67</td></tr>
-        <tr><td>Base</td><td>11.5%</td><td>8.2%</td><td>0.67倍</td><td>采用公式值</td><td>HK$9.60</td></tr>
-        <tr><td>Bull</td><td>百分之十点五</td><td>12.7%</td><td>1.24倍</td><td>0.80倍上限</td><td>HK$13.31</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">熊市下限靠近可比开发商低端，代表仍能融资交付而非清算；牛市上限接近高质量同业估值，避免把阶段性利润修复按过高倍数永久资本化。</p>
   <div class="tblscroll">
     <table class="tbl">
       <caption>当前账面去并表归属敏感性 · 港元/股；不是三年情景目标</caption>
@@ -660,7 +771,12 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p>现价低于主法基准目标，却接近Current账面归属值。后者接近现价，是因为剩余业务P/B本来就采用当前隐含倍数，不能被当作独立确认。上行仍要靠毛利、减值、归母权益比例与净债务一起改善；单靠销售排名或国资背景不足以扩张倍数。</p>
+  <p class="small">算法：先用剔除绿城管理后的剩余业务归母账面乘假设P/B，再加控股折价后的上市股权价值。剩余业务还包括酒店、投资物业和其他业务，并非纯开发业务；合并账面已含债务，不能再机械扣净债。注意Current档算出的HK$7.84非常接近现价——这不是"两种方法互相验证"：该档的剩余业务P/B本来就取自现价隐含倍数，接近是机械结果。</p>
+
+  <div class="plain">
+    <span class="pl">一句话总结</span>
+    <p>现价HK$8.03：离悲观值2.67有约67%的下跌空间，离基准值9.60差约20%，离乐观值13.31差约66%。市场已经完全计入"公司活下来"，并预付了一部分"利润修复"。<b>要让股价站上基准值，需要四件事同时改善：新项目毛利率回升、减值退潮、归母权益比例提高、净债务下降</b>——单靠销售排名或央企背景不足以扩张倍数。在证据出现之前，这是一只输赢大致对称的股票。</p>
+  </div>
 </section>
 
 <section class="reveal on" id="decision">
@@ -670,9 +786,41 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     <div class="find good"><div class="t">最强多方证据</div><p>回款秩序、核心城市新地、融资成本下降和合同负债，为交付与再融资提供缓冲。若新项目归母权益提高并改善结转质量，账面折价可以收窄。</p></div>
     <div class="find warn"><div class="t">最强反方证据</div><p>销售仍缩、旧库存压低毛利、关联方应收减应付差额扩大，且合并权益大部分归非控股股东。规模和现金尚未转化为普通股东利润或分红。</p></div>
   </div>
-  <div class="quote">真正的重估条件不是“活下来”，而是新盘利润、关联方回款和归母ROE在同一窗口改善。</div>
+  <div class="quote">真正的重估条件不是"活下来"，而是新盘利润、关联方回款和归母ROE在同一窗口改善。</div>
   <p><strong>下一验证窗口：</strong>月度自投销售与权益销售、旧库存结转毛利、关联方应收减应付差额、短债占比、监管资金口径下的现金覆盖、廉署程序进展，以及新管理层对分红与资本回报的安排。</p>
-  <p><strong>失效边界：</strong>若短债覆盖跌破安全垫、关联方款项继续快于权益增长、核心城市新盘未能支撑毛利，或调查出现公司层面的实质责任与财务暴露，估值应转向压力区。若归母回报持续修复并恢复可持续现金分配，当前谨慎判断需要上调。</p>
+  <p><strong>失效边界：</strong>以下情况出现任何一种，估值就该转入压力区：短债覆盖跌破安全垫；借给合作方的钱增长得比股东权益还快；核心城市新盘撑不住毛利；或调查查出公司层面的实质责任与财务暴露。反过来，若归母回报持续修复、可持续的现金分红恢复，本报告的谨慎判断就需要上调。</p>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · 按出现顺序</div>
+  <h2>二十个词，读懂一份房企财报</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
+      <tbody>
+        <tr><td>合同销售 / 签约额</td><td>客户签合同买房（多为期房）的金额。是经营指标，不是财报收入；含合作和代建项目。</td></tr>
+        <tr><td>结转</td><td>房子交付、收入正式计入利润表的动作。从签约到结转通常间隔较长（常以年计）。</td></tr>
+        <tr><td>归母净利润</td><td>"归属于母公司（上市公司）股东"的净利润，已扣掉合作方应占部分。看房企盈利以这行为准。</td></tr>
+        <tr><td>非控股权益（NCI）</td><td>项目公司里合作方持有的股权。绿城合并总权益中约三分之二属于非控股股东。</td></tr>
+        <tr><td>自投项目</td><td>绿城自己出资开发的项目（含与人合股），与只收服务费的代建相对。</td></tr>
+        <tr><td>代建</td><td>替其他业主管理开发项目、收取服务费的轻资产模式；由上市子公司绿城管理经营。</td></tr>
+        <tr><td>权益销售额</td><td>合同销售中按项目股权比例真正属于绿城的部分。</td></tr>
+        <tr><td>已售未结转</td><td>已经卖掉、还没交付确认收入的房子对应金额，是未来收入的"蓄水池"。</td></tr>
+        <tr><td>合同负债</td><td>收了预售款、还没交房，暂记为负债；交付后转成收入。数字越大，未来收入可见度越高。</td></tr>
+        <tr><td>预售监管资金</td><td>预售款中被监管锁定在项目账户、专款保交付的部分，不能自由调用。</td></tr>
+        <tr><td>现金短债比</td><td>手头现金 ÷ 一年内到期的债务，衡量短期偿债能力；越低越紧张。</td></tr>
+        <tr><td>净资产负债率</td><td>（总借贷 − 现金）÷ 净资产，公司口径的杠杆指标。</td></tr>
+        <tr><td>减值</td><td>资产（主要是土地和存货）预计卖不回本时，提前在利润表确认的损失。</td></tr>
+        <tr><td>毛利率</td><td>（收入 − 地价建安等直接成本）÷ 收入。房企毛利率由拿地成本与售价之差决定。</td></tr>
+        <tr><td>P/B（市净率）</td><td>股价 ÷ 每股净资产。低于1倍（"破净"）表示市场认为账面资产不值账面价。</td></tr>
+        <tr><td>ROE</td><td>净利润 ÷ 净资产，股东资金的年回报率。本报告用"归母"口径。</td></tr>
+        <tr><td>股权成本 Ke</td><td>股东承担该股票风险所要求的最低年回报率；风险越高，Ke越高，估值越低。</td></tr>
+        <tr><td>LTM</td><td>Last Twelve Months，最近十二个月滚动合计口径，用于消除半年报的季节性。</td></tr>
+        <tr><td>BVPS</td><td>每股净资产（账面价值），P/B的分母。</td></tr>
+        <tr><td>去并表</td><td>把并表的上市子公司拆出来按市价单独估值，检查母公司估值有没有重复计算。</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <section class="reveal on" id="methods">
