@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
-<title>长城汽车 2026Q2 Fullscan 全景尽调 · 02333.HK</title>
+<title>长城汽车 2026H1 / Q2 Fullscan 全景尽调 · 02333.HK</title>
 <style>
 :root{
   --paper:#EDEFF2;
@@ -225,34 +225,61 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
 .tbl.gloss th{text-align:left}
 .fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
 </style>
 </head>
 <body>
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">长城汽车 02333.HK ｜ 全景尽调 ｜ 财务截至 2026.06.30 · 行情截至 2026.08.26 香港时间 10:00</div>
-    <h1>收入地图已经翻到海外，<br>利润表却还没学会全球化</h1>
-    <p class="lede">海外来源占比提升与整车收入/中报销量代理上升同时发生，国内与新能源销量却逆势收缩。<b>逐项利润拆解显示补贴基数与汇率是主要拖累，但存货、费用和<span class="g">研发资本化</span>也在同步上升。</b> H股的机会来自资产折价；能否兑现，取决于海外规模转化为利润、现金与股东回报。单车代理不是官方成交均价。</p>
+    <div class="eyebrow">长城汽车 02333.HK ｜ 全景尽调 ｜ 财务截至 2026.06.30 · 行情截至 2026.08.28</div>
+    <h1>收入来源已反转，<br>利润还没跟上</h1>
+    <p class="lede">其他国家来源收入占比提升，与整车收入除以中报销量所得的单车收入代理上升同时发生；国内与新能源销量却逆势收缩。<b>逐项利润拆解显示补贴基数与汇率是主要拖累，但存货较年初、费用和<span class="g">研发资本化</span>也在上升。</b> 港交所上市H股的机会来自资产折价；能否兑现，取决于全球化规模转化为利润、现金与股东回报。单车代理不是官方成交均价。</p>
 
     <div class="dual">
       <div>
-        <div class="tag">2026H1 海外来源收入 · 同比</div>
+        <div class="tag">2026H1 其他国家来源收入 · 同比</div>
         <div class="big a">+56.8%</div>
         <div class="cap">按收入来源地口径，其他国家已贡献过半收入并覆盖国内缺口。</div>
       </div>
       <div>
         <div class="tag">2026H1 归母净利润 · 同比</div>
         <div class="big b">−61.1%</div>
-        <div class="cap">政府补助确认较上年大幅减少、汇兑由收益转为损失，显示集团利润对政策确认时点与汇率的敏感性。</div>
+        <div class="cap">已确认政府补助较上年大幅减少、汇兑由收益转为损失，显示集团利润对补助与汇率变动的敏感性。</div>
       </div>
     </div>
   </div>
 </header>
 
-<div class="wrap">
+<main class="wrap">
 <section class="reveal on" id="tldr">
-  <div class="slabel">三十秒版本 · 先看结论</div>
+  <div class="slabel">三十秒版本</div>
   <h2>如果只读一屏，读这里</h2>
   <div class="tldr">
     <ul>
@@ -260,13 +287,13 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       <li><b>本期成绩：</b><span class="g">2026H1（上半年）</span>收入约1,021亿元、同比增长约一成，<span class="g">归母净利润</span>约25亿元、同比下降约六成。用H1累计减<span class="g">Q1（一季度）</span>累计得到的<span class="g">单二季度（推算）</span>中，收入增长约9%，归母净利润下降约67%；单季数字是分析推算，不是公司单独披露。</li>
       <li><b>核心张力：</b>其他国家来源收入占比已过半，足以补过国内来源收入的缺口；但集团<span class="g">毛利率</span>没有扩张，<span class="g">LTM（最近十二个月）</span><span class="g">ROIC代理</span>降至约8%。该地域口径不等于客户最终销售地，也没有给出地域毛利或现金流。</li>
       <li><b>一个容易踩的坑：</b>机械剔除补贴与汇率后的营业利润敏感性代理改善，不代表核心盈利已经增长，因为<span class="g">扣非归母净利润</span>仍在下降。同样，管理层所称“现金储备”包含<span class="g">交易性金融资产</span>与受限资金且未扣债务，不等于净现金或可立即分红的钱。</li>
-      <li><b>结论：</b><b>有条件低估，不是无条件的净现金套利。</b>三种方法的基准价值为HK$8.61–12.58，业绩前收盘在区间下端以下。上行要由海外利润与现金、国内及新能源止跌、存货与产销关系改善，以及回购后注销或稳定分红共同验证。</li>
+      <li><b>结论：</b><b>有条件低估，但不能把账面资金直接当成股东可得现金。</b>三种方法的基准价值为HK$8.60–12.21，区间下端比8月28日收盘HK$7.97高约8.0%。上行要由其他国家来源收入转成利润和现金、国内及新能源止跌、产销关系改善，以及回购后注销或稳定分红共同验证。</li>
     </ul>
   </div>
 </section>
 
 <section class="reveal on" id="primer">
-  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <div class="slabel">入门</div>
   <h2>长城赚的是车型、组合和全球渠道的钱</h2>
   <p>把长城看成一条从平台研发到售后服务的汽车现金链，会比只看总销量更准确。销量决定产线负荷，产品与地域组合决定每辆车能留下多少毛利，渠道库存和付款节奏再决定利润何时变成现金。</p>
   <div class="steps">
@@ -278,14 +305,10 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <p>再记三件结构性事实。第一，长城是<span class="g">A/H双重上市</span>公司，控股股东和最终控制人稳定，H股与A股却可以长期以不同价格交易。第二，会计上只有一个经营分部，不能从品牌销量或地域收入反推各自利润。第三，公司持有天津长城滨银汽车金融超过98%，但因<span class="g">共同控制</span>而按<span class="g">权益法</span>核算，其底层资产与负债不并入集团净现金。带虚线下划线的术语可在文末「名词速查」找到。</p>
   <p>中国汽车市场正处于<span class="g">新能源渗透</span>、价格竞争与出口本地化同时加速的阶段；对长城而言，真正的问题不是能否继续卖更多车，而是越野、皮卡和多动力优势能否在国内新能源竞争中守住份额，并把海外规模转成可持续利润和现金。</p>
 </section>
-</div>
-
-<main class="wrap">
-
 <section class="reveal on" id="financials" data-fullscan-role="basic-financials">
   <div class="slabel">基础财务</div>
   <h2>规模仍在扩张，利润和资本回报已经换挡</h2>
-  <p>长城汽车以哈弗、魏牌、欧拉、坦克及长城皮卡覆盖SUV、轿车、皮卡和多动力路线，并通过出口、本地制造和经销网络销售。会计上只有“汽车及汽车零部件”一个经营分部；产品收入、品牌销量和地域收入都不是独立利润分部。2026年中期报表未经审计；德勤执行有限保证审阅，并明确不发表审计意见。</p>
+  <p>收入继续扩大，但营业利润与资本回报没有同步改善；理解这组背离前，先明确披露边界。长城汽车以哈弗、魏牌、欧拉、坦克及长城皮卡覆盖SUV、轿车、皮卡和多动力路线，并通过出口、本地制造和经销网络销售。会计上只有“汽车及汽车零部件”一个经营分部；产品收入、品牌销量和地域收入都不是独立利润分部。2026年中期报表未经审计；德勤只做范围小于年度审计的中期审阅，并明确不发表审计意见。</p>
 
   <div class="grid" data-financials="consolidated">
     <div class="cell"><div class="k">H1收入</div><div class="v">1,021.01<span class="u">亿元</span></div><div class="d"><span class="up">同比 +10.6%</span></div></div>
@@ -301,7 +324,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <h3>五年合并盈利轨迹</h3>
   <div class="tblscroll" data-financials="history">
     <table class="tbl" data-financials="history">
-      <caption>经审计盈利输入及分析比率｜人民币十亿元；每股收益为人民币元；现金资本开支和自由现金流代理见紧邻现金表</caption>
+      <caption>经审计盈利输入及分析比率｜人民币十亿元；每股收益为人民币元；现金资本开支和自由现金流代理见下方现金表</caption>
       <thead><tr><th>年度</th><th>收入</th><th>毛利 / 毛利率</th><th>营业利润 / 利润率</th><th>归母净利 / ROE</th><th>稀释EPS</th></tr></thead>
       <tbody>
         <tr><td>2021</td><td>136.405</td><td>21.183 / 15.53%</td><td>6.369 / 4.67%</td><td>6.726 / 11.26%</td><td>0.73</td></tr>
@@ -312,6 +335,16 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
+  <div class="cols" role="img" aria-label="2021年至2025年营业收入与归母净利润趋势，具体数值见上方五年合并盈利轨迹表">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:61.216%;width:24px"></div><div class="bar np" style="height:3.019%;width:24px"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:61.636%;width:24px"></div><div class="bar np" style="height:3.710%;width:24px"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:77.730%;width:24px"></div><div class="bar np" style="height:3.146%;width:24px"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:90.741%;width:24px"></div><div class="bar np" style="height:5.682%;width:24px"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100%;width:24px"></div><div class="bar np" style="height:4.427%;width:24px"></div></div></div>
+  </div>
+  <div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div>
+  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
+  <p class="small">柱高以FY2025收入为共同尺度等比绘制；精确数字见上表。归母利润柱在2024年冲高、2025年回落，显示规模扩张没有形成稳定的利润率趋势。</p>
   <div class="tblscroll">
     <table class="tbl">
       <caption>现金与每股账面价值｜人民币十亿元；BVPS为人民币元；星号为当年原报</caption>
@@ -331,8 +364,8 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <h3>单二季度和最近十二个月</h3>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>Q2由同口径H1减Q1推算；LTM=FY2025（2025完整财年）+2026H1−2025H1｜人民币十亿元</caption>
-      <thead><tr><th>期间</th><th>收入</th><th>毛利率</th><th>营业利润</th><th>归母净利</th><th>经营现金流</th><th>自由现金流代理</th></tr></thead>
+      <caption>Q2由同口径H1减Q1推算；LTM=FY2025（2025完整财年）+2026H1−2025H1｜人民币十亿元；斜杠后为Q2同比，营业利润列例外为利润率</caption>
+      <thead><tr><th>期间</th><th>收入 / Q2同比</th><th>毛利率</th><th>营业利润 / Q2利润率</th><th>归母净利 / Q2同比</th><th>经营现金流 / Q2同比</th><th>自由现金流代理 / Q2同比</th></tr></thead>
       <tbody>
         <tr><td>2026Q2推算</td><td>56.992 / +8.94%</td><td>18.31%</td><td>2.016 / 3.54%</td><td>1.519 / −66.87%</td><td>7.165 / −60.62%</td><td>3.448 / −77.83%</td></tr>
         <tr class="grp"><td>LTM至2026H1</td><td>232.591</td><td>18.05%</td><td>7.893</td><td>5.993</td><td>41.577</td><td>28.950</td></tr>
@@ -365,7 +398,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 <section class="reveal on" id="cycle">
   <div class="slabel">车型周期</div>
   <h2>新品很多，真正的瓶颈是产销与新能源转化</h2>
-  <p>未经审计的港交所月度产销快报显示，集团增量高度集中于海外和低基数品牌。哈弗停滞、坦克回落、魏牌在二季度放缓；欧拉恢复很快，但绝对量仍小。哈弗H10于8月初上市，WEY V8X于8月中上市；下半年还包括哈弗H6、大狗和猛龙系列更新。车型数量不是验证，连续交付、价格与毛利才是。</p>
+  <p>未经审计的港交所月度产销快报显示，集团增量高度集中于海外和低基数品牌。哈弗停滞、坦克回落、魏牌在二季度放缓；欧拉恢复很快，但绝对量仍小。公司官网披露哈弗H10于8月初上市、WEY V8X于8月中上市；中期报告还列出哈弗H6、大狗和猛龙系列更新。车型数量不是验证，连续交付、价格与毛利才是。</p>
   <p>按中期报告口径，整车收入除以总销量的代理值约15.43万元/辆，同比上升10.03%。它受车型、地域、渠道库存和收入确认时点共同影响，不是公司披露的成交均价，也不能单独证明终端提价或高价值车型贡献。</p>
 
   <div class="tblscroll">
@@ -395,13 +428,13 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
   <h3>平台经济性仍是空白</h3>
   <p>研发投入69.49亿元，其中资本化23.81亿元；资本化率由29.86%升至34.26%，期末开发支出127.65亿元。归元平台覆盖多动力路线，但平台复用率、BOM降幅、开发周期、软件收入和智驾选装率均未披露。摩托车与商用车也缺少收入、毛利和现金消耗，只能作为期权。</p>
-  <div class="plain"><span class="pl">白话解读</span><p>汽车公司的“新品多”不等于“盈利会自动增长”。先要看到主力品牌持续交付，再看生产是否与销售匹配，最后看价格、毛利和保修成本。哈弗接近停滞、坦克回落，而欧拉的高增速建立在较小基数上；与此同时，集团新能源销量方向弱于行业。</p><p>合并报表存货和保修负债都在上升，但公司没有披露经销商库存、终端零售、实际索赔或工厂利用率。<b>因此它们是需要追踪的错配信号，不是渠道压库、产能闲置或质量恶化的直接证据。</b></p></div>
+  <div class="plain"><span class="pl">白话解读</span><p>汽车公司的“新品多”不等于“盈利会自动增长”。先要看到主力品牌持续交付，再看生产是否与销售匹配，最后看价格、毛利和保修成本。哈弗接近停滞、坦克回落，而欧拉的高增速建立在较小基数上；与此同时，集团新能源销量方向弱于行业。</p><p>合并报表存货和保修负债都较2025年末上升，但公司没有披露经销商库存、终端零售、实际索赔或工厂利用率。<b>因此它们是需要追踪的错配信号，不是渠道压库、产能闲置或质量恶化的直接证据。</b></p></div>
 </section>
 
 <section class="reveal on" id="overseas">
   <div class="slabel">海外业务</div>
   <h2>其他国家来源收入已过半，完整海外利润仍不可见</h2>
-  <p>按收入来源地口径，其他国家来源收入已经超过国内；该口径不等于客户最终销售地、出口收入或海外利润。出口销量快速增长，公司同时在泰国、巴西等地布局本地制造；但披露未拆分整车出口与海外本地产销各自的收入、利润和现金贡献。渠道已超过1,600家，覆盖170多个国家和地区；全工艺工厂与多地<span class="g">KD工厂</span>降低关税和交付障碍，也增加售后、<span class="g">营运资本</span>和产能爬坡成本。</p>
+  <p>按收入来源地口径，其他国家来源收入已经超过国内；该口径不等于客户最终销售地、出口收入或海外利润。出口销量快速增长，公司同时在泰国、巴西等地布局本地制造；但披露未拆分整车出口与海外本地产销各自的收入、利润和现金贡献。渠道已超过1,600家，覆盖170多个国家和地区；全工艺工厂与多地<span class="g">KD工厂</span>旨在降低部分关税及交付障碍，也可能增加售后、<span class="g">营运资本</span>和产能爬坡成本。</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -413,6 +446,12 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
+  <div class="stacks" role="img" aria-label="2025年上半年与2026年上半年中国及其他国家收入来源占比对比，具体数值见上表">
+    <div class="stack"><div class="cap">2025H1 收入来源结构</div><div class="stackbar"><div class="seg p" style="width:61.131%">中国 61.1%</div><div class="seg q" style="width:38.869%">其他 38.9%</div></div></div>
+    <div class="stack"><div class="cap">2026H1 收入来源结构</div><div class="stackbar"><div class="seg p" style="width:44.871%">中国 44.9%</div><div class="seg q" style="width:55.129%">其他 55.1%</div></div></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>中国来源</span><span><i class="q"></i>其他国家来源</span></div>
+  <p class="small">占比由同表来源地收入除以合并收入得到；这是收入来源结构，不是经营分部或客户最终销售地。</p>
   <p>其他国家来源收入的增量超过国内来源收入的缺口，因此集团净增长来自前者；这仍不能证明海外已经成为利润或现金引擎。中报口径出口销量为289,016辆、同比增长45.46%，占中报总销量50.20%；月度快报另有一套口径，两者不混用分母。</p>
 
   <div class="tblscroll">
@@ -426,14 +465,14 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p>披露的俄罗斯、巴西和南非三家主要海外子公司各自盈利，说明已披露样本并非全盘亏损扩张；但它们不是完整海外分部，不能加总后代表集团海外利润率。集团没有披露完整海外毛利、经营现金流、补贴应收或资本回报。地域非流动资产82.08亿元，占披露地域非流动资产10.58%；该资产占比与出口及渠道仍有较高权重的判断相符，但披露不足以量化出口与海外本地制造的比例。</p>
+  <p>披露的俄罗斯、巴西和南非三家主要海外子公司各自盈利，说明已披露样本并非全盘亏损扩张；但它们不是完整海外分部，不能加总后代表集团海外利润率。集团没有披露完整海外毛利、经营现金流、补贴应收或资本回报。其他国家地域非流动资产82.08亿元，占披露地域非流动资产10.58%；这个比例可能反映出口模式仍占重要位置，但不足以量化整车出口与海外本地制造各自占比。</p>
   <p class="small">海外收入没有固定汇率重述，也没有拆分出口、本地生产与并购贡献；报告期无重大子公司收购，仍不能把全部增量定义为原有业务自身增长。公司披露未对冲的外币风险（外汇净敞口），却未给地区税负、资金汇回、关税及监管成本的量化桥。俄罗斯政策返还的会计映射与账龄也未单列。</p>
-  <div class="plain"><span class="pl">白话解读</span><p>集团收入增长的来源已经换了：其他国家来源收入多出的金额超过国内少掉的金额，海外由此成为规模引擎。但“收入从海外来”只回答卖了多少钱，没有回答当地毛利、税费、售后、本地工厂爬坡和回款后还剩多少钱。</p><p>三家被单独披露的主要海外公司都有利润是正证据，却不能替整块海外业务背书。<b>全球化的下一道考题不是再证明能卖车，而是证明规模经过汇率、政策、渠道和本地制造成本后仍能留下利润与现金。</b></p></div>
+  <div class="plain"><span class="pl">白话解读</span><p>集团收入增长的来源已经换了：其他国家来源收入多出的金额超过国内少掉的金额，因此它成为本期集团收入增量的来源。但“收入从海外来”只回答卖了多少钱，没有回答当地毛利、税费、售后、本地工厂爬坡和回款后还剩多少钱。</p><p>三家被单独披露的主要海外公司都有利润是正证据，却不能替整块海外业务背书。<b>全球化的下一道考题不是再证明能卖车，而是证明规模经过汇率、政策、渠道和本地制造成本后仍能留下利润与现金。</b></p></div>
 </section>
 
 <section class="reveal on" id="quality">
   <div class="slabel">盈利质量</div>
-  <h2>补贴与汇率解释报表崩塌，不能证明制造利润已经修复</h2>
+  <h2>补贴与汇率解释报表利润大跌，不能证明制造利润已经修复</h2>
   <p>毛利增长没有变成营业利润。下面的桥接把两期利润表逐项相减：政府相关其他收益和财务线反转是最大拖累，销售与研发投入也在增加。它支持“高基数与汇率”解释，却不支持“经营质量已经修复”。</p>
 
   <div class="tblscroll">
@@ -441,16 +480,27 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       <caption>2026H1营业利润同比桥｜人民币亿元；正数为贡献、负数为拖累</caption>
       <thead><tr><th>项目</th><th>同比影响</th><th>机制</th></tr></thead>
       <tbody>
-        <tr><td>毛利增加</td><td>+17.85</td><td>收入规模与组合改善</td></tr>
+        <tr><td>毛利增加</td><td>+17.85</td><td>收入规模增加；组合贡献未单列</td></tr>
         <tr><td>销售费用增加</td><td>−9.62</td><td>渠道和市场投入</td></tr>
         <tr><td>管理及研发费用增加</td><td>−4.84</td><td>人员、研发与组织投入</td></tr>
         <tr><td>财务费用恶化</td><td>−19.72</td><td>汇兑收益转损失为主</td></tr>
         <tr><td>其他收益减少</td><td>−25.21</td><td>上年汽车报废补贴基数</td></tr>
         <tr><td>投资、公允价值及其他净项</td><td>+5.14</td><td>部分抵消；分项四舍五入</td></tr>
-        <tr class="grp"><td>营业利润变动</td><td>−36.41</td><td>完全勾稽</td></tr>
+        <tr class="grp"><td>营业利润变动</td><td>−36.41</td><td>与总变动一致</td></tr>
       </tbody>
     </table>
   </div>
+  <div class="wfall" role="img" aria-label="2025年上半年营业利润68.62亿元，经毛利增加、费用及其他项目变化桥接至2026年上半年营业利润32.21亿元，具体数值见上表">
+    <div class="wrow"><div class="nm">2025H1营业利润<span>桥的起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:79.357%"></div></div><div class="fig">68.62</div></div>
+    <div class="wrow"><div class="nm">毛利增加<span>收入规模增加</span></div><div class="wtrack"><div class="wbar up" style="left:79.357%;width:20.643%"></div></div><div class="fig up">+17.85</div></div>
+    <div class="wrow"><div class="nm">销售费用<span>投入增加</span></div><div class="wtrack"><div class="wbar down" style="left:88.871%;width:11.129%"></div></div><div class="fig down">−9.62</div></div>
+    <div class="wrow"><div class="nm">管理及研发<span>费用增加</span></div><div class="wtrack"><div class="wbar down" style="left:83.273%;width:5.598%"></div></div><div class="fig down">−4.84</div></div>
+    <div class="wrow"><div class="nm">财务费用<span>汇兑反转为主</span></div><div class="wtrack"><div class="wbar down" style="left:60.468%;width:22.805%"></div></div><div class="fig down">−19.72</div></div>
+    <div class="wrow"><div class="nm">其他收益<span>补贴基数回落</span></div><div class="wtrack"><div class="wbar down" style="left:31.308%;width:29.160%"></div></div><div class="fig down">−25.21</div></div>
+    <div class="wrow"><div class="nm">其余项目净额<span>部分抵消</span></div><div class="wtrack"><div class="wbar up" style="left:31.308%;width:5.943%"></div></div><div class="fig up">+5.14</div></div>
+    <div class="wrow"><div class="nm">2026H1营业利润<span>桥的终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:37.251%"></div></div><div class="fig">32.21</div></div>
+  </div>
+  <p class="small">共同尺度为桥中最高余额86.47亿元；条形位置与宽度由逐项桥接值等比计算，精确同比影响见上表。</p>
   <p>政府补助由25.49亿元降至2.34亿元；汇兑差额由收益17.04亿元转为损失4.23亿元。机械剔除政府补助和汇兑差额后的营业利润敏感性代理为34.10亿元，同比增加30.73%；但扣非归母净利润只有16.10亿元，仍下降55.04%。该代理未调整所得税和其他一次性项目，只能说明两项因素的敏感性，不能替代公司扣非口径，也不能称作核心制造利润。</p>
   <p>期末员工99,630人，员工成本率升至收入的9.35%。管理层列出预算、采购、平台共通化和数字化降本动作，却没有披露节省额或单车成本。利润修复必须由真实费用率和制造毛利验证。</p>
   <div class="plain"><span class="pl">白话解读</span><p>去年的补贴和汇兑收益像两块额外垫高利润的砖，今年一块大幅变小、另一块由收益转成损失，所以报表利润跌得特别快。把这两块机械拿掉，营业利润敏感性看起来改善；但这项自算值没有把税和其他一次性因素全部洗净，官方扣非利润仍明显下降。</p><p><b>“能够解释为什么跌”与“已经证明主业修复”是两回事。</b>真正的修复证据应来自整车毛利、费用率、单车成本和现金，而不是只把去年有、今年少的会计项目删掉。</p></div>
@@ -474,23 +524,23 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p>存货增长显著快于收入与销量，但经销商库存、终端零售和实际索赔未披露，不能据此断言渠道压库或质量恶化。机械营运资金反而较年初减少13.12亿元，显示票据与应付融资仍在发挥作用。</p>
+  <p>存货较年初增加29.27%，但与上年同期的332.62亿元相比只增加1.62%；前者是半年时点变化，不能与收入和销量同比直接比较。结合产销差扩大，它仍是需要追踪的时点信号；经销商库存、终端零售和实际索赔未披露，不能据此断言渠道压库或质量恶化。本文按存货、经营性应收及预付款减应付账款、票据和合同负债计算的营运资金组合较年初减少13.12亿元，说明应付票据等结算工具仍在影响现金时点。</p>
 
   <h3>流动性充足，不等于全部可分配</h3>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>合并口径流动资产桥｜人民币十亿元</caption>
+      <caption>合并口径金融流动性桥｜人民币十亿元</caption>
       <thead><tr><th>组成</th><th>金额</th><th>估值处理</th></tr></thead>
       <tbody>
         <tr><td>现金等价物</td><td>27.588</td><td>剔除受限资金</td></tr>
         <tr><td>交易性金融资产</td><td>34.096</td><td>按场景折价</td></tr>
         <tr><td>借款及债券</td><td>−10.877</td><td>全额扣除</td></tr>
         <tr><td>租赁负债</td><td>−3.357</td><td>全额扣除</td></tr>
-        <tr class="grp"><td>四项相减的净流动资产代理</td><td>47.450</td><td>公司未披露；并非净现金或可立即分红现金</td></tr>
+        <tr class="grp"><td>金融流动性净额代理</td><td>47.450</td><td>公司未披露；并非净现金、净流动资产或可立即分红现金</td></tr>
       </tbody>
     </table>
   </div>
-  <p>上表四项相减的结果不是公司披露的净现金，也不是可立即分配现金；它把交易性金融资产全额计入，而这类资产可能承担运营或财资用途，受限货币资金则未计入。负债占资产62.00%，不含租赁的带息债务/LTM EBITDA代理（最近十二个月息税折旧摊销前利润代理）仅0.575倍，偿债风险不高。问题不在“有没有资产”，而在资产是否被营运资本、产能、研发和理财需求长期锁定。</p>
+  <p>上表金融流动性净额代理不是公司披露的净现金、完整净流动资产或可立即分配现金；它把交易性金融资产全额计入，而这类资产可能承担运营或财资用途，受限货币资金则未计入。单看62.00%的负债率及0.575倍的不含租赁带息债务/最近十二个月（LTM）<span class="g">EBITDA代理（息税折旧摊销前利润代理）</span>，当前偿债压力不高；这不能替代债务到期结构、受限现金和营运资金的审查。问题不在“有没有资产”，而在资产是否被营运资本、产能、研发和理财需求长期锁定。</p>
 
   <h3>汽车金融必须与合并净现金分开</h3>
   <div class="tblscroll">
@@ -511,7 +561,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
   <div class="finds">
     <div class="find good"><div class="t">历史现金回报</div><p>2023–25累计现金分红94.09亿元，约占同期累计归母净利润31.86%。FY2025每股股息0.35元；本期不派中期股息。</p></div>
-    <div class="find warn"><div class="t">回购兑现仍弱</div><p>6月回购1,108万股H股、耗资HK$1.143亿；7月再购35.1万股。股份作为<span class="g">库存股</span>持有，尚未注销。</p></div>
+    <div class="find warn"><div class="t">执行重启，注销缺席</div><p>截至8月28日累计回购1,281.8万股H股、耗资约HK$1.285亿，约占当日H股非库存股份市值0.70%；股份仍作<span class="g">库存股</span>持有，尚未注销。</p></div>
   </div>
 
   <h3>关联采购需要持续公允性审查</h3>
@@ -526,7 +576,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
         <tr><td>未行使2023期权</td><td>4,275.5万份</td><td>对应估值日经济股数约0.499%的剩余潜在稀释</td></tr>
         <tr><td>2026限制性股票</td><td>3,198.4万股</td><td>授予价10.03元；8月已登记发行</td></tr>
         <tr><td>当年发行稀释</td><td>约0.374%</td><td>按限制性股票除以登记前经济股数</td></tr>
-        <tr><td><span class="g">保守完全摊薄股数</span></td><td>86.098亿股</td><td>经济股数加全部未行使期权，不计行权现金</td></tr>
+        <tr><td><span class="g">保守完全摊薄股数</span></td><td>86.084亿股</td><td>经济股数加全部未行使期权，不计行权现金</td></tr>
         <tr><td>H1股份支付费用</td><td>0.670亿元</td><td>原计划费用估计在2026–28年确认，最终取决于归属与失效</td></tr>
         <tr><td>2026业绩门槛</td><td>销量180万辆 / 净利润100亿元</td><td>销量与利润各占一半权重</td></tr>
         <tr><td>下半年所需</td><td>约122.4万辆 / 75.35亿元</td><td>达标难度高，不应预设全部归属</td></tr>
@@ -537,35 +587,57 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
   <h3>官方问答是审核后的文字互动，不是逐字稿</h3>
   <p>2026H1业绩说明会的证据是上证路演中心发布、经公司审核的官方网络文字互动记录；它不是电话会逐字稿，也不是财务意义上的“经审计问答”。没有取得当前期第三方逐字稿，问题来自匿名或脱敏投资者，不应写成实名分析师问答。按本文逐子问题分类，15项中直接回答5项、部分回答4项、未回答6项。</p>
-  <p>管理层列出降本和海外拓展动作，但未给已兑现节省额或量化下半年指引；所称647.37亿元“现金储备”是货币资金与交易性金融资产之和，包含受限资金且未扣债务，不等于净现金。财务负责人未回答2025Q4、2026Q1俄罗斯报废税返还是否到账及预计时点，因此现金到账状态仍不可验证。回购方面只确认已经有动作，没有给未来金额、股份类别或期限。</p>
+  <p>管理层列出降本和海外拓展动作，但未给已兑现节省额或量化下半年指引；所称647.37亿元“现金储备”是货币资金与交易性金融资产之和，包含受限资金且未扣债务，不等于净现金。财务负责人未回答2025Q4、2026Q1俄罗斯报废税返还是否到账及预计时点，因此现金到账状态仍不可验证。文字互动只确认已有回购动作，没有给未来金额、股份类别或期限；两天后的8月28日回购证明执行重新启动，却仍没有量化承诺或注销。</p>
   <div class="plain"><span class="pl">白话解读</span><p>资本回报要把“授权、执行、注销”分开：有回购许可不等于已经买，买成库存股也不等于股数已经减少。限制性股票已经发行并计入当前股本，剩余期权才是已知潜在稀释；估值再用完全摊薄股数，是为了不把同一份股东价值分给过少的股份。</p><p>官方文字互动提供了管理层动作清单，却没有给费用节省、海外利润目标、俄罗斯政策款到账或后续回购额度。<b>这类交流的价值主要在暴露尚未回答的问题，不能升级成管理层量化指引。</b></p></div>
 </section>
 
 <section class="reveal on" id="market">
   <div class="slabel">市场与同业</div>
   <h2>H股资产折价很深，市场却没有给业绩正反馈</h2>
-  <p>中期业绩于8月25日收市后发布，本报告统一使用该日业绩前收盘作为估值锚点，不代表当前市场价。次日香港时间10:00，H股报HK$8.31、跌0.60%，而恒指和国企指数分别上涨1.05%与1.57%；A股同期上涨0.84%。这只是盘中初步反应，不是首个完整交易日结论，也不进入目标价模型。</p>
+  <p>中期业绩于8月25日收市后发布。次日香港时间10:00，H股报HK$8.31、跌0.60%，而恒指和国企指数分别上涨1.05%与1.57%；A股同期上涨0.84%。这只是首个业绩后交易日的盘中反应。最新完整收盘为8月28日HK$7.97；估值采用这个可交易价格，8月25日HK$8.36只保留为事件前锚点。价格走弱不能反推出市场的单一原因。</p>
 
   <div class="tblscroll">
     <table class="tbl">
-      <caption>A/H价格与风险截面｜Wind；股价不含股息</caption>
+      <caption>价格、估值与风险截面｜Wind及港交所财务自算；股价不含股息</caption>
       <thead><tr><th>指标</th><th>数值</th><th>解释</th></tr></thead>
       <tbody>
-        <tr><td>A股折算港元价</td><td>HK$17.95</td><td><span class="g">H股相对A股折价</span>53.43%</td></tr>
-        <tr><td>H股统一口径LTM <span class="g">市盈率（PE）</span> / PB</td><td>10.25x / 0.70x</td><td>按全部经济流通股同价估值</td></tr>
+        <tr><td>H股完整收盘</td><td>HK$7.97</td><td>2026-08-28；52周低/高为HK$7.78 / 18.95</td></tr>
+        <tr><td>Wind滚动市盈率（TTM PE）/ 市净率（PB）/ 股息率</td><td>9.91x / 0.679x / 5.05%</td><td>供应商定义；用于市场交叉核对</td></tr>
+        <tr><td>港交所财务统一口径LTM PE / PB</td><td>9.77x / 0.67x</td><td>按全部经济流通股同价估值</td></tr>
+        <tr><td>事件前A/H价差</td><td>H股折价53.43%</td><td>2026-08-25：H股HK$8.36，A股折算HK$17.95</td></tr>
+        <tr><td>250日价格变化</td><td>−53.58%</td><td>截至2026-08-28；约一个交易年</td></tr>
         <tr><td>三年周度<span class="g">Beta</span> / 相关系数</td><td>0.96x / 0.47</td><td>Beta衡量股价相对恒指的统计敏感度；155个周收益</td></tr>
-        <tr><td><span class="g">年化波动 / 最大回撤</span></td><td>44.19% / −54.35%</td><td>低PB并不等于低风险</td></tr>
+        <tr><td><span class="g">周度收益年化波动 / 周度收盘最大回撤</span></td><td>44.19% / −54.35%</td><td>截至2026-08-21；低PB并不等于低风险</td></tr>
         <tr><td>三年相对恒指收益</td><td>−44.03个百分点</td><td>公司与行业变量主导定价</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Wind年末序列显示，2021–25年H股PB在1.13–3.50倍之间；当前供应商字段与港交所财务自算值仅有四舍五入差异，均处于该序列的低端。Wind静态股息率为4.81%。历史PE定义与港交所财务自算值存在冲突，只作方向背景。</p>
+  <p>Wind年末序列显示，2021–25年H股PB在1.13–3.50倍之间；当前供应商字段与港交所财务自算值接近，但仍有约1.4%的供应商口径差异，均处于该序列的低端。历史PE定义与港交所财务自算值存在冲突，只作方向背景。三年周度Beta接近一倍也只是价格统计，不证明经营盈利具备同样防御性。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>H股PB不足一倍，意思是市场只愿意按账面净资产打折定价；但这不自动代表折价买到可变现资产：如果资产长期不能产生足够ROE、不能分红或不能通过低价回购并注销增厚每股价值，折价可以持续。</p><p><b>折价是估值问题的起点，不是答案。</b>下一节把同业、盈利与资产放进同一套框架，检验当前价格究竟要求主业和资产做到多少。</p></div>
+</section>
 
-  <h3>同业轨迹：便宜的是资产，不是独占的盈利倍数</h3>
+<section class="reveal on" id="valuation">
+  <div class="slabel">市场定价 · 预测与估值</div>
+  <h2>现价给了资产折价，也给主业修复出了考题</h2>
+  <p>现价低于三法基准区间下端，但明显上行主要依赖资产兑现。以下按四步检验：先锁定现价与每股分母，再用同业判断折价是否独特，然后把主业与资产分开搭建三档情景，最后反推现价已经承认多少资产价值。</p>
+
+  <div class="grid" data-valuation="summary">
+    <div class="cell"><div class="k">现价</div><div class="v">7.97<span class="u">港元</span></div><div class="d"><span>2026-08-28完整收盘</span></div></div>
+    <div class="cell"><div class="k">熊市价值（三法）</div><div class="v">2.31<span class="u">–5.41</span></div><div class="d"><span>港元/股</span><span class="down">较现价−71.0%~−32.1%</span></div></div>
+    <div class="cell"><div class="k">基准价值（三法）</div><div class="v">8.60<span class="u">–12.21</span></div><div class="d"><span>港元/股</span><span class="up">较现价+8.0%~+53.2%</span></div></div>
+    <div class="cell"><div class="k">牛市价值（三法）</div><div class="v">19.17<span class="u">–20.70</span></div><div class="d"><span>港元/股</span><span class="up">较现价+140.5%~+159.7%</span></div></div>
+    <div class="cell"><div class="k">现价隐含主业估值</div><div class="v">3.75<span class="u">倍</span></div><div class="d"><span>扣基准调整资产后的LTM核心EBIT</span></div></div>
+    <div class="cell"><div class="k">一句话判断</div><div class="v">中性偏多</div><div class="d"><span>等待利润、现金与注销验证</span></div></div>
+  </div>
+
+  <h3>第一步 · 市场现在给什么价</h3>
+  <p>先固定股份分母，是为了避免期后增发、库存股和潜在期权使每股价值失真。现价对应港交所财务自算LTM PE约9.77倍、PB约0.67倍。股份桥从6月末85.534亿股出发，加8月登记的3,198.4万股限制性股票，减8月注销的693.1万股员工持股计划股份，再加435股转债换股，得到85.785亿股已发行股份；剔除1,281.8万股H股库存股后，经济股数为85.657亿股。模型再加入4,275.5万份未行使期权，使用86.084亿股保守完全摊薄分母，不计期权行权所得。</p>
+
+  <h3>第二步 · 同业折价能回答什么</h3>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>2023–25经营轨迹与2026-08-25估值｜Wind无量纲口径；标准化经营利润率=Wind营业利润÷营业收入；长城PE由港交所财务利润自算</caption>
-      <thead><tr><th>公司</th><th>收入CAGR</th><th>2025毛利率</th><th>标准化经营利润率</th><th>PE / PB</th></tr></thead>
+      <caption>同业经营轨迹与事件前估值快照｜Wind，2026-08-25同一批次；长城PE由港交所财务利润自算</caption>
+      <thead><tr><th>公司</th><th>2023–25收入CAGR</th><th>2025毛利率</th><th>标准化经营利润率</th><th>PE / PB</th></tr></thead>
       <tbody>
         <tr><td>比亚迪H</td><td>15.5%</td><td>17.7%</td><td>2.8%</td><td>27.64x / 3.25x</td></tr>
         <tr><td>吉利汽车H</td><td>38.8%</td><td>16.6%</td><td>3.7%</td><td>10.74x / 1.89x</td></tr>
@@ -575,82 +647,56 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p>吉利显示相近PE伴随更高收入增长；比亚迪与新势力的高PB则依赖更强增长或产品预期。长城的竞争优势仍在越野、皮卡和海外适配，统计Beta接近市场并不能证明盈利防御性。</p>
-  <div class="plain"><span class="pl">白话解读</span><p>H股PB不足一倍，意思是市场只愿意按账面净资产打折定价；但这不自动代表折价买到可变现资产：如果资产长期不能产生足够ROE、不能分红或不能通过低价回购并注销增厚每股价值，折价可以持续。上汽更低的PB就是提醒。</p><p>长城的利润倍数与吉利、上汽并没有数量级差异，真正特殊的是A/H价差和资产折价。<b>所以重估要靠资产变成每股回报，而不是等待“便宜”自己消失。</b>业绩后盘中相对走弱只说明最初反应偏冷，不能反推出市场的单一理由。</p></div>
-</section>
+  <p>同业不是直接可比物。吉利显示相近PE可以伴随更高增长，上汽则说明更低PB也能长期存在；比亚迪与新势力的高PB依赖增长和产品预期。长城真正特殊的是资产与A/H折价，而不是拥有独占的低盈利倍数。该表保留8月25日单一批次，只作横向背景，不与8月28日现价机械比较。</p>
 
-<section class="reveal on" id="valuation">
-  <div class="slabel">估值</div>
-  <h2>真正的估值问题，是资产能否变成每股回报</h2>
-  <p>为观察剔除政府补助、投资收益、公允价值变动及财务费用（含汇兑）后的集团经营结果，模型构造<span class="g">核心制造EBIT代理</span>：收入减成本、税金、销售、管理、研发和减值，再加处置收益。它是分析师自定义的集团口径指标，不等于公司营业利润、扣非净利润或汽车制造分部利润；公司也没有披露制造分部利润。LTM代理EBIT为51.14亿元，利润率2.20%。</p>
-
-  <div class="steps">
-    <div class="step"><div class="n">第一步</div><b>市场现在付什么价</b><p>估值用2026年8月25日业绩前H股收盘约HK$8.4：约为滚动利润的十倍、每股净资产的七折；不把次日盘中反应混入模型。</p></div>
-    <div class="step"><div class="n">第二步</div><b>先问同业为何更贵</b><p>把自身历史折价与比亚迪、吉利、上汽等不同经营样本对照；低PB只有在ROE、增长或资本分配改善时才可能收敛。</p></div>
-    <div class="step"><div class="n">第三步</div><b>再把生意与资产分开</b><p><span class="g">EV/EBIT</span>加调整资产衡量资产保护，退出PE衡量盈利价值，PB—ROE检验账面资本的赚钱能力。三者调和，不取平均。</p></div>
-    <div class="step"><div class="n">第四步</div><b>回到价格意味着什么</b><p>全部方法使用已登记股份并加入剩余期权的保守完全摊薄股数；价格区间只有在对应经营与资本分配条件成立时才有效。</p></div>
-  </div>
-
-  <h3>三年驱动与现金转换</h3>
-  <p><span class="g">现金转换率</span>表示税后核心制造EBIT有多少转成模型自由现金流；<span class="g">分析税率</span>是情景假设的税负，不是公司指引或单季有效税率。表中的E表示分析预测，例如2026E就是2026年预测值。</p>
+  <h3>第三步 · 三档情景把主业与资产分开</h3>
+  <p>模型构造<span class="g">核心制造EBIT代理</span>：收入减成本、税金、销售、管理、研发和减值，再加处置收益，并排除财务费用、其他收益、投资收益和公允价值变动。LTM为51.14亿元、利润率2.20%；它是分析者定义的集团经营代理，不是公司营业利润、扣非净利润或制造分部利润。</p>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>分析假设，不是管理层指引｜序列均为2026E / 2027E / 2028E，E表示分析预测</caption>
-      <thead><tr><th>场景</th><th>收入增长</th><th>核心EBIT率 / 归母净利率</th><th>现金转换率</th><th>分析税率</th></tr></thead>
+      <caption>估值驱动与输出总表｜预测金额为人民币十亿元，每股价值为港元；均为分析假设而非公司指引</caption>
+      <thead><tr><th>驱动 / 结果</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
       <tbody>
-        <tr><td>熊市</td><td>+5% / −2% / +1%</td><td>2.0%/1.5% · 1.6%/1.2% · 1.8%/1.4%</td><td>50% / 55% / 60%</td><td>25%</td></tr>
-        <tr><td>基准</td><td>+9% / +6% / +5%</td><td>2.3%/2.5% · 两项均2.7% · 两项均3.0%</td><td>60% / 70% / 75%</td><td>18%</td></tr>
-        <tr><td>牛市</td><td>+12% / +11% / +8%</td><td>2.9%/3.2% · 3.5%/3.8% · 4.2%/4.5%</td><td>70% / 80% / 90%</td><td>16%</td></tr>
+        <tr><td>2026E / 2027E / 2028E收入增长</td><td>+5% / −2% / +1%</td><td>+9% / +6% / +5%</td><td>+12% / +11% / +8%</td></tr>
+        <tr><td>2028E核心EBIT率 / 归母净利率</td><td>1.8% / 1.4%</td><td>3.0% / 3.0%</td><td>4.2% / 4.5%</td></tr>
+        <tr><td>2026E→2028E收入</td><td>233.97→231.58</td><td>242.88→270.32</td><td>249.56→299.18</td></tr>
+        <tr><td>2026E→2028E归母净利</td><td>3.51→3.24</td><td>6.07→8.11</td><td>7.99→13.46</td></tr>
+        <tr><td>2026E→2028E自由现金流代理</td><td>1.75→1.88</td><td>2.75→4.99</td><td>4.26→9.50</td></tr>
+        <tr><td>现金转换率序列 / 分析税率</td><td>50%/55%/60% · 25%</td><td>60%/70%/75% · 18%</td><td>70%/80%/90% · 16%</td></tr>
+        <tr><td>交易性金融资产确认 / 汽车金融估值净资产倍数（P/NAV）</td><td>0% / 0.75x</td><td>50% / 0.85x</td><td>80% / 1.00x</td></tr>
+        <tr><td>退出EV/EBIT / PE / 折现率</td><td>6x / 7x / 13%</td><td>8x / 10x / 11%</td><td>10x / 13x / 9.5%</td></tr>
+        <tr><td>可持续ROE / 永续增长g / 合理PB</td><td>5% / 0% / 0.38x</td><td>9% / 3% / 0.75x</td><td>13% / 4% / 1.64x</td></tr>
+        <tr><td>期后桥调整资产</td><td>21.141</td><td>39.331</td><td>51.166</td></tr>
+        <tr><td>核心制造EV/EBIT + 调整资产</td><td>5.41</td><td>12.21</td><td>20.70</td></tr>
+        <tr><td>2028E归母利润退出PE</td><td>2.31</td><td>8.60</td><td>19.17</td></tr>
+        <tr><td>PB–可持续ROE</td><td>4.55</td><td>8.88</td><td>19.38</td></tr>
       </tbody>
     </table>
   </div>
+  <p><span class="g">现金转换率</span>表示税后核心EBIT有多少变成模型自由现金流；<span class="g">分析税率</span>不是公司指引。<span class="g">SOTP（分部加总法）</span>用于把制造主业与金融资产分开：先把2028年末核心EBIT按退出倍数计价，再以约2.34年折现回8月28日并加调整资产。PE法不再加资产，用于检验正常化利润；PB—ROE按（可持续ROE−g）÷（股权资本成本−g）计算，用于检验账面资本应获得的估值。三种方法回答不同问题，只调和、不取平均。</p>
+  <p class="small">资产法以6月末不受限货币资金276.32亿元为起点，只对已披露的期后事项作机械调整，并假定日常经营、资本开支、融资和理财等未披露变动不变：保守扣除6月末应付股利全额29.90亿元（中报列示7–8月实际付款合计29.87亿元），加入已收到的汽车金融分红37.30亿元，再扣除按公告股数和回购价推算的员工持股计划回购注销现金0.94亿元，以及7月、8月H股回购现金折合0.12亿元，得到282.67亿元备考值。它不是8月28日实际现金余额。汽车金融归属长城的6月末净资产也机械减去该笔分红后再按情景折价，避免一笔价值计两次；这同样不是8月28日实际净资产。</p>
+  <p class="small">完整公式是：上述备考现金 + 1.54亿元非银行金融机构存款 + 340.96亿元交易性金融资产×情景确认率 + 1.29亿元衍生金融资产与3.01亿元其他非流动金融资产×熊/基/牛0%/50%/100%确认率 + 92.72亿元期后汽车金融应占净资产×P/NAV − 108.77亿元借款及债券 − 33.57亿元租赁负债。</p>
+  <p class="small">8月限制性股票认购款毛额3.21亿元不计入资产：它跨越资产负债表日且伴随归属与回购义务，模型采用不计所得的保守稀释口径。每股估值使用8月28日中国货币网参考汇率1港元=人民币0.85734元；事件前A/H价差保留8月25日同日汇率0.8578。</p>
 
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>三年输出｜每格为收入 / 归母净利 / 自由现金流代理，人民币十亿元</caption>
-      <thead><tr><th>场景</th><th>2026E</th><th>2027E</th><th>2028E</th></tr></thead>
-      <tbody>
-        <tr><td>熊市</td><td>233.97 / 3.51 / 1.75</td><td>229.29 / 2.75 / 1.51</td><td>231.58 / 3.24 / 1.88</td></tr>
-        <tr><td>基准</td><td>242.88 / 6.07 / 2.75</td><td>257.45 / 6.95 / 3.99</td><td>270.32 / 8.11 / 4.99</td></tr>
-        <tr><td>牛市</td><td>249.56 / 7.99 / 4.26</td><td>277.02 / 10.53 / 6.52</td><td>299.18 / 13.46 / 9.50</td></tr>
-      </tbody>
-    </table>
+  <h3>把三档价值与现价放在一把尺上</h3>
+  <div class="rows" aria-label="长城汽车三种估值方法的熊市、当前、基准及牛市价值对比">
+    <div class="row"><div class="nm">熊市区间<span>利润与资产同时受压</span></div><div class="track"><div class="fill alt" style="width:26.137%"></div></div><div class="fig">HK$2.31–5.41<span class="down">较现价−71.0%至−32.1%</span></div></div>
+    <div class="row"><div class="nm">当前市场<span>2026-08-28收盘</span></div><div class="track"><div class="fill soft" style="width:38.509%"></div></div><div class="fig">HK$7.97<span>完整收盘</span></div></div>
+    <div class="row"><div class="nm">基准区间<span>温和修复、资产部分兑现</span></div><div class="track"><div class="fill" style="width:59.009%"></div></div><div class="fig">HK$8.60–12.21<span class="up">较现价+8.0%至+53.2%</span></div></div>
+    <div class="row"><div class="nm">牛市区间<span>利润率与资产折价共振</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$19.17–20.70<span class="up">较现价+140.5%至+159.7%</span></div></div>
   </div>
-  <p class="small">自由现金流代理=核心制造EBIT×（1−分析税率）×现金转换率。它不沿用2025年受营运资金影响较大的机械自由现金流。</p>
+  <p class="small">每档区间覆盖三种方法的完全摊薄输出，不是概率区间或目标价承诺；条形按各区间上端相对牛市上端等比绘制。</p>
 
-  <h3>三种方法不取平均</h3>
-  <p>“退出倍数”是对2028年末利润或EBIT给予的估值倍数；“折现率”把未来价值按风险和时间换算回估值日，折现率越高，今天的价值越低。</p>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>每股港元；从2026-08-25至2028年末约2.33年；按全部已知期权摊薄且不计行权所得；汇率为1港元=人民币0.8578元</caption>
-      <thead><tr><th>方法</th><th>熊市</th><th>基准</th><th>牛市</th><th>承重假设</th></tr></thead>
-      <tbody>
-        <tr><td>核心制造EV/EBIT + 调整资产</td><td>5.73</td><td>12.58</td><td>21.15</td><td>退出倍数6x / 8x / 10x；折现率13% / 11% / 9.5%</td></tr>
-        <tr><td>2028E归母利润退出PE</td><td>2.31</td><td>8.61</td><td>19.18</td><td>退出PE 7x / 10x / 13x</td></tr>
-        <tr><td>PB–可持续ROE</td><td>4.55</td><td>8.87</td><td>19.36</td><td>合理PB 0.38x / 0.75x / 1.64x；前两法沿用同场景股权成本</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small"><span class="g">Ke</span>代表股权资本成本，<span class="g">g</span>代表永续增长率。PB–ROE按（可持续ROE−g）÷（Ke−g）计算；熊、基准、牛的g分别为零、三和四个百分点。PE法不额外加现金，资产法才单列调整资产，因此三种方法只调和、不平均。</p>
-
-  <h3>把三档价值与业绩前价格放在一把尺上</h3>
-  <div class="rows" aria-label="三种估值方法的情景价值与业绩前价格对比">
-    <div class="row"><div class="nm">熊市<span>利润与资产同时受压</span></div><div class="track"><div class="fill alt" style="width:27.1%"></div></div><div class="fig">HK$2.3–5.7<span class="down">较锚点约−72.4%至−31.5%</span></div></div>
-    <div class="row"><div class="nm">业绩前价格<span>2026-08-25收盘</span></div><div class="track"><div class="fill soft" style="width:39.5%"></div></div><div class="fig">HK$8.36<span>统一估值锚点</span></div></div>
-    <div class="row"><div class="nm">基准<span>温和修复、资产部分兑现</span></div><div class="track"><div class="fill" style="width:59.5%"></div></div><div class="fig">HK$8.6–12.6<span class="up">较锚点约+2.96%至+50.5%</span></div></div>
-    <div class="row"><div class="nm">牛市<span>利润率与资产折价共振</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$19.2–21.2<span class="up">较锚点约+129.4%至+153.0%</span></div></div>
-  </div>
-  <p class="small">每档区间覆盖上表三种方法的完全摊薄输出，显示值为一位小数；条形按各情景区间上端相对牛市上端绘制，业绩前价格使用同一比例。熊市完整区间覆盖退出市盈率（P/E）的较低结果，不能只读作资产保护区间。</p>
-  <p>资产法按熊、基准、牛分别确认0%、50%、80%的交易性金融资产，并把汽车金融净资产按0.75、0.85、1.00倍计价；调整后资产价值为234.85、420.72、545.03亿元。限制性股票已经计入股本，表内再计入全部剩余期权，因此是保守的完全摊薄结果。</p>
-  <p>基准资产折价后，核心制造企业价值约193.64亿元，对应3.79倍LTM核心EBIT。若主业按基准退出倍数计价，业绩前价格只承认基准调整资产的48.79%。市场并非完全忽略资产，而是在质疑其可分配性和未来主业利润。</p>
-  <div class="plain"><span class="pl">白话解读</span><p>三种方法问的是三个不同问题。资产法问“把主业和打折后的金融资产分开算，值多少”；PE法问“未来利润值多少”；PB—ROE法问“这份净资产的赚钱能力配得上几倍账面”。它们不能平均，因为只有资产法另外加了调整资产。</p><p>基准情景里，利润法与PB法只比业绩前价格高一点，资产法给出的空间更大。<b>这意味着当前赔率主要来自资产折价，而不是已经被证明的盈利增长。</b>若金融资产不能分配、制造利润率不能修复，资产法的较高结果就不会自动兑现。</p></div>
+  <h3>第四步 · 当前价格隐含什么</h3>
+  <p>反推现价，是为了检验低估论究竟依赖市场漏算了多少资产，而不是再给一个目标价。按H股同价给全部经济股定价，当前权益价值约585.29亿元。若先扣除基准调整资产393.31亿元，主业只剩约191.98亿元，对应3.75倍LTM核心EBIT；反过来若先给主业8倍LTM核心EBIT，现价只承认约176.19亿元资产价值，相当于基准调整资产的44.8%。这是一项估值敏感性，不代表市场真的逐项采用同一算法。</p>
+  <div class="plain"><span class="pl">一句话总结</span><p>利润法与PB法的基准值只有HK$8.60和HK$8.88，说明现价的第一层上行并不大；资产法把上端推到HK$12.21。<b>当前赔率主要来自资产折价，而不是已被证明的盈利增长。</b> 若资产不能分配、制造利润不能修复，熊市仍有约32%–71%下行，因此判断是中性偏多、等待验证。</p></div>
 </section>
 
 <section class="reveal on" id="risks">
   <div class="slabel">风险验证</div>
   <h2>海外成长论需要同时通过销量、利润与现金三道门</h2>
+  <p>现有证据证明了规模和局部利润样本，尚未证明完整海外利润与现金；验证必须同时落到终端需求、制造盈利和资本回报。</p>
   <div class="finds">
-    <div class="find good"><div class="t">最强正证</div><p>其他国家来源收入已覆盖国内缺口，披露的三家主要海外子公司各自盈利；全球化已经贡献规模与局部利润正样本。</p></div>
+    <div class="find good"><div class="t">最强正证</div><p>规模正证据已经出现，披露的三家主要海外子公司也各自盈利；但它们仍不是完整海外利润与现金表。</p></div>
     <div class="find warn"><div class="t">最强反证</div><p>国内与新能源方向偏弱，生产增速高于销售；完整海外利润与现金、经销商库存和终端零售仍不可见。</p></div>
     <div class="find"><div class="t">反方解释</div><p>补贴与汇率解释了逐项营业利润变动的大部分异常；核心制造EBIT代理没有与归母净利润同幅下滑，但这仍是自定义代理，不证明修复。</p></div>
     <div class="find"><div class="t">解决变量</div><p>用三道门裁决：终端零售与经销商库存、区域毛利和现金、平台成本与工厂利用率，再叠加回购后注销或稳定分红。</p></div>
@@ -678,15 +724,22 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
 <section class="reveal on" id="decision">
   <div class="slabel">最终判断</div>
-  <h2>有条件低估，但不是无条件的净现金套利</h2>
+  <h2>有条件低估，但账面资金并非股东可直接取得的现金</h2>
   <p class="quote">资产提供下行缓冲，制造利润与资本配置决定折价何时收敛。</p>
-  <p>基准价值区间为<strong>HK$9–13</strong>。业绩前价格低于该区间下沿，但仅资产法给出显著上行；利润法与PB法都要求制造利润率温和修复。结论因此是“中性偏多、等待验证”，而不是仅凭账面金融资产重仓。</p>
+  <p>基准价值区间为<strong>HK$8.60–12.21</strong>。区间下沿比8月28日收盘高约8.0%，但仅资产法给出显著上行；利润法与PB法都要求制造利润率温和修复。结论因此是“中性偏多、等待验证”，而不是仅凭账面金融资产重仓。</p>
 
   <div class="finds">
     <div class="find good"><div class="t">适用投资者</div><p>适合能够承受汽车周期波动，并愿意等待资产回馈证据的长期价值投资者。</p></div>
     <div class="find"><div class="t">确认路径</div><p>国内与新能源止跌，海外增长同时改善制造利润和现金；合并报表存货/收入改善、回购后注销或分红提供第二重确认。</p></div>
     <div class="find warn"><div class="t">最强反证</div><p>资本密集车企可以长期低PB。若资产继续被营运资金和低回报扩张占用，折价本身不是催化剂。</p></div>
     <div class="find warn"><div class="t">论点失效</div><p>制造利润、产销与合并报表存货、资本回报三条验证线中若两条持续失败，低估论不再成立。</p></div>
+  </div>
+  <h3>把验证点排在时间线上</h3>
+  <div class="tline">
+    <div class="tstop"><span class="tw">下一份月度产销快报</span><b>产销差是否收窄</b><p>核对总量、品牌、新能源与海外口径，避免把生产增长直接当终端需求。</p></div>
+    <div class="tstop"><span class="tw">2026H2</span><b>规模能否留下利润与现金</b><p>核心制造EBIT率不低于当前LTM水平，存货同比与产销关系同时改善。</p></div>
+    <div class="tstop"><span class="tw">FY2026分红与回购公告</span><b>资产能否转成每股回报</b><p>全年H股回购明显超过H股市值1%，并出现注销或稳定现金分红。</p></div>
+    <div class="tstop warn"><span class="tw">连续两个半年度</span><b>论点失效警报</b><p>若核心制造EBIT率持续低于1.5%，且库存或资本回报线也失败，低估论下修。</p></div>
   </div>
   <p class="small">结论置信度：中等。主要限制是海外分部利润/现金、终端零售与经销商库存、补贴到账时点及管理层交流材料颗粒度有限。</p>
 </section>
@@ -719,9 +772,9 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
         <tr><td>核心制造EBIT代理</td><td>本文按收入、成本及经营费用自下而上构造，并排除财务费用、其他收益、投资收益和公允价值变动的集团经营利润代理；它不同于前文去补贴、去汇率敏感性代理，也不是公司披露的调整后指标或汽车制造分部利润。</td></tr>
         <tr><td>交易性金融资产</td><td>为交易或短期财资管理持有的金融资产，流动性和运营用途未必等同现金，估值时按情景折价。</td></tr>
         <tr><td>共同控制 / 权益法</td><td>关键决策需各方一致同意时属于共同控制；投资只按应占净资产与利润入账，不把被投企业全部资产和债务并表。</td></tr>
-        <tr><td>库存股</td><td>公司已经回购但尚未注销或处置的自家股份；只有注销后，已发行股数才真正减少。</td></tr>
+        <tr><td>库存股</td><td>公司已经回购但尚未注销或处置的自家股份；回购后经济流通股数暂时减少，但法定总发行股数未减少且股份仍可再出售，注销才形成永久减少。</td></tr>
         <tr><td>完全摊薄股数</td><td>当前经济股数再加入已知潜在期权等工具后的保守股份数；用于避免高估每股价值。</td></tr>
-        <tr><td>A/H折价</td><td>同一家公司A股和H股因投资者、流动性和市场分割而出现的价格差；不代表差价一定会收敛。</td></tr>
+        <tr><td>A/H双重上市 / A/H折价</td><td>同一家公司同时发行A股和H股；两地投资者、流动性和市场分割会形成价格差，不代表差价一定会收敛。</td></tr>
         <tr><td>Beta</td><td>股价收益相对市场指数收益的统计敏感度；它描述历史联动，不等于经营防御力或未来风险。</td></tr>
         <tr><td>年化波动 / 最大回撤</td><td>年化波动把历史价格波动折算成一年尺度；最大回撤是观察期内从一个高点到随后低点的最大跌幅。二者都是历史风险指标，不是未来预测。</td></tr>
         <tr><td>P/E（市盈率）</td><td>股价除以每股盈利，表示为一元利润支付多少价格；盈利处在高点或低点时会失真。</td></tr>
@@ -729,6 +782,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
         <tr><td>EV/EBIT</td><td>企业价值除以息税前利润，用于把经营资产价值与资本结构分开比较。</td></tr>
         <tr><td>现金转换率 / 分析税率</td><td>前者是模型里税后核心EBIT转成自由现金流的比例；后者是情景税负假设。二者都不是公司指引。</td></tr>
         <tr><td>Ke / g</td><td>Ke是股东要求的最低回报率，g是长期增长率；在PB—ROE公式中，风险要求越高、增长越低，合理估值越低。</td></tr>
+        <tr><td>CAS</td><td>中国企业会计准则。本文核心财务来自港交所发布的CAS中期报告；“在港交所披露”不等于报表采用IFRS。</td></tr>
       </tbody>
     </table>
   </div>
@@ -737,7 +791,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 <section class="reveal on" id="methods">
   <div class="slabel">方法与来源</div>
   <h2>港交所文件控制财务，市场数据只承担市场口径</h2>
-  <p>核心财务以香港联交所中文文件为准；Wind用于价格、指数、同业、汇率和周度风险序列。2026H1报告未经审计但经有限审阅，2025完整财年为经审计数据。业绩后市场观察截至上午十时，明确不是完整收盘。港交所披露检索截至2026年8月28日，没有发现晚于中期报告包的发行人文件；估值保持8月25日事件窗口，不以其后价格回填。</p>
+  <p>核心财务以香港联交所中文文件为准；Wind用于价格、指数、同业、汇率和周度风险序列。长城的中期财务采用中国企业会计准则（CAS），不是IFRS；2026H1数字未经审计，但会计师完成了范围小于年度审计的中期审阅，2025完整财年则经审计。港交所披露检索截至2026年8月29日，最新文件是8月28日H股回购翌日披露报表；估值使用8月28日完整收盘，8月26日上午十时行情只用于观察首次盘中反应。</p>
 
   <div class="tblscroll">
     <table class="tbl">
@@ -747,21 +801,25 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
         <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500607_c.pdf">2026中期报告</a></td><td>财务、产品、地域、治理与附注</td><td>未经审计，经有限审阅</td></tr>
         <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500569_c.pdf">2026H1业绩公告</a></td><td>法定摘要与披露时间</td><td>港交所中文控制源</td></tr>
         <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042401573_c.pdf">2026Q1报告</a></td><td>单Q2差额桥</td><td>同口径累计报表</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0829/2025082901571_c.pdf">2025中期报告</a></td><td>存货等上年同期资产负债表对照</td><td>未经审计，经有限审阅</td></tr>
         <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0327/2026032703717_c.pdf">2025年报</a></td><td>五年历史、重述与资本回报</td><td>经审计</td></tr>
         <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0328/2025032804769_c.pdf">2024年报</a></td><td>早期比较数据与原报资本开支</td><td>经审计</td></tr>
         <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0328/2024032802063_c.pdf">2023年报</a></td><td>早期比较数据与定义核对</td><td>经审计</td></tr>
         <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0330/2023033002921_c.pdf">2022年报</a></td><td>五年端点与原报现金流</td><td>经审计</td></tr>
         <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0701/2026070100126_c.pdf">2026年6月产销快报</a></td><td>品牌、海外与新能源经营口径</td><td>未经审计经营数据</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082801398_c.pdf">8月28日翌日披露报表</a></td><td>最新H股回购、库存股与股份分母</td><td>港交所发行人文件</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100645_c.pdf">8月21日翌日披露报表</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100652_c.pdf">海外监管公告</a></td><td>A股回购注销、转债换股与转股价桥</td><td>港交所发行人文件</td></tr>
+        <tr><td><a href="https://www.gwm.com.cn/news/3403969.html">哈弗H10</a>、<a href="https://www.gwm.com.cn/news/3403975.html">WEY V8X</a></td><td>8月新品上市时间</td><td>公司网站；非财务证据</td></tr>
         <tr><td><a href="https://roadshow.sseinfo.com/activityDetails/39994">2026H1业绩说明会</a></td><td>管理层增量与问答审计</td><td>公司审核文字互动</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="small">Q2损益与现金流由H1减Q1机械推算；每股收益、折旧摊销和ROE不可同法相减。核心制造EBIT、自由现金流、ROIC、单车收入、三年预测与估值均为分析口径。汽车金融采用权益法，不把其资产负债并入集团净现金。A/H价格单位经独立A股日线复核。</p>
+  <p class="small">Q2损益与现金流由H1减Q1机械推算；每股收益、折旧摊销和ROE不可同法相减。核心制造EBIT、自由现金流、ROIC、单车收入、三年预测与估值均为分析口径。汽车金融采用权益法，不把其资产负债并入集团净现金。A/H价格单位经独立A股日线复核。当前期对2333.HK及601633.SH的业绩会逐字稿检索均无匹配，因此只使用上证路演中心的公司审核文字互动；未把它写成电话会逐字稿、实名分析师问答或量化指引。</p>
   <div class="callout"><b>资料缺口：</b>没有品牌/车型/地域分部利润，没有经销商库存、终端零售、分厂利用率或平台单位经济。缺失项保持缺失，不以管理层措辞或媒体估算填补。</div>
 </section>
 
 <footer>
-  <p>财务数据截至2026年6月30日；港股完整价格截至2026年8月25日，业绩后盘中快照截至2026年8月26日香港时间10:00。数据来源：香港联交所、上证路演中心及万得 Wind 金融数据服务。</p>
+  <p>财务数据截至2026年6月30日；港交所发行人文件检索截至2026年8月29日；港股完整价格截至2026年8月28日，业绩后盘中快照截至2026年8月26日香港时间10:00。数据来源：香港联交所、公司网站、上证路演中心及万得 Wind 金融数据服务。</p>
   <p>本报告仅作研究交流。所有推算、代理指标、情景与估值均非公司指引，不构成任何投资建议或收益保证。</p>
 </footer>
 
