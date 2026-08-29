@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>招商银行 2026年中期及单二季度 Fullscan 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">招商银行 600036.SH · 03968.HK ｜ 全景尽调 ｜ 财务截至 2026.06.30 · 行情截至 2026.08.28 收盘</div>
+    <h1>营收三年停滞后重新加速，<br>但这次扛住利润的不是零售</h1>
+    <p class="lede">上半年营收三年来首次有力加速、分红率白纸黑字、不良率纹丝不动——表面是一份"零售之王"的标准答卷。<b>但拆开看，利润引擎已经换位：批发金融税前利润大增，零售金融税前利润大幅下滑，财富管理中收越烧越旺，而信用卡坏账还在加速生成、消费贷不良率抬头最快。</b>市场按0.9倍净资产给它定价、处在自身五年估值区间的低段——定价的是一家衰退的银行，报表给出的却是一家换挡的银行。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">财富管理手续费及佣金收入 · 同比</div>
+        <div class="big a">+26.5%</div>
+        <div class="cap">资本市场回暖带动代理基金与证券交易反弹、信托理财代销放量——第二引擎复苏进入第二年，火越烧越旺。</div>
+      </div>
+      <div>
+        <div class="tag">零售金融业务税前利润 · 同比</div>
+        <div class="big b">−17.6%</div>
+        <div class="cap">息差收窄叠加信用卡坏账多提减值，零售这台主引擎占集团税前利润的比重骤降11个百分点。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，读这里</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>中国零售银行的标杆：管理零售客户总资产（AUM）18.44万亿元、2.31亿零售客户、低成本存款是它的护城河。招商局集团系合计持股约30%，无单一控股股东经营干预的历史包袱。</li>
+      <li><b>本期成绩：</b>上半年营业收入1,781.81亿元（+4.83%），是营收连续三年原地踏步后的首次有力加速；归母净利润764.45亿元（+2.02%）。推算单二季度营收约912亿元、同比+5.8%，比一季度更快。</li>
+      <li><b>最大的变化：</b>赚钱的引擎换了位置——批发金融税前利润同比+23.3%，零售金融−17.6%；同时财富管理手续费+26.5%、复苏第二年增速仍在抬头。"零售之王"这半年靠对公和财富业务扛利润。</li>
+      <li><b>最大的坑：</b>零售信贷风险仍在生成：上半年新生成不良（坏账）371.86亿元（同比多生成44.65亿，本公司口径），其中信用卡一项237亿；消费贷不良率半年上升0.37个百分点。总不良率0.94%的"纹丝不动"，是靠对公改善和350亿元不良处置换来的。</li>
+      <li><b>估值结论：</b><b>中性偏积极。</b>现价39.35元对应0.90倍市净率（自身五年22%分位，即比过去五年约八成的时间都便宜）、股息率5.1%，中期分红比例已明文锁定35%；两法基准价值43.3–44.7元，比现价高约一成；H股较A股溢价约8%——同一份资产，境外定价此刻高于境内。向上要看零售风险见顶，向下有分红托底。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂一家银行</div>
+  <h2>一台"低成本存款机器"，利润在三条流水线上生产</h2>
+  <p>银行的生意一句话：低价把钱收进来（存款），高价把钱放出去（贷款和投资），中间的差价叫<span class="g">净息差</span>；再加上卖基金保险理财赚的手续费（业内叫"中收"），减去坏账拨备和运营费用，就是利润。读招行的报表，看三条流水线：</p>
+  <div class="steps">
+    <div class="step"><div class="n">引擎 1</div><b>息差生意</b><p>吸收10.16万亿存款、放出7.45万亿贷款。招行的独门武器是近一半存款是几乎不付息的活期——负债成本因此被压得极低。</p></div>
+    <div class="step"><div class="n">引擎 2</div><b>财富生意</b><p>2.31亿零售客户、18.44万亿AUM，卖基金、保险、理财抽佣金。这条线不占资本、不生坏账，是估值溢价的来源。</p></div>
+    <div class="step"><div class="n">底盘</div><b>风险与资本</b><p>贷款会变坏账，先提"拨备"垫着；资本充足率决定还能放多少贷。拨备和资本，是银行利润的"蓄水池"和"天花板"。</p></div>
+    <div class="step"><div class="n">出口</div><b>分红</b><p>赚到的钱按固定比例分给股东：自2013年以来分红率超30%，近两年35%以上，中期分红已成制度。</p></div>
+  </div>
+  <p>读它的报表，先记两件事。第一，<b>口径</b>：财报里<span class="g">本集团</span>指招行加上所有子公司，<span class="g">本公司</span>只指银行本身——不良率、拨备覆盖率两个口径数字略有不同，本报告逐处标注。第二，<b>拨备的会计</b>：银行每季度按预期损失计提减值，多提压利润、少提放利润，所以读银行利润必须同时读"拨备前利润"和减值计提的方向。带<span class="g">虚线下划线</span>的术语见文末名词速查。</p>
+  <p>行业背景：银行业整体净息差仍在收窄、有效信贷需求不足（招行自己在中报里就是这么说的），零售信贷风险是全行业现象。在这样的大盘里，营收能不能增长、坏账生成有没有见顶，是判断任何一家银行的两把尺子。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">基础财务 · 合并与分部地图</div>
+  <h2>三年横盘后的加速：营收+4.8%，且二季度快过一季度</h2>
+  <p>招商银行是A+H两地上市的全国性股份制商业银行，报表按中国企业会计准则编制，2026年半年度财务报告未经审计、但已经安永华明会计师事务所审阅。业务按零售金融、批发金融、其他业务三个分部披露。以下先给本期总量，再给推算单季、五年轨迹与分部地图。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">2026H1 营业收入</div><div class="v">1,781.81<span class="u">亿元</span></div><div class="d"><span class="up">同比 +4.83%</span></div></div>
+    <div class="cell"><div class="k">归母净利润</div><div class="v">764.45<span class="u">亿元</span></div><div class="d"><span class="up">同比 +2.02%</span></div></div>
+    <div class="cell"><div class="k">净利息收益率（NIM）</div><div class="v">1.83<span class="u">%</span></div><div class="d"><span>同比 −5bp · 降幅收窄</span></div></div>
+    <div class="cell"><div class="k">年化ROAE</div><div class="v">13.42<span class="u">%</span></div><div class="d"><span class="down">同比 −0.43pp</span></div></div>
+    <div class="cell"><div class="k">不良贷款率</div><div class="v">0.94<span class="u">%</span></div><div class="d"><span>与上年末持平</span></div></div>
+    <div class="cell"><div class="k">拨备覆盖率</div><div class="v">385.10<span class="u">%</span></div><div class="d"><span class="down">较上年末 −6.69pp</span></div></div>
+  </div>
+
+  <h3>推算单二季度：每条线都在加速</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>推算单二季度 · 人民币亿元；单二季度＝半年报减一季报，两端均为披露值（本集团）；2025年单二季度基数与2025年报分季度表吻合</caption>
+      <thead><tr><th>项目</th><th>2026Q2（推算）</th><th>2025Q2（推算）</th><th>同比</th><th>2026Q1（披露）同比</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入</td><td>912.41</td><td>862.18</td><td>+5.83%</td><td>+3.81%</td></tr>
+        <tr><td>净利息收入</td><td>563.80</td><td>530.89</td><td>+6.20%</td><td>+4.99%</td></tr>
+        <tr><td>非利息净收入</td><td>348.61</td><td>331.29</td><td>+5.23%</td><td>+1.77%</td></tr>
+        <tr><td>归母净利润</td><td>385.93</td><td>376.44</td><td>+2.52%</td><td>+1.52%</td></tr>
+        <tr><td>扣非归母净利润</td><td>385.44</td><td>376.83</td><td>+2.28%</td><td>+1.77%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>五年合并轨迹：利润爬坡，营收横盘，息差四连降</h3>
+  <div class="tblscroll" data-financials="history">
+    <table class="tbl" data-financials="history">
+      <caption>五年合并财务 · FY2021–FY2025；人民币亿元，比率为%，每股为元。FY2021各项来源：Wind（标准化口径）；FY2022–FY2025取自2024/2025年年度报告（本集团）。银行业无毛利、资本开支与自由现金流口径，以净利息收益率、成本收入比与经营现金流替代（替代说明见表下注）</caption>
+      <thead><tr><th>项目</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>四年CAGR</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入</td><td>3,312.53</td><td>3,447.83</td><td>3,391.23</td><td>3,374.88</td><td>3,375.32</td><td>+0.5%（推算）</td></tr>
+        <tr><td>归母净利润</td><td>1,199.22</td><td>1,380.12</td><td>1,466.02</td><td>1,483.91</td><td>1,501.81</td><td>+5.8%（推算）</td></tr>
+        <tr><td>净利息收益率（NIM）</td><td>2.48%</td><td>2.40%</td><td>2.15%</td><td>1.98%</td><td>1.87%</td><td>—</td></tr>
+        <tr><td>ROE（加权平均）</td><td>16.96%</td><td>17.06%</td><td>16.22%</td><td>14.49%</td><td>13.44%</td><td>—</td></tr>
+        <tr><td>成本收入比</td><td>未在证据集</td><td>32.88%</td><td>32.96%</td><td>31.89%</td><td>31.98%</td><td>—</td></tr>
+        <tr><td>不良贷款率</td><td>0.91%</td><td>0.96%</td><td>0.95%</td><td>0.95%</td><td>0.94%</td><td>—</td></tr>
+        <tr><td>拨备覆盖率</td><td>483.87%</td><td>450.79%</td><td>437.70%</td><td>411.98%</td><td>391.79%</td><td>—</td></tr>
+        <tr><td>核心一级资本充足率（高级法）</td><td>12.66%</td><td>13.68%</td><td>13.73%</td><td>14.86%</td><td>14.16%</td><td>—</td></tr>
+        <tr><td>基本每股收益（元）</td><td>未在证据集</td><td>5.26</td><td>5.63</td><td>5.66</td><td>5.70</td><td>—</td></tr>
+        <tr><td>每股净资产（元）</td><td>未在证据集</td><td>32.71</td><td>36.71</td><td>41.46</td><td>43.43</td><td>—</td></tr>
+        <tr><td>每股股息（含税，元）</td><td>1.522</td><td>1.738</td><td>1.972</td><td>2.000</td><td>2.016</td><td>—</td></tr>
+        <tr><td>经营活动现金流量净额</td><td>未在证据集</td><td>5,701.43</td><td>3,577.53</td><td>4,470.23</td><td>4,514.57</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cols" role="img" aria-label="五年营业收入与归母净利润趋势，数值见上方五年合并财务表">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:96.1%"></div><div class="bar np" style="height:34.8%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100.0%"></div><div class="bar np" style="height:40.0%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:98.4%"></div><div class="bar np" style="height:42.5%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:97.9%"></div><div class="bar np" style="height:43.0%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:97.9%"></div><div class="bar np" style="height:43.6%"></div></div></div>
+  </div>
+  <div class="collabels">
+    <div><b>2021</b></div>
+    <div><b>2022</b></div>
+    <div><b>2023</b></div>
+    <div><b>2024</b></div>
+    <div><b>2025</b></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
+  <p class="small">柱高按各年数值相对2022年营业收入3,447.83亿元等比绘制；具体数字见上表。蓝柱（营收）自2022年见顶后连续三年原地踏步，绿柱（利润）却还在缓慢爬升——利润靠什么撑住、还能撑多久，正是这份中报要回答的问题。</p>
+
+  <h3>三分部地图：利润引擎换位</h3>
+  <div class="tblscroll" data-financials="segments">
+    <table class="tbl">
+      <caption>2026H1分部经营业绩 · 人民币亿元（本集团，页32分部表）；占比为占本集团合计</caption>
+      <thead><tr><th>分部</th><th>营业收入</th><th>同比</th><th>税前利润</th><th>同比</th><th>税前利润占比</th></tr></thead>
+      <tbody>
+        <tr><td>零售金融业务</td><td>968.20</td><td>+0.65%</td><td>428.88</td><td>−17.58%</td><td>47.27%（−11.26pp）</td></tr>
+        <tr><td>批发金融业务</td><td>755.36</td><td>+7.42%</td><td>457.03</td><td>+23.33%</td><td>50.37%（推算）</td></tr>
+        <tr><td>其他业务</td><td>58.25</td><td>+68.60%（推算）</td><td>21.46</td><td>上年同期−1.87</td><td>2.37%（推算）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="stacks" role="img" aria-label="2025H1与2026H1分部营收结构对比，比例见下方说明">
+    <div class="stack">
+      <div class="cap">2025H1 营收结构</div>
+      <div class="stackbar"><div class="seg p" style="width:56.6%">零售</div><div class="seg q" style="width:41.4%">批发</div><div class="seg r" style="width:2.0%"></div></div>
+      <div class="legend"><span><i class="p"></i>零售金融</span><span><i class="q"></i>批发金融</span><span><i class="r"></i>其他</span></div>
+    </div>
+    <div class="stack">
+      <div class="cap">2026H1 营收结构</div>
+      <div class="stackbar"><div class="seg p" style="width:54.3%">零售</div><div class="seg q" style="width:42.4%">批发</div><div class="seg r" style="width:3.3%"></div></div>
+      <div class="legend"><span><i class="p"></i>零售金融</span><span><i class="q"></i>批发金融</span><span><i class="r"></i>其他</span></div>
+    </div>
+  </div>
+  <p class="small">结构条按各分部营业收入占本集团合计的比例绘制（2025H1零售占56.59%，2026H1降至54.34%，公司披露口径）。收入结构只挪了两个百分点，利润结构却换了位：批发金融税前利润（457.03亿）本期超过了零售金融（428.88亿）——对以零售立行的招行，这一幕值得单独记录。</p>
+
+  <h3>最新滚动口径</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>截至2026年6月的最近十二个月（TTM，推算）· 人民币亿元；TTM＝FY2025＋2026H1−2025H1</caption>
+      <thead><tr><th>营业收入</th><th>归母净利润</th><th>扣非归母</th><th>每股收益（推算）</th></tr></thead>
+      <tbody><tr><td>3,457.44</td><td>1,516.96</td><td>1,515.27</td><td>6.01元</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>五年故事一句话：<b>营收停了三年，利润没停</b>。2022年营收见顶3,448亿后连续三年横盘，利润却从1,380亿爬到1,502亿——靠的是拨备覆盖率从484%缓释到392%、成本收入比压降。这种"吃老本"式增长的尽头，就是市场把它按0.9倍净资产定价的原因。本期的不同在于：<b>营收自己动了</b>（+4.83%，且二季度+5.8%快过一季度+3.8%），而且不是靠放拨备——减值计提反而多提了18.5%。谁在拉动？下面三节分别拆息差、坏账和财富管理。</p>
+  </div>
+  <p class="small">银行业口径替代说明：无毛利率（收入即利差与服务费净额）、无资本开支/自由现金流口径（资产扩张记录在贷款与投资科目），以净利息收益率、成本收入比、经营现金流替代盈利质量指标。营收CAGR按首尾年四次方根推算。2026H1经营活动现金流量净额3,046.11亿元（同比净流入增加1,701.50亿元，本集团）。其他业务分部含子公司投资业务等，基数小、波动大。</p>
+</section>
+
+<section class="reveal on" id="nim">
+  <div class="slabel">盈利引擎 · 息差与量价</div>
+  <h2>息差保卫战：资产端掉32bp，负债端追回30bp</h2>
+  <p>净利息收入1,120.22亿元、同比+5.60%，是本期营收加速的第一驱动。在<span class="g">净息差</span>连年下行的背景下，这个增速是"以量补价、以负债补资产"打出来的：</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>量价拆解 · 人民币亿元与年化%（本集团，日均口径）；变动分析为公司披露的规模/利率因素拆分</caption>
+      <thead><tr><th>项目</th><th>2026H1</th><th>2025H1</th><th>变动</th></tr></thead>
+      <tbody>
+        <tr><td>生息资产平均收益率</td><td>2.82%</td><td>3.14%</td><td>−32bp</td></tr>
+        <tr><td>其中：贷款收益率</td><td>3.11%</td><td>3.45%</td><td>−34bp</td></tr>
+        <tr><td>计息负债平均成本率</td><td>1.05%</td><td>1.35%</td><td>−30bp</td></tr>
+        <tr><td>其中：客户存款成本率</td><td>0.97%</td><td>1.26%</td><td>−29bp</td></tr>
+        <tr class="grp"><td>净利息收入变动拆分</td><td colspan="3">规模因素 +82.79亿 ／ 利率因素 −23.42亿 ＝ 净增 +59.37亿</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finds">
+    <div class="find good"><div class="t">存款成本是护城河本体</div><p>存款成本率已降至1%以下、二季度单季0.95%；活期存款日均占比49.60%、较上年全年回升0.20pp——公司归因于居民投资活跃度回升。低成本负债让招行在降息周期里比同业多一层缓冲。</p></div>
+    <div class="find good"><div class="t">息差降幅明显收窄</div><p>单二季度NIM 1.82%、环比仅降1bp（公司披露），而2025年全年同比降了11bp——资产端重定价最痛的阶段正在过去。</p></div>
+    <div class="find warn"><div class="t">量的结构在换血</div><p>对公贷款日均余额同比+13.2%（推算）扛起放量，零售贷款日均仅+1.0%（推算）——居民不借钱，银行只能去做对公。对公放量在利率下行期以更低收益率（2.59%）成交，"以量补价"有天花板。</p></div>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>把银行想成一家"资金超市"：进货价（存款利率）和售价（贷款利率）都在被降息压低。招行本期的本事是<b>进货价降得几乎和售价一样快</b>（−30bp对−32bp），所以差价只缩了一点点；再靠多卖货（生息资产规模+8.9%）把总利润做正。这个打法的隐患也写在表里：多卖的货主要是低毛利的对公贷款，高毛利的零售贷款（收益率3.70%）根本卖不动。</p>
+  </div>
+  <p class="small">日均余额增速为按披露平均余额推算：生息资产123,699.44亿/113,586.12亿；公司贷款33,778.61亿/29,838.98亿；零售贷款36,711.64亿/36,340.69亿。净利差1.77%（同比−2bp）。</p>
+</section>
+
+<section class="reveal on" id="quality">
+  <div class="slabel">资产质量 · 拨备与利润桥</div>
+  <h2>0.94%的表面平静下，一场对公与零售的换防</h2>
+  <p>先把利润总额的变化拆成一座加法桥（2026H1对2025H1，本集团），再看"不良率持平"是怎么构成的。桥面数字全部来自利润表两期之差，加总与披露值一致：</p>
+
+  <div class="wfall" role="img" aria-label="2026H1对2025H1利润总额变化的加法桥，数值与下方文字一致">
+    <div class="wrow"><div class="nm">净利息收入<span>以量补价</span></div><div class="wtrack"><div class="wbar up" style="left:0.0%;width:72.5%"></div></div><div class="fig">+59.37</div></div>
+    <div class="wrow"><div class="nm">净手续费及佣金<span>财富管理拉动</span></div><div class="wtrack"><div class="wbar up" style="left:72.5%;width:27.5%"></div></div><div class="fig">+22.53</div></div>
+    <div class="wrow"><div class="nm">其余各项净额<span>其他净收入等</span></div><div class="wtrack"><div class="wbar down" style="left:99.2%;width:0.8%"></div></div><div class="fig">−0.64</div></div>
+    <div class="wrow"><div class="nm">业务及管理费<span>人力与运营开支</span></div><div class="wtrack"><div class="wbar down" style="left:78.0%;width:21.3%"></div></div><div class="fig">−17.41</div></div>
+    <div class="wrow"><div class="nm">信用减值损失<span>零售风险多提</span></div><div class="wtrack"><div class="wbar down" style="left:22.4%;width:55.6%"></div></div><div class="fig">−45.54</div></div>
+    <div class="wrow"><div class="nm">Δ利润总额<span>桥的合计</span></div><div class="wtrack"><div class="wbar tot" style="left:0.0%;width:22.4%"></div></div><div class="fig">+18.31</div></div>
+  </div>
+  <p class="small">单位：人民币亿元；每根柱按同一标尺画出累计值的行走（绿加红减）。"其余各项净额"＝其他净收入+0.22、税金及附加−0.17、其他资产减值−0.03、其他业务成本−0.66之和。信用减值损失合计291.77亿元、同比+18.49%：其中贷款计提254.63亿（+21.22亿，公司归因于对公规模上升及零售资产质量变动）、表外项目37.08亿（+22.62亿）；金融投资转回6.10亿。营业外收支两期均为−0.46亿。</p>
+
+  <p>这座桥的关键读法：<b>营收多赚的82.1亿里，55%被多提的减值吃掉</b>。公司没有用拨备粉饰利润——拨备前利润（营收减运营成本，推算）同比约+5.6%，比归母增速更能代表经营面。那么多提的减值去哪了？看坏账的生成与处置：</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>不良的生成与去向 · 人民币亿元（本公司口径，公司披露）；生成率为年化</caption>
+      <thead><tr><th>项目</th><th>2026H1</th><th>同比</th><th>阅读方式</th></tr></thead>
+      <tbody>
+        <tr><td>新生成不良贷款</td><td>371.86</td><td>+44.65</td><td>生成率（年化）1.06%，同比+0.08pp——风险仍在加速</td></tr>
+        <tr><td>其中：信用卡</td><td>236.98</td><td>+39.29</td><td>占全部生成的64%，是坏账的主产地</td></tr>
+        <tr><td>其中：零售（不含信用卡）</td><td>109.77</td><td>+2.47</td><td>按揭/小微/消费贷合计，温和多增</td></tr>
+        <tr><td>其中：对公</td><td>25.11</td><td>+2.89</td><td>生成极少——对公风险周期在低位</td></tr>
+        <tr><td>期内处置不良</td><td>350.13</td><td>—</td><td>不良资产证券化217.74＋常规核销80.17＋现金清收36.07＋其他16.15</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>贷款迁徙率（年化，%） · 本公司口径，监管口径计算；数值越高代表贷款劣化越快</caption>
+      <thead><tr><th>迁徙率</th><th>2026H1</th><th>2025H1</th><th>2025全年</th><th>2024全年</th></tr></thead>
+      <tbody>
+        <tr><td>正常类→关注类</td><td>1.62</td><td>1.63</td><td>1.35</td><td>1.39</td></tr>
+        <tr><td>关注类→不良</td><td>39.94</td><td>40.06</td><td>28.66</td><td>35.06</td></tr>
+        <tr><td>次级类→更差</td><td>135.05</td><td>122.71</td><td>72.51</td><td>79.04</td></tr>
+        <tr><td>可疑类→损失</td><td>101.13</td><td>104.50</td><td>75.21</td><td>60.93</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finds">
+    <div class="find good"><div class="t">对公在改善</div><p>公司贷款不良率0.78%、较上年末降0.11pp（本集团）；对公房地产不良率4.27%、较上年末降0.37pp（本公司）；本集团承担信用风险的房地产敞口3,592.09亿元、较上年末微增1.48%，其中房地产业贷款的不良额与不良率双降——上一轮周期的主战场风险正在退潮。</p></div>
+    <div class="find warn"><div class="t">零售在恶化</div><p>零售贷款不良率1.16%（+0.10pp，本集团）：信用卡1.90%（+0.16pp）、消费贷1.39%（+0.37pp，恶化最快）、小微1.34%（+0.12pp）；按揭不良率0.48%虽降，关注率却升0.27pp至1.84%（按揭关注率为本公司口径）。关注类贷款占比1.53%（+0.10pp）、逾期占比1.31%（+0.06pp）——先行指标全部向上。</p></div>
+    <div class="find"><div class="t">认定与垫子仍然扎实</div><p>不良认定严格：不良/逾期90天以上＝1.23（本集团）；拨备对不良的覆盖仍近四倍，信用成本（年化）0.69%、同比仅+0.02pp。风险在生成，但抵补能力没有被击穿。</p></div>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>把坏账想成一个浴缸：<b>进水口（新生成371.86亿）开得更大了，出水口（处置350.13亿）也开到接近同样大</b>，所以水位（不良率0.94%）看起来没动。真正要盯的是进水的速度——信用卡一项半年就生成237亿坏账，迁徙率表里"次级类135%"意味着已经变坏的贷款正加速滑向更坏。好消息是对公那一侧进水几乎关上了，房地产的历史包袱不再恶化。这是一场对公改善与零售恶化的换防，而不是全面的资产质量拐点。</p>
+  </div>
+  <div class="callout"><b>口径裁定：</b>总不良率与拨备覆盖率的头条值为本集团口径；不良生成、迁徙率与拨备余额2,580.40亿为本公司（银行本体）口径，本公司不良率0.93%、拨备覆盖率390.39%；分产品不良率取本集团表，个别仅本公司披露的指标就地标注。两口径趋势一致，本报告在数据表逐处标注，不混用。</div>
+</section>
+
+<section class="reveal on" id="wealth">
+  <div class="slabel">财富管理 · 第二引擎</div>
+  <h2>财富飞轮加速：复苏第二年，转速还在抬头</h2>
+  <p>财富管理是招行估值溢价的来源——不占资本、不生坏账、跟着居民资产搬家走。这个引擎在基金保险寒冬期一度失速，2025年已恢复增长（FY2025财富管理手续费+21.39%），本期在资本市场回暖中增速进一步抬头：</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>财富管理手续费及佣金收入拆分 · 人民币亿元（本集团）；增速与归因为公司披露</caption>
+      <thead><tr><th>项目</th><th>2026H1</th><th>同比</th><th>公司归因</th></tr></thead>
+      <tbody>
+        <tr><td>代理基金</td><td>39.35</td><td>+61.40%</td><td>权益类基金保有规模及销量提升</td></tr>
+        <tr><td>代销理财</td><td>50.76</td><td>+10.56%</td><td>代销规模增长及产品结构优化拉动</td></tr>
+        <tr><td>代理保险</td><td>34.39</td><td>+7.17%</td><td>业务结构优化（本公司零售保费693.69亿、−18.54%，以价补量）</td></tr>
+        <tr><td>代理信托计划</td><td>22.47</td><td>+43.76%</td><td>代销信托规模增长</td></tr>
+        <tr><td>代理证券交易</td><td>12.02</td><td>+46.05%</td><td>香港资本市场交易需求提升</td></tr>
+        <tr class="grp"><td>财富管理合计</td><td>161.92</td><td>+26.53%</td><td>代理非货币公募基金销售额4,867.61亿、同比+82.73%（本公司）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid">
+    <div class="cell"><div class="k">管理零售客户总资产（AUM）</div><div class="v">18.44<span class="u">万亿元</span></div><div class="d"><span class="up">较上年末 +7.96%</span></div></div>
+    <div class="cell"><div class="k">零售客户</div><div class="v">2.31<span class="u">亿户</span></div><div class="d"><span>较上年末 +3.13%</span></div></div>
+    <div class="cell"><div class="k">金葵花及以上客户</div><div class="v">640.74<span class="u">万户</span></div><div class="d"><span class="up">较上年末 +8.02%</span></div></div>
+    <div class="cell"><div class="k">私人银行客户</div><div class="v">21.60<span class="u">万户</span></div><div class="d"><span class="up">较上年末 +8.36%</span></div></div>
+    <div class="cell"><div class="k">大财富管理收入</div><div class="v">247.04<span class="u">亿元</span></div><div class="d"><span class="up">同比 +18.44%</span></div></div>
+    <div class="cell"><div class="k">两App月活跃用户</div><div class="v">1.24<span class="u">亿户</span></div><div class="d"><span>招商银行App＋掌上生活</span></div></div>
+  </div>
+
+  <div class="finds">
+    <div class="find good"><div class="t">高净值分层跑得更快</div><p>金葵花（50万元门槛）与私行（1,000万元门槛）客户增速都在8%以上、快于整体客户的3.13%——富人向招行集中的趋势没有被行业寒冬打断，这是AUM +7.96%的结构底座。</p></div>
+    <div class="find good"><div class="t">香港子公司大爆发</div><p>招银国际净利润30.73亿港元、同比+124.14%；招商永隆47.34亿港元、+55.88%——与香港资本市场活跃的方向一致，弹性直接进表（公司将其他业务分部非息+35.49%归因于附属机构投资业务收入增长）。</p></div>
+    <div class="find warn"><div class="t">信用卡与银行卡仍在收缩</div><p>信用卡交易额19,111.84亿元（−5.43%）、信用卡利息收入269.03亿元（−12.12%）（本公司）；银行卡手续费63.74亿元（−11.73%，本集团）。零售支付与循环信贷这台旧引擎还没有见底信号。</p></div>
+    <div class="find warn"><div class="t">资管子公司冷热不均</div><p>招银理财净利润15.13亿（+10.92%）、理财余额2.74万亿（+3.79%）；但招商基金净利润仅+1.65%，集团口径的资产管理手续费（53.70亿、−1.52%）仍在下滑；招银金租净利润−42.44%。"大资管"内部远未全面回暖。</p></div>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>这一节回答"营收加速靠不靠得住"。答案是：<b>一半靠得住，一半看天吃饭</b>。靠得住的一半是客户与AUM的增长——客户在、钱在，行情来了佣金就来；看天的一半是"行情"本身：代理基金+61%、证券交易+46%都跟着资本市场行情涨跌（所谓"贝塔"），行情退潮增速就会回落。还要记住一个反差：财富管理手续费重新点火的同时，信用卡这台曾经的零售利润机器仍在熄火——同一批零售客户，理财在回暖，借钱消费还没有。</p>
+  </div>
+  <p class="small">私人银行客户215,988户。零售财富管理手续费140.69亿元（+24.81%，本公司口径）为集团161.92亿中的零售部分。大财富管理收入＝财富管理＋资产管理＋托管手续费及佣金收入（公司定义）。托管佣金31.42亿（+20.52%）、结算与清算79.61亿（+4.72%）、其他净收入263.04亿（+0.08%：投资收益−41.49%被公允价值变动+94.00亿对冲，债市基数所致）。</p>
+</section>
+
+<section class="reveal on" id="capital">
+  <div class="slabel">资本 · 分红 · 治理</div>
+  <h2>35%分红率白纸黑字，资本还在变便宜</h2>
+  <p>招商局集团通过七家下属公司合并间接持股29.97%（第一大股东招商局轮船13.04%），治理结构多年稳定；这家银行资本分配的看点在分红纪律与资本结构优化：</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>股东回报与资本记录 · 公司披露；金额为人民币</caption>
+      <thead><tr><th>项目</th><th>披露值</th><th>阅读方式</th></tr></thead>
+      <tbody>
+        <tr><td>FY2025 全年分红</td><td>每股2.016元，总额508.43亿元</td><td>分红率35.34%；其中首次中期分红每股1.013元（比例35.02%）</td></tr>
+        <tr><td>2026年度中期分红计划</td><td>现金分红占2026年半年度归属普通股股东净利润的<b>35%</b></td><td>已获2025年度股东会批准，2027年1–2月派发——比例是明文，不是惯例</td></tr>
+        <tr><td>分红历史</td><td>2013年以来分红率≥30%，2024年以来≥35%</td><td>公司在年报中自述"分红率持续领先同业"</td></tr>
+        <tr><td>核心一级资本充足率（高级法）</td><td>14.07%，较上年末−0.09pp</td><td>监管底线8.25%，缓冲近6个百分点；风险加权资产+5.16%与资产增速相当</td></tr>
+        <tr><td>资本结构优化</td><td>2026年4月赎回全部275亿元境内优先股（股息率3.62%）；年内发行永续债500亿元（票面2.05%／1.99%）</td><td>同等资本，成本便宜约1.6个百分点——一级资本充足率不降反升（16.59%、+0.08pp）</td></tr>
+        <tr><td>每股净资产（普通股口径）</td><td>45.40元，较上年末+4.54%</td><td>现价对应0.87倍（推算；Wind的0.90倍LF基于其最新财报净资产口径，基期不同）——市值低于账面</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>三句话读懂这一节：<b>分红有多硬？</b>中期分红35%的比例写进了股东会决议，不是"视情况而定"——按上半年利润推算，中期每股分红约1.04元（推算）。<b>资本够不够？</b>核心一级资本充足率14.07%，是监管底线的1.7倍，分红与扩表可以兼得。<b>唯一的时间差：</b>中期分红要到2027年1–2月才到账——今天买入的"5.1%股息率"，现金流要等上几个月。</p>
+  </div>
+  <p class="small">招商局系七家股东为招商局轮船、招商局金融控股、深圳市晏清投资、深圳市楚源投资、CMU BVI、Best Winner与招商局实业发展（合计持股见正文）；前十大股东另含中国远洋海运集团旗下中国远洋运输（6.24%）与和谐健康保险（4.48%），均与招商局系无关；全部无质押。永续债余额1,999.89亿元（7期，票面1.99%–3.69%）。中期每股分红推算＝H1归母净利润×35%÷252.20亿股≈1.06元，实际以归属普通股股东净利润（扣永续债利息后）为基数，约1.04元；以最终公告为准。</p>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">市场定价 · 同业 · 估值</div>
+  <h2>0.9倍净资产的定价，还没跟上换挡后的报表</h2>
+  <p>先给结论牌，再给推导。银行估值的锚是<span class="g">市净率</span>与股息率：市场用市净率给"生意的资本回报"投票，用股息率给"现金的确定性"计价。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">现价（A股）</div><div class="v">39.35<span class="u">元</span></div><div class="d"><span>2026-08-28收盘 · 总市值1.01万亿元</span></div></div>
+    <div class="cell"><div class="k">熊市价值（两法）</div><div class="v">31.4<span class="u">–35.7元</span></div><div class="d"><span class="down">较现价 −20%~−9%</span></div></div>
+    <div class="cell"><div class="k">基准价值（两法）</div><div class="v">43.3<span class="u">–44.7元</span></div><div class="d"><span class="up">较现价 +10%~+14%</span></div></div>
+    <div class="cell"><div class="k">牛市价值（两法）</div><div class="v">55.4<span class="u">–57.0元</span></div><div class="d"><span class="up">较现价 +41%~+45%</span></div></div>
+    <div class="cell"><div class="k">现价隐含</div><div class="v">PB五年22%分位</div><div class="d"><span>市场仍按"ROE继续下台阶"定价</span></div></div>
+    <div class="cell"><div class="k">一句话判断</div><div class="v">中性偏积极</div><div class="d"><span>分红托底，重估等零售风险见顶</span></div></div>
+  </div>
+
+  <h3>第一步 · 市场现在给什么价</h3>
+  <p>2026-08-28收盘39.35元，对应市净率（LF）0.90倍、市盈率TTM 6.58倍、股息率5.12%（来源：Wind）。位置比绝对数更重要：市净率处于自身五年22%分位——过去五年只有约五分之一的时间比现在便宜；市盈率分位46%。年初至今股价下跌，六家可比银行中仅好于兴业。还有一个值得记录的信号：H股49.02港元，按人民银行港元兑人民币中间价0.86498折合约42.40元，<b>较A股溢价约7.8%</b>——同一份资产，离岸市场此刻愿意付更高的价。</p>
+
+  <h3>第二步 · 和同行比：贵的理由与便宜的现实</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>可比银行市场快照 · 2026-08-28收盘，来源：Wind（同一快照口径；估值列按Wind返回值，未另行核算）</caption>
+      <thead><tr><th>公司</th><th>市盈率</th><th>市净率</th><th>股息率</th><th>年初至今涨跌幅</th><th>总市值</th></tr></thead>
+      <tbody>
+        <tr><td>招商银行</td><td>6.58倍</td><td>0.90倍</td><td>5.12%</td><td>−1.49%</td><td>10,064亿元</td></tr>
+        <tr><td>工商银行</td><td>7.54倍</td><td>0.72倍</td><td>3.95%</td><td>+1.42%</td><td>26,781亿元</td></tr>
+        <tr><td>建设银行</td><td>8.18倍</td><td>0.80倍</td><td>3.64%</td><td>+17.54%</td><td>21,272亿元</td></tr>
+        <tr><td>兴业银行</td><td>4.89倍</td><td>0.44倍</td><td>2.87%</td><td>−12.44%</td><td>3,689亿元</td></tr>
+        <tr><td>宁波银行</td><td>7.18倍</td><td>0.81倍</td><td>3.84%</td><td>+23.98%</td><td>2,236亿元</td></tr>
+        <tr><td>平安银行</td><td>5.20倍</td><td>0.48倍</td><td>5.23%</td><td>+5.46%</td><td>2,261亿元</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>招行的市净率仍是这张表里最高的——0.90倍对国有大行的0.7–0.8倍、股份行同业的0.4–0.5倍，市场依然承认它"资产质量最好、负债成本最低、财富管理最强"的溢价资格。但注意两件事：第一，它今年跑输了几乎所有对手（−1.5%对建行+17.5%、宁波+24%）；第二，它自己的历史坐标在22%分位。<b>相对同业它贵，相对自己它便宜</b>——这正是"零售银行"标签被市场重新定价的过程。</p>
+  </div>
+
+  <h3>第三步 · 三年情景与两种方法</h3>
+  <div class="steps">
+    <div class="step"><div class="n">方法 A</div><b>情景市净率法</b><p>对FY2027E每股净资产施以情景市净率（悲观0.70倍＝零售风险失控向股份行同业折价靠拢、基准0.95倍＝维持现状、乐观1.20倍＝营收与风险双拐点确认后向五年中枢回归），再按各情景股权成本折现1.34年——给"生意"定价。</p></div>
+    <div class="step"><div class="n">方法 B</div><b>股息率法</b><p>用FY2026E每股分红除以要求股息率（5.5%／4.75%／4.0%），得到隐含股价——给"现金流"定价。35%分红率已是明文承诺，这条线的确定性高于多数A股公司。</p></div>
+    <div class="step"><div class="n">怎么读</div><b>两法在这只票上会互相咬合</b><p>银行的分红直接来自净资产回报，两法基准值（43.3与44.7元）几乎重合——这不是巧合，说明假设内部自洽。现价落在两法基准之下约一成。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>FY2026E–FY2027E三情景总表 · 金额为人民币；均为分析假设，非公司指引</caption>
+      <thead><tr><th>驱动 / 结果</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
+      <tbody>
+        <tr><td>情景内核</td><td>零售不良生成继续攀升、信用卡拖累加深、财富管理随行情退潮</td><td>零售风险2026年内见顶、息差企稳、财富管理延续两位数</td><td>零售与营收双拐点确认、ROE止跌回稳</td></tr>
+        <tr><td>归母净利润 26E / 27E（亿元）</td><td>1,500 / 1,470</td><td>1,530 / 1,600</td><td>1,555 / 1,685</td></tr>
+        <tr><td>分红率假设</td><td>33%</td><td>35%</td><td>37%</td></tr>
+        <tr><td>FY2027E每股净资产（推算）</td><td>≈51.3元</td><td>≈51.5元</td><td>≈51.5元</td></tr>
+        <tr><td>情景市净率（A法）</td><td>0.70倍</td><td>0.95倍</td><td>1.20倍</td></tr>
+        <tr><td>股权成本 / 要求股息率</td><td>10.5% / 5.5%</td><td>9.5% / 4.75%</td><td>8.5% / 4.0%</td></tr>
+        <tr class="grp"><td>A法价值（元/股）</td><td>31.4</td><td>43.3</td><td>55.4</td></tr>
+        <tr><td>B法价值（元/股）</td><td>35.7</td><td>44.7</td><td>57.0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">A法＝FY2027E每股净资产×情景市净率÷(1+股权成本)^1.34（1.34年＝估值日2026-08-28至2027年末的折现区间）；每股净资产自2026-06-30披露值（见资本节）起，按情景利润留存推算至2027年末。B法＝FY2026E归母×分红率÷252.20亿股÷要求股息率（熊/基准/牛每股分红约1.96／2.12／2.28元）。总股本25,219,845,601股。估值日为2026-08-28。</p>
+
+  <h3>把三档价值放在一把尺上</h3>
+  <div class="rows" role="img" aria-label="情景价值与现价对比">
+    <div class="row"><div class="nm">熊市<span>零售风险失控</span></div><div class="track"><div class="fill alt" style="width:56.7%"></div></div><div class="fig">31.4元<span class="down">两法31.4–35.7 · −20%~−9%</span></div></div>
+    <div class="row"><div class="nm">现价<span>2026-08-28收盘</span></div><div class="track"><div class="fill soft" style="width:71.0%"></div></div><div class="fig">39.35元<span>市场价</span></div></div>
+    <div class="row"><div class="nm">基准<span>风险年内见顶</span></div><div class="track"><div class="fill" style="width:78.2%"></div></div><div class="fig">43.3元<span>两法43.3–44.7 · +10%~+14%</span></div></div>
+    <div class="row"><div class="nm">牛市<span>双拐点确认</span></div><div class="track"><div class="fill moss" style="width:100.0%"></div></div><div class="fig">55.4元<span class="up">两法55.4–57.0 · +41%~+45%</span></div></div>
+  </div>
+  <p class="small">条形按A法数值（现价行为市场价）相对牛市A法55.4元的比例绘制；区间与涨跌幅按两法端点对现价推算。</p>
+
+  <h3>第四步 · 现价隐含了什么</h3>
+  <div class="plain">
+    <span class="pl">一句话总结</span>
+    <p>39.35元低于两法基准约一成，加上5.1%的股息率，基准情景一年期总回报约15%（推算）——<b>市场还在按"零售银行的衰退"给它定价，没有对"营收加速＋利润引擎换位"付一分钱</b>。往下看，熊市两法也有31–36元、外加分红缓冲，回撤空间有限；往上重估的钥匙只有一把：零售坏账生成额掉头向下。在那之前，赚的是股息加账面价值增长的钱。<b>中性偏积极</b>。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="risks">
+  <div class="slabel">风险与验证</div>
+  <h2>判断挂在四个可观察的钩子上</h2>
+  <div class="finds">
+    <div class="find good"><div class="t">最强多方证据</div><p>营收三年停滞后重新加速且二季度快过一季度；财富管理中收强劲反弹；存款成本护城河完好；对公与房地产风险退潮；分红率明文锁定；账面价值以下的定价＋H股溢价。</p></div>
+    <div class="find warn"><div class="t">最强反方证据</div><p>零售不良生成加速（信用卡半年237亿）、贷款下迁速度处于高位、消费贷恶化最快；零售金融税前利润两位数下滑；批发放量在低利率下不可持续；财富管理增速与市场行情高度相关；拨备覆盖率连续下台阶。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>验证地图 · 阈值为分析检验点，非公司指引</caption>
+      <thead><tr><th>变量</th><th>确认信号</th><th>证伪信号</th></tr></thead>
+      <tbody>
+        <tr><td>零售风险</td><td>三季报不良生成额环比回落、信用卡生成额见顶</td><td>生成率继续上行、消费贷不良率再升</td></tr>
+        <tr><td>营收动能</td><td>全年营收增速守住4%以上、财富管理中收保持两位数</td><td>行情退潮后中收增速跌回个位数、营收增速回落到2%以下</td></tr>
+        <tr><td>息差</td><td>单季NIM环比降幅≤1bp、存款成本继续下行</td><td>资产端收益率加速下滑、NIM单季环比降幅重新扩大</td></tr>
+        <tr><td>分红兑现</td><td>中期分红按35%如期派发、年度分红率不低于35%</td><td>分红比例下调或派发延宕</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>把验证点排在时间线上</h3>
+  <div class="tline">
+    <div class="tstop"><span class="tw">2026-08-31</span><b>中期业绩说明会</b><p>管理层对零售风险、息差走向与财富管理持续性的口径（网络直播，9:30–11:30）。</p></div>
+    <div class="tstop warn"><span class="tw">2026三季报</span><b>零售坏账的方向裁决</b><p>不良生成额与信用卡生成额环比方向；营收增速能否延续——本报告基准情景的第一道检验。</p></div>
+    <div class="tstop"><span class="tw">2027年1–2月</span><b>中期分红落地</b><p>35%比例的执行（推算每股约1.04元）；这是分红纪律从"承诺"变"记录"的节点。</p></div>
+    <div class="tstop"><span class="tw">FY2026年报</span><b>零售风险周期的最终判定</b><p>全年分红率、拨备覆盖率走向、迁徙率全年口径（消除半年年化失真）。</p></div>
+  </div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">最终判断</div>
+  <h2>中性偏积极：底仓逻辑已经齐了，重估还差一个信号</h2>
+  <p>这份中报证明了三件事：营收增长回来了，而且不是拨备放出来的（减值反而多提18.5%）；利润引擎可以换位运转（批发与财富接棒零售信贷）；分红纪律升级成了明文制度。市场还没有为此付钱——0.90倍市净率、五年22%分位、年内明显跑输可比同业中的多数。持有它的回报结构是：5.1%股息率加每年约4–5%的账面价值增长托底，零售坏账生成见顶之日就是市净率修复启动之时。结论置信度为中等：单二季度为推算口径，零售风险的顶部无法从半年数据外推，财富管理增速对市场行情的依赖度无法拆分。</p>
+  <div class="callout"><b>最强反方观点：</b>如果居民资产负债表修复失败，信用卡与消费贷的生成率将继续上行，减值会吞掉营收加速的全部成果——本期"多赚82.1亿、多提45.5亿"的平衡术就难以为继；同时批发金融的放量（对公贷款较上年末+9.08%）在利率下行中以更薄的利差成交，是有天花板的对冲。反方证伪需要看到不良生成额趋势性回落——推算单二季度生成约182.6亿元、略低于一季度披露的189.3亿元（推算＝半年减一季，未经季节性调整），方向初现但单季波动不足为凭，三季报是更干净的检验。</div>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · 快速检索</div>
+  <h2>读懂一份银行财报需要的词</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
+      <tbody>
+        <tr><td>净息差（NIM，净利息收益率）</td><td>净利息收入÷生息资产平均余额，银行"存贷差价"的核心刻度；本文1.83%即每100元生息资产半年赚1.83元利差（年化）。</td></tr>
+        <tr><td>净利差</td><td>生息资产收益率减计息负债成本率，不考虑规模结构的"纯价差"。</td></tr>
+        <tr><td>生息资产 / 计息负债</td><td>会生利息的资产（贷款、债券投资等）和要付利息的负债（存款、同业、债券）。</td></tr>
+        <tr><td>中收 / 非利息净收入</td><td>不靠利差赚的钱：手续费佣金＋投资与汇兑等其他净收入。</td></tr>
+        <tr><td>大财富管理收入</td><td>招行自定义口径：财富管理＋资产管理＋托管三类手续费收入之和。</td></tr>
+        <tr><td>AUM（管理零售客户总资产）</td><td>客户放在招行的全部钱：存款＋理财＋基金＋保险等，财富生意的"底盘"。</td></tr>
+        <tr><td>金葵花 / 私人银行客户</td><td>招行的客户分层：月日均总资产50万元以上为金葵花，1,000万元以上为私行。</td></tr>
+        <tr><td>五级分类与不良贷款率</td><td>贷款按风险分正常/关注/次级/可疑/损失五级，后三级合称"不良"；不良率＝不良余额÷贷款总额。</td></tr>
+        <tr><td>关注类贷款</td><td>还没坏但有恶化苗头的贷款，是不良的"预备队"。</td></tr>
+        <tr><td>逾期贷款</td><td>过了还款日没还的贷款；招行不良认定严于逾期（不良/逾期90天以上＝1.23）。</td></tr>
+        <tr><td>迁徙率</td><td>某一级贷款在期内滑向更差等级的比例，衡量坏账恶化的"速度"。</td></tr>
+        <tr><td>不良生成率</td><td>期内新变坏的贷款占比（年化），比存量不良率更早反映风险方向。</td></tr>
+        <tr><td>核销 / 不良资产证券化</td><td>把坏账从表上抹掉（用拨备冲销）或打包卖出——出水口开大，存量不良率就好看。</td></tr>
+        <tr><td>拨备覆盖率</td><td>贷款损失准备÷不良余额，坏账"垫子"的厚度；385%＝每1元坏账垫了3.85元。</td></tr>
+        <tr><td>信用成本</td><td>贷款减值计提÷平均贷款余额（年化），当期为坏账付出的利润代价。</td></tr>
+        <tr><td>拨备前利润（PPOP）</td><td>营收减运营费用、未扣减值的利润，剔除拨备调节后看经营的"素颜"。</td></tr>
+        <tr><td>核心一级资本充足率与高级法</td><td>最硬的自有资本÷风险加权资产；"高级法"是监管批准的内部模型计量法，招行同时披露权重法。</td></tr>
+        <tr><td>永续债 / 优先股</td><td>补充一级资本的工具，付息但不摊薄普通股；票面利率越低，资本越便宜。</td></tr>
+        <tr><td>本集团 / 本公司</td><td>本集团＝银行＋子公司合并口径；本公司＝银行本体。两口径的不良率、拨备覆盖率略有差异。</td></tr>
+        <tr><td>ROAE / 加权平均ROE</td><td>净利润÷平均普通股净资产，股东资金的年回报率；半年报披露年化值。</td></tr>
+        <tr><td>市净率（PB）与五年分位</td><td>股价÷每股净资产；分位指当前估值在自己过去五年里的排位，22%分位＝比五年里78%的时间便宜。LF指按最新披露财报的净资产计算。</td></tr>
+        <tr><td>市盈率（PE）</td><td>股价÷每股盈利，TTM指用最近十二个月的盈利。</td></tr>
+        <tr><td>扣非归母净利润</td><td>扣除一次性损益后的归母净利润；银行的非经常项目极小，两者几乎相等。</td></tr>
+        <tr><td>bp / pp</td><td>基点与百分点：1bp＝0.01个百分点（利率常用）；pp＝百分点（比率变化常用）。</td></tr>
+        <tr><td>股息率与分红率</td><td>股息率＝每股分红÷股价（对股东）；分红率＝分红总额÷净利润（对公司）。</td></tr>
+        <tr><td>H股溢价 / A/H比价</td><td>同一家公司H股与A股按汇率折算后的价差；内地银行股通常H股更便宜，招行例外。</td></tr>
+        <tr><td>TTM</td><td>最近十二个月滚动口径，用于消除季节性。</td></tr>
+        <tr><td>推算单二季度</td><td>A股只披露累计数与一季数，二季度＝上半年减一季度，两端皆披露值。</td></tr>
+        <tr><td>股权成本（Ke）</td><td>股东承担该股风险要求的最低年回报率，估值折现用。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">方法与来源</div>
+  <h2>交易所披露控制财务数字，Wind只回答定价问题</h2>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>主要来源与证据边界 · 业绩证据截止2026-08-29，行情截止2026-08-28收盘</caption>
+      <thead><tr><th>来源</th><th>用途</th><th>证据边界</th></tr></thead>
+      <tbody>
+        <tr><td>2026年半年度报告（2026-08-29披露）</td><td>当期财务、息差量价、资产质量、资本、分红、分部与子公司</td><td>未经审计，经安永审阅</td></tr>
+        <tr><td>2026年第一季度报告</td><td>推算单二季度的减数、一季度资产质量基线</td><td>未经审计</td></tr>
+        <tr><td>2025年、2024年年度报告</td><td>五年历史、分红记录、分季度基数、股东结构</td><td>经审计；FY2021未在其主要会计数据表内</td></tr>
+        <tr><td>中期业绩说明会公告（2026-08-22）</td><td>验证时间线</td><td>会议在本报告数据截止后召开</td></tr>
+        <tr><td>Wind金融终端</td><td>行情快照、估值分位、同业倍数、FY2021标准化数据、港元兑人民币中间价（人民银行口径）</td><td>标准化口径；同业估值列按Wind返回值；与年报冲突时以交易所披露为准</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">所有推算值（单二季度、TTM、日均余额增速、PPOP、中期每股分红、情景与估值）均由本地计算台账按披露值复算；利润桥各项加总与利润总额变化一致。三情景与两法估值为分析假设，不是盈利预测承诺。本报告不构成投资建议。</p>
+</section>
+
+<footer>
+  <p>财务数据截至2026年6月30日；公司公告检索截至2026年8月29日；行情为2026年8月28日收盘（来源：Wind）。主要财务文件经由交易所指定披露渠道取得。</p>
+  <p>本报告区分公司披露、管理层叙事、Wind标准化数据与分析推算。情景与估值不构成投资建议；投资有风险，决策需独立判断。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
