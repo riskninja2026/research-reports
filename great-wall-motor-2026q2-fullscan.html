@@ -193,7 +193,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   .dual > div:last-child{padding-left:0;padding-top:26px}
   .row{grid-template-columns:110px 1fr 84px;gap:10px}
   .wrap{padding:0 20px}
-  .cols{gap:14px}.collabels{gap:14px}.cols .bars .bar{width:20px}
+  .cols{gap:14px}.collabels{gap:14px}
 }
 @media(max-width:520px){
   .grid{grid-template-columns:1fr}
@@ -229,6 +229,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 /* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
 .cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
 .cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
 .bar.rev{background:var(--indigo)}
 .bar.np{background:var(--moss)}
 .seg.r{background:#8FA8CC}
