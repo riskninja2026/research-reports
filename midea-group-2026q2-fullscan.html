@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>美的集团 2026年中期及单二季度 Fullscan 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">美的集团 000333.SZ · 0300.HK ｜ 全景尽调 ｜ 财务截至 2026.06.30 · 行情截至 2026.08.28 收盘</div>
+    <h1>利润表被汇率撕成两半，<br>现金回报机器还在运转</h1>
+    <p class="lede">收入创同期新高、归母利润微增、中期照常分红——表面是一份平稳的中报。<b>但扣除非经常性损益后的利润大幅下滑，其中大部分来自"汇兑损失计入经常、对冲收益计入非经常"的会计错位，另有一笔商誉减值；而归母的微增里，还托着一块与汇率无关的投资浮盈。</b>经营引擎没有失速；真正的问题是，估值已站上自身五年高位，向上要靠B端与海外兑现，向下的底则由分红加注销式回购托住。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">FY2025 股息+回购 / 市值 · 推算</div>
+        <div class="big a">6.7%</div>
+        <div class="cap">按2026-08-28市值计，去年全年现金分红加股份回购合计接近当年归母净利润的全部。</div>
+      </div>
+      <div>
+        <div class="tag">单二季度扣非归母同比 · 推算</div>
+        <div class="big b">−36%</div>
+        <div class="cap">汇率错位与减值集中砸在二季度扣非口径上——读懂这个数，才读懂这份中报。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，读这里</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>全球最大的家电制造商之一：对内是美的、小天鹅、COLMO、华凌，对外是东芝、Comfee，再加上楼宇暖通（含数据中心温控）、库卡机器人和工业部件三条面向企业客户（ToB）的业务线。A股为主、2024年起加挂H股；创始人何享健家族通过美的控股控制。</li>
+      <li><b>本期成绩：</b>上半年营业总收入2610.5亿元（+3.5%），归母净利润264.5亿元（+1.7%），经营现金流375.5亿元。推算单二季度收入约1294.7亿元（+4.5%）。</li>
+      <li><b>最大的坑：</b>扣非归母只有196.0亿元，同比降25.3%。主因不是生意变差：人民币升值让外币敞口的汇兑损失进了"经常"科目，而对冲这些敞口的衍生品收益按规则进了"非经常"——一边扣掉、一边留下。另有<span class="g">商誉减值</span>11.0亿元（并购溢价的一次性核销）。归母与扣非要合在一起读——归母那边的微增，也有权益投资浮盈帮忙。</li>
+      <li><b>结构在换挡：</b>国内零售大盘同比降9.9%的背景下，智能家居收入仍增4.3%；楼宇科技+10.8%、机器人+10.3%接棒增长，工业技术−12.7%拖后腿；海外增速（+5.5%）快于国内（+2.1%），自有品牌（<span class="g">OBM</span>）已占智能家居海外收入一半以上。</li>
+      <li><b>估值结论：</b><b>中性。</b>现价86.23元对应TTM（最近十二个月）市盈率14.9倍，处于自身五年84%分位——不再便宜。基准情景两法区间77.7–105.6元，现价居中；托底是6.7%的股东现金回报率，向上要看B端与海外的持续兑现。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>一台"现金返还机"，正在给自己装第二台发动机</h2>
+  <p>美的的主业一句话：把空调、冰箱、洗衣机和小家电卖到全世界，用规模和供应链效率赚制造业里偏高的利润。围绕它还有三条面向企业客户（ToB）的业务线。钱的流向可以这样看：</p>
+  <div class="steps">
+    <div class="step"><div class="n">引擎 1</div><b>家电卖全球</b><p>智能家居业务占收入约三分之二；国内打"数一"战略，海外靠自有品牌（OBM）替代贴牌代工。</p></div>
+    <div class="step"><div class="n">引擎 2</div><b>ToB第二曲线</b><p>楼宇科技（中央空调、数据中心温控）、库卡机器人、工业部件——增速快于家电，但体量仍小。</p></div>
+    <div class="step"><div class="n">底盘</div><b>全球制造网络</b><p>68个主要生产基地中45个在海外，是应对关税与本地化竞争的缓冲垫。</p></div>
+    <div class="step"><div class="n">出口</div><b>现金返还</b><p>赚到的钱以"分红+注销式回购"双通道返还股东——回购后注销股份，每股价值被动增厚。</p></div>
+  </div>
+  <p>读它的报表，先记两件事。第一，<b>会计口径</b>：美的大量使用外汇衍生品对冲全球业务的汇率敞口。人民币波动时，敞口本身的汇兑损益进"经常性"科目，而对冲工具的损益多进"非经常性"——两边本是一对，报表却把它们拆开，<span class="g">扣非归母净利润</span>因此会被汇率单边行情放大或压缩。第二，<b>股权结构</b>：创始人何享健家族通过美的控股持股28.49%（2026-06-30），管理层由方洪波带队；2024年在港交所加挂H股，2026年5月又发行两笔以H股为标的的零息<span class="g">可转债</span>。带<span class="g">虚线下划线</span>的术语见文末名词速查。</p>
+  <p>行业背景：2026上半年国内家电零售市场约4,250亿元、同比下滑9.9%（奥维云网推总口径），而中国家电出口3,609.6亿元、同比增长2.4%——内冷外温。美的在这样的大盘里保持正增长，本身是份额证据；代价是行业性的价格与补贴竞争压在毛利率上。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">基础财务 · 合并与分部地图</div>
+  <h2>收入五连增，利润质量却要拆开两个口径看</h2>
+  <p>美的集团是A+H两地上市的制造业集团，报表按中国企业会计准则编制，2026年半年度报告未经审计。业务按智能家居、楼宇科技、机器人与自动化、工业技术及其他业务五个板块披露；收入构成另按行业、产品、地区拆分。以下先给本期总量，再给五年轨迹与分部地图。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">2026H1 营业总收入</div><div class="v">2610.52<span class="u">亿元</span></div><div class="d"><span class="up">同比 +3.5%</span></div></div>
+    <div class="cell"><div class="k">毛利 / 毛利率（推算）</div><div class="v">656.76<span class="u">亿元</span></div><div class="d"><span>同比 +2.1% · 25.26%</span></div></div>
+    <div class="cell"><div class="k">归母净利润</div><div class="v">264.46<span class="u">亿元</span></div><div class="d"><span class="up">同比 +1.7%</span></div></div>
+    <div class="cell"><div class="k">扣非归母净利润</div><div class="v">195.95<span class="u">亿元</span></div><div class="d"><span class="down">同比 −25.3%</span></div></div>
+    <div class="cell"><div class="k">经营活动现金流量净额</div><div class="v">375.52<span class="u">亿元</span></div><div class="d"><span class="up">同比 +0.7%</span></div></div>
+    <div class="cell"><div class="k">自由现金流代理（推算）</div><div class="v">349.18<span class="u">亿元</span></div><div class="d"><span>资本开支26.34亿元</span></div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2026H1每股与回报指标 · EPS＝每股盈利；ROE＝净资产收益率；BVPS＝每股净资产（推算，按期末归母权益÷期末股本）</caption>
+      <thead><tr><th>基本EPS</th><th>稀释EPS</th><th>加权平均ROE（半年未年化）</th><th>扣非加权ROE</th><th>期末BVPS</th></tr></thead>
+      <tbody><tr><td>3.52元</td><td>3.50元</td><td>11.33%</td><td>8.40%</td><td>约27.96元</td></tr></tbody>
+    </table>
+  </div>
+
+  <h3>推算单二季度：收入加速，扣非承压</h3>
+  <p>A股按季披露，单二季度＝上半年累计减一季度累计，两端均为披露值，推算标注如下。</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>推算单二季度（2026Q2） · 人民币亿元；由2026H1与2026Q1披露值相减推算</caption>
+      <thead><tr><th>指标</th><th>2026Q2（推算）</th><th>2025Q2（推算）</th><th>同比</th></tr></thead>
+      <tbody>
+        <tr><td>营业总收入</td><td>1,294.72</td><td>1,239.03</td><td>+4.49%</td></tr>
+        <tr><td>归母净利润</td><td>137.71</td><td>135.91</td><td>+1.32%</td></tr>
+        <tr><td>扣非归母净利润</td><td>86.33</td><td>134.86</td><td>−35.98%</td></tr>
+        <tr><td>经营活动现金流量净额</td><td>230.23</td><td>229.60</td><td>+0.27%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>五年合并轨迹</h3>
+  <div class="tblscroll" data-financials="history">
+    <table class="tbl" data-financials="history">
+      <caption>五年合并财务 · FY2021–FY2025；人民币亿元，另有标注除外。FY2021收入/归母/ROE/现金流及五年毛利率序列来源：Wind（标准化口径）；其余取自年报，FY2022收入为Wind营业总收入口径。资本开支为购建固定资产等支付的现金，FY2021–22未在本次证据集；自由现金流代理＝经营现金流−资本开支。Wind毛利率为各年原披露口径：FY2023（26.49%）与2024年报追溯重述后比较数的推算值（25.70%）存在口径差异</caption>
+      <thead><tr><th>项目</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>四年CAGR</th></tr></thead>
+      <tbody>
+        <tr><td>营业总收入</td><td>3,433.61</td><td>3,457.09</td><td>3,737.10</td><td>4,090.84</td><td>4,585.02</td><td>7.5%（推算）</td></tr>
+        <tr><td>销售毛利率（Wind）</td><td>22.48%</td><td>24.24%</td><td>26.49%</td><td>26.42%</td><td>26.39%</td><td>—</td></tr>
+        <tr><td>归母净利润</td><td>285.74</td><td>295.54</td><td>337.20</td><td>385.37</td><td>439.45</td><td>11.4%（推算）</td></tr>
+        <tr><td>扣非归母净利润</td><td>未在证据集</td><td>286.08</td><td>329.75</td><td>357.41</td><td>412.67</td><td>—</td></tr>
+        <tr><td>加权平均ROE</td><td>24.09%</td><td>22.21%</td><td>22.23%</td><td>21.29%</td><td>19.70%</td><td>—</td></tr>
+        <tr><td>基本每股收益（元）</td><td>未在证据集</td><td>4.34</td><td>4.93</td><td>5.44</td><td>5.80</td><td>—</td></tr>
+        <tr><td>经营活动现金流量净额</td><td>350.92</td><td>346.58</td><td>579.03</td><td>605.12</td><td>533.46</td><td>—</td></tr>
+        <tr><td>资本开支（约）</td><td>未在证据集</td><td>未在证据集</td><td>63.14</td><td>78.40</td><td>111.42</td><td>—</td></tr>
+        <tr><td>自由现金流代理（约，推算）</td><td>未在证据集</td><td>未在证据集</td><td>515.89</td><td>526.72</td><td>422.04</td><td>—</td></tr>
+        <tr><td>每股股息（含税，元）</td><td>1.7</td><td>2.5</td><td>3.0</td><td>3.5</td><td>4.3</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cols" role="img" aria-label="五年营业总收入与归母净利润趋势，数值见上方五年合并财务表">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:74.9%"></div><div class="bar np" style="height:6.2%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:75.4%"></div><div class="bar np" style="height:6.4%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:81.5%"></div><div class="bar np" style="height:7.4%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:89.2%"></div><div class="bar np" style="height:8.4%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100.0%"></div><div class="bar np" style="height:9.6%"></div></div></div>
+  </div>
+  <div class="collabels">
+    <div><b>2021</b></div>
+    <div><b>2022</b></div>
+    <div><b>2023</b></div>
+    <div><b>2024</b></div>
+    <div><b>2025</b></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>营业总收入</span><span><i class="m"></i>归母净利润</span></div>
+  <p class="small">柱高按各年数值相对2025年收入4,585.02亿元等比绘制；具体数字见上表。两组柱子五年同步抬升、间距缓慢收窄——收入与利润一起长，利润率在缓慢改善，这与利润忽上忽下的周期股形状完全不同。</p>
+
+  <h3>五板块地图：家电压舱，B端两位数，工业技术拖累</h3>
+  <div class="tblscroll" data-financials="segments">
+    <table class="tbl">
+      <caption>2026H1分板块收入与毛利率 · 人民币亿元；收入按板块披露口径（页26），毛利率按产品构成口径（页51–52），两口径均为公司披露</caption>
+      <thead><tr><th>板块</th><th>营业收入</th><th>同比</th><th>毛利率</th><th>毛利率同比</th></tr></thead>
+      <tbody>
+        <tr><td>智能家居</td><td>1,743.41</td><td>+4.27%</td><td>27.95%</td><td>−0.57pp</td></tr>
+        <tr><td>楼宇科技</td><td>216.25</td><td>+10.84%</td><td>29.61%</td><td>+0.28pp</td></tr>
+        <tr><td>机器人与自动化</td><td>166.21</td><td>+10.27%</td><td>20.90%</td><td>−1.86pp</td></tr>
+        <tr><td>工业技术</td><td>131.38</td><td>−12.72%</td><td>14.75%</td><td>−2.13pp</td></tr>
+        <tr><td>其他业务（板块）</td><td>152.82</td><td>+2.55%</td><td>13.58%</td><td>+0.03pp</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2026H1分地区 · 人民币亿元；公司披露</caption>
+      <thead><tr><th>地区</th><th>营业收入</th><th>占比</th><th>同比</th><th>毛利率</th><th>毛利率同比</th></tr></thead>
+      <tbody>
+        <tr><td>国内</td><td>1,469.15</td><td>56.50%</td><td>+2.07%</td><td>24.46%</td><td>−0.27pp</td></tr>
+        <tr><td>海外</td><td>1,131.27</td><td>43.50%</td><td>+5.54%</td><td>26.28%</td><td>−0.53pp</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>最新滚动口径</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>截至2026年6月的最近十二个月（TTM，推算）· 人民币亿元；TTM＝FY2025＋2026H1−2025H1</caption>
+      <thead><tr><th>营业总收入</th><th>归母净利润</th><th>扣非归母</th><th>经营现金流</th><th>资本开支</th><th>FCF代理</th></tr></thead>
+      <tbody><tr><td>4,672.23</td><td>443.78</td><td>346.27</td><td>536.17</td><td>106.31</td><td>429.86</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>五年故事非常整齐：收入从3,434亿爬到4,585亿，归母利润从286亿爬到439亿，毛利率从22.5%抬到26.4%，每股分红五年从1.7元提到4.3元——一台没熄过火的复利机器。唯一缓慢向下的是ROE（24.1%→19.7%），钱多到股东权益涨得比利润快——而注销式回购恰好在对冲这件事。</p>
+    <p>本期的关键在两个口径的裂缝：归母+1.7%（含对冲收益、减值等一次性项目），扣非−25.3%（把对冲收益扣掉、把汇兑损失留下）。谁对？都不完整——下一节把利润拆成一座桥，你会看到经营改善、汇率噪声和投资浮盈各占多少。另外提醒：板块结构两期几乎没动（智能家居占五板块合计约72%），所以本报告不画结构变化图，改用这句话说明。</p>
+  </div>
+  <p class="small">毛利按营业收入减营业成本推算（不含利息及手续费收入）；自由现金流代理＝经营现金流−购建固定资产无形资产和其他长期资产支付的现金，非公司KPI。收入CAGR按首尾年四次方根推算。板块收入合计不等于营业总收入（另有利息收入及抵销项）。</p>
+</section>
+
+<section class="reveal on" id="quality">
+  <div class="slabel">盈利质量 · 汇率与减值</div>
+  <h2>一座利润桥：经营改善是真的，汇率噪声也是真的</h2>
+  <p>把2026H1利润总额相对上年同期的变化（+5.0亿元）拆成一座加法桥：左边是把利润推上去的力量，右边是拉下来的。桥面数字全部来自合并利润表两期之差，加总与披露值一致（尾差为四舍五入）。最大的一块"公允价值变动"——金融资产与衍生品按市价重估的账面盈亏——按半年报附注拆成两根柱子，因为两者性质完全不同：一根是对冲汇率敞口的衍生工具，另一根是与汇率无关的权益投资浮盈。</p>
+
+  <div class="wfall" role="img" aria-label="2026H1对2025H1利润总额变化的加法桥，数值与下方拆解表一致">
+    <div class="wrow"><div class="nm">公允价值变动·权益工具等<span>与汇率无关的投资浮盈</span></div><div class="wtrack"><div class="wbar up" style="left:0.0%;width:31.0%"></div></div><div class="fig">+36.01</div></div>
+    <div class="wrow"><div class="nm">公允价值变动·衍生工具<span>对冲汇率敞口</span></div><div class="wtrack"><div class="wbar up" style="left:31.0%;width:23.8%"></div></div><div class="fig">+27.65</div></div>
+    <div class="wrow"><div class="nm">投资收益<span>含处置衍生+17.71</span></div><div class="wtrack"><div class="wbar up" style="left:54.9%;width:20.6%"></div></div><div class="fig">+23.94</div></div>
+    <div class="wrow"><div class="nm">销售费用下降</div><div class="wtrack"><div class="wbar up" style="left:75.5%;width:13.0%"></div></div><div class="fig">+15.07</div></div>
+    <div class="wrow"><div class="nm">毛利增量</div><div class="wtrack"><div class="wbar up" style="left:88.5%;width:11.5%"></div></div><div class="fig">+13.38</div></div>
+    <div class="wrow"><div class="nm">其余各项净额</div><div class="wtrack"><div class="wbar down" style="left:95.2%;width:4.8%"></div></div><div class="fig">−5.58</div></div>
+    <div class="wrow"><div class="nm">资产减值<span>商誉为主</span></div><div class="wtrack"><div class="wbar down" style="left:84.1%;width:11.1%"></div></div><div class="fig">−12.87</div></div>
+    <div class="wrow"><div class="nm">财务费用<span>汇兑损失主导</span></div><div class="wtrack"><div class="wbar down" style="left:4.3%;width:79.8%"></div></div><div class="fig">−92.61</div></div>
+    <div class="wrow"><div class="nm">Δ利润总额<span>桥的合计</span></div><div class="wtrack"><div class="wbar tot" style="left:0.0%;width:4.3%"></div></div><div class="fig">+5.01</div></div>
+  </div>
+  <p class="small">单位：人民币亿元；每根柱按同一标尺画出累计值的行走（绿加红减）。"其余各项净额"含税金及附加、管理与研发费用、利息及手续费收入、其他收益、信用减值、资产处置与营业外收支之和。财务费用由上年同期收益59.88亿元转为本期费用32.73亿元，公司归因于汇兑损失增加。公允价值变动按附注四(56)拆分：衍生金融工具+27.65亿、权益工具投资及其他+36.01亿；投资收益增量+23.94亿中，处置衍生金融资产及负债贡献+17.71亿（附注四(57)）。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>汇率错位与一次性项目 · 人民币亿元；前三行为同比增量口径，后两行为本期发生额；正负号为对利润的方向</caption>
+      <thead><tr><th>项目</th><th>金额</th><th>进哪个口径</th><th>阅读方式</th></tr></thead>
+      <tbody>
+        <tr><td>财务费用变动（汇兑损失主导）</td><td>约−92.6</td><td>经常性（拉低扣非）</td><td>人民币升值下外币敞口的损失，另含少量利息净收入变化</td></tr>
+        <tr><td>对冲相关收益（衍生公允价值+处置）</td><td>约+45.4</td><td>非经常性（不进扣非）</td><td>与汇兑损失同源的对冲收益，被扣非剔除——约补回损失增量的一半</td></tr>
+        <tr><td>权益工具投资等公允价值变动</td><td>约+36.0</td><td>非经常性（不进扣非）</td><td>与汇率无关的投资浮盈，是归母微增的重要支撑</td></tr>
+        <tr><td>商誉减值损失</td><td>−10.96</td><td>经常性科目中的一次性</td><td>公告未披露具体减值资产组</td></tr>
+        <tr><td>非流动资产处置损益</td><td>+5.64</td><td>非经常性</td><td>一次性</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>公司在中报里自己点破了这层错位，原文是："本公司外币货币性项目产生的汇率损失归属于经常性损益，而用于管理上述外汇风险所持有的衍生金融工具产生的收益归属于非经常性损益"。换句话说，<b>损失和对冲收益本是一对，扣非口径只扣了收益那一半</b>。但边界要说清：与汇兑损失同源的对冲收益增量约+45.4亿，只补回−92.6亿损失增量的一半左右；另一块约+36.0亿是权益工具投资的浮盈，与汇率无关——没有它，归母难以维持正增长。把这些都还原后，经营层面的真实变化是：毛利多赚13.4亿、销售费用省出15.1亿——引擎确实在改善，只是改善是十亿级的，别把浮盈错读成经营。</p>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>先看汇率这一对：财务费用恶化的−92.6亿（汇兑损失主导）是"经常"的，对冲它的衍生品收益（公允价值+27.7亿、处置+17.7亿）是"非经常"的——这就是"利润表被汇率撕成两半"的样子，但两半并不等重：对冲只补回了损失增量的一半左右。再看另一根大柱：+36.0亿是权益投资按市价重估的浮盈，跟汇率、跟卖家电都没关系。真正值得记住的一次性坏消息是<b>商誉减值11.0亿元</b>：美的账上还有315.8亿元商誉（其中库卡221.0亿元），公告没有说这次减的是哪一块，年度减值测试是每年必过的关口。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="balance">
+  <div class="slabel">现金 · 资产负债 · 营运资金</div>
+  <h2>现金流没有失速，但应收账款单边跳升值得盯住</h2>
+  <p>上半年经营现金流与利润同量级、自由现金流代理近350亿元，资产负债表整体是"钱多"的形状。两处变化需要单独解释：应收账款半年内大幅上升，以及5月发行的两笔以H股为标的的零息可转债。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">货币资金</div><div class="v">906.43<span class="u">亿元</span></div><div class="d"><span>期初852.47亿元</span></div></div>
+    <div class="cell"><div class="k">应收账款</div><div class="v">619.55<span class="u">亿元</span></div><div class="d"><span class="down">期初404.50亿元 · +53%</span></div></div>
+    <div class="cell"><div class="k">存货</div><div class="v">554.41<span class="u">亿元</span></div><div class="d"><span class="up">期初646.29亿元 · −14%</span></div></div>
+    <div class="cell"><div class="k">合同负债</div><div class="v">454.58<span class="u">亿元</span></div><div class="d"><span>期初469.93亿元</span></div></div>
+    <div class="cell"><div class="k">预提销售返利（其他流动负债内）</div><div class="v">569.73<span class="u">亿元</span></div><div class="d"><span>期初529.53亿元</span></div></div>
+    <div class="cell"><div class="k">有息负债合计（推算）</div><div class="v">744.51<span class="u">亿元</span></div><div class="d"><span>短借+长借+应付债券+一年内到期</span></div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>需要单独解释的资产负债表变化 · 人民币亿元；期末2026-06-30对期初2025-12-31</caption>
+      <thead><tr><th>项目</th><th>变化</th><th>已知信息</th><th>判断边界</th></tr></thead>
+      <tbody>
+        <tr><td>应收账款 +215.0亿</td><td>404.50→619.55</td><td>占总资产比重由6.64%升至9.63%；公告未单独解释成因</td><td>季节性、B端与海外账期都可能推高，但半年+53%超过收入增速一个量级，需三季报验证回落</td></tr>
+        <tr><td>零息可转债 面值合计149.81亿</td><td>2027年到期与2033年到期各86.24亿港元</td><td>2026-05-13发行，标的为H股；悉数转换约对应1.72亿股H股</td><td>零票息融资便宜，代价是潜在H股稀释约2.3%（按现总股本推算）</td></tr>
+        <tr><td>库存股 +69.7亿</td><td>81.51→151.18</td><td>对应上半年回购；回购专户期末持股1.96%</td><td>回购用途已变更为注销，注销落地前先体现为库存股</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>三句话读懂这张资产负债表：<b>钱很多</b>——货币资金900多亿，覆盖有息负债还有富余；<b>渠道健康</b>——存货降了14%，先收款、后交货的合同负债还有450多亿，预提的销售返利（欠经销商的"暗股息"）还在增厚，说明没有向渠道压货换收入；<b>一处要盯</b>——应收账款半年涨了五成多，公告没解释。它更可能是B端与海外业务账期的自然结果，但"更可能"不是证据，三季报如果继续涨，就要当成风险处理。</p>
+  </div>
+  <p class="small">有息负债推算＝短期借款473.05+长期借款154.17+应付债券66.66+一年内到期的非流动负债50.63（内含一年内到期债券30.95），不含列入其他流动负债的一年期可转债72.69亿元。可转债发行现金流入152.93亿元列于筹资活动。</p>
+</section>
+
+<section class="reveal on" id="engine">
+  <div class="slabel">业务引擎 · B端与海外</div>
+  <h2>把管理层的话放到报表上检验：兑现了多少？</h2>
+  <p>6月与7月两场路演里，管理层给出一串进展叙事。对照中报，可以分成"报表已兑现""方向吻合""无法验证"三档。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>管理层叙事 对照 中报证据 · 路演记录为公司披露的投资者关系活动记录表</caption>
+      <thead><tr><th>管理层的话（路演）</th><th>中报能看到什么</th><th>判定</th></tr></thead>
+      <tbody>
+        <tr><td>OBM"在制造、渠道方面都有突破"</td><td>OBM收入已占智能家居海外收入50%以上；美国市场OBM收入同比+24%；东芝白电日本收入同比+10%以上</td><td>报表已兑现</td></tr>
+        <tr><td>数据中心温控：中标中国移动新一轮集采70%份额（6月）</td><td>楼宇科技收入+10.84%；国内暖通后市场业务规模+35%</td><td>方向吻合，订单金额未披露</td></tr>
+        <tr><td>库卡与英科签约超3亿元（7月）、威灵机器人新基地（意向）</td><td>库卡集团收入同比+10%以上，库卡中国贡献占比超30%；工业机器人国内出货超1.8万台、份额升至行业第二</td><td>方向吻合；7月事项晚于报告期</td></tr>
+        <tr><td>顺德液冷基地总投资超10亿元、2027年8月投产</td><td>中报确认"在佛山顺德正式启动液冷智造基地建设，项目总投资超过10亿元"；合并资本开支未单列该项目</td><td>启动与投资额已印证；投产时点待验</td></tr>
+        <tr><td>618"美的系全网总销售额行业第一"、COLMO套购金额增长超50%</td><td>智能家居板块保持正增长（见分部地图）；单品牌/大促口径不进财报</td><td>方向吻合，口径不可核对</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finds">
+    <div class="find good"><div class="t">B端有真增长</div><p>楼宇科技与机器人同为两位数增长，新能源车部件收入同比+90%以上并首次实现半年度盈利；数据中心温控踩在AIDC建设的风口上。</p></div>
+    <div class="find warn"><div class="t">工业技术在收缩</div><p>工业技术收入−12.72%、毛利率再降2.13pp，是五板块唯一负增长——B端不是齐涨，接棒故事目前靠楼宇与机器人两条腿。</p></div>
+    <div class="find"><div class="t">海外快于国内</div><p>海外收入+5.54%对国内+2.07%，且海外毛利率（26.28%）高于国内（24.46%）；关税风险的对冲主要是45个海外基地的本地化产能，公告未给量化敞口。</p></div>
+    <div class="find warn"><div class="t">路演不谈的话题</div><p>两场路演对关税、毛利率方向、以旧换新退坡只字未提——逆风话题的缺席本身就是信息，这些答案只能从报表里自己找。</p></div>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>把引擎拆开看：<b>家电主业在一个下滑9.9%的国内大盘里做出+4.3%</b>，靠的是份额与海外OBM——这是本期最扎实的经营证据。<b>B端接棒故事兑现了一半</b>：楼宇科技和机器人是真的两位数，但工业技术在拖后腿，三条腿只站稳两条。液冷、机器人新基地这些叙事都指向2027年之后，现在还在"讲"的阶段，不在"赚"的阶段。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="governance">
+  <div class="slabel">治理 · 股东回报</div>
+  <h2>创始人控制、职业经理人经营，回报纪律是这家公司的招牌</h2>
+  <p>美的控股（何享健家族）为控股股东，持股28.49%（2026-06-30，上年末为28.55%），方洪波任董事长兼总裁；公司治理的重心不在控制权，而在资本分配纪律——这恰是它与多数A股制造业公司的区别。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>股东现金回报记录 · 金额为人民币；含税口径，公司披露</caption>
+      <thead><tr><th>项目</th><th>披露值</th><th>阅读方式</th></tr></thead>
+      <tbody>
+        <tr><td>FY2025 现金分红</td><td>323.61亿元（每10股43元＝中期5元+末期38元）</td><td>占归母净利润73.6%（推算）</td></tr>
+        <tr><td>FY2025 股份回购</td><td>约116.05亿元</td><td>年报口径"全年回购总金额超116亿元"</td></tr>
+        <tr><td>上市以来累计派现</td><td>超1,660亿元（含2025年度预案）</td><td>另累计回购超450亿元（截至2026年6月）</td></tr>
+        <tr><td>2026中期分红</td><td>每10股派5元，合计37.24亿元</td><td>占H1归母14.06%；基数已剔除回购专户股份</td></tr>
+        <tr><td>2026年回购</td><td>65–130亿元方案；截至7月17日年内累计82.06亿元</td><td>用途已变更为注销减资，2026-06-05股东会通过</td></tr>
+        <tr><td>H股可转债潜在稀释</td><td>悉数转换约1.72亿股H股</td><td>与注销式回购方向相反，需并表观察净效果</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>这家公司把"还钱"做成了制度：去年分红加回购合计约440亿元，几乎等于全年利润；今年把最高130亿元的回购用途改成<span class="g">注销</span>——买回来的股票直接销毁，每股含金量被动上升；据广发证券研究报告（公司中报转引），美的已是A股累计回购金额最高的公司。两个平衡项要知道：一是激励盘子大（历史上九期股票期权、七期限制性股票、十七期持股计划，2026年持股计划又授了1,631万股），二是新发可转债未来可能新增约1.7亿股H股——回报是净给钱，但两条稀释暗流在对冲它的力度。</p>
+  </div>
+  <p class="small">FY2025分红比例按323.61÷439.45推算；公司披露口径的"现金分红总额（含回购）"为439.66亿元。2026年持股计划分二、三、四年行权，按公司业绩与个人考核分批授予，公告未披露与ROE或每股价值挂钩的量化门槛。重大关联交易规模较小（与会通新材料采购等合计约8.1亿元，占比0.44%）。</p>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">市场定价 · 同业 · 估值</div>
+  <h2>不再便宜的白马：定价已在自身五年高位</h2>
+  <p>先给结论牌，再给推导。估值要回答三件事：市场现在给什么价、和同行比贵不贵、三年情景下值多少钱——最后倒读现价隐含了什么。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">现价（A股）</div><div class="v">86.23<span class="u">元</span></div><div class="d"><span>2026-08-28收盘 · 市值6,573亿元</span></div></div>
+    <div class="cell"><div class="k">熊市价值（两法）</div><div class="v">52.3<span class="u">–70.1元</span></div><div class="d"><span class="down">较现价 −39%~−19%</span></div></div>
+    <div class="cell"><div class="k">基准价值（两法）</div><div class="v">77.7<span class="u">–105.6元</span></div><div class="d"><span>较现价 −10%~+22%</span></div></div>
+    <div class="cell"><div class="k">牛市价值（两法）</div><div class="v">100.9<span class="u">–152.4元</span></div><div class="d"><span class="up">较现价 +17%~+77%</span></div></div>
+    <div class="cell"><div class="k">现价隐含</div><div class="v">五年84%分位</div><div class="d"><span>市场已按"白马溢价"定价</span></div></div>
+    <div class="cell"><div class="k">一句话判断</div><div class="v">中性</div><div class="d"><span>回报靠现金返还，重估看B端</span></div></div>
+  </div>
+
+  <h3>第一步 · 市场现在给什么价</h3>
+  <p>2026-08-28收盘86.23元，对应TTM<span class="g">市盈率</span>14.88倍、市净率（LF）3.21倍、股息率4.89%（来源：Wind）。关键不是绝对数，而是位置：市盈率与市净率分别处于自身五年84%与84%分位——过去五年里，只有约六分之一的时间比现在更贵。扣非TTM口径的市盈率约19.0倍（推算），比表面值高出四分之一强。H股98.75港元，按当日人民银行港元兑人民币中间价0.86498折合约85.42元人民币，较A股折价约0.9%——A/H几乎平价，两个市场对它的分歧很小。</p>
+
+  <h3>第二步 · 和同行比：贵有贵的理由，但理由已计价</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>可比家电公司市场快照 · 2026-08-28收盘，来源：Wind；市净率为LF口径</caption>
+      <thead><tr><th>公司</th><th>市盈率TTM</th><th>市净率</th><th>股息率</th><th>年初至今涨跌幅</th><th>总市值</th></tr></thead>
+      <tbody>
+        <tr><td>美的集团</td><td>14.88倍</td><td>3.21倍</td><td>4.89%</td><td>+15.82%</td><td>6,573亿元</td></tr>
+        <tr><td>格力电器</td><td>7.84倍</td><td>1.47倍</td><td>7.68%</td><td>+4.42%</td><td>2,185亿元</td></tr>
+        <tr><td>海尔智家</td><td>11.10倍</td><td>1.69倍</td><td>4.17%</td><td>−15.68%</td><td>1,896亿元</td></tr>
+        <tr><td>海信家电</td><td>13.26倍</td><td>2.10倍</td><td>4.77%</td><td>+12.01%</td><td>332亿元</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>美的是这张表里最贵的：市盈率比格力贵近一倍、比海尔贵三分之一。市场给溢价的理由清楚——B端第二曲线、全球OBM、教科书级的回报纪律；但溢价本身意味着这些理由<b>已经在价格里</b>。买美的赚的不是"估值修复"的钱，而是"兑现继续"的钱；一旦B端或海外增速证伪，溢价部分就是回撤空间。</p>
+  </div>
+
+  <h3>第三步 · 三年情景与两种方法</h3>
+  <div class="steps">
+    <div class="step"><div class="n">方法 A</div><b>情景市盈率法</b><p>对FY2027E归母净利润施以情景市盈率（悲观按格力化的11倍、基准维持14倍、乐观向B端故事的17倍），再按各情景股权成本折现1.34年回到估值日——给"生意"定价。</p></div>
+    <div class="step"><div class="n">方法 B</div><b>股东回报率法</b><p>用FY2026E"分红+注销回购"现金除以要求的现金回报率（5.5%/4.75%/4.0%），得到隐含市值——给"现金返还"定价，是这只股票的底仓逻辑。</p></div>
+    <div class="step"><div class="n">怎么读</div><b>两法互证，不取平均</b><p>A法对倍数收缩敏感，构成下界；B法假设回报纪律延续，构成上界。现价落在两法之间的哪个位置，就是市场此刻的态度。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>FY2026E–FY2028E三情景总表 · 金额为人民币亿元；均为分析假设，非公司指引</caption>
+      <thead><tr><th>驱动 / 结果</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
+      <tbody>
+        <tr><td>情景内核</td><td>国内零售继续两位数下滑、关税落地、B端放缓、汇兑续损</td><td>国内企稳、海外+6~8%、B端保持两位数</td><td>B端加速、海外OBM双位数、汇率企稳</td></tr>
+        <tr><td>营业总收入 26/27/28E</td><td>4,630 / 4,630 / 4,630</td><td>4,720 / 4,980 / 5,300</td><td>4,770 / 5,150 / 5,600</td></tr>
+        <tr><td>归母净利润 26/27/28E</td><td>420 / 415 / 415</td><td>450 / 478 / 510</td><td>465 / 505 / 555</td></tr>
+        <tr><td>股息+注销回购 / 归母</td><td>70%</td><td>85%</td><td>100%</td></tr>
+        <tr><td>情景市盈率（A法）</td><td>11倍</td><td>14倍</td><td>17倍</td></tr>
+        <tr><td>股权成本 / 要求回报率</td><td>10.5% / 5.5%</td><td>9.5% / 4.75%</td><td>8.5% / 4.0%</td></tr>
+        <tr class="grp"><td>A法价值（元/股）</td><td>52.3</td><td>77.7</td><td>100.9</td></tr>
+        <tr><td>B法价值（元/股）</td><td>70.1</td><td>105.6</td><td>152.4</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">A法＝FY2027E归母÷总股本76.29亿股×情景市盈率÷(1+股权成本)^1.34；B法＝FY2026E回报现金÷要求回报率÷总股本。总股本按披露日7,628,798,092股；注销落地将缩小分母、抬高每股值，可转债悉数转换则反向，两者均未计入。派息与回购比例为模型参数，参考FY2025实际（合计约100%）与中期节奏设定。</p>
+
+  <h3>把三档价值放在一把尺上</h3>
+  <div class="rows" aria-label="情景价值与现价对比">
+    <div class="row"><div class="nm">熊市<span>白马溢价证伪</span></div><div class="track"><div class="fill alt" style="width:51.9%"></div></div><div class="fig">52.3元<span class="down">两法52.3–70.1 · −39%~−19%</span></div></div>
+    <div class="row"><div class="nm">基准（A法）<span>兑现延续、倍数不变</span></div><div class="track"><div class="fill" style="width:77.0%"></div></div><div class="fig">77.7元<span>两法77.7–105.6 · −10%~+22%</span></div></div>
+    <div class="row"><div class="nm">现价<span>2026-08-28收盘</span></div><div class="track"><div class="fill soft" style="width:85.5%"></div></div><div class="fig">86.23元<span>市场价</span></div></div>
+    <div class="row"><div class="nm">牛市<span>B端重估</span></div><div class="track"><div class="fill moss" style="width:100.0%"></div></div><div class="fig">100.9元<span class="up">两法100.9–152.4 · +17%~+77%</span></div></div>
+  </div>
+  <p class="small">条形按A法数值（现价行为市场价）相对牛市A法100.9元的比例绘制；区间与涨跌幅按两法端点对现价86.23元推算。</p>
+
+  <h3>第四步 · 现价隐含了什么</h3>
+  <div class="plain">
+    <span class="pl">一句话总结</span>
+    <p>现价86.23元高于基准A法（77.7元）、低于基准B法（105.6元）——<b>市场信"还钱"多过信"生意重估"</b>：只要分红加注销回购的纪律延续，6.7%左右的现金回报率就是底；但按盈利给估值，五年84%分位意味着基准情景下的生意价值已经给满。往上走需要B端与海外连续兑现（届时看牛市区间），往下最大的坑是"扣非崩了"被误读成经营崩了——本报告的桥拆过了：扣非下滑主要由汇率错位与减值构成，经营端的毛利和费用其实都在改善。在证据换边之前：<b>中性</b>。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="risks">
+  <div class="slabel">风险与验证</div>
+  <h2>判断挂在四个可观察的钩子上</h2>
+  <div class="finds">
+    <div class="find good"><div class="t">最强多方证据</div><p>下滑大盘里的正增长与份额、B端两条腿的两位数、海外OBM占比过半、近100%的股东回报纪律。</p></div>
+    <div class="find warn"><div class="t">最强反方证据</div><p>估值五年84%分位、应收半年+53%未解释、商誉315.8亿元（库卡221.0亿元）年年要过减值测试、工业技术负增长、扣非口径对汇率高度敏感。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>验证地图 · 阈值为分析检验点，非公司指引</caption>
+      <thead><tr><th>变量</th><th>确认信号</th><th>证伪信号</th></tr></thead>
+      <tbody>
+        <tr><td>应收账款</td><td>三季报回落或公司给出账期解释</td><td>继续快于收入增长且无解释</td></tr>
+        <tr><td>B端接棒</td><td>楼宇+机器人保持两位数、工业技术降幅收窄</td><td>楼宇或机器人增速跌破个位数</td></tr>
+        <tr><td>汇率噪声</td><td>归母与扣非增速在汇率平稳期重新收敛</td><td>汇率平稳但扣非仍显著弱于归母</td></tr>
+        <tr><td>回报纪律</td><td>130亿回购执行并完成注销、末期分红延续</td><td>回购放缓或注销延宕、分红比例下调</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>把验证点排在时间线上</h3>
+  <div class="tline">
+    <div class="tstop"><span class="tw">2026三季报</span><b>应收与扣非的复检</b><p>应收账款是否回落；汇率平稳期扣非与归母是否收敛。</p></div>
+    <div class="tstop"><span class="tw">2026年内</span><b>回购执行与注销</b><p>65–130亿元方案的执行进度（截至7月17日该方案下已67.16亿元，年内累计82.06亿元）与注销落地。</p></div>
+    <div class="tstop warn"><span class="tw">FY2026年报</span><b>商誉年度减值测试</b><p>库卡221.0亿元商誉的年度测试结果；再减值即触发反方情景。</p></div>
+    <div class="tstop"><span class="tw">2027年8月</span><b>顺德液冷基地投产</b><p>B端叙事从"讲"到"赚"的第一个可核对节点（管理层路演口径）。</p></div>
+  </div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">最终判断</div>
+  <h2>中性：溢价合理但已给满，赚兑现的钱而不是重估的钱</h2>
+  <p>这份中报证明了两件事：经营引擎在一个恶劣的国内大盘里仍在改善；利润表的剧烈波动主要是汇率错位与投资浮盈的会计效应，而非经营恶化。但市场早已相信这些——定价停在自身五年高位，基准情景的生意价值与现价大体咬合。持有它的回报结构是清晰的：现金回报率托底，B端与海外的每一次兑现抬一点上限；做多它的超额收益，需要等一次"扣非恐慌"式的错杀，或者B端从两条腿变成三条腿。结论置信度为中等：单二季度为推算口径，应收跳升未获解释，商誉减值对象未披露。</p>
+  <div class="callout"><b>最强反方观点：</b>如果国内以旧换新退坡与关税同时落地，家电主业的量价与海外毛利率会一起承压；届时84%分位的估值没有安全垫，熊市区间（52.3–70.1元）并不遥远。反方证伪需要看到收入增速转负或回报纪律松动——目前两者都未发生。</div>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · 快速检索</div>
+  <h2>读懂一份制造业白马财报需要的词</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
+      <tbody>
+        <tr><td>归母净利润</td><td>归属于上市公司股东的净利润，扣掉了子公司少数股东应占部分。</td></tr>
+        <tr><td>扣非归母净利润</td><td>再扣掉"非经常性损益"（一次性项目）后的利润，本意是看经营的真实成色。</td></tr>
+        <tr><td>非经常性损益</td><td>监管定义的一次性项目清单：处置资产、政府补助、非套保衍生品损益等。规则是死的，会计错位由此而来。</td></tr>
+        <tr><td>汇兑损益</td><td>持有外币资产负债时，汇率变动带来的账面盈亏，计入财务费用（经常性）。</td></tr>
+        <tr><td>套期/对冲与衍生工具</td><td>用远期、期权等金融合约锁定汇率风险；未按套保会计处理的部分，其损益进"非经常"。</td></tr>
+        <tr><td>公允价值变动损益</td><td>持有的金融资产、衍生品按市价重估产生的账面盈亏；没有现金进出也会影响当期利润。</td></tr>
+        <tr><td>商誉与减值测试</td><td>并购溢价挂在账上的部分（美的主要来自收购库卡），每年必须测试，一旦"资不抵值"就要一次性减利润。</td></tr>
+        <tr><td>OBM</td><td>自有品牌出海（Original Brand Manufacturing），与贴牌代工（OEM）相对，毛利与定价权更高。</td></tr>
+        <tr><td>ToB / ToC</td><td>面向企业客户 / 面向消费者。美的的楼宇科技、机器人、工业技术是ToB。</td></tr>
+        <tr><td>库卡（KUKA）</td><td>2017年收购的德国工业机器人公司，美的机器人板块的主体，也是最大一块商誉的来源。</td></tr>
+        <tr><td>销售返利</td><td>承诺给经销商的折让，先挂在负债里；余额增厚通常意味着没有靠压货冲收入。</td></tr>
+        <tr><td>合同负债</td><td>先收了客户的钱、还没交货的部分；是未来收入的蓄水池。</td></tr>
+        <tr><td>注销式回购</td><td>公司买回自家股票后直接销毁：股本变小，每股盈利与分红被动增厚，是比分红更彻底的返还。</td></tr>
+        <tr><td>可转债</td><td>可以按约定价格换成股票的债券。美的2026年发的两笔零息可转债以H股为标的，转股会新增H股。</td></tr>
+        <tr><td>A/H比价</td><td>同一家公司A股与H股的价格比较，需按汇率折算同币种后再比。</td></tr>
+        <tr><td>市盈率（PE）与五年分位</td><td>股价÷每股盈利；分位指当前估值在自己过去五年里的排位，84%分位＝比五年里84%的时间都贵。</td></tr>
+        <tr><td>市净率（PB）</td><td>股价÷每股净资产。</td></tr>
+        <tr><td>股息率</td><td>每股分红÷股价，现金回报的直观口径；加上注销式回购即"股东回报率"。</td></tr>
+        <tr><td>加权平均ROE</td><td>净利润÷加权平均净资产，股东资金的回报率；半年报披露的是未年化值。</td></tr>
+        <tr><td>TTM</td><td>最近十二个月滚动口径，用于消除季节性。</td></tr>
+        <tr><td>FCF代理</td><td>经营现金流减资本开支的近似自由现金流，由披露值推算，非公司KPI。</td></tr>
+        <tr><td>推算单二季度</td><td>A股只披露累计数与一季数，二季度＝上半年减一季度，两端皆披露值。</td></tr>
+        <tr><td>股权成本（Ke）</td><td>股东承担该股风险要求的最低年回报率，估值折现用。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">方法与来源</div>
+  <h2>交易所披露控制财务数字，Wind只回答定价问题</h2>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>主要来源与证据边界 · 业绩证据截止2026-08-29，行情截止2026-08-28收盘</caption>
+      <thead><tr><th>来源</th><th>用途</th><th>证据边界</th></tr></thead>
+      <tbody>
+        <tr><td>2026年半年度报告（2026-08-29披露）</td><td>当期财务、分部、资产负债、分红回购、商誉</td><td>未经审计</td></tr>
+        <tr><td>2026年一季度报告</td><td>推算单二季度的减数</td><td>未经审计</td></tr>
+        <tr><td>2025年、2024年年度报告</td><td>五年历史、分红记录、治理与股东结构</td><td>经审计；FY2021收入利润未在其主要会计数据表内</td></tr>
+        <tr><td>投资者关系活动记录表（6月25日、7月29日）</td><td>管理层叙事与检验清单</td><td>公司整理的路演纪要，非逐字稿</td></tr>
+        <tr><td>Wind金融终端</td><td>行情快照、估值分位、同业倍数、五年毛利率与FY2021标准化数据、港元兑人民币中间价（人民银行口径）</td><td>标准化口径；与年报冲突时以交易所披露为准</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">所有推算值（单二季度、毛利、FCF代理、TTM、利润桥、情景与估值）均由本地计算台账按披露值复算；利润桥各项加总与利润总额变化一致（尾差为四舍五入）。三情景与两法估值为分析假设，不是盈利预测承诺。本报告不构成投资建议。</p>
+</section>
+
+<footer>
+  <p>财务数据截至2026年6月30日；公司公告检索截至2026年8月29日；行情为2026年8月28日收盘（来源：Wind）。主要财务文件经由交易所指定披露渠道取得。</p>
+  <p>本报告区分公司披露、管理层叙事、Wind标准化数据与分析推算。情景与估值不构成投资建议；投资有风险，决策需独立判断。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
