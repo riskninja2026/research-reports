@@ -225,6 +225,33 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
 .tbl.gloss th{text-align:left}
 .fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
 </style>
 </head>
 <body>
@@ -318,6 +345,23 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
+  <div class="cols" role="img" aria-label="五年营业收入与归母净利润趋势，数值见上方五年盈利轨迹表">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:63.2%"></div><div class="bar np" style="height:2.82%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:80.2%"></div><div class="bar np" style="height:1.74%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:82.9%"></div><div class="bar np" style="height:1.97%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100.0%"></div><div class="bar np" style="height:1.01%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:97.7%"></div><div class="bar np" style="height:0.05%"></div></div></div>
+  </div>
+  <div class="collabels">
+    <div><b>2021</b></div>
+    <div><b>2022</b></div>
+    <div><b>2023</b></div>
+    <div><b>2024</b></div>
+    <div><b>2025</b></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
+  <p class="small">柱高按各年数值相对2024年收入1,585.46亿元等比绘制；具体数字见上表。收入柱五年抬高一半，利润柱几乎缩没——"增收不增利"的形状一眼可见。</p>
+
   <div class="tblscroll">
     <table class="tbl">
       <caption>五年每股与回报 · 经审计年度数据；人民币元，ROE除外</caption>
@@ -629,41 +673,29 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
   <div class="tblscroll">
     <table class="tbl">
-      <caption>2026E / 2027E / 2028E核心经营假设 · 人民币十亿元；毛利率除外</caption>
-      <thead><tr><th>情景</th><th>自投签约销售</th><th>收入</th><th>毛利率</th><th>减值及公允价值损失</th><th>归母净利润</th></tr></thead>
+      <caption>2026E / 2027E / 2028E三情景总表｜金额为人民币十亿元；每格按26/27/28顺序</caption>
+      <thead><tr><th>驱动 / 结果</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
       <tbody>
-        <tr><td>Bear</td><td>105 / 100 / 95</td><td>105 / 100 / 98</td><td>10.5% / 10.3% / 10.5%</td><td>4.5 / 4.2 / 3.8</td><td>−1.44 / −1.30 / −0.69</td></tr>
-        <tr><td>Base</td><td>120 / 125 / 130</td><td>110 / 115 / 122</td><td>11.2% / 12.0% / 12.8%</td><td>3.8 / 3.0 / 2.4</td><td>0.50 / 1.84 / 3.20</td></tr>
-        <tr><td>Bull</td><td>130 / 140 / 150</td><td>118 / 130 / 140</td><td>11.8% / 12.8% / 13.8%</td><td>3.0 / 2.3 / 1.7</td><td>1.96 / 3.74 / 5.51</td></tr>
+        <tr><td>自投签约销售</td><td>105 / 100 / 95</td><td>120 / 125 / 130</td><td>130 / 140 / 150</td></tr>
+        <tr><td>收入</td><td>105 / 100 / 98</td><td>110 / 115 / 122</td><td>118 / 130 / 140</td></tr>
+        <tr><td>毛利率</td><td>10.5% / 10.3% / 10.5%</td><td>11.2% / 12.0% / 12.8%</td><td>11.8% / 12.8% / 13.8%</td></tr>
+        <tr><td>减值及公允价值损失</td><td>4.5 / 4.2 / 3.8</td><td>3.8 / 3.0 / 2.4</td><td>3.0 / 2.3 / 1.7</td></tr>
+        <tr><td>其他收入及收益</td><td>1.6 / 1.6 / 1.6</td><td>1.7 / 1.8 / 1.9</td><td>1.8 / 1.9 / 2.0</td></tr>
+        <tr><td>销售行政费率</td><td>全期5.2%</td><td>5.0% / 4.9% / 4.8%</td><td>4.8% / 4.7% / 4.6%</td></tr>
+        <tr><td>财务费用</td><td>2.5 / 2.4 / 2.3</td><td>2.3 / 2.2 / 2.1</td><td>2.2 / 2.1 / 2.0</td></tr>
+        <tr><td>合联营结果</td><td>−1.0 / −0.7 / −0.5</td><td>0.0 / 0.3 / 0.6</td><td>0.4 / 0.7 / 1.0</td></tr>
+        <tr><td>税率</td><td>42%</td><td>42%</td><td>40%</td></tr>
+        <tr><td>非控股股东利润</td><td>0.6 / 0.7 / 0.8</td><td>0.9 / 1.1 / 1.3</td><td>1.2 / 1.5 / 1.8</td></tr>
+        <tr class="grp"><td>归母净利润</td><td>−1.44 / −1.30 / −0.69</td><td>0.50 / 1.84 / 3.20</td><td>1.96 / 3.74 / 5.51</td></tr>
+        <tr><td>现金（含受限）</td><td>56 / 50 / 45</td><td>62 / 65 / 70</td><td>66 / 73 / 82</td></tr>
+        <tr><td>总借贷</td><td>135 / 140 / 145</td><td>130 / 126 / 120</td><td>126 / 116 / 105</td></tr>
+        <tr><td>短债</td><td>34 / 39 / 44</td><td>30 / 28 / 25</td><td>27 / 23 / 19</td></tr>
       </tbody>
     </table>
   </div>
 
-  <h3>归母桥的辅助输入</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026E / 2027E / 2028E · 人民币十亿元；费率与税率除外</caption>
-      <thead><tr><th>情景</th><th>其他收入及收益</th><th>销售行政费率</th><th>财务费用</th><th>合联营结果</th><th>税率</th><th>非控股股东利润</th></tr></thead>
-      <tbody>
-        <tr><td>Bear</td><td>1.6 / 1.6 / 1.6</td><td>全期5.2%</td><td>2.5 / 2.4 / 2.3</td><td>−1.0 / −0.7 / −0.5</td><td>42%</td><td>0.6 / 0.7 / 0.8</td></tr>
-        <tr><td>Base</td><td>1.7 / 1.8 / 1.9</td><td>5.0% / 4.9% / 4.8%</td><td>2.3 / 2.2 / 2.1</td><td>0.0 / 0.3 / 0.6</td><td>42%</td><td>0.9 / 1.1 / 1.3</td></tr>
-        <tr><td>Bull</td><td>1.8 / 1.9 / 2.0</td><td>4.8% / 4.7% / 4.6%</td><td>2.2 / 2.1 / 2.0</td><td>0.4 / 0.7 / 1.0</td><td>40%</td><td>1.2 / 1.5 / 1.8</td></tr>
-      </tbody>
-    </table>
-  </div>
   <p class="small">利润桥为：收入乘毛利率，加其他收入及收益，减销售行政费用、财务费用和减值，再加合联营结果；正税前利润按情景税率计税，最后扣非控股股东利润。税项是简化假设，不能捕捉项目层土地增值税与实体税差。</p>
 
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026E / 2027E / 2028E资产负债约束 · 人民币十亿元</caption>
-      <thead><tr><th>情景</th><th>现金（含受限）</th><th>总借贷</th><th>短债</th></tr></thead>
-      <tbody>
-        <tr><td>Bear</td><td>56 / 50 / 45</td><td>135 / 140 / 145</td><td>34 / 39 / 44</td></tr>
-        <tr><td>Base</td><td>62 / 65 / 70</td><td>130 / 126 / 120</td><td>30 / 28 / 25</td></tr>
-        <tr><td>Bull</td><td>66 / 73 / 82</td><td>126 / 116 / 105</td><td>27 / 23 / 19</td></tr>
-      </tbody>
-    </table>
-  </div>
 
   <div class="plain">
     <span class="pl">白话解读</span>
@@ -681,6 +713,16 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <div class="slabel">市场定价 · 同业 · 估值</div>
   <h2>股价已打五折，但市场其实预付了一部分修复</h2>
   <p>先说方法：通常给股票估值用市盈率（股价÷每股盈利），但绿城的盈利已接近于零、滚动十二个月甚至为负，市盈率算出来没有意义。所以本节改用<span class="g">市净率P/B</span>（股价÷每股净资产）作为主尺子，并把"净资产值不值钱"的问题交给<span class="g">ROE</span>（净资产的年回报率）来回答。结果在香港收市后发布，下表是次日早盘快照，不是完整收市反应。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">现价</div><div class="v">HK$8.03</div><div class="d"><span>2026-08-26 09:42早盘</span></div></div>
+    <div class="cell"><div class="k">熊市目标</div><div class="v">HK$2.67</div><div class="d"><span class="down">较现价 −67%</span></div></div>
+    <div class="cell"><div class="k">基准目标</div><div class="v">HK$9.60</div><div class="d"><span class="up">较现价 +20%</span></div></div>
+    <div class="cell"><div class="k">牛市目标</div><div class="v">HK$13.31</div><div class="d"><span class="up">较现价 +66%</span></div></div>
+    <div class="cell"><div class="k">现价隐含</div><div class="v">常态归母约22.9亿</div><div class="d"><span>约为2025年全年的30余倍</span></div></div>
+    <div class="cell"><div class="k">一句话判断</div><div class="v">中性</div><div class="d"><span>修复已被预付一部分</span></div></div>
+  </div>
+
 
   <h3>第一步：市场现在给绿城什么价？</h3>
   <div class="tblscroll">
@@ -789,6 +831,15 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <div class="quote">真正的重估条件不是"活下来"，而是新盘利润、关联方回款和归母ROE在同一窗口改善。</div>
   <p><strong>下一验证窗口：</strong>月度自投销售与权益销售、旧库存结转毛利、关联方应收减应付差额、短债占比、监管资金口径下的现金覆盖、廉署程序进展，以及新管理层对分红与资本回报的安排。</p>
   <p><strong>失效边界：</strong>以下情况出现任何一种，估值就该转入压力区：短债覆盖跌破安全垫；借给合作方的钱增长得比股东权益还快；核心城市新盘撑不住毛利；或调查查出公司层面的实质责任与财务暴露。反过来，若归母回报持续修复、可持续的现金分红恢复，本报告的谨慎判断就需要上调。</p>
+
+  <h3>把验证点排在时间线上</h3>
+  <div class="tline">
+    <div class="tstop"><span class="tw">每月</span><b>自投与权益销售简报</b><p>销售方向是否守住熊市路径之上。</p></div>
+    <div class="tstop"><span class="tw">下一份报表</span><b>结转毛利与关联方差额</b><p>旧库存结转毛利、关联方应收减应付差额与短债占比。</p></div>
+    <div class="tstop warn"><span class="tw">随时</span><b>廉署程序进展</b><p>若出现公司层面的实质责任与财务暴露，估值转入压力区。</p></div>
+    <div class="tstop"><span class="tw">FY2026年报</span><b>归母修复与分红安排</b><p>新管理层对分红与资本回报的安排是否落地。</p></div>
+  </div>
+
 </section>
 
 <section class="reveal on" id="glossary">

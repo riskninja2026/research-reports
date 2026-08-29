@@ -225,6 +225,33 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
 .tbl.gloss th{text-align:left}
 .fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
 </style>
 </head>
 <body>
@@ -328,6 +355,23 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     </table>
   </div>
 
+  <div class="cols" role="img" aria-label="五年营业收入与归母净利润趋势，数值见上方五年合并财务历史表">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:62.1%"></div><div class="bar np" style="height:6.2%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:59.1%"></div><div class="bar np" style="height:7.1%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:79.2%"></div><div class="bar np" style="height:15.9%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100.0%"></div><div class="bar np" style="height:23.5%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:99.4%"></div><div class="bar np" style="height:26.5%"></div></div></div>
+  </div>
+  <div class="collabels">
+    <div><b>2021</b></div>
+    <div><b>2022</b></div>
+    <div><b>2023</b></div>
+    <div><b>2024</b></div>
+    <div><b>2025</b></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
+  <p class="small">柱高按各年数值相对2024年收入88.230亿元等比绘制；具体数字见上表。利润柱从2021年到2025年逐级抬升，而收入柱在2024年见顶——两组柱子的"张口"就是利润率修复的形状。</p>
+
   <div data-financials="segments">
     <div class="tblscroll">
       <table class="tbl">
@@ -344,6 +388,13 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </table>
     </div>
   </div>
+
+  <div class="stacks">
+    <div class="stack"><div class="cap">2025H1收入结构（按同比推算）</div><div class="stackbar"><div class="seg p" style="width:61.5%">61.5%</div><div class="seg q" style="width:10.7%">10.7%</div><div class="seg r" style="width:27.8%">27.8%</div></div></div>
+    <div class="stack"><div class="cap">2026H1收入结构</div><div class="stackbar"><div class="seg p" style="width:57.2%">57.2%</div><div class="seg q" style="width:14.6%">14.6%</div><div class="seg r" style="width:28.2%">28.2%</div></div></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>航空信息平台</span><span><i class="q"></i>机场数字化</span><span><i class="r"></i>其他业务（结算、智能产品、网络等）</span></div>
+  <p class="small">上年结构由本期金额与披露同比反推（推算）；三组口径为便于比较的分析归并。主业占比一年内从约61%降至57.2%，缺口主要由机场数字化补上——增长换来源的形状。</p>
 
   <div class="plain">
     <span class="pl">白话解读</span>
@@ -521,6 +572,16 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <h2>便宜有据可查，但重估的钥匙在现金兑现</h2>
   <p>给它估值要回答三个问题：市场现在给什么价？这个价便宜在哪、为什么便宜？三年后按情景值多少钱？下面按四步走。</p>
 
+  <div class="grid">
+    <div class="cell"><div class="k">现价</div><div class="v">HK$8.825</div><div class="d"><span>2026-08-25 10:17盘中</span></div></div>
+    <div class="cell"><div class="k">熊市价值（两法）</div><div class="v">5.42<span class="u">–6.24</span></div><div class="d"><span class="down">较现价 −39%~−29%</span></div></div>
+    <div class="cell"><div class="k">基准价值（两法）</div><div class="v">8.89<span class="u">–9.88</span></div><div class="d"><span class="up">较现价 +1%~+12%</span></div></div>
+    <div class="cell"><div class="k">牛市价值（两法）</div><div class="v">13.11<span class="u">–14.37</span></div><div class="d"><span class="up">较现价 +49%~+63%</span></div></div>
+    <div class="cell"><div class="k">现价的位置</div><div class="v">贴基准下端</div><div class="d"><span>静态便宜已被市场给到</span></div></div>
+    <div class="cell"><div class="k">一句话判断</div><div class="v">中性</div><div class="d"><span>重估等核心量价与现金兑现</span></div></div>
+  </div>
+
+
   <h3>第一步 · 市场现在给什么价</h3>
   <p>业绩发布日收市价为HK$8.340；次日10:17 HKT报HK$8.825，上涨5.82%。以最新公告后的LTM利润与期末归母权益自算，<span class="g">P/E</span>（市盈率）为9.18倍，<span class="g">P/B</span>（市净率）为0.893倍，上一财年<span class="g">股息率</span>为3.61%。Wind显示的0.935倍P/B沿用年末账面值，故不用于本报告的最新资产估值。</p>
 
@@ -560,27 +621,20 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
   <div class="tblscroll">
     <table class="tbl">
-      <caption>FY2026E—FY2028E情景驱动｜百分比按26/27/28顺序</caption>
-      <thead><tr><th>情景</th><th>收入增速</th><th>归母净利率</th><th>FCF代理 / 归母净利润</th><th>集团归母口径派息率</th></tr></thead>
+      <caption>FY2026E—FY2028E三情景总表｜驱动假设按26/27/28顺序；金额为人民币亿元</caption>
+      <thead><tr><th>驱动 / 结果</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
       <tbody>
-        <tr><td>熊市</td><td>每年+1.0%</td><td>25.0% / 24.5% / 24.0%</td><td>三年均75%</td><td>34% / 35% / 36%</td></tr>
-        <tr><td>基准</td><td>+4.5% / 此后每年+5.0%</td><td>27.3% / 28.0% / 28.5%</td><td>95% / 98% / 99%</td><td>37% / 39% / 41%</td></tr>
-        <tr><td>牛市</td><td>+7.0% / 此后每年+8.0%</td><td>较基准首年+1.2pp / 30.0% / 31.0%</td><td>105% / 115% / 120%</td><td>43% / 47% / 52%</td></tr>
+        <tr><td>收入增速</td><td>每年+1.0%</td><td>+4.5% / 此后每年+5.0%</td><td>+7.0% / 此后每年+8.0%</td></tr>
+        <tr><td>归母净利率</td><td>25.0% / 24.5% / 24.0%</td><td>27.3% / 28.0% / 28.5%</td><td>较基准首年+1.2pp / 30.0% / 31.0%</td></tr>
+        <tr><td>FCF代理 / 归母净利润</td><td>三年均75%</td><td>95% / 98% / 99%</td><td>105% / 115% / 120%</td></tr>
+        <tr><td>集团归母口径派息率</td><td>34% / 35% / 36%</td><td>37% / 39% / 41%</td><td>43% / 47% / 52%</td></tr>
+        <tr class="grp"><td>营业收入 26/27/28</td><td>88.535 / 89.420 / 90.315</td><td>91.603 / 96.183 / 100.992</td><td>93.794 / 101.298 / 109.402</td></tr>
+        <tr><td>归母净利润 26/27/28</td><td>22.134 / 21.908 / 21.675</td><td>25.008 / 26.931 / 28.783</td><td>26.731 / 30.389 / 33.915</td></tr>
+        <tr><td>FCF代理 26/27/28</td><td>16.600 / 16.431 / 16.257</td><td>23.757 / 26.393 / 28.495</td><td>28.068 / 34.948 / 40.698</td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>FY2026E—FY2028E三年经营与现金情景｜人民币亿元</caption>
-      <thead><tr><th>情景</th><th>营业收入 26/27/28</th><th>归母净利润 26/27/28</th><th>FCF代理 26/27/28</th></tr></thead>
-      <tbody>
-        <tr><td>熊市</td><td>88.535 / 89.420 / 90.315</td><td>22.134 / 21.908 / 21.675</td><td>16.600 / 16.431 / 16.257</td></tr>
-        <tr><td>基准</td><td>91.603 / 96.183 / 100.992</td><td>25.008 / 26.931 / 28.783</td><td>23.757 / 26.393 / 28.495</td></tr>
-        <tr><td>牛市</td><td>93.794 / 101.298 / 109.402</td><td>26.731 / 30.389 / 33.915</td><td>28.068 / 34.948 / 40.698</td></tr>
-      </tbody>
-    </table>
-  </div>
   <p class="small">熊市、基准和牛市的FY2026H2隐含收入同比约为−2.68%、+3.62%和+8.12%，因此没有把上半年增长机械年化。集团归母口径派息率只是模型参数，不冒充公司的母公司利润政策分母。</p>
 
   <div class="tblscroll">
@@ -602,7 +656,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
     <div class="row"><div class="nm">基准<span>新业务延续、现金转常态</span></div><div class="track"><div class="fill" style="width:67.8%"></div></div><div class="fig">HK$8.89<span class="up">两法8.89–9.88 · 较现价+1%~+12%</span></div></div>
     <div class="row"><div class="nm">牛市<span>平台与项目同时改善</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$13.11<span class="up">两法13.11–14.37 · 较现价+49%~+63%</span></div></div>
   </div>
-  <p class="small">条形按各情景资产支持盈利法数值相对牛市HK$13.11的比例绘制；涨跌幅按现价HK$8.825与两法区间端点计算。</p>
+  <p class="small">条形按各情景资产支持盈利法数值（现价行为市场价）相对牛市HK$13.11的比例绘制；涨跌幅按现价HK$8.825与两法区间端点计算。</p>
 
   <h3>第四步 · 这个价格意味着什么</h3>
   <div class="plain">
@@ -624,6 +678,15 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   </div>
 
   <div class="callout"><b>最强反方观点：</b>市场可能低估了机场数字化与智能产品的结构升级，也低估了国产核心系统带来的长期成本与安全优势。若新业务毛利可复制、核心量价恢复、末期股息继续增长，本报告对项目时点和资金效率的折价会显得过度保守。</div>
+
+  <h3>把验证点排在时间线上</h3>
+  <div class="tline">
+    <div class="tstop warn"><span class="tw">2026年内</span><b>高新技术企业资格重新认定</b><p>未续期则优惠税率与退税逻辑失效，利润直接受损。</p></div>
+    <div class="tstop"><span class="tw">下一期业绩</span><b>平台量价同时转正</b><p>航空信息平台收入增速不低于处理量增速，且二者为正。</p></div>
+    <div class="tstop"><span class="tw">FY2026全年</span><b>现金兑现检验</b><p>全年FCF代理覆盖归母净利润90%以上，关联方应收继续下降。</p></div>
+    <div class="tstop"><span class="tw">FY2026末期</span><b>分红与资金用途</b><p>末期DPS达到0.30元或以上，并说明大额银行产品与资本承诺用途。</p></div>
+  </div>
+
 </section>
 
 <section class="reveal on" id="glossary">

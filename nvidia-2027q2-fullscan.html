@@ -225,6 +225,33 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
 .tbl.gloss th{text-align:left}
 .fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
 </style>
 </head>
 <body>
@@ -308,6 +335,23 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
+  <div class="cols" role="img" aria-label="Five-year revenue and net income trend; values are in the five-year income record above">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:12.5%"></div><div class="bar np" style="height:4.5%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:12.5%"></div><div class="bar np" style="height:2.0%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:28.2%"></div><div class="bar np" style="height:13.8%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:60.4%"></div><div class="bar np" style="height:33.8%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100.0%"></div><div class="bar np" style="height:55.6%"></div></div></div>
+  </div>
+  <div class="collabels">
+    <div><b>FY2022</b></div>
+    <div><b>FY2023</b></div>
+    <div><b>FY2024</b></div>
+    <div><b>FY2025</b></div>
+    <div><b>FY2026</b></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>Revenue</span><span><i class="m"></i>Net income</span></div>
+  <p class="small">Bar heights are proportional to each value against FY2026 revenue of US$215.938bn; exact figures are in the table above. The shape is the whole AI cycle: two flat years, then revenue octupling in three — with net income climbing almost in step.</p>
+
   <div class="tblscroll" data-financials="history">
     <table class="tbl" data-financials="history">
       <caption>Split-adjusted diluted earnings per share · USD</caption>
@@ -366,6 +410,13 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
         </tbody>
       </table>
     </div>
+
+    <div class="stacks">
+      <div class="stack"><div class="cap">Q2 FY2026 platform mix (derived from disclosed Y/Y rates)</div><div class="stackbar"><div class="seg p" style="width:51.6%">51.6%</div><div class="seg q" style="width:36.3%">36.3%</div><div class="seg r" style="width:12.1%">12.1%</div></div></div>
+      <div class="stack"><div class="cap">Q2 FY2027 platform mix</div><div class="stackbar"><div class="seg p" style="width:50.6%">50.6%</div><div class="seg q" style="width:41.9%">41.9%</div><div class="seg r" style="width:7.5%">7.5%</div></div></div>
+    </div>
+    <div class="legend"><span><i class="p"></i>Hyperscale</span><span><i class="q"></i>ACIE</span><span><i class="r"></i>Edge Computing</span></div>
+    <p class="small">The prior-year mix is derived by unwinding each platform's disclosed Y/Y growth (+102% / +138% / +27%) from its current revenue. The shift is ACIE's: AI clouds, enterprise and sovereign demand growing faster than the hyperscalers themselves, while Edge shrinks toward 7.5%.</p>
 
     <div class="tblscroll">
       <table class="tbl">
@@ -612,45 +663,20 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <h2>The price discounts execution, not a demand collapse</h2>
   <p>Valuing NVIDIA means answering three questions in order: what does the market pay today, what is the chip business itself worth under different futures, and how much should be deducted for the financing promises documented above? This section walks through all three, then reads back what the current price implies.</p>
 
+  <div class="grid">
+    <div class="cell"><div class="k">Price</div><div class="v">$219.53</div><div class="d"><span>26 Aug 2026 20:01 ET after-hours</span></div></div>
+    <div class="cell"><div class="k">Bear value (two methods)</div><div class="v">$105.51<span class="u">–148.00</span></div><div class="d"><span class="down">−52% to −33% vs price</span></div></div>
+    <div class="cell"><div class="k">Base value (two methods)</div><div class="v">$254.03<span class="u">–321.10</span></div><div class="d"><span class="up">+16% to +46% vs price</span></div></div>
+    <div class="cell"><div class="k">Bull value (two methods)</div><div class="v">$537.82<span class="u">–551.46</span></div><div class="d"><span class="up">+145% to +151% vs price</span></div></div>
+    <div class="cell"><div class="k">The price implies</div><div class="v">FY28 growth ≈46%</div><div class="d"><span>vs management's preliminary 70% outlook</span></div></div>
+    <div class="cell"><div class="k">One-line verdict</div><div class="v">Constructive</div><div class="d"><span>with a higher risk classification</span></div></div>
+  </div>
+
+
   <h3>Step 1 · What the market pays now</h3>
   <p>NVIDIA closed the pre-release session at US$209.66. At 20:01 ET, the after-hours indication was US$219.53, up 4.71% — about US$5.301 trillion of market value on the filing share count. (After-hours prices are indicative; the next regular session settles them.) The move rewards the strong outlook while keeping a discount for the margin dip, cash conversion and customer financing.</p>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Goldman Sachs / Visible Alpha snapshot on 26 August 2026 · variance to Street consensus; non-GAAP labels follow Goldman</caption>
-      <thead><tr><th>Expectation test</th><th>Variance to Street</th><th>Reading</th></tr></thead>
-      <tbody>
-        <tr><td>Q2 results</td><td>Revenue +4.2%; Data Center +3.6%; Edge +11.3%; non-GAAP EPS +6.1%; gross margin +14bp</td><td>Broad execution beat, not a material margin beat</td></tr>
-        <tr><td>Q3 guide</td><td>Revenue midpoint +US$2.61bn; implied non-GAAP EPS +4.6%; gross margin −92bp</td><td>Revenue and EPS ahead, with a near-term margin reset</td></tr>
-      </tbody>
-    </table>
-  </div>
   <p>Goldman expected range-bound trading before the call, then outperformance afterward. Its estimates moved the same way: its Jan-2028 and Jan-2029 revenue forecasts rose 13.1% and 20.9% after the call while its gross-margin forecasts fell about 2.3 points — more volume, thinner margin, higher EPS overall. One broker's dated opinion, not independent proof.</p>
 
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Front-adjusted regular-close price returns through 26 August 2026; benchmark spreads are price returns, not annualized alpha</caption>
-      <thead><tr><th>Horizon</th><th>NVIDIA</th><th>Nasdaq 100</th><th>SOX</th></tr></thead>
-      <tbody>
-        <tr><td>20 trading days</td><td>+10.34%</td><td>+7.47%</td><td>+11.14%</td></tr>
-        <tr><td>60 trading days</td><td>−6.44%</td><td>−4.23%</td><td>−10.45%</td></tr>
-        <tr><td>Year to date</td><td>+12.56%</td><td>+15.74%</td><td>+63.93%</td></tr>
-        <tr><td>Three years</td><td>+356.49%</td><td>+95.59%</td><td>+232.16%</td></tr>
-        <tr><td>Five years</td><td>+853.35%</td><td>+91.28%</td><td>+244.51%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="tblscroll">
-    <table class="tbl gloss">
-      <caption>Technical and liquidity map at the regular close; monitoring heuristic, not intrinsic value</caption>
-      <thead><tr><th>Signal</th><th>Evidence</th><th>Reading</th></tr></thead>
-      <tbody>
-        <tr><td>Moving averages</td><td>Below the 5-, 10- and 20-day averages; above the 60-, 120- and 250-day averages</td><td>Weak short trend inside an intact medium- and long-term trend</td></tr>
-        <tr><td>Liquidity</td><td>179.9m shares and US$38.08bn traded; 1.54× and 1.52× their 20-day averages</td><td>Results-day turnover was elevated; after-hours turnover was unavailable</td></tr>
-        <tr><td>Monitoring levels</td><td>Support at the 60-day area, then US$202.55 and US$191.5–193; resistance at US$215.6–217.6, then US$227.92 / US$232.01 / US$236.27</td><td>Price must reclaim short averages and recent swing highs to confirm momentum</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">Read the returns table like this: over five years NVIDIA is up 853% against 91% for the Nasdaq 100 — historic outperformance — but year-to-date it is up 12.6% while the semiconductor index (SOX) is up 63.9%. The long-term leader has recently been the sector laggard. The post-results indication would reclaim the short moving averages, though its after-hours volume was unavailable. Support and resistance are monitoring zones, not valuation inputs.</p>
 
   <h3>Step 2 · Peers clarify the economics, not the multiple</h3>
   <div class="tblscroll">
@@ -662,18 +688,6 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
         <tr><td>AMD · FY23–25</td><td>23.6%</td><td>46.1% → 49.35% → 49.5%</td><td>1.8% → 7.4% → 10.7%</td></tr>
         <tr><td>Broadcom · FY23–25</td><td>33.6%</td><td>68.9% → 63.0% → 67.8%</td><td>45.2% → 26.1% → 39.9%</td></tr>
         <tr><td>TSMC · CY23–25</td><td>32.7%</td><td>54.4% → 56.1% → 59.9%</td><td>42.6% → 45.7% → 50.8%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Research intensity across the same issuer-filing windows</caption>
-      <thead><tr><th>Company / period</th><th>R&amp;D / revenue path</th></tr></thead>
-      <tbody>
-        <tr><td>NVIDIA · FY24–26</td><td>−5.6pt end to end</td></tr>
-        <tr><td>AMD · FY23–25</td><td>25.9% → 25.04% → 23.4%</td></tr>
-        <tr><td>Broadcom · FY23–25</td><td>14.7% → 18.1% → 17.2%</td></tr>
-        <tr><td>TSMC · CY23–25</td><td>8.4% → 7.1% → 6.5%</td></tr>
       </tbody>
     </table>
   </div>
@@ -706,61 +720,26 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
   <div class="tblscroll">
     <table class="tbl">
-      <caption>Scenario revenue assumptions · each growth sequence is FY28 / FY29 / FY30</caption>
-      <thead><tr><th>Case</th><th>FY27 revenue anchor</th><th>Revenue growth</th></tr></thead>
+      <caption>Consolidated scenario drivers · sequences are FY28 / FY29 / FY30; operating margin includes SBC; Bear/Bull cash-conversion and asset rows are stated as changes from Base where so labeled</caption>
+      <thead><tr><th>Driver</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
       <tbody>
-        <tr><td>Bear</td><td>$395bn</td><td>50% / 5% / flat</td></tr>
-        <tr><td>Base</td><td>$410bn</td><td>70% / 1.18× / 10%</td></tr>
-        <tr><td>Bull</td><td>$425bn</td><td>80% / 30% / 20%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Scenario margin and discount assumptions · margin sequences are FY28 / FY29 / FY30; operating margin includes SBC</caption>
-      <thead><tr><th>Case</th><th>Gross margin</th><th>GAAP operating margin</th><th>WACC / terminal g</th></tr></thead>
-      <tbody>
-        <tr><td>Bear</td><td>70% / 65% / 60%</td><td>61% / 56% / 50%</td><td>11.0% / 2.5%</td></tr>
-        <tr><td>Base</td><td>72.5% / 70% / 67%</td><td>64.7% / 62.3% / 59%</td><td>9.5% / 350bp</td></tr>
-        <tr><td>Bull</td><td>73% / 72% / 70%</td><td>66% / 65.2% / 63.2%</td><td>8.5% / 4.5%</td></tr>
+        <tr><td>FY27 revenue anchor</td><td>$395bn</td><td>$410bn</td><td>$425bn</td></tr>
+        <tr><td>Revenue growth</td><td>50% / 5% / flat</td><td>70% / 1.18× / 10%</td><td>80% / 30% / 20%</td></tr>
+        <tr><td>Gross margin</td><td>70% / 65% / 60%</td><td>72.5% / 70% / 67%</td><td>73% / 72% / 70%</td></tr>
+        <tr><td>GAAP operating margin</td><td>61% / 56% / 50%</td><td>64.7% / 62.3% / 59%</td><td>66% / 65.2% / 63.2%</td></tr>
+        <tr><td>WACC / terminal g</td><td>11.0% / 2.5%</td><td>9.5% / 350bp</td><td>8.5% / 4.5%</td></tr>
+        <tr><td>Tax rate</td><td>+1.5pt in FY28; +2pt thereafter (vs Base)</td><td>17.5% / 18.0% / 19.0%</td><td>−150bp through FY29; −200bp in FY30 (vs Base)</td></tr>
+        <tr><td>D&amp;A / sales</td><td>Unchanged in FY28; +0.1pt in FY29 and FY30 (vs Base)</td><td>1.2% through FY29; 1.3% in FY30</td><td>1.1% each year</td></tr>
+        <tr><td>Capex / sales</td><td>+0.5pt each year (vs Base)</td><td>3.0% / 3.5% / 4.0%</td><td>2.8% in FY28; +0.2pt each year</td></tr>
+        <tr><td>NWC / incremental revenue</td><td>+1,000bp / +500bp / unchanged (vs Base)</td><td>15% each year</td><td>−5pt / −7pt / −9pt (vs Base)</td></tr>
+        <tr><td>Equity holdings recognized</td><td>50%</td><td>70%</td><td>90%</td></tr>
+        <tr><td>Scheduled commitments stranded</td><td>3× Base</td><td>5%</td><td>None</td></tr>
+        <tr><td>Guarantee expected loss</td><td>4× Base</td><td>5%</td><td>None</td></tr>
       </tbody>
     </table>
   </div>
   <p class="small">The middle Base revenue factor (1.18×) multiplies the prior-year level rather than expressing a margin. The Base FY28 growth rate of 70% is the call's preliminary, supply-constrained management outlook. Note what Bear is: it still assumes 50% growth next year. It is not a demand-collapse scenario — it tests what happens if margins sag, cash conversion stays weak and some committed capital is stranded even while sales keep growing.</p>
 
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Cash-conversion operating assumptions · Base shows the absolute path; Bear and Bull show changes from Base</caption>
-      <thead><tr><th>Case</th><th>Tax rate</th><th>D&amp;A / sales</th><th>Capex / sales</th><th>NWC / incremental revenue</th></tr></thead>
-      <tbody>
-        <tr><td>Base</td><td>17.5% / 18.0% / 19.0%</td><td>1.2% through FY29; 1.3% in FY30</td><td>3.0% / 3.5% / 4.0%</td><td>15% each year</td></tr>
-        <tr><td>Bear vs Base</td><td>+1.5pt in FY28; +2pt thereafter</td><td>Unchanged in FY28; +0.1pt in FY29 and FY30</td><td>+0.5pt each year</td><td>+1,000bp / +500bp / unchanged</td></tr>
-        <tr><td>Bull vs Base</td><td>−150bp through FY29; −200bp in FY30</td><td>1.1% each year</td><td>2.8% in FY28; +0.2pt each year</td><td>−5pt / −7pt / −9pt</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Non-operating holdings and scheduled-commitment assumptions · Base is absolute; transformations are exact</caption>
-      <thead><tr><th>Case</th><th>Equity holdings recognized</th><th>Scheduled commitments stranded</th></tr></thead>
-      <tbody>
-        <tr><td>Base</td><td>70%</td><td>5%</td></tr>
-        <tr><td>Bear vs Base</td><td>50%</td><td>3× Base</td></tr>
-        <tr><td>Bull vs Base</td><td>90%</td><td>None</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Maximum-guarantee expected-loss assumptions</caption>
-      <thead><tr><th>Case</th><th>Guarantee expected loss</th></tr></thead>
-      <tbody>
-        <tr><td>Base</td><td>5%</td></tr>
-        <tr><td>Bear vs Base</td><td>4× Base</td></tr>
-        <tr><td>Bull vs Base</td><td>None</td></tr>
-      </tbody>
-    </table>
-  </div>
   <p class="small">Each NWC percentage is the share of incremental revenue absorbed by receivables, inventory and other operating balances. The model therefore links customer-credit terms and inventory build directly to owner cash rather than assuming accounting growth converts one-for-one.</p>
 
   <div class="tblscroll">
@@ -779,17 +758,6 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <h3>Two methods, one explicit balance-sheet bridge</h3>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>Normalized-earnings cross-check inputs at FY29</caption>
-      <thead><tr><th>Input</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
-      <tbody>
-        <tr><td>Normalized diluted EPS</td><td>$11.35</td><td>$17.40</td><td>$22.78</td></tr>
-        <tr><td>Scenario diluted shares, billions</td><td>24.65</td><td>24.30</td><td>23.95</td></tr>
-        <tr><td>Target P/E</td><td>16×</td><td>22×</td><td>28×</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="tblscroll">
-    <table class="tbl">
       <caption>Per-share value at the results date · methods are reconciled, not averaged</caption>
       <thead><tr><th>Method</th><th>Bear</th><th>Base</th><th>Bull</th><th>Load-bearing input</th></tr></thead>
       <tbody>
@@ -798,7 +766,7 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p class="small">How the two methods stay honest with each other: the DCF adds the conservative net cash once and a scenario share of the US$93.940 billion of non-operating equity holdings; the separately classified locked public position is never added twice. The earnings cross-check works differently. Its EPS keeps normalized interest income, so net cash is not added again. It strips security gains, adds the same haircutted holdings once, applies the displayed P/E to FY29 earnings, discounts two years back, and divides by the current 24.285 billion diluted shares. Both methods subtract the same capital-risk deduction.</p>
+  <p class="small">How the two methods stay honest with each other: the DCF adds the conservative net cash once and a scenario share of the US$93.940 billion of non-operating equity holdings; the separately classified locked public position is never added twice. The earnings cross-check works differently. Its EPS keeps normalized interest income, so net cash is not added again. It strips security gains, adds the same haircutted holdings once, applies the scenario target P/E (16×/22×/28×, tabulated in the valuation appendix) to FY29 earnings, discounts two years back, and divides by the current 24.285 billion diluted shares. Both methods subtract the same capital-risk deduction.</p>
 
   <h3>The scenario values on one ruler</h3>
   <div class="rows" aria-label="Scenario DCF values versus the market price">
@@ -847,6 +815,80 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <p>At the post-results price, the Base valuation spans US$254–321 per share — above the US$219.53 indication. The Bear range is US$106–148; the Bull methods converge near US$538–551. Upside outweighs downside across the scenarios, which supports a constructive long-term view. But this is not a low-risk earnings chase: only the lower end of the Base range offers a modest margin of safety, and the Bear case sits roughly half the current price away.</p>
   <div class="callout"><b>Stance:</b> positive, with a higher risk classification than a pure chip-platform story. The thesis strengthens if the next quarter's guidance turns into real Rubin shipments, cash collection and stable receivable quality while the scheduled commitments shrink through use. It weakens if gross margin breaks the promised floor, or if the guarantees start converting into assumed leases and actual cash payments.</div>
   <p><strong>Strongest counterargument:</strong> management's preliminary FY2028 outlook is limited by supply, not demand — and the balance-sheet structures may end up as a profitable second business with few realized losses. <strong>Failure boundary:</strong> customer-financed demand, weaker cash conversion and lower margins persisting <em>together</em> would invalidate the premium platform valuation. Confidence is medium: the operating disclosures are strong, but customer-level utilization, returns and credit economics are absent.</p>
+
+  <h3>The checkpoints, in order</h3>
+  <div class="tline">
+    <div class="tstop"><span class="tw">Q3 FY2027</span><b>Rubin becomes material</b><p>Material next-quarter mix with stable inventory provisions — no new charge.</p></div>
+    <div class="tstop warn"><span class="tw">Q4 FY2027</span><b>The margin trough</b><p>Gross margin must hold management's stated 71–72% floor.</p></div>
+    <div class="tstop"><span class="tw">FY2028</span><b>Recovery and growth test</b><p>Margin back into 72–73% and the preliminary supply-constrained outlook converting to revenue.</p></div>
+    <div class="tstop"><span class="tw">FY2029</span><b>Guarantees go live</b><p>SB Energy sites reach ready-for-service; watch commitments decline through use, not conversion into payments.</p></div>
+  </div>
+
+</section>
+
+
+<section class="reveal on" id="valuation-appendix">
+  <div class="slabel">VALUATION APPENDIX</div>
+  <h2>Reference detail behind the model</h2>
+  <p>Reference material only; every load-bearing conclusion lives in the valuation section above. Here: the Street-expectation snapshot, price history and technical map, peer research intensity, and the earnings cross-check inputs.</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Goldman Sachs / Visible Alpha snapshot on 26 August 2026 · variance to Street consensus; non-GAAP labels follow Goldman</caption>
+      <thead><tr><th>Expectation test</th><th>Variance to Street</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>Q2 results</td><td>Revenue +4.2%; Data Center +3.6%; Edge +11.3%; non-GAAP EPS +6.1%; gross margin +14bp</td><td>Broad execution beat, not a material margin beat</td></tr>
+        <tr><td>Q3 guide</td><td>Revenue midpoint +US$2.61bn; implied non-GAAP EPS +4.6%; gross margin −92bp</td><td>Revenue and EPS ahead, with a near-term margin reset</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Front-adjusted regular-close price returns through 26 August 2026; benchmark spreads are price returns, not annualized alpha</caption>
+      <thead><tr><th>Horizon</th><th>NVIDIA</th><th>Nasdaq 100</th><th>SOX</th></tr></thead>
+      <tbody>
+        <tr><td>20 trading days</td><td>+10.34%</td><td>+7.47%</td><td>+11.14%</td></tr>
+        <tr><td>60 trading days</td><td>−6.44%</td><td>−4.23%</td><td>−10.45%</td></tr>
+        <tr><td>Year to date</td><td>+12.56%</td><td>+15.74%</td><td>+63.93%</td></tr>
+        <tr><td>Three years</td><td>+356.49%</td><td>+95.59%</td><td>+232.16%</td></tr>
+        <tr><td>Five years</td><td>+853.35%</td><td>+91.28%</td><td>+244.51%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Read the returns table like this: over five years NVIDIA is up 853% against 91% for the Nasdaq 100 — historic outperformance — but year-to-date it is up 12.6% while the semiconductor index (SOX) is up 63.9%. The long-term leader has recently been the sector laggard. The post-results indication would reclaim the short moving averages, though its after-hours volume was unavailable. Support and resistance are monitoring zones, not valuation inputs.</p>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <caption>Technical and liquidity map at the regular close; monitoring heuristic, not intrinsic value</caption>
+      <thead><tr><th>Signal</th><th>Evidence</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>Moving averages</td><td>Below the 5-, 10- and 20-day averages; above the 60-, 120- and 250-day averages</td><td>Weak short trend inside an intact medium- and long-term trend</td></tr>
+        <tr><td>Liquidity</td><td>179.9m shares and US$38.08bn traded; 1.54× and 1.52× their 20-day averages</td><td>Results-day turnover was elevated; after-hours turnover was unavailable</td></tr>
+        <tr><td>Monitoring levels</td><td>Support at the 60-day area, then US$202.55 and US$191.5–193; resistance at US$215.6–217.6, then US$227.92 / US$232.01 / US$236.27</td><td>Price must reclaim short averages and recent swing highs to confirm momentum</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Research intensity across the same issuer-filing windows</caption>
+      <thead><tr><th>Company / period</th><th>R&amp;D / revenue path</th></tr></thead>
+      <tbody>
+        <tr><td>NVIDIA · FY24–26</td><td>−5.6pt end to end</td></tr>
+        <tr><td>AMD · FY23–25</td><td>25.9% → 25.04% → 23.4%</td></tr>
+        <tr><td>Broadcom · FY23–25</td><td>14.7% → 18.1% → 17.2%</td></tr>
+        <tr><td>TSMC · CY23–25</td><td>8.4% → 7.1% → 6.5%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Normalized-earnings cross-check inputs at FY29</caption>
+      <thead><tr><th>Input</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
+      <tbody>
+        <tr><td>Normalized diluted EPS</td><td>$11.35</td><td>$17.40</td><td>$22.78</td></tr>
+        <tr><td>Scenario diluted shares, billions</td><td>24.65</td><td>24.30</td><td>23.95</td></tr>
+        <tr><td>Target P/E</td><td>16×</td><td>22×</td><td>28×</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <section class="reveal on" id="glossary">

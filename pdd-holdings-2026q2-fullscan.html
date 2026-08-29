@@ -225,6 +225,33 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
 .tbl.gloss th{text-align:left}
 .fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
 </style>
 </head>
 <body>
@@ -309,6 +336,23 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
+  <div class="cols" role="img" aria-label="Five-year revenue and attributable net income trend; values are in the five-year record table above">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:21.8%"></div><div class="bar np" style="height:1.8%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:30.2%"></div><div class="bar np" style="height:7.3%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:57.3%"></div><div class="bar np" style="height:13.9%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:91.2%"></div><div class="bar np" style="height:26.0%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100.0%"></div><div class="bar np" style="height:22.7%"></div></div></div>
+  </div>
+  <div class="collabels">
+    <div><b>2021</b></div>
+    <div><b>2022</b></div>
+    <div><b>2023</b></div>
+    <div><b>2024</b></div>
+    <div><b>2025</b></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>Revenue</span><span><i class="m"></i>Attributable net income</span></div>
+  <p class="small">Bar heights are proportional to each value against 2025 revenue of RMB431.846bn; the exact figures are in the table above. The shape tells the story: revenue quadrupling into 2024, and the profit bar taking its first step down in 2025.</p>
+
   <div class="tblscroll" data-financials="history">
     <table class="tbl" data-financials="history">
       <caption>Audited cash inputs and analyst FCF proxy · RMB billions</caption>
@@ -477,6 +521,17 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
+    <div class="wfall" role="img" aria-label="Year-on-year net-income bridge as a waterfall; values match the bridge table above">
+    <div class="wrow"><div class="nm">Operating profit</div><div class="wtrack"><div class="wbar up" style="left:40.3%;width:22.2%"></div></div><div class="fig">+1.971</div></div>
+    <div class="wrow"><div class="nm">Interest & investment income</div><div class="wtrack"><div class="wbar up" style="left:62.5%;width:34.8%"></div></div><div class="fig">+3.082</div></div>
+    <div class="wrow"><div class="nm">Foreign exchange</div><div class="wtrack"><div class="wbar up" style="left:97.3%;width:2.7%"></div></div><div class="fig">+0.241</div></div>
+    <div class="wrow"><div class="nm">Other income / loss</div><div class="wtrack"><div class="wbar down" style="left:15.2%;width:84.8%"></div></div><div class="fig">−7.518</div></div>
+    <div class="wrow"><div class="nm">Equity investee</div><div class="wtrack"><div class="wbar down" style="left:14.4%;width:0.8%"></div></div><div class="fig">−0.075</div></div>
+    <div class="wrow"><div class="nm">Incremental tax</div><div class="wtrack"><div class="wbar down" style="left:0.0%;width:14.4%"></div></div><div class="fig">−1.273</div></div>
+    <div class="wrow"><div class="nm">Net-income change<span>sum of the walk</span></div><div class="wtrack"><div class="wbar tot" style="left:0.0%;width:40.3%"></div></div><div class="fig">−3.572</div></div>
+  </div>
+  <p class="small">Each bar walks the running total from the prior-year quarter’s net income toward this quarter’s, on one shared scale (RMB billions; green adds, red subtracts; the pretax subtotal row of the table is omitted — it is not an additive step). The picture makes the section’s point: three modest gains, one dominant unexplained loss.</p>
+
   <p>So what is the <strong>RMB7.399 billion quarterly "other loss"</strong>? PDD does not say, and the call did not discuss it. Guessing — the DSA decision, a domestic fine, subsidies, investments, litigation — would be speculation, so this report leaves it unattributed. Separately, tax took 18.3% of pretax income, up from 13.6%.</p>
 
   <h3>Portfolio income is too volatile to capitalize</h3>
@@ -638,21 +693,18 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <h2>The market prices decay before the filing proves it</h2>
   <p>Valuing PDD means answering two separate questions: what is the <b>operating business</b> worth, and how much of the <b>financial-asset pool (RMB548bn, about US$81bn)</b> should shareholders actually be credited with? This section walks through both in four steps: where the price stands, how it compares with peers, what the models say, and what the current price implicitly assumes.</p>
 
+  <div class="grid">
+    <div class="cell"><div class="k">Price</div><div class="v">$87.07</div><div class="d"><span>24 Aug 2026 close</span></div></div>
+    <div class="cell"><div class="k">Bear value (two methods)</div><div class="v">$59.1<span class="u">–69.9</span></div><div class="d"><span class="down">−32% to −20% vs price</span></div></div>
+    <div class="cell"><div class="k">Base value (two methods)</div><div class="v">$112.4<span class="u">–113.1</span></div><div class="d"><span class="up">+29% to +30% vs price</span></div></div>
+    <div class="cell"><div class="k">Bull value (two methods)</div><div class="v">$178.9<span class="u">–193.9</span></div><div class="d"><span class="up">+105% to +123% vs price</span></div></div>
+    <div class="cell"><div class="k">The price implies</div><div class="v">Revenue −2.7%/yr</div><div class="d"><span>through 2030, on base assumptions</span></div></div>
+    <div class="cell"><div class="k">One-line verdict</div><div class="v">Watchlist</div><div class="d"><span>cheap, but unverifiable</span></div></div>
+  </div>
+
+
   <h3>Step 1 · What the market pays now</h3>
   <p>On results day PDD opened higher, reversed, and closed at <strong>US$87.07</strong>, down 1.48%, with US$1.204 billion traded across 13.63 million ADS. Read the reversal as a live argument, not a verdict: the price still sits above its medium-term support average but below most longer moving averages.</p>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Price context through 24 August 2026 completed session</caption>
-      <thead><tr><th>Window / level</th><th>Observation</th><th>Interpretation</th></tr></thead>
-      <tbody>
-        <tr><td>20-day return</td><td>+2.62%</td><td>Short rebound</td></tr>
-        <tr><td>60-day return</td><td>+4.87%</td><td>Price remains above 60-day average</td></tr>
-        <tr><td>120-day return</td><td>−13.54%</td><td>Damaged medium-term trend</td></tr>
-        <tr><td>2026 YTD</td><td>−23.21%</td><td>Material absolute derating</td></tr>
-        <tr><td>52-week range position</td><td>−37.54% / +21.03%</td><td>Below high / above low</td></tr>
-      </tbody>
-    </table>
-  </div>
 
   <h3>Step 2 · Against peers: highest margin, lowest multiple, least transparency</h3>
   <div class="tblscroll">
@@ -696,12 +748,15 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
   <div class="tblscroll">
     <table class="tbl">
-      <caption>Operating forecast drivers · rates except conversion multiples</caption>
-      <thead><tr><th>Case</th><th>Revenue growth 2026/27/28</th><th>EBIT margin 2026/27/28</th><th>Tax ratio / NOPAT-to-FCFF</th></tr></thead>
+      <caption>Consolidated scenario drivers · growth and margin sequences are 2026/27/28; rates as stated; NFA credit is the recognized share of the financial-asset pool</caption>
+      <thead><tr><th>Driver</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
       <tbody>
-        <tr><td>Bear</td><td>5% / 3% in both later years</td><td>19% / 17% in both later years</td><td>0.21 / 0.70×</td></tr>
-        <tr><td>Base</td><td>8% / 9% / 10%</td><td>21.5% in 2026 and 2028; 21.0% in 2027</td><td>0.19 / 0.82×</td></tr>
-        <tr><td>Bull</td><td>11% / 15% / 14%</td><td>23% / 24% / 25%</td><td>0.18 / 0.90×</td></tr>
+        <tr><td>Revenue growth 2026/27/28</td><td>5% / 3% in both later years</td><td>8% / 9% / 10%</td><td>11% / 15% / 14%</td></tr>
+        <tr><td>EBIT margin 2026/27/28</td><td>19% / 17% in both later years</td><td>21.5% in 2026 and 2028; 21.0% in 2027</td><td>23% / 24% / 25%</td></tr>
+        <tr><td>Tax ratio / NOPAT-to-FCFF</td><td>0.21 / 0.70×</td><td>0.19 / 0.82×</td><td>0.18 / 0.90×</td></tr>
+        <tr><td>2029–30 fade / terminal margin</td><td>One-third/two-thirds toward 0.16</td><td>One-third/two-thirds toward 0.205</td><td>One-third/two-thirds toward 0.23</td></tr>
+        <tr><td>NFA credit</td><td>55%</td><td>70%</td><td>85%</td></tr>
+        <tr><td>Required return / terminal growth</td><td>0.16 / 0.01</td><td>0.13 / 0.025</td><td>0.11 / 0.035</td></tr>
       </tbody>
     </table>
   </div>
@@ -713,17 +768,6 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
         <tr><td>Bear</td><td>47.6 / 43.9 / 45.2</td><td>21.469</td></tr>
         <tr><td>Base</td><td>66.6 / 70.9 / 79.9</td><td>35.166</td></tr>
         <tr><td>Bull</td><td>81.4 / 97.6 / 115.9</td><td>46.435</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>DCF assumptions · decimals except NFA credit</caption>
-      <thead><tr><th>Case</th><th>2029–30 fade / terminal margin</th><th>NFA credit</th><th>Required return / terminal growth</th></tr></thead>
-      <tbody>
-        <tr><td>Bear</td><td>One-third/two-thirds toward 0.16</td><td>55%</td><td>0.16 / 0.01</td></tr>
-        <tr><td>Base</td><td>One-third/two-thirds toward 0.205</td><td>70%</td><td>0.13 / 0.025</td></tr>
-        <tr><td>Bull</td><td>One-third/two-thirds toward 0.23</td><td>85%</td><td>0.11 / 0.035</td></tr>
       </tbody>
     </table>
   </div>
@@ -792,6 +836,35 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   <p>The balance sheet offers real protection. But the investment case asks shareholders to fund several capital-intensive transitions at once — with no platform-level economics disclosed and no mechanism for cash to come back. The models say US$59–70 per ADS in the bear case and US$112–113 in the base case; the market quote sits between them, and where it lands mostly depends on how much of the asset pool is credited and how durable the operating margin proves. Attractive enough to watch closely; not transparent enough to hold as a high-conviction compounder.</p>
   <div class="callout"><b>Stance:</b> wait for operating proof. A stronger entry requires either disclosure that localized Temu and first-party initiatives earn positive contribution returns, or a durable mechanism that converts retained financial assets into per-ADS value.</div>
   <p><strong>Strongest counterargument:</strong> the opaque accounts may be concealing a profitable global engine, and the cash pile lets management adapt without ever asking markets for money. <strong>Failure boundary:</strong> growth and margins repeatedly below the base case, together with continued silence on what the cash is for, would break the recovery case. Confidence is medium-low — the platform economics and the original-language call record simply are not available.</p>
+
+  <h3>The checkpoints, in order</h3>
+  <div class="tline">
+    <div class="tstop warn"><span class="tw">28 AUG 2026</span><b>DSA action plan due</b><p>Acceptance, implementation period and any periodic penalties follow.</p></div>
+    <div class="tstop"><span class="tw">NEXT QUARTER</span><b>Disclosure test</b><p>Any segment split, capex figure, or attribution of the RMB7.4bn other loss.</p></div>
+    <div class="tstop"><span class="tw">JUL 2026–JUL 2028</span><b>EU €3 parcel-duty window</b><p>Watch transaction-service growth and margin through the localization shift.</p></div>
+    <div class="tstop"><span class="tw">ONGOING</span><b>Capital allocation</b><p>A return policy or transparent high-return deployment — or more accumulation plus dilution.</p></div>
+  </div>
+
+</section>
+
+
+<section class="reveal on" id="valuation-appendix">
+  <div class="slabel">VALUATION APPENDIX</div>
+  <h2>Reference detail behind the model</h2>
+  <p>Reference material only; every load-bearing conclusion lives in the valuation section above.</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Price context through 24 August 2026 completed session</caption>
+      <thead><tr><th>Window / level</th><th>Observation</th><th>Interpretation</th></tr></thead>
+      <tbody>
+        <tr><td>20-day return</td><td>+2.62%</td><td>Short rebound</td></tr>
+        <tr><td>60-day return</td><td>+4.87%</td><td>Price remains above 60-day average</td></tr>
+        <tr><td>120-day return</td><td>−13.54%</td><td>Damaged medium-term trend</td></tr>
+        <tr><td>2026 YTD</td><td>−23.21%</td><td>Material absolute derating</td></tr>
+        <tr><td>52-week range position</td><td>−37.54% / +21.03%</td><td>Below high / above low</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <section class="reveal on" id="glossary">
