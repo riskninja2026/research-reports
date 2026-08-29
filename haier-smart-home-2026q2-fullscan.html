@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>海尔智家 2026H1 / Q2 Fullscan 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">海尔智家 06690.HK ｜ FULLSCAN 全景尽调 ｜ 财务截止 2026H1 · 市场截止 2026.08.28</div>
+    <h1>二季度收入先转正，<br>利润和现金仍未跟上</h1>
+    <p class="lede">上半年表面是收入小幅回落，拆成单季后却出现同比转正。<b>但归母利润（属于上市公司股东的利润）和经营现金仍同比下降，说明暖通增长、份额提升与费用投入之间还没有形成完整的利润闭环。</b> 低估值提供缓冲，真正的重估要等现金兑现。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">推算 2026Q2 营业收入同比 · 中国准则 CAS</div>
+        <div class="big a">+1.36%</div>
+        <div class="cap">单季收入人民币 784.28 亿元；由 HKEX 提交的 H1 中国准则累计数减 Q1 同口径累计数。</div>
+      </div>
+      <div>
+        <div class="tag">推算 2026Q2 归母净利润同比 · 中国准则 CAS</div>
+        <div class="big b">−13.47%</div>
+        <div class="cap">单季归母净利润人民币 56.65 亿元；单季收入同比转正尚未传导到归母盈利。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，读这里</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>海尔智家是一家全球化白色家电（冰箱、洗衣机、厨电等）与暖通公司，靠品牌、产品、渠道、本地制造和售后服务赚钱；中国贡献不到一半收入，海外已超过一半。</li>
+      <li><b>本期成绩：</b>2026H1 的 IFRS 收入、归母净利润和<span class="g">经营现金流（OCF）</span>均同比下降；同口径累计数推算的 Q2 收入已转为小幅增长，但归母利润与现金仍下降。</li>
+      <li><b>核心矛盾：</b>智慧暖通是清晰的增长和利润增量，冰洗等智慧生活电器仍在收缩；份额普遍提升，却伴随销售费用率上升、汇兑由收益转为损失，说明增长质量仍需利润与现金验证。</li>
+      <li><b>容易踩的坑：</b>印度引资带来的人民币 55.91 亿元现金属于融资活动，不是利润或经营现金；海外毛利率持平又包含金额未披露的一次性退税，不能把报表改善全部年化。</li>
+      <li><b>结论：</b><b>中性偏积极，等利润兑现。</b>H 股收盘价为 21.28 港元，本报告基准价值带为 22.88–26.13 港元；下行情景为 15.75–18.00 港元，当前价格已经反映低增长，却还没有形成宽阔的安全边际。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>它不只卖家电，也在经营全球本地化网络</h2>
+  <p>海尔的经济模型可以压缩成四个环节：用研发和规模采购形成产品，用多品牌覆盖不同价格带，再通过各地零售、工程和专业渠道销售，最后由本地制造、物流与售后网络完成交付。本文的“暖通”包括家用空调、楼宇制冷与采暖、水系统等；品牌份额决定议价能力，供应链和渠道效率决定这种份额能否变成现金。</p>
+  <div class="steps">
+    <div class="step"><div class="n">环节 1</div><b>研发与采购</b><p>平台化研发、核心部件自制与规模采购控制成本；铜、钢、树脂、芯片和汇率是主要外生变量。</p></div>
+    <div class="step"><div class="n">环节 2</div><b>多品牌产品</b><p>海尔、卡萨帝、Leader、GE Appliances、Candy、Fisher &amp; Paykel、AQUA 等覆盖大众至高端市场。</p></div>
+    <div class="step"><div class="n">环节 3</div><b>渠道与服务</b><p>国内零售、内容电商和暖通专业渠道，与海外本地零售、工程、安装和售后共同形成用户触点。</p></div>
+    <div class="step"><div class="n">环节 4</div><b>现金再配置</b><p>经营现金用于产能、技术、股息、回购和并购；存放于关联方财务公司的资金使“账上现金”需要额外拆解。</p></div>
+  </div>
+  <p>读报表前要先记住三件事。第一，海尔智家同时有 A、H、D 三类上市股份，本报告估值对象是 06690.HK H 股。第二，2026H1 起公司把冰箱、厨电和洗衣机整合为“智慧生活电器”，把空调、水家电等整合为“智慧暖通方案”，上年比较数字已重列，但更早年份的产品分类不是同一套分部。第三，<span class="g">IFRS 与 CAS</span>、<span class="g">LTM</span>等带虚线下划线的术语可在文末“名词速查”找到。</p>
+  <p>白电已经是成熟行业，需求更多来自换新、产品升级和地域渗透；地产、利率、补贴、天气及渠道库存会制造周期。海尔的长期优势来自全球品牌和本地化能力，短期检验则是：份额增长能否覆盖获客、渠道、制造和汇率成本。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">基础财务 · 主营结构 · 五年轨迹</div>
+  <h2>规模先稳住了，利润率与现金转换还没稳住</h2>
+  <p>海尔从冰箱公司扩展为全球白电、厨电、洗护、暖通和水家电平台。2026H1 的核心财务以港交所中期业绩公告所列 IFRS 口径为准；半年数字未经审计，但已由会计师按香港审阅准则第2410号审阅。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">H1 收入</div><div class="v">1,521.09<span class="u">亿元</span></div><div class="d"><span class="down">同比 −2.8%</span></div></div>
+    <div class="cell"><div class="k">H1 毛利</div><div class="v">407.14<span class="u">亿元</span></div><div class="d"><span>毛利率 26.77%</span><span class="up">+0.41个百分点</span></div></div>
+    <div class="cell"><div class="k">H1 经调整经营利润（公司定义、非IFRS）</div><div class="v">127.52<span class="u">亿元</span></div><div class="d"><span class="down">同比 −3.4%</span><span>利润率 8.38%</span></div></div>
+    <div class="cell"><div class="k">H1 归母净利润</div><div class="v">103.16<span class="u">亿元</span></div><div class="d"><span class="down">同比 −14.3%</span><span>净利率 6.78%</span></div></div>
+    <div class="cell"><div class="k">H1 经营现金流</div><div class="v">97.52<span class="u">亿元</span></div><div class="d"><span class="down">同比 −12.5%</span></div></div>
+    <div class="cell"><div class="k">H1 机械自由现金流</div><div class="v">53.87<span class="u">亿元</span></div><div class="d"><span class="down">同比 −27.0%</span><span>OCF−现金资本开支</span></div></div>
+  </div>
+
+  <h3>五年合并轨迹：利润跑赢收入，现金波动更大</h3>
+  <div class="tblscroll">
+    <table class="tbl" data-financials="history">
+      <caption>IFRS 主表 · 人民币十亿元；经调整经营利润为公司定义的非IFRS指标，ROE 为分析者简单口径</caption>
+      <thead><tr><th>财年</th><th>收入</th><th>毛利 / 率</th><th>经调整经营利润 / 率</th><th>归母净利 / 率</th><th>基本 EPS（元/股）</th><th>简单 ROE</th><th>经营现金流</th><th>资本开支</th><th>机械自由现金流</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>227.08</td><td>69.55 / 30.63%</td><td>13.57 / 5.98%</td><td>13.08 / 5.76%</td><td>1.41</td><td>17.82%</td><td>23.24</td><td>7.37</td><td>15.87</td></tr>
+        <tr><td>2022</td><td>243.55</td><td>74.59 / 30.63%</td><td>15.01 / 6.16%</td><td>14.71 / 6.04%</td><td>1.58</td><td>16.96%</td><td>20.26</td><td>8.21</td><td>12.05</td></tr>
+        <tr><td>2023</td><td>274.20</td><td>73.64 / 26.86%</td><td>17.79 / 6.49%</td><td>16.60 / 6.05%</td><td>1.79</td><td>17.05%</td><td>26.54</td><td>10.54</td><td>15.99</td></tr>
+        <tr><td>2024</td><td>286.01</td><td>77.91 / 27.24%</td><td>20.41 / 7.14%</td><td>18.73 / 6.55%</td><td>2.02</td><td>17.58%</td><td>26.32</td><td>10.08</td><td>16.24</td></tr>
+        <tr><td>2025</td><td>302.33</td><td>78.96 / 26.12%</td><td>20.50 / 6.78%</td><td>19.55 / 6.47%</td><td>2.12</td><td>16.97%</td><td>26.00</td><td>8.85</td><td>17.15</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>2021–2025 年收入复合年均增长 7.42%，归母净利润复合年均增长 10.58%；利润跑赢收入主要来自规模、结构和运营效率，而不是单纯扩张销量。2024 年报因共同控制下合并日日顺供应链而追溯重列 2023 年，收入、销售成本与销售费用的列报均显著变化、归母利润却未改变；因此 2022 与 2023 的毛利率不能直接连成经营趋势。</p>
+
+  <h3>单季桥：单季收入同比转正，不等于盈利拐点</h3>
+  <div class="callout"><b>先看口径：</b>公司没有单独披露 Q2 IFRS 主表，本报告只能用 HKEX 提交的 CAS（中国企业会计准则）H1 累计减 Q1 累计。下表只可把 2026Q2 CAS 与 2025Q2 同法结果相比，不能把其中的 CAS 毛利率与上方 H1 IFRS 毛利率直接比较。</div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>单二季度由 HKEX 提交的 CAS H1 累计减 Q1 累计 · 人民币十亿元</caption>
+      <thead><tr><th>指标</th><th>2026Q2 推算</th><th>2025Q2 同法</th><th>同比 / 变化</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入</td><td>78.428</td><td>77.376</td><td class="up">+1.36%</td></tr>
+        <tr><td>CAS 毛利 / 率</td><td>22.745 / 29.00%</td><td>21.963 / 28.39%</td><td class="up">+3.56% / +0.62个百分点</td></tr>
+        <tr><td>营业利润 / 率</td><td>7.318 / 9.33%</td><td>8.229 / 10.63%</td><td class="down">−11.06% / −1.30个百分点</td></tr>
+        <tr><td>归母净利润 / 率</td><td>5.665 / 7.22%</td><td>6.546 / 8.46%</td><td class="down">−13.47% / −1.24个百分点</td></tr>
+        <tr><td>经营现金流</td><td>8.141</td><td>8.854</td><td class="down">−8.06%</td></tr>
+        <tr><td>现金资本开支</td><td>2.120</td><td>1.804</td><td>+17.56%</td></tr>
+        <tr><td>机械自由现金流</td><td>6.020</td><td>7.051</td><td class="down">−14.62%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Q1 收入同比下降 6.86%，Q2 则小幅增长；这只是一个季度的正增长，持续性仍未建立。Q2 归母净利润与经营现金流继续下降，显示销售改善尚未形成完整的利润与现金闭环。EPS、ROE 和期末资产负债表项目不能用累计数相减。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>截至 2026H1 的最近十二个月（LTM）· IFRS 主表；经调整经营利润为公司定义的非IFRS指标 · 人民币十亿元</caption>
+      <thead><tr><th>收入</th><th>毛利 / 率</th><th>经调整经营利润 / 率</th><th>归母净利 / 率</th><th>经营现金流</th><th>资本开支</th><th>机械 FCF</th></tr></thead>
+      <tbody><tr><td>297.97</td><td>78.43 / 26.32%</td><td>20.06 / 6.73%</td><td>17.84 / 5.99%</td><td>24.62</td><td>9.45</td><td>15.16</td></tr></tbody>
+    </table>
+  </div>
+
+  <h3>新分部地图：暖通在抵消生活电器的收缩</h3>
+  <div data-financials="segments">
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>2026H1 IFRS 可报告分部 · 外部客户收入与分部业绩 · 人民币十亿元</caption>
+        <thead><tr><th>分部</th><th>外部收入</th><th>收入占比</th><th>收入同比</th><th>分部业绩</th><th>业绩同比</th></tr></thead>
+        <tbody>
+          <tr><td>智慧生活电器</td><td>89.356</td><td>58.7%</td><td class="down">−6.2%</td><td>8.181</td><td class="down">−12.8%</td></tr>
+          <tr><td>智慧暖通方案</td><td>45.028</td><td>29.6%</td><td class="up">+5.8%</td><td>4.567</td><td class="up">+26.8%</td></tr>
+          <tr><td>其他业务</td><td>17.725</td><td>11.7%</td><td class="down">−4.8%</td><td>−0.180</td><td class="down">由盈转亏</td></tr>
+          <tr class="grp"><td>合计</td><td>152.109</td><td>100.0%</td><td>同合并口径</td><td>12.568</td><td>−5.5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p>外部收入可与合并收入勾稽，分部业绩却包含内部业务经济，因此“分部业绩÷外部收入”不能冒充公司披露的分部利润率。当前资料也不能推算单 Q2 分部收入或利润。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>旧产品分类的 FY2022–FY2025 收入 CAGR · 人民币十亿元；仅用于历史方向</caption>
+      <thead><tr><th>旧分类</th><th>FY2022</th><th>FY2025</th><th>三年 CAGR</th><th>当前映射</th></tr></thead>
+      <tbody>
+        <tr><td>冰箱 / 冷柜</td><td>77.84</td><td>84.76</td><td>+2.9%</td><td>智慧生活电器</td></tr>
+        <tr><td>厨电</td><td>38.95</td><td>41.54</td><td>+2.2%</td><td>智慧生活电器</td></tr>
+        <tr><td>洗衣设备</td><td>57.91</td><td>65.57</td><td>+4.2%</td><td>智慧生活电器</td></tr>
+        <tr><td>空气能源产品</td><td>40.76</td><td>54.39</td><td>+10.1%</td><td>主要映射智慧暖通</td></tr>
+        <tr><td>水家电</td><td>14.13</td><td>17.96</td><td>+8.3%</td><td>智慧暖通</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="plain"><span class="pl">白话解读</span><p>这组表分别回答三个问题：五年表看长期规模与利润，分部表看当前是谁在拉动或拖累，单季桥只看销售节奏是否改变。它们不能混成一条假连续曲线。<b>目前最需要解释的不是“有没有卖得更多”，而是新增销售为何还没有留下更多营业利润与经营现金。</b></p><p>新旧分部不能硬接。旧产品表只能说明历史上暖通和水家电较快，不能被包装成当前两个新分部的连续 CAGR；单季分部同样属于“未披露”。</p></div>
+  <p class="small">CAGR＝（终值÷初值）^(1/年数)−1；LTM＝FY2025＋2026H1−2025H1。<span class="g">机械自由现金流</span>＝经营现金流减购买非流动资产的现金，不区分维持与增长资本开支，也不是公司定义的自由现金流。五年现金流采用各年报最新滚动重列数。</p>
+</section>
+
+<section class="reveal on" id="earnings-engine">
+  <div class="slabel">盈利能力 · 利润质量 · 单季修复</div>
+  <h2>汇率解释了大部分税前缺口，解释不了全部经营压力</h2>
+  <p>收入改善与利润恶化同时发生，主要需要从三层拆解：生活电器与暖通的组合变化、销售投入上升，以及汇兑收益转为损失。税前桥能把汇率影响单独拿出来，但不能把税前调整直接塞进归母利润。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2026H1 税前汇率桥 · IFRS · 人民币十亿元</caption>
+      <thead><tr><th>项目</th><th>2026H1</th><th>2025H1</th><th>同比影响</th><th>边界</th></tr></thead>
+      <tbody>
+        <tr><td>财务费用中的汇兑损益</td><td>−0.911</td><td>+0.881</td><td>−1.792</td><td>损失用负号</td></tr>
+        <tr><td>套保结果</td><td>+0.207</td><td>+0.001</td><td>+0.206</td><td>只抵消一小部分</td></tr>
+        <tr><td>净汇兑结果</td><td>−0.704</td><td>+0.882</td><td class="down">−1.586</td><td>税前机械合并</td></tr>
+        <tr><td>报告税前利润</td><td>13.071</td><td>14.997</td><td class="down">−12.84%</td><td>IFRS 报告值</td></tr>
+        <tr><td>剔除净汇兑的税前代理</td><td>13.775</td><td>14.115</td><td>−2.41%</td><td>分析推算，非公司调整指标</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>汇率同比负向摆动约 15.86 亿元，而报告税前利润少了约 19.26 亿元，说明汇率是主要解释项，却不是唯一解释项。销售及分销费用率升至 10.8%、同比增加 0.7 个百分点，反映 TC 资源池、新媒体营销、海外触点与体育资源投入；行政费用率则下降 0.1 个百分点至 8.0%。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">经营韧性</div><p>经调整经营利润只小幅下降，智慧暖通分部业绩明显增长；剔除净汇兑后的税前代理也远强于报告税前利润。</p></div>
+    <div class="find warn"><div class="t">质量保留</div><p>海外毛利率持平包含金额未披露的一次性退税；Q2 营业利润率仍低于上年，说明毛利改善没有完整穿透费用。</p></div>
+    <div class="find"><div class="t">股份支付</div><p>CAS 显示本期股份支付转回提高合并净利润，上年同期则是费用；两期摆动约 4.46 亿元，但没有归母层面的完整桥。</p></div>
+    <div class="find"><div class="t">不能调整的部分</div><p>税率、少数股东和不同准则列报会影响归母利润；不能用税前汇率桥直接制造“调整后归母净利”。</p></div>
+  </div>
+  <div class="plain"><span class="pl">白话解读</span><p>如果把汇率先放到一边，海尔的税前经营并没有报表跌幅那么差；但这不等于利润拐点已经出现。公司为了份额、触点和全球品牌继续投入，海外毛利又有一次性退税帮助。<b>更公允的判断是“核心经营较有韧性，报表质量仍待验证”，而不是把汇兑损失全部当作可忽略噪声。</b></p></div>
+</section>
+
+<section class="reveal on" id="brand-channel">
+  <div class="slabel">品牌与渠道 · 行业环境 · 竞争优势</div>
+  <h2>份额在升，但这轮份额还没有免费变成利润</h2>
+  <p>海尔在冰箱和洗衣机的国内零售额份额均超过四成，空调份额继续上升，说明品牌、产品和触点仍有竞争力。与此同时，中国收入下降、生活电器分部业绩下降，销售费用率上升；因此份额提升更像“护城河仍在”，而不是“单位经济已经改善”。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>公司引用第三方零售数据 · 2026H1</caption>
+      <thead><tr><th>品类 / 市场</th><th>线上零售额份额</th><th>线下零售额份额</th><th>同比变化</th><th>投资含义</th></tr></thead>
+      <tbody>
+        <tr><td>中国冰箱</td><td>41.9%</td><td>42.2%</td><td>+3.7 / +2.1个百分点</td><td>领先优势扩大</td></tr>
+        <tr><td>中国洗衣机</td><td>41.6%</td><td>48.8%</td><td>+2.8 / +2.4个百分点</td><td>高份额仍能提升</td></tr>
+        <tr><td>中国空调</td><td>12.4%</td><td>20.6%</td><td>+0.9 / +0.8个百分点</td><td>基数较低但方向积极</td></tr>
+        <tr><td>中国主要厨电</td><td>9.0%</td><td>9.4%</td><td>+2.1 / +1.7个百分点</td><td>仍处追赶阶段</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>具体产品也有放大高端和差异化的证据：卡萨帝套系产品占比提升，Leader 三筒洗衣机形成爆品，欧洲多门冰箱份额上升；但这些经营指标由公司引用奥维云网、GfK 中怡康和 GfK 数据，且没有对应收入、毛利和回款闭环，估值时只作为竞争力证据，不单独加价。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>智慧暖通的可核验进展与尚缺证据</caption>
+      <thead><tr><th>已证实</th><th>数据</th><th>尚未证实</th><th>下一步观察</th></tr></thead>
+      <tbody>
+        <tr><td>外部收入增长</td><td>见基础财务分部表</td><td>独立 Q2 分部收入</td><td>全年能否维持</td></tr>
+        <tr><td>分部业绩增长</td><td>明显快于收入</td><td>可比利润率和现金流</td><td>增速是否继续快于收入</td></tr>
+        <tr><td>SKU 精简</td><td>−18%</td><td>一次性整合成本</td><td>费用是否真正下降</td></tr>
+        <tr><td>型号效率提升</td><td>+23%</td><td>对终端售价的贡献</td><td>价格与份额能否兼得</td></tr>
+        <tr><td>采购降本提效</td><td>15%（公司口径）</td><td>定义与绝对金额未披露</td><td>毛利和现金的后验验证</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>暖通是当前最可信的增长引擎：外部收入与分部业绩均增长，业务整合又给出 SKU、采购和制造效率线索。问题在于公司没有披露分部现金、独立资本占用或完整利润率，因而不能对暖通做可靠的<span class="g">分部加总估值（SOTP）</span>。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>“份额提升”回答的是消费者是否选择海尔，不直接回答海尔每卖一台能留下多少钱。公司当前同时在增加内容营销、海外触点和体育赞助，暖通协同又处在投入与释放并存阶段。<b>护城河的证据是份额，变现的证据必须是利润率和现金；本期只完成了前半句。</b></p></div>
+</section>
+
+<section class="reveal on" id="overseas">
+  <div class="slabel">海外业务 · 地域增长 · 印度重组</div>
+  <h2>全球化提供增长池，也把汇率与本地投入带进利润表</h2>
+  <p>海外收入占比已略高于一半，但合并口径同比几乎持平。欧洲、南亚、日本与东南亚的增长被其他地区较弱表现及折算汇率抵消；本地渠道、营销和供应链投入则解释利润压力，而不是收入抵消。公司披露海外经营利润 40.61 亿元，机械除以海外收入为 5.16%，但没有上年可比，也未完整说明与 IFRS 分部业绩的调节，不能称为可比海外利润率。</p>
+
+  <div class="stacks">
+    <div class="stack"><div class="cap">2026H1 外部收入地域构成</div><div class="stackbar"><div class="seg p" style="width:48.2%">中国 48.2%</div><div class="seg q" style="width:51.8%">海外 51.8%</div></div></div>
+    <div class="stack"><div class="cap">2025H1 外部收入地域构成</div><div class="stackbar"><div class="seg p" style="width:49.5%">中国 49.5%</div><div class="seg q" style="width:50.5%">海外 50.5%</div></div></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>中国</span><span><i class="q"></i>其他国家和地区</span></div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2026H1 主要区域经营线索；当地货币口径按公司披露</caption>
+      <thead><tr><th>区域</th><th>收入 / 方向</th><th>支持证据</th><th>主要约束</th></tr></thead>
+      <tbody>
+        <tr><td>美洲</td><td>Q2 美元收入增长</td><td>核心行业需求约降 3% 时仍增长</td><td>房贷利率、地产与成本压力</td></tr>
+        <tr><td>欧洲</td><td>收入 +4.9%</td><td>暖通与商用制冷较强</td><td>智慧家电仍在整合转型</td></tr>
+        <tr><td>南亚</td><td>101.49 亿元，+17.1%</td><td>印度本币收入增长超过 20%</td><td>输入性通胀与少数股东增加</td></tr>
+        <tr><td>东南亚</td><td>双位数增长</td><td>泰国空调、越南白电份额领先</td><td>渠道和产能仍需投入</td></tr>
+        <tr><td>澳新</td><td>列报 +4.3%，本币 +8%</td><td>新西兰多品类份额第一</td><td>汇率折算压缩增长</td></tr>
+        <tr><td>日本</td><td>本币 +9.9%</td><td>冰箱、冷柜及洗衣机销量份额 17.8%</td><td>规模与利润未单列</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>印度交易：拿到现金，没拿到利润</h3>
+  <p>海尔印度引入 Bharti 与华平投资后，公司继续控制并合并该子公司。IFRS 现金流把人民币 55.91 亿元列为“附属公司所有权权益变动”的融资流入；CAS 附注确认交易后仍保有控制，交易差额按权益交易计入资本公积。经济结果是：集团得到资金、印度仍并表，但未来归属于海尔股东的经济份额下降。</p>
+  <div class="finds">
+    <div class="find good"><div class="t">意图与可能收益</div><p>交易意在借助本地产业伙伴与资金支持印度渠道、供应链和制造；融资现金也增强集团流动性。</p></div>
+    <div class="find warn"><div class="t">代价</div><p>少数股东权益增加，未来印度利润并非全部归海尔股东；融资流入不能被算进经营表现。</p></div>
+  </div>
+  <div class="plain"><span class="pl">白话解读</span><p>海尔的全球化不是把中国工厂简单出口到海外，而是在当地拥有品牌、工厂、渠道与服务。这使它能在多个市场获得份额，也使汇率、利率、关税和本地费用更直接地进入报表。印度交易正是一个缩影：<b>它可能提高当地扩张能力并带来现金，但没有创造当期利润，还让未来归母份额变小。</b></p></div>
+</section>
+
+<section class="reveal on" id="cash-balance">
+  <div class="slabel">现金流 · 资产负债表 · 关联财务公司</div>
+  <h2>账面流动性足够，真正可支配缓冲没有表面宽</h2>
+  <p>海尔没有典型债务压力：现金和理财高于计息借款，关联方财务公司的监管指标也合规。该机构是海尔集团体系内的持牌金融机构，海尔智家子公司合计持有 42%、按联营企业核算；成员单位可把资金存入。现金还要覆盖借款、租赁和已宣告股息，分析时应避免重复扣除重叠口径，也不能把存于关联方的资金当成无条件可分配现金。</p>
+
+  <div class="flowbox">
+    <svg viewBox="0 0 720 330" role="img" aria-labelledby="liq-title liq-desc">
+      <title id="liq-title">从2026年6月末余额出发的备考流动性桥</title>
+      <desc id="liq-desc">现金及理财571.12亿元，依次扣除计息借款383.19亿元、租赁负债61.93亿元和8月21日已支付末期股息82.48亿元，得到43.52亿元备考保守缓冲。</desc>
+      <line x1="28" y1="246" x2="692" y2="246" stroke="#6D7B88" stroke-width="1"/>
+      <rect x="42" y="40" width="82" height="206" fill="#2C6A57"/>
+      <text x="83" y="31" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15" fill="#0F1A22">571.12</text>
+      <line x1="124" y1="40" x2="170" y2="40" stroke="#6D7B88" stroke-dasharray="4 4"/>
+      <rect x="170" y="40" width="82" height="138.2" fill="#A32B57"/>
+      <text x="211" y="31" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15" fill="#A32B57">−383.19</text>
+      <line x1="252" y1="178.2" x2="298" y2="178.2" stroke="#6D7B88" stroke-dasharray="4 4"/>
+      <rect x="298" y="178.2" width="82" height="22.3" fill="#A32B57"/>
+      <text x="339" y="168" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15" fill="#A32B57">−61.93</text>
+      <line x1="380" y1="200.5" x2="426" y2="200.5" stroke="#6D7B88" stroke-dasharray="4 4"/>
+      <rect x="426" y="200.5" width="82" height="29.8" fill="#A32B57"/>
+      <text x="467" y="190" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15" fill="#A32B57">−82.48</text>
+      <line x1="508" y1="230.3" x2="554" y2="230.3" stroke="#6D7B88" stroke-dasharray="4 4"/>
+      <rect x="554" y="230.3" width="82" height="15.7" fill="#1E4B8F"/>
+      <text x="595" y="220" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15" fill="#1E4B8F">43.52</text>
+      <text x="83" y="274" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" fill="#3C4A56">现金+理财</text>
+      <text x="211" y="274" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" fill="#3C4A56">计息借款</text>
+      <text x="339" y="274" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" fill="#3C4A56">租赁负债</text>
+      <text x="467" y="274" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" fill="#3C4A56">8/21已付股息</text>
+      <text x="595" y="274" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" fill="#3C4A56">保守缓冲</text>
+      <text x="686" y="314" text-anchor="end" font-family="-apple-system, sans-serif" font-size="12" fill="#6D7B88">人民币亿元 · 分析桥</text>
+    </svg>
+    <div class="flow-note"><span class="badge">备考桥</span><span>这是从 6 月 30 日现金余额出发，再扣计息借款、租赁及 8 月 21 日已支付末期股息的保守缓冲。财务公司存款与现金、债权投资等定义存在重叠，本桥不重复扣除。</span></div>
+  </div>
+
+  <h3>现金转换：营运资本支撑仍不足以阻止下滑</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>分析者现金代理 · 人民币十亿元</caption>
+      <thead><tr><th>期间</th><th>所有者现金代理</th><th>同比 / 衔接</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>2025FY</td><td>13.06</td><td>完整年度基准</td><td>OCF 再扣资本开支、利息与租赁现金</td></tr>
+        <tr><td>2025H1</td><td>5.32</td><td>上年同期</td><td>半年季节口径</td></tr>
+        <tr><td>2026H1</td><td>3.72</td><td class="down">同比 −30.0%</td><td>利润和现金同时走弱</td></tr>
+        <tr><td>LTM</td><td>11.46</td><td>滚动低于 FY2025</td><td>用于估值的现金锚</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>应收天数增加 3 天、库存天数增加 3 天，应付天数增加 9 天；供应商账期延长对现金形成支持，但 H1 经营现金仍下降，说明现金修复并不牢固。印度融资使 H1 融资现金净流入约 48.45 亿元；若只机械剔除前文所述印度流入，融资现金将约为净流出 7.46 亿元。</p>
+
+  <h3>关联财务公司：合规不等于无集中度</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>海尔集团财务有限责任公司 · 2026H1 期末 / 半年</caption>
+      <thead><tr><th>指标</th><th>数值</th><th>监管 / 协议边界</th><th>判断</th></tr></thead>
+      <tbody>
+        <tr><td>海尔智家存于财务公司的存款</td><td>339.76 亿元</td><td>每日上限 340 亿元</td><td class="down">使用 99.93%</td></tr>
+        <tr><td>占海尔智家全部存款</td><td>39.69%</td><td>公司全部存款 856.02 亿元</td><td>关联方集中度高</td></tr>
+        <tr><td>资本充足率</td><td>30.39%</td><td>监管底线之上</td><td>合规</td></tr>
+        <tr><td>流动性比例</td><td>33.54%</td><td>不低于 25%</td><td>高于底线 8.54 个百分点</td></tr>
+        <tr><td>贷款比例</td><td>76.70%</td><td>不高于 80%</td><td>接近上限</td></tr>
+        <tr><td>投资比例</td><td>62.03%</td><td>不高于 70%</td><td>合规</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>海尔智家所持财务公司联营权益的账面价值约 85.58 亿元。相关风险报告认定监管指标合规，海尔集团并对海尔智家在财务公司的存款提供连带责任担保；但底层财务公司数据未经外部审计，海尔智家存放金额几乎用满每日上限。这里的核心风险是资金集中与治理，而不是已发生减值。</p>
+  <p>商誉 263.35 亿元约相当于期末归母权益的 22%，目前没有减值触发证据，但规模值得持续跟踪。计息负债与租赁经过现金覆盖后仍有缓冲，也未出现债务压力信号。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>海尔并不缺钱，但“现金很多”也不能直接等于“都能分给股东”。先扣借款、租赁和已经宣布要付的股息，缓冲明显变小；再看 39.69% 的公司存款集中在关联财务公司，且存放金额几乎用满每日上限。<b>这不是流动性危机，而是需要为可支配性和治理打折。</b></p></div>
+</section>
+
+<section class="reveal on" id="capital-governance">
+  <div class="slabel">股东回报 · 激励 · 控制权与治理</div>
+  <h2>股息是真回报，回购要先分清注销还是激励</h2>
+  <p>2025 年中期与末期每股股息合计人民币 1.16071 元，现金分红约 107.55 亿元，约为当年归母净利润的 55.0%。按 2026-08-28 H 股收盘价和 HKMA 2026-07-31 人民币兑港元汇率换算，基于 2025 年已派及已宣股息的追踪毛股息率约 6.34%，不是 2026 年前瞻股息率。Wind 标准化股息率字段为 4.82%，与已核对的两次股息不一致，因此不采用。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>分红、回购与潜在稀释</caption>
+      <thead><tr><th>项目</th><th>事实</th><th>经济含义</th><th>不能如何解读</th></tr></thead>
+      <tbody>
+        <tr><td>2026H1 股息</td><td>未宣派</td><td>全年回报更依赖后续分红</td><td>不能据此断言全年无股息</td></tr>
+        <tr><td>已披露股东回报规划</td><td>2026 年现金分红占归母综合利润不低于 58%</td><td>年度可检验政策</td><td>不是 H1 已宣告股息</td></tr>
+        <tr><td>H1 A 股回购</td><td>7,579.33 万股，耗资 16.10 亿元</td><td>用于员工激励</td><td>不能全部当作缩股</td></tr>
+        <tr><td>拟注销 A 股库存股</td><td>7,454.15 万股</td><td>注销后减少股数</td><td>尚需按程序完成</td></tr>
+        <tr><td>H1 EPS 潜在稀释</td><td>加权平均约 7,481.90 万股</td><td>股份奖励增加稀释口径</td><td>不能与期末库存股直接相减</td></tr>
+        <tr><td>D 股潜在要约回购</td><td>最多 8,104.45 万股</td><td>若执行可减少 D 股</td><td>截至资料截止尚未启动</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>拟注销 A 股是 6 月末期末库存股存量，EPS 潜在稀释则是半年加权平均口径；两者数量量级接近，却不能直接相减。每股增厚要跟踪实际注销、库存股转出、新授予和加权平均股数。7 月公司已向员工持股计划转出 4,156 万股，8 月 28 日又买回 198.21 万股用于激励，进一步说明用途与时点必须逐笔区分。</p>
+
+  <p>海尔集团及一致行动方合计持股约 33.9%，构成稳定控制影响。公司拥有 A、H、D 三类股份，资本动作需跨市场理解。两名副总裁在业绩公告同期辞去高级管理职务但继续担任公司其他岗位；公告没有提供把该事项解释为经营动荡的证据。</p>
+
+  <div class="quote">每股结果要同时看：实际注销、库存股转出、新授予、加权平均股数，以及回购价格是否低于内在价值。</div>
+  <div class="plain"><span class="pl">白话解读</span><p>股息已经把现金交到股东手上，所以可信度最高；回购则有两种完全不同的结果：注销会减少总股数，用于激励可能又回到员工手里。海尔两种用途同时存在，不能把回购金额全部算成股东回报。<b>今年最重要的资本配置验证，是股东回报规划能否兑现，以及实际注销和奖励转出后每股口径是否真正改善。</b></p></div>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">估值 · 同业 · 市场隐含预期</div>
+  <h2>现价已经定价低增长，尚未便宜到可以忽略执行</h2>
+  <p>估值从 2026-08-28 H 股收盘价出发，使用 93.0 亿股估值稀释股数代理和 1 人民币＝1.16275 港元换算。该代理由 6 月末总股本 93.7763 亿股，减 A、D 股库存股合计 1.4645 亿股，再加 H1 股份奖励的加权平均潜在稀释 0.7482 亿股，得到 93.0600 亿股后取整；它把期末实股与期间平均潜在稀释结合，只用于保守估值，不是文件披露的 H1 加权平均稀释股数 92.4801 亿股。两套方法分开回答问题：<span class="g">DCF</span> 检验所有者现金能留下多少，规范化市盈率检验利润恢复后市场愿意付多少。股权成本是投资者要求的回报率，永续增速是长期增长假设；它们不取平均。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>H 股同业快照 · Wind · 2026-08-28 收盘；250 日约为一个交易年</caption>
+      <thead><tr><th>公司</th><th>代码</th><th>股价</th><th>PE TTM</th><th>PB LF</th><th>250日涨跌</th></tr></thead>
+      <tbody>
+        <tr><td>海尔智家</td><td>06690.HK</td><td>21.28 港元</td><td>9.73x</td><td>1.39x</td><td class="down">−11.43%</td></tr>
+        <tr><td>美的集团</td><td>00300.HK</td><td>98.75 港元</td><td>15.09x</td><td>2.86x</td><td class="up">+27.63%</td></tr>
+        <tr><td>海信家电</td><td>00921.HK</td><td>21.76 港元</td><td>9.46x</td><td>1.50x</td><td>−0.43%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>海尔相对美的有明显折价，与海信家电接近。折价既可能反映错价，也可能补偿海尔海外整合、利润率、关联财务公司和回购用途的复杂度；不同公司业务结构、会计口径与增长并不相同，不能用同业倍数机械搬运。</p>
+
+  <h3>估值推演：先写假设，再看价格</h3>
+  <p>LTM 所有者现金代理为 114.61 亿元。悲观、基准、乐观情景分别把基期可持续现金设在当前滚动水平之下、略高于当前水平和显著高于当前水平；模型再从该基期按永续增速推算下一期现金，情景差异必须由后续现金流验证。</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>所有者现金永续折现 · 不另加“超额现金”以避免重复计入利息性资源</caption>
+      <thead><tr><th>情景</th><th>基期可持续所有者现金</th><th>股权成本</th><th>永续增速</th><th>每股价值</th><th>较现价</th></tr></thead>
+      <tbody>
+        <tr><td>悲观</td><td>105 亿元</td><td>10.5%</td><td>2.0%</td><td>15.75 港元</td><td class="down">−26.0%</td></tr>
+        <tr><td>基准</td><td>125 亿元</td><td>9.5%</td><td>2.5%</td><td>22.88 港元</td><td class="up">+7.5%</td></tr>
+        <tr><td>乐观</td><td>145 亿元</td><td>8.8%</td><td>3.0%</td><td>32.19 港元</td><td class="up">+51.3%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>规范化归母净利润 × 目标市盈率</caption>
+      <thead><tr><th>情景</th><th>规范化归母净利润</th><th>目标 PE</th><th>每股价值</th><th>较现价</th><th>必要经营状态</th></tr></thead>
+      <tbody>
+        <tr><td>悲观</td><td>160 亿元</td><td>9x</td><td>18.00 港元</td><td class="down">−15.4%</td><td>收入转正但利润率继续下行</td></tr>
+        <tr><td>基准</td><td>190 亿元</td><td>11x</td><td>26.13 港元</td><td class="up">+22.8%</td><td>暖通抵消生活电器，费用率稳定</td></tr>
+        <tr><td>乐观</td><td>220 亿元</td><td>13x</td><td>35.76 港元</td><td class="up">+68.0%</td><td>收入、利润、现金同步恢复</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>价格阶梯：每一档都需要新的经营证据</h3>
+  <div class="rows">
+    <div class="row"><div class="nm">悲观区间<span>利润与现金继续落后</span></div><div class="track"><div class="fill alt" style="width:50%"></div></div><div class="fig">15.75–18.00<span class="down">港元</span></div></div>
+    <div class="row"><div class="nm">当前市场<span>2026-08-28 收盘</span></div><div class="track"><div class="fill soft" style="width:60%"></div></div><div class="fig">21.28<span>港元</span></div></div>
+    <div class="row"><div class="nm">基准区间<span>经营与现金开始闭环</span></div><div class="track"><div class="fill" style="width:73%"></div></div><div class="fig">22.88–26.13<span class="up">港元</span></div></div>
+    <div class="row"><div class="nm">乐观区间<span>全球业务全面变现</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">32.19–35.76<span class="up">港元</span></div></div>
+  </div>
+  <p class="small">每档左端来自所有者现金 DCF，右端来自规范化 PE；它们不是置信区间，也不是目标价概率。条形宽度按各区间上端相对最高区间上端显示，不做机械平均。</p>
+
+  <h3>市场到底在赌什么</h3>
+  <p>以基准股权成本和永续增速反推，当前股价隐含的基期可持续所有者现金约 116.24 亿元，几乎等于 LTM 所有者现金代理 114.61 亿元。也就是说，市场没有押注明显增长，而是在押注当前较弱现金引擎能够长期维持。这个门槛不高，却也意味着若现金继续下滑，低估值会迅速变成“看起来便宜”。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>估值没有给出一个神奇的“正确价格”。悲观档是假设收入虽稳住、利润和现金继续掉；基准档是假设暖通增长能抵消生活电器，并让费用率稳定；乐观档则要求全球收入、利润和现金一起恢复。<b>现价略低于基准带，但离悲观带也不远，所以判断只能是中性偏积极，而不是无条件便宜。</b></p></div>
+</section>
+
+<section class="reveal on" id="risks-debate">
+  <div class="slabel">风险预警 · 多空辩论 · 投资验证</div>
+  <h2>最强多头是全球份额，最强空头是份额变现</h2>
+  <div class="finds">
+    <div class="find good"><div class="t">多头证据</div><p>Q2 收入已转正，暖通外部收入与分部业绩增长，国内冰洗和空调份额继续提升，多区域本币收入向上。</p></div>
+    <div class="find warn"><div class="t">最强反方</div><p>单季收入只小幅增长且只观察到一个季度，不足以证明持续增长；生活电器仍弱、费用率上升、汇率与一次性退税扰动明显，低倍数可能只是对低现金转换的合理补偿。</p></div>
+    <div class="find"><div class="t">替代解释</div><p>营销和海外触点投入可能是为后续增长预付成本，汇兑也可能均值回归；若暖通协同延续，利润改善可能滞后于收入，仍需后续披露验证。</p></div>
+    <div class="find"><div class="t">裁决方法</div><p>不猜低基数还是拐点，只看下半年收入、经调整经营利润、费用率和现金是否同向改善。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>风险排序与可观察触发器</caption>
+      <thead><tr><th>优先级</th><th>风险机制</th><th>当前状态</th><th>恶化信号</th><th>缓解信号</th></tr></thead>
+      <tbody>
+        <tr><td>一</td><td>收入转正但利润不转</td><td>Q2 已出现</td><td>经调整经营利润继续低于收入趋势</td><td>利润增速连续快于收入</td></tr>
+        <tr><td>二</td><td>份额靠费用购买</td><td>销售费用率上升</td><td>份额升、生活电器业绩仍降</td><td>费用率稳定且毛利守住</td></tr>
+        <tr><td>三</td><td>海外汇率与成本</td><td>净汇兑由盈转亏</td><td>净汇兑损失扩大或套保抵消仍有限</td><td>本币增长转成报告利润</td></tr>
+        <tr><td>四</td><td>现金转换走弱</td><td>H1 与 Q2 OCF 均降</td><td>应付账期不再支撑后仍下滑</td><td>所有者现金恢复并高于当前滚动水平</td></tr>
+        <tr><td>五</td><td>关联资金集中</td><td>财务公司存款接近协议上限</td><td>集中度继续升或监管缓冲下降</td><td>存款占比与上限使用下降</td></tr>
+        <tr><td>六</td><td>回购被激励回补</td><td>两种用途并存</td><td>实际注销、奖励转出与新授予后稀释股数上升</td><td>加权平均稀释股数持续下降</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>行业顺逆风来自换新周期、地产、利率、天气、原料与汇率；公司自身竞争力来自品牌份额、本地化渠道、平台研发与暖通整合。报表与发行人引用的份额数据支持竞争力仍在市场份额层面，却尚未证明它足以压过所有成本压力。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>最强的反对意见不是“海尔没有品牌”，而是“强品牌也可能需要昂贵投入才能守住份额”。一个季度的小幅收入增长不足以裁决这场争论；<b>真正的证伪条件，是后续收入继续增长时，利润率和所有者现金仍然没有改善。</b></p></div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">最终判断 · 操作框架</div>
+  <h2>先把它当作“待验证的价值修复”，而不是已确认拐点</h2>
+  <p><strong>判断：</strong>中性偏积极。海尔具备全球品牌、份额和暖通增长三条结构性优势，现价也没有定价明显增长；但 Q2 只确认一个季度的收入同比小幅转正，利润与现金仍未确认。当前更适合进入观察或持有框架，新增估值溢价应以经营数据逐档解锁。</p>
+  <p><strong>最强反方：</strong>单季正增长幅度很小，一次性项目又帮助毛利，海外和渠道投入可能需要长期维持；若如此，当前折价是对复杂度与低现金转换的合理定价，而不是错价。</p>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><b>先看收入质量</b><p>H2 合并收入保持增长，且不是只靠单一地区或低基数。</p></div>
+    <div class="step"><div class="n">02</div><b>再看利润闭环</b><p>经调整经营利润增速高于收入，销售费用率停止上升。</p></div>
+    <div class="step"><div class="n">03</div><b>剔除一次性</b><p>海外毛利在没有退税帮助时仍能守住，净汇兑同比摆动收窄。</p></div>
+    <div class="step"><div class="n">04</div><b>确认现金</b><p>OCF 与所有者现金代理恢复，且不是继续延长应付账期。</p></div>
+    <div class="step"><div class="n">05</div><b>核对每股回报</b><p>分红规划兑现，实际注销、库存股转出与新授予后的加权平均股数改善。</p></div>
+  </div>
+  <p class="small">下一项最有信息量的观察：H2 经调整经营利润能否在收入继续增长时转为同比增长，并由经营现金流确认。若不能，基准估值区间应向悲观区间下修。</p>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · 快速检索</div>
+  <h2>读懂这份报告需要的词</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
+      <tbody>
+        <tr><td>H1 / Q1 / Q2 / FY</td><td>H1 是上半年累计，Q1 与 Q2 是第一、第二季度，FY 是完整财年。本报告单 Q2 为累计数相减的分析推算。</td></tr>
+        <tr><td>IFRS / CAS</td><td>IFRS 是国际财务报告准则，CAS 是中国企业会计准则。两套主表的部分列报不同，不能跨准则相减。</td></tr>
+        <tr><td>归母净利润</td><td>归属于上市公司股东的净利润，已经扣除子公司少数股东应占部分。</td></tr>
+        <tr><td>毛利率</td><td>收入减直接销售成本后的毛利除以收入。业务占比变化也会改变合并毛利率。</td></tr>
+        <tr><td>经调整经营利润</td><td>公司用于观察主营经营表现的指标；不是 CAS 营业利润，也不等于税前利润。</td></tr>
+        <tr><td>分部业绩</td><td>IFRS 分部报告中管理层使用的业绩指标。本报告不把它除以外部收入后冒充公司披露的利润率。</td></tr>
+        <tr><td>经营现金流（OCF）</td><td>日常经营实际流入减流出的现金。它会受应收、存货、应付和季节结算影响。</td></tr>
+        <tr><td>资本开支（CAPEX）</td><td>购买厂房、设备、软件等长期资产支付的现金；不等于利润表折旧。</td></tr>
+        <tr><td>机械自由现金流</td><td>本报告用 OCF 减现金资本开支得到的近似值，尚未扣利息与租赁，也不区分维持和增长投资。</td></tr>
+        <tr><td>所有者现金代理</td><td>本报告用 OCF 减资本开支、利息现金和租赁现金得到的分析指标，不是公司披露 KPI，也不等于可立即分配现金。</td></tr>
+        <tr><td>LTM / TTM</td><td>最近十二个月，用上一完整财年加本期、减上年同期，减少半年季节性的影响。</td></tr>
+        <tr><td>CAGR</td><td>复合年均增速，把起点至终点的总变化折算成每年相同的增长率。</td></tr>
+        <tr><td>汇兑损益 / 套保</td><td>汇率变化产生的会计收益或损失；套保用衍生工具降低风险，但通常不能完全抵消。</td></tr>
+        <tr><td>少数股东权益</td><td>子公司中不属于上市公司股东的权益。印度引资后，这部分经济权益增加。</td></tr>
+        <tr><td>财务公司</td><td>海尔集团体系内的持牌金融机构，海尔智家子公司合计持有42%、按联营企业核算；成员单位可把资金存入并获取金融服务。</td></tr>
+        <tr><td>库存股 / 股本变化</td><td>库存股是回购后尚未注销或转出的股份。判断稀释要同时看实际注销、库存股转出、新授予和加权平均股数，不能把期末存量与期间平均数直接相减。</td></tr>
+        <tr><td>稀释后股数</td><td>把可能归属的股份奖励等计入后的股份数，用于评估每股价值时更保守。</td></tr>
+        <tr><td>PE / PB</td><td>市盈率是股价相对每股盈利的倍数，市净率是股价相对每股净资产的倍数；低倍数可能是便宜，也可能补偿风险。</td></tr>
+        <tr><td>DCF / 股权成本</td><td>DCF 把未来现金按风险折回今天；股权成本越高，今天的价值越低。</td></tr>
+        <tr><td>永续增速</td><td>假设公司在明确预测期之后长期增长的速度，微小变化会显著影响 DCF 结果。</td></tr>
+        <tr><td>SOTP</td><td>分部加总估值。海尔缺少同口径分部现金和资本占用，本报告不强行使用。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">方法与来源</div>
+  <h2>HKEX 文件控制财务，市场数据只做估值交叉检查</h2>
+  <p>2026H1 合并财务、分部、地域、现金和股东回报以港交所中期业绩公告为控制来源；中国准则半年度报告与第一季度报告只用于同口径推算单 Q2 和读取详细治理附注。Wind 用于 H 股价格、PE、PB、区间与同业快照，不替代财务报表。人民币兑港元采用香港金管局最新可得的 2026-07-31 日度值，早于股价日期，具体换算率已在估值节标注。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>主要公开资料</caption>
+      <thead><tr><th>资料</th><th>日期 / 状态</th><th>用途</th><th>链接</th></tr></thead>
+      <tbody>
+        <tr><td>2026H1 中期业绩公告</td><td>2026-08-27；未经审计、已审阅</td><td>IFRS 主表、分部、地域、现金与经营讨论</td><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082702358_c.pdf">HKEX 原文</a></td></tr>
+        <tr><td>2026 半年度报告</td><td>2026-08-28；CAS、未经审计</td><td>Q2 累计桥、股本、股份支付、印度与财务公司</td><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800019_c.pdf">HKEX 原文</a></td></tr>
+        <tr><td>2026 第一季度报告</td><td>2026-04-27；CAS、未经审计</td><td>推算单 Q2 的同口径累计基数</td><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0427/2026042703103_c.pdf">HKEX 原文</a></td></tr>
+        <tr><td>2025 年报</td><td>2026-04-27；IFRS、经审计</td><td>五年滚动重列、股息与股东回报规划</td><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0427/2026042702193_c.pdf">HKEX 原文</a></td></tr>
+        <tr><td>财务公司风险持续评估报告</td><td>2026-08-28；发行人评估</td><td>关联存贷款、存款集中度、监管指标与担保</td><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800023_c.pdf">HKEX 原文</a></td></tr>
+        <tr><td>翌日披露报表</td><td>2026-08-28</td><td>最新 A 股库存股回购变动</td><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082801744_c.pdf">HKEX 原文</a></td></tr>
+        <tr><td>印度投资交易公告</td><td>2025-12-24；交易对手官方</td><td>交易意图与合作方；会计处理仍以 HKEX 文件为准</td><td><a href="https://www.bharti.com/press-release-2024-2025-bharti-enterprises-and-warburg-pincus-announce-strategic-investment-in-haier-india.html">Bharti 原文</a></td></tr>
+        <tr><td>2025 年度暨 2026Q1 业绩说明会</td><td>2026-05-27；前一期官方问答</td><td>印度会计、汇率管理、海外利润与分红承诺检验</td><td><a href="https://roadshow.sseinfo.com/activityDetails/39534">上证路演中心</a></td></tr>
+        <tr><td>HKMA 人民币汇率日度 API</td><td>最新可得 2026-07-31</td><td>估值与股息的人民币—港元换算</td><td><a href="https://apidocs.hkma.gov.hk/documentation/market-data-and-statistics/monthly-statistical-bulletin/er-ir/er-eeri-daily/">HKMA 文档</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>资料检索覆盖 HKEX 公司公告、海尔智家投资者关系页面与上证路演中心官方活动登记。截至 2026-08-28，没有找到 2026H1 / Q2 业绩会、电话会、网络直播或问答文字记录；最新公开业绩说明会记录仍是 5 月 27 日的年度暨一季度说明会。报告把它明确当作“前期官方问答”而非本期业绩会。这里的结论只是“没有找到公开记录”，不等于断言公司没有任何私下机构交流。</p>
+  <p>推算 Q2＝同年 CAS H1 累计减同年 CAS Q1 累计；所有 Q2 同比均对上年同法推算值。毛利率先恢复分子分母后计算，EPS、ROE、期末资产负债和分部数据不相减。汇率桥只到税前，不延伸为虚构的调整后归母利润。机械 FCF、所有者现金代理、LTM、保守流动性桥、隐含现金和估值情景均为分析计算，关键公式已在正文披露。</p>
+  <p class="small">市场数据来源于 Wind 金融终端；股息采用经公告逐笔核对的文件口径，未采用与文件不一致的 Wind 标准化股息率字段。公司引用的行业份额来自奥维云网、GfK 中怡康与 GfK，由发行人披露，未获得底层数据库独立重算。未披露项保留为“未披露”。</p>
+</section>
+
+<footer>
+  <p>财务截止：2026年6月30日；公告与公开业绩会检索截止：2026年8月28日；市场快照：2026年8月28日收盘。主要来源：海尔智家 HKEX 公告及定期报告、上证路演中心、香港金管局与 Wind。</p>
+  <p>半年财务未经审计但已按香港审阅准则第2410号审阅；单季、LTM、现金代理与估值均为分析推算。本文为 Fullscan 研究用途，不构成投资建议。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
