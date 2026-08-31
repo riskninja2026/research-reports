@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>石四药集团 2026H1 Fullscan 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">石四药集团 02005.HK ｜ 2026H1 全景尽调 ｜ 数据截至 2026.08.31</div>
+    <h1>输液放量是真的，<br>“低估值”还需要证明</h1>
+    <p class="lede">2026年上半年输液销量恢复双位数增长，港元收入与归母利润同比回升。<b>但人民币口径明显慢于港元口径，毛利率仍下降，经营利润率改善主要来自销售费用和损益表研发费用收缩。</b>在现金流尚未披露、现价已落入基准价值带时，这是一场需要全年数据继续验收的早期修复。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">恢复的硬证据｜2026H1 输液出货量</div>
+        <div class="big a">8.68亿</div>
+        <div class="cap">瓶（袋）；较上年同期增长逾两成，高端软袋是主要增量来源。</div>
+      </div>
+      <div>
+        <div class="tag">估值的反证｜LTM P/E / 五年中位</div>
+        <div class="big b">1.32×</div>
+        <div class="cap">当前市盈率相对五年中位数；市净率却靠近同期底部，反映利润与账面资本错位。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，先抓住这五件事</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>一家以大容量静脉输液为核心、同时经营安瓿注射液、原料药、口服制剂及医用材料的制药集团；“静脉输液及其他”占本期外部收入95%。</li>
+      <li><b>本期成绩：</b>港元收入23.61亿、归母净利润3.20亿，同比分别增长9.9%和13.0%；输液放量是最扎实的经营证据，非PVC软袋及直立袋贡献超过全部收入增量。</li>
+      <li><b>核心矛盾：</b>毛利率下降0.27个百分点，但经营利润率提高1.59个百分点。利润弹性主要由销售费用节省和损益表研发费用下降形成，而总研发投入也下降20.4%、资本化率上升6.81个百分点。</li>
+      <li><b>最容易踩的坑：</b>公司披露的是累计2026H1，不是独立Q2；港元收入增长9.9%也不等于本币经营增长，管理层披露的人民币收入只增长约5%。当前公告没有现金流量表。</li>
+      <li><b>结论：</b>中性。HK$2.705位于本报告HK$2.50—2.95的基准价值带，12倍P/E下已隐含约6.65亿港元归母利润，接近2027年基准情景；安全边际有限。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>石四药把注册、制造与医院准入串成一条产业链</h2>
+  <p>公司的主要利润池仍是输液与其他制剂。原料药既可对外销售，也为部分制剂提供一体化供应；药品获批后还要经历挂网、集采、医院准入和实际采购，监管进度不等于已经形成收入。</p>
+  <div class="steps">
+    <div class="step"><div class="n">环节 1</div><b>研发与注册</b><p>仿制药、复杂制剂和早期创新项目产生研发支出；部分符合条件的开发成本被资本化。</p></div>
+    <div class="step"><div class="n">环节 2</div><b>规模化生产</b><p>输液包装结构、产能利用、原料自给和质量控制决定制造成本与毛利。</p></div>
+    <div class="step"><div class="n">环节 3</div><b>招采与销售</b><p>集采以价格换采购量，基药目录提升准入机会；真正变现仍取决于执行价、约定量和终端采购。</p></div>
+    <div class="step"><div class="n">环节 4</div><b>现金与分配</b><p>应收、库存、资本开支和借款决定利润能留下多少现金，再由股息、回购与奖励计划分配。</p></div>
+  </div>
+  <p>新读者要先记住三条边界。第一，集团有“静脉输液及其他”和“医用材料及相关产品”两个<span class="g">可报告分部</span>，但没有披露每个具体药品的利润。第二，2022年收购友谊化工造成原料药和合并范围断点。第三，主席曲继广兼任行政总裁；四川科伦既是约23%的重要股东和同业公司，也有董事席位并与集团发生材料、制造和研发交易。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">基础财务</div>
+  <h2>五年利润平台已经断裂，半年增长只是从低位修复</h2>
+  <p>2021—2023年收入、利润率和资本回报同步上行，随后两年快速回落；到2025年，收入已比2023年低35.6%，归母净利润低64.3%。2026H1同比重新增长，但滚动十二个月经营利润和归母净利润仍分别比2024年低47.6%和52.2%。</p>
+  <p class="small">以下合并数字以港交所港元报表为主控。<span class="g">毛利率</span>是毛利占收入的比例；<span class="g">经营利润率</span>是经营利润占收入的比例；<span class="g">ROIC</span>是税后经营利润相对平均投入资本的分析代理。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">2026H1 收入</div><div class="v">23.61<span class="u">亿港元</span></div><div class="d"><span class="up">同比 +9.9%</span><span>人民币口径约 +5.0%</span></div></div>
+    <div class="cell"><div class="k">2026H1 毛利</div><div class="v">9.72<span class="u">亿港元</span></div><div class="d"><span class="up">同比 +9.2%</span><span>毛利率 41.19% / −0.27个百分点</span></div></div>
+    <div class="cell"><div class="k">2026H1 经营利润</div><div class="v">4.45<span class="u">亿港元</span></div><div class="d"><span class="up">同比 +20.1%</span><span>利润率 18.86% / +1.59个百分点</span></div></div>
+    <div class="cell"><div class="k">2026H1 归母净利润</div><div class="v">3.20<span class="u">亿港元</span></div><div class="d"><span class="up">同比 +13.0%</span><span><span class="g">EPS</span> HK$0.1107</span><span>半年ROE 4.24%</span></div></div>
+    <div class="cell"><div class="k">2026H1 经营现金流</div><div class="v">未披露</div><div class="d"><span>33页业绩公告无现金流量表</span></div></div>
+    <div class="cell"><div class="k">2026H1 自由现金流代理</div><div class="v">不可计算</div><div class="d"><span>OCF与现金资本开支均缺失</span><span>期末BVPS约HK$2.709（扣库存股）</span></div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl" data-financials="history">
+      <caption>五年合并财务轨迹｜亿港元；利润项依次列金额 / 利润率，EPS为港元</caption>
+      <thead><tr><th>年度</th><th>收入</th><th>毛利 / 率</th><th>经营利润 / 率</th><th>归母净利 / 率</th><th>EPS</th><th>ROE</th><th>ROIC</th><th>OCF</th><th>广义现金资本开支</th><th>自由现金流代理</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>53.57</td><td>31.70 / 59.18%</td><td>9.88 / 18.45%</td><td>7.86 / 14.66%</td><td>0.2599</td><td>13.23%</td><td>11.07%</td><td>6.96</td><td>3.88</td><td>3.07</td></tr>
+        <tr><td>2022</td><td>64.34</td><td>35.68 / 55.45%</td><td>14.24 / 22.13%</td><td>11.23 / 17.45%</td><td>0.3761</td><td>18.06%</td><td>15.11%</td><td>7.34</td><td>4.18</td><td>3.16</td></tr>
+        <tr><td>2023</td><td>64.63</td><td>36.20 / 56.01%</td><td>16.39 / 25.36%</td><td>13.19 / 20.40%</td><td>0.4441</td><td>20.06%</td><td>16.08%</td><td>9.26</td><td>7.04</td><td>2.22</td></tr>
+        <tr><td>2024</td><td>57.73</td><td>29.08 / 50.37%</td><td>13.44 / 23.27%</td><td>10.61 / 18.38%</td><td>0.3582</td><td>15.00%</td><td>11.90%</td><td>4.91</td><td>5.40</td><td>−0.49</td></tr>
+        <tr><td>2025</td><td>41.65</td><td>17.31 / 41.56%</td><td>6.29 / 15.10%</td><td>4.71 / 11.30%</td><td>0.1605</td><td>6.48%</td><td>5.43%</td><td>6.35</td><td>3.35</td><td>3.00</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cols" role="img" aria-label="2021至2025年收入与归母净利润趋势，精确数值见上方五年合并财务轨迹表">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:82.88%"></div><div class="bar np" style="height:12.15%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:99.55%"></div><div class="bar np" style="height:17.37%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:20.40%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:89.33%"></div><div class="bar np" style="height:16.42%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:64.45%"></div><div class="bar np" style="height:7.28%"></div></div></div>
+  </div>
+  <div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div>
+  <div class="legend"><span><i class="p"></i>收入</span><span><i class="m"></i>归母净利润</span></div>
+  <p class="small">2021—2025收入、经营利润、归母净利润和OCF的<span class="g">CAGR</span>分别为−6.09%、−10.68%、−12.02%和−2.25%。广义现金资本开支＝购置物业、厂房及设备＋购买使用权资产＋无形资产添置付款；自由现金流代理＝OCF−广义现金资本开支，不是公司KPI。2022年友谊化工收购使原料药与合并范围出现断点。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption><span class="g">LTM</span>参考桥｜2025全年＋2026H1−2025H1；亿港元</caption>
+      <thead><tr><th>期间</th><th>收入</th><th>毛利 / 率</th><th>经营利润 / 率</th><th>归母净利 / 率</th><th>EPS算术桥（不同报告分母）</th><th>ROIC</th><th>OCF / FCF</th></tr></thead>
+      <tbody><tr><td>LTM至2026.06</td><td>43.79</td><td>18.13 / 41.41%</td><td>7.03 / 16.06%</td><td>5.07 / 11.59%</td><td>约0.1750</td><td>5.89%</td><td>不可桥接</td></tr></tbody>
+    </table>
+  </div>
+  <p class="small">LTM EPS把不同加权股数期间的报告EPS作算术桥，只能称“约”；Wind P/E则用当前含库存股总股本重算EPS约HK$0.17195，两种分母不可混用。LTM损益绝对额可以精确勾稽。当前期缺少现金流，因此不能构造LTM OCF、资本开支或FCF。</p>
+
+  <div data-financials="segments">
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>2026H1 产品收入底图｜亿港元；产品是收入拆分，不是独立利润中心</caption>
+        <thead><tr><th>产品</th><th>收入</th><th>占比</th><th>同比</th><th>对总收入增量贡献</th></tr></thead>
+        <tbody>
+          <tr><td nowrap>非PVC软袋及直立式软袋输液</td><td>11.04</td><td>46.8%</td><td class="up">+31.4%</td><td>123.6%</td></tr>
+          <tr><td nowrap>聚丙烯塑瓶输液</td><td>2.93</td><td>12.4%</td><td class="up">+9.1%</td><td>11.4%</td></tr>
+          <tr><td nowrap>玻璃瓶输液</td><td>0.90</td><td>3.8%</td><td class="down">−0.8%</td><td>−0.4%</td></tr>
+          <tr><td nowrap>安瓿注射液</td><td>1.63</td><td>6.9%</td><td class="up">+3.5%</td><td>2.6%</td></tr>
+          <tr><td nowrap>原料药</td><td>3.95</td><td>16.7%</td><td class="up">+9.4%</td><td>15.9%</td></tr>
+          <tr><td nowrap>口服制剂</td><td>1.65</td><td>7.0%</td><td class="down">−44.3%</td><td>−61.3%</td></tr>
+          <tr><td nowrap>其他</td><td>0.33</td><td>1.4%</td><td>+1.1%</td><td>0.2%</td></tr>
+          <tr><td nowrap>医用材料及相关产品</td><td>1.18</td><td>5.0%</td><td class="up">+16.8%</td><td>8.0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>法定可报告分部｜亿港元；结果率为分析计算</caption>
+        <thead><tr><th>分部</th><th>2026H1外部收入</th><th>占比</th><th>同比</th><th>分部结果</th><th>结果率</th><th>上年结果率</th></tr></thead>
+        <tbody>
+          <tr><td nowrap>静脉输液及其他</td><td>22.42</td><td>95.0%</td><td class="up">+9.6%</td><td>4.42</td><td>19.69%</td><td>18.05%</td></tr>
+          <tr><td nowrap>医用材料及相关产品</td><td>1.18</td><td>5.0%</td><td class="up">+16.8%</td><td>0.13</td><td>11.14%</td><td>10.87%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stacks" role="img" aria-label="2025年上半年与2026年上半年可报告分部外部收入占比对比，具体数值见上表">
+      <div class="stack"><div class="cap">2025H1 外部收入结构</div><div class="stackbar"><div class="seg p" style="width:95.3%">静脉输液及其他 95.3%</div><div class="seg q" style="width:4.7%"></div></div></div>
+      <div class="stack"><div class="cap">2026H1 外部收入结构</div><div class="stackbar"><div class="seg p" style="width:95.0%">静脉输液及其他 95.0%</div><div class="seg q" style="width:5.0%"></div></div></div>
+    </div>
+    <div class="legend"><span><i class="p"></i>静脉输液及其他</span><span><i class="q"></i>医用材料及相关产品</span></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>五年表讲的是利润平台被打断：2025年不是正常年份里的一点波动，而是毛利率、ROE和ROIC同时跌到五年低点。2026H1的增长说明低谷后已经回升，不能说明旧平台已经回来。</p>
+    <p>本期增长也很集中。非PVC软袋及直立袋新增收入超过集团全部增量，口服制剂下降又抵消约六成增量。<b>因此要验证的不是“收入有没有增长”，而是输液放量能否跨期、口服能否止跌，以及这些增长能否变成现金。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="profit">
+  <div class="slabel">增长质量 · 利润桥 · 币种</div>
+  <h2>输液量增可信，利润率扩张却主要来自费用端</h2>
+  <p>公司公告显示输液销量和收入均实现双位数增长，收入达到14.87亿港元。收入除以销量得到的港元单位收入代理为正，但同时混合包装、产品、地区和汇率，不能称为人民币提价。管理层披露人民币总收入约20.75亿元、只增长约5%；两种币种的收入增速相差约4.9个百分点。若用“（1＋港元增速）／（1＋人民币增速）−1”观察，隐含折算乘数代理约为+4.7%，不是公司披露的固定汇率桥。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>输液量价与结构信号｜公司路演口径与分析推算分列</caption>
+      <thead><tr><th>信号</th><th>销量同比</th><th>收入同比</th><th>单位收入代理</th><th>解释边界</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td nowrap>输液合计</td><td>+21.4%</td><td>+24.0%</td><td>+2.1%（港元）</td><td>公司公告销量与收入；单位收入为分析计算</td></tr>
+        <tr><td nowrap>双硬管软袋</td><td>+29%</td><td>+20%</td><td>−7.0%</td><td>路演增长率推算，混合规格结构</td></tr>
+        <tr><td nowrap>腹膜透析液</td><td>+121%</td><td>+79%</td><td>−19.0%</td><td>路演增长率推算，低基数与结构影响未知</td></tr>
+        <tr><td nowrap>腹膜＋血液滤过置换液</td><td>+75%</td><td>+43%</td><td>−18.3%</td><td>路演合并口径推算</td></tr>
+        <tr><td nowrap>其他≥1,000ml产品</td><td>+55%</td><td>+53%</td><td>−1.3%</td><td>路演增长率推算</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>路演材料披露输液整体毛利率46.2%，其中直立式软袋59.1%、非PVC软袋46.1%、聚丙烯塑瓶35.7%、玻璃瓶24.6%。这一截面与“高端包装结构重要”的判断一致，但还混合产品、规格、客户和地区，不能单独识别包装的因果贡献；集团也没有披露上年同期可比包装毛利或产品收入到分部利润的调节，不能把上述截面直接写成毛利率同比改善。</p>
+
+  <h3>经营利润增量如何形成</h3>
+  <div class="wfall" role="img" aria-label="2026年上半年经营利润同比增量桥，单位为百万港元，具体数值在每行右侧">
+    <div class="wrow"><div class="nm">毛利增加<span>收入放量，毛利率微降</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:45.591%"></div></div><div class="fig up">+82.064</div></div>
+    <div class="wrow"><div class="nm">其他收益减少<span>政府补助下降为主</span></div><div class="wtrack"><div class="wbar down" style="left:25.757%;width:24.243%"></div></div><div class="fig down">−43.637</div></div>
+    <div class="wrow"><div class="nm">销售及分销节省<span>费用率16.46%→14.21%</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:9.968%"></div></div><div class="fig up">+17.943</div></div>
+    <div class="wrow"><div class="nm">一般行政增加<span>费用率略升</span></div><div class="wtrack"><div class="wbar down" style="left:43.648%;width:6.352%"></div></div><div class="fig down">−11.433</div></div>
+    <div class="wrow"><div class="nm">费用化研发节省<span>费用率6.35%→4.11%</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:21.829%"></div></div><div class="fig up">+39.292</div></div>
+    <div class="wrow"><div class="nm">应收减值变化<span>由拨回转为损失</span></div><div class="wtrack"><div class="wbar down" style="left:44.561%;width:5.439%"></div></div><div class="fig down">−9.790</div></div>
+    <div class="wrow"><div class="nm">经营利润净增<span>六项与报表勾稽</span></div><div class="wtrack"><div class="wbar tot" style="left:50%;width:41.355%"></div></div><div class="fig">+74.439</div></div>
+  </div>
+  <p class="small">条形以±90百万港元为共同半轴；右侧数值与2025H1经营利润370.857百万港元至2026H1 445.296百万港元的变化勾稽。此后财务成本净额增加34.660百万港元、联营利润减少1.454百万港元，压缩了税前利润增量。</p>
+  <p>净财务成本接近翻倍，不等于借款利息翻倍：借款利息由54.776降至51.940百万港元，但存款利息减少，人民币升值又使汇兑由6.697百万港元收益转为26.052百万港元损失。公司未使用外汇对冲工具，因此港元收入折算受益与财务费用承压可以同时发生。</p>
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>输液销量确实在恢复，这是本期最强的证据。但毛利率没有跟着上升，经营利润率变好主要因为销售和损益表研发费用占收入更低。</p>
+    <p><b>量增证明工厂重新出货，不自动证明每一瓶更赚钱。</b>要把“恢复”升级成“质量改善”，还需要看到毛利率稳定、费用节省不伤害研发，以及全年经营现金流兑现。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="pipeline">
+  <div class="slabel">研发专章 · 资本化 · 商业转化</div>
+  <h2>批件密度证明注册能力，尚未证明新品经济性</h2>
+  <p>上半年取得56个国家药品注册批件，其中48个为制剂及原料药等新品规、8个为补充申请；截至6月底，累计189个品种、253个品规通过或视同通过一致性评价。港交所公告披露的“生产上市申请”为24个品种/品规，路演材料所称向CDE申报38个采用更宽口径，两者不能混写。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>研发投入质量｜百万港元</caption>
+      <thead><tr><th>口径</th><th>2025H1</th><th>2026H1</th><th>同比 / 变化</th><th>含义</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td nowrap>总研发投入</td><td>212.757</td><td>169.418</td><td class="down">−20.4%</td><td>研发活动总额下降</td></tr>
+        <tr><td nowrap>资本化开发成本</td><td>76.500</td><td>72.453</td><td class="down">−5.3%</td><td>进入资产负债表</td></tr>
+        <tr><td nowrap>损益表研发费用</td><td>136.257</td><td>96.965</td><td class="down">−28.8%</td><td>直接帮助本期经营利润</td></tr>
+        <tr><td nowrap>资本化率</td><td>35.96%</td><td>42.77%</td><td>+6.81个百分点</td><td>阶段变化与会计确认共同影响利润</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>创新与改良项目阶段｜公司路演陈述；监管阶段不外推销售</caption>
+      <thead><tr><th>项目</th><th>适应症 / 类型</th><th>路演所述阶段</th><th>下一项硬验证</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td nowrap>SYN045</td><td>肺动脉高压</td><td>完成健康受试者单次及多次剂量爬坡；患者Ib期仅为计划</td><td>临床登记与首例患者入组</td></tr>
+        <tr><td nowrap>CX24005</td><td>抗癫痫</td><td>多系列化合物筛选后处于毒性优化</td><td>PCC确认及IND-enabling毒理</td></tr>
+        <tr><td nowrap>CX25001</td><td>镇痛</td><td>PCC确认中；管理层预计2026年9月启动IND申报相关实验</td><td>PCC确认与正式IND受理号</td></tr>
+        <tr><td nowrap>CX25004</td><td>特应性皮炎</td><td>化合物筛选与药代动力学优化</td><td>PCC确认</td></tr>
+        <tr><td nowrap>M**Q / M**M</td><td>二类改良型新药</td><td>临床前开发</td><td>受理与临床许可</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>6月末之后至8月27日，港交所有界扫描累计发现18个制剂生产批件和4个原料药登记状态更新。它们改善上市、招标或制剂配套条件，却没有披露挂网价、进院数量、销售额或利润；因此不把22个监管节点折算进预测收入。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>“获批”像拿到入场券，不等于比赛已经赢了。石四药已证明能持续把产品推进到监管节点；下一步要看复杂制剂是否真正挂网、进入医院并产生可见毛利。与此同时，本期利润受益于费用化研发下降，<b>批件多不能替代对研发总额和资本化率的检查</b>。</p></div>
+</section>
+
+<section class="reveal on" id="overseas">
+  <div class="slabel">海外业务 · 地域结构 · 汇率</div>
+  <h2>海外连续快于国内，但收入增长还没有利润与现金画像</h2>
+  <p>海外收入在2021—2025年由4.81亿港元增至7.01亿港元，CAGR为9.87%；同期中国收入CAGR为−8.19%。2026H1海外收入4.14亿港元，同比增长26.4%，贡献集团收入增量的40.5%，收入占比由15.24%升至17.52%。</p>
+  <div class="rows" aria-label="石四药集团海外收入占比变化">
+    <div class="row"><div class="nm">2021全年<span>其他国家收入占比</span></div><div class="track"><div class="fill alt" style="width:51.2%"></div></div><div class="fig">4.81亿<span>9.0%</span></div></div>
+    <div class="row"><div class="nm">2025全年<span>其他国家收入占比</span></div><div class="track"><div class="fill soft" style="width:96.0%"></div></div><div class="fig">7.01亿<span>16.8%</span></div></div>
+    <div class="row"><div class="nm">2026H1<span>其他国家收入占比</span></div><div class="track"><div class="fill" style="width:100%"></div></div><div class="fig">4.14亿<span>17.5%</span></div></div>
+  </div>
+  <p class="small">条形按收入占比、以2026H1为100%；2026H1是半年度流量，不能与全年绝对额直接比较。</p>
+  <p>公司称上半年制剂出口收入1.2358亿港元、增长13%；其中输液出口9,151万瓶（袋）、增长24%，安瓿666万支、增长32%，口服制剂1,627万片、增长79%，并在11个国家取得19项注册。上述是公司经营陈述；集团没有披露海外毛利、经营利润、营运资本、资本开支、分国税负或现金回流。</p>
+  <div class="finds">
+    <div class="find good"><div class="t">已建立的证据</div><p>五年海外收入方向持续向上，本期增速再次超过国内；注册与出口数量提供了渠道扩张的前置证据。</p></div>
+    <div class="find warn"><div class="t">仍缺少的经济性</div><p>没有不变汇率收入桥，也没有海外利润和现金。汇率已同时影响港元收入与财务费用，不能把报表增长直接当作本地需求。</p></div>
+  </div>
+  <div class="plain"><span class="pl">白话解读</span><p>海外收入像新增的一条水管，流量确实越来越大；但公司没有告诉我们这条水管的成本、占用资金和最后留下的现金。<b>因此海外是增长证据，不是独立估值单元。</b></p></div>
+</section>
+
+<section class="reveal on" id="cash">
+  <div class="slabel">现金流 · 资产负债 · 股东回报</div>
+  <h2>资产负债表仍可承受，现金转换必须等完整中报</h2>
+  <p>6月末现金低于银行借款，计入租赁后仍为净负债；流动比率1.87倍，资本负债比率由年末24.1%降至21.9%。借款全部须在五年内偿还且大部分为浮动利率。公司不是净现金企业，但当前资产负债表也没有触发高杠杆专章。</p>
+  <div class="grid">
+    <div class="cell"><div class="k">现金及现金等价物</div><div class="v">18.56<span class="u">亿港元</span></div><div class="d"><span>较年末 +9.8%</span></div></div>
+    <div class="cell"><div class="k">银行借款</div><div class="v">40.41<span class="u">亿港元</span></div><div class="d"><span>较年末 +0.8%</span><span>大部分浮息</span></div></div>
+    <div class="cell"><div class="k">含租赁净负债</div><div class="v">21.93<span class="u">亿港元</span></div><div class="d"><span>较年末 −5.6%</span></div></div>
+    <div class="cell"><div class="k">贸易应收及票据</div><div class="v">18.11<span class="u">亿港元</span></div><div class="d"><span>较年末 +6.5%</span></div></div>
+    <div class="cell"><div class="k">存货</div><div class="v">12.40<span class="u">亿港元</span></div><div class="d"><span>较年末 +3.2%</span></div></div>
+    <div class="cell"><div class="k">资本承诺</div><div class="v">3.18<span class="u">亿港元</span></div><div class="d"><span>较年末下降</span></div></div>
+  </div>
+  <p>路演材料给出的应收天数由144天下降至129天、存货天数由180天下降至161天、应付天数由41天升至48天；但这些是公司口径，且资产负债表点位不能替代现金流量表。用存货、应收、预付减应付、合同负债及应计项目构造的营运资本代理较年末增加0.55亿港元，只能提示占用方向。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>资本回报记录｜亿港元；股息按归属财年、回购按当年现金支出</caption>
+      <thead><tr><th>期间</th><th>每股股息（港元）</th><th>股息总额</th><th>公司回购现金</th><th>广义FCF代理</th><th>解释</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>0.120</td><td>3.61</td><td>1.88</td><td>3.07</td><td>分配与现金发生时点不完全一致</td></tr>
+        <tr><td>2022</td><td>0.140</td><td>4.17</td><td>0.86</td><td>3.16</td><td>同左</td></tr>
+        <tr><td>2023</td><td>0.170</td><td>5.05</td><td>0.33</td><td>2.22</td><td>同左</td></tr>
+        <tr><td>2024</td><td>0.175</td><td>5.18</td><td>0.45</td><td>−0.49</td><td>当年广义FCF代理为负</td></tr>
+        <tr><td>2025</td><td>0.080</td><td>2.34</td><td>1.54</td><td>3.00</td><td>利润与股息明显下台阶</td></tr>
+        <tr class="grp"><td>2021—2025累计</td><td>—</td><td>20.34</td><td>5.06</td><td>—</td><td>期间未见股权融资现金流入</td></tr>
+        <tr><td>2026H1</td><td>0.055</td><td>约1.59</td><td>0.35</td><td>未披露</td><td>股息9月24日计划支付；派息率49.65%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>2026H1公司直接回购1,347万股、支付3,532.6万港元；限制性股份奖励信托另支付1,991.6万港元购入898万股，后者是奖励池购股而非股东回报。6月末公司直接库存股5,967万股，信托持有1,228万股；8月31日信托再购90万股后持有1,318万股。</p>
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>资产负债表显示“水库”尚能覆盖短期波动，但只有现金流量表能说明水从经营、投资还是融资而来。现金增加、净负债下降都不是上半年自由现金流的替代品。</p>
+    <p><b>本期最重要的缺口不是利润表，而是现金表。</b>股息与回购继续发生，全年报告必须同时回答经营现金、资本开支和营运资本是否支持这种分配。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="procurement">
+  <div class="slabel">集采 · 基药目录 · 竞争机制</div>
+  <h2>准入面正在扩大，价格和利润仍藏在执行细节里</h2>
+  <p>制药业务的竞争不是只比“获批多少”。一致性评价和注册批件决定能否进入部分招采，国家及地方集采用降价换约定采购量，医院配备和终端使用再决定真实销量；营销费用可能因此下降，毛利也可能被中选价格压缩。</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2026年政策与准入事件｜披露状态、缺失数据与下一检查点</caption>
+      <thead><tr><th>事件</th><th>披露事实</th><th>不能推导</th><th>下一验证</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td nowrap>第十二批国家集采</td><td>13个品种、16个品规全部“拟中选”</td><td>不是最终合同或已经放量；价格、约定量、执行省份未披露</td><td>最终中选、各省执行、采购与毛利</td></tr>
+        <tr><td nowrap>国家基本药物目录</td><td>95个品种、141个品规纳入；2026-09-01生效</td><td>不是独家采购或销量保证</td><td>医疗机构配备与院端采购</td></tr>
+        <tr><td nowrap>既有招采基础</td><td>H1参与市级以上地方招采407次；累计带量中选269个品规</td><td>没有披露对应收入、价格与利润</td><td>同口径销售和费用率变化</td></tr>
+        <tr><td nowrap>接续与地方集采</td><td>国家集采协议期满接续55个品规；山东集采5个品规中标</td><td>中标数量不等于经济贡献</td><td>执行量、降价幅度、履约成本</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>路演材料预计第十二批国采在2026年第四季度执行，这是管理层预期，不是正式执行公告。评价集采影响要把两条可能路径同时纳入：采购量与市场份额可能向上，单位价格与毛利率可能向下，销售费用节省也只是一项潜在对冲。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>“全部拟中选”说明石四药拿到了更好的准入概率，尚不能告诉我们赚多少钱。只有看到最终价格、约定采购量、各省执行和中选后的毛利，才能把政策事件放进估值。<b>数量是入口，单位经济才是结果。</b></p></div>
+</section>
+
+<section class="reveal on" id="governance">
+  <div class="slabel">股本 · 激励 · 关联治理</div>
+  <h2>回购没有新增稀释，治理折价集中在角色与利益重叠</h2>
+  <p>2026年1月，1亿份未行使购股权失效；6月末没有潜在摊薄普通股，基本与稀释后EPS相同。H1加权平均股数同比下降1.83%，解释了EPS增速高于归母利润增速约2.1个百分点。估值模型为保持保守并与Wind市值一致，使用含库存股的总股本；扣除公司直接库存股与信托持股后的近似经济股数另行对账。</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>治理与股本检查表｜截至2026-08-31有界披露</caption>
+      <thead><tr><th>事项</th><th>已知事实</th><th>投资者仍需知道</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td nowrap>主席兼行政总裁</td><td>曲继广兼任两职，偏离企业管治守则C.2.1</td><td>董事会制衡与继任安排</td></tr>
+        <tr><td nowrap>限制性股份奖励</td><td>信托已经在市场建仓；8月31日购入90万股并非授予</td><td>受益人、授予数、归属条件与绩效门槛均未披露</td></tr>
+        <tr><td nowrap>控股方增持</td><td>曲继广控制的China Pharmaceutical于3月31日至5月5日买入2,140万股，估算均价HK$2.506</td><td>公司库存股导致的“视为权益”不能重复算作增持</td></tr>
+        <tr><td nowrap>四川科伦</td><td>持股约23.03%，同业、董事席位兼持续关联交易对手方</td><td>框架定价和监控机制已披露；H1实际额与执行层比价证据未披露</td></tr>
+        <tr><td nowrap>2026关联交易上限</td><td>采购/销售/制造/研发年度上限分别为人民币1.7458亿/0.8217亿/0.2700亿/0.0800亿</td><td>实际发生额、产品可比价格与服务质量</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>持续关联交易框架已经披露定价与监控：采购参考行业数据库和可得第三方报价，销售参考价目表及近期独立交易，制造与研发服务至少取得两份独立第三方报价，并由外聘核数师和独立董事作年度审阅。四川科伦仍同时是重要股东、同业、董事席位持有者和交易对手；2026H1没有披露实际发生额及执行层比较证据，外部股东因此还不能把框架程序验证为当期经济公允。</p>
+  <p>H1奖励计划没有授出、归属、注销或失效股份。信托累计买股上限为计划采纳日已发行股本的2%，单一参与者累计授予上限为1%；这些上限不能代替具体受益人和业绩条件。</p>
+  <div class="callout"><b>三种每股分母必须分开：</b>H1 EPS使用期间加权平均28.9386亿股；期末BVPS约HK$2.709使用扣除公司与信托库存股后的28.7916亿股；Wind市值、P/B和本报告每股估值为保持保守，使用含库存股的29.5111亿总股本。8月31日近似经济股数28.7826亿股只作后续股本参考。</div>
+  <div class="callout"><b>奖励池购股不是已经授予。</b>集团现金已经支出、总股本没有新增；未来只有在披露参与者、授予数量、归属和业绩条件后，才能判断激励是否真正与股东回报对齐。</div>
+</section>
+
+<section class="reveal on" id="risks">
+  <div class="slabel">风险与证伪</div>
+  <h2>四个暴露决定修复能否穿过下一个报告期</h2>
+  <div class="finds">
+    <div class="find warn"><div class="t">一 · 量增但毛利不增</div><p>输液放量已经成立，但综合毛利率仍下降；集采执行、包装结构和汇率都可能让销量与单位经济继续分叉。</p></div>
+    <div class="find warn"><div class="t">二 · 费用支撑利润</div><p>经营利润率提升依赖销售费用率下降和费用化研发减少；若费用回升或资本化项目减值，利润弹性可能回吐。</p></div>
+    <div class="find"><div class="t">三 · 现金与浮息负债</div><p>当前公告没有现金流量表，集团仍处于净负债且借款大部分浮息；应收与库存继续占用资金。</p></div>
+    <div class="find"><div class="t">四 · 批件与治理转化</div><p>产品获批、拟中选和奖励池购股都缺少经济结果；四川科伦的多重角色又提高对关联定价透明度的要求。</p></div>
+  </div>
+  <div class="plain"><span class="pl">白话解读</span><p>这四类风险不是互相独立：集采可能推动销量、压低价格、减少销售费用并增加应收，最后同时进入毛利、费用和现金。只看其中一个指标容易得出过早结论，必须用同一期间的量、毛利和现金一起裁决。</p></div>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">估值 · 三年情景 · 现价反推</div>
+  <h2>1倍P/B不是无条件便宜，现价已经落在基准区间内</h2>
+  <p>估值先锁定港交所股数和LTM利润，再用独立2025H2基数构造2026—2028经营情景；主方法是2027年前瞻P/E，P/B与ROE检查利润恢复要求，EV/经营利润只作二级交叉。由于2026H1现金流缺失，本报告不伪装成精确DCF。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">8月31日收盘价</div><div class="v">HK$2.705</div><div class="d"><span>市值79.83亿港元</span><span>业绩批准日收盘至今 +2.27%</span></div></div>
+    <div class="cell"><div class="k">当前估值</div><div class="v">15.73<span class="u">× P/E</span></div><div class="d"><span>P/B 1.02×</span><span>股息率3.14%</span></div></div>
+    <div class="cell"><div class="k">五年历史位置</div><div class="v">高位<span class="u">P/E</span></div><div class="d"><span>P/E高于75%分位</span><span>P/B低于25%分位</span><span>样本1,226个交易日</span></div></div>
+    <div class="cell"><div class="k">基准路径</div><div class="v">已计入</div><div class="d"><span>现价位于2027E主价值区间内</span><span>完整区间见情景表</span></div></div>
+    <div class="cell"><div class="k">现价反推</div><div class="v">6.65<span class="u">亿港元</span></div><div class="d"><span>按12×所需归母利润</span><span>较LTM +31.1%</span></div></div>
+    <div class="cell"><div class="k">投资判断</div><div class="v">中性</div><div class="d"><span>修复成立，安全边际有限</span></div></div>
+  </div>
+
+  <div class="steps">
+    <div class="step"><div class="n">第一步</div><b>锁定口径</b><p>HK$2.705、29.5111亿总股本、LTM归母5.0745亿港元；库存股口径单独披露。</p></div>
+    <div class="step"><div class="n">第二步</div><b>确定倍数边界</b><p>基准11—13倍围绕五年P/E中位11.96倍与可得同业预测P/E中位11.98倍。</p></div>
+    <div class="step"><div class="n">第三步</div><b>写经营驱动</b><p>H2收入和净利率、2027利润增长、现金转换由熊/基准/牛三组独立假设控制。</p></div>
+    <div class="step"><div class="n">第四步</div><b>反推现价</b><p>现价在12倍下要求约6.65亿归母利润，几乎等于2027基准6.71亿。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>五年历史估值分布｜2021-09-01至2026-08-31，1,226个交易日</caption>
+      <thead><tr><th>倍数</th><th>最低</th><th>25%</th><th>中位</th><th>75%</th><th>最高</th><th>当前分位</th></tr></thead>
+      <tbody>
+        <tr><td nowrap>P/E TTM</td><td>6.78</td><td>9.68</td><td>11.96</td><td>14.14</td><td>23.19</td><td>87.18%</td></tr>
+        <tr><td nowrap>P/B LF</td><td>0.82</td><td>1.26</td><td>1.76</td><td>2.05</td><td>2.66</td><td>9.71%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>高P/E与低P/B并不矛盾：2025年利润台阶式下降，账面资本仍在，资本回报却显著降低。按10.5%股权成本与2%长期增长的<span class="g">Gordon P/B关系</span>，现价反推可持续ROE约10.70%，比H1年化8.48%高约2.2个百分点；P/B低位本身不是安全垫。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>港股制药估值截面｜2026-08-31 Wind收盘；只作市场参照</caption>
+      <thead><tr><th>公司</th><th>P/E TTM</th><th>预测P/E</th><th>P/B</th><th>股息率</th><th>业务可比性提醒</th></tr></thead>
+      <tbody>
+        <tr><td nowrap>联邦制药</td><td>7.03</td><td>12.27</td><td>0.84</td><td>5.75%</td><td>胰岛素与抗生素敞口不同</td></tr>
+        <tr><td nowrap>石药集团</td><td>12.45</td><td>11.69</td><td>2.46</td><td>3.57%</td><td>规模更大、创新药权重更高</td></tr>
+        <tr><td nowrap>中国生物制药</td><td>37.01</td><td>18.92</td><td>2.72</td><td>2.20%</td><td>规模与创新管线差异大</td></tr>
+        <tr><td nowrap>神威药业</td><td>7.41</td><td>未返回</td><td>0.73</td><td>17.12%</td><td>中药结构不同</td></tr>
+        <tr><td nowrap>康臣药业</td><td>8.42</td><td>8.07</td><td>2.08</td><td>5.77%</td><td>专科药结构不同</td></tr>
+        <tr class="grp"><td nowrap>同业中位</td><td>8.42</td><td>11.98</td><td>2.08</td><td>5.75%</td><td>不直接套用为目标倍数</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>三年经营路径｜非公司指引；收入、归母与FCF代理为亿港元</caption>
+      <thead><tr><th>情景</th><th>2026E 收入 / 归母</th><th>2027E 收入 / 归母</th><th>2028E 收入 / 归母</th><th>FCF转换率路径</th><th>2026 / 27 / 28 FCF代理</th><th>三年累计FCF代理</th></tr></thead>
+      <tbody>
+        <tr><td nowrap>熊市</td><td>43.79 / 5.32</td><td>43.79 / 5.32</td><td>45.10 / 5.48</td><td>40% / 45% / 50%</td><td>2.13 / 2.40 / 2.74</td><td>7.27</td></tr>
+        <tr class="grp"><td nowrap>基准</td><td>46.82 / 5.99</td><td>51.50 / 6.71</td><td>56.13 / 7.51</td><td>55% / 60% / 65%</td><td>3.29 / 4.02 / 4.88</td><td>12.20</td></tr>
+        <tr><td nowrap>牛市</td><td>48.83 / 6.48</td><td>56.16 / 7.78</td><td>63.46 / 9.18</td><td>65% / 70% / 75%</td><td>4.21 / 5.45 / 6.88</td><td>16.54</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">熊/基准/牛的2026H2收入同比假设分别为0%/15%/25%，H2净利率为10.5%/12.0%/13.0%；2027归母增长为0%/12%/20%。FCF代理＝归母净利润×假设现金转换率，因H1现金流未披露，仅用于压力测试，不是公司现金流或精确DCF。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2027E前瞻P/E主估值与企业价值交叉｜每股港元</caption>
+      <thead><tr><th>情景</th><th>2027E EPS</th><th>P/E区间</th><th>主价值区间</th><th>较现价</th><th>EV/经营利润交叉</th></tr></thead>
+      <tbody>
+        <tr><td nowrap>熊市</td><td>0.180</td><td>9–10×</td><td>1.62–1.80</td><td class="down">−40.0%至−33.3%</td><td>1.52</td></tr>
+        <tr class="grp"><td nowrap>基准</td><td>0.227</td><td>11–13×</td><td>2.50–2.95</td><td>−7.6%至+9.2%</td><td>2.78</td></tr>
+        <tr><td nowrap>牛市</td><td>0.264</td><td>13–15×</td><td>3.43–3.95</td><td class="up">+26.7%至+46.2%</td><td>4.20</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>EV/经营利润交叉分别使用2027经营利润6.8/8.5/10.0亿港元、10/12/14倍和净负债23/20/16亿港元，仅用于检验主框架方向。市场对业绩的交易反应以8月26日收盘为基准；由于官方发布时点未被控制，不把8月26日本身的涨幅归因于业绩。</p>
+
+  <h3>价值梯尺：基准上限只比现价高约9%</h3>
+  <div class="rows" aria-label="石四药集团2027前瞻P/E情景上限与市场收盘价对比">
+    <div class="row"><div class="nm">熊市价值上限<span>9–10倍情景</span></div><div class="track"><div class="fill alt" style="width:45.61%"></div></div><div class="fig">HK$1.80<span class="down">较现价 −33.3%</span></div></div>
+    <div class="row"><div class="nm">市场收盘价<span>2026-08-31</span></div><div class="track"><div class="fill soft" style="width:68.41%"></div></div><div class="fig">HK$2.705<span>Wind收盘</span></div></div>
+    <div class="row"><div class="nm">基准价值上限<span>11–13倍情景</span></div><div class="track"><div class="fill" style="width:74.72%"></div></div><div class="fig">HK$2.95<span class="up">较现价 +9.2%</span></div></div>
+    <div class="row"><div class="nm">牛市价值上限<span>13–15倍情景</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$3.95<span class="up">较现价 +46.2%</span></div></div>
+  </div>
+  <p class="small">条形以牛市上限HK$3.954为100%；宽度由可执行模型计算。完整区间为熊市HK$1.62—1.80、基准HK$2.50—2.95、牛市HK$3.43—3.95。</p>
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>“1倍市净率”看起来便宜，是因为账面净资产还在；“15.7倍市盈率”不低，是因为利润已经大幅下台阶。两者合在一起，市场实际在押注ROE恢复。</p>
+    <p>现价已在基准价值带中，按12倍还要求利润比LTM增长约31%。<b>买入的回报不再主要来自均值回归，而来自输液、口服、集采和现金转换同时走向牛市路径。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">最终判断</div>
+  <h2>值得跟踪的低谷修复，还不是有充分安全垫的价值股</h2>
+  <p><strong>投资判断：中性。</strong>控制性论点是“输液放量是真的，低估值还需要证明”。本期提供了销量和利润同比修复，但毛利、研发投入、现金流与现价隐含预期尚未形成同方向证据。主估值总区间HK$1.62—3.95，现价处于基准区间内；数据置信度为中等。</p>
+  <div class="finds">
+    <div class="find good"><div class="t">最强牛方</div><p>高端输液包装占比提升、海外增长、密集批件与集采准入可能共同恢复产能利用和ROE；若复杂制剂商业化快于预期，当前P/E会被快速增长的利润分母压低。</p></div>
+    <div class="find warn"><div class="t">最强熊方</div><p>量增没有带来毛利率上升，口服制剂大跌，利润扩张又依赖费用收缩；在现金流缺失和净负债存在时，恢复可能只停留在低基数同比。</p></div>
+    <div class="find"><div class="t">如何裁决</div><p>把输液销量、集团毛利率、口服收入、完整现金转换和净负债放在同一期间检查；批件和拟中选只作领先指标。</p></div>
+    <div class="find warn"><div class="t">明确失效线</div><p>若2026H2收入同比不增长、输液销量增速降至个位数且集团毛利率不高于41%，或FY2026 FCF代理/归母净利润低于55%、含租赁净负债不降，任一项都要求下修基准情景。55%是模型阈值，不是公司指引。</p></div>
+  </div>
+
+  <h3>把下一轮验证排在时间线上</h3>
+  <div class="tline">
+    <div class="tstop"><span class="tw">2026.09.01</span><b>基药目录生效</b><p>跟踪95个品种的医疗机构配备与实际采购，不把目录资格当订单。</p></div>
+    <div class="tstop"><span class="tw">2026.09</span><b>CX25001计划节点</b><p>管理层预计启动IND申报相关实验；检查PCC确认与正式受理号。</p></div>
+    <div class="tstop warn"><span class="tw">2026Q4</span><b>第十二批国采执行</b><p>管理层预期时点；核对最终中选、价格、约定量与各省执行。</p></div>
+    <div class="tstop warn"><span class="tw">FY2026业绩</span><b>现金与利润总验收</b><p>取得完整现金流，复核毛利、研发资本化、口服、净负债与55%基准转换线。</p></div>
+    <div class="tstop"><span class="tw">下一临床里程碑</span><b>SYN045患者Ib期</b><p>等待临床登记与首例患者入组，不把健康受试者结果当疗效证明。</p></div>
+  </div>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · 快速检索</div>
+  <h2>读懂这份制药报告需要的词</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
+      <tbody>
+        <tr><td>H1 / H2 / FY / 独立Q2</td><td>上半年 / 下半年 / 全年 / 只含4月至6月的第二季度。石四药本次只披露2026H1。</td></tr>
+        <tr><td>可报告分部</td><td>管理层用来分配资源并单独披露结果的会计业务单元；具体产品收入不等于分部利润。</td></tr>
+        <tr><td>毛利率 / 经营利润率</td><td>毛利 / 经营利润各自占收入的比例；前者更接近产品单位经济，后者还受费用与其他收益影响。</td></tr>
+        <tr><td>归母净利润</td><td>扣除非控股股东应占部分后，归属于上市公司股东的净利润。</td></tr>
+        <tr><td>EPS / BVPS</td><td>每股盈利 / 每股净资产；EPS使用期间加权股数，BVPS和估值还要明确是否扣除库存股。</td></tr>
+        <tr><td>ROE / ROIC</td><td>净利润相对平均归母权益的回报 / 税后经营利润相对平均投入资本的分析回报。</td></tr>
+        <tr><td>CAGR</td><td>复合年均增速，把起点到终点的累计变化折成每年的复合速度。</td></tr>
+        <tr><td>LTM</td><td>最近十二个月。本报告用2025全年加2026H1、再减2025H1。</td></tr>
+        <tr><td>OCF / CAPEX / FCF代理</td><td>经营现金流 / 资本开支 / OCF减广义现金再投资的分析近似值。</td></tr>
+        <tr><td>ASP / 单位收入代理</td><td>平均售价 / 用收入除以销量的近似数；都可能混合规格、产品、地区和汇率。</td></tr>
+        <tr><td>资本化研发</td><td>符合会计条件后暂列为资产的开发支出，不立即进入损益；未来可能摊销或减值。</td></tr>
+        <tr><td>一致性评价</td><td>证明仿制药质量和疗效与参比制剂相符的监管评价，常是招采准入条件之一。</td></tr>
+        <tr><td>CDE / IND / PCC</td><td>国家药监局药品审评中心 / 临床试验申请 / 临床前候选化合物；三者代表不同研发阶段。</td></tr>
+        <tr><td>拟中选 / 集采</td><td>拟进入集中采购结果 / 以集中采购换取约定量；拟中选不等于最终合同和已实现收入。</td></tr>
+        <tr><td>基药目录</td><td>国家基本药物范围，是医疗机构配备和优先使用的重要依据，不是独家采购承诺。</td></tr>
+        <tr><td>库存股 / 信托持股</td><td>公司回购后持有的股份 / 奖励计划受托人持有并在会计上冲减权益的股份，披露口径并不完全相同。</td></tr>
+        <tr><td>P/E TTM / 前瞻P/E</td><td>股价相对最近十二个月盈利 / 未来情景盈利的倍数。</td></tr>
+        <tr><td>P/B LF / Gordon P/B</td><td>股价相对最新账面净资产的倍数 / 用可持续ROE、股权成本与长期增长解释P/B的关系。</td></tr>
+        <tr><td>FCF转换率</td><td>利润有多少变成自由现金流代理；估值情景中的比例是分析假设，不是公司披露。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">方法来源</div>
+  <h2>港交所控制会计数字，路演陈述与市场数据分层使用</h2>
+  <p>本期会计控制源为港交所<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600192_c.pdf">截至2026年6月30日止六个月中期业绩</a>及<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600206_c.pdf">中期股息公告</a>。五年历史逐年回查<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0421/2026042100427_c.pdf">2025年报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0416/2025041600446_c.pdf">2024年报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0418/2024041800463_c.pdf">2023年报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0418/2023041800356_c.pdf">2022年报</a>及<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0419/2022041900554_c.pdf">2021年报</a>。当前中期财务未经审计，但公告称毕马威按香港审阅工作准则第2410号审阅并获无保留审阅结论。</p>
+  <p>管理层经营陈述来自公司制作、经Quartr分发的<a href="https://files.quartr.com/conference-calls/46afa7c13df29291bf23a7deb8a5dee3-2026-08-26-13-44-47.pdf?ref=U0E=">82页2026H1业绩路演材料</a>；发现链为<a href="https://stockanalysis.com/filings/HKG-2005/3596436/">StockAnalysis文件页</a>、Quartr原始PDF及<a href="https://www.tradingview.com/news/urn:summary_document_slides:quartr.com:4077603:0-ssy-group-strong-h1-2026-profit-and-margin-growth-led-by-high-end-infusions-and-export-expansion/">TradingView/Quartr文档记录</a>。它不是逐字稿且没有Q&amp;A，也未在港交所或可访问的公司IR页面找到同一PDF，因此证据等级低于港交所公告。截至2026年8月31日20:28香港时间，使用主上市代码<code>2005:HK</code>检索earningscalls.dev没有匹配记录，对港交所期后公告、公司/irasia IR页面及公开网页的有界检索也未找到公开电话会逐字稿或Q&amp;A。本文只引用路演材料中的管理层陈述，不据此断言公司没有召开电话会。</p>
+  <p>期后政策与公司事件使用港交所<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0803/2026080303023_c.pdf">第十二批国采拟中选公告</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0710/2026071000138_c.pdf">基本药物目录公告</a>、逐项产品进展公告、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100783_c.pdf">8月31日奖励计划购股公告</a>与<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2025/1223/2025122300427_c.pdf">2026持续关联交易公告</a>。行情、历史估值分位和可比公司截面来自Wind完整收盘；会计数字仍由港交所控制。</p>
+  <div class="callout"><b>模型与披露边界：</b>LTM、ROE、ROIC、BVPS、港元单位收入、利润桥、净负债、营运资本余额代理、FCF代理、三年情景、反推利润和每股价值均为分析计算。Wind一次一致预期查询把同一组数据机械复制到158个机构且缺少研究员、更新日期和机构预测字段，已全部剔除。所有缺口继续标为“未披露”，不制造独立Q2或当前期现金流。</div>
+</section>
+
+<footer>
+  <p>数据截止：公司文件、期后事项与电话会检索截至2026年8月31日20:28香港时间；行情截至2026年8月31日16:08:51完整收盘。财务主控文件日期为2026年8月26日。</p>
+  <p>本报告包含分析推算与情景假设，不构成投资建议。港交所本次只披露累计2026H1，未披露独立第二季度，也尚未在33页业绩公告中提供现金流量表；因此H1及现金流口径LTM的OCF、CAPEX和FCF均保留为未披露/不可计算。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
