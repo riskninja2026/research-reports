@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>比亚迪 2026Q2 Fullscan 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">比亚迪 01211.HK ｜ FULLSCAN 全景尽调 ｜ 数据截止 2026.08.31</div>
+    <h1>利润先回来了，<br>份额还没有</h1>
+    <p class="lede">单二季度收入下降，归母净利润却增长近三成。Q2合并报表确认的是毛利与费用桥修复；H1地区表则显示海外汽车相关毛利几乎逐元填平国内缺口，为结构解释提供线索，但不能证明单季因果。与此同时，份额、库存与现金投入仍在给这次修复打问号。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">2026Q2 归母净利润同比 · H1−Q1推算</div>
+        <div class="big a">+29.7%</div>
+        <div class="cap">由H1减Q1推算；利润率扩张，费用桥也有改善。</div>
+      </div>
+      <div>
+        <div class="tag">2026Q2 新能源车份额同比 · 销量代理</div>
+        <div class="big b">−5.0pp</div>
+        <div class="cap">公司销量跑输仍增长的行业，推算份额明显回落。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，读这里</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>不只是整车厂。比亚迪把汽车、动力电池、储能、光伏、轨道交通、零部件与售后装在一个大分部里，另有手机部件与组装业务；这种垂直整合既能保供降本，也让「单车售价」「汽车毛利」无法从合并披露里直接拆出。</li>
+      <li><b>本期成绩：</b>由半年报减一季报推算，2026Q2收入1,945.90亿元（同比−3.15%），<span class="g">归母净利润</span>82.41亿元（+29.66%），经营现金流345.44亿元；现金资本开支下降后，<span class="g">自由现金流代理</span>由−199.96亿元转为+119.04亿元。</li>
+      <li><b>核心矛盾：</b>利润修复不是份额修复。Q2新能源车销量同比−3.24%，而行业+16.16%；H1海外汽车相关毛利增加140.78亿元，几乎正好抵消国内减少140.67亿元。<b>半年口径的利润重心明显向海外移动，但Q2地区数据未披露，不能把它确认为单季驱动。</b></li>
+      <li><b>容易踩的坑：</b>不能把H1的每股收益减去Q1每股收益，也不能把汽车大分部收入除以销量叫作「单车售价」；Q2分部、地区、每股收益、折旧和完整质保成本均未披露。本文只对可比的合并损益与现金流做H1−Q1。</li>
+      <li><b>结论：</b><b>中性偏谨慎</b>。HK$87.20附近，基准两种映射约HK$85–88，缺乏明显安全垫；若按17倍2026盈利定价，现价反推全年归母净利润约405亿元，要求下半年同比增长约64%，与Wind一致预期的强反弹接近。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>一套垂直整合机器，靠规模、结构与周转一起赚钱</h2>
+  <p>比亚迪的经济模型不是单纯「卖更多车」。它从电池、电驱和半导体等关键部件一路做到整车、储能、海外工厂与运输船；汽车销售形成收入，垂直整合决定毛利，研发和产能投入决定下一轮产品力，渠道预收、供应商账期与库存周转则决定利润能否变成现金。</p>
+  <div class="steps">
+    <div class="step"><div class="n">环节 1</div><b>产品与品牌取订单</b><p>王朝、海洋、方程豹、腾势、仰望覆盖大众到高端；销量、车型结构与地区组合共同决定收入。</p></div>
+    <div class="step"><div class="n">环节 2</div><b>垂直整合做毛利</b><p>电池、零部件和制造体系提升供应保障；成本优势是否兑现，要看集团毛利和地区毛利，而非口号。</p></div>
+    <div class="step"><div class="n">环节 3</div><b>研发与资本开支再投入</b><p>刀片电池、兆瓦闪充、智能驾驶、海外工厂与储能持续吃掉现金，回报取决于投产、利用率和售价。</p></div>
+    <div class="step"><div class="n">环节 4</div><b>周转决定现金质量</b><p>客户预付款、应付账款与库存周期能放大或吞噬经营现金流；利润增长不等于自由现金流增长。</p></div>
+  </div>
+  <p>公司同时在深圳和香港上市，本报告只为01211.HK做H股估值，但估值分母使用全部A+H股9,117,197,565股，因为两类股份分享同一集团利润。王传福是董事长兼总裁及最大股东；员工持股计划用二级市场购入的既有A股，不增加基础股数。另一个披露边界更重要：公司只有「汽车及相关」和「电子及其他」两个报告分部，前者还包括电池、光伏、轨交与服务，故本文凡写<span class="g">汽车相关</span>，都不等同于纯整车。</p>
+  <p>行业背景一句话：2026Q2中国新能源车销量仍增长约16%，但比亚迪销量下降；行业没有停，公司的相对份额在掉。判断投资价值的关键因此不是「新能源车长期会不会增长」，而是比亚迪能否在不牺牲海外高毛利和现金纪律的前提下重新跑赢行业。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">基础财务 · 公司概况 · 主营结构 · 五年概览</div>
+  <h2>五年规模扩张很强，2025以后转入「收入放缓、结构找利润」</h2>
+  <p>FY2021—FY2025收入与归母净利润都实现高速复合增长；但拐点已出现：FY2025收入只增3.46%，归母净利润下降18.97%，自由现金流代理转为大额负数。2026Q2利润率恢复，尚不足以改变<span class="g">LTM</span>（最近十二个月）收入、利润与现金流都低于此前高点的事实。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">2026Q2 营业收入</div><div class="v">1,945.90<span class="u">亿元</span></div><div class="d"><span class="down">同比 −3.15%</span><span>环比 +29.53%</span></div></div>
+    <div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">367.37<span class="u">亿元</span></div><div class="d"><span class="up">同比 +12.41%</span><span>18.88%</span></div></div>
+    <div class="cell"><div class="k">营业利润 / 利润率</div><div class="v">100.48<span class="u">亿元</span></div><div class="d"><span class="up">同比 +30.51%</span><span>5.16%</span></div></div>
+    <div class="cell"><div class="k">归母净利润 / 利润率</div><div class="v">82.41<span class="u">亿元</span></div><div class="d"><span>利润率 4.23%</span><span>精确归母额；单季EPS不可推导</span></div></div>
+    <div class="cell"><div class="k">经营现金流</div><div class="v">345.44<span class="u">亿元</span></div><div class="d"><span class="up">同比 +48.56%</span></div></div>
+    <div class="cell"><div class="k">自由现金流代理</div><div class="v">119.04<span class="u">亿元</span></div><div class="d"><span class="up">同比改善319.00亿元</span><span>现金资本开支226.40亿元</span></div></div>
+  </div>
+
+  <p class="small">以上六格是单二季度快照：2026Q2＝2026H1−2026Q1，2025Q2同法；均为未经审计累计数之差，不是发行人单列季度。自由现金流代理＝经营现金流−购买固定资产、无形资产及其他长期资产支付的现金。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>LTM（最近十二个月）桥｜FY2025 + 2026H1 − 2025H1；人民币亿元</caption>
+      <thead><tr><th>收入</th><th>毛利 / 率</th><th>营业利润 / 率</th><th>归母净利润 / 率</th><th>每股利润代理</th><th>经营现金流 / 现金资本开支 / FCF代理</th></tr></thead>
+      <tbody><tr><td>7,774.99</td><td>1,407.83 / 18.11%</td><td>362.09 / 4.66%</td><td>294.34 / 3.79%</td><td>3.23元</td><td>646.37 / 1,209.86 / −563.50</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="tblscroll" data-financials="history">
+    <table class="tbl" data-financials="history">
+      <caption>五年合并财务历史｜FY（完整财年）2021—2025；人民币亿元；EPS为每股收益，ROE为净资产收益率代理</caption>
+      <thead><tr><th>项目</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>四年CAGR（复合年增长率）</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入</td><td>2,161.42</td><td>4,240.61</td><td>6,023.15</td><td>7,771.02</td><td>8,039.65</td><td>38.88%</td></tr>
+        <tr><td>毛利 / 毛利率</td><td>269.16 / 12.45%</td><td>657.31 / 15.50%</td><td>1,119.16 / 18.58%</td><td>1,510.56 / 19.44%</td><td>1,426.60 / 17.74%</td><td>51.73%</td></tr>
+        <tr><td>营业利润 / 利润率</td><td>46.32 / 2.14%</td><td>215.42 / 5.08%</td><td>381.03 / 6.33%</td><td>504.86 / 6.50%</td><td>401.85 / 5.00%</td><td>71.62%</td></tr>
+        <tr><td>归母净利润 / 利润率</td><td>30.45 / 1.41%</td><td>166.22 / 3.92%</td><td>300.41 / 4.99%</td><td>402.54 / 5.18%</td><td>326.19 / 4.06%</td><td>80.91%</td></tr>
+        <tr><td>EPS（元/股，拆股后）</td><td>0.35</td><td>1.90</td><td>3.44</td><td>4.61</td><td>3.58</td><td>—</td></tr>
+        <tr><td>ROE（平均权益代理）</td><td>4.01%</td><td>16.13%</td><td>24.05%</td><td>24.84%</td><td>15.12%</td><td>—</td></tr>
+        <tr><td>经营现金流</td><td>654.67</td><td>1,408.38</td><td>1,697.25</td><td>1,334.54</td><td>591.36</td><td>—</td></tr>
+        <tr><td>现金资本开支</td><td>373.44</td><td>974.57</td><td>1,220.94</td><td>973.60</td><td>1,568.08</td><td>—</td></tr>
+        <tr><td>自由现金流代理</td><td>281.23</td><td>433.81</td><td>476.32</td><td>360.94</td><td>−976.72</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cols" role="img" aria-label="五年营业收入与归母净利润趋势，两组序列分别以各自峰值归一化，具体值见上表">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:26.9%"></div><div class="bar np" style="height:7.6%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:52.7%"></div><div class="bar np" style="height:41.3%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:74.9%"></div><div class="bar np" style="height:74.6%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:96.7%"></div><div class="bar np" style="height:100%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:81.0%"></div></div></div>
+  </div>
+  <div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div>
+  <div class="legend"><span><i class="p"></i>营业收入（按自身峰值归一）</span><span><i class="m"></i>归母净利润（按自身峰值归一）</span></div>
+  <p class="small">两组柱高分别按各自序列峰值等比绘制，不能用柱高直接比较收入与利润的绝对大小；它显示的是两条时间轨迹。FY2025收入继续增长，利润却从峰值回落，是当前周期的口径断点。</p>
+
+  <div data-financials="segments">
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>报告分部地图｜2026H1；人民币亿元；分部利润为发行人用于资源分配的调整后指标</caption>
+        <thead><tr><th>报告分部</th><th>对外收入</th><th>收入占比</th><th>收入同比</th><th>分部利润指标</th><th>利润同比</th></tr></thead>
+        <tbody>
+          <tr><td>汽车、汽车相关产品及其他</td><td>2,753.41</td><td>79.85%</td><td>−8.98%</td><td>111.61</td><td>−12.84%</td></tr>
+          <tr><td>电子及其他产品</td><td>694.05</td><td>20.13%</td><td>+0.96%</td><td>1.94</td><td>−85.50%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stacks">
+      <div class="stack"><div class="cap">2025H1 对外收入结构</div><div class="stackbar"><div class="seg p" style="width:81.5%">81.5%</div><div class="seg q" style="width:18.5%">18.5%</div></div></div>
+      <div class="stack"><div class="cap">2026H1 对外收入结构</div><div class="stackbar"><div class="seg p" style="width:79.9%">79.9%</div><div class="seg q" style="width:20.1%">20.1%</div></div></div>
+    </div>
+    <div class="legend"><span><i class="p"></i>汽车、汽车相关及其他</span><span><i class="q"></i>电子及其他</span></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>五年故事可以分两段。FY2021—FY2024是规模与利润率一起上行：收入约增2.6倍，归母净利润约增12倍。FY2025开始，收入仍高，但毛利率、营业利润率、ROE和现金流同时回落；这是「扩张完成」之后必须重新证明回报率的阶段。</p>
+    <p>Q2看起来重新向上：收入少了63亿元，毛利反而多了41亿元，归母净利润多了19亿元。可LTM自由现金流代理仍为负563亿元，说明一个季度的现金改善还没有洗掉过去十二个月的高投入。<b>本期是修复证据，不是完整反转。</b></p>
+  </div>
+  <p class="small">CAGR＝（期末÷期初）的四次方根−1。EPS：FY2021—23发行人原报数按2025年3倍股本调整除以3，FY2024—25采用2025年报已重述数；ROE代理＝归母净利润÷期初期末平均归母权益，并非发行人加权ROE。每股利润代理＝LTM归母净利润÷当前总股数，不是会计EPS。Q2分部、地区与EPS未披露。</p>
+</section>
+
+<section class="reveal on" id="profit">
+  <div class="slabel">盈利能力深度分析</div>
+  <h2>毛利改善盖过收入下滑，研发费用减少又被财务费用与减值抵消一部分</h2>
+  <p>Q2营业利润同比增加23.49亿元。最强正贡献是毛利增加40.56亿元，其次是研发费用同比少34.10亿元；最强负贡献是财务费用由净收益转为净支出，形成43.35亿元不利摆动。桥只证明报表行的变化，不证明管理层的单一因果。</p>
+
+  <div class="wfall" role="img" aria-label="2025Q2至2026Q2营业利润累计桥；横轴以桥中峰值151.65亿元为百分之百，正负项目从各自累计起止点绘制">
+    <div class="wrow"><div class="nm">2025Q2营业利润<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:50.77%"></div></div><div class="fig">76.99亿元</div></div>
+    <div class="wrow"><div class="nm">毛利增加<span>收入下降、成本降更多</span></div><div class="wtrack"><div class="wbar up" style="left:50.77%;width:26.74%"></div></div><div class="fig up">+40.56</div></div>
+    <div class="wrow"><div class="nm">研发费用减少<span>会计费用行</span></div><div class="wtrack"><div class="wbar up" style="left:77.51%;width:22.49%"></div></div><div class="fig up">+34.10</div></div>
+    <div class="wrow"><div class="nm">财务费用恶化<span>净收益转净费用</span></div><div class="wtrack"><div class="wbar down" style="left:71.41%;width:28.59%"></div></div><div class="fig down">−43.35</div></div>
+    <div class="wrow"><div class="nm">其他经营与处置净影响<span>其他收益、税附及期间费用等</span></div><div class="wtrack"><div class="wbar up" style="left:71.41%;width:6.17%"></div></div><div class="fig up">+9.36</div></div>
+    <div class="wrow"><div class="nm">投资与公允价值<span>合并净额</span></div><div class="wtrack"><div class="wbar down" style="left:72.69%;width:4.89%"></div></div><div class="fig down">−7.42</div></div>
+    <div class="wrow"><div class="nm">信用与资产减值<span>损失增加</span></div><div class="wtrack"><div class="wbar down" style="left:66.26%;width:6.44%"></div></div><div class="fig down">−9.76</div></div>
+    <div class="wrow"><div class="nm">2026Q2营业利润<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:66.26%"></div></div><div class="fig">100.48亿元</div></div>
+  </div>
+  <p class="small">横轴以累计桥的峰值151.65亿元为同一尺度；每个变动条从变动前后累计值中较低者开始，宽度等于该项影响。为保证移动端可见性，税金及附加、销售、管理、其他收益与资产处置合并为「其他经营与处置净影响」；完整行项保留在计算账本。正负贡献与两期营业利润差一致。研发费用下降是利润桥，不等于研发活动同比下降同样幅度。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">毛利率修复是真</div><p>Q2毛利率同比上升2.61个百分点，且环比Q1基本稳定；这不是单纯少花研发带来的，因为研发位于毛利之后。</p></div>
+    <div class="find warn"><div class="t">费用桥并不全是高质量</div><p>研发费用减少贡献大于营业利润全部增量，而财务费用恶化、投资收益下降与减值增加相互抵消；不能把全部修复年化。</p></div>
+    <div class="find"><div class="t">汇率仍是利润变量</div><p>Q1和半年报都把财务费用压力部分归因于汇兑，但没有单列Q2汇兑金额；只可确认报表摆动，不能精确归因币种。</p></div>
+    <div class="find warn"><div class="t">减值在加速</div><p>Q2资产减值损失同比增加约一倍至11.42亿元；中报没有说明其中多少来自库存，需与高库存天数一起跟踪。</p></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>这季利润好转有两层。第一层更硬：同样一元收入留下的毛利更多。第二层更软：研发费用少了，但财务费用与减值抵消了部分改善。H1地区表与海外增长为毛利的结构解释提供证据；Q2地区和产品拆分未披露，不能把它确认为单季驱动。<b>最需要复核的是毛利率能否维持，以及研发费用和财务费用是否回归常态。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="overseas">
+  <div class="slabel">海外业务专项 · 区域市场与地理分布</div>
+  <h2>H1海外毛利替国内填坑，但「出海」还没有变成可单列的本地回报率</h2>
+  <p>发行人按<span class="g">经营地</span>披露收入与成本，而非按最终销售目的地。这个口径给出一条清晰的半年结构线索：H1汽车相关海外毛利增加140.78亿元，国内毛利减少140.67亿元，两者几乎一比一相抵；海外汽车相关毛利占比由36.90%升至59.78%。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>汽车、汽车相关及其他分部的地区经济｜2026H1对2025H1；人民币亿元</caption>
+      <thead><tr><th>经营地区</th><th>收入 2026 / 2025</th><th>收入同比</th><th>毛利 2026 / 2025</th><th>毛利变化</th><th>毛利率 2026 / 2025</th></tr></thead>
+      <tbody>
+        <tr><td>中国（含港澳台）</td><td>1,455.81 / 2,193.04</td><td>−33.62%</td><td>247.46 / 388.13</td><td>−140.67</td><td>17.00% / 17.70%</td></tr>
+        <tr><td>海外</td><td>1,294.87 / 830.94</td><td>+55.83%</td><td>367.76 / 226.97</td><td>+140.78</td><td>28.40% / 27.32%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="stacks">
+    <div class="stack"><div class="cap">2025H1汽车相关毛利结构</div><div class="stackbar"><div class="seg p" style="width:63.1%">国内 63.1%</div><div class="seg q" style="width:36.9%">海外 36.9%</div></div></div>
+    <div class="stack"><div class="cap">2026H1汽车相关毛利结构</div><div class="stackbar"><div class="seg p" style="width:40.2%">国内 40.2%</div><div class="seg q" style="width:59.8%">海外 59.8%</div></div></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>中国（含港澳台）</span><span><i class="q"></i>海外</span></div>
+
+  <p>集团海外合同收入为1,811.58亿元，占披露合同收入52.58%，上年为36.46%。发行人称毛利率提升主要由海外新能源车业务增长带动，并披露已进入121个国家和地区、巴西与泰国工厂运营、八艘自有滚装船投入使用。可这些都是「网络已搭好」的证据：海外工厂额定产能、利用率、本地税率、关税、资金回流和单厂利润仍未披露。固定汇率增速、自然增长与并购拆分、海外经营现金贡献也未披露，因此不能把报表增长完全归因于销量或本地化。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">利润贡献已被报表验证</div><p>海外汽车相关收入和毛利均有可核对的地区成本表支持；它不是只看出口台数得出的故事。</p></div>
+    <div class="find warn"><div class="t">口径不是最终目的地</div><p>「海外经营地」不能完全等同出口或海外零售；跨境生产、内部供应与总部费用可能改变经济归属。</p></div>
+    <div class="find"><div class="t">现金贡献仍是黑箱</div><p>地区表只有收入与成本，没有资本开支、营运资金或现金流；海外高毛利不等于已经形成同等强度的自由现金流。</p></div>
+    <div class="find warn"><div class="t">集中度转成新风险</div><p>当海外贡献近六成汽车相关毛利，汇率、贸易规则、本地化执行和海运周转已从边缘变量变成利润主变量。</p></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>国内这半年少赚的毛利，海外几乎一元不差地补回来了；这个H1结构与Q2集团毛利率改善方向一致，但不能证明Q2的地区因果。问题也随之改变：以前要问「国内还能卖多少」，现在还要问「海外的28.4%毛利率能守多久」。<b>若海外毛利回落而国内份额未修复，半年利润桥会两头失效。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="modelcycle">
+  <div class="slabel">车型周期与利用率专项 · 行业环境 · 新产品催化</div>
+  <h2>Q2销量环比回升，却仍跑输行业；产品多，不等于份额已经回来</h2>
+  <p>Q1的份额低点之后，Q2销量环比增长58.2%，份额有所回升；但同比仍明显下降。纯电销量降幅高于插混，说明单一「新能源渗透率上升」无法解释公司表现。7月公司销量同比+21.76%，接近行业+23.7%，是改善的一笔，但只有一个月。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Q2销量与竞争位置｜万辆，份额除外；公司月度公告及MIIT/CAAM H1−Q1推算</caption>
+      <thead><tr><th>指标</th><th>2026Q2</th><th>2025Q2</th><th>同比 / 变化</th><th>解释边界</th></tr></thead>
+      <tbody>
+        <tr><td>比亚迪新能源车销量</td><td>110.80</td><td>114.52</td><td>−3.24%</td><td>发行人称未审计、未确认</td></tr>
+        <tr><td>中国新能源车行业销量</td><td>448.60</td><td>386.20</td><td>+16.16%</td><td>MIIT转引CAAM</td></tr>
+        <tr><td>比亚迪销量份额代理</td><td>24.70%</td><td>29.65%</td><td>下降</td><td>批发/销量口径，不是零售上牌</td></tr>
+        <tr><td>纯电 / 插混</td><td>55.71 / 53.13</td><td>60.70 / 52.02</td><td>−8.22% / +2.14%</td><td>乘用车口径</td></tr>
+        <tr><td>公司出口</td><td>47.11</td><td>25.82</td><td>+82.46%</td><td>4—6月公告相加；不等同海外收入</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finds">
+    <div class="find good"><div class="t">产品供给仍密集</div><p>H1上市或更新海豹07 EV、宋Ultra EV、大唐EV及多款闪充版；宋Ultra首月订单超6万、大唐预售14天超10万，属于需求信号，不是交付或收入。</p></div>
+    <div class="find"><div class="t">闪充进入执行阶段</div><p>6月底已建7,018座兆瓦闪充站，年末目标20,000座；完成35.1%，下半年平均每月需新增约2,164座。</p></div>
+    <div class="find warn"><div class="t">利用率仍是黑箱</div><p>发行人未披露整车工厂额定产能或利用率。Q2生产与销量差−1,955辆只能说明成品流量接近，不能证明工厂满产。</p></div>
+    <div class="find warn"><div class="t">质保成本披露变薄</div><p>FY2025产品质保准备313.73亿元，同比+37.6%；H1只单列流动准备，无法得到总准备、当期计提或索赔。新电池与闪充质保升级没有成本条款。</p></div>
+  </div>
+
+  <div class="callout"><b>最重要的竞争检验：</b>未来至少连续三个月，比亚迪销量增速应不低于CAAM新能源车行业增速；同时，国内销量代理的降幅要收窄、海外汽车相关毛利率不能明显回吐。只满足其中一项，都不能叫完整份额修复。</div>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>车型和技术很多，订单数字也亮眼，但财报最终认的是交付、毛利和现金。Q2比Q1好，是因为低点后恢复；同比仍跑输行业，说明对手没有原地等它。<b>下一步不是数发布会，而是看订单能否转成交付、交付能否拿回份额、份额能否不靠降毛利来换。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="newbusiness">
+  <div class="slabel">新业务与第二增长曲线</div>
+  <h2>储能与AI服务器已有采用证据，尚没有独立利润证据</h2>
+  <p>电子分部H1收入基本持平，合同毛利率却明显下降，分部利润指标下降85.50%至1.94亿元。发行人称多款AI服务器进入批量出货、液冷冷板进入量产爬坡；储能方面则披露海浩系统交付和多个GWh级项目。采用在发生，经济性还没有从宽分部里走出来。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>新业务证据阶梯｜截至2026H1；「未披露」表示发行人文件没有可核对数值</caption>
+      <thead><tr><th>方向</th><th>已验证</th><th>尚未验证</th><th>下一道财务门槛</th></tr></thead>
+      <tbody>
+        <tr><td>电子与AI基础设施</td><td>AI服务器批量出货；冷板量产爬坡</td><td>AI收入、客户、毛利、订单余额</td><td>电子分部利润与5.04%毛利率回升</td></tr>
+        <tr><td>储能</td><td>11.275GWh供货协议、智利项目等</td><td>收入确认、积压订单转化、项目利润</td><td>从汽车大分部单列贡献与现金回收</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>两项业务均未披露增量现金投入、回收期或对既有电池/电子产能的挤占，故无法判断何时能够自我造血。兆瓦闪充作为车型催化剂由上一节统一跟踪；单站资本、现金投入和盈利时点未披露，若建设延期，新车型优势转成交付的速度可能放慢。</p>
+  <p>集团层面还有一个集中度提醒：单一集团客户贡献460.17亿元，占合并收入13.35%，但文件不识别客户或分部归属。不能把它直接认作电子或AI客户，也不能在缺乏分部利润与净债务的情况下做<span class="g">SOTP</span>（分部加总估值）；BYD电子已在合并报表内，另加其市值会重复计价。</p>
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>「开始出货」只证明客户在用，不证明新业务已经赚钱或回收现金。电子与储能都藏在宽分部里，增量投入也没拆出来。<b>在收入、利润和现金回收能单独核对以前，它们是有潜力的选择权，不是估值里可以重复加一次的成熟业务。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="cashbalance">
+  <div class="slabel">现金流与资本开支 · 资产负债表与偿债压力</div>
+  <h2>Q2自由现金流转正：约65%来自少投资本，约35%来自经营现金增加</h2>
+  <p>Q2经营现金流增加112.92亿元，现金资本开支减少206.08亿元，两者共同把自由现金流代理推高319.00亿元；按算术贡献分别占35.4%与64.6%。资本收缩非常明确：H1分部资本性增加额同比下降58%，资本增加额只有折旧摊销的0.835倍；这改善现金，但也要求未来用利用率和产能转化证明「少投没有少赚」。</p>
+
+  <div class="flowbox" role="img" aria-label="2025Q2与2026Q2自由现金流算式；方框只表示计算顺序，不按金额大小绘制">
+    <svg viewBox="0 0 760 250" aria-hidden="true">
+      <text x="18" y="28" font-family="ui-monospace, monospace" font-size="15" fill="#0F1A22">2025Q2</text>
+      <rect x="18" y="44" width="180" height="56" fill="#1E4B8F"/><text x="108" y="68" text-anchor="middle" font-size="13" fill="#fff">经营现金流</text><text x="108" y="88" text-anchor="middle" font-family="ui-monospace, monospace" font-size="16" fill="#fff">232.53亿元</text>
+      <text x="222" y="79" font-size="24" fill="#3C4A56">−</text>
+      <rect x="270" y="44" width="180" height="56" fill="#A32B57"/><text x="360" y="68" text-anchor="middle" font-size="13" fill="#fff">现金资本开支</text><text x="360" y="88" text-anchor="middle" font-family="ui-monospace, monospace" font-size="16" fill="#fff">432.48亿元</text>
+      <text x="474" y="79" font-size="24" fill="#3C4A56">＝</text>
+      <rect x="522" y="44" width="220" height="56" fill="#A32B57"/><text x="632" y="68" text-anchor="middle" font-size="13" fill="#fff">FCF代理</text><text x="632" y="88" text-anchor="middle" font-family="ui-monospace, monospace" font-size="16" fill="#fff">−199.96亿元</text>
+      <text x="18" y="148" font-family="ui-monospace, monospace" font-size="15" fill="#0F1A22">2026Q2</text>
+      <rect x="18" y="164" width="180" height="56" fill="#1E4B8F"/><text x="108" y="188" text-anchor="middle" font-size="13" fill="#fff">经营现金流</text><text x="108" y="208" text-anchor="middle" font-family="ui-monospace, monospace" font-size="16" fill="#fff">345.44亿元</text>
+      <text x="222" y="199" font-size="24" fill="#3C4A56">−</text>
+      <rect x="270" y="164" width="180" height="56" fill="#A32B57"/><text x="360" y="188" text-anchor="middle" font-size="13" fill="#fff">现金资本开支</text><text x="360" y="208" text-anchor="middle" font-family="ui-monospace, monospace" font-size="16" fill="#fff">226.40亿元</text>
+      <text x="474" y="199" font-size="24" fill="#3C4A56">＝</text>
+      <rect x="522" y="164" width="220" height="56" fill="#2C6A57"/><text x="632" y="188" text-anchor="middle" font-size="13" fill="#fff">FCF代理</text><text x="632" y="208" text-anchor="middle" font-family="ui-monospace, monospace" font-size="16" fill="#fff">+119.04亿元</text>
+    </svg>
+    <div class="flow-note"><span class="badge">+319亿元</span><span>自由现金流代理同比改善；其中现金资本开支少支出206亿元，是最直接的桥。流程框不按金额比例绘制，只表示算术关系，也不把资本开支下降解释成效率提升。</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="cell"><div class="k">不受限货币资金</div><div class="v">558.56<span class="u">亿元</span></div><div class="d"><span>货币资金减受限部分</span></div></div>
+    <div class="cell"><div class="k"><span class="g">交易性金融资产</span></div><div class="v">699.40<span class="u">亿元</span></div><div class="d"><span>不直接叫现金</span></div></div>
+    <div class="cell"><div class="k">借款与债券</div><div class="v">1,200.55<span class="u">亿元</span></div><div class="d"><span>另有权益型<span class="g">永续债</span></span></div></div>
+    <div class="cell"><div class="k">流动负债净额</div><div class="v">647.82<span class="u">亿元</span></div><div class="d"><span>流动负债超过流动资产</span><span class="up">较Q1改善248.15亿元</span></div></div>
+    <div class="cell"><div class="k">资本承诺</div><div class="v">353.35<span class="u">亿元</span></div><div class="d"><span>已签约但未在账面确认</span></div></div>
+    <div class="cell"><div class="k">对子公司实际担保</div><div class="v">837.29<span class="u">亿元</span></div><div class="d"><span>不同于授权上限</span></div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Q2资产负债表运动｜人民币亿元；2026-06-30对2026-03-31</caption>
+      <thead><tr><th>项目</th><th>6月末</th><th>3月末</th><th>变化</th><th>投资含义</th></tr></thead>
+      <tbody>
+        <tr><td>货币资金</td><td>587.38</td><td>757.87</td><td>−22.50%</td><td>期末现金等价物下降</td></tr>
+        <tr><td>应收账款</td><td>501.26</td><td>442.22</td><td>+13.35%</td><td>余额增，但H1周转天数改善</td></tr>
+        <tr><td>存货</td><td>1,899.91</td><td>1,604.14</td><td>+18.44%</td><td>H1周转109天、上年79天；未拆库存构成</td></tr>
+        <tr><td>在建工程</td><td>689.90</td><td>593.18</td><td>+16.31%</td><td>少投不等于项目停止</td></tr>
+        <tr><td><span class="g">合同负债</span></td><td>797.97</td><td>544.24</td><td>+46.62%</td><td>订单/预收与现金支持并存</td></tr>
+        <tr><td>应付账款</td><td>1,763.56</td><td>1,643.29</td><td>+7.32%</td><td>供应商资金仍是周转来源</td></tr>
+        <tr><td>短期借款</td><td>376.46</td><td>662.96</td><td>−43.22%</td><td>短债下降，长期债券增加</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>总负债/总资产为70.96%，机械触发偿债专项，但这个比例包含应付账款和合同负债，不能等同有息债务率。借款与债券中，一年内到期438.60亿元、第二至第五年到期761.95亿元；贷款约48%为固定利率，其余为浮动利率。管理层称结合经营现金、可用授信与资本投入速度，流动性足够，但没有披露授信额度。H1文件也未给出完整利率区间、契约条款或担保物映射，因而无法计算契约缓冲。2025年H股配售及债券余额增加证明公司近期有外部融资渠道，却不保证压力期仍能按同样条件融资。</p>
+  <p>压力情景不是预测：若未来十二个月自由现金流代理再现LTM约−563.50亿元，558.56亿元不受限货币资金将不足以同时吸收该现金消耗与一年内到期借款债券；届时需要变现交易性金融资产或再融资。关键预警变量是经营现金流、资本开支、近债到期额和授信可得性。上格另列资本承诺与实际担保；拟增加500亿元资产池担保额度仍待股东会批准，属于或有上限，不是已借债。</p>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>现金流转正不是假的，但驱动力并不对半：少花资本贡献约三分之二，经营现金增加贡献约三分之一。库存增加会占用现金；合同负债和应付账款增加则可能提供资金，两者方向相反，单季现金流表没有拆出各自贡献。<b>真正的质量验证，是供应商账期规范后经营现金流仍为正，存货天数从109天下降，而不是只看一个季度的正FCF。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="capitalgovernance">
+  <div class="slabel">股东回报 · 管理团队与股权 · 公司治理 · 股权激励</div>
+  <h2>资本优先投增长，股息居后；激励不增发，授权却保留再融资空间</h2>
+  <p>比亚迪的资本配置顺序很清楚：研发、产能与海外扩张优先，债务和永续工具补充，股息最后，没有注销式回购。2025末期股息每股0.358元、总额32.64亿元，仅相当于FY2025归母净利润约10%；此前一个财年的现金分配率约30%，现金回报明显下调。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>资本配置与股东资金窗口｜人民币亿元，另有标注</caption>
+      <thead><tr><th>事项</th><th>金额 / 规模</th><th>性质</th><th>判断</th></tr></thead>
+      <tbody>
+        <tr><td>2025 H股配售净额</td><td>400.75亿元（HK$433.83亿）</td><td>新股融资</td><td>研发、海外、营运及一般用途；已用完</td></tr>
+        <tr><td>2024末期现金股息（2025支付）</td><td>120.77</td><td>现金返还</td><td>另有送股/转增，不创造集团价值</td></tr>
+        <tr><td>2025末期现金股息（2026支付）</td><td>32.64</td><td>现金返还</td><td>约10%归母口径派息率</td></tr>
+        <tr><td>H1现金资本开支 / 研发投入</td><td>447.03 / 约289</td><td>再投资</td><td>两口径可能重叠，不能相加</td></tr>
+        <tr><td>注销式回购</td><td>0</td><td>股东返还</td><td>员工计划购股不等于注销回购</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>按2025配售至2026股息支付这个可核查窗口，净融资400.75亿元，高于两笔现金分配合计153.41亿元，至少说明该窗口内公司是<span class="g">净资金使用者</span>，不是净返还者。更长周期还包含其他融资与分红，本文不把单一窗口冒充永久资本政策。</p>
+
+  <div class="finds">
+    <div class="find"><div class="t">控制集中但不是绝对控股</div><p>王传福披露权益17.06%，吕向阳12.98%；两者算术合计30.03%，文件未把王、吕、夏认定为一致行动人，故不作形式控制推断。</p></div>
+    <div class="find warn"><div class="t">董事长兼总裁</div><p>王传福同时担任董事长和总裁，是公司对香港《企业管治守则》C.2.1的唯一明确偏离；权责集中提高执行速度，也提高继任与制衡依赖。</p></div>
+    <div class="find good"><div class="t">员工计划不新增股份</div><p>2024/2025计划使用市场购入A股；扣除已解锁与失效部分，按披露标的数推算仍可能归属约2,409.69万股A股，占现有股本约0.264%。H1股份支付费用6.34亿元仍是经济成本；剩余费用确认时点与管理层受益集中度未披露，公司只说明无人获授超过1%的个人上限。</p></div>
+    <div class="find warn"><div class="t">增长门槛确实会失败</div><p>2025计划第一批964万股因FY2025收入增长未达到10%而失效，说明门槛并非装饰；其余批次仍需跟踪。</p></div>
+    <div class="find warn"><div class="t">再融资授权带来潜在稀释</div><p>股东会授权最多发行7.3668亿股新H股；若无任何收益或现金抵消，现有股东持有比例会被稀释7.48%。这只是授权，不进入基础股数。</p></div>
+    <div class="find"><div class="t">董事会独立性可能下降</div><p>拟议第九届董事会若获批，独立董事占比将由50%降至三分之一；同时担保和债务授权扩大，治理质量要看实际使用与披露。</p></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>公司没有靠给员工增发来稀释股东，这是好事；但它仍是一家需要大量外部和内部资金的成长制造商。过去这个融资窗口，向市场拿的钱明显多于以现金股息还的钱。<b>所以估值不应把低股息当作暂时遗漏，而应把「资本回报要让位于扩张」写进基础假设。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="peersalpha">
+  <div class="slabel">竞争对手 · 行业与宏观 · 超额能力与周期敏感度</div>
+  <h2>毛利率不输成熟车企，增长和份额却不支持无条件高溢价</h2>
+  <p>BYD的垂直整合、海外高毛利与电池技术可支撑高于成熟整车制造商（OEM）的倍数；但2026H1收入收缩、Q2份额下行，说明这份溢价必须靠恢复增长兑现。同业表只作方向性背景：不同公司会计口径、地区、产品与资本结构差异很大，不用机械中位数定价。本文把<span class="g">阿尔法</span>理解为公司相对行业的超额经营能力，把<span class="g">贝塔</span>理解为随周期共同波动的经营敏感度。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>同业经营与估值快照｜Wind 2026-08-31；H1财务按各公司最新可得口径；P/E为市盈率，P/B为市净率</caption>
+      <thead><tr><th>公司</th><th>H1收入同比</th><th>H1毛利率</th><th>P/E TTM</th><th>预测P/E</th><th>P/B</th><th>结构差异</th></tr></thead>
+      <tbody>
+        <tr><td>比亚迪H</td><td>−7.13%</td><td>18.85%</td><td>23.56x</td><td>16.73x</td><td>2.88x</td><td>整车+电池+电子，多业务合并</td></tr>
+        <tr><td>吉利汽车</td><td>+14.67%</td><td>17.95%</td><td>9.94x</td><td>7.60x</td><td>1.75x</td><td>品牌组合与合资边界不同</td></tr>
+        <tr><td>长城汽车H</td><td>+10.58%</td><td>18.37%</td><td>9.81x</td><td>5.27x</td><td>0.67x</td><td>SUV/皮卡与海外结构不同</td></tr>
+        <tr><td>理想汽车H</td><td>−13.39%</td><td>9.55%</td><td>亏损</td><td>亏损</td><td>1.37x</td><td>单一新势力，研发/渠道阶段不同</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finds">
+    <div class="find good"><div class="t">内部阿尔法：海外结构</div><p>海外汽车相关毛利率显著高于国内，且贡献已能填补国内毛利缺口；这是公司自身的结构优势，不只是行业增长。</p></div>
+    <div class="find warn"><div class="t">竞争阿尔法：尚未确认</div><p>公司Q2销量下滑而行业增长，出口增速也低于行业出口增速；规模和技术没有自动转成份额超额增长。</p></div>
+    <div class="find"><div class="t">经营贝塔：仍然很高</div><p>汽车价格、车型周期、汇率、海外政策和供应商账期都会放大利润与现金波动；本报告不以统计贝塔替代这些经济机制。</p></div>
+    <div class="find warn"><div class="t">估值溢价有条件</div><p>BYD的预测PE约为吉利两倍以上。若份额和电子利润不回升，溢价会只剩海外毛利这一根支柱。</p></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>比亚迪的毛利率并没有因为销量承压就垮掉，说明垂直整合和海外结构确实有价值。但市场给它的盈利倍数明显高于成熟车企，等于要求它最终恢复成长属性。<b>好公司与好股票之间的缺口，就是这份成长溢价能否兑现。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="risks">
+  <div class="slabel">风险因素与预警信号</div>
+  <h2>五个风险按「最先打断基准情景」排序</h2>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>风险登记表｜排序不是发生概率承诺；观察项均可在后续公告或财报复核</caption>
+      <thead><tr><th>排序</th><th>风险</th><th>当前状态</th><th>传导路径</th><th>下一观察</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>国内份额与价格竞争</td><td>Q2仍明显跑输行业</td><td>销量/价格→产能利用→毛利与品牌</td><td>连续三个月增速不低于行业</td></tr>
+        <tr><td>2</td><td>海外利润集中</td><td>海外已贡献多数汽车相关毛利</td><td>关税/汇率/本地化→地区毛利→集团利润</td><td>地区毛利率、工厂产能与资金回流披露</td></tr>
+        <tr><td>3</td><td>库存与供应商资金</td><td>库存天数高、预收和应付上升</td><td>降价/减值/账期规范→经营现金流</td><td>库存天数下降且CFO不依赖账期延长</td></tr>
+        <tr><td>4</td><td>研发、产品质量与质保</td><td>研发费用下降，H1总质保缺失</td><td>快节奏产品→缺陷/召回/索赔→利润与品牌</td><td>研发口径勾稽、质保计提与索赔披露</td></tr>
+        <tr><td>5</td><td>融资、担保与治理</td><td>存在H股、债务和新增担保授权</td><td>扩张不达预期→再融资/稀释/或有负担</td><td>授权实际使用、独立董事比例和担保余额</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>电子分部利润大幅下降是额外的盈利风险，但集团当前价值仍主要由汽车相关业务主导，故不单列为首位。行业监管对非理性竞争、供应商付款和产品一致性加强，均为行业级背景；没有证据表明BYD被单独认定违规，不能把行业行动写成公司事实。</p>
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>这五项不是把所有坏消息罗列一遍，而是在问哪条链最先让基准估值失效。份额和海外毛利直接碰利润，库存与账期先碰现金，质保与融资则可能把短期修复变成长期成本。<b>后续只要观察表中最右一列，就能判断风险是在收敛还是扩散。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">估值分析 · 股价走势 · 盈利预测</div>
+  <h2>现价几乎贴住基准价值，真正的门槛是下半年利润加速</h2>
+  <p>估值先统一三个口径：用H股价乘全部A+H股得「H股隐含总市值」；用人民银行中间价1港元兑0.8651元人民币换算；从归母权益中扣除<span class="g">永续债</span>，得到普通股<span class="g">BVPS</span>（每股净资产）。这样不会把A/H不同价格、永续债和普通股权益混在一起。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">H股现价</div><div class="v">HK$87.20</div><div class="d"><span>2026-08-31 16:08 HKT</span></div></div>
+    <div class="cell"><div class="k">熊市价值</div><div class="v">HK$50–67</div><div class="d"><span>份额不稳、利润率低位</span></div></div>
+    <div class="cell"><div class="k">基准价值</div><div class="v">HK$85–88</div><div class="d"><span>H2改善、2027修复</span></div></div>
+    <div class="cell"><div class="k">牛市价值</div><div class="v">HK$103–122</div><div class="d"><span>份额与海外利润共振</span></div></div>
+    <div class="cell"><div class="k">隐含预期</div><div class="v">H2 +64<span class="u">%</span></div><div class="d"><span>仅在17倍2026盈利框架下</span></div></div>
+    <div class="cell"><div class="k">判断</div><div class="v">中性偏谨慎</div><div class="d"><span>现价在基准区间上沿</span></div></div>
+  </div>
+
+  <h3>第一步 · 市场现在给什么价</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>市场定价快照｜Wind 2026-08-31；五年分位以Wind历史序列为准</caption>
+      <thead><tr><th>指标</th><th>当前</th><th>五年分位 / 区间</th><th>怎么读</th></tr></thead>
+      <tbody>
+        <tr><td>P/E TTM</td><td>23.56x</td><td>41.8%</td><td>不在历史极端，利润仍被给成长溢价</td></tr>
+        <tr><td>P/B LF</td><td>2.88x</td><td>2.0%</td><td>Wind分母含其报表口径；本文另算普通股P/B</td></tr>
+        <tr><td>股息率</td><td>0.47%</td><td>—</td><td>资本回报不是当前主定价锚</td></tr>
+        <tr><td>52周高 / 低</td><td>HK$114.852 / 71.40</td><td>现价较高点−24.1%</td><td>价格已回撤，但仍高于低点22.1%</td></tr>
+        <tr><td>年初至今</td><td>−8.11%</td><td>—</td><td>只作时点背景，不当作内在价值</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>第二步 · 对照同业，溢价有没有条件</h3>
+  <p>前一节的同业表把差异放在同一张图里：比亚迪毛利率接近成熟车企，但收入增速与份额表现更弱，估值倍数却更高。这个溢价可以由垂直整合、海外利润和电池技术解释，但必须由恢复增长来续期；因此同业只用于约束倍数，不机械决定目标价。</p>
+
+  <h3>第三步 · 把经营假设放进P/E与普通股P/B</h3>
+  <div class="steps">
+    <div class="step"><div class="n">方法 A</div><b>2027归母利润 × P/E</b><p>汽车盈利受周期影响，先给三年收入与净利率路径，再以2027利润乘情景倍数、按10%折回一年。WHY：把份额与利润率修复写进分子，把成长质量写进倍数。</p></div>
+    <div class="step"><div class="n">方法 B</div><b>普通股BVPS × P/B</b><p>从归母权益扣掉永续债，再除以全部股份。WHY：资本密集制造业的资产基础有意义，也能检查P/E是否依赖过高利润假设。</p></div>
+    <div class="step"><div class="n">不采用</div><b>精确折现现金流（DCF）与SOTP</b><p>FCF受资本开支和周转剧烈摆动；两大分部缺少清洁营业利润、税和净债务。WHY：强行建模会把披露缺口伪装成精确数字。</p></div>
+  </div>
+
+  <h3>三年场景先过经营逻辑，再谈倍数</h3>
+  <p>熊市假设国内份额迟迟不稳、海外毛利仅部分对冲；基准假设H2利润改善但低于Wind一致预期，2027份额与海外结构共同修复；牛市要求公司接近一致预期并在2027继续放大利润率。FCF代理仅作现金路径，不进入P/E或P/B，避免重复计价。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>FY2026—FY2028预测三情景与价值｜E代表分析预测；人民币亿元；每股价值为港元</caption>
+      <thead><tr><th>驱动 / 输出</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
+      <tbody>
+        <tr><td>收入 2026 / 2027 / 2028</td><td>7,350 / 7,700 / 8,100</td><td>7,650 / 8,500 / 9,440</td><td>8,050 / 9,300 / 10,700</td></tr>
+        <tr><td>归母净利率 2026 / 2027 / 2028</td><td>3.6% / 4.0% / 4.2%</td><td>4.7% / 5.3% / 5.7%</td><td>5.2% / 6.0% / 6.3%</td></tr>
+        <tr><td>归母净利润 2026 / 2027 / 2028</td><td>264.60 / 308.00 / 340.20</td><td>359.55 / 450.50 / 538.08</td><td>418.60 / 558.00 / 674.10</td></tr>
+        <tr><td>隐含2026H2归母同比</td><td>−17.4%</td><td>+38.1%</td><td>+72.6%</td></tr>
+        <tr><td>FCF代理 2026 / 2027 / 2028</td><td>−150 / 0 / 80</td><td>−50 / 150 / 300</td><td>50 / 300 / 450</td></tr>
+        <tr><td>2027 P/E / 普通股P/B</td><td>14x / 2.2x</td><td>17x / 2.8x</td><td>19x / 3.4x</td></tr>
+        <tr class="grp"><td>P/E法 / P/B法每股价值</td><td>49.70 / 66.94</td><td>88.27 / 85.19</td><td>122.20 / 103.45</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">P/E法＝2027E归母净利润÷91.172亿股×人民币兑港元（1÷0.8651）×情景P/E÷1.10；P/B法＝（归母权益2,608.18亿元−永续债208.47亿元）÷91.172亿股×人民币兑港元×情景P/B。两法不机械平均。场景是分析假设，不是公司指引。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2026盈利—P/E敏感度｜HK$/股；不折现，用于反推现价要求</caption>
+      <thead><tr><th>2026E归母净利润</th><th>14x</th><th>17x</th><th>20x</th></tr></thead>
+      <tbody>
+        <tr><td>360亿元</td><td>63.90</td><td>77.59</td><td>91.29</td></tr>
+        <tr><td>410亿元</td><td>72.78</td><td>88.37</td><td>103.96</td></tr>
+        <tr><td>460亿元</td><td>81.65</td><td>99.15</td><td>116.64</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>把三档价值放在一把尺上</h3>
+  <div class="rows" aria-label="比亚迪三情景价值区间与现价对比">
+    <div class="row"><div class="nm">熊市<span>份额不稳、利润率低位</span></div><div class="track"><div class="fill alt" style="width:48.0%"></div></div><div class="fig">HK$49.70<span class="down">较现价 −43.0%；两法49.70–66.94</span></div></div>
+    <div class="row"><div class="nm">基准<span>H2改善、2027修复</span></div><div class="track"><div class="fill" style="width:82.3%"></div></div><div class="fig">HK$85.19<span class="down">较现价 −2.3%；两法85.19–88.27</span></div></div>
+    <div class="row"><div class="nm">现价<span>2026-08-31收盘</span></div><div class="track"><div class="fill soft" style="width:84.3%"></div></div><div class="fig">HK$87.20<span>较现价 0.0%</span></div></div>
+    <div class="row"><div class="nm">牛市<span>份额与海外利润共振</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$103.45<span class="up">较现价 +18.6%；两法103.45–122.20</span></div></div>
+  </div>
+  <p class="small">为保持可比，三种情景都展示各自两种估值法的区间下端，条形按牛市下端HK$103.45等比绘制；完整区间写在标签中。百分比差距＝展示值÷现价−1。</p>
+
+  <h3>第四步 · 现价究竟押注了什么</h3>
+  <div class="plain"><span class="pl">一句话总结</span>
+    <p>若固定采用17倍2026盈利，HK$87.20反推全年归母净利润约404.57亿元；扣除上半年，意味着下半年赚281.32亿元，同比约+64.4%。Wind一致预期408.76亿元要求的下半年增长约+66.9%，两者非常接近。<b>在这一固定倍数框架下，现价对应的是强H2加速；若采用不同倍数，反推盈利也会随之改变，这不是对市场意图的事实判断。</b></p>
+    <p>本报告基准情景只给H2 +38.1%，因此P/E法约HK$88.27、P/B法约HK$85.19，现价落在区间上沿。若公司兑现一致预期并重新拿回份额，牛市上行存在；若只兑现利润而份额继续下滑，市场仍可能下调倍数。结论不是「贵」，而是<b>缺少错误容忍度</b>。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">最终投资建议 · 多空辩论 · 投资验证</div>
+  <h2>中性偏谨慎：利润修复可信，17倍框架下H2门槛很高</h2>
+  <p>Q2证明集团毛利与费用桥能在销量承压时改善，也显示现金资本开支同比显著下降；H1地区表支持海外结构是一个可能解释，却不能证明Q2因果。份额、库存、研发费用和财务费用尚未给出同样强的确认；现价位于基准区间上沿，结论置信度为中等。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">经营确认</div><p>未来至少连续三个月，公司销量增速不低于行业；国内销量代理降幅收窄，且海外汽车相关毛利率仍保持明显溢价。</p></div>
+    <div class="find good"><div class="t">现金确认</div><p>库存周转天数从当前高位回落，供应商付款规范后经营现金流仍为正，全年FCF代理不再主要靠削减资本开支。</p></div>
+    <div class="find"><div class="t">新增长确认</div><p>年底闪充站按计划推进，电子AI/液冷与储能开始披露收入或分部利润，海外工厂给出产能、利用率与本地毛利。</p></div>
+    <div class="find warn"><div class="t">基准失效</div><p>若FY2026归母净利润明显低于约360亿元、份额未止跌且海外毛利率回吐，基准P/E与P/B均需下修。</p></div>
+  </div>
+
+  <div class="callout"><b>最强反方观点：</b>本报告可能低估了垂直整合、第二代刀片电池、兆瓦闪充和海外本地化的联动。一旦密集新车型把订单转成交付、国内份额修复，海外高毛利继续保持，FY2026一致预期并非激进，当前低历史P/B会放大重估。反方成立的证据不是发布数量，而是「份额、毛利、现金」三项同时转好。</div>
+
+  <h3>把验证点排在时间线上</h3>
+  <div class="tline">
+    <div class="tstop warn"><span class="tw">2026-09-29</span><b>临时股东会</b><p>观察新董事会、资产池担保及相关授权是否获批，以及独立董事比例。</p></div>
+    <div class="tstop"><span class="tw">2026年9—12月</span><b>月度销量与份额</b><p>用公司公告对照CAAM，检验是否连续跑赢行业而非单月反弹。</p></div>
+    <div class="tstop"><span class="tw">2026Q3财报窗口</span><b>利润与周转复核</b><p>看库存、合同负债、财务费用、减值与经营现金流是否同向改善。</p></div>
+    <div class="tstop"><span class="tw">2026年末</span><b>闪充与海外执行</b><p>7,018座能否接近20,000座目标；海外工厂、船队是否缩短周转。</p></div>
+    <div class="tstop"><span class="tw">FY2026年报</span><b>估值最终验收</b><p>归母净利润与FCF路径、完整质保、电子利润及资本回报是否兑现。</p></div>
+  </div>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · 快速检索</div>
+  <h2>读懂比亚迪这份报告需要的词</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
+      <tbody>
+        <tr><td>归母净利润</td><td>集团净利润中归属于比亚迪普通股股东的部分；本文估值的盈利分子。</td></tr>
+        <tr><td>H1−Q1</td><td>半年累计数减去一季度累计数，得到单二季度；只适用于口径一致的流量科目，不能用于期末资产负债表。</td></tr>
+        <tr><td>EPS</td><td>每股收益；会计口径可能受加权股数、送股或转增重述影响，不能直接用两个累计EPS相减。</td></tr>
+        <tr><td>ROE</td><td>净资产收益率；本文历史表用归母净利润除以期初期末平均归母权益作分析代理。</td></tr>
+        <tr><td>CAGR</td><td>复合年增长率；把起点到终点的总增长折成每年相同的理论增速。</td></tr>
+        <tr><td>毛利率</td><td>（营业收入−营业成本）÷营业收入；反映产品/地区组合与制造成本留下多少空间。</td></tr>
+        <tr><td>自由现金流（FCF）代理</td><td>经营现金流减购买固定资产、无形资产及其他长期资产的现金；是分析近似，不是公司定义指标。</td></tr>
+        <tr><td>汽车相关分部</td><td>公司大分部，除整车外还含电池、光伏、轨交、零部件、租赁和售后，不能当作纯整车业务。</td></tr>
+        <tr><td>地区毛利</td><td>按经营地披露的收入减成本；不完全等同最终销售目的地利润。</td></tr>
+        <tr><td>销量份额代理</td><td>公司新能源车销量÷MIIT/CAAM行业销量；是批发/销量口径，不是零售上牌份额。</td></tr>
+        <tr><td>合同负债</td><td>客户已付款但公司还没完成交付/履约的金额，常体现预收款或订单资金。</td></tr>
+        <tr><td>交易性金融资产</td><td>短期持有、按公允价值计量的金融产品；流动性可能高，但不能不加区分地叫现金。</td></tr>
+        <tr><td>永续债</td><td>会计上列权益、经济上具有融资属性的工具；普通股P/B需从归母权益中扣除，避免把它当普通股资本。</td></tr>
+        <tr><td>普通股BVPS</td><td>归母权益扣除永续债后除以全部普通股数，本文为人民币26.32元。</td></tr>
+        <tr><td>H股隐含总市值</td><td>用H股价格乘全部A+H股份，回答「如果全公司都按H股价定价」值多少；不是A/H实际混合市值。</td></tr>
+        <tr><td>P/E</td><td>股价相对每股盈利的倍数；分子高低取决于市场，分母取决于盈利口径与预测。</td></tr>
+        <tr><td>P/B</td><td>股价相对每股净资产的倍数；适合检查资本密集企业的资产回报预期。</td></tr>
+        <tr><td>SOTP</td><td>把各分部单独估值再相加；若分部利润、净债务和少数股东口径不完整，容易重复计价。</td></tr>
+        <tr><td>DCF</td><td>折现现金流估值；把未来现金流按风险要求折回今天，输入不稳时会产生虚假的精确感。</td></tr>
+        <tr><td>阿尔法 / 贝塔</td><td>本文把阿尔法用于公司相对行业的超额经营能力，把贝塔用于随行业与周期共同波动的经营敏感度。</td></tr>
+        <tr><td>股份支付（SBC）</td><td>用股份或股份价值激励员工形成的会计费用；即使不增发，也仍是人员成本。</td></tr>
+        <tr><td>担保授权</td><td>公司获准可为子公司等提供担保的上限，不等于已经发生的债务；实际担保余额更接近当前敞口。</td></tr>
+        <tr><td>LTM / TTM</td><td>最近十二个月滚动口径，用于把半年数据接成一个完整年度观察窗。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">方法与来源</div>
+  <h2>港交所控制财务，行业用MIIT/CAAM，行情与一致预期用Wind</h2>
+  <p>财务、分部、地区、股本、资本配置、治理、质保与承诺以港交所中文文件为控制源；行业销量使用工信部转引的中国汽车工业协会数据；Wind只用于带时间戳的市场价格、估值、同业快照与一致预期。发行人书面展望、订单、目标与技术参数均按管理层陈述处理，不升级为独立事实。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>主要直接来源与证据边界</caption>
+      <thead><tr><th>文件</th><th>用途</th><th>边界</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082801696_c.pdf">2026年中期报告</a></td><td>H1财务、分部、地区、经营、债务、激励</td><td>未经审计；六个月累计口径</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042803002_c.pdf">2026年一季报</a></td><td>单Q2推算基数、3月末资产负债表</td><td>未经审计；单位为人民币元</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0327/2026032703009_c.pdf">2025年年报</a></td><td>五年摘要、EPS重述、配售、质保、历史资本</td><td>经审计，安永华明无保留意见</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0829/2025082902253_c.pdf">2025年中期报告</a></td><td>比较期地区成本与分部口径</td><td>后续2026报告比较数优先</td></tr>
+        <tr><td>销量累计基数：<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0401/2026040103239_c.pdf">2026年3月</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0701/2026070100034_c.pdf">2026年6月</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0401/2025040103045.pdf">2025年3月</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0701/2025070100132.pdf">2025年6月</a></td><td>公司Q2总量与动力类型以H1−Q1推算</td><td>发行人标注未经审计/确认</td></tr>
+        <tr><td>出口与期后：<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0503/2026050300135.pdf">2026年4月</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0601/2026060103055.pdf">5月</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0701/2026070100033.pdf">6月</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0802/2026080200028_c.pdf">7月</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0501/2025050100053.pdf">2025年4月</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0601/2025060100015.pdf">5月</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0701/2025070100132.pdf">6月</a></td><td>Q2出口为三个月相加；7月只作期后验证</td><td>不等于海外收入或海外零售</td></tr>
+        <tr><td>MIIT/CAAM：<a href="https://wap.miit.gov.cn/gxsj/tjfx/zbgy/qc/art/2026/art_3eee5c5b7d384a5a9e3c58cfb89f26f9.html">2026Q1</a>、<a href="https://www.miit.gov.cn/gxsj/tjfx/zbgy/qc/art/2026/art_55816d34ae494ee8991e260b56dd9f87.html">2026H1</a>、<a href="https://wap.miit.gov.cn/jgsj/zbys/qcgy/art/2026/art_aab3fa7e02914a33a496501f1380facb.html">2026年7月</a>；<a href="https://www.miit.gov.cn/gxsj/tjfx/zbgy/qc/art/2025/art_c3fc08dfdc084f58aaa8f4b550cb63be.html">2025Q1</a>、<a href="https://www.miit.gov.cn/gxsj/tjfx/zbgy/qc/art/2025/art_c0d30c8aeac2422c827ec8e55b65882a.html">2025H1</a></td><td>行业销量；H1−Q1推算Q2并校验7月</td><td>工信部转引CAAM行业口径</td></tr>
+        <tr><td><a href="https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do">SAFE人民币汇率中间价查询</a></td><td>2026-08-31港元兑人民币中间价</td><td>数据源为中国外汇交易中心</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0422/2026042200401_c.pdf">2026年股东周年大会通函</a></td><td>H股与债务融资授权</td><td>授权不等于实际发行</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082801748_c.pdf">8月28日治理建议</a></td><td>拟议董事会结构与股东会时点</td><td>待9月29日批准</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">业绩证据截止2026-08-28，产销与治理更新截止2026-08-31；Wind行情截止2026-08-31 16:08:51 HKT，人民银行港元兑人民币中间价0.8651取2026-08-31 09:15。Fullscan电话会抓取器以1211:HK做有界检索未返回匹配逐字稿，故没有补写管理层问答。所有Q2、LTM、毛利、份额、ROE、FCF、普通股BVPS、情景与估值均为分析推算，已由可执行计算账本复核。</p>
+</section>
+
+<footer>
+  <p>报告对象：比亚迪股份有限公司01211.HK。主要来源：香港交易所中文文件、工业和信息化部/中国汽车工业协会、Wind金融终端及中国人民银行/中国外汇交易中心。</p>
+  <p>「Q2」合并损益与现金流均由未经审计的H1减未经审计的Q1推算；单季分部、地区、EPS、折旧和完整质保未披露，不作虚构。情景不是盈利承诺，本报告不构成投资建议或交易要约。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
