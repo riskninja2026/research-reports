@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>新城发展 2026年中期 Fullscan 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">新城发展 01030.HK ｜ FULLSCAN 全景尽调 ｜ 数据截止 2026.08.31</div>
+    <h1>毛利率回升，<br>开发业务仍未回来</h1>
+    <p class="lede">2026年上半年，物业销售收入再降三成；吾悦广场的租金与管理费托住毛利，费用收缩与减值减少共同推高经营利润。<b>这不是住宅开发盈利能力已经修复，而是商业资产在更小的收入分母里占得更多。</b>便宜的账面估值，仍要穿过销售下滑、现金受限与高息再融资三道门。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">2026H1 集团毛利率 · 未经审核</div>
+        <div class="big a">30.7%</div>
+        <div class="cap">同比提升6.3个百分点；管理层明确归因于高毛利的商业管理与租金收入占比上升。</div>
+      </div>
+      <div>
+        <div class="tag">推算 2026Q2 合同销售 · 经营口径</div>
+        <div class="big b">−36%</div>
+        <div class="cap">约人民币33.41亿元；只由Q1与H1累计经营数据相减，不能延伸成单季损益或现金流。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，读这里</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>新城发展是香港上市控股公司，持有A股新城控股67.20%的权益；住宅开发负责规模，181座吾悦广场负责更稳定的商业运营收入。</li>
+      <li><b>本期成绩：</b>2026H1收入人民币176.86亿元、同比下降20.2%；毛利基本持平、经营利润增长14.2%，但归母利润仍下降12.1%至6.08亿元。</li>
+      <li><b>核心矛盾：</b>物业销售收入下降30.4%，商业管理与租金收入合计仅增长2.1%；毛利率改善主要是业务组合变化，而不是开发业务的售价、成本或现金转换已经恢复。</li>
+      <li><b>容易踩的坑：</b>集团只披露H1财务报表，单Q2只能推算合同销售等经营量；在手现金还包括受限资金，且会计分部是“A股公司／非A股公司”，不是“开发／商业”。</li>
+      <li><b>结论：</b>现价HK$1.37对应Wind市净率0.181倍。悲观、基准、乐观情景价值分别为HK$0.76、HK$1.67、HK$2.27；我们给出<b>谨慎中性</b>，首要验证点是商业REIT能否真正变现并降低融资压力。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>一家公司，两种完全不同的赚钱时钟</h2>
+  <p>新城的开发业务是“先卖、后交付、再确认利润”；吾悦广场则按出租和运营持续收钱。前者规模大但波动高，后者增长慢却更稳定。理解财报前，要先把<span class="g">合同销售</span>、<span class="g">结转收入</span>和<span class="g">归母利润</span>分开。</p>
+  <div class="steps">
+    <div class="step"><div class="n">STEP 1</div><b>拿地与建设</b><p>土地、工程和资本化利息进入开发存货；项目旧成本会在多年后影响毛利。</p></div>
+    <div class="step"><div class="n">STEP 2</div><b>预售与回款</b><p>客户签约形成合同销售，部分现金进入预售监管账户；销售额还不是财报收入。</p></div>
+    <div class="step"><div class="n">STEP 3</div><b>交付与结转</b><p>房屋交付时才确认物业销售收入并释放相应成本，因此收入通常滞后于签约。</p></div>
+    <div class="step"><div class="n">STEP 4</div><b>商业运营与分配</b><p>商场持续收租和管理费；集团利润再扣税、利息及非控股股东份额，才到普通股东。</p></div>
+  </div>
+  <p>控股结构也很关键：新城发展合并了新城控股的全部资产负债和损益，但只把属于自身股东的部分列为归母权益与归母利润，其余列作<span class="g">非控股权益</span>。因此，不能把A股子公司的总市值或总利润直接加到港股母公司上。</p>
+  <p class="small">行业背景：全国住宅需求、房价与融资信用仍在调整，合同销售下行会延迟传导到未来结转。商业物业可缓冲波动，但投资物业估值、租户经营与高成本债务也会影响其资产价值。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">基础财务 · 合并与分部地图</div>
+  <h2>收入四年缩去七成，商业资产撑住合并毛利</h2>
+  <p>2026H1简明合并报表按<span class="g">HKAS 34</span>编制，<strong>未经审核，也没有随附独立核数师中期审阅报告</strong>。最新经审计基准仍是2025年报。集团的报表收入来自物业销售、商业管理、租金及其他服务；法定可报告分部则按公司边界划成“A股公司”和“非A股公司”。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">2026H1 收入</div><div class="v">176.86<span class="u">亿元</span></div><div class="d"><span class="down">同比 −20.24%</span></div></div>
+    <div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">54.24<span class="u">亿元</span></div><div class="d"><span class="up">同比 +0.43% · 30.67%</span></div></div>
+    <div class="cell"><div class="k">经营利润 / 利润率</div><div class="v">33.24<span class="u">亿元</span></div><div class="d"><span class="up">同比 +14.22% · 18.79%</span></div></div>
+    <div class="cell"><div class="k">归母净利润</div><div class="v">6.08<span class="u">亿元</span></div><div class="d"><span class="down">同比 −12.07% · EPS人民币0.08元（前值0.10元）</span></div></div>
+    <div class="cell"><div class="k">集团经营现金流</div><div class="v">未披露</div><div class="d"><span>业绩公告没有合并现金流量表</span></div></div>
+    <div class="cell"><div class="k">集团资本开支 / 自由现金流</div><div class="v">未披露</div><div class="d"><span>不能用非流动资产添置额替代现金支出</span></div></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>表面上，收入少了五分之一，毛利却没有减少，经营利润还上升。这并不表示住宅项目突然变得更赚钱；更准确的解释是：<b>开发结转缩得更快，毛利较高的商场收入占比从29.0%升到37.1%</b>，把集团平均毛利率抬高。</p>
+    <p>集团H1没有披露现金流量表，所以无法回答“这6.08亿元利润最终变成多少现金”。这是当前财报最重要的证据缺口之一。</p>
+  </div>
+
+  <h3>五年合并轨迹</h3>
+  <div class="tblscroll">
+    <table class="tbl" data-financials="history">
+      <caption>FY2021–25经审计历史 · 人民币亿元；ROE为平均归母权益回报；资本开支与自由现金流为一致口径代理；CAGR为复合年增长率</caption>
+      <thead><tr><th>FY</th><th>收入</th><th>毛利率</th><th>经营利润</th><th>归母利润</th><th>EPS（元）</th><th>ROE</th><th>经营现金流</th><th>资本开支代理</th><th>自由现金流代理</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>1,695.37</td><td>16.73%</td><td>201.67</td><td>85.91</td><td>1.39</td><td>22.05%</td><td>155.96</td><td>155.93</td><td>0.03</td></tr>
+        <tr><td>2022</td><td>1,165.41</td><td>13.68%</td><td>60.80</td><td>2.81</td><td>0.04</td><td>0.65%</td><td>74.65</td><td>80.22</td><td>−5.57</td></tr>
+        <tr><td>2023</td><td>1,194.64</td><td>13.53%</td><td>62.25</td><td>8.79</td><td>0.12</td><td>1.94%</td><td>59.97</td><td>24.81</td><td>35.15</td></tr>
+        <tr><td>2024</td><td>892.27</td><td>16.79%</td><td>67.63</td><td>4.91</td><td>0.07</td><td>1.07%</td><td>−26.37</td><td>19.39</td><td>−45.76</td></tr>
+        <tr><td>2025</td><td>531.36</td><td>23.34%</td><td>71.01</td><td>3.93</td><td>0.06</td><td>0.85%</td><td>−19.28</td><td>3.03</td><td>−22.31</td></tr>
+        <tr class="grp"><td>2021–25 CAGR</td><td>−25.18%</td><td>—</td><td>−22.97%</td><td>−53.74%</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="cols" role="img" aria-label="五年收入与归母净利润趋势，具体数字见上表">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:5.07%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:68.74%"></div><div class="bar np" style="height:0.17%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:70.46%"></div><div class="bar np" style="height:0.52%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:52.63%"></div><div class="bar np" style="height:0.29%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:31.34%"></div><div class="bar np" style="height:0.23%"></div></div></div>
+  </div>
+  <div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div>
+  <div class="legend"><span><i class="p"></i>收入</span><span><i class="m"></i>归母净利润</span></div>
+  <p class="small">柱高统一以2021年收入为100%等比绘制，利润没有另开纵轴。2023归母利润包含已终止经营利润，持续经营EPS为负，构成历史口径断点。<span class="g">资本开支与自由现金流（FCF）</span>代理＝添置投资物业＋固定及无形资产等现金支出，再以经营现金流减去该支出；房地产土地与建造现金流位于经营现金流，故该代理不宜与工业企业直接比较。</p>
+
+  <h3>最近十二个月与每股指标</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>截至2026年6月LTM · 人民币亿元；<span class="g">BVPS</span>为人民币元/股</caption>
+      <thead><tr><th>口径</th><th>收入</th><th>毛利</th><th>经营利润</th><th>归母利润</th><th>归母净利率</th><th>期末BVPS</th><th>H1年化ROE代理</th></tr></thead>
+      <tbody><tr><td>LTM / 期末</td><td>486.49</td><td>124.25</td><td>75.15</td><td>3.10</td><td>0.64%</td><td>6.56</td><td>2.58%</td></tr></tbody>
+    </table>
+  </div>
+
+  <h3>收入类别：商业占比上升，但不是会计分部</h3>
+  <div class="stacks" role="img" aria-label="2025H1与2026H1收入类别占比">
+    <div class="stack"><div class="cap">2025H1</div><div class="stackbar"><div class="seg p" style="width:68.41%">68.4%</div><div class="seg q" style="width:28.98%">29.0%</div><div class="seg r" style="width:2.62%"></div></div></div>
+    <div class="stack"><div class="cap">2026H1</div><div class="stackbar"><div class="seg p" style="width:59.73%">59.7%</div><div class="seg q" style="width:37.10%">37.1%</div><div class="seg r" style="width:3.17%"></div></div></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>物业销售</span><span><i class="q"></i>商业管理＋租金</span><span><i class="r"></i>其他服务</span></div>
+
+  <div class="tblscroll" data-financials="segments">
+    <table class="tbl">
+      <caption>2026H1收入类别与法定分部 · 人民币亿元</caption>
+      <thead><tr><th>口径</th><th>本期收入</th><th>同比</th><th>占集团收入</th><th>利润披露</th></tr></thead>
+      <tbody>
+        <tr><td>物业销售</td><td>105.64</td><td>−30.35%</td><td>59.73%</td><td>未单独披露</td></tr>
+        <tr><td>商业物业管理</td><td>31.65</td><td>+3.23%</td><td>17.90%</td><td>未单独披露</td></tr>
+        <tr><td>租金</td><td>33.96</td><td>+1.10%</td><td>19.20%</td><td>未单独披露</td></tr>
+        <tr><td>其他服务</td><td>5.61</td><td>−3.32%</td><td>3.17%</td><td>未单独披露</td></tr>
+        <tr class="grp"><td>A股公司／非A股公司</td><td>176.44／0.45</td><td>法定分部</td><td>对销后合计100%</td><td>税前利润17.69／0.16</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">A股公司分部资产人民币2,576.76亿元、非A股公司105.24亿元，另有对销；全集团物业项目均在中国。把收入类别误写成会计分部，会制造并不存在的“开发分部利润率”或“商业分部利润率”。</p>
+</section>
+
+<section class="reveal on" id="profit">
+  <div class="slabel">盈利能力 · 结转与归属</div>
+  <h2>毛利率抬升，归母利润仍被利息、合联营与税侵蚀</h2>
+  <p>毛利同比增加0.23亿元，但归母利润减少0.83亿元。销售及行政费用合计节约4.85亿元，金融资产减值也减少；相反，投资物业公允价值亏损扩大、合联营贡献恶化、净融资成本和所得税上升，把经营层的改善大半吃掉。</p>
+
+  <div class="wfall" role="img" aria-label="2025H1至2026H1归母利润变动桥，单位人民币亿元">
+    <div class="wrow"><div class="nm">2025H1归母利润<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:100%"></div></div><div class="fig">6.92</div></div>
+    <div class="wrow"><div class="nm">毛利<span>同比变化</span></div><div class="wtrack"><div class="wbar up" style="left:0;width:3.4%"></div></div><div class="fig">+0.23</div></div>
+    <div class="wrow"><div class="nm">投资物业公允价值<span>亏损扩大</span></div><div class="wtrack"><div class="wbar down" style="left:0;width:17.3%"></div></div><div class="fig">−1.20</div></div>
+    <div class="wrow"><div class="nm">销售及行政费用<span>费用节约</span></div><div class="wtrack"><div class="wbar up" style="left:0;width:70.2%"></div></div><div class="fig">+4.85</div></div>
+    <div class="wrow"><div class="nm">金融资产减值<span>损失减少</span></div><div class="wtrack"><div class="wbar up" style="left:0;width:12.0%"></div></div><div class="fig">+0.83</div></div>
+    <div class="wrow"><div class="nm">其他经营项目<span>净负贡献</span></div><div class="wtrack"><div class="wbar down" style="left:0;width:8.4%"></div></div><div class="fig">−0.58</div></div>
+    <div class="wrow"><div class="nm">净融资成本<span>成本增加</span></div><div class="wtrack"><div class="wbar down" style="left:0;width:11.1%"></div></div><div class="fig">−0.77</div></div>
+    <div class="wrow"><div class="nm">合联营公司<span>贡献减少</span></div><div class="wtrack"><div class="wbar down" style="left:0;width:33.4%"></div></div><div class="fig">−2.31</div></div>
+    <div class="wrow"><div class="nm">所得税与NCI<span>合计变化</span></div><div class="wtrack"><div class="wbar down" style="left:0;width:27.4%"></div></div><div class="fig">−1.90</div></div>
+    <div class="wrow"><div class="nm">2026H1归母利润<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:87.9%"></div></div><div class="fig">6.08</div></div>
+  </div>
+  <p class="small">桥接由两期报表行项目逐项相减；所有条长统一按2025H1归母利润6.92亿元为100%绘制。“其他经营项目”合并其他收入、其他开支及其他净损益；尾差来自报表以人民币千元计而图示以亿元四舍五入。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>开发业务成本压力代理 · 2026H1人民币亿元</caption>
+      <thead><tr><th>物业销售收入</th><th>已确认建造成本</th><th>已确认土地成本</th><th>资本化利息</th><th>三项成本合计</th><th>直接开发毛利代理</th></tr></thead>
+      <tbody><tr><td>105.64</td><td>66.32</td><td>35.10</td><td>6.92</td><td>108.34</td><td>−2.55%</td></tr></tbody>
+    </table>
+  </div>
+  <p>这个−2.55%不是公司披露的分部毛利率：三项成本来自“按性质划分的开支”，仍未覆盖税费、其他直接成本与内部抵销。它只是一个方向明确的分析代理——<strong>住宅结转本身并没有解释集团30.67%的毛利率</strong>；商业收入与其他成本口径才让合并数字转正。</p>
+  <p>公司定义的经调整核心盈利为人民币6.27亿元、同比下降18.1%。这个非<span class="g">HKFRS</span>指标剔除若干公允价值和汇兑项目，能帮助观察经常性变化，却不能替代法定归母利润，也没有解决现金流未披露的问题。</p>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>如果只看“毛利率从24.4%升到30.7%”，很容易以为旧项目包袱已经出清。成本代理、合联营和融资费用共同说明：<b>真正改善的是收入结构和费用控制，不是开发项目全链条回报</b>。下一个周期是否赚钱，要看新结转项目毛利、减值和利息能否同时改善。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="property">
+  <div class="slabel">房地产专项 · 销售、商业与土地</div>
+  <h2>Q2住宅销售继续缩，吾悦广场只提供低个位数增长</h2>
+  <p>截至6月底，集团H1合同销售人民币63.57亿元、同比下降38.46%，销售面积102.48万平方米、下降23.24%。用Q1累计数从H1累计数相减，只能得到经营层面的单Q2；集团没有披露单季利润表、现金流量表或资产负债表。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>独立Q2经营推算 · 金额为人民币亿元，面积为万平方米</caption>
+      <thead><tr><th>指标</th><th>2026Q2</th><th>2025Q2推算</th><th>同比</th><th>证据边界</th></tr></thead>
+      <tbody>
+        <tr><td>合同销售</td><td>约33.41</td><td>约52.28</td><td>−36.1%</td><td>两端累计金额相减，均有四舍五入</td></tr>
+        <tr><td>销售面积</td><td>49.83</td><td>约67.74</td><td>−26.4%</td><td>本期面积由季度简报直接披露</td></tr>
+        <tr><td>全口径算术均价</td><td>约6,705元/㎡</td><td>约7,717元/㎡</td><td>−13.1%</td><td>销售额÷面积，含口径与舍入误差</td></tr>
+        <tr><td>商业运营总收入</td><td>约35.67</td><td>约34.96</td><td>+2.0%</td><td>Q1与H1含税KPI相减</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">公司另披露H1不含车位的合同销售均价约人民币8,489元/平方米；它与表中“全部销售金额÷全部面积”的算术均价定义不同，不可混用。2025Q2基数由各期累计同比反推，故只保留约数。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>开发与商业底盘 · 2026H1／期末</caption>
+      <thead><tr><th>项目</th><th>数值</th><th>同比／环比</th><th>投资含义</th></tr></thead>
+      <tbody>
+        <tr><td>物业销售结转收入</td><td>人民币105.64亿元</td><td>同比 −30.35%</td><td>落后于历史签约，不能代替当期销售</td></tr>
+        <tr><td>已售未结转金额／面积</td><td>人民币474.29亿元／745万㎡</td><td>较2025年末 −7.66%／−10.24%</td><td>提供未来收入可见度，不保证毛利与回款</td></tr>
+        <tr><td>合同负债</td><td>人民币261.92亿元</td><td>较2025年末 −16.38%</td><td>已收或应收的待履约余额，不等于全部未结转销售</td></tr>
+        <tr><td>H1全口径回款</td><td>人民币75.30亿元</td><td>相当于合同销售118.45%</td><td>经营KPI；不等于集团经营现金流或母公司可调度现金</td></tr>
+        <tr><td>吾悦广场</td><td>181座</td><td>H1新开3座</td><td>租金与管理费的运营基础</td></tr>
+        <tr><td>商业运营总收入</td><td>人民币71.12亿元</td><td>同比 +2.42%</td><td>含税KPI，不等于HKFRS收入</td></tr>
+        <tr><td>零售额／客流</td><td>520亿元／10.33亿人次</td><td>+0.97%／+8.74%</td><td>客流增速没有等比例转成销售增速</td></tr>
+        <tr><td>出租率</td><td>98.35%</td><td>181座口径</td><td>物业明细表含办公楼时为98.32%</td></tr>
+        <tr><td>未来住宅可售资源</td><td>约2,495万平方米</td><td>较年末 −11.37%</td><td>资源量，不是收入或利润</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>7月的期后信号没有改变方向：单月合同销售人民币8.61亿元，1至7月累计72.18亿元；商业运营单月12.41亿元，累计83.53亿元。销售仍处低位，商业运营继续提供相对稳定的经营支撑，但这项含税KPI不是现金回款。</p>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>住宅业务像一条正在缩小的河，商场业务像一座稳定但增速不高的水库。水库能托住毛利，却还不足以补回住宅销售四年大幅萎缩留下的缺口。<b>已售未结转和土地资源只说明“还有货”，不说明这些货何时交付、赚多少、现金能否自由使用。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="debt">
+  <div class="slabel">债务压力专项 · 现金质量与再融资</div>
+  <h2>债务期限拉长了，现金覆盖仍然不够厚</h2>
+  <p>期末借款人民币554.41亿元，其中一年内到期108.13亿元；公司口径在手现金78.48亿元包含23.34亿元受限现金。总现金只能覆盖短债72.6%，现金及现金等价物（不含单列受限现金）／短债为51.0%；这仍不证明该现金可由港股母公司自由调度。H1流动负债高于流动资产148.03亿元。另在2025年末，经审计净流动负债为209.97亿元、现金及现金等价物45.68亿元、短债141.54亿元；核数师据当时条件把持续经营评估列作关键审计事项，并非对H1作审阅结论。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">总借款</div><div class="v">554.41<span class="u">亿元</span></div><div class="d"><span>较2025年末增加1.25%</span></div></div>
+    <div class="cell"><div class="k">一年内到期</div><div class="v">108.13<span class="u">亿元</span></div><div class="d"><span>占总借款19.5%</span></div></div>
+    <div class="cell"><div class="k">现金（含受限）</div><div class="v">78.48<span class="u">亿元</span></div><div class="d"><span>其中受限23.34亿元</span></div></div>
+    <div class="cell"><div class="k">现金等价物（不含受限现金）／短债</div><div class="v">51.0%</div><div class="d"><span class="down">用途与上划能力未披露</span></div></div>
+    <div class="cell"><div class="k">加权借贷成本</div><div class="v">6.0%</div><div class="d"><span>无抵押债务仅占10%</span></div></div>
+    <div class="cell"><div class="k">净负债权益比</div><div class="v">57.1%</div><div class="d"><span>公司定义口径</span></div></div>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>集团内外往来敞口 · 2026-06-30人民币亿元</caption>
+      <thead><tr><th>项目</th><th>账面总额</th><th>方向</th><th>分析边界</th></tr></thead>
+      <tbody>
+        <tr><td>应收关联方款项</td><td>95.55</td><td>资产</td><td>其他应收款组成之一</td></tr>
+        <tr><td>应收子公司非控股股东款项</td><td>122.78</td><td>资产</td><td>交易对手与关联方不完全相同</td></tr>
+        <tr><td>应付关联方款项</td><td>211.76</td><td>负债</td><td>列在贸易及其他应付款内</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">上述往来款不能机械互抵，也不能等同可用现金；其他应收款整体已计提减值。中期公告没有披露集团最新契约门槛、测试结果或余量，因此债务契约余量保持“未披露”。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2025年末经审计借款到期桶 · 2026H1仅更新一年内／一年后拆分</caption>
+      <thead><tr><th>到期</th><th>账面借款</th><th>合同现金流（含利息）</th><th>解释</th></tr></thead>
+      <tbody>
+        <tr><td>1年内</td><td>141.54亿元</td><td>166.45亿元</td><td>2026H1账面短债已降至108.13亿元</td></tr>
+        <tr><td>1–2年</td><td>84.47亿元</td><td>104.59亿元</td><td>H1未披露更新桶</td></tr>
+        <tr><td>2–5年</td><td>175.39亿元</td><td>209.00亿元</td><td>包括票据与长期贷款</td></tr>
+        <tr><td>5年以上</td><td>146.18亿元</td><td>173.16亿元</td><td>长期抵押融资占比较高</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>2026年3月，公司发行3.55亿美元、票息11.8%、2029年到期的担保优先票据，并回购部分旧美元票据。这让到期压力后移，却没有让资金变便宜。H1净融资成本14.55亿元，相当于经营利润的43.8%，资本化利息减少又会把更多借款成本直接压到利润表。</p>
+  <p>资产端也有抵押逻辑：投资物业账面值人民币1,238.52亿元，占总资产47.9%，而无抵押债务只占10%。商场资产既是稳定收入来源，也是融资抵押品；一旦估值、租金或融资成数下调，资产与负债两边会同时收紧。</p>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>“80.5%的债务是一年以上”看起来安全，但它只回答什么时候还本金，不回答利息有多贵、现金能否自由动用。当前更贴近生存能力的组合是：<b>现金及现金等价物（不含单列受限现金）只覆盖约一半短债，新美元票据票息接近12%，集团H1现金流又未披露。</b>因此，债务只是被续上，不等于压力已经解除。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="capital">
+  <div class="slabel">资本分配 · 治理 · 催化剂</div>
+  <h2>股东回报缺席，REIT是最值得验证的资产出口</h2>
+  <p>公司FY2021至FY2025均未建议末期股息，2026H1也不派中期股息。2026年2月先旧后新配售1.98亿股，价格HK$2.39，较前一交易日收市价折让14.95%；净筹资HK$4.69亿元，期末已全部用于发展、偿债及营运资金。股数因此增加2.80%，股权融资补充了流动性；由于集团H1经营现金流未披露，不能比较两者贡献。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">可验证的上行催化剂</div><p>拟以常州天宁吾悦广场和南通启东吾悦广场为底层资产发行商业REIT。港交所已确认可按分拆规则推进；若上交所与证监会批准、发行估值合理且净募集资金明确用于降债，商业资产可从“账面值”变成“可见现金”。</p></div>
+    <div class="find warn"><div class="t">不能忽略的治理折价</div><p>王振华家族信托披露持股63.01%，主席王晓松为其子。期内已签约拟把两家金融／证券子公司以合计HK$8,805万元转让给家族关联方控制的公司；先决条件已满足，公告日正推进交割。交易金额不大，但关联方边界应持续观察。</p></div>
+  </div>
+  <p>拟议REIT仍需上交所及中国证监会批准，底层资产估值、发行份额、税费、募集资金用途和母公司保留权益尚未完全披露。它目前是催化剂，不是已完成的去杠杆。公司行政总裁兼执行董事吕小平于3月辞任，管理职责变化也增加执行期的不确定性。</p>
+  <p class="small">8月28日三笔高息优先票据更换受托人与代理，公告明确票据及契约条款没有改变；不应把行政变更解释为债务重组或信用改善。</p>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>资本分配的排序很清楚：先续债、补流动性，再谈股东回报。商业REIT若成功，最大的意义不是制造一次性利润，而是证明商场资产能以外部价格成交、释放现金并降低利息负担。<b>在审批、估值和资金用途落地前，不能提前把这笔钱算进目标价。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="scenarios">
+  <div class="slabel">三年情景 · 销售、商业与现金路径</div>
+  <h2>决定估值的不是收入反弹，而是常态ROE能否跨过3%</h2>
+  <p>公司没有发布三年盈利指引。下面不是逐行财务预测，而是把三个可观察驱动——合同销售、商业运营和融资约束——连接到常态<span class="g">ROE</span>与市净率。每条路径都从2026H1已披露事实出发，避免用未披露的Q2损益或现金流填表。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2026–28有界情景假设 · 变化率为分析假设，不是公司指引</caption>
+      <thead><tr><th>经营边界</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
+      <tbody>
+        <tr><td>年度合同销售路径</td><td>−35%／−20%／−10%</td><td>−30%／−5%／0%</td><td>−20%／+5%／+5%</td></tr>
+        <tr><td>商业运营收入CAGR</td><td>0%–2%</td><td>3%–5%</td><td>5%–7%</td></tr>
+        <tr><td>开发结转与减值</td><td>旧项目压力延续</td><td>毛利缓慢止跌</td><td>新项目改善可见</td></tr>
+        <tr><td>再融资与REIT</td><td>高息续债、未落地</td><td>部分变现、成本持平</td><td>顺利发行、净降债</td></tr>
+        <tr><td>估值含义</td><td>低于现价隐含修复</td><td>达到温和修复</td><td>可比折价明显收窄</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">销售路径是同比变化；商业运营增长为三年复合区间。它们是监测边界，不是逐行损益预测，也不机械产出下一节的ROE敏感性；情景没有假设股息恢复。</p>
+
+  <div class="finds">
+    <div class="find warn"><div class="t">基准向下失效</div><p>月度销售继续以三成以上速度收缩、现金及现金等价物（不含单列受限现金）／短债跌破0.5倍、美元债再次以双位数成本续作，或REIT长期无审批进展。</p></div>
+    <div class="find good"><div class="t">基准向上失效</div><p>合同销售连续两个季度企稳，开发成本代理回到正毛利，REIT带来可核验净现金且总借款下降，商业零售额增长重新追上客流。</p></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>这里没有假设新城回到2021年的高增长。基准边界只要求“住宅不再快速缩、商业保持低个位数增长、融资不再更贵”。下一节另用归母利润／期末权益做P/B敏感性，不把这组经营边界伪装成精确利润模型。<b>低盈利、现金受约束的房企即使持续经营，“破净”也可以长期存在。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">市场定价 · 同业 · 估值</div>
+  <h2>0.18倍净资产很便宜，但还不是清算安全垫</h2>
+  <p>2026年8月31日收市，新城发展报HK$1.37，Wind总市值HK$99.51亿元，市净率<span class="g">P/B</span>为0.181倍。现价比52周低点HK$1.30高5.4%，但低位本身不是安全边际。过去十二个月盈利只有人民币3.10亿元，P/E会被极低利润放大，因此主估值采用P/B—ROE敏感性：净资产能持续赚多少，决定市场愿意给多少账面倍数。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">现价</div><div class="v">HK$1.37</div><div class="d"><span>2026-08-31收市</span></div></div>
+    <div class="cell"><div class="k">Bear价值</div><div class="v">HK$0.76</div><div class="d"><span class="down">较现价 −44.8%</span></div></div>
+    <div class="cell"><div class="k">Base价值</div><div class="v">HK$1.67</div><div class="d"><span class="up">较现价 +21.5%</span></div></div>
+    <div class="cell"><div class="k">Bull价值</div><div class="v">HK$2.27</div><div class="d"><span class="up">较现价 +65.7%</span></div></div>
+    <div class="cell"><div class="k">现价隐含</div><div class="v">2.99%<span class="u">ROE</span></div><div class="d"><span>常态归母约14.25亿元</span></div></div>
+    <div class="cell"><div class="k">一句话判断</div><div class="v">谨慎中性</div><div class="d"><span>催化剂尚未覆盖现金风险</span></div></div>
+  </div>
+
+  <h3>第一步：现价到底在押什么？</h3>
+  <p>用合理P/B＝（ROE−g）÷（Ke−g）反推，在股权成本Ke为12%、长期增长g为1%时，0.181倍P/B隐含常态ROE约2.99%，对应归母利润约人民币14.25亿元。这个利润是LTM实际值的4.6倍，也高于H1年化ROE代理2.58%所对应的节奏。市场价虽低，却已经押注一部分盈利修复。</p>
+
+  <h3>第二步：同业折价有理由，但未必已经充分</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>同业市场快照 · Wind 2026-08-31收市；收入结构只作定性参考</caption>
+      <thead><tr><th>公司</th><th>P/B（<span class="g">LF</span>）</th><th>市值</th><th>结构与风险差异</th></tr></thead>
+      <tbody>
+        <tr><td>新城发展</td><td>0.181倍</td><td>HK$99.51亿元</td><td>开发＋商业；高息美元债与现金覆盖偏低</td></tr>
+        <tr><td>龙湖集团</td><td>0.236倍</td><td>HK$447.85亿元</td><td>开发＋运营／服务，业务结构最接近</td></tr>
+        <tr><td>中国海外发展</td><td>0.303倍</td><td>HK$1,371.39亿元</td><td>央企信用，开发占比更高</td></tr>
+        <tr><td>绿城中国</td><td>0.394倍</td><td>HK$158.98亿元</td><td>开发占比更高，股东与信用结构不同</td></tr>
+        <tr class="grp"><td>三家可比中位数</td><td>0.303倍</td><td>—</td><td>新城折价40.3%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>龙湖的业务组合最接近，但任何P/B比较都没有自动控制项目质量、资产抵押、现金限制、家族治理或合同销售速度。新城相对中位数的折价有现实基础；要缩窄折价，需要证明商业资产可变现、融资成本下降，而不是只靠毛利率上升。</p>
+
+  <h3>第三步：用归母利润敏感性换算合理P/B</h3>
+  <div class="steps">
+    <div class="step"><div class="n">INPUT A</div><b>设常态归母利润</b><p>用压力、基准、改善三档利润敏感性，不宣称是公司预测。</p></div>
+    <div class="step"><div class="n">INPUT B</div><b>除以期末权益</b><p>统一用人民币476.58亿元归母权益，得到可复算ROE。</p></div>
+    <div class="step"><div class="n">INPUT C</div><b>设Ke与g</b><p>风险越高，股东要求回报越高；长期增长只取0.5%–1.5%。</p></div>
+    <div class="step"><div class="n">OUTPUT</div><b>映射P/B与股价</b><p>负收益情景用压力下限，其余按公式和Wind现价P/B等比例换算。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>归母利润—ROE—P/B敏感性 · 期末归母权益人民币476.58亿元；不是盈利预测</caption>
+      <thead><tr><th>敏感性</th><th>常态归母利润</th><th>ROE</th><th>Ke／g</th><th>公式P/B</th><th>采用P/B</th><th>价值／上行</th></tr></thead>
+      <tbody>
+        <tr><td>Bear</td><td>人民币2.38亿元</td><td>0.50%</td><td>13.5%／0.5%</td><td>0.00倍</td><td>0.10倍下限</td><td>HK$0.76／−44.8%</td></tr>
+        <tr><td>Base</td><td>人民币16.30亿元</td><td>3.42%</td><td>12.0%／1.0%</td><td>0.22倍</td><td>0.22倍</td><td>HK$1.67／+21.5%</td></tr>
+        <tr><td>Bull</td><td>人民币20.02亿元</td><td>4.20%</td><td>10.5%／1.5%</td><td>0.30倍</td><td>0.30倍</td><td>HK$2.27／+65.7%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">ROE＝常态归母利润÷期末归母权益；合理P/B＝（ROE−g）÷（Ke−g）；目标价＝HK$1.37×采用P/B÷0.181。利润档位只是敏感性输入，必须由上一节的经营边界验证。机械映射还假设Wind现价P/B口径可比、每股账面没有重大减值、增发或汇率变化。</p>
+
+  <h3>把三个价值锚放在一把尺上</h3>
+  <div class="rows" aria-label="新城发展情景价值与现价对比">
+    <div class="row"><div class="nm">Bear 悲观<span>0.10倍压力下限</span></div><div class="track"><div class="fill alt" style="width:33.3%"></div></div><div class="fig">HK$0.76<span class="down">−44.8%</span></div></div>
+    <div class="row"><div class="nm">现价<span>2026-08-31收市</span></div><div class="track"><div class="fill soft" style="width:60.3%"></div></div><div class="fig">HK$1.37<span>市场价</span></div></div>
+    <div class="row"><div class="nm">Base 基准<span>3.42%稳态ROE</span></div><div class="track"><div class="fill" style="width:73.3%"></div></div><div class="fig">HK$1.67<span class="up">+21.5%</span></div></div>
+    <div class="row"><div class="nm">Bull 乐观<span>REIT与开发同时改善</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$2.27<span class="up">+65.7%</span></div></div>
+  </div>
+
+  <h3>第四步：A股子公司去并表健全性检查</h3>
+  <p>新城发展持有新城控股67.20%。601155.SH收市价人民币11.39元、市值256.92亿元、Wind P/B 0.411倍；其2026H1归母权益624.76亿元。按持股比例，新城发展对应的子公司账面权益约419.84亿元、上市市值约172.65亿元。</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>上市子公司去并表桥 · 人民币亿元；仅作当前资产归属检查</caption>
+      <thead><tr><th>项目</th><th>金额</th><th>处理与限制</th></tr></thead>
+      <tbody>
+        <tr><td>01030归母账面权益</td><td>476.58</td><td>集团合并口径</td></tr>
+        <tr><td>减：67.20%对应601155账面权益</td><td>−419.84</td><td>避免把已合并子公司重复加值</td></tr>
+        <tr><td>余下归母账面代理</td><td>56.74</td><td>仍含抵销与非纯开发项目</td></tr>
+        <tr><td>加：67.20%对应601155市值</td><td>172.65</td><td>未加控股折价</td></tr>
+        <tr class="grp"><td>替换后的权益价值代理</td><td>229.39</td><td>约为报告归母账面的48.1%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">这不是目标价或清算价值：剩余账面并非独立审计的母公司<span class="g">NAV</span>，A股市值已反映自身折价，合并账面已含债务，不能再次扣除集团净债。港股母公司单体现金与债务、子公司上划股息能力、税务泄漏和合理控股折价均未披露或未建模；Wind的港元兑人民币查询失败，所以这个人民币代理不能独立验证HK$1.67基准值。</p>
+
+  <div class="plain"><span class="pl">一句话总结</span>
+    <p>去并表桥说明，A股子公司自身的0.41倍账面估值已解释相当一部分集团账面折价；由于缺少母公司单体债务、上划能力和汇率，不能把余下差额全部叫作“控股折价”。基准价值HK$1.67仍需要利润、现金与资产变现证据。<b>在REIT未落地、短债覆盖仍低时，21.5%的基准上行不足以抵消44.8%的悲观下行。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">多空裁决 · 最终判断</div>
+  <h2>商业底盘值得承认，资产折价还不值得抢跑</h2>
+  <div class="finds">
+    <div class="find good"><div class="t">最强多头证据</div><p>H1回款人民币75.30亿元、相当于合同销售118.45%，181座吾悦广场保持高出租率，商业管理与租金收入逆势增长；回款KPI不是集团经营现金流，但显示存量销售仍在回笼。若两座商场REIT成功发行，资产可获得外部定价与现金出口。</p></div>
+    <div class="find warn"><div class="t">最强空头证据</div><p>Q2合同销售仍约下降36%，现金及现金等价物（不含单列受限现金）只能覆盖一半短债，新美元票据票息11.8%，且集团H1没有现金流量表。开发规模收缩、融资成本和治理折价可能长期压住ROE。</p></div>
+  </div>
+
+  <div class="quote">这不是“商场好，所以开发风险消失”；而是“商场让公司有时间处理开发与债务”。时间是否创造股东价值，要由现金而不是毛利率证明。</div>
+
+  <p><strong>最终判断：谨慎中性。</strong>绝对估值很低，商业资产也提供真实经营底盘；但基准上行约21.5%，尚不足以覆盖销售继续下滑与高息续债造成的非对称风险。适合等待验证，不适合仅因“破净”建立高确信度判断。</p>
+  <p><strong>什么会改变判断：</strong>若REIT完成并带来可核验降债、月度销售连续企稳、现金及现金等价物（不含单列受限现金）覆盖短债升至接近或超过1倍，判断可上调；若再融资仍是双位数成本、开发直接毛利代理持续为负或投资物业出现更大估值损失，应下调到悲观路径。</p>
+
+  <div class="tline" aria-label="新城发展关键跟踪时间线">
+    <div class="tstop"><div class="tw">每月</div><b>合同销售与商业运营</b><p>观察销售降幅是否连续收窄、零售额能否追上客流。</p></div>
+    <div class="tstop"><div class="tw">审批进度</div><b>两座吾悦广场REIT</b><p>盯上交所、证监会批准、发行估值和净募集资金用途。</p></div>
+    <div class="tstop warn"><div class="tw">下一份完整报表</div><b>FY2026现金流与债务</b><p>验证经营现金流、受限现金、短债覆盖及借贷成本。</p></div>
+    <div class="tstop warn"><div class="tw">2027–29</div><b>高息票据再融资</b><p>观察本金滚动与利息成本能否实质下降。</p></div>
+  </div>
+  <div class="callout"><b>决策边界：</b>HK$0.76只是仍能持续经营的压力价值，不是极端清算底；在关键现金证据出现前，HK$2.27乐观值不构成基准判断的安全垫。</div>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · 按出现顺序</div>
+  <h2>读懂这份报告需要的二十个词</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>名词</th><th>白话定义</th><th>本报告中的边界</th></tr></thead>
+      <tbody>
+        <tr><td>合同销售</td><td>客户签约买房的金额，是经营指标。</td><td>不是财报收入，也不保证全部现金可自由使用。</td></tr>
+        <tr><td>结转收入</td><td>房屋交付后才在利润表确认的销售收入。</td><td>通常滞后签约数年，反映历史拿地成本。</td></tr>
+        <tr><td>归母利润</td><td>合并利润中真正属于01030普通股股东的部分。</td><td>必须扣除非控股股东份额。</td></tr>
+        <tr><td>非控股权益 NCI</td><td>附属公司中不属于上市母公司的股东权益。</td><td>新城发展持有601155的67.20%，并非100%。</td></tr>
+        <tr><td>HKAS 34／HKFRS</td><td>香港中期财务报告准则／香港财务报告准则。</td><td>H1按HKAS 34编制，法定利润与公司调整指标要分开。</td></tr>
+        <tr><td>商业运营总收入</td><td>吾悦广场含税经营KPI。</td><td>不等于HKFRS租金与管理服务收入。</td></tr>
+        <tr><td>投资物业</td><td>主要为持有收租的商场等资产。</td><td>按公允价值计量，会受估值变动影响。</td></tr>
+        <tr><td>受限现金</td><td>因预售监管、按揭保证等用途不能任意调度的现金。</td><td>评估短债覆盖时与现金及现金等价物分列；后者也不证明可上划。</td></tr>
+        <tr><td>净负债权益比</td><td>公司用净债务相对权益衡量杠杆的指标。</td><td>不同房企定义可能不同，不替代到期覆盖分析。</td></tr>
+        <tr><td>直接开发毛利代理</td><td>物业销售收入减建造、土地与资本化利息后的分析比率。</td><td>不是披露分部毛利率，未覆盖全部成本。</td></tr>
+        <tr><td>LTM</td><td>最近十二个月，即2025全年加2026H1减2025H1。</td><td>用于平滑半年季节性，不代表公司指引。</td></tr>
+        <tr><td>CAGR</td><td>复合年增长率，把多年的总变化换算成年均速度。</td><td>2021–25为四个年度间隔。</td></tr>
+        <tr><td>资本开支／FCF</td><td>长期资产现金投入／经营现金流减资本开支。</td><td>本报告仅对年度使用定义明确的代理；H1集团未披露。</td></tr>
+        <tr><td>BVPS</td><td>每股净资产，即归母权益除以期末股份数。</td><td>账面值不保证可按面值变现。</td></tr>
+        <tr><td>P/B</td><td>市净率，股价相对每股账面净资产的倍数。</td><td>低倍数可能反映资产减值与低ROE，而非免费午餐。</td></tr>
+        <tr><td>LF</td><td>Latest Filing，按最近一期披露财务数据计算。</td><td>Wind的P/B字段口径；仍需用港交所数字核对会计边界。</td></tr>
+        <tr><td>ROE</td><td>净资产收益率，股东账面资金一年赚取的利润比例。</td><td>估值采用稳态假设，不直接年化单季波动。</td></tr>
+        <tr><td>Ke／g</td><td>股权成本／长期增长率。</td><td>是P/B—ROE公式的风险与永续假设。</td></tr>
+        <tr><td>NAV</td><td>净资产价值，常用于把控股公司的资产逐项归属。</td><td>本报告的去并表余值不是独立审计的母公司NAV。</td></tr>
+        <tr><td>商业REIT</td><td>以收租资产为底层、向投资者发行的房地产投资信托。</td><td>目前仍待内地监管批准，不能当作已收到现金。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">方法 · 来源 · 证据边界</div>
+  <h2>先锁期间，再做推算；先看港交所，再看市场</h2>
+  <p><strong>会计控制文件：</strong><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082601476_c.pdf">新城发展2026H1中期业绩公告</a>。历史财务来自<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0329/2026032900430_c.pdf">2025年报</a>及2021–2024年各年港交所年报。中期结果未经审核；2025年报由致同（香港）审计并出具未修改意见，持续经营评估列为关键审计事项。</p>
+  <p><strong>Q2经营数据：</strong><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0413/2026041300988_c.pdf">2026Q1经营简报</a>与<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0710/2026071000799_c.pdf">2026Q2经营简报</a>；集团累计数据以<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0710/2026071000792_c.pdf">6月营运统计</a>交叉核验。单Q2只相减合同销售、面积及商业运营KPI；没有推算损益、经营现金流、资本开支或FCF。</p>
+  <p><strong>期后与催化剂：</strong><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0811/2026081100949_c.pdf">7月营运统计</a>及<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082802289_c.pdf">优先票据受托人与代理变更</a>。REIT、配售、关联出售与管理层变动来自中期公告“报告期内事项”。截至数据截止日，正式2026中期报告尚未刊发。</p>
+  <p><strong>市场与估值：</strong>01030.HK、601155.SH及三家可比公司的2026年8月31日收市价、市值、P/B和价格区间来自Wind金融终端；会计数字仍以港交所文件为准。Wind港元兑人民币查询返回后台错误，所以去并表检查保留人民币，不强行换汇。当前未找到可用的2026H1业绩电话会逐字稿，管理层观点仅引用公告文字。</p>
+  <p><strong>计算：</strong>同比、占比、CAGR、LTM、现金覆盖、利润桥、Q2累计相减、P/B—ROE与情景价格均由可执行底稿复算。公式与输入保存在同目录计算账本；数值以披露原单位计算后再展示四舍五入。</p>
+</section>
+
+<footer>
+  <p>数据截止：2026-08-31。主要来源：香港交易所披露易、新城发展及新城控股公告、Wind金融终端。财务报告期严格标为2026H1；独立Q2仅限经营数据推算。</p>
+  <p>本报告中的情景、价值锚与直接开发毛利代理均为分析推导，不是公司指引、审计意见或投资建议。未披露信息保持为“未披露”，没有用子公司现金流替代集团现金流。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
