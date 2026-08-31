@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>中国海油 2026H1 Fullscan 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">中国海油 00883.HK · 600938.SH ｜ FULLSCAN ｜ 数据截至 2026.08.31</div>
+    <h1>纪录利润来自油价，<br>低成本仍需守住</h1>
+    <p class="lede">2026年上半年，利润、现金流与中期股息都刷新可比纪录。<b>但价格贡献超过全部利润增量，推算二季度产量反而同比下降。</b>储量与资产负债表提高了抗跌性，却没有消除油价周期。</p>
+    <div class="dual">
+      <div>
+        <div class="tag">2026H1 归母净利润 · 同比</div>
+        <div class="big a">+23.4%</div>
+        <div class="cap">人民币858.18亿元；公司披露的实现价格贡献为人民币274亿元。</div>
+      </div>
+      <div>
+        <div class="tag">2026H1 桶油主要成本 · 同比</div>
+        <div class="big b">+10.2%</div>
+        <div class="cap">升至29.70美元/桶油当量；这是下一阶段最关键的反证指标。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，读这里</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>中国海油是以勘探、开发和生产为核心的上游油气公司；贸易帮助销售，但勘探生产分部承载几乎全部经营利润。</li>
+      <li><b>本期成绩：</b>2026H1归母净利人民币858.18亿元、经营现金流1,416.31亿元、净产量3.987亿桶油当量，分别同比增长23.4%、29.7%和3.7%。</li>
+      <li><b>核心矛盾：</b>公司利润桥显示实现价格贡献274亿元、销量贡献69亿元，但成本及其他与所得税合计抵消180亿元；纪录利润首先是价格事件。</li>
+      <li><b>容易踩的坑：</b>公司只披露H1。本文所有单二季度利润、现金和产量均为“H1减Q1”的<span class="g">推算</span>；Q2实现油价和单位成本不可精确反推，保持未披露。</li>
+      <li><b>结论：</b>中性。H股现价HK$25.30高于基准稳态价值HK$24.6约3%；5.89%的追踪股息率提供现金回报，但明显上行需要油价长期接近乐观情景且成本止升。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>先找到储量，再用资本把地下资源变成现金</h2>
+  <p>中国海油不是赚炼油或加油站价差的综合石油公司。它主要承担上游风险：先为勘探和开发投入资金，油气投产后按国际或合同价格销售，扣除作业、折旧、税费和后续投资，剩余现金才可用于分红。</p>
+  <div class="steps">
+    <div class="step"><div class="n">环节 1</div><b>勘探与评价</b><p>钻井寻找油气藏；发现数量不是储量金额，只有经济可采部分才进入证实储量。</p></div>
+    <div class="step"><div class="n">环节 2</div><b>开发与投产</b><p>平台、井口和管线需要前置资本；项目延期会同时推迟产量和现金回收。</p></div>
+    <div class="step"><div class="n">环节 3</div><b>生产与销售</b><p>产量乘以<span class="g">实现油价</span>形成收入；PSC、资源税与特别收益金让净利并非线性跟随油价。</p></div>
+    <div class="step"><div class="n">环节 4</div><b>补储与分配</b><p>现金需继续补储、维持产能并履行弃置义务；董事会再在投资和股息间分配。</p></div>
+  </div>
+  <p>三个实体事实必须分开。第一，00883.HK、80883.HK人民币柜台与600938.SH属于同一上市发行人，共享合并利润和475.30亿股总股本。第二，控股股东中国海油BVI持有60.54%，未上市母集团不是本报告的估值对象。第三，<span class="g">BOE</span>把油和气换算为统一产量单位，却不代表两者售价和利润率相同。行业的核心周期变量仍是油价；公司能控制的是成本、储量、项目执行和资产负债表。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">基础 · FINANCIALS</div>
+  <h2>半年创新高，单二季度却是“利润升、产量降”</h2>
+  <p>上半年收入与利润同步增长，现金增幅更快。收入地图仍由油气销售主导；贸易收入体量可见但利润贡献有限。上游企业没有稳定可比的产品毛利口径，本报告以桶油主要成本作为行业原生的<span class="g">综合成本率替代指标</span>。推算的Q2把周期张力放大：油气销售收入同比增长30.7%，归母净利增长41.6%，净产量却下降1.1%。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">营业收入 · 2026H1</div><div class="v">242.66<span class="u">bn</span></div><div class="d"><span class="up">同比 +16.9%</span></div></div>
+    <div class="cell"><div class="k">油气销售收入 · 2026H1</div><div class="v">206.09<span class="u">bn</span></div><div class="d"><span class="up">同比 +20.0%</span></div></div>
+    <div class="cell"><div class="k">归母净利润 · 2026H1</div><div class="v">85.82<span class="u">bn</span></div><div class="d"><span class="up">同比 +23.4%</span></div></div>
+    <div class="cell"><div class="k">经营现金流 · 2026H1</div><div class="v">141.63<span class="u">bn</span></div><div class="d"><span class="up">同比 +29.7%</span></div></div>
+    <div class="cell"><div class="k">分析口径自由现金流 · 2026H1</div><div class="v">88.26<span class="u">bn</span></div><div class="d"><span class="up">同比 +55.0%</span></div></div>
+    <div class="cell"><div class="k">净产量 · 2026H1</div><div class="v">398.7<span class="u">mn BOE</span></div><div class="d"><span class="up">同比 +3.7%</span></div></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>这不是“多卖一点油，所以多赚一点钱”的普通增长。上半年产量只增长3.7%，利润却增长23.4%；单二季度产量甚至同比回落，利润仍大涨。<b>报表的第一驱动力是售价，公司的结构性价值则来自在不同油价下仍能持续产出、补储和派息。</b></p>
+  </div>
+
+  <h3>五年合并轨迹：跨过一个完整油价波峰</h3>
+  <div class="tblscroll" data-financials="history">
+    <table class="tbl">
+      <caption>FY2021-FY2025经审计；H1经审阅但未经审计。人民币十亿元，另有说明除外。</caption>
+      <thead><tr><th>指标</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026H1</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入</td><td>246.1</td><td>422.2</td><td>416.6</td><td>420.5</td><td>398.2</td><td>242.7</td></tr>
+        <tr><td>归母净利润</td><td>70.3</td><td>141.7</td><td>123.8</td><td>137.9</td><td>122.1</td><td>85.8</td></tr>
+        <tr><td>归母净利率</td><td>28.6%</td><td>33.6%</td><td>29.7%</td><td>32.8%</td><td>30.7%</td><td>35.4%</td></tr>
+        <tr><td>经营现金流</td><td>147.9</td><td>205.6</td><td>209.7</td><td>220.9</td><td>209.0</td><td>141.6</td></tr>
+        <tr><td>资本开支（现金口径）</td><td>73.1</td><td>81.4</td><td>120.9</td><td>123.4</td><td>111.6</td><td>53.4</td></tr>
+        <tr><td>自由现金流（分析口径FCF）</td><td>74.8</td><td>124.2</td><td>88.9</td><td>97.5</td><td>97.5</td><td>88.3</td></tr>
+        <tr><td>基本每股收益（RMB）</td><td>1.57</td><td>3.03</td><td>2.60</td><td>2.90</td><td>2.57</td><td>1.81</td></tr>
+        <tr><td>净资产收益率 ROE（推算）</td><td>15.4%</td><td>26.2%</td><td>19.6%</td><td>19.5%</td><td>15.7%</td><td>20.7%年化</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">FY2021-25收入、归母净利和经营现金流CAGR分别为12.8%、14.8%和9.0%。FCF＝经营现金流－购建固定资产、无形资产及其他长期资产的现金支付；“实际发生资本支出”另有投资发生时点，不能替换现金支付。年度ROE约数＝归母净利/期初期末平均权益；H1按半年利润年化，仅作回报强度观察。H1数值不与全年直接比较。</p>
+
+  <div class="cols" aria-label="2021至2025年营业收入与归母净利润双柱图，共享人民币4222亿元标尺">
+    <div class="col"><div class="val">246 / 70</div><div class="bars"><div class="bar rev" style="height:58.3%"></div><div class="bar np" style="height:16.7%"></div></div></div>
+    <div class="col"><div class="val">422 / 142</div><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:33.6%"></div></div></div>
+    <div class="col"><div class="val">417 / 124</div><div class="bars"><div class="bar rev" style="height:98.7%"></div><div class="bar np" style="height:29.3%"></div></div></div>
+    <div class="col"><div class="val">421 / 138</div><div class="bars"><div class="bar rev" style="height:99.6%"></div><div class="bar np" style="height:32.7%"></div></div></div>
+    <div class="col"><div class="val">398 / 122</div><div class="bars"><div class="bar rev" style="height:94.3%"></div><div class="bar np" style="height:28.9%"></div></div></div>
+  </div>
+  <div class="collabels"><div><b>2021</b>收入 / 归母利润</div><div><b>2022</b>周期峰值</div><div><b>2023</b>油价回落</div><div><b>2024</b>利润修复</div><div><b>2025</b>量增价跌</div></div>
+  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
+  <p class="small">双柱共用同一人民币尺度，数值单位为十亿元；具体数值由上表承重。2022年实现油价最高，也是五年利润峰值。</p>
+
+  <h3>推算单二季度：累计期相减，不是公司单季披露</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <thead><tr><th>指标</th><th>2026Q2推算</th><th>2025Q2推算</th><th>同比</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入（RMB bn）</td><td>126.58</td><td>100.75</td><td class="up">+25.6%</td></tr>
+        <tr><td>归母净利润（RMB bn）</td><td>46.67</td><td>32.97</td><td class="up">+41.6%</td></tr>
+        <tr><td>经营现金流（RMB bn）</td><td>86.48</td><td>51.91</td><td class="up">+66.6%</td></tr>
+        <tr><td>分析口径FCF（RMB bn）</td><td>61.43</td><td>24.98</td><td class="up">+145.9%</td></tr>
+        <tr><td>净产量（mn BOE）</td><td>193.6</td><td>195.8</td><td class="down">-1.1%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>分部承重：勘探生产是利润中心</h3>
+  <div class="tblscroll" data-financials="segments">
+    <table class="tbl">
+      <caption>2026H1经营分部；收入为分部总收入，利润为公司报告的分部利润。</caption>
+      <thead><tr><th>分部</th><th>收入 RMB bn</th><th>分部利润 RMB bn</th><th>同比</th><th>经济含义</th></tr></thead>
+      <tbody>
+        <tr><td>勘探及生产</td><td>210.58</td><td>84.40</td><td class="up">+23.0%</td><td>价值核心</td></tr>
+        <tr><td>贸易业务</td><td>31.52</td><td>3.40</td><td class="up">+38.8%</td><td>销售通道，低利润密度</td></tr>
+        <tr><td>公司及抵销</td><td>0.56</td><td>-1.93</td><td>不适用</td><td>资金管理与内部抵销</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">E&P生产的部分油气经贸易分部销售，外部收入与分部总收入不可相加。2026H1年化平均权益ROE推算为20.7%；该值受高油价半年影响，不是全年预测。ROIC没有统一公司口径，报告不以无定义净现金构造假精确值。</p>
+</section>
+
+<section class="reveal on" id="earnings-bridge">
+  <div class="slabel">盈利 · 价格、销量与成本</div>
+  <h2>价格贡献超过全部利润增量，成本税费拿走一半毛增量</h2>
+  <p>公司给出的归母净利润桥足以判断因果顺序：实现价格贡献人民币274亿元，销量贡献69亿元；营业支出及其他拖累154亿元，所得税再拖累26亿元。净利润只增加约163亿元，因此价格贡献相当于净增量的约1.7倍。</p>
+
+  <div class="wfall" aria-label="2025H1至2026H1归母净利润变化瀑布图，人民币十亿元">
+    <div class="wrow"><div class="nm">2025H1归母净利<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:63.2%"></div></div><div class="fig">69.5</div></div>
+    <div class="wrow"><div class="nm">实现价格<span>公司披露</span></div><div class="wtrack"><div class="wbar up" style="left:63.2%;width:24.9%"></div></div><div class="fig up">+27.4</div></div>
+    <div class="wrow"><div class="nm">销量<span>公司披露</span></div><div class="wtrack"><div class="wbar up" style="left:88.1%;width:6.3%"></div></div><div class="fig up">+6.9</div></div>
+    <div class="wrow"><div class="nm">营业支出及其他<span>公司披露</span></div><div class="wtrack"><div class="wbar down" style="left:80.4%;width:14.0%"></div></div><div class="fig down">-15.4</div></div>
+    <div class="wrow"><div class="nm">所得税<span>公司披露</span></div><div class="wtrack"><div class="wbar down" style="left:78.0%;width:2.4%"></div></div><div class="fig down">-2.6</div></div>
+    <div class="wrow"><div class="nm">2026H1归母净利<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:78.0%"></div></div><div class="fig">85.8</div></div>
+  </div>
+  <p class="small">人民币十亿元；横条共享0-110标尺并按累计位置绘制。69.5 + 27.4 + 6.9 - 15.4 - 2.6 = 85.8，分项与终值有报告取整。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <thead><tr><th>单位经济</th><th>2025H1</th><th>2026H1</th><th>变化</th><th>判断</th></tr></thead>
+      <tbody>
+        <tr><td>实现油价（USD/bbl）</td><td>69.15</td><td>85.49</td><td class="up">+23.6%</td><td>利润主推力</td></tr>
+        <tr><td>实现气价（USD/mcf）</td><td>7.90</td><td>8.00</td><td class="up">+1.3%</td><td>基本稳定</td></tr>
+        <tr><td>桶油主要成本（USD/BOE）</td><td>26.94</td><td>29.70</td><td class="down">+10.2%</td><td>安全垫收窄</td></tr>
+        <tr><td>桶油作业费（USD/BOE）</td><td>6.76</td><td>7.23</td><td class="down">+7.0%</td><td>需观察持续性</td></tr>
+        <tr><td>勘探费用（RMB bn）</td><td>5.23</td><td>7.86</td><td class="down">+50.1%</td><td>风险勘探加码</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>实现油价减桶油主要成本的表观差额从42.21美元扩大到55.79美元，但这不是现金<span class="g">盈亏平衡油价</span>：桶油主要成本未包括全部资本支出、特别收益金、所得税和未来弃置现金。中国原油特别收益金从月加权平均65美元/桶起征，并按20%-40%超额累进，油价越高，利润敏感度越不能机械线性外推。</p>
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>高油价把收入水位抬高，成本上升暂时被覆盖，所以利润仍创纪录。真正值得长期付费的不是“今年赚得多”，而是<b>油价回到中部时，单位成本能否回落、产量能否增长、储量能否补上</b>。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="reserves-projects">
+  <div class="slabel">资源 · 储量、产量与项目管线</div>
+  <h2>储量跟上产量，十年寿命构成真正的周期防线</h2>
+  <p>过去五年，净产量和净证实储量都以约7.9%的复合速度增长，储量寿命维持约十年。FY2025年末净证实储量77.731亿桶油当量，约64.5%位于中国、35.5%位于海外；这一资源底盘比单期利润更能说明公司能否持续生产。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>油气运营历史；储量补充资料按年报标签为未经审计。H1没有储量余额。</caption>
+      <thead><tr><th>指标</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026H1</th></tr></thead>
+      <tbody>
+        <tr><td>净产量（mn BOE）</td><td>573.0</td><td>623.8</td><td>678.0</td><td>726.8</td><td>777.3</td><td>398.7</td></tr>
+        <tr><td>净证实储量（mn BOE）</td><td>5,727.6</td><td>6,238.6</td><td>6,784.2</td><td>7,270.6</td><td>7,773.1</td><td>未披露</td></tr>
+        <tr><td><span class="g">储量寿命</span>（年）</td><td>10.0</td><td>10.0</td><td>10.0</td><td>10.0</td><td>10.0推算</td><td>未披露</td></tr>
+        <tr><td><span class="g">储量替代率</span></td><td>162%</td><td>182%</td><td>180%</td><td>167%</td><td>未披露</td><td>未披露</td></tr>
+        <tr><td>实现油价（USD/bbl）</td><td>67.89</td><td>96.59</td><td>77.96</td><td>76.75</td><td>66.47</td><td>85.49</td></tr>
+        <tr><td>桶油主要成本（USD/BOE）</td><td>29.49</td><td>30.39</td><td>28.83</td><td>28.52</td><td>27.90</td><td>29.70</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">FY2025储量寿命＝7,773.1/777.3≈10.0年，为分析推算；公司没有披露FY2025储量替代率，不能由期初、期末储量变化机械推断，因为修订、收购和处置会混在变动中。</p>
+
+  <h3>地域与油气组合：海外重要，但中国仍是底盘</h3>
+  <div class="stacks">
+    <div class="stack"><div class="cap">2025H1净产量 · 地域</div><div class="stackbar"><div class="seg p" style="width:69.3%">中国 69.3%</div><div class="seg q" style="width:30.7%">海外 30.7%</div></div></div>
+    <div class="stack"><div class="cap">2026H1净产量 · 地域</div><div class="stackbar"><div class="seg p" style="width:69.0%">中国 69.0%</div><div class="seg q" style="width:31.0%">海外 31.0%</div></div></div>
+    <div class="stack"><div class="cap">2025H1净产量 · 流体</div><div class="stackbar"><div class="seg p" style="width:77.0%">液体 77.0%</div><div class="seg r" style="width:23.0%">天然气 23.0%</div></div></div>
+    <div class="stack"><div class="cap">2026H1净产量 · 流体</div><div class="stackbar"><div class="seg p" style="width:77.8%">液体 77.8%</div><div class="seg r" style="width:22.2%">天然气 22.2%</div></div></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>中国 / 石油液体</span><span><i class="q"></i>海外</span><span><i class="r"></i>天然气</span></div>
+  <p>推算Q2的总产量下降主要来自天然气：液体同比增长0.8%，天然气下降7.0%。地域上，中国下降0.4%，海外下降2.7%。这不等同于长期转折，但说明H1增长主要集中在Q1，Buzios、Uaru和国内新项目能否接力是下半年的验证点。</p>
+
+  <h3>把项目按可验证时间排开</h3>
+  <div class="tline" aria-label="中国海油项目和经营目标时间线">
+    <div class="tstop"><div class="tw">2026H1</div><b>五个项目投产</b><p>含巴西Buzios 8，较计划提前三个月。</p></div>
+    <div class="tstop"><div class="tw">2026 Q4</div><b>圭亚那Uaru计划投产</b><p>作业者口径；时间和爬坡仍需验证。</p></div>
+    <div class="tstop"><div class="tw">FY2026</div><b>产量目标780-800</b><p>H2需完成381.3-401.3百万BOE。</p></div>
+    <div class="tstop warn"><div class="tw">2027</div><b>巴西项目继续扩期</b><p>Buzios规划到2027年运行11期；权益产量取决于作业者。</p></div>
+  </div>
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>储量像库存，但不是能随时卖掉的仓库货物。它要经过开发资本、审批和建设才能变成产量。<b>十年储量寿命说明“有东西可开发”，项目按期投产才说明“能按计划变现”。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="cash-capex">
+  <div class="slabel">现金 · 资本开支与分配能力</div>
+  <h2>现金流覆盖投资，但H2仍要完成约一半年度预算</h2>
+  <p>公司H1实际发生资本支出619.93亿元，同比增加7.6%；现金流量表资本性现金支付533.75亿元。两者分别代表投资发生和现金支付时点。经营现金流扣除现金支付得到分析口径FCF 882.56亿元，与公司演示的883亿元取整值一致。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">经营现金流</div><div class="v">141.63<span class="u">bn</span></div><div class="d"><span>2026H1</span></div></div>
+    <div class="cell"><div class="k">现金资本投入</div><div class="v">53.38<span class="u">bn</span></div><div class="d"><span>现金流口径</span></div></div>
+    <div class="cell"><div class="k">分析口径FCF</div><div class="v">88.26<span class="u">bn</span></div><div class="d"><span>公司演示取整88.3</span></div></div>
+    <div class="cell"><div class="k">实际发生资本支出</div><div class="v">61.99<span class="u">bn</span></div><div class="d"><span>投资口径</span></div></div>
+    <div class="cell"><div class="k">全年资本开支预算</div><div class="v">112–122<span class="u">bn</span></div><div class="d"><span>管理层目标</span></div></div>
+    <div class="cell"><div class="k">H2预算剩余额度</div><div class="v">50–60<span class="u">bn</span></div><div class="d"><span>按H1发生额推算</span></div></div>
+  </div>
+
+  <div class="rows" aria-label="2026H1资本支出构成">
+    <div class="row"><div class="nm">开发投资<span>项目建设与投产</span></div><div class="track"><div class="fill" style="width:63.1%"></div></div><div class="fig">RMB39.09bn<span>占63.1%</span></div></div>
+    <div class="row"><div class="nm">生产资本化<span>在产油田维持与增效</span></div><div class="track"><div class="fill soft" style="width:20.7%"></div></div><div class="fig">RMB12.84bn<span>占20.7%</span></div></div>
+    <div class="row"><div class="nm">勘探投资<span>补储与评价</span></div><div class="track"><div class="fill moss" style="width:15.5%"></div></div><div class="fig">RMB9.63bn<span>占15.5%</span></div></div>
+    <div class="row"><div class="nm">其他<span>非核心支出</span></div><div class="track"><div class="fill alt" style="width:.7%"></div></div><div class="fig">RMB0.43bn<span>占0.7%</span></div></div>
+  </div>
+  <p class="small">占比以人民币619.93亿元总额计算；四项合计因披露取整可能有轻微误差。资本开支不是费用，短期影响现金，随后经折旧折耗进入利润。</p>
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>H1的现金足以覆盖当期资本投入和已宣派中期股息，但不能把剩余现金全部视为“可分红”。下半年仍有项目投资，油田最终还要弃置。<b>分红安全取决于中周期现金流，而不是某个高油价半年的FCF。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="balance-sheet">
+  <div class="slabel">防线 · 资产负债表与弃置义务</div>
+  <h2>短债压力很低，长期弃置责任不能当作普通净现金</h2>
+  <p>IFRS报表列示现金及现金等价物1,617.00亿元，以及原到期日在三个月以上、一年内的定期存款1,526.78亿元；带息债务575.72亿元，另有租赁负债105.16亿元。流动性明显充足，但不同现金分类、租赁和弃置义务不能随意拼成一个“净现金”数字。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">现金及现金等价物</div><div class="v">161.70<span class="u">bn</span></div><div class="d"><span>IFRS</span></div></div>
+    <div class="cell"><div class="k">3–12个月定期存款</div><div class="v">152.68<span class="u">bn</span></div><div class="d"><span>另列流动资产</span></div></div>
+    <div class="cell"><div class="k">带息债务</div><div class="v">57.57<span class="u">bn</span></div><div class="d"><span>不含租赁</span></div></div>
+    <div class="cell"><div class="k">资本负债率</div><div class="v">7.3<span class="u">%</span></div><div class="d"><span class="up">较年初 -0.7pp</span></div></div>
+    <div class="cell"><div class="k">油田弃置预计负债</div><div class="v">118.73<span class="u">bn</span></div><div class="d"><span>折现后长期义务</span></div></div>
+    <div class="cell"><div class="k">弃置专户存款</div><div class="v">8.12<span class="u">bn</span></div><div class="d"><span>用途受限</span></div></div>
+  </div>
+  <p>预计负债上半年增加主要来自新增、重估和19.13亿元的折现值转回，部分被使用及汇率折算抵消。弃置时间、工程方案、法规和折现率改变都可能重新计量。流动负债同比期初大增主要因为应付股利，并不等于经营性短债突然恶化。</p>
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>公司眼下不缺钱，但油田不能“关灯离场”。平台和设施最终要拆除，今天确认的是未来支出的折现值。<b>低负债是安全垫，弃置义务提醒我们这不是没有尾部成本的现金牛。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="dividend-governance">
+  <div class="slabel">股东 · 分红与治理</div>
+  <h2>中期股息创纪录，年度政策比单次派息更重要</h2>
+  <p>董事会宣派中期股息每股HK$0.94，较上年增长28.8%，约合人民币388.05亿元，派息率45.2%。公司同时承诺在股东大会批准等前提下，FY2025-FY2027年度派息率不低于45%。前者是本期决定，后者才是跨期政策。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">现金回报有政策锚</div><p>2025末期HK$0.55加2026中期HK$0.94，过去十二个月DPS为HK$1.49；按现价对应Wind追踪毛股息率5.89%。</p></div>
+    <div class="find warn"><div class="t">派息仍是周期函数</div><p>年度最低派息率约束的是利润分配比例，不保证每股绝对金额。油价下降会同时压低盈利和可分配现金。</p></div>
+    <div class="find"><div class="t">控股股东影响重大</div><p>中国海油BVI持股60.54%；上市公司与母集团长期存在勘探、开发、生产、销售和辅助服务关联交易。</p></div>
+    <div class="find"><div class="t">实体边界必须守住</div><p>母集团在中国对外合作海域承担特殊合同角色；其资源、债务或政策职能不能自动视为上市公司权益。</p></div>
+  </div>
+  <p class="small">股息均为税前毛口径；实际预扣税取决于持有人身份及适用安排。持续关联交易按框架协议、市场或政府定价原则执行，仍需独立股东审批和持续监督。</p>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">估值 · 把高油价半年还原成稳态</div>
+  <h2>现价已经写入中高70美元实现油价</h2>
+  <p>低P/E本身不是便宜证据：周期股盈利越接近高点，表面倍数往往越低。本报告先保留已发生H1，再估FY2026报表利润；目标价则使用“同一实现油价维持完整一年”的稳态利润，并让油价越高时倍数越低。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">00883.HK现价</div><div class="v">25.30<span class="u">HKD</span></div><div class="d"><span>2026-08-31</span></div></div>
+    <div class="cell"><div class="k">P/E · TTM</div><div class="v">7.548<span class="u">x</span></div><div class="d"><span>Wind / 自算对齐</span></div></div>
+    <div class="cell"><div class="k">P/B · LF</div><div class="v">1.220<span class="u">x</span></div><div class="d"><span>Wind / 自算对齐</span></div></div>
+    <div class="cell"><div class="k">追踪毛股息率</div><div class="v">5.89<span class="u">%</span></div><div class="d"><span>Wind字段原样</span></div></div>
+    <div class="cell"><div class="k">LTM归母净利</div><div class="v">138.37<span class="u">bn</span></div><div class="d"><span>FY25-H1'25+H1'26</span></div></div>
+    <div class="cell"><div class="k">ICE Brent结算</div><div class="v">89.31<span class="u">USD/bbl</span></div><div class="d"><span>2026-08-28</span></div></div>
+  </div>
+
+  <h3>同业只说明位置，不直接给目标价</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Wind 2026-08-31；股息率字段按供应商惯例视作百分比，响应未显式给单位元数据。</caption>
+      <thead><tr><th>公司</th><th>价格</th><th>P/E TTM</th><th>P/B LF</th><th>股息率</th><th>YTD</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td>中国海油 00883.HK</td><td>HK$25.30</td><td>7.55x</td><td>1.22x</td><td>5.89%</td><td>+21.39%</td></tr>
+        <tr><td>中国石油 00857.HK</td><td>HK$10.17</td><td>9.35x</td><td>1.00x</td><td>5.78%</td><td>+25.05%</td></tr>
+        <tr><td>中国石化 00386.HK</td><td>HK$4.785</td><td>14.24x</td><td>0.60x</td><td>5.25%</td><td>+5.64%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">后两家公司含炼化、销售等一体化业务，利润对油价的方向和幅度不同；它们只能作为市场风险偏好参照。600938.SH同股不同价，未经汇率与市场制度调整不做原始A/H价格比较。</p>
+
+  <h3>先锁住H1，再做稳态压力测试</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <thead><tr><th>情景</th><th>实现油价</th><th>FY26产量</th><th>FY26E归母净利</th><th>稳态净利</th><th>稳态EPS</th><th>目标P/E</th><th>H股价值</th></tr></thead>
+      <tbody>
+        <tr><td>Bear</td><td>US$65</td><td>780mn BOE</td><td>RMB135.0bn</td><td>RMB100.7bn</td><td>HK$2.44</td><td>8.0x</td><td>HK$19.5</td></tr>
+        <tr class="grp"><td>Base</td><td>US$75</td><td>790mn BOE</td><td>RMB152.8bn</td><td>RMB135.2bn</td><td>HK$3.27</td><td>7.5x</td><td>HK$24.6</td></tr>
+        <tr><td>Bull</td><td>US$85</td><td>800mn BOE</td><td>RMB171.4bn</td><td>RMB170.5bn</td><td>HK$4.13</td><td>7.0x</td><td>HK$28.9</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>观察敏感度取公司H1利润桥：人民币274亿元价格贡献除以实现油价同比上升16.34美元，得到H1规模下每1美元约人民币16.77亿元。H2利润再按目标剩余产量缩放；稳态利润假设同一油价维持完整年度。该经验敏感度混合油气、汇率、PSC、税费和权益桶，不能用于极端油价或油田级<span class="g">NAV</span>。</p>
+
+  <h3>把价值和现价放在一把尺上</h3>
+  <div class="rows" aria-label="中国海油稳态情景价值与现价对比">
+    <div class="row"><div class="nm">Bear<span>实现油价US$65、目标低端</span></div><div class="track"><div class="fill alt" style="width:67.5%"></div></div><div class="fig">HK$19.5<span class="down">较现价 -22.9%</span></div></div>
+    <div class="row"><div class="nm">Base<span>实现油价US$75、产量中点</span></div><div class="track"><div class="fill" style="width:85.1%"></div></div><div class="fig">HK$24.6<span class="down">较现价 -2.9%</span></div></div>
+    <div class="row"><div class="nm">现价<span>2026-08-31</span></div><div class="track"><div class="fill soft" style="width:87.5%"></div></div><div class="fig">HK$25.30<span>市场价</span></div></div>
+    <div class="row"><div class="nm">Bull<span>实现油价US$85、产量高端</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$28.9<span class="up">较现价 +14.3%</span></div></div>
+  </div>
+  <p class="small">条形以HK$28.9为100%等比绘制。使用公司中期股息换算率1 HKD＝0.86855 RMB，不是估值日即期汇率；汇率变化会近似同比例影响H股价值。</p>
+
+  <h3>反推市场在押什么</h3>
+  <div class="plain"><span class="pl">一句话总结</span>
+    <p>以现价和7.5倍稳态P/E反推，年产量7.90亿桶油当量时，市场隐含可持续实现油价约<b>76.2美元/桶</b>；7-8倍区间对应约73.6-79.2美元。当前价格已经大致计入Base：产量完成中点、成本不再明显恶化、油价停留中高70美元。追踪股息率与Base派息结果相互吻合，但两者来自同一盈利假设，不能算两份独立安全垫。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">判断 · 多空辩论与验证</div>
+  <h2>中性：好公司属性成立，好价格仍缺安全边际</h2>
+  <p>中国海油的资源、成本和资产负债表显著优于典型高杠杆周期股；这支持它在油价下行时继续投资和派息。问题是市场已经为这种韧性付费：基准情景没有上行余量，乐观情景的收益空间也小于压力情景的回撤。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">最强多方证据</div><p>储量与产量同步增长、储量寿命稳定、债务持续下降。即使油价波动，公司仍有能力把项目和分红同时推进。</p></div>
+    <div class="find warn"><div class="t">最强反方证据</div><p>本期价格贡献超过全部利润增量，Q2产量斜率转负，单位成本上升；现价又高于基准稳态价值。</p></div>
+    <div class="find"><div class="t">真正的公司阿尔法</div><p>不是预测Brent，而是在同样油价下取得更低成本、更高储量替代、更快项目投产和更稳现金分配。</p></div>
+    <div class="find"><div class="t">裁决条件</div><p>下一阶段同时观察实现油价、桶油成本、全年产量区间、Uaru爬坡和年度FCF；任一单项不能独立证明论文。</p></div>
+  </div>
+  <div class="quote">纪录利润可以由市场给，公司价值必须由成本、储量和资本纪律留下。</div>
+  <div class="callout"><b>适用边界：</b>这是一份公司与证券层面的情景判断，不是油价预测。若投资者已经有明确的商品周期观点，报告的价值在于把该观点映射到盈利、股息和价格区间；若没有油价优势判断，现价缺少足够基准安全垫。</div>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · GLOSSARY</div>
+  <h2>读懂上游油气财务需要的词</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>白话解释</th><th>本报告怎样使用</th></tr></thead>
+      <tbody>
+        <tr><td>BOE</td><td>桶油当量，把原油与天然气按能量换算成共同单位。</td><td>比较总产量；不代表油气售价相同。</td></tr>
+        <tr><td>实现油价</td><td>公司实际销售液体收到的平均价格，可能与Brent存在品质、地区和合同差。</td><td>是利润敏感度的直接起点。</td></tr>
+        <tr><td>桶油主要成本</td><td>公司披露的每桶油当量综合成本指标。</td><td>不是完整现金盈亏平衡油价。</td></tr>
+        <tr><td>桶油作业费</td><td>维持当前生产运行的单位费用，范围窄于桶油主要成本。</td><td>单独观察在产资产效率。</td></tr>
+        <tr><td>储量寿命</td><td>期末证实储量除以当年产量，近似还能生产多少年。</td><td>FY2025约十年为推算值。</td></tr>
+        <tr><td>储量替代率</td><td>年度新增证实储量相对年度产量的比例；长期高于100%才算补上消耗。</td><td>FY2025未披露，不自行推断。</td></tr>
+        <tr><td>PSC</td><td>产品分成合同，政府、作业者和参与方按合同分配成本与产量。</td><td>解释海外权益桶与油价敏感度差异。</td></tr>
+        <tr><td>分析口径FCF</td><td>经营现金流减资本性现金支付。</td><td>保持五年一致；与发生额资本支出分开。</td></tr>
+        <tr><td>资本负债率</td><td>带息负债除以股东权益与带息负债之和。</td><td>衡量融资杠杆，不等同资产负债率。</td></tr>
+        <tr><td>NAV</td><td>把每个油田未来现金流折现并加总的净资产价值。</td><td>因缺项目级产量、税费和资本曲线，本报告不伪造NAV。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">方法 · 来源、推算与限制</div>
+  <h2>港交所控制会计，发行人解释经营，Wind只校验市场</h2>
+  <p>本报告先在港交所完整列示00883自2026年初以来的中文披露，再核对标题、实体、代码、日期和期间后下载。2026H1主公告按IFRS/HKAS 34编制，未经审计但经安永按HKSRE 2410审阅；现金流与资本开支用同日港交所“海外监管公告”CAS半年度报告补充，并核对CAS与IFRS归母利润、权益无差异。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <thead><tr><th>层级</th><th>来源</th><th>用途</th><th>保证 / 限制</th></tr></thead>
+      <tbody>
+        <tr><td>P0</td><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600423_c.pdf">2026H1中期业绩公告</a></td><td>IFRS损益、分部、资产负债、股本、股息</td><td>经审阅，未经审计</td></tr>
+        <tr><td>P0</td><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082601039_c.pdf">2026H1半年度报告</a></td><td>CAS现金流、资本开支、生产、税费、弃置</td><td>经审阅，未经审计</td></tr>
+        <tr><td>P0</td><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042800571_c.pdf">2026Q1报告</a></td><td>2026/2025 Q1绝对基数</td><td>未经审计</td></tr>
+        <tr><td>P0</td><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0409/2026040900765_c.pdf">FY2025年报</a>及FY2021-24年报</td><td>五年财务、资本、产量、储量与政策</td><td>财务已审计；油气补充资料按报告标签未经审计</td></tr>
+        <tr><td>P1</td><td><a href="https://www.cnoocltd.com/tzzgx/yjhtjcl/yj/material/2026Mid-yearReviewCN.pdf">发行人2026H1演示</a></td><td>利润桥、成本、项目与目标</td><td>管理层材料，不替代主表</td></tr>
+        <tr><td>P1</td><td>Wind金融数据服务</td><td>价格、估值、同业、Brent时点</td><td>市场快照；字段期间按供应商定义</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>可执行推算</h3>
+  <p>Q2定义为H1累计减Q1累计，只用于可加总流量：收入、利润、现金流、资本支出和产量。Q2实现价格、销售量、精确桶油成本和储量不具备完整绝对基数，保持未披露。FCF、五年CAGR、LTM、P/E、P/B、利润桥、情景价值和反推油价均在本地可执行账本中复算并设置断言。</p>
+  <p>估值情景使用US$65/75/85实现油价、FY2026产量780/790/800百万BOE及8.0/7.5/7.0倍周期压缩P/E。它们是压力测试，不是管理层指引、期货曲线或确定目标价。模型未拆油田级税制、PSC、气价、汇率、维持资本、弃置时间和产量衰减，因此不能替代NAV。</p>
+  <p class="small">完整本地审计包包括 SOURCE_REGISTRY、primary_filing_evidence、history/five_year_cycle_facts、financial_facts_ledger、coverage_ledger、valuation_ledger、q2_derivation_ledger.py 与 calc_ledger.py。2026H1最新电话会逐字稿不可得；发行人演示的问答页没有文字答复，本报告没有使用过期2025H1转录补洞。</p>
+</section>
+
+<footer>
+  <p>数据截止2026-08-31。会计主源为香港交易所正式披露；市场与商品时点来自Wind金融数据服务。报告对象为CNOOC Limited，不是未上市母集团。</p>
+  <p>所有“Q2”均为H1减Q1推算；所有情景、稳态利润和价格阶梯均为分析假设。税费、汇率、持有人税务与商品价格变化会显著改变结果。本报告不构成投资建议。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
