@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>美团 2026Q2 Fullscan 全景尽调 · Meituan 2026Q2 Results Analysis</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">美团 03690.HK / 83690.HK ｜ 全景尽调 ｜ 2026Q2及中期业绩 · 财务截止 2026.06.30</div>
+    <h1>盈利回来了，<br>正常利润率还没回来</h1>
+    <p class="lede">美团在连续多个季度激烈竞争后恢复单季盈利，证明补贴强度下降时平台可以快速收回利润。<b>但商品销售放大了收入，LTM利润与现金仍在深度亏损，订单和单位经济又没有重新披露。</b>这更像盈利正常化的第一张证据，而不是竞争终局。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">单季修复 · 2026Q2经调整净利润</div>
+        <div class="big a">25.24亿</div>
+        <div class="cap">人民币；同比增长69.0%。这是公司直接披露的非IFRS指标，不等同于全年盈利能力。</div>
+      </div>
+      <div>
+        <div class="tag">周期未愈 · LTM经调整净亏损</div>
+        <div class="big b">335.34亿</div>
+        <div class="cap">人民币；按FY2025＋2026H1−2025H1推算。一个好季度尚未覆盖此前竞争消耗。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，读这里</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>美团把外卖、即时零售、到店酒旅和食杂零售装进同一流量与履约网络；核心本地商业赚平台与广告的钱，新业务仍以自营商品销售和扩张投入为主。</li>
+      <li><b>本期成绩：</b>2026Q2收入1,046.43亿元、同比增长14.4%，经营利润26.91亿元，经调整净利润25.24亿元，经营现金流97.33亿元；单季恢复盈利与现金流为正。</li>
+      <li><b>核心矛盾：</b>核心本地商业利润率回到7.9%，却仍远低于竞争前；截至六月的LTM经调整净亏损335.34亿元，现金流净流出260.00亿元。</li>
+      <li><b>容易踩的坑：</b>商品销售贡献了集团同比收入增量的66.5%，而且按主要责任人总额确认；把14.4%的收入增速直接读成平台交易或变现率增长，会高估增长质量。</li>
+      <li><b>结论：</b><b>中性观察</b>。2026年8月31日HK$76.50接近本报告基准值HK$78，市场已经要求核心利润率从本季7.9%继续修复至约10%–12%；在订单、单位经济和连续现金转换重新得到证据前，安全边际不厚。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>一张流量入口，四种收入，两个经济模型</h2>
+  <p>消费者在美团寻找餐饮、零售、酒店和本地服务；商家购买订单、配送、佣金和广告；平台再用骑手、仓配、算法与补贴完成交易。看起来都是“即时零售”，经济实质却分成两类：撮合交易按净额确认佣金或服务费，自营商品则按总额确认销售收入、同时承担库存和履约成本。</p>
+  <div class="steps">
+    <div class="step"><div class="n">环节 1</div><b>消费者提出即时需求</b><p>外卖、闪购、酒店与到店消费共同形成高频入口，网络效应来自需求密度和供给覆盖。</p></div>
+    <div class="step"><div class="n">环节 2</div><b>平台撮合并变现</b><p>配送费、技术服务佣金和在线营销构成平台收入，关键变量是订单密度、履约成本与商家ROI。</p></div>
+    <div class="step"><div class="n">环节 3</div><b>自营商品扩大规模</b><p>小象超市、快驴及部分药品酒类按<span class="g">总额法</span>确认收入，销售额大但毛利率天然低于平台业务。</p></div>
+    <div class="step"><div class="n">环节 4</div><b>利润再投向新网络</b><p>Keeta、食杂和AI需要前置投入；只有其单位经济转正，核心利润才不再长期补贴扩张。</p></div>
+  </div>
+  <p>三个结构性事实必须先记住。第一，港股03690与人民币柜台83690是同一批B类股份的两个交易柜台，不是两套股权。第二，公司法定分部只有“核心本地商业”和“新业务”，并不披露外卖、闪购、到店酒旅、Keeta或小象的独立利润。第三，美团采用<span class="g">不同投票权架构</span>：A类股每股十票、B类股每股一票；王兴兼任董事长和首席执行官。行业壁垒来自流量、供给和履约密度，但消费者与商家都能多平台使用，补贴仍可迅速改写利润率。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">基础财务 · 分部地图 · 口径控制</div>
+  <h2>Q2从亏损谷底反弹，五年报表却显示利润仍高度周期化</h2>
+  <p>本期Q2损益、分部和经营现金流均由公司直接披露，不需要用H1减Q1拼接；Q2归母利润是唯一需要由H1与Q1推导的行项，因此正文以直接披露的期内利润为主。H1财务资料经ISRE 2410审阅，单独Q2比较并非一套独立审阅报表。所有金额均按港交所文件的人民币口径。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">2026Q2收入</div><div class="v">1,046.43<span class="u">亿元</span></div><div class="d"><span class="up">同比 +14.4%</span></div></div>
+    <div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">350.95<span class="u">亿元</span></div><div class="d"><span class="up">同比 +16.7%</span><span>33.5%</span></div></div>
+    <div class="cell"><div class="k">经营利润 / 利润率</div><div class="v">26.91<span class="u">亿元</span></div><div class="d"><span class="up">上年同期2.26亿元</span><span>2.6%</span></div></div>
+    <div class="cell"><div class="k">期内利润</div><div class="v">21.55<span class="u">亿元</span></div><div class="d"><span class="up">同比 +490.0%</span></div></div>
+    <div class="cell"><div class="k">经营现金流</div><div class="v">97.33<span class="u">亿元</span></div><div class="d"><span class="up">同比 +103.9%</span></div></div>
+    <div class="cell"><div class="k">Q2/H1自由现金流</div><div class="v">未披露</div><div class="d"><span>现金资本开支基数缺失</span></div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>直接披露的最新期结果｜人民币十亿元；利润率与同比为分析复算</caption>
+      <thead><tr><th>指标</th><th>2025Q2重述</th><th>2026Q2</th><th>同比 / 变化</th><th>2025H1重述</th><th>2026H1</th></tr></thead>
+      <tbody>
+        <tr><td>收入</td><td>91.490</td><td>104.643</td><td>+14.38%</td><td>177.696</td><td>195.682</td></tr>
+        <tr><td>毛利 / 毛利率</td><td>30.064 / 32.86%</td><td>35.095 / 33.54%</td><td>+16.73% / +0.69个百分点</td><td>62.126 / 34.96%</td><td>61.065 / 31.21%</td></tr>
+        <tr><td>经营利润 / 利润率</td><td>0.226 / 0.25%</td><td>2.691 / 2.57%</td><td>+2.465 / +2.32个百分点</td><td>10.792 / 6.07%</td><td>−3.779 / −1.93%</td></tr>
+        <tr><td>经调整EBITDA</td><td>2.782</td><td>4.098</td><td>+47.31%</td><td>15.084</td><td>1.049</td></tr>
+        <tr><td>经调整净利润 /（亏损）</td><td>1.493</td><td>2.524</td><td>+69.03%</td><td>12.442</td><td>−2.444</td></tr>
+        <tr><td>经营现金流</td><td>4.773</td><td>9.733</td><td>+103.91%</td><td>14.905</td><td>2.719</td></tr>
+        <tr><td>归母EPS（人民币元）</td><td>未披露</td><td>未披露</td><td>不推导单季EPS</td><td>1.72 / 1.61</td><td>−0.76 / −0.82</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout"><b>比较期并非原样搬运。</b>2026Q1起，公司把商品销售单列，并将佣金与在线营销合并为商家服务；2025Q2收入、毛利和销售营销费用各下调3.50亿元，经营利润不变。该等额变化与“收入冲减改列营销费用”一致，但这是分析推断，公司没有给出完整量化解释。本报告所有Q2/H1同比均使用最新公告的重述比较数。</div>
+
+  <div class="tblscroll">
+    <table class="tbl" data-financials="history">
+      <caption>五年合并财务历史｜FY2021—FY2025；人民币十亿元，每股与比率除外；IFRS指标来自经审计年报</caption>
+      <thead><tr><th>指标</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>四年CAGR</th></tr></thead>
+      <tbody>
+        <tr><td>收入</td><td>179.128</td><td>219.955</td><td>276.745</td><td>337.592</td><td>364.855</td><td>19.46%</td></tr>
+        <tr><td>毛利 / 毛利率</td><td>42.474 / 23.71%</td><td>61.753 / 28.08%</td><td>97.191 / 35.12%</td><td>129.785 / 38.44%</td><td>111.009 / 30.43%</td><td>—</td></tr>
+        <tr><td>经营利润 / 利润率</td><td>−23.127 / −12.91%</td><td>−5.820 / −2.65%</td><td>13.415 / 4.85%</td><td>36.845 / 10.91%</td><td>−25.041 / −6.86%</td><td>—</td></tr>
+        <tr><td>归母利润 / 净利率</td><td>−23.538 / −13.14%</td><td>−6.686 / −3.04%</td><td>13.856 / 5.01%</td><td>35.807 / 10.61%</td><td>−23.355 / −6.40%</td><td>—</td></tr>
+        <tr><td>基本每股收益 / ROE</td><td>−3.90 / −21.08%</td><td>−1.09 / −5.26%</td><td>2.23 / 9.87%</td><td>5.85 / 22.06%</td><td>−3.84 / −14.43%</td><td>—</td></tr>
+        <tr><td>期末BVPS（推算）</td><td>20.47</td><td>20.79</td><td>24.34</td><td>28.56</td><td>24.71</td><td>—</td></tr>
+        <tr><td>经营现金流</td><td>−4.011</td><td>11.411</td><td>40.522</td><td>57.147</td><td>−13.815</td><td>—</td></tr>
+        <tr><td>现金资本开支</td><td>9.010</td><td>5.731</td><td>6.880</td><td>10.999</td><td>13.271</td><td>—</td></tr>
+        <tr><td>自由现金流代理：CFO−现金Capex</td><td>−13.022</td><td>5.680</td><td>33.642</td><td>46.147</td><td>−27.086</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cols" role="img" aria-label="FY2021至FY2025收入与归母利润趋势；收入逐年增长，归母利润在2021、2022和2025为亏损">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:49.1%"></div><div class="bar np" style="height:65.7%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:60.3%"></div><div class="bar np" style="height:18.7%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:75.9%"></div><div class="bar np" style="height:38.7%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:92.5%"></div><div class="bar np" style="height:100%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:65.2%"></div></div></div>
+  </div>
+  <div class="collabels">
+    <div><b>2021</b>亏损</div><div><b>2022</b>亏损</div><div><b>2023</b>盈利</div><div><b>2024</b>盈利</div><div><b>2025</b>亏损</div>
+  </div>
+  <div class="legend"><span><i class="p"></i>收入（按收入峰值归一）</span><span><i class="m"></i>归母利润绝对值（按利润峰值归一）</span></div>
+  <p class="small">两组柱分别按各自峰值归一，只用于看方向，不可比较柱高大小；亏损年份已在年签标明。精确数值见上表。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>LTM桥｜截至2026年6月；人民币十亿元；LTM＝FY2025＋2026H1−2025H1</caption>
+      <thead><tr><th>指标</th><th>LTM</th><th>口径与可比性</th></tr></thead>
+      <tbody>
+        <tr><td>收入 / 毛利</td><td>382.139 / 109.246</td><td>使用原披露H1’25从原口径FY2025扣除；H2尚未重述，跨期可比受限</td></tr>
+        <tr><td>经营利润 / 归母利润</td><td>−39.612 / −38.449</td><td>分析推算；利润行不受收入重分类影响</td></tr>
+        <tr><td>经调整EBITDA / 经调整净利润</td><td>−27.818 / −33.534</td><td>公司定义非IFRS指标的滚动桥</td></tr>
+        <tr><td>经营现金流</td><td>−26.000</td><td>直接年度与半年度现金流滚动</td></tr>
+        <tr><td>现金Capex / FCF</td><td>未披露</td><td>2026H1现金资本开支缺失，不以投资现金流代替</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div data-financials="segments">
+    <div class="stacks" role="img" aria-label="Q2报告分部收入结构：2025年核心本地商业71.0%、新业务29.0%；2026年核心68.4%、新业务31.6%">
+      <div class="stack"><div class="cap">2025Q2 · 重述后收入结构</div><div class="stackbar"><div class="seg p" style="width:71.0%">核心 71.0%</div><div class="seg q" style="width:29.0%">新业务 29.0%</div></div></div>
+      <div class="stack"><div class="cap">2026Q2 · 收入结构</div><div class="stackbar"><div class="seg p" style="width:68.4%">核心 68.4%</div><div class="seg q" style="width:31.6%">新业务 31.6%</div></div></div>
+    </div>
+    <div class="legend"><span><i class="p"></i>核心本地商业</span><span><i class="q"></i>新业务</span></div>
+    <p class="small">新业务占比上升不等于其经济贡献同步上升：新业务近七成收入来自总额法商品销售。</p>
+
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>Q2分部与收入类型｜人民币十亿元；利润率为分部经营利润÷分部收入</caption>
+        <thead><tr><th>项目</th><th>2025Q2</th><th>2026Q2</th><th>同比</th><th>2026Q2利润 / 利润率</th></tr></thead>
+        <tbody>
+          <tr><td>核心本地商业</td><td>64.997</td><td>71.531</td><td>+10.05%</td><td>5.668 / 7.92%</td></tr>
+          <tr><td>新业务</td><td>26.493</td><td>33.112</td><td>+24.98%</td><td>−1.739 / −5.25%</td></tr>
+          <tr><td>未分配项目</td><td>—</td><td>—</td><td>—</td><td>−1.238</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rows">
+      <div class="row"><div class="nm">商家服务<span>佣金＋在线营销</span></div><div class="track"><div class="fill" style="width:100%"></div></div><div class="fig">42.383<span>40.5%</span></div></div>
+      <div class="row"><div class="nm">配送服务<span>外卖与闪购混合</span></div><div class="track"><div class="fill soft" style="width:65.7%"></div></div><div class="fig">27.830<span>26.6%</span></div></div>
+      <div class="row"><div class="nm">商品销售<span>主要责任人总额法</span></div><div class="track"><div class="fill alt" style="width:62.9%"></div></div><div class="fig">26.667<span>25.5%</span></div></div>
+      <div class="row"><div class="nm">其他<span>含利息收入</span></div><div class="track"><div class="fill moss" style="width:18.3%"></div></div><div class="fig">7.762<span>7.4%</span></div></div>
+    </div>
+
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>竞争周期中的核心本地商业利润率｜公司直接披露</caption>
+        <thead><tr><th>2024Q2</th><th>2025Q2</th><th>2025Q3</th><th>2025Q4</th><th>2026Q1</th><th>2026Q2</th></tr></thead>
+        <tbody><tr><td>25.1%</td><td>5.7%</td><td>−20.9%</td><td>−15.5%</td><td>−3.2%</td><td>7.9%</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>五年收入从1,791亿元增至3,649亿元，但利润走过“亏损—盈利—再亏损”，说明规模增长并没有自动变成稳定回报。2024年曾是利润高点，2025年的补贴竞争又把经营现金和利润同时拉回负值。</p>
+    <p>Q2确实转好了：收入、毛利、经营利润和现金流都改善。可是半年毛利仍下降，LTM仍亏损。<b>一季修复证明利润可以回来；滚动亏损提醒我们，它还没有回来够久。</b></p>
+  </div>
+  <p class="small">现金资本开支定义为现金支付或预付的物管设备与无形资产；FCF为分析代理，不是公司披露指标。H1期末BVPS约人民币27.40元/法定已发行股，六个月ROE约−2.92%；清洁ROIC因大量金融投资、受限现金、商户资金与分部资产缺失而无法可靠计算。非IFRS指标未经审计且定义可能不同于同业。</p>
+</section>
+
+<section class="reveal on" id="platform">
+  <div class="slabel">平台经济 · 竞争 · 用户与变现</div>
+  <h2>护城河仍在，验证护城河的KPI却不在</h2>
+  <p>美团的优势是本地供给密度、消费者心智、骑手网络与商家工具形成的闭环：更密的订单可以摊薄每单履约成本，更广的供给又能提高复购和广告价值。弱点也来自同一结构——消费者切换成本低、商家可以<span class="g">多平台经营</span>，竞争者只要用补贴买频次，利润就能比收入更快变化。最新利润率轨迹已经证明这种敏感度。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">管理层命题</div><p>行业从非理性竞争转向效率，订单及用户结构改善，核心用户黏性增强；减少用户激励后，配送收入恢复增长。</p></div>
+    <div class="find warn"><div class="t">可证边界</div><p>公告同时把利润恢复归因于激励减少和有利季节性，却没有给订单、用户或单位成本绝对值。</p></div>
+    <div class="find"><div class="t">真正的护城河测试</div><p>非旺季、没有营销费率反弹时，核心收入仍能保持增长并守住正利润，才说明网络密度而非补贴在驱动。</p></div>
+    <div class="find warn"><div class="t">估值折价来源</div><p>没有量、价、频次和变现率，投资者无法把收入增长拆成用户扩张、每单收入、广告渗透或价格变化。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>互联网平台KPI披露审计｜2026Q2</caption>
+      <thead><tr><th>指标</th><th>当前是否披露</th><th>能回答什么</th><th>投资判断</th></tr></thead>
+      <tbody>
+        <tr><td>核心/新业务收入与分部经营利润</td><td>披露</td><td>大类收入和盈利边界</td><td>可审计，但无法下钻至子业务</td></tr>
+        <tr><td>订单、即时配送交易、GTV/GMV</td><td>未披露</td><td>交易量与价格</td><td>无法计算每单收入或平台增速</td></tr>
+        <tr><td>交易用户、商家、频次、ARPU</td><td>未披露</td><td>网络扩张与黏性</td><td>“改善”“创新高”只有方向</td></tr>
+        <tr><td>抽佣率、广告渗透、商户ROI</td><td>未披露</td><td>变现能力</td><td>商家服务增长无法拆量价</td></tr>
+        <tr><td>补贴/单、配送成本/单、贡献利润/单</td><td>未披露</td><td>单位经济</td><td>不能验证利润修复是否结构性</td></tr>
+        <tr><td>外卖、闪购、到店酒旅独立利润</td><td>未披露</td><td>利润来源与交叉补贴</td><td>核心分部率不是“外卖利润率”</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>披露退坡具有时间序列证据：2022年报仍给出6.779亿交易用户、930万活跃商家与人均年交易频次；2023年只保留即时配送交易量；到2025年和本期，用户、频次、ARPU与GTV只剩定性表述。公司仍在文件中定义这些KPI，却没有公布实际数值。缺失本身就是信息：管理层要求市场相信<span class="g">单位经济</span>改善，却减少了检验改善的尺子。</p>
+
+  <div class="callout"><b>骑手保障属于单位成本，不只是ESG。</b>职业伤害保障现已全国覆盖每位骑手和每笔订单，养老保险补贴继续推进；公司没有披露当期费用、每单成本或会计科目。食品安全也进入经营约束：Q1因商家资质审查缺陷被罚7.46亿元，本期公布整改方向但未给缺陷关闭率。</div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>平台生意最重要的不是“总共有多少钱进来”，而是每个用户多下多少单、每单赚多少、为了抢这一单花多少补贴。本期这些数字都没有。<b>利润回来了是事实；为什么能回来、能不能留下，仍主要依赖管理层叙述。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="newbusiness">
+  <div class="slabel">新业务 · 即时零售 · 海外与AI</div>
+  <h2>增长最快的一桶收入，也最容易被总额法误读</h2>
+  <p>“即时零售”不是一种同质经济。美团闪购主要是核心分部的平台撮合；自营药品和酒类也在核心分部但按商品销售；小象超市、快驴属于新业务并承担库存；Keeta则是海外配送网络。把它们合在一起谈增长，会把佣金、广告、自营零售和海外扩张的<span class="g">毛利池</span>与现金需求混为一谈。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">新业务Q2收入</div><div class="v">331.12<span class="u">亿元</span></div><div class="d"><span class="up">同比 +25.0%</span></div></div>
+    <div class="cell"><div class="k">新业务商品销售占比</div><div class="v">69.7%</div><div class="d"><span>按主要责任人总额确认</span></div></div>
+    <div class="cell"><div class="k">新业务经营亏损率</div><div class="v">−5.3%</div><div class="d"><span class="up">上年同期 −7.1%</span></div></div>
+    <div class="cell"><div class="k">Keeta分部收入 / 现金消耗</div><div class="v">未披露</div><div class="d"><span>香港、中东、巴西未拆分</span></div></div>
+    <div class="cell"><div class="k">小象同店 / 单仓盈利</div><div class="v">未披露</div><div class="d"><span>扩城与自有品牌仅定性</span></div></div>
+    <div class="cell"><div class="k">AI收入 / 回报率</div><div class="v">未披露</div><div class="d"><span>只确认研发投入增加</span></div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>增长引擎证据分层</caption>
+      <thead><tr><th>业务</th><th>官方披露</th><th>仍缺什么</th><th>估值处理</th></tr></thead>
+      <tbody>
+        <tr><td>平台即时零售</td><td>核心配送和商品销售增长</td><td>外卖/闪购订单、单均利润</td><td>只在核心分部整体利润率中体现</td></tr>
+        <tr><td>小象超市与食杂</td><td>扩城、自有品牌GTV占比提高</td><td>城市、仓数、复购、损耗、单仓盈亏</td><td>按新业务毛利池折价，不按收入同倍数</td></tr>
+        <tr><td>Keeta</td><td>香港“稳定盈利”；中东效率环比改善；巴西探索</td><td>收入、订单、CAC、贡献利润和现金消耗</td><td>不做独立海外估值</td></tr>
+        <tr><td>AI</td><td>研发费用增加，智能商家工具扩大覆盖</td><td>付费客户、收入、推理成本、转化和回收期</td><td>作为需验证的经营投入，不给独立溢价</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>新业务亏损收窄是正面信号，但不能据此断言Keeta已经自我造血，因为同一分部还包含食杂、单车、充电宝和小额信贷。Q2研发费用同比增加22.5%，管理层指向AI投入；目前却没有AI专项费用、算力资本开支或可验证效率收益。最诚实的读法是：公司在扩大可选项，股东仍无法单独给这些可选项定价。</p>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>一件100元的自营商品，可能把100元都记作收入；一笔100元的平台订单，平台可能只把佣金和服务费记作收入。所以新业务“收入长得快”不一定比平台业务创造更多价值。<b>要看毛利、亏损和现金，而不是只看销售额。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="quality">
+  <div class="slabel">利润质量 · 现金 · 资产负债表</div>
+  <h2>经常性修复存在，投资收益和资产重估也在放大报表</h2>
+  <p>Q2经营利润改善并非“全靠投资收益”：分部利润上升、经营现金转正都是真实支持。但合并经营利润也包含其他收益，H1全面收益更受到战略投资公允价值重估推动。利润、现金与权益必须分开看。</p>
+
+  <div class="wfall" role="img" aria-label="Q2经营利润从2025年的0.226十亿元变为2026年的2.691十亿元；毛利增加5.031，销售营销费用增加2.555，研发增加1.410，一般行政增加0.559，减值增加0.302，公允价值收益减少0.427，其他收益增加2.686">
+    <div class="wrow"><div class="nm">2025Q2经营利润<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:4.5%"></div></div><div class="fig">0.226</div></div>
+    <div class="wrow"><div class="nm">毛利增加<span>核心经营贡献</span></div><div class="wtrack"><div class="wbar up" style="left:0%;width:100%"></div></div><div class="fig">+5.031</div></div>
+    <div class="wrow"><div class="nm">销售营销增加<span>费用拖累</span></div><div class="wtrack"><div class="wbar down" style="left:0%;width:50.8%"></div></div><div class="fig">−2.555</div></div>
+    <div class="wrow"><div class="nm">研发增加<span>含AI投入</span></div><div class="wtrack"><div class="wbar down" style="left:0%;width:28.0%"></div></div><div class="fig">−1.410</div></div>
+    <div class="wrow"><div class="nm">行政与减值<span>合计</span></div><div class="wtrack"><div class="wbar down" style="left:0%;width:17.1%"></div></div><div class="fig">−0.861</div></div>
+    <div class="wrow"><div class="nm">FVTPL变化<span>收益减少</span></div><div class="wtrack"><div class="wbar down" style="left:0%;width:8.5%"></div></div><div class="fig">−0.427</div></div>
+    <div class="wrow"><div class="nm">其他收益增加<span>投资等</span></div><div class="wtrack"><div class="wbar up" style="left:0%;width:53.4%"></div></div><div class="fig">+2.686</div></div>
+    <div class="wrow"><div class="nm">2026Q2经营利润<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:53.5%"></div></div><div class="fig">2.691</div></div>
+  </div>
+  <p class="small">单位为人民币十亿元；条长按最大单项5.031等比显示，七项变化合计2.465，精确衔接两期经营利润。该桥回答报表行项变化，不把费用机械归因于单一业务。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">现金＋短期理财</div><div class="v">1,683.14<span class="u">亿元</span></div><div class="d"><span>不含受限现金</span></div></div>
+    <div class="cell"><div class="k">借款＋票据</div><div class="v">887.01<span class="u">亿元</span></div><div class="d"><span>另有租赁负债71.16亿元</span></div></div>
+    <div class="cell"><div class="k">净金融资产</div><div class="v">724.97<span class="u">亿元</span></div><div class="d"><span>现金＋短期理财−借款−票据−租赁</span></div></div>
+    <div class="cell"><div class="k">战略金融与权益投资</div><div class="v">772.81<span class="u">亿元</span></div><div class="d"><span>非现金、非全部可分配</span></div></div>
+    <div class="cell"><div class="k">H1 FVOCI其他投资重估</div><div class="v">224.74<span class="u">亿元</span></div><div class="d"><span>计入其他综合收益，不进经营利润</span></div></div>
+    <div class="cell"><div class="k">H1全面收益</div><div class="v">148.18<span class="u">亿元</span></div><div class="d"><span>同期净亏损46.72亿元</span></div></div>
+  </div>
+
+  <p>短期偿债不是主矛盾，但“净现金”必须讲清周界。本报告不把受限现金、FVTPL、FVOCI或权益法投资叫作现金；净金融资产也不是可全部分配的余额，因为平台需要运营流动性，叮咚交易若完成还要支付现金。H1对智谱等投资的账面重估抬高了权益和<span class="g">其他综合收益</span>，不能视为经营盈利或可立即分红的资金。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">支持盈利质量</div><p>Q2经营现金流与经调整利润同向为正；毛利增加足以覆盖大部分费用增量，分部经营修复不是纯会计幻觉。</p></div>
+    <div class="find warn"><div class="t">削弱盈利质量</div><p>其他收益对经营利润贡献明显；半年和LTM现金转换仍弱，且缺少现金资本开支，不能验证自由现金流。</p></div>
+    <div class="find warn"><div class="t">资产重估噪音</div><p>战略投资公允价值可以大幅改变全面收益和净资产，却不改变订单、履约或商家变现。</p></div>
+    <div class="find"><div class="t">下一步证据</div><p>FY2026完整现金流、资本开支和营运资金附注，才足以判断Q2现金修复能否滚成全年。</p></div>
+  </div>
+</section>
+
+<section class="reveal on" id="capital">
+  <div class="slabel">资本配置 · 叮咚收购 · 治理</div>
+  <h2>现金不紧，问题是每股价值有没有被持续稀释</h2>
+  <p>美团没有固定派息政策，2025年和2026H1均未派息；股东回报依赖未来盈利、回购和资本配置。当前回购规模远小于股权激励授予，不能把“有回购”自动等同于“每股数下降”。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>股份与激励周界｜最新港交所文件；十亿股，倍数除外</caption>
+      <thead><tr><th>项目</th><th>数量 / 金额</th><th>比较</th><th>解读</th></tr></thead>
+      <tbody>
+        <tr><td>2026年7月末A＋B法定已发行</td><td>6.1755</td><td>—</td><td>03690与83690共享同一B类股份</td></tr>
+        <tr><td>待注销回购</td><td>0.002925 / HK$1.998亿</td><td>约占法定股本0.047%</td><td>尚未抵消整体激励池</td></tr>
+        <tr><td>未行权期权＋未归属RSU＋可转债潜在股</td><td>0.1861</td><td>毛摊薄约3.0%</td><td>期权是否最终行权取决于价格与归属</td></tr>
+        <tr><td>保守毛摊薄股数</td><td>6.3586</td><td>估值分母</td><td>不等同IFRS亏损期摊薄EPS分母</td></tr>
+        <tr><td>4月RSU授予</td><td>0.07932</td><td>回购股数的27.1倍</td><td>零购买价、无绩效目标、时间归属</td></tr>
+        <tr><td>7月RSU授予</td><td>0.01351</td><td>回购股数的4.6倍</td><td>零购买价、无绩效目标、时间归属</td></tr>
+        <tr><td>2026H1股份支付</td><td>人民币33.02亿元</td><td>加权平均股数同比+0.95%</td><td>会计费用与潜在稀释都要监测</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">7月月报已包含当月授予、归属与失效，估值分母不再重复加上4月或7月授予。毛摊薄周界是保守上限；本报告估值使用该分母，并从正常化未分配成本中剔除同批现有奖励的费用，避免同一授予同时按费用和股份重复扣减。未来新增授予仍是独立风险。</p>
+
+  <h3>叮咚买菜：战略方向合理，财务闭环尚未完成</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>交易条款与验证清单｜2026-02-05公告</caption>
+      <thead><tr><th>条款</th><th>官方披露</th><th>投资含义</th></tr></thead>
+      <tbody>
+        <tr><td>初始对价</td><td>7.17亿美元，可调整；内部现金支付</td><td>本报告现金桥只扣一次，不预付协同</td></tr>
+        <tr><td>交割现金</td><td>卖方可提取不超过2.80亿美元；须留至少1.50亿美元净现金</td><td>最终购买价与交割资产负债表仍待核验</td></tr>
+        <tr><td>先决条件</td><td>反垄断、发改委申报、海外业务剥离</td><td>截至资料日未见完成交割公告，不并表</td></tr>
+        <tr><td>长停与费用</td><td>签约后12个月；特定监管失败或触发7,500万美元终止费</td><td>2027-02-05前是关键事件窗口</td></tr>
+        <tr><td>标的经营</td><td>1,000多个前置仓、700多万月购买用户；历史利润未经审核</td><td>交易方向强化食杂，但不能替代交割后单位经济</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>估值情景假定交易完成，并把收购后的食杂经营包含在2027年新业务总量中；若不完成，应同时加回对价并移除对应经营贡献，不能只做其中一边。真正的验收标准不是仓数，而是购买价分配、商誉、重叠仓整合、同店增长和现金贡献。</p>
+
+  <h3>控制权与少数股东边界</h3>
+  <p>A类股十票、B类股一票使创始人投票权显著高于经济权益；年报显示王兴与穆荣均在非保留事项的合计投票权约过半。王兴兼任董事长和CEO，公司明确偏离企业管治守则C.2.1。VIE并非整个集团——2025年综合联属实体收入约占集团5.1%——但合同执行、牌照和利益冲突风险仍存在。良好资本配置要靠可验证的每股结果，而不是只靠董事会意图。</p>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>公司账上有钱，也确实回购了一点股票；但4月和7月两次无业绩条件RSU授予的股数远高于回购。<b>对股东真正重要的是“回购减去新发奖励”后的净股数，而不是回购公告本身。</b></p>
+  </div>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">市场定价 · 情景估值 · 隐含预期</div>
+  <h2>现价不是贵在当季利润，而是已经预付了下一段利润率修复</h2>
+
+  <div class="grid">
+    <div class="cell"><div class="k">现价 / 基本市值</div><div class="v">76.50<span class="u">HKD</span></div><div class="d"><span>Wind 2026-08-31 16:02 HKT</span><span>HK$4,724亿</span></div></div>
+    <div class="cell"><div class="k">悲观价值</div><div class="v">15<span class="u">–25 HKD</span></div><div class="d"><span class="down">竞争重燃，新业务持续烧钱</span></div></div>
+    <div class="cell"><div class="k">基准价值</div><div class="v">70<span class="u">–90 HKD</span></div><div class="d"><span>模型点值约HK$78</span></div></div>
+    <div class="cell"><div class="k">乐观价值</div><div class="v">125<span class="u">–150 HKD</span></div><div class="d"><span class="up">核心双位数利润率稳定</span></div></div>
+    <div class="cell"><div class="k">现价隐含核心利润率</div><div class="v">10.3%<span class="u">–11.7%</span></div><div class="d"><span>取决于是否认可新业务与战略投资价值</span></div></div>
+    <div class="cell"><div class="k">估值判断</div><div class="v">中性</div><div class="d"><span>价格位于基准带内，安全边际有限</span></div></div>
+  </div>
+
+  <h3>为什么不用Q2年化P/E或集团EV/Sales</h3>
+  <p>Q2利润是竞争与季节性共同作用下的一季快照，直接乘四会忽略此前亏损；集团销售额又被总额法商品放大。现金流DCF也会被缺失的H1现金资本开支和未披露的新业务现金消耗制造伪精确。因此主方法是“两引擎”情景：核心按<span class="g">正常化</span>分部EBIT，新业务按毛利池并扣资本化亏损，未分配成本只扣一次；再用现价反推核心利润率。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2027正常化情景输入｜人民币十亿元；全部为分析假设，不是公司指引</caption>
+      <thead><tr><th>驱动</th><th>悲观</th><th>基准</th><th>乐观</th><th>为什么重要</th></tr></thead>
+      <tbody>
+        <tr><td>核心收入 / 分部利润率</td><td>290 / 6.0%</td><td>310 / 10.5%</td><td>330 / 14.0%</td><td>利润率是最大价值变量</td></tr>
+        <tr><td>核心EV/EBIT</td><td>10x</td><td>15x</td><td>17x</td><td>反映增长、竞争与持续性</td></tr>
+        <tr><td>新业务收入 / 毛利率</td><td>155 / 18%</td><td>170 / 20%</td><td>190 / 22%</td><td>情景总量含交割后的叮咚经营</td></tr>
+        <tr><td>新业务毛利倍数 / 利润率</td><td>0.5x / −7%</td><td>1.5x / −2%</td><td>2.0x / +1%</td><td>避免把总额法销售当平台收入</td></tr>
+        <tr><td>正常化未分配成本</td><td>11.0</td><td>8.0</td><td>6.5</td><td>保留企业、AI与并购摊销；同批SBC不重复扣</td></tr>
+        <tr><td>战略投资认可 / 折现率</td><td>0% / 12%</td><td>30% / 11%</td><td>50% / 10%</td><td>对流动性、税和估值波动打折</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rows" role="img" aria-label="美团估值价格阶梯：悲观点18.8港元，基准点78.3港元，现价76.5港元，乐观点138.4港元">
+    <div class="row"><div class="nm">悲观点<span>区间15–25</span></div><div class="track"><div class="fill alt" style="width:13.0%"></div></div><div class="fig">18.8<span>HKD</span></div></div>
+    <div class="row"><div class="nm">现价<span>2026-08-31</span></div><div class="track"><div class="fill soft" style="width:52.8%"></div></div><div class="fig">76.5<span>HKD</span></div></div>
+    <div class="row"><div class="nm">基准点<span>区间70–90</span></div><div class="track"><div class="fill" style="width:54.0%"></div></div><div class="fig">78.3<span>HKD</span></div></div>
+    <div class="row"><div class="nm">乐观点<span>区间125–150</span></div><div class="track"><div class="fill moss" style="width:95.4%"></div></div><div class="fig">138.4<span>HKD</span></div></div>
+  </div>
+
+  <div class="plain">
+    <span class="pl">估值怎么从企业价值走到每股价值</span>
+    <p>基准情景先得到核心经营价值3,682亿元、新业务408亿元；把2027经营价值按11%折回16个月，再加477亿元可归属的超额金融资产和232亿元折价后的战略投资，得到当前股权价值约4,268亿元人民币。最后按人民币1元＝1.1665港元换算，并除以63.59亿股保守毛摊薄股数，约为每股HK$78.3。</p>
+    <p><b>最敏感的不是现金或叮咚对价，而是核心利润率。</b>基准其他条件不变，核心利润率每变化1个百分点，每股价值约变化HK$7.4。</p>
+  </div>
+
+  <h3>现价反推：市场已经要求什么</h3>
+  <p>用现价乘毛摊薄股数，而不是用基本股本市值，得到一致的股权分母。若认可基准情景中的新业务毛利池与战略投资折价价值，现价要求的核心分部率位于上方区间下端；若两者一概不给价值，则落在区间上端。两者都高于本季分部率，但没有把竞争前峰值当作基准。换句话说，现价没有押注回到旧峰，却已经押注Q2不是昙花一现。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Wind一致预期交叉检查｜人民币十亿元，P/E除外；非本报告预测</caption>
+      <thead><tr><th>年度</th><th>收入</th><th>归母净利润</th><th>现价远期P/E</th><th>含义</th></tr></thead>
+      <tbody>
+        <tr><td>2026E</td><td>406.524</td><td>−8.627</td><td>亏损</td><td>市场仍预期全年亏损</td></tr>
+        <tr><td>2027E</td><td>461.957</td><td>19.832</td><td>20.88x</td><td>要求从亏损恢复显著盈利</td></tr>
+        <tr><td>2028E</td><td>518.943</td><td>35.207</td><td>11.76x</td><td>盈利需再近乎翻倍</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Wind返回的贡献机构数与更新时间分布不足，因此一致预期只作市场期待温度计。Wind标准化P/B、P/S字段与本报告的股本及重述口径不一致，未采用。数据来源于万得 Wind 金融数据服务。</p>
+
+  <h3>同业只回答局部问题，不给目标价中位数</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>可比公司边界</caption>
+      <thead><tr><th>公司</th><th>最有用的比较</th><th>为什么集团倍数不可直接搬用</th></tr></thead>
+      <tbody>
+        <tr><td>DoorDash</td><td>按需配送平台单位经济</td><td>美国监管、地理与SBC不同，缺少美团规模的到店酒旅和自营食杂</td></tr>
+        <tr><td>京东</td><td>自营零售与履约强度</td><td>零售和物流占比更高，集团销售与利润率不可比</td></tr>
+        <tr><td>阿里巴巴</td><td>即时零售竞争投入</td><td>云与电商主导，饿了么没有独立上市倍数</td></tr>
+        <tr><td>携程</td><td>酒店旅游变现与利润率</td><td>没有即时配送和食杂经济</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="risks">
+  <div class="slabel">风险 · 反方论证 · 证伪条件</div>
+  <h2>最强反方不是“竞争会更坏”，而是Q2已经标志理性化拐点</h2>
+  <p>谨慎判断也可能错。支持乐观方的证据并不弱：核心收入保持增长，分部利润改善，新业务亏损收窄，销售营销费率下降，经营现金转正。如果这些变化在非旺季重复且激励不再加速，2025年的竞争谷底可能已经过去，当前估值会低估利润弹性。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">乐观方最强论据</div><p>平台只需降低激励就迅速恢复盈利，说明核心网络仍有定价和成本杠杆；新业务也在同时提高效率。</p></div>
+    <div class="find warn"><div class="t">谨慎方最强反驳</div><p>恢复来自激励减少和季节性，绝对订单、用户、补贴和单位成本均缺失；一次竞争再起就可能逆转利润。</p></div>
+    <div class="find"><div class="t">哪个更可检验</div><p>下一两个季度的核心利润率、营销费率、新业务亏损率和经营现金最先给答案。</p></div>
+    <div class="find warn"><div class="t">不能拿来证伪的东西</div><p>股价上涨、管理层形容词或单一收入增速，都不能替代经营阈值。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>风险矩阵与可观察阈值</caption>
+      <thead><tr><th>风险</th><th>概率 / 影响</th><th>领先指标</th><th>谨慎情景确认线</th></tr></thead>
+      <tbody>
+        <tr><td>补贴竞争重燃</td><td>中高 / 高</td><td>核心利润率、销售营销费率</td><td>核心利润率跌破5%或重新亏损</td></tr>
+        <tr><td>增长质量继续下沉</td><td>中 / 中高</td><td>商品销售占增量、商家服务增速</td><td>总额法销售继续主导且毛利率下降</td></tr>
+        <tr><td>新业务扩张吞噬现金</td><td>中高 / 高</td><td>新业务亏损率、Keeta/食杂现金披露</td><td>亏损率重回7%以上</td></tr>
+        <tr><td>现金修复不可持续</td><td>中 / 高</td><td>LTM CFO、FY Capex与营运资金</td><td>完整年度FCF仍为负</td></tr>
+        <tr><td>激励稀释每股价值</td><td>高 / 中</td><td>月报净股数、RSU授予与回购</td><td>摊薄股数持续上升且回购不足</td></tr>
+        <tr><td>叮咚交割与整合</td><td>中 / 中</td><td>批准、最终对价、商誉、同店</td><td>条款恶化、终止费或重大整合亏损</td></tr>
+        <tr><td>骑手、食品和数据监管</td><td>中 / 中高</td><td>每单保障成本、重复处罚</td><td>再处罚或结构性成本上升未被定价吸收</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout"><b>本报告主线的证伪条件：</b>未来两个报告季度，核心本地商业收入仍保持至少高个位数增长，分部利润率在销售营销费率不重新加速的情况下维持7%以上；新业务亏损率继续向5%以内收窄，合并现金转换保持为正。若四项同时成立，Q2应被重新定义为正常化拐点，而不只是季节性撤补贴。</div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">决策框架 · 催化剂 · 监测</div>
+  <h2>现在买的是“修复继续”，不是“便宜到不用等”</h2>
+  <p>当前价格位于基准区间，最合理的姿态是中性观察：承认Q2的真实改善，也不把尚未披露的单位经济、海外盈利和自由现金流提前资本化。已有持仓应把核心利润率和净股数当作硬约束；新资金需要更低价格或更多连续证据，才能形成清楚的安全边际。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>行动规则｜结论只使用前文证据</caption>
+      <thead><tr><th>情形</th><th>价格 / 经营组合</th><th>行动倾向</th><th>为什么</th></tr></thead>
+      <tbody>
+        <tr><td>赔率优先</td><td>进入HK$60以下且核心仍盈利</td><td>开始研究性建仓</td><td>价格不再要求明显双位数核心利润率</td></tr>
+        <tr><td>证据优先</td><td>连续两季满足证伪条件</td><td>即使价格略高也可提高确信度</td><td>把单季修复升级为结构性恢复</td></tr>
+        <tr><td>当前状态</td><td>现价处于基准区，单季好转、滚动仍亏</td><td>中性观察</td><td>证据与价格相互抵消</td></tr>
+        <tr><td>应降低风险</td><td>跌破风险阈值、营销反弹或净股数持续升</td><td>下调情景与仓位</td><td>主线被经营数据直接否定</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tline" role="img" aria-label="美团投资验证时间线：每月证券月报、2026Q3、2026全年、2027年2月叮咚长停、2027Q2同季比较">
+    <div class="tstop"><div class="tw">每月 · 2026H2</div><b>证券变动月报</b><p>看A+B净股数、RSU归属、新授予与回购注销。</p></div>
+    <div class="tstop warn"><div class="tw">2026Q3</div><b>第一道非旺季测试</b><p>核心利润率、营销费率、商家服务和新业务亏损。</p></div>
+    <div class="tstop"><div class="tw">FY2026</div><b>现金闭环</b><p>全年CFO、现金Capex、FCF代理与营运资金。</p></div>
+    <div class="tstop warn"><div class="tw">至 2027.02.05</div><b>叮咚长停窗口</b><p>监管批准、最终对价、交割或终止费用。</p></div>
+    <div class="tstop"><div class="tw">2027Q2</div><b>同季复验</b><p>与本期核心及新业务分部利润率做同季比较。</p></div>
+  </div>
+
+  <div class="quote">美团已经证明“补贴少一点就能赚钱”，尚未证明“竞争回来仍能赚钱”。</div>
+  <p class="small">这是可证伪的阶段性判断，不是永久评级。价格触发必须与经营条件同时使用；单纯跌到某一价格不自动构成买入理由。</p>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">名词速查 · 方法 · 来源</div>
+  <h2>先分清披露、管理层表述、分析推算与情景假设</h2>
+
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <caption>名词速查</caption>
+      <thead><tr><th>术语</th><th>在本报告中的含义</th></tr></thead>
+      <tbody>
+        <tr><td>核心本地商业</td><td>公司法定分部，包含外卖、闪购、到店酒旅及相关自营商品；不是单独的外卖分部。</td></tr>
+        <tr><td>新业务</td><td>公司法定分部，包含小象、快驴、Keeta、单车、充电宝、小额信贷等，不披露子业务利润。</td></tr>
+        <tr><td>商家服务</td><td>2026年新列报口径，把技术服务佣金与在线营销收入合并。</td></tr>
+        <tr><td>总额法</td><td>公司是商品交易主要责任人时，按商品总售价确认收入，而非只确认佣金。</td></tr>
+        <tr><td>GTV / GMV</td><td>平台交易总额；公司本期给出定义但没有公布实际值。</td></tr>
+        <tr><td>经调整净利润</td><td>公司定义的非IFRS指标，剔除股份支付、投资公允价值等项目；不可自动与同业比较。</td></tr>
+        <tr><td>SBC</td><td>股份支付费用；既影响会计利润，也可能通过期权或RSU增加股数。</td></tr>
+        <tr><td>WVR</td><td>不同投票权架构；A类股十票、B类股一票，保留事项除外。</td></tr>
+        <tr><td>净金融资产</td><td>现金＋短期理财−借款−票据−租赁负债；不含受限现金和战略投资。</td></tr>
+        <tr><td>FCF代理</td><td>经营现金流减现金支付或预付的物管设备与无形资产；非公司定义自由现金流。</td></tr>
+        <tr><td>EV/EBIT</td><td>企业经营价值除以正常化息税前利润；本报告仅用于情景翻译。</td></tr>
+        <tr><td>毛摊薄股数</td><td>经济已发行股加全部未行权期权、未归属RSU和可转债潜在股份的保守上限。</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>证据层级与计算规则</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <tbody>
+        <tr><td><b>法定披露</b></td><td>港交所业绩、年报、月报、交易及授予公告控制期间、会计数、分部、股数和条款。</td></tr>
+        <tr><td><b>管理层陈述</b></td><td>“用户结构改善”“香港稳定盈利”等只按管理层表述呈现，不转换为未披露的KPI。</td></tr>
+        <tr><td><b>分析推算</b></td><td>同比、利润率、LTM、FCF代理、净金融资产、毛摊薄股数与估值均有本地可执行计算账本。</td></tr>
+        <tr><td><b>情景假设</b></td><td>2027收入、利润率、倍数、资产折价和折现率不是公司指引，只用于把运营结果映射为价格区间。</td></tr>
+        <tr><td><b>未披露</b></td><td>用户、订单、GTV、单位经济、子业务利润、Keeta现金、AI回报及H1现金Capex保持空白，不用估计补齐。</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>主要来源</h3>
+  <p class="small">[1] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800436_c.pdf">港交所：2026Q2及H1业绩公告，2026-08-28</a>；[2] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0601/2026060101347_c.pdf">港交所：2026Q1业绩公告，2026-06-01</a>；[3] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042400180_c.pdf">港交所：2025年年报，2026-04-24</a>；[4] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0428/2025042800236_c.pdf">港交所：2024年年报</a>；[5] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0429/2024042900116_c.pdf">港交所：2023年年报</a>；[6] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0424/2023042400043_c.pdf">港交所：2022年年报</a>；[7] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0419/2022041900542_c.pdf">港交所：2021年年报</a>。</p>
+  <p class="small">[8] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0827/2025082700398_c.pdf">港交所：2025Q2及H1原公告</a>；[9] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0828/2024082800346_c.pdf">港交所：2024Q2及H1业绩公告</a>；[10] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0205/2026020501303_c.pdf">港交所：收购Dingdong Fresh公告</a>；[11] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0413/2026041301393_c.pdf">港交所：2026-04-13 RSU授予</a>；[12] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0715/2026071501404_c.pdf">港交所：2026-07-15 RSU授予</a>；[13] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0806/2026080600667_c.pdf">港交所：2026年7月证券变动月报</a>。</p>
+  <p class="small">市场价、基本市值、HKD/CNY与一致预期来自Wind，查询截止2026-08-31 16:02:56 HKT。发行人IR确认Q2电话会于2026-08-28举行并提供官方录音，但未发现官方文字稿；本报告未引用电话会Q&amp;A。所有工作底稿位于本地源包，含来源清单、覆盖账本、财务计算与估值脚本。</p>
+
+  <div class="callout"><b>口径边界。</b>财务截止2026-06-30；结果公告截止2026-08-28；市场数据截止2026-08-31。2026H1为未经审计但经审阅的中期财务资料；Standalone Q2管理层比较并非独立审阅报表。估值结果是情景范围，不是目标价承诺。</div>
+</section>
+
+<footer>
+  <p>研究对象：美团（03690.HK / 83690.HK）。主要会计来源为公司港交所中文文件；Wind仅用于行情、汇率、一致预期与市场交叉检查。财务数据以人民币计，估值以港元计。</p>
+  <p>LTM、比率、FCF代理、股数与估值均为分析推算，舍入可能导致尾差。本报告不构成投资建议；投资者应独立核验公告、税务、交易条款与市场价格。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
