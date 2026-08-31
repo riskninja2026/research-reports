@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>智谱 2026年中期 Fullscan 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">智谱 Z.AI 02513.HK ｜ 全景尽调 ｜ 财务截止 2026.06.30 · 行情 2026.08.31</div>
+    <h1>商业化拐点已出现，<br>估值却预支了胜利</h1>
+    <p class="lede">开放平台与API收入半年暴增至8.25亿元，云端毛利率也从负数升到24.6%，这不是纯粹的模型榜单故事。<b>但集团经营亏损和经调整亏损仍在扩大，研发支出是毛利的8.5倍；5,564亿港元市值又把极激进的增长提前写进了股价。</b>智谱已经证明“有人愿意付费”，还没证明“每股资本回报成立”。</p>
+    <div class="dual">
+      <div>
+        <div class="tag">商业化 · 2026H1云端部署收入同比</div>
+        <div class="big a">+2,736%</div>
+        <div class="cap">云端/API收入8.252亿元、占比86.5%；对应毛利率从−0.4%升至24.6%，结构转折是真实可见的。</div>
+      </div>
+      <div>
+        <div class="tag">市场定价 · 备考配售后EV / LTM销售额</div>
+        <div class="big b">301×</div>
+        <div class="cap">使用港交所LTM收入与配售后股数重算。这个价格要求商业化从“爆发”迅速跨到“巨大且高毛利”。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，读这里</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>先校正口径：</b>港交所只披露截至2026年6月30日止六个月的累计业绩，没有独立Q2损益、现金流或资本开支。本报告因此按<b>2026H1</b>分析，不制造单季数字。</li>
+      <li><b>它是谁：</b>智谱是一家基础大模型与MaaS公司，既通过云端API/订阅按调用收费，也向企业交付本地化模型与智能体。2026H1云端部署已占收入86.5%，商业模式从项目制明显转向高频调用。</li>
+      <li><b>本期拐点：</b>收入9.54亿元（+399.7%），开放平台/API收入8.25亿元（+2,735.7%），云端毛利率由−0.4%升到24.6%。销售营销费用反而下降14.8%，支持“产品拉动”而非单纯买量。</li>
+      <li><b>但不是盈利拐点：</b>经营亏损扩大13.0%至21.47亿元，经调整亏损扩大12.1%至19.64亿元。IFRS净亏损收窄12.1%，主要来自投资者金融工具损失减少和联营公司利润增加，而非主营经营转正。</li>
+      <li><b>资金不再是短期问题：</b>7月配售净募资313.75亿港元，备考净现金类资产约291.7亿元人民币；但这是研发与亏损的燃料，不是可分红“闲钱”。同时仍有10%股份奖励授权和待审批A股计划。</li>
+      <li><b>结论：</b><b>中性偏谨慎／观望</b>。商业化证据足以提高基本面评价，却不足以支撑HK$1,195的容错率。即使2028年收入做到220亿元、仍给30倍EV/Sales，最大规划摊薄口径的现值约HK$1,039，仍低于现价。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>把“模型能力”变成“可重复调用”，钱才开始流进来</h2>
+  <p>智谱的核心资产不是一套固定软件，而是一条持续烧钱、持续迭代的基础模型生产线。研发团队训练和强化模型，算力既是研发投入，也是云端服务的直接成本；客户则通过<span class="g">API</span>、订阅、<span class="g">本地化部署</span>和智能体付费。整个商业链条可以拆成四步：</p>
+  <div class="steps">
+    <div class="step"><div class="n">环节 1</div><b>训练基础模型</b><p>研发费用承担模型、数据、人才和训练基础设施；2026H1研发支出21.31亿元，是收入的223%。</p></div>
+    <div class="step"><div class="n">环节 2</div><b>云端按使用收费</b><p>开放平台按token使用量或订阅期收费，企业和开发者无需自建整套模型系统；这是本期86.5%的收入来源。</p></div>
+    <div class="step"><div class="n">环节 3</div><b>企业本地交付</b><p>模型部署在客户基础设施，按模型规模、算力和实施成本定价；验收确认收入，通常更重交付、波动更大。</p></div>
+    <div class="step"><div class="n">环节 4</div><b>调用反哺迭代</b><p>真实编码与Agent任务能提供反馈轨迹；若调用量扩大、单位推理成本下降，云端毛利才可能继续爬升。</p></div>
+  </div>
+  <p>财务报表的正式分部只有<b>云端部署</b>和<b>本地化部署</b>。公告另给出开放平台/API、企业级<span class="g">智能体（Agent）</span>、企业级通用大模型、技术服务四条产品线，它们是管理层拆分，不能冒充IFRS分部。公司2026年1月在香港上市，7月又完成巨额H股配售；今天的投资问题已从“能不能融资”转向“这些资本能不能形成每股价值”。</p>
+  <p>还要避免一个词义陷阱：API调用可以反复发生，但不等于合同锁定的<span class="g">ARR</span>。2026H1收入中89.6%在某一时点确认，只有10.4%随时间确认；公司没有披露续费率、净收入留存率、付费用户绝对数或合同承诺期。文中带<span class="g">虚线下划线</span>的词可在文末「名词速查」查阅。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">基础财务 · 公司概况 · 主营业务结构 · 五年财务概览</div>
+  <h2>收入爆发快过毛利，经营亏损仍在继续扩大</h2>
+  <p>2026H1是智谱上市后的首份中期业绩。港交所公告的合并数字未经审计、已由毕马威按ISRE 2410审阅；比较期同样按未经审计处理。公司公开可比财务轨迹从FY2022起只有四个完整年度，因此下表不人为补一个不存在的“第五年”。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">2026H1 营业收入</div><div class="v">9.539<span class="u">亿元</span></div><div class="d"><span class="up">同比 +399.7%</span></div></div>
+    <div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">2.516<span class="u">亿元</span></div><div class="d"><span class="up">毛利 +163.7%</span><span class="down">毛利率 −23.6pp</span></div></div>
+    <div class="cell"><div class="k">经营亏损 / 率</div><div class="v">21.466<span class="u">亿元</span></div><div class="d"><span class="down">亏损扩大 +13.0%</span><span>−225.0%</span></div></div>
+    <div class="cell"><div class="k">期内净利润（亏损）</div><div class="v">−20.720<span class="u">亿元</span></div><div class="d"><span class="up">净亏损收窄 12.1%</span></div></div>
+    <div class="cell"><div class="k">经调整净亏损</div><div class="v">19.641<span class="u">亿元</span></div><div class="d"><span class="down">亏损扩大 +12.1%</span></div></div>
+    <div class="cell"><div class="k">H1 经营现金流 / FCF</div><div class="v">未披露</div><div class="d"><span>公告无现金流量表</span></div></div>
+  </div>
+
+  <div class="tblscroll" data-financials="history">
+    <table class="tbl">
+      <caption>完整年度历史与最新中期｜仅有四个可比完整年度；人民币亿元；自由现金流代理＝CFO−购买物业设备及无形资产的现金付款</caption>
+      <thead><tr><th>项目</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>2026H1</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入</td><td>0.574</td><td>1.245</td><td>3.124</td><td>7.243</td><td>9.539</td></tr>
+        <tr><td>营业收入CAGR（FY2022—FY2025）</td><td>—</td><td>—</td><td>—</td><td>132.8%</td><td>—</td></tr>
+        <tr><td>毛利 / 毛利率</td><td>0.314 / 54.6%</td><td>0.805 / 64.6%</td><td>1.759 / 56.3%</td><td>2.967 / 41.0%</td><td>2.516 / 26.4%</td></tr>
+        <tr><td>经营亏损</td><td>−0.987</td><td>−6.257</td><td>−25.384</td><td>−37.868</td><td>−21.466</td></tr>
+        <tr><td>净利润（亏损）</td><td>−1.437</td><td>−7.880</td><td>−29.580</td><td>−47.182</td><td>−20.720</td></tr>
+        <tr><td>经调整净亏损</td><td>−0.974</td><td>−6.210</td><td>−24.656</td><td>−31.820</td><td>−19.641</td></tr>
+        <tr><td>基本每股收益（亏损，元，可比口径）</td><td>−0.78*</td><td>−2.95*</td><td>−8.72</td><td>−12.03</td><td>−4.67</td></tr>
+        <tr><td>ROE / ROIC</td><td>不适用</td><td>不适用</td><td>不适用</td><td>不适用</td><td>不适用</td></tr>
+        <tr><td>研发支出</td><td>0.844</td><td>5.289</td><td>21.954</td><td>31.804</td><td>21.312</td></tr>
+        <tr><td>经营现金流（CFO）</td><td>−0.682</td><td>−6.480</td><td>−22.449</td><td>−22.461</td><td>未披露</td></tr>
+        <tr><td>现金资本开支</td><td>0.317</td><td>5.086</td><td>1.328</td><td>0.231</td><td>未披露</td></tr>
+        <tr><td>自由现金流（FCF）代理</td><td>−0.999</td><td>−11.566</td><td>−23.777</td><td>−22.692</td><td>未披露</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout"><b>历史与每股口径限制：</b>公开材料仅有四个可比完整年度（FY2022—FY2025）；该区间营业收入CAGR为132.8%，四年累计自由现金流（FCF）代理约−59.03亿元。FY2022—23每股亏损按1拆10股份拆细做分析调整，标“*”；FY2024起采用公司可比口径。2026H1 EPS分子是普通股股东应占亏损20.208亿元，不等于集团净亏损20.720亿元，差异来自投资者金融工具持有人的亏损分配。ROE/ROIC：不适用，因为公司持续亏损且历史股东权益为负；BVPS也不用于价值判断。</div>
+
+  <div class="cols" role="img" aria-label="FY2022至FY2025收入与毛利趋势，精确数值见上表">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:7.9%"></div><div class="bar np" style="height:4.3%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:17.2%"></div><div class="bar np" style="height:11.1%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:43.1%"></div><div class="bar np" style="height:24.3%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:41.0%"></div></div></div>
+  </div>
+  <div class="collabels"><div><b>FY2022</b></div><div><b>FY2023</b></div><div><b>FY2024</b></div><div><b>FY2025</b></div></div>
+  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>毛利</span></div>
+  <p class="small">柱高统一按FY2025收入7.243亿元缩放；收入长得很快，但毛利柱相对收入柱越来越矮，对应集团毛利率从FY2023的64.6%降至2026H1的26.4%。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>LTM损益桥｜FY2025 + 2026H1 − 2025H1；人民币亿元；LTM＝最近十二个月</caption>
+      <thead><tr><th>营业收入</th><th>毛利 / 率</th><th>经营亏损 / 率</th><th>净亏损</th><th>经调整亏损</th><th>CFO / FCF</th></tr></thead>
+      <tbody><tr><td>14.873</td><td>4.528 / 30.4%</td><td>−40.341 / −271.2%</td><td>−44.323</td><td>−33.941</td><td>不可构造</td></tr></tbody>
+    </table>
+  </div>
+
+  <div data-financials="segments">
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>正式报告分部｜人民币亿元；云端部署与本地化部署为IFRS分部</caption>
+        <thead><tr><th>部署方式</th><th>2026H1收入</th><th>同比</th><th>收入占比</th><th>毛利率</th><th>2025H1毛利率</th></tr></thead>
+        <tbody>
+          <tr><td>云端部署</td><td>8.252</td><td class="up">+2,735.7%</td><td>86.5%</td><td>24.6%</td><td>−0.4%</td></tr>
+          <tr><td>本地化部署</td><td>1.287</td><td class="down">−20.4%</td><td>13.5%</td><td>37.9%</td><td>59.1%</td></tr>
+          <tr class="grp"><td>集团</td><td>9.539</td><td>+399.7%</td><td>100.0%</td><td>26.4%</td><td>50.0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stacks">
+      <div class="stack"><div class="cap">2025H1收入结构</div><div class="stackbar"><div class="seg p" style="width:15.2%">15.2%</div><div class="seg q" style="width:84.8%">84.8%</div></div></div>
+      <div class="stack"><div class="cap">2026H1收入结构</div><div class="stackbar"><div class="seg p" style="width:86.5%">86.5%</div><div class="seg q" style="width:13.5%">13.5%</div></div></div>
+    </div>
+    <div class="legend"><span><i class="p"></i>云端部署</span><span><i class="q"></i>本地化部署</span></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>管理层产品线拆分｜2026H1；人民币亿元；不是额外的IFRS分部</caption>
+      <thead><tr><th>产品线</th><th>收入</th><th>占比</th><th>同比</th><th>毛利率</th><th>2025H1毛利率</th></tr></thead>
+      <tbody>
+        <tr><td>开放平台及API</td><td>8.252</td><td>86.5%</td><td class="up">+2,735.7%</td><td>24.6%</td><td>−0.4%</td></tr>
+        <tr><td>企业级智能体</td><td>0.556</td><td>5.8%</td><td class="up">+304.4%</td><td>35.6%</td><td>64.6%</td></tr>
+        <tr><td>企业级通用大模型</td><td>0.670</td><td>7.0%</td><td class="down">−54.6%</td><td>42.3%</td><td>58.5%</td></tr>
+        <tr><td>技术服务及其他</td><td>0.061</td><td>0.7%</td><td>+1,166.7%</td><td>9.4%</td><td>65.8%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>这不是“老业务多卖一点”，而是<b>交易方式换了</b>：去年同期约85%的收入来自本地化部署，今年约87%来自云端/API。好消息是云端从亏毛利变成24.6%毛利；坏消息是它仍低于本地化业务，且旧业务毛利率也在下滑，所以集团毛利率被结构性拉低。</p>
+    <p>收入放大让经营亏损率从−995%看起来改善到−225%，但绝对经营亏损仍扩大。对一家模型公司，真正的下一道门槛不是“收入继续翻倍”，而是<b>新增毛利增长能否快过研发和算力投入</b>。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="engine">
+  <div class="slabel">投资逻辑与核心增长驱动 · 互联网用户与变现 · 新业务转型</div>
+  <h2>API飞轮开始转动，但关键读数仍只有相对增幅</h2>
+  <p>本期最强的多头证据不是GLM在某一张榜单上的排名，而是三个财务结果同时发生：云端/API收入大幅扩张、云端毛利转正、销售营销费用下降。它们共同说明模型能力已开始通过真实调用变现，而不是完全靠定制项目或买量。</p>
+
+  <div class="flowbox" role="img" aria-label="智谱从模型研发到API收入再反哺研发的商业化飞轮">
+    <svg viewBox="0 0 920 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1E4B8F"/></marker></defs>
+      <rect x="18" y="62" width="155" height="92" rx="4" fill="#E4E8EE" stroke="#C9D0D8"/><text x="95" y="94" text-anchor="middle" font-size="14" fill="#0F1A22" font-weight="600">模型与强化学习</text><text x="95" y="120" text-anchor="middle" font-size="12" fill="#6D7B88">研发、训练、Infra</text>
+      <rect x="205" y="62" width="155" height="92" rx="4" fill="#E4E8EE" stroke="#C9D0D8"/><text x="282" y="94" text-anchor="middle" font-size="14" fill="#0F1A22" font-weight="600">Coding / Agent</text><text x="282" y="120" text-anchor="middle" font-size="12" fill="#6D7B88">真实长程任务</text>
+      <rect x="392" y="62" width="155" height="92" rx="4" fill="#E4E8EE" stroke="#C9D0D8"/><text x="469" y="94" text-anchor="middle" font-size="14" fill="#0F1A22" font-weight="600">API与订阅调用</text><text x="469" y="120" text-anchor="middle" font-size="12" fill="#6D7B88">量 × 价</text>
+      <rect x="579" y="62" width="155" height="92" rx="4" fill="#E7F0EB" stroke="#2C6A57"/><text x="656" y="94" text-anchor="middle" font-size="14" fill="#0F1A22" font-weight="600">收入与毛利</text><text x="656" y="120" text-anchor="middle" font-size="12" fill="#2C6A57">本期已验证</text>
+      <rect x="766" y="62" width="136" height="92" rx="4" fill="#F3E5EA" stroke="#A32B57"/><text x="834" y="94" text-anchor="middle" font-size="14" fill="#0F1A22" font-weight="600">回投研发</text><text x="834" y="120" text-anchor="middle" font-size="12" fill="#A32B57">资本回报待验证</text>
+      <line x1="173" y1="108" x2="202" y2="108" stroke="#1E4B8F" stroke-width="2" marker-end="url(#arrow)"/><line x1="360" y1="108" x2="389" y2="108" stroke="#1E4B8F" stroke-width="2" marker-end="url(#arrow)"/><line x1="547" y1="108" x2="576" y2="108" stroke="#1E4B8F" stroke-width="2" marker-end="url(#arrow)"/><line x1="734" y1="108" x2="763" y2="108" stroke="#1E4B8F" stroke-width="2" marker-end="url(#arrow)"/>
+      <path d="M834 160 C834 207,95 207,95 160" fill="none" stroke="#8FA8CC" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+    </svg>
+    <div class="flow-note"><span class="badge">24.6%</span><span>云端毛利率已经证明“调用放大后不必永久亏毛利”；但要形成真正飞轮，毛利还必须覆盖研发、销售、行政、应收风险与资本成本。</span></div>
+  </div>
+
+  <h3>管理层给出的高频信号</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>经营指标均为管理层陈述，非独立核验；“公告日”晚于2026H1期末</caption>
+      <thead><tr><th>指标</th><th>管理层披露</th><th>能说明什么</th><th>还缺什么</th></tr></thead>
+      <tbody>
+        <tr><td>单位token推理成本</td><td>较年初下降80%</td><td>工程优化与规模效应方向正确</td><td>绝对成本、口径与第三方验证</td></tr>
+        <tr><td>MaaS用户</td><td>期末&gt;580万；公告日&gt;740万</td><td>开发者与企业触达扩大</td><td>付费用户绝对数、留存、ARPU</td></tr>
+        <tr><td>token调用</td><td>公告日较年初&gt;40×</td><td>需求强度快速提升</td><td>绝对token量与客户分布</td></tr>
+        <tr><td>Coding Plan调用</td><td>公告日较年初&gt;23×</td><td>编码场景成为切入口</td><td>收入占比、退款与续费</td></tr>
+        <tr><td>API平均售价</td><td>提高约101%</td><td>量价可能同步改善</td><td>同模型同客户提价还是结构变化</td></tr>
+        <tr><td>付费日活</td><td>较年初+603%</td><td>付费使用加速</td><td>绝对DAU和付费转化率</td></tr>
+        <tr><td>前十大用户日均调用</td><td>增长98×</td><td>进入生产环境的可能性上升</td><td>也可能意味着增长集中</td></tr>
+        <tr><td>算力投入乘数</td><td>每1元算力对应API收入同比+14×</td><td>单位经济方向改善</td><td>算力支出绝对值与计算方法</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>客户质量：历史在分散，本期却停止披露</h3>
+  <p>前五大客户收入占比从2023年的61.5%降到2024年的45.5%、2025H1的40.0%，FY2025进一步降至26.51%，最大客户7.90%。这是积极轨迹；但2026H1没有更新集中度。供应侧并未同样轻松：FY2025前五大供应商采购占52.34%，最大供应商20.92%，而本期算力预付款与应付款都显著上升。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">最强多头证据</div><p>API收入、毛利率和销售费用同时改善，比用户数或榜单更接近可验证商业化。它说明智谱至少已跨过“模型有没有人付费”的门槛。</p></div>
+    <div class="find warn"><div class="t">最强证据缺口</div><p>没有绝对token量、付费用户、留存、NRR、Coding收入占比和H1客户集中度。高增长能否重复，仍无法从合同质量和客户队列上验证。</p></div>
+  </div>
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>把管理层指标看成一张“仪表盘”：几乎所有指针都朝上，但多数只写“比年初多几倍”，没有写底数。低基数可以制造很大的倍数，客户集中也能制造很大的调用增长。财务报表给出的硬确认只有两项：<b>API收入真的来了，API毛利真的转正了</b>；飞轮是否稳定，还要等绝对用户、留存和现金消耗。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="economics">
+  <div class="slabel">盈利能力深度分析</div>
+  <h2>净亏损收窄是会计桥，不是经营杠杆已经转正</h2>
+  <p>报表最容易误读的地方是“期内亏损收窄12.1%”。主营经营层面的经营亏损反而扩大13.0%，经调整亏损也扩大12.1%；IFRS净亏损之所以改善，主要是投资者金融工具账面值损失大幅减少，以及联营公司利润增加。</p>
+
+  <div class="wfall" aria-label="2026H1相对2025H1的亏损变化归因">
+    <div class="wrow"><div class="nm">毛利增加<span>收入扩张带来的正贡献</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:18%"></div></div><div class="fig up">+1.562亿元</div></div>
+    <div class="wrow"><div class="nm">研发费用增加<span>前沿模型与Infra投入</span></div><div class="wtrack"><div class="wbar down" style="left:0;width:50%"></div></div><div class="fig down">−5.365亿元</div></div>
+    <div class="wrow"><div class="nm">投资者工具损失减少<span>融资会计负担下降</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:38%"></div></div><div class="fig up">+4.072亿元</div></div>
+    <div class="wrow"><div class="nm">联营利润增加<span>非主营经营贡献</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:12%"></div></div><div class="fig up">+1.300亿元</div></div>
+    <div class="wrow"><div class="nm">净亏损变化<span>多项合并后的报告结果</span></div><div class="wtrack"><div class="wbar tot" style="left:50%;width:27%"></div></div><div class="fig up">收窄2.859亿元</div></div>
+  </div>
+  <p class="small">条宽仅表达相对方向和量级，精确数值见右侧；不是从毛利到净亏损的完整法定瀑布，未逐项展示销售、行政、减值、财务成本、公允价值及税项。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>利润质量核对｜人民币亿元</caption>
+      <thead><tr><th>指标</th><th>2026H1</th><th>2025H1</th><th>同比</th><th>判断</th></tr></thead>
+      <tbody>
+        <tr><td>经营亏损</td><td>−21.466</td><td>−18.992</td><td class="down">扩大13.0%</td><td>主营仍未出现绝对经营杠杆</td></tr>
+        <tr><td>期内净亏损</td><td>−20.720</td><td>−23.579</td><td class="up">收窄12.1%</td><td>受融资会计和联营利润改善影响</td></tr>
+        <tr><td>经调整净亏损</td><td>−19.641</td><td>−17.520</td><td class="down">扩大12.1%</td><td>核心调整口径没有改善</td></tr>
+        <tr><td>股份支付</td><td>0.858</td><td>1.589</td><td class="up">下降46.0%</td><td>仍是实际人才成本，不能从经济成本中消失</td></tr>
+        <tr><td>研发 / 收入</td><td>223.4%</td><td>835.4%</td><td class="up">比率改善</td><td>收入放大快，但研发仍是毛利8.47倍</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>当前毛利率下，静态盈亏平衡需要多大规模</h3>
+  <p>把本期研发、销售、行政和减值合计，扣除其他收入，再除以26.4%毛利率，可得到一个约<b>90.9亿元半年收入</b>的静态盈亏平衡门槛，约为本期收入的9.5倍。这不是预测：它假设费用绝对额不再增加、毛利率也不变，只是把当前成本结构翻译成“还差多远”。若云端毛利率向35%—40%提升，门槛会明显下降；若模型竞赛继续抬高研发，门槛则会上升。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>收入质量边界｜2026H1</caption>
+      <thead><tr><th>收入确认</th><th>金额</th><th>占比</th><th>可以说</th><th>不能说</th></tr></thead>
+      <tbody>
+        <tr><td>某一时点</td><td>8.543亿元</td><td>89.6%</td><td>调用或交付发生后确认</td><td>不能把全部收入称为合同锁定ARR</td></tr>
+        <tr><td>随时间</td><td>0.996亿元</td><td>10.4%</td><td>部分订阅/服务随合同期确认</td><td>未披露NRR、续费率和剩余履约义务</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>收入增长像一台突然加速的发动机，但研发是一座更大的山。会计净亏损变小，不等于发动机已推动车子上坡；真正要看的是<b>毛利增加一元时，经营亏损能不能减少一元以上</b>。本期答案仍是否定的。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="balance">
+  <div class="slabel">现金流与资本开支 · 资产负债表与财务稳健性</div>
+  <h2>配售消除了短期融资焦虑，也把考题改成资本配置</h2>
+  <p>6月末账面银行存款及现金39.94亿元、短期投资5.06亿元，银行借款22.25亿元；7月配售又带来313.75亿港元净款。按2026年8月28日Wind汇率做备考桥，现金与短投减银行借款、再加配售净款，得到约291.72亿元人民币的“备考净现金类资产”。它不是8月末实际现金，也没有扣未来研发、并购和经营消耗。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">6月末银行存款及现金</div><div class="v">39.94<span class="u">亿元</span></div><div class="d"><span>受限金额未拆分</span></div></div>
+    <div class="cell"><div class="k">银行借款 / 租赁负债</div><div class="v">22.25<span class="u">亿元</span></div><div class="d"><span>另有租赁3.79亿元</span></div></div>
+    <div class="cell"><div class="k">7月配售净款</div><div class="v">313.75<span class="u">亿港元</span></div><div class="d"><span>期后事项</span></div></div>
+    <div class="cell"><div class="k">备考净现金类资产</div><div class="v">291.72<span class="u">亿元</span></div><div class="d"><span>分析口径，不是可分红现金</span></div></div>
+    <div class="cell"><div class="k">流动比率</div><div class="v">2.06<span class="u">×</span></div><div class="d"><span>2025年末0.29×</span></div></div>
+    <div class="cell"><div class="k">H1 CFO / 现金FCF</div><div class="v">未披露</div><div class="d"><span>不能从现金变动倒推</span></div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>营运资本与算力占用｜人民币亿元；2026-06-30对2025-12-31</caption>
+      <thead><tr><th>项目</th><th>2026H1末</th><th>FY2025末</th><th>变化</th><th>投资含义</th></tr></thead>
+      <tbody>
+        <tr><td>贸易应收净额</td><td>7.829</td><td>3.032</td><td class="down">+158.2%</td><td>相当于H1收入82.1%；粗略DSO约103天</td></tr>
+        <tr><td>预付款及其他应收</td><td>16.213</td><td>3.957</td><td class="down">+309.7%</td><td>其中预付计算服务及其他12.437亿元</td></tr>
+        <tr><td>贸易及其他应付款</td><td>21.358</td><td>13.286</td><td>+60.8%</td><td>其中计算服务应付款14.274亿元</td></tr>
+        <tr><td>合约负债</td><td>3.023</td><td>1.486</td><td class="up">+103.4%</td><td>客户预收增加，但小于应收与算力预付</td></tr>
+        <tr><td>银行借款</td><td>22.248</td><td>6.895</td><td class="down">+222.7%</td><td>配售后短期偿债风险显著下降</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>应收净额相当于半年收入的82%，用期初期末平均应收做的粗略DSO约103天；这不是纯API账期，因为应收还可能混合大型企业客户与存量本地项目。计算服务预付占预付款及其他应收的76.7%，计算服务应付占贸易及其他应付的66.8%，说明All-in-Infra不仅是技术口号，也已大幅进入营运资本。</p>
+  <div class="callout"><b>资本开支口径红线：</b>公告提到约3.906亿元“资本开支”，主要来自收购北京红钻后确认物业资产；最终对价直到8月21日才付清。它不是可以直接从CFO扣除的H1现金资本开支。公告又没有现金流量表，因此H1经营现金流、现金资本开支和自由现金流一律标记为“未披露”。</div>
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>大额配售让公司短期“不缺钱”，但没有让商业模式自动赚钱。现金越多，市场越容易把亏损看成可承受；对股东真正重要的是，这笔钱投入模型和算力后，能否让<b>每股毛利、每股现金流和每股价值</b>增长，而不是只让公司规模增长。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="competition">
+  <div class="slabel">行业与宏观环境 · 竞争对手 · 贝塔与阿尔法</div>
+  <h2>榜单领先很短，成本曲线与真实调用才可能留下来</h2>
+  <p>智谱把技术路线描述为“Chat → Coding → Agent → Co-work → Autonomous AI”。Coding的优势是任务结果容易验证，可为长程规划、工具调用和错误恢复提供反馈；公司希望再把这些能力迁移到网络安全、数据分析和复杂自动化。但2026H1的规模收入主要仍来自开放平台/API，Co-work在法律、金融、教育等行业尚未形成可审计的收入分拆。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">pure-play的可能优势</div><p>相较拥有云、广告或企业软件业务的科技巨头，独立模型公司与企业客户核心业务冲突更少；云端、本地、端侧和多芯片适配也提高交付灵活性。</p></div>
+    <div class="find"><div class="t">真实任务反馈</div><p>编码和Agent任务产生可验证轨迹，调用越多，越有机会缩短模型迭代周期。这个机制比一次静态榜单更接近可持续竞争力。</p></div>
+    <div class="find warn"><div class="t">平台对手可以交叉补贴</div><p>科技巨头拥有云资源、分发入口和其他业务现金流，可以压低API价格；智谱则同时承担前沿训练和推理服务的资本强度。</p></div>
+    <div class="find warn"><div class="t">开源压低切换成本</div><p>模型能力差距可能只维持数月，开源权重和兼容API又让客户迁移更容易。ASP能否穿越下一轮价格战，比本期上调101%更重要。</p></div>
+  </div>
+
+  <h3>国产算力：供应安全与成本优势的同一枚硬币</h3>
+  <p>管理层称公司年初实施“All-in-Infra”，已用10万级国产芯片承担推理；GLM-5.3-Flash首次在超大规模真实流量中全面使用国产芯片集群，同硬件基线端到端性能提升3倍，单位token性价比可比主流进口卡。这些都是发行人陈述，尚无第三方生产SLA和单位成本验证。公司也坦承国产芯片内存容量与带宽不足，特别是1M上下文场景仍受限。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>竞争位置的可核验边界</caption>
+      <thead><tr><th>维度</th><th>已有证据</th><th>尚未验证</th><th>下一观察</th></tr></thead>
+      <tbody>
+        <tr><td>模型能力</td><td>GLM-5.3/Flash期后发布，发行人自测长程任务改善</td><td>独立复现、稳定性和故障率</td><td>第三方真实工程任务测试</td></tr>
+        <tr><td>开发者生态</td><td>用户与调用量快速上升</td><td>付费留存、ARPU、迁移率</td><td>绝对付费用户与NRR</td></tr>
+        <tr><td>成本曲线</td><td>云端毛利转正；管理层称token成本−80%</td><td>训练/推理拆分、国产芯片总拥有成本</td><td>云端毛利率持续向30%—40%移动</td></tr>
+        <tr><td>市场位置</td><td>招股书委托研究称2024年中国市场份额6.6%、排名第二</td><td>该估计是否仍适用于2026竞争格局</td><td>以收入、客户和调用绝对值更新</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">2024年市场份额来自招股书中的发行人委托Frost &amp; Sullivan研究，仅作历史背景，不视为独立核验的当前事实。</p>
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>大模型行业没有一条永久护城河。榜单可以被下一次发布刷新，价格可以被大平台补贴，开源可以缩短追赶。智谱真正能建立的优势只有一条：<b>真实任务更多 → 迭代更快 → 成本更低 → 调用更多</b>。本期只验证了这条链的中间两环，尚未验证长期回报。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="governance">
+  <div class="slabel">公司治理专项 · 管理团队与股权结构 · 股东回报</div>
+  <h2>融资能力很强，少数股东要盯的是每股价值而非公司规模</h2>
+  <p>7月配售后，单一最大股东一致行动集团合计持股约28.58%（未上市股26.43%加H股2.15%），未上市股份占总股本48.22%。董事长刘德兵与CEO张鹏分设，董事会由3名执行、3名非执行和3名独立董事组成；审计委员会形式上多数独立，但联合创始人李涓子作为非执行董事仍在其中。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>资本、激励与潜在摊薄｜股份为百万股</caption>
+      <thead><tr><th>事项</th><th>股份 / 资金</th><th>状态</th><th>正确解读</th></tr></thead>
+      <tbody>
+        <tr><td>当前已发行股份</td><td>465.623m</td><td>7月配售后</td><td>估值基础股数</td></tr>
+        <tr><td>H股配售</td><td>19.780m；净款HK$31.375bn</td><td>2026-07-13完成</td><td>股数增加4.44%，短期融资风险下降</td></tr>
+        <tr><td>2026股份奖励计划</td><td>最多44.584m</td><td>股东已批准</td><td>10%授权上限；可市场购股，不等于必然新发</td></tr>
+        <tr><td>拟发行A股</td><td>发行后2%—8%；另最多15%绿鞋</td><td>股东批准，待监管</td><td>会摊薄但也带来新资金，旧数可能因配售调整</td></tr>
+        <tr class="grp"><td>最大规划股数</td><td>554.792m</td><td>分析上限</td><td>比当前+19.2%；不是官方fully diluted股数</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>公司未派中期股息，也没有建立稳定分红政策。上市后半年内，IPO净募资48.96亿港元截至6月末已使用逾93%，随后又配售313.75亿港元，并推进拟募资150亿元人民币的A股计划。公司显然是<b>资本净吸收者</b>；这对前沿模型公司并不意外，但要求投资者把“融资成功”与“股东回报成功”分开。</p>
+
+  <h3>两个收购，两个完全不同的资本配置问题</h3>
+  <div class="finds">
+    <div class="find warn"><div class="t">北京红钻：实质是买物业</div><p>总成本约3.602亿元，标的无实质业务，核心资产是自用物业，并按资产收购入账。这不是AI技术并购；在高现金消耗期，需单独检验物业使用率与替代租赁成本。</p></div>
+    <div class="find warn"><div class="t">中科加禾：战略相关、商誉很高</div><p>2.919亿元收购60% AI基础设施研发公司，可识别净资产0.791亿元，却确认2.444亿元商誉，占对价约84%。收入、利润、核心IP、人员留任和业绩承诺均未披露。</p></div>
+    <div class="find good"><div class="t">短期财务韧性</div><p>配售规模远高于现有债务，研发与基础设施55%、业务扩张及并购15%、营运资金与资本结构30%的用途也已披露。</p></div>
+    <div class="find"><div class="t">长期治理检验</div><p>奖励计划的购买价、绩效目标和部分归属条件可由董事会决定或豁免；每次授予规模、对象、价格和绩效门槛都要逐笔跟踪。</p></div>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>公司会不会成功，和现有每一股能拿到多少成功，并不是同一件事。配售、A股、激励和并购都可能让公司更强；但如果新资本的回报低于摊薄幅度，<b>企业价值增加也可能伴随每股价值下降</b>。这正是当前估值最容易忽略的治理问题。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">估值分析与市场定价 · 盈利预测 · 同业估值</div>
+  <h2>现在不是在给收入付钱，而是在给一条极端成功路径付钱</h2>
+  <p>亏损公司不能用P/E或传统DCF制造精确感。下面按四步走：先重建当前EV，再用同一口径做同业边界，然后给出有明确假设的2028情景，最后反推现价要求的收入规模。所有情景都是分析假设，不是公司指引。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">现价 / 时间</div><div class="v">HK$1,195</div><div class="d"><span>2026-08-31 16:08:51 HKT收市</span></div></div>
+    <div class="cell"><div class="k">总市值</div><div class="v">HK$556.4<span class="u">bn</span></div><div class="d"><span>含全部465.623m股份</span></div></div>
+    <div class="cell"><div class="k">备考企业价值</div><div class="v">HK$522.4<span class="u">bn</span></div><div class="d"><span>扣配售后净现金类资产</span></div></div>
+    <div class="cell"><div class="k">LTM P/S</div><div class="v">320.7<span class="u">×</span></div><div class="d"><span>官方LTM收入重算</span></div></div>
+    <div class="cell"><div class="k">LTM EV/Sales</div><div class="v">301.1<span class="u">×</span></div><div class="d"><span>Wind 667×不采用</span></div></div>
+    <div class="cell"><div class="k">年化H1 EV/Sales</div><div class="v">234.7<span class="u">×</span></div><div class="d"><span>2×H1仅作run-rate</span></div></div>
+  </div>
+
+  <h3>第一步 · 把市场价格换成可审计的企业价值</h3>
+  <p>6月末现金及银行存款39.94亿元人民币，加短期投资5.06亿元，减银行借款22.25亿元，得到配售前净现金类资产22.75亿元；再加7月配售净款按0.85726人民币/港元折算的268.96亿元，备考合计291.72亿元人民币、约340.29亿港元。总市值5,564.20亿港元减去它，得到企业价值5,223.91亿港元。</p>
+  <p class="small">这个桥没有扣租赁负债（影响约4.4亿港元）、未来现金消耗和后续收购，也不把配售款视为可分红资产。官方LTM收入＝FY2025 7.243亿元 + 2026H1 9.539亿元 − 2025H1 1.909亿元＝14.873亿元。Wind显示的667.2倍PS无法与该分母对上，故排除。</p>
+
+  <h3>第二步 · 同业只提供边界，不提供答案</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>统一口径同业交叉检查｜总市值 ÷（2×2026H1收入，换算港元）；Wind 2026-08-31</caption>
+      <thead><tr><th>公司</th><th>业务相关性</th><th>2026H1收入</th><th>总市值</th><th>年化H1 P/S</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td>智谱</td><td>基础模型 + MaaS/API</td><td>RMB0.954bn</td><td>HK$556.4bn</td><td>250.0×</td></tr>
+        <tr><td>MiniMax</td><td>最接近的纯基础模型同业</td><td>US$0.117bn</td><td>HK$121.9bn</td><td>66.7×</td></tr>
+        <tr><td>商汤</td><td>规模化AI模型/软件组合</td><td>RMB2.911bn</td><td>HK$60.8bn</td><td>9.0×</td></tr>
+        <tr><td>云知声</td><td>语音AI与大模型平台</td><td>RMB0.562bn</td><td>HK$5.7bn</td><td>4.4×</td></tr>
+        <tr><td>出门问问</td><td>AIGC、语音及消费AI</td><td>RMB0.079bn</td><td>HK$0.5bn</td><td>2.5×</td></tr>
+        <tr><td>范式智能</td><td>企业AI平台/软件</td><td>RMB3.765bn</td><td>HK$15.6bn</td><td>1.8×</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>MiniMax是唯一接近的模型层pure-play；智谱年化H1收入约为其1.22倍，市值却是4.57倍，收入倍数溢价约3.75倍。机械套用MiniMax倍数只得到约HK$319/股（当前股数）或HK$268/股（最大规划股数），只能说明估值距离，不是目标价。其他公司业务结构、毛利和资本强度差异更大。</p>
+
+  <h3>第三步 · 2028三情景：先写假设，再看价格</h3>
+  <div class="steps">
+    <div class="step"><div class="n">方法</div><b>退出EV/Sales情景</b><p>用2028收入×终值倍数，加2028净现金，再按风险折现到现在；亏损阶段不硬算P/E。</p></div>
+    <div class="step"><div class="n">股数</div><b>两套分母</b><p>基础值用当前465.623m股；审慎值用554.792m最大规划股数，但不给未来A股募资现金加回。</p></div>
+    <div class="step"><div class="n">边界</div><b>有意不是目标价</b><p>倍数、现金与收入均是假设；场景只检验现价需要多激进，不声称能精确预测模型行业。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2028情景估值｜run-rate基数为2×2026H1收入19.08亿元；折现期限28个月；价值为2026-08-31现值</caption>
+      <thead><tr><th>情景</th><th>2028收入</th><th>两年CAGR</th><th>EV/Sales</th><th>2028净现金</th><th>折现率</th><th>当前股数价值</th><th>最大规划股数价值</th></tr></thead>
+      <tbody>
+        <tr><td>熊市</td><td>50亿元</td><td>62%</td><td>10×</td><td>150亿元</td><td>25%</td><td>HK$97</td><td>HK$81</td></tr>
+        <tr><td>基准</td><td>120亿元</td><td>151%</td><td>20×</td><td>200亿元</td><td>20%</td><td>HK$426</td><td>HK$357</td></tr>
+        <tr class="grp"><td>牛市</td><td>220亿元</td><td>240%</td><td>30×</td><td>250亿元</td><td>15%</td><td>HK$1,239</td><td>HK$1,039</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">“最大规划股数”把奖励计划授权上限和拟A股连同绿鞋都加到当前股数，故是保守压力测试：奖励股份可能由市场购买，A股也会带来现金，且旧A股数量可能因7月配售调整。它不是官方fully diluted股数。</p>
+
+  <h3>把三档价值和现价放在一把尺上</h3>
+  <div class="rows" aria-label="2028情景估值与当前股价的比较">
+    <div class="row"><div class="nm">熊市<span>收入50亿 / 10×</span></div><div class="track"><div class="fill alt" style="width:8.1%"></div></div><div class="fig">HK$81–97<span class="down">较现价−93%~−92%</span></div></div>
+    <div class="row"><div class="nm">基准<span>收入120亿 / 20×</span></div><div class="track"><div class="fill soft" style="width:35.6%"></div></div><div class="fig">HK$357–426<span class="down">较现价−70%~−64%</span></div></div>
+    <div class="row"><div class="nm">牛市<span>收入220亿 / 30×</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$1,039–1,239<span>最大规划股数至当前股数</span></div></div>
+    <div class="row"><div class="nm">现价<span>2026-08-31收市</span></div><div class="track"><div class="fill" style="width:96.4%"></div></div><div class="fig">HK$1,195<span>已落在牛市区间</span></div></div>
+  </div>
+  <p class="small">条形以牛市当前股数价值HK$1,239为100%；区间左端采用最大规划股数，右端采用当前股数。现价较7月HK$1,588配售价低24.7%、较HK$2,980高点低59.9%，但仍较HK$116.20 IPO价高928%。高波动不等于低估。</p>
+
+  <h3>第四步 · 现价反向要求什么</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>现价隐含2028收入｜假设15%要求回报、2028净现金250亿元人民币；当前基本市值</caption>
+      <thead><tr><th>2028终值EV/Sales</th><th>现价要求的2028收入</th><th>从2026H1年化基数的两年CAGR</th><th>读法</th></tr></thead>
+      <tbody>
+        <tr><td>20×</td><td>318亿元</td><td>308%</td><td>四年化规模仍给软件高倍数</td></tr>
+        <tr><td>30×</td><td>212亿元</td><td>233%</td><td>接近本报告牛市收入路径</td></tr>
+        <tr><td>40×</td><td>159亿元</td><td>189%</td><td>仍需保持极高终值倍数</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="plain">
+    <span class="pl">一句话总结</span>
+    <p>市场不是只在赌“API收入继续增长”，而是在赌它以极高速度增长、毛利继续改善、竞争者没有把倍数压下来、配售资金没有被亏损过快消耗。<b>现价已经进入本报告的牛市路径</b>，基本面只要“很好”还不够，必须“极好且兑现很快”。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="debate">
+  <div class="slabel">风险因素与预警 · 投资验证 · 多空辩论</div>
+  <h2>争论的核心不是增长真假，而是增长能否跑赢资本消耗</h2>
+  <div class="quote">“智谱已跨过模型有没有人付费的门槛，但还没跨过每股资本回报能不能成立的门槛。”</div>
+
+  <div class="finds">
+    <div class="find good"><div class="t">多头最强论点</div><p>模型能力已经转成真实调用、提价和API毛利转正；国产算力适配与全栈推理优化可能形成“能力—成本—调用”的正反馈。巨额现金又给了公司充分迭代时间。</p></div>
+    <div class="find warn"><div class="t">空头最强论点</div><p>市场可能把一次API爆发误当成稳定SaaS。研发是收入223%、应收是半年收入82%，绝对付费用户、留存、H1集中度和现金流都没披露，估值却已资本化极端成功。</p></div>
+    <div class="find"><div class="t">最可能的中间情形</div><p>收入继续高速增长、云端毛利逐步改善，但研发和算力也持续抬升；公司获得行业地位，股东回报却因估值压缩与新增资本被摊薄。</p></div>
+    <div class="find"><div class="t">什么能解决争论</div><p>连续两期看到云端毛利向30%—40%移动、调整亏损率下降、应收和算力预付不再快过收入，并开始披露绝对付费和留存。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>五个可观察证伪点｜阈值为分析检验，不是公司指引</caption>
+      <thead><tr><th>命题</th><th>支持证据</th><th>削弱或证伪</th><th>主要窗口</th></tr></thead>
+      <tbody>
+        <tr><td>API单位经济成立</td><td>云端毛利稳定&gt;25%，并向30%—40%移动</td><td>毛利回落至20%以下或价格战吞掉成本改善</td><td>FY2026 / H1 2027</td></tr>
+        <tr><td>需求质量分散</td><td>披露绝对付费、留存、NRR；应收增速低于收入</td><td>最大客户重回&gt;20%，应收继续快于收入</td><td>下一份年报</td></tr>
+        <tr><td>经营杠杆出现</td><td>毛利增量高于研发与运营费用增量</td><td>调整亏损仍高于收入，亏损绝对额继续扩大</td><td>未来12—18个月</td></tr>
+        <tr><td>国产算力有经济优势</td><td>第三方验证SLA、长上下文与单位推理成本</td><td>仅局限部分模型，或token成本重新上升</td><td>持续</td></tr>
+        <tr><td>资本配置创造每股价值</td><td>配售资金对应模型、毛利、现金流里程碑</td><td>继续融资/并购/发股，却没有相称毛利和现金流</td><td>A股推进及每期业绩</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="plain">
+    <span class="pl">风险排序</span>
+    <p><b>第一是估值风险</b>：即使公司经营很好，倍数压缩也能让股价受损。<b>第二是单位经济</b>：云端毛利还不够覆盖研发。<b>第三是资本配置与摊薄</b>：资金多但回报未验证。竞争、国产算力、客户集中和并购商誉都通过这三条主线传导，不再另列一串通用风险。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">最终投资建议与操作方案</div>
+  <h2>中性偏谨慎：认可商业化拐点，不为极端成功预付款</h2>
+  <p>智谱2026H1是基本面意义上的重要转折：API收入、调用、提价和云端毛利共同证明商业化不再停留在概念。但经营与调整亏损仍扩大，现金流缺失，收入质量和客户分散度没有足够绝对数据。按HK$1,195，市场已把接近本报告牛市的路径写进股价，风险收益不对称。</p>
+  <p><strong>结论：观望，置信度中等。</strong>不是因为公司没有增长，而是当前价格没有为增长不及极端预期、终值倍数压缩或规划摊薄留出足够缓冲。未提供组合约束，故不建议仓位、止损或交易区间。</p>
+
+  <div class="tline">
+    <div class="tstop"><span class="tw">FY2026</span><b>云端毛利与绝对亏损</b><p>毛利率能否稳定高于25%，调整亏损率和绝对额是否下降。</p></div>
+    <div class="tstop"><span class="tw">下一份年报</span><b>付费与留存透明度</b><p>绝对付费用户、NRR、客户集中度和应收来源是否恢复披露。</p></div>
+    <div class="tstop warn"><span class="tw">A股推进</span><b>摊薄与资金用途</b><p>监管进度、最终股数、价格和募资现金必须重新进估值桥。</p></div>
+    <div class="tstop"><span class="tw">H1 2027</span><b>经营杠杆复验</b><p>新增毛利是否连续快过新增研发与算力成本。</p></div>
+  </div>
+
+  <div class="callout"><b>最强反方观点：</b>本报告可能低估了前沿模型商业化的非线性。如果Coding成为企业软件的新入口，调用量、ASP与毛利同时复利，而国产算力显著降低成本，那么220亿元的2028牛市收入也可能显得保守。能推翻本报告谨慎结论的，不是下一次模型发布，而是连续财务期里“云端毛利上升、调整亏损下降、应收正常、绝对付费留存披露”四项同时出现。</div>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · 快速检索</div>
+  <h2>读懂一家基础模型公司的词</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
+      <tbody>
+        <tr><td>基础大模型</td><td>用海量数据训练、可适配多种任务的通用模型；需要持续研发、训练和推理算力。</td></tr>
+        <tr><td>MaaS</td><td>Model as a Service，把模型能力通过云端API、订阅或工具提供给客户，而非让客户从头训练。</td></tr>
+        <tr><td>API</td><td>应用程序接口；开发者按规则调用模型。收入可以按token使用量或订阅收费。</td></tr>
+        <tr><td>token</td><td>模型处理文本的基本计量单位。调用量不是收入，必须同时看价格与单位推理成本。</td></tr>
+        <tr><td>Coding Plan</td><td>智谱面向编码场景的订阅/调用产品；公告只披露相对调用增长，没有单列收入。</td></tr>
+        <tr><td>Agent / 智能体</td><td>能规划步骤、调用工具并执行任务的模型应用；比单轮问答更接近业务流程。</td></tr>
+        <tr><td>Co-work</td><td>智谱对多智能体协作完成复杂任务的产品路线称呼；当前仍在早期商业化。</td></tr>
+        <tr><td>云端部署</td><td>模型运行在服务方云端，客户按调用或订阅付费；本期占收入86.5%。</td></tr>
+        <tr><td>本地化部署</td><td>模型安装在客户自己的基础设施，通常涉及实施与验收，收入波动和交付成本更明显。</td></tr>
+        <tr><td>ARR / NRR</td><td>年度经常性收入 / 净收入留存率。智谱没有披露，不能用API收入自行替代。</td></tr>
+        <tr><td>毛利率</td><td>收入扣直接销售成本后的比例；云端毛利转正说明调用收入已超过直接推理和服务成本。</td></tr>
+        <tr><td>经营亏损</td><td>毛利扣研发、销售、行政和减值等经营费用后的损失，比受融资会计影响的净亏损更接近主营。</td></tr>
+        <tr><td>经调整亏损</td><td>公司剔除股份支付、投资者工具变化等项目后的非IFRS口径；不是审计准则利润。</td></tr>
+        <tr><td>CFO / FCF</td><td>经营现金流 / 自由现金流。本期公告没有现金流量表，所以两者均未披露。</td></tr>
+        <tr><td>备考净现金类资产</td><td>本报告把6月末现金和短投减银行借款，再加7月配售净款的分析桥；不等于8月末实际或可分红现金。</td></tr>
+        <tr><td>EV / Sales</td><td>企业价值 ÷ 销售额；适合尚未盈利公司做情景比较，但不能替代对毛利与现金消耗的判断。</td></tr>
+        <tr><td>LTM / run-rate</td><td>LTM是最近十二个月滚动合计；run-rate用2×半年收入近似年度速度，均不是公司预测。</td></tr>
+        <tr><td>fully diluted</td><td>把所有潜在股份计入的股数。智谱未来授予和A股仍不确定，故本报告只给“最大规划股数”，不冒充官方完全摊薄数。</td></tr>
+        <tr><td>商誉</td><td>收购价超过可识别净资产的部分；若协同不兑现，未来可能减值。</td></tr>
+        <tr><td>绿鞋</td><td>超额配售权，可在基础发行之外增加一定比例股份；会带来资金，也会增加股数。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">方法与来源</div>
+  <h2>港交所控制财务，Wind只控制带时间戳的市场快照</h2>
+  <p>会计数字、分部定义、股份、配售、激励、A股方案与并购均以港交所中文文件为控制源；Wind用于发行人核验、2026-08-31收市行情、2026-08-28汇率和同业市场值。管理层关于token、用户、ASP、国产芯片和性能的陈述均显式保留为管理层口径。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>主要直接来源与证据边界</caption>
+      <thead><tr><th>文件</th><th>用途</th><th>状态 / 边界</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083101540_c.pdf">2026H1中期业绩公告</a></td><td>当期损益、资产负债、分部、管理层经营陈述、收购及期后事项</td><td>未经审计；毕马威ISRE 2410审阅，无独立Q2或现金流量表</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0419/2026041900086_c.pdf">2025年度报告</a></td><td>审计财务、现金流、治理、客户与供应商集中度</td><td>经审计；现金流口径控制FY2025 FCF</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000018_c.pdf">招股章程</a></td><td>FY2022—24、收入模式、客户历史、竞争与行业估计</td><td>行业数据为发行人委托研究；2025H1未经审计</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0713/2026071300663_c.pdf">H股配售完成公告</a></td><td>配售价、股数、净募资、用途及配售后股本</td><td>期后事项；EV采用备考桥</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0602/2026060200006_c.pdf">2025年度股东会通函</a></td><td>股份奖励计划与A股议案资料</td><td>授权不等于实际授予或发行</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0601/2026060104111_c.pdf">A股方案公告</a></td><td>发行百分比、绿鞋与募资用途</td><td>股东已批准但仍待监管完成</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0414/2026041401145_c.pdf">北京红钻收购公告</a></td><td>物业资产收购的对价与实质</td><td>不是AI技术并购</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="small">本报告财务及事件证据截止2026-08-31，行情截止2026-08-31 16:08:51 HKT。LTM、粗略DSO、静态盈亏平衡、备考净现金类资产、同业统一口径、最大规划股数、情景价值与反向隐含收入均为本地计算账本推算，不是公司披露或指引。2026H1公告内个别管理层分部表把2025H1误标为“经审计”，但首页与招股书均明确为未经审计；本报告统一采用未经审计比较期。</p>
+</section>
+
+<footer>
+  <p>财务、治理与事件来源：香港交易所官方中文文件；行情、汇率与同业快照：Wind金融终端。报告完成日：2026-08-31。</p>
+  <p>用户所称“Q2”在官方披露中仅有H1累计口径，故本报告不生成单二季度损益、现金流、资本开支或FCF。估值情景用于检验市场隐含预期，不构成投资建议、交易要约或收益保证。</p>
+</footer>
+
+</main>
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
