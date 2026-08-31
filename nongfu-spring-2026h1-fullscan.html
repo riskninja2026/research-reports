@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>农夫山泉 2026H1 Fullscan 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">农夫山泉 09633.HK ｜ 全景尽调 ｜ 财务截止 2026.06.30 · 行情 2026.08.31</div>
+    <h1>茶饮料接管增长以后，<br>农夫山泉更强，也更集中</h1>
+    <p class="lede">上半年收入、毛利和归母净利润同步增长，茶饮料已经成为最大的收入品类。<b>但增长越来越依赖一个高利润引擎，传统水业务的利润反而下降；渠道动销、量价拆分和半年现金流又没有公开。</b>这不是“增长真假”的二选一，而是增长质量能否跨品类、跨周期复制的验证题。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">增长集中｜茶饮料占集团收入增量</div>
+        <div class="big a">74.1%</div>
+        <div class="cap">茶饮料本期增加人民币30.34亿元，集团总收入增加40.96亿元；比例为分析计算。</div>
+      </div>
+      <div>
+        <div class="tag">水业务反证｜分部业绩同比</div>
+        <div class="big b">−2.7%</div>
+        <div class="cap">水类分部业绩由人民币33.47亿元降至32.57亿元；该指标是公司调整后的税前利润口径。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，先抓住这五件事</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>农夫山泉以水源、品牌、生产与经销网络，把包装饮用水、即饮茶、功能饮料和果汁卖给中国内地消费者；超过99%的收入与经营利润来自内地。</li>
+      <li><b>本期成绩：</b><span class="g">2026H1（上半年）</span>收入297.18亿元、归母净利润88.87亿元，分别同比增长16.0%和16.6%；茶饮料贡献了约四分之三的收入增量。</li>
+      <li><b>核心张力：</b>茶饮料业务增长快、分部利润率高；水业务收入微增，分部利润与利润率却下滑。组合变强的同时，利润来源也更集中。</li>
+      <li><b>容易踩的坑：</b>港交所文件只披露累计上半年，不是独立第二季度；它也没有本期现金流量表。水的红瓶／绿瓶拆分、销量、实际售价、渠道库存与终端售罄均未披露。</li>
+      <li><b>结论：</b><b>中性。</b>现价HK$43.02高于本报告基准<span class="g">SOTP（分部加总法）</span>HK$40.76，也高于基准规范化现金流估值HK$34.60；低于历史的市盈率不等于已具备足够安全边际。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>一瓶饮料的钱，要穿过四道关</h2>
+  <p>农夫山泉不是单纯的“卖水公司”。它先选择和建设水源地，把水、茶叶、果汁、糖与包装材料变成标准化产品，再用品牌和经销体系把产品铺进零售终端；最终利润还要经过促销、物流、工厂折旧、税项与营运资金的检验。</p>
+  <div class="steps">
+    <div class="step"><div class="n">环节 1</div><b>水源与配方</b><p>天然水依赖水源许可和跨区域运输；茶、果汁与功能饮料还受原料、配方和新品节奏影响。</p></div>
+    <div class="step"><div class="n">环节 2</div><b>生产与包装</b><p>工厂、灌装线和PET塑料瓶包装形成固定投入；产能利用、原料和包装价格共同决定毛利。</p></div>
+    <div class="step"><div class="n">环节 3</div><b>品牌与渠道</b><p>广告、促销、经销与物流把产品送进终端；<span class="g">sell-in</span>是公司出货，<span class="g">sell-through</span>才是消费者买走。</p></div>
+    <div class="step"><div class="n">环节 4</div><b>现金与股东回报</b><p>库存、应收、应付与资本开支决定利润能留下多少现金，董事会再在扩产、理财和股息之间分配。</p></div>
+  </div>
+  <p>新读者先记住三个结构。第一，公司按五个产品类别披露分部收入和“分部业绩”，后者是剔除利息、财务费用、其他未分配收益与总部费用后的调整税前利润，不是毛利或<span class="g">息税前利润（EBIT）</span>。第二，截至2025年末，钟睒睒直接及间接控制约84.04%的总股本，最新披露公众持股约15.87%，少数股东保护和资本配置因此很重要。第三，本期是经安永按<span class="g">香港中期财务审阅准则HKSRE 2410</span>审阅的未经审计中期业绩；没有绝对Q1损益基础，不能倒推出独立Q2。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">基础财务 · 先画全图</div>
+  <h2>五年利润跑赢收入，本期又由茶饮料把斜率拉高</h2>
+  <p>2021—2025年，收入复合增长15.3%，归母净利润复合增长22.0%；水的长期增速温和，茶饮料成为第二增长曲线。2026H1延续了收入与利润的双位数增长，但公告缺少现金流量表，财务闭环只能做到利润和资产负债表，不能做到本期现金。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">上半年收入</div><div class="v">297.18<span class="u">亿元</span></div><div class="d"><span class="up">同比 +16.0%</span></div></div>
+    <div class="cell"><div class="k">上半年毛利</div><div class="v">180.99<span class="u">亿元</span></div><div class="d"><span class="up">同比 +17.1%</span><span>毛利率 60.9%</span></div></div>
+    <div class="cell"><div class="k">上半年经营利润代理</div><div class="v">117.66<span class="u">亿元</span></div><div class="d"><span class="up">同比 +17.0%</span><span>利润率 39.6%</span></div></div>
+    <div class="cell"><div class="k">上半年归母净利润</div><div class="v">88.87<span class="u">亿元</span></div><div class="d"><span class="up">同比 +16.6%</span><span>净利率 29.9% · EPS 0.790元</span></div></div>
+    <div class="cell"><div class="k">上半年经营现金流</div><div class="v">未披露</div><div class="d"><span>业绩公告无现金流量表</span></div></div>
+    <div class="cell"><div class="k">上半年自由现金流代理</div><div class="v">不可计算</div><div class="d"><span>经营现金流与实际资本开支缺失</span></div></div>
+  </div>
+  <p class="small">经营利润代理＝税前利润＋财务费用，用于观察财务费用前的合并利润；公司没有披露“经营利润”小计，该代理仍包含利息、理财等其他收益，不能视作公司KPI。EPS为基本及稀释每股收益，单位为人民币。</p>
+
+  <div class="tblscroll">
+    <table class="tbl" data-financials="history">
+      <caption>五年合并财务轨迹｜人民币亿元；利润率与净资产收益率为分析计算，资本开支仅含购买物业、厂房及设备</caption>
+      <thead><tr><th>年度</th><th>收入</th><th>毛利 / 率</th><th>经营利润代理 / 率</th><th>归母净利 / 率</th><th>EPS</th><th>平均净资产收益率</th><th>经营现金流</th><th>资本开支</th><th>自由现金流代理</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>296.96</td><td>176.56 / 59.5%</td><td>94.07 / 31.7%</td><td>71.62 / 24.1%</td><td>0.637</td><td>39.5%</td><td>114.00</td><td>24.62</td><td>89.38</td></tr>
+        <tr><td>2022</td><td>332.39</td><td>190.95 / 57.4%</td><td>111.26 / 33.5%</td><td>84.95 / 25.6%</td><td>0.756</td><td>37.9%</td><td>120.42</td><td>41.93</td><td>78.48</td></tr>
+        <tr><td>2023</td><td>426.67</td><td>254.07 / 59.5%</td><td>157.88 / 37.0%</td><td>120.79 / 28.3%</td><td>1.074</td><td>45.9%</td><td>173.05</td><td>47.14</td><td>125.91</td></tr>
+        <tr><td>2024</td><td>428.96</td><td>249.16 / 58.1%</td><td>158.79 / 37.0%</td><td>121.23 / 28.3%</td><td>1.078</td><td>39.8%</td><td>110.22</td><td>64.06</td><td>46.16</td></tr>
+        <tr><td>2025</td><td>525.53</td><td>318.08 / 60.5%</td><td>209.84 / 39.9%</td><td>158.68 / 30.2%</td><td>1.411</td><td>44.2%</td><td>211.42</td><td>64.81</td><td>146.60</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="cols" role="img" aria-label="2021至2025年收入与归母净利润趋势，两组柱形共用人民币525.53亿元的最大尺度，数值见上方表格">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:56.5%"></div><div class="bar np" style="height:13.6%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:63.2%"></div><div class="bar np" style="height:16.2%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:81.2%"></div><div class="bar np" style="height:23.0%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:81.6%"></div><div class="bar np" style="height:23.1%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:30.2%"></div></div></div>
+  </div>
+  <div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div>
+  <div class="legend"><span><i class="p"></i>收入</span><span><i class="m"></i>归母净利润</span></div>
+  <p class="small">两组柱形使用同一绝对金额尺度，因此利润柱同时显示规模与趋势。自由现金流代理＝经营现金流－购买物业、厂房及设备的现金支出，不含无形资产与使用权资产购买，也不是公司定义指标。平均ROE＝归母净利润／期初期末平均权益；2021使用2020年末权益作为期初。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>五年产品收入底图｜人民币亿元；括号内为收入占比</caption>
+      <thead><tr><th>产品</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2021–25复合增速（CAGR）</th></tr></thead>
+      <tbody>
+        <tr><td>水类产品</td><td>170.58（57.4%）</td><td>182.63（54.9%）</td><td>202.62（47.5%）</td><td>159.52（37.2%）</td><td>187.09（35.6%）</td><td>+2.3%</td></tr>
+        <tr><td>即饮茶类产品</td><td>45.79（15.4%）</td><td>69.06（20.8%）</td><td>126.59（29.7%）</td><td>167.45（39.0%）</td><td>215.96（41.1%）</td><td>+47.4%</td></tr>
+        <tr><td>功能饮料产品</td><td>36.95（12.4%）</td><td>38.38（11.5%）</td><td>49.02（11.5%）</td><td>49.32（11.5%）</td><td>57.62（11.0%）</td><td>+11.7%</td></tr>
+        <tr><td>果汁饮料产品</td><td>26.14（8.8%）</td><td>28.79（8.7%）</td><td>35.33（8.3%）</td><td>40.85（9.5%）</td><td>51.76（9.8%）</td><td>+18.6%</td></tr>
+        <tr><td>其他产品</td><td>17.50（6.0%）</td><td>13.53（4.1%）</td><td>13.11（3.0%）</td><td>11.82（2.8%）</td><td>13.09（2.5%）</td><td>−7.0%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>LTM（最近十二个月）参考桥｜2025全年＋2026H1－2025H1；人民币亿元</caption>
+      <thead><tr><th>期间</th><th>收入</th><th>毛利 / 率</th><th>经营利润代理 / 率</th><th>归母净利 / 率</th><th>EPS代理</th><th>经营现金流 / 自由现金流代理</th></tr></thead>
+      <tbody><tr><td>LTM至2026.06</td><td>566.49</td><td>344.50 / 60.8%</td><td>226.92 / 40.1%</td><td>171.33 / 30.2%</td><td>1.523元</td><td>不可桥接</td></tr></tbody>
+    </table>
+  </div>
+  <p class="small">LTM EPS代理＝LTM归母净利润171.33038亿元÷期末112.464664亿股＝人民币1.523415元，并非把三个期间的公司披露EPS机械相加减；四舍五入展示为1.523元。</p>
+
+  <div data-financials="segments">
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>2026H1产品收入地图｜人民币亿元；分部业绩留在“盈利机制”专节</caption>
+        <thead><tr><th>产品</th><th>2025H1收入</th><th>2026H1收入</th><th>本期占比</th><th>同比</th></tr></thead>
+        <tbody>
+          <tr><td>水类产品</td><td>94.43</td><td>96.41</td><td>32.4%</td><td>+2.1%</td></tr>
+          <tr><td>即饮茶类产品</td><td>100.89</td><td>131.22</td><td>44.2%</td><td>+30.1%</td></tr>
+          <tr><td>功能饮料产品</td><td>28.98</td><td>33.48</td><td>11.3%</td><td>+15.5%（披露）</td></tr>
+          <tr><td>果汁饮料产品</td><td>25.64</td><td>29.22</td><td>9.8%</td><td>+14.0%</td></tr>
+          <tr><td>其他产品</td><td>6.29</td><td>6.84</td><td>2.3%</td><td>+8.7%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stacks" role="img" aria-label="2025H1与2026H1水、茶及其他产品收入占比对比">
+      <div class="stack"><div class="cap">2025H1收入结构</div><div class="stackbar"><div class="seg p" style="width:36.9%">水 36.9%</div><div class="seg q" style="width:39.4%">茶 39.4%</div><div class="seg r" style="width:23.7%">其他 23.7%</div></div></div>
+      <div class="stack"><div class="cap">2026H1收入结构</div><div class="stackbar"><div class="seg p" style="width:32.4%">水 32.4%</div><div class="seg q" style="width:44.2%">茶 44.2%</div><div class="seg r" style="width:23.4%">其他 23.4%</div></div></div>
+    </div>
+    <div class="legend"><span><i class="p"></i>水类</span><span><i class="q"></i>即饮茶</span><span><i class="r"></i>功能、果汁及其他</span></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>长期看，利润增长比收入快，说明产品组合和经营效率确实变好了；但水业务五年几乎没有增长，茶饮料承担了绝大部分结构升级。</p>
+    <p>本期账面利润仍在增长，<b>现金答案却暂时缺席</b>。完整中期报告发布前，任何“上半年现金流更强”“资本开支下降”或“自由现金流创新高”的说法都没有披露基础。</p>
+  </div>
+  <p class="small">所有H1数字均指截至6月30日止六个月，不是4—6月的独立Q2。2026H1公告未经审计、经安永审阅；2021—2025完整年度为经审计数据。功能饮料同比沿用公司管理层表列的15.5%，精确分部收入输入计算为15.55%、四舍五入为15.6%；其余分析使用精确输入。本期未披露改变合并范围的重大收购，增长按相同集团口径处理。分部收入超过99%来自中国内地，且没有单一客户贡献集团收入10%或以上；地域并非本期的独立价值驱动。</p>
+</section>
+
+<section class="reveal on" id="industry-moat">
+  <div class="slabel">行业、竞争与护城河</div>
+  <h2>水源、品牌与铺货是候选优势，耐久性仍要用现金验证</h2>
+  <p>软饮料的需求高频、单价低、货架竞争强。消费者购买的不只是液体，也在购买口味、信任、包装便利与随手可得；因此品牌心智、经销覆盖、冰柜与货架位置、持续新品和全国物流共同影响经济性。农夫山泉同时经营水、茶、功能和果汁，同一套网络理论上可以摊薄部分销售与物流投入；财报没有量化协同，而且共享网络也使单个产品的真实获客成本和回报难以分离。</p>
+  <div class="finds">
+    <div class="find good"><div class="t">水源是供给条件</div><p>公司上半年新增两个水源地，合计达到17个。水源地、许可、工厂与运输半径需要资本和时间复制；财报没有逐水源披露产能、利用率、单位物流成本或投资回报，无法量化壁垒强度。</p></div>
+    <div class="find good"><div class="t">品牌与铺货可能复用</div><p>同一渠道承载水、东方树叶、茶π、功能饮料与果汁，茶业务跃升与品牌、铺货能力跨品类迁移的假设一致，但财报不能证明这一因果；功能饮料仍待产品级利润验证。</p></div>
+    <div class="find warn"><div class="t">市场份额没有官方底稿</div><p>公司披露品类收入，却没有提供经独立核验的市场份额、终端扫描数据或线上线下渠道占比。本报告不以第三方排名替代财务事实。</p></div>
+    <div class="find warn"><div class="t">规模并不消灭替代品</div><p>消费者可以在纯净水、天然水、无糖茶、含糖茶、能量饮料和果汁之间切换。新品与促销能维持注意力，也会带来持续广告、陈列和冷链投入。</p></div>
+  </div>
+  <p>竞争优势最可验证的证据，不是口号，而是跨周期的高毛利、现金转换和新品复购。现有报表证明茶业务已达到大规模且利润率高；它尚未证明东方树叶消费者的复购率、渠道库存健康度，或新规格带来的增量是否高于渠道迁移。换句话说，当前增长与高利润和“存在竞争优势”的假设一致，但耐久性还需渠道与现金作第二重证据。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>一个强饮料品牌可以用同一套广告和经销网络卖更多品类，所以规模越大通常越有效率。可它也必须不断花钱守货架、做新品。<b>真正的护城河不是“大家听过”，而是消费者反复购买以后，公司仍能保持利润并收到现金。</b></p></div>
+</section>
+
+<section class="reveal on" id="portfolio-channel">
+  <div class="slabel">产品、品牌与渠道</div>
+  <h2>茶饮料是已兑现的第二曲线，其他新品仍处验证前段</h2>
+  <p>茶饮料已从补充品类变成最大收入来源。上半年，东方树叶增加335毫升与900毫升规格，冷萃龙井于4月25日进入山姆渠道并采用全程冷链；茶π全线减糖超过25%。功能饮料则新增柠檬和西柚口味及不同容量的电解质产品。以上动作能证明产品与渠道实验正在发生，不能单独证明终端复购、增量毛利或投资回报。</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>本期产品与渠道证据分层｜披露事实、管理层陈述与缺失项分开</caption>
+      <thead><tr><th>主题</th><th>可确认事实</th><th>仍缺的决策数据</th></tr></thead>
+      <tbody>
+        <tr><td>东方树叶</td><td>新增规格；冷萃龙井进入山姆并采用冷链</td><td>单品收入、复购、冷链成本、渠道增量</td></tr>
+        <tr><td>茶π</td><td>全线减糖超过25%</td><td>销量、消费者迁移、单位毛利</td></tr>
+        <tr><td>电解质饮料</td><td>新口味和550/950毫升规格上市</td><td>铺货率、售罄、获客成本、利润率</td></tr>
+        <tr><td>水业务</td><td>新增两个水源；合计17个</td><td>红瓶／绿瓶收入、量价、分渠道库存</td></tr>
+        <tr><td>三十周年活动</td><td>公司称15天获逾300万票和2万余条评论</td><td>活动带来的收入、留存与促销回报</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">公司关于山姆榜单、活动互动和品牌信任的表述属于管理层陈述，不是审计指标。上半年文件没有披露销量、实际售价、经销商数量、渠道收入、渠道库存、终端售罄或复购率。</p>
+  <div class="quote">茶的成功已经改变集团组合；下一道题不是继续讲品牌故事，而是证明增长不靠单一爆款、促销堆叠或渠道压货。</div>
+  <p>“水业务是否恢复”尤其容易误读。收入回到小幅增长，并不等于定价权、销量与利润都恢复，因为公司没有红瓶天然水与绿瓶纯净水的拆分，也没有量价桥。能确认的是产品类别的收入和调整分部利润；其余渠道与品牌健康指标必须保留为未披露。</p>
+</section>
+
+<section class="reveal on" id="profitability">
+  <div class="slabel">盈利机制与利润质量</div>
+  <h2>茶不仅长得快，也贡献了大部分增量利润</h2>
+  <p>公司披露的分部业绩是调整税前利润。茶饮料本期利润率继续上升，果汁改善更明显；水、功能饮料和其他产品的分部利润率下降。管理层把集团毛利率上升归因于产品组合以及果汁、糖等原料价格下降，并称PET价格上涨构成部分抵消；文件没有量化各因素贡献。销售费用率基本持平，说明增长并未带来明显的销售费用杠杆。</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>分部业绩率｜分部业绩÷分部收入；分析计算，不是毛利率或EBIT率</caption>
+      <thead><tr><th>产品</th><th>2025H1</th><th>2026H1</th><th>同比变化</th><th>判断</th></tr></thead>
+      <tbody>
+        <tr><td>水类产品</td><td>35.4%</td><td>33.8%</td><td class="down">−1.7个百分点</td><td>收入微增但经济性转弱</td></tr>
+        <tr><td>即饮茶类产品</td><td>48.4%</td><td>48.8%</td><td class="up">+0.5个百分点</td><td>规模增长仍保住高利润率</td></tr>
+        <tr><td>功能饮料产品</td><td>47.1%</td><td>44.7%</td><td class="down">−2.4个百分点</td><td>利润率转弱；分部原因未单独披露</td></tr>
+        <tr><td>果汁饮料产品</td><td>31.3%</td><td>36.1%</td><td class="up">+4.8个百分点</td><td>利润率改善；分部原因未单独披露</td></tr>
+        <tr><td>其他产品</td><td>36.4%</td><td>30.7%</td><td class="down">−5.7个百分点</td><td>规模小但方向偏弱</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="wfall" role="img" aria-label="2025H1至2026H1税前利润桥，单位人民币十亿元">
+    <div class="wrow"><div class="nm">2025H1税前利润<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:83.6%"></div></div><div class="fig">10.034</div></div>
+    <div class="wrow"><div class="nm">茶分部增量<span>累计11.561</span></div><div class="wtrack"><div class="wbar up" style="left:83.6%;width:12.7%"></div></div><div class="fig up">+1.527</div></div>
+    <div class="wrow"><div class="nm">其余四分部合计<span>累计11.835</span></div><div class="wtrack"><div class="wbar up" style="left:96.3%;width:2.3%"></div></div><div class="fig up">+0.274</div></div>
+    <div class="wrow"><div class="nm">未分配与财务项净变动<span>对账项</span></div><div class="wtrack"><div class="wbar down" style="left:97.8%;width:.8%"></div></div><div class="fig down">−0.098</div></div>
+    <div class="wrow"><div class="nm">2026H1税前利润<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:97.8%"></div></div><div class="fig">11.737</div></div>
+  </div>
+  <p class="small">瀑布以人民币120亿元为共同横轴，起点加三项变动与终点完全勾稽。其余四分部合计包含水、功能饮料、果汁与其他产品；“未分配与财务项”是分部总业绩对账至合并税前利润的同比净变动。</p>
+
+  <p>费用端没有出现失控：销售及分销费用率从19.6%微升至19.7%，行政费用率从4.2%降至3.8%。公司解释广告促销增加、物流费用率因产品销量结构下降；其他收入受理财收益推动，其他费用则主要受约1.80亿元汇兑损失影响。这里的利润质量判断应分两层：主营产品组合确实改善，但部分毛利顺风来自原料，合并税前利润还含理财和汇率波动。</p>
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>茶业务不只是卖得更多，每一元收入留下的调整税前利润也接近五角；这使集团增长更赚钱。反面是水和功能饮料的利润率在掉，说明“所有品类一起变强”还没有发生。</p>
+    <p><b>下一次验证应看利润率组合，而不是只看集团净利增速。</b>如果茶减速、果汁原料顺风消退，而水仍未修复，集团利润斜率会比收入更敏感。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="cash-capital">
+  <div class="slabel">现金流、资产负债表与资本配置</div>
+  <h2>账上资源充足，但大额年度股息必须先扣掉</h2>
+  <p>6月末现金及银行结余、长期存款、质押及受限资金与公允价值计入损益的金融资产合计形成宽口径流动性；扣除借款和租赁负债后仍为净资源。可是2025年末期股息已在期末列为应付款；除员工计划受托人所持受限制股份应收股息外，大部分于8月19日支付，估值时仍需扣除全部已宣派负债。</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>6月末流动性桥｜人民币亿元；“宽口径”不等于即时现金</caption>
+      <thead><tr><th>项目</th><th>金额</th><th>处理</th></tr></thead>
+      <tbody>
+        <tr><td>现金及银行结余＋长期存款＋质押及受限资金</td><td>265.34</td><td>现金／存款池；含0.28亿元质押及受限资金</td></tr>
+        <tr><td>公允价值计入损益金融资产</td><td>111.10</td><td>单独列示的理财类资产</td></tr>
+        <tr><td>减：借款与租赁负债</td><td>−52.73</td><td>金融负债</td></tr>
+        <tr class="grp"><td>净宽口径流动性</td><td>323.71</td><td>分析小计</td></tr>
+        <tr><td>减：已宣派2025末期股息</td><td>−111.34</td><td>期末已计入其他应付款；大部分8月支付</td></tr>
+        <tr class="grp"><td>股息后调整净金融资源</td><td>212.37</td><td>估值资产抵扣；约人民币1.89元／股</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>资本开支边界必须更谨慎。物业、厂房及设备从247.19亿元升至272.15亿元，资本承诺为39.70亿元，但两者都不是当期实际现金资本开支；折旧、处置、转固和付款时点会破坏简单倒推。2026H1经营现金流、实际资本开支和自由现金流必须等完整中期报告。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>五年现金回报覆盖｜自由现金流代理只扣除物业、厂房及设备购买；金额人民币亿元</caption>
+      <thead><tr><th>年度</th><th>每股末期股息</th><th>EPS派息率</th><th>自由现金流代理／净利润</th><th>判断</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>0.45元</td><td>70.6%</td><td>124.8%</td><td>现金覆盖充足</td></tr>
+        <tr><td>2022</td><td>0.68元</td><td>89.9%</td><td>92.4%</td><td>高派息但仍接近覆盖</td></tr>
+        <tr><td>2023</td><td>0.75元</td><td>69.8%</td><td>104.2%</td><td>利润与现金较匹配</td></tr>
+        <tr><td>2024</td><td>0.76元</td><td>70.5%</td><td>38.1%</td><td>扩产年出现明显缺口</td></tr>
+        <tr><td>2025</td><td>0.99元</td><td>70.2%</td><td>92.4%</td><td>现金恢复但仍低于净利</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>2021—2025年，自由现金流代理累计486.53亿元，宣派末期股息累计408.25亿元，相当于前者83.9%。这说明高现金回报具有历史覆盖，但年度波动显著，不能用五年累计值掩盖单年扩产压力。2026H1不派中期股息；公司在上半年没有回购、出售或赎回上市证券，也没有持有库存股。股东虽已授予最多占当时总股本10%的有条件H股回购授权，截至期末并未执行。</p>
+  <p>IPO净募集资金为93.77亿港元，累计使用64.05亿港元；余29.72亿港元全部由品牌建设9.99亿港元和销售设施19.73亿港元构成，预计在2027年12月前使用。另有7.26亿港元早前由“基础能力建设”重新分配至生产设施，并已于2026年6月末前用完；它不在29.72亿港元余额内。币种不同，不能把这组港元募资直接与人民币利润相加。</p>
+  <p>只作资本“净给予／净索取”的方向校验：若把IPO净募资按估值日汇率折成约81.12亿元人民币，五年累计末期股息约为其5.0倍，公司在累计现金分配口径上已是净给予者。这个比例使用跨期的估值日汇率，不是精确历史资本回报率；未用完募集资金、扩产需求和控股股东取得的大部分股息仍需分别判断。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>公司不是缺钱，而是账上的“钱”包含存款、理财和已经宣派、其后大部分支付的年度股息。历史分红大体有现金支持，但2024年已经示范：扩产一快，自由现金流会明显落后利润。<b>本期现金流缺失，所以最重要的现金考试还没有交卷。</b></p></div>
+</section>
+
+<section class="reveal on" id="governance">
+  <div class="slabel">管理层、治理、激励与关联交易</div>
+  <h2>控制高度集中，激励稀释很小，关联交易仍需逐年核验</h2>
+  <div class="finds">
+    <div class="find warn"><div class="t">2025年末控制约84%</div><p>钟睒睒兼任董事长和总经理，构成公司披露的主席与行政总裁角色不分离；其儿子钟墅子为非执行董事。控制权集中提高少数股东对治理、关联交易和资本配置的依赖。</p></div>
+    <div class="find"><div class="t">独立董事占三席</div><p>现届董事会由五名执行董事、一名非执行董事和三名独立非执行董事组成；审计委员会由三名独立董事组成。形式合规不能替代对关联定价和资源分配的实质检验。</p></div>
+    <div class="find good"><div class="t">奖励股份来自市场购买</div><p>员工计划由受托人在市场购买现有H股，不直接发行新股，因此没有新增股份稀释；股份支付和奖励转让仍有经济成本。期末未归属奖励约占总股本0.051%。</p></div>
+    <div class="find warn"><div class="t">电话会没有可核验文本</div><p>8月26日官方业绩说明会由财务总监吴莉敏和董事会秘书韩林攸出席，但主办方不保留回放，发行人也未附演示、逐字稿或问答；本报告不虚构管理层指引。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>治理与关联交易抓手｜最近可核验披露</caption>
+      <thead><tr><th>项目</th><th>事实</th><th>投资者应如何读</th></tr></thead>
+      <tbody>
+        <tr><td>2025关联采购</td><td>养生堂体系3.447亿元／年度上限3.460亿元</td><td>使用率99.6%，需检查2026新框架下的实际量价</td></tr>
+        <tr><td>2025关联研发／检测</td><td>0.812亿元／年度上限1.000亿元</td><td>基础研发采用成本加25%，且不高于独立报价</td></tr>
+        <tr><td>2026—2028采购上限</td><td>4.345／5.285／6.295亿元</td><td>上限增长不等于实际交易增长，需逐年勾稽</td></tr>
+        <tr><td>2026新增奖励</td><td>45.24万份，授予价HK$14.71</td><td>2027／2028各归属50%；董事及关连人士不在本次授予</td></tr>
+        <tr><td>上半年股份支付</td><td>0.376亿元，约占归母净利润0.42%</td><td>经济影响小，但应继续核对归属条件和离职没收</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>财务总监在2025年度奖励第一批中的归属为零，并有108,667份被没收；文件没有说明原因。它是需要跟踪的披露事实，不是违规、离职或业绩失败的证据。关联交易同样如此：高上限使用率与控制关系值得关注，但公开文件同时披露了定价机制、独立报价上限和关联董事回避，不能未经证据就推断利益输送。</p>
+</section>
+
+<section class="reveal on" id="risks">
+  <div class="slabel">风险、反证与增长证伪</div>
+  <h2>最大的风险不是茶不增长，而是增长集中后缺少第二套验证</h2>
+  <p>风险要写成可证伪机制，而不是通用清单。茶的高增长会提高组合利润率，也会提高对单一品类和渠道执行的依赖；水业务若长期只有收入、没有利润修复，就会削弱集团在最成熟品类上的定价与渠道证据。与此同时，现金流和终端动销缺失，使投资者更容易把sell-in当作sell-through。</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>下一报告期监控线｜本报告分析阈值，不是公司指引</caption>
+      <thead><tr><th>验证项</th><th>当前证据</th><th>基准失效线</th><th>可能影响</th></tr></thead>
+      <tbody>
+        <tr><td>茶饮料增长</td><td>仍是核心增量来源</td><td>未来12个月收入增速低于14%</td><td>下修茶业务增长与资本化倍数</td></tr>
+        <tr><td>水业务经济性</td><td>分部业绩率已收窄</td><td>全年分部业绩率仍低于34%</td><td>水业务不再承担稳定器估值</td></tr>
+        <tr><td>销售投入</td><td>费用率大致持平</td><td>收入减速且销售费用率高于20.5%</td><td>品牌增长需要更高获客成本</td></tr>
+        <tr><td>现金转换</td><td>本期未披露</td><td>全年经营现金流／净利润低于1.0倍</td><td>利润质量与分红覆盖下修</td></tr>
+        <tr><td>资本开支</td><td>承诺高但实际现金缺失</td><td>自由现金流代理／净利润低于80%</td><td>DCF起点与可分配资源下修</td></tr>
+        <tr><td>渠道质量</td><td>无库存、售罄和复购数据</td><td>收入放缓同时合同负债下降、库存上升</td><td>提高渠道压货风险判断</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">最后一项必须联合观察，任何单一资产负债表变动都可能受季节、付款和新品备货影响。税、原料、PET、汇率、促销与冷链投入也会改变利润率，不能把产品组合当作唯一解释。</p>
+  <div class="finds">
+    <div class="find good"><div class="t">最强牛方反证</div><p>茶业务已经连续多年扩大规模，并在本期保持接近五成的调整分部利润率；如果未来两个报告期仍能增长、现金同步兑现，它可能是一条成熟的第二主业，而非短期爆款。</p></div>
+    <div class="find warn"><div class="t">最强熊方反证</div><p>公司没有披露东方树叶售罄、复购、单品利润或渠道库存；水业务利润已经转弱。本期利润表因此可能比渠道和现金证据走得更快。</p></div>
+  </div>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">估值 · 从现价倒推要求</div>
+  <h2>自身历史倍数很低，绝对价值却没有留下宽安全垫</h2>
+  <p>Wind在2026年8月31日16:08:52香港时间记录市值HK$4,838.23亿元。公司发布业绩后首个交易日上涨2.42%，到估值日基本回到公告日前水平。低历史分位说明市场已压缩过去给予农夫山泉的估值，但它当前仍以更高的利润与账面价值倍数交易于三家饮料／食品同业。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">市场价</div><div class="v">HK$43.02</div><div class="d"><span>2026.08.31 Wind</span></div></div>
+    <div class="cell"><div class="k">P/E TTM（近十二个月市盈率）</div><div class="v">24.54<span class="u">倍</span></div><div class="d"><span>上市以来2.52%分位</span></div></div>
+    <div class="cell"><div class="k">熊市价值带</div><div class="v">HK$18–25</div><div class="d"><span>DCF—SOTP</span></div></div>
+    <div class="cell"><div class="k">基准价值带</div><div class="v">HK$34.6–40.8</div><div class="d"><span>规范化现金法—SOTP</span></div></div>
+    <div class="cell"><div class="k">牛市价值带</div><div class="v">HK$53.8–54.6</div><div class="d"><span>两种方法接近</span></div></div>
+    <div class="cell"><div class="k">投资判断</div><div class="v">中性</div><div class="d"><span class="down">现价高于基准两点值</span></div></div>
+  </div>
+
+  <h3>第一步 · 看市场已经给了什么</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>自身历史位置｜Wind上市以来日度样本；分位越低，当前倍数越接近历史低端</caption>
+      <thead><tr><th>指标</th><th>当前</th><th>历史分位</th><th>样本</th></tr></thead>
+      <tbody>
+        <tr><td>P/E TTM</td><td>24.536倍</td><td>2.52%</td><td>38／1,468</td></tr>
+        <tr><td>P/B LF</td><td>11.307倍</td><td>8.04%</td><td>119／1,468</td></tr>
+        <tr><td>股息率</td><td>2.627%</td><td>91.15%</td><td>1,216／1,334</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>市场同业截面｜2026.08.31；只作倍数参照，不承担目标价结论</caption>
+      <thead><tr><th>公司</th><th>股价</th><th>2026 YTD</th><th>P/E TTM</th><th>P/B LF</th><th>股息率</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td>农夫山泉 09633.HK</td><td>HK$43.020</td><td>−5.70%</td><td>24.536倍</td><td>11.307倍</td><td>2.63%</td></tr>
+        <tr><td>华润饮料 02460.HK</td><td>HK$7.355</td><td>−23.94%</td><td>19.830倍</td><td>1.450倍</td><td>5.32%</td></tr>
+        <tr><td>康师傅控股 00322.HK</td><td>HK$12.760</td><td>+17.44%</td><td>13.400倍</td><td>4.840倍</td><td>7.22%</td></tr>
+        <tr><td>统一企业中国 00220.HK</td><td>HK$7.420</td><td>−2.00%</td><td>12.852倍</td><td>2.149倍</td><td>7.41%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">同业在产品组合、控制权、利润率、增长、资本强度和分红上差异很大。历史低分位也受上市初期高估值影响；它说明相对自己变便宜，不说明绝对价值一定低于现价。</p>
+  <p>价格节奏仅作交易背景：估值日前5／20／60／120日回报分别为−0.28%／−1.33%／+0.47%／−0.83%，年初至今为−5.70%；当日成交额约4.35亿港元、换手率0.20%。股价比52周低点高约9.7%、比高点低约21.5%，处在区间下部，但这不是基本面价值底。Wind数据包未返回带明确基准与窗口的统计<span class="g">Beta</span>，所以报告不伪造数值；经营层面的周期敏感来自原料、包装、促销和渠道需求，潜在超额回报则要靠茶业务增长与现金转换共同验证。</p>
+
+  <h3>第二步 · 为什么用SOTP，再用现金法交叉检查</h3>
+  <div class="steps">
+    <div class="step"><div class="n">方法 A</div><b>分部加总法</b><p>五类产品均有超过5亿元收入和独立分部业绩，先按各自增长、利润率和税后利润资本化倍数估值。</p></div>
+    <div class="step"><div class="n">防重计</div><b>扣总部，再加资产</b><p>扣除总部未分配费用，不资本化利息和理财收益；最后才加入股息后的调整净金融资源。</p></div>
+    <div class="step"><div class="n">方法 B</div><b>owner-earnings DCF</b><p>把可归股东的经营现金折回今天；因本期现金缺失，对2025起点采用三种口径敏感性。</p></div>
+    <div class="step"><div class="n">WHY</div><b>两法不能取平均</b><p>SOTP回答产品组合值多少，DCF回答现金值多少；分叉本身就是披露和再投资风险。</p></div>
+  </div>
+  <p>这里的分部并非法律上可出售的独立公司，它们共享品牌、渠道、工厂和财资，且公司不披露分部资产、现金和资本开支。因此倍数叫“税后分部利润资本化倍数”，不是观察到的独立公司P/E。预测期为从LTM至截至2027年6月的<span class="g">NTM（未来十二个月）</span>近似，不冒充日历FY2027。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>SOTP三情景驱动｜非公司指引；增长与利润率均为未来十二个月假设</caption>
+      <thead><tr><th>驱动</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
+      <tbody>
+        <tr><td>水／茶／功能／果汁／其他收入增长</td><td>0%／7%／5%／4%／0%</td><td>5%／14%／10%／9%／5%</td><td>10%／22%／16%／14%／10%</td></tr>
+        <tr><td>分部业绩率</td><td>32%／42%／41%／32%／28%</td><td>36%／48%／45%／37%／32%</td><td>38%／50%／47%／39%／34%</td></tr>
+        <tr><td>税后分部利润资本化倍数</td><td>14／17／15／14／10倍</td><td>18／25／19／18／13倍</td><td>21／30／23／21／15倍</td></tr>
+        <tr><td>总部未分配费用／收入</td><td>6.0%</td><td>5.64%</td><td>5.0%</td></tr>
+        <tr><td>分析税率</td><td>24.5%</td><td>24.3%</td><td>24.0%</td></tr>
+        <tr><td>股息后调整净金融资源</td><td colspan="3">212.37亿元（各情景相同）</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">倍数锚：熊市大致落在当前同业12.9—19.8倍区间，基准把增长更慢的水、功能、果汁和其他放在13—19倍，把增长更快且分部业绩率更高的茶放在25倍，接近集团当前24.5倍；牛市上限30倍代表茶的增长与耐久性同时兑现。基准茶倍数每变动1倍，每股价值约变动HK$1.05；水业务每变动1倍约影响HK$0.56。总部费用使用分部收入加权倍数，避免只用最高倍数。</p>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>SOTP输出｜人民币亿元，末行为港元／股；总部费用采用收入加权资本化倍数扣除</caption>
+      <thead><tr><th>输出</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
+      <tbody>
+        <tr><td>NTM收入</td><td>589.05</td><td>622.30</td><td>658.63</td></tr>
+        <tr><td>税后经营利润代理</td><td>139.55</td><td>173.19</td><td>197.54</td></tr>
+        <tr><td>分部价值合计</td><td>2,586.61</td><td>4,316.02</td><td>5,729.84</td></tr>
+        <tr><td>减：总部费用价值</td><td>−409.87</td><td>−562.37</td><td>−630.41</td></tr>
+        <tr><td>加：调整净金融资源</td><td colspan="3">+212.37（各情景相同）</td></tr>
+        <tr><td>权益价值</td><td>2,389.11</td><td>3,966.02</td><td>5,311.80</td></tr>
+        <tr class="grp"><td>SOTP每股价值</td><td>HK$24.56</td><td>HK$40.76</td><td>HK$54.60</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>第三步 · 现金法把“维护投入”设成显式变量</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>owner-earnings DCF与起点敏感性｜每股港元；均加入股息后调整净金融资源</caption>
+      <thead><tr><th>口径／情景</th><th>起点现金</th><th>五年增长</th><th>Ke／长期g</th><th>终值占经营价值</th><th>每股价值</th></tr></thead>
+      <tbody>
+        <tr><td>熊市：2025报告FCF代理</td><td>146.60亿元</td><td>每年3%</td><td>12.0%／2.0%</td><td>63.1%</td><td>HK$18.19</td></tr>
+        <tr class="grp"><td>基准：规范化owner earnings</td><td>160.34亿元</td><td>10%／9%／8%／7%／6%</td><td>9.5%／3.0%</td><td>75.2%</td><td>HK$34.60</td></tr>
+        <tr><td>牛市：高现金起点</td><td>185.00亿元</td><td>16%／14%／12%／10%／8%</td><td>9.0%／3.5%</td><td>79.3%</td><td>HK$53.79</td></tr>
+        <tr><td>基准敏感：报告FCF起点</td><td>146.60亿元</td><td>基准增长</td><td>9.5%／3.0%</td><td>75.2%</td><td>HK$31.82</td></tr>
+        <tr><td>基准敏感：保留2025营运资金释放</td><td>177.49亿元</td><td>基准增长</td><td>9.5%／3.0%</td><td>75.2%</td><td>HK$38.07</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">基准规范化owner earnings＝2025年营运资金变动前经营现金239.24亿元－现金税44.67亿元＋收取利息0.30亿元－支付利息0.61亿元－折旧摊销33.93亿元＝160.34亿元；等式结果按未四舍五入的原始千元数计算。它排除2025年营运资金释放并以折旧摊销近似维护投入；HK$38.07敏感值也用同一维护投入代理，但从报告经营现金流起步，保留了营运资金变化。报告FCF代理则扣实际物业、厂房及设备购买；三条口径都不是公司定义指标，也无法替代缺失的2026H1现金流。</p>
+
+  <div class="callout"><b>现价反推：</b>在9.5%股东要求回报、3%长期增长、股息后净金融资源不变时，估值日收盘价要求规范化owner earnings未来五年每年复合增长约13.75%；若从2025报告FCF代理起步，要求升至约16.00%。这不是市场唯一预期，只是把价格翻译成一条可检验路径。</div>
+  <div class="callout"><b>资产质量敏感性：</b>调整净金融资源包含111.10亿元公允价值计入损益的金融资产。若估值完全不承认这部分资产，每种方法均减少约HK$1.14／股；这比把宽口径流动性全部视作现金更审慎。</div>
+
+  <h3>第四步 · 用SOTP画价格梯尺，DCF只作旁注</h3>
+  <div class="rows" aria-label="农夫山泉SOTP情景价值与市场价比较">
+    <div class="row"><div class="nm">熊市SOTP<span>DCF交叉检查 HK$18.19</span></div><div class="track"><div class="fill alt" style="width:45.0%"></div></div><div class="fig">HK$24.56<span class="down">较现价 −42.9%</span></div></div>
+    <div class="row"><div class="nm">市场价<span>2026.08.31 Wind</span></div><div class="track"><div class="fill soft" style="width:78.8%"></div></div><div class="fig">HK$43.02<span>高于基准</span></div></div>
+    <div class="row"><div class="nm">基准SOTP<span>规范化DCF HK$34.60</span></div><div class="track"><div class="fill" style="width:74.7%"></div></div><div class="fig">HK$40.76<span class="down">较现价 −5.2%</span></div></div>
+    <div class="row"><div class="nm">牛市SOTP<span>DCF交叉检查 HK$53.79</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$54.60<span class="up">较现价 +26.9%</span></div></div>
+  </div>
+  <p class="small">条形以牛市SOTP为100%，市场价和三个SOTP点值按同一比例绘制；DCF不混入条形，只在标签中交叉检查。汇率统一采用Wind／中国人民银行2026年8月31日中间价1港元＝人民币0.8651元，股份数为112.464664亿股。</p>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>市场给农夫山泉的倍数已经接近上市以来低位，但当前估值倍数仍高于同业，反映市场对利润率、增长和品牌的溢价预期。按本报告假设，现价比基准SOTP高约5%，比规范化现金法高约24%。</p>
+    <p><b>这不是明显高估，也不是深度价值。</b>股价需要茶保持双位数增长、水业务止住利润率下滑，并让全年现金追上利润；少一项，安全垫就会变薄。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="valuation-appendix">
+  <div class="slabel">估值机制附录 · 分部加总</div>
+  <h2>基准价值的一半以上来自茶业务</h2>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>基准SOTP分部明细｜截至2027年6月的未来十二个月近似；人民币亿元</caption>
+      <thead><tr><th>产品</th><th>NTM收入</th><th>税后分部利润</th><th>资本化倍数</th><th>分部价值</th></tr></thead>
+      <tbody>
+        <tr><td>水类产品</td><td>198.52</td><td>54.10</td><td>18倍</td><td>973.83</td></tr>
+        <tr><td>即饮茶类产品</td><td>280.78</td><td>102.02</td><td>25倍</td><td>2,550.58</td></tr>
+        <tr><td>功能饮料产品</td><td>68.34</td><td>23.28</td><td>19倍</td><td>442.33</td></tr>
+        <tr><td>果汁饮料产品</td><td>60.33</td><td>16.90</td><td>18倍</td><td>304.16</td></tr>
+        <tr><td>其他产品</td><td>14.33</td><td>3.47</td><td>13倍</td><td>45.11</td></tr>
+        <tr class="grp"><td>分部价值合计</td><td>622.30</td><td>199.77</td><td>—</td><td>4,316.02</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>再扣除总部费用价值562.37亿元、加入前述股息后调整净金融资源，得到权益价值3,966.02亿元。茶业务占分部价值约59%，所以基准估值并不是五个品类平均分散的结果；茶的增长、利润率或倍数任一落空，都会显著影响总值。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>SOTP把五类饮料分别估值，但它们并不能真的拆开卖：品牌、渠道、工厂和总部是共享的。表格的作用是找到价值由谁驱动。答案很清楚：<b>当前估值最依赖茶，而不是水。</b></p></div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">最终判断与验证日历</div>
+  <h2>值得持有观察，暂不足以在现价建立宽安全垫</h2>
+  <p><strong>投资判断：中性。</strong>农夫山泉已证明自己可以从包装水之外建立大规模、高利润的茶业务，五年收入、利润和经营现金流的复合增速均为正。反面是，组合价值越来越由茶主导，水业务利润尚未修复，2026H1现金和渠道动销又不可见。现价高于本报告两个基准点值，投资回报需要继续增长而不只是估值均值回归。</p>
+  <div class="finds">
+    <div class="find good"><div class="t">什么会让判断上修</div><p>茶业务跨过两个完整报告期仍保持双位数增长和高分部业绩率，水业务利润率回升，全年经营现金覆盖净利润，且新品给出可核验的终端售罄或复购证据。</p></div>
+    <div class="find warn"><div class="t">什么会让判断下修</div><p>茶增长跌破基准、销售投入率上升，水业务利润率继续收窄，或实际资本开支使自由现金流长期落后利润；任一项都会压低SOTP倍数或DCF起点。</p></div>
+    <div class="find"><div class="t">数据置信度</div><p>财务与分部数据置信度高；渠道和品牌耐久性为中低；估值为情景化中等。缺失的现金流、量价与渠道数据是置信度折扣的主要来源。</p></div>
+    <div class="find warn"><div class="t">当前最重要的问题</div><p>不是“茶饮料是不是好生意”，而是该品类能否在不牺牲利润和现金的情况下继续增长，同时让水和功能饮料重新贡献增量经济利润。</p></div>
+  </div>
+
+  <h3>把关键证据排进时间线</h3>
+  <div class="tline">
+    <div class="tstop warn"><span class="tw">完整2026中期报告</span><b>补现金流量表</b><p>核验经营现金、实际资本开支、自由现金流及营运资金。</p></div>
+    <div class="tstop warn"><span class="tw">FY2026业绩</span><b>跨全年复核组合</b><p>用同一期间检查茶增长、水利润率、销售费用和现金转换。</p></div>
+    <div class="tstop"><span class="tw">2027.04</span><b>首批奖励归属</b><p>检查归属条件、没收原因与实际奖励股份变化。</p></div>
+    <div class="tstop"><span class="tw">2027.12</span><b>IPO资金期限</b><p>核对剩余品牌、销售设施和生产设施资金是否按计划使用。</p></div>
+  </div>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · 快速检索</div>
+  <h2>读懂这份饮料报告需要的词</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
+      <tbody>
+        <tr><td>H1 / 独立Q2 / FY</td><td>依次指累计上半年、只含4—6月的第二季度、完整财年。本次官方文件只披露2026H1。</td></tr>
+        <tr><td>分部收入 / 分部业绩</td><td>五类产品各自的收入 / 公司用来考核分部的调整税前利润；分部业绩剔除利息、其他未分配收益、总部费用与财务费用。</td></tr>
+        <tr><td>毛利 / 毛利率</td><td>收入减销售成本后的利润 / 毛利占收入比例，尚未扣除广告、物流、总部等费用。</td></tr>
+        <tr><td>PBT / EBIT</td><td>税前利润 / 息税前利润。公司未披露合并经营利润或EBIT小计，本报告只在清楚定义后使用分析代理。</td></tr>
+        <tr><td>经营利润代理</td><td>本报告用税前利润加财务费用观察财务费用前利润；它仍可能包含利息和理财收益，不是公司KPI。</td></tr>
+        <tr><td>归母净利润</td><td>扣除少数股东应占部分后，归属于上市公司股东的利润。</td></tr>
+        <tr><td>EPS / ROE</td><td>每股盈利 / 净资产收益率；后者衡量股东账面资本的盈利效率。</td></tr>
+        <tr><td>CAGR</td><td>复合年均增速，把起点到终点的累计变化折成每年复合速度。</td></tr>
+        <tr><td>LTM / NTM</td><td>最近十二个月历史数据 / 未来十二个月预测。本报告NTM近似截止2027年6月，不是日历FY2027。</td></tr>
+        <tr><td>经营现金流</td><td>日常经营实际收取减支付的现金，会受利润、库存、应收、应付、预收和税款时点影响。</td></tr>
+        <tr><td>资本开支 / 自由现金流代理</td><td>长期资产的现金投入 / 经营现金减特定资本开支的分析值；本报告历史代理只扣物业、厂房及设备购买。</td></tr>
+        <tr><td>owner earnings</td><td>把经营产生、在维持竞争力所需投入之后可归股东的现金作规范化；定义依赖维护投入假设。</td></tr>
+        <tr><td>营运资金</td><td>库存、应收、应付、合同负债等日常经营项目占用或释放的资金。</td></tr>
+        <tr><td>sell-in / sell-through</td><td>公司把货卖给渠道 / 渠道最终卖给消费者；前者增长不自动证明后者和复购增长。</td></tr>
+        <tr><td>SKU / ASP</td><td>具体可售规格 / 平均售价；包装、产品与渠道结构变化都会改变ASP。</td></tr>
+        <tr><td>FVTPL金融资产</td><td>按公允价值计入当期损益的金融资产，可能是理财等财资配置，不等同银行现金。</td></tr>
+        <tr><td>调整净金融资源</td><td>现金、存款与FVTPL资产扣借款、租赁负债和已宣派年度股息负债后的分析余额。</td></tr>
+        <tr><td>SOTP</td><td>分部加总法：分别估计各业务价值，再扣共享总部成本并加入单独估值的金融资源。</td></tr>
+        <tr><td>税后利润资本化倍数</td><td>税后分部利润乘以一个反映增长、风险和耐久性的倍数；分部并非独立上市公司，所以不是观察到的P/E。</td></tr>
+        <tr><td>DCF</td><td>现金流折现法，把未来owner earnings按股东要求回报率折回今天。</td></tr>
+        <tr><td>Ke / 长期g / 终值</td><td>股东要求的年回报率 / 显性期后的长期增长 / 显性预测结束后所有现金流的合计估计。</td></tr>
+        <tr><td>P/E TTM / P/B LF</td><td>股价相对最近十二个月盈利的倍数 / 股价相对最新每股净资产的倍数。</td></tr>
+        <tr><td>Beta</td><td>股票收益相对某一市场基准的统计波动敏感度；必须说明基准、频率和观察窗口才有意义。</td></tr>
+        <tr><td>公众持股量</td><td>不由控股股东等核心持有人控制、可由公众交易的股份比例；较低比例可能影响流动性和治理权衡。</td></tr>
+        <tr><td>HKSRE 2410</td><td>香港核数师审阅中期财务资料的准则；审阅提供的保证程度低于完整年度审计。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">方法、来源与证据边界</div>
+  <h2>港交所控制会计数字，Wind只负责市场截面</h2>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>主要来源｜数据检索截止2026.08.31</caption>
+      <thead><tr><th>来源</th><th>期间／用途</th><th>证据级别</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082501293_c.pdf">港交所：2026年中期业绩公告</a></td><td>H1损益、分部、资产负债表、股息、激励与治理</td><td>主控；未经审计、经安永审阅</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0417/2026041701390_c.pdf">港交所：2025年度报告</a></td><td>五年摘要、现金流、分部、股本、控制与关联交易</td><td>主控；经审计</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0923/2025092300353_c.pdf">港交所：2025中期报告</a></td><td>上年同期现金流基线；不替代2026缺失值</td><td>主控比较</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1216/2025121601353_c.pdf">港交所：重续持续关连交易</a></td><td>2026—2028框架、定价与上限</td><td>主控</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0417/2026041701412_c.pdf">港交所：2026股东周年大会通函</a></td><td>有条件回购授权及约束</td><td>主控</td></tr>
+        <tr><td><a href="https://www.nongfuspring.com/adapting/investor_activity?language=zh-CN">公司投资者活动页</a></td><td>业绩说明会时间与出席管理层</td><td>发行人事件证据</td></tr>
+        <tr><td>Wind金融终端</td><td>股价、估值分位、同业、交易表现与人民币／港元中间价</td><td>市场交叉检查</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>2021—2024历史回查港交所对应年度报告：<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0425/2025042503152_c.pdf">2024</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0418/2024041802053_c.pdf">2023</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0414/2023041400853_c.pdf">2022</a>与<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0428/2022042803674_c.pdf">2021</a>。年度现金流、产品收入、股息和平均ROE均由原表逐年勾稽；H1与LTM、分部利润率、收入／利润增量、流动性桥、股息覆盖、SOTP、DCF和反推增长由可执行计算账本复算。</p>
+  <p>官方8月26日业绩说明会确已举行，但公司投资者关系记录没有演示材料、音频、逐字稿或问答，主办页面明确表示未保留回放，逐字稿平台也没有匹配记录。因此报告只使用文件中的管理层陈述，不补写电话会指引。对港交所、发行人和监管公开信息作有界检索后，截至8月31日没有发现晚于本次业绩、足以改变会计口径的重大公告或新执法事项。</p>
+  <div class="callout"><b>关键缺口：</b>独立Q2、2026H1经营现金流、实际资本开支与自由现金流，红瓶／绿瓶水拆分，产品销量与实际售价，渠道收入、库存、售罄与复购，分部资产、现金与资本开支，以及官方电话会问答均未披露或未找到。它们不会被历史数据、承诺额、PP&E变动或媒体转述替代。</div>
+  <p class="small">模型假设并非公司指引。SOTP使用五类产品LTM收入、情景增长、分部业绩率、税率和税后利润资本化倍数；总部费用按收入加权倍数扣除，利息和理财收益不进入经营资本化，再加入股息后调整净金融资源，避免双重计算。DCF以三种2025现金起点测试缺失的维护投入；终值占比较高，读者应优先看情景范围而非小数点。</p>
+</section>
+
+<footer>
+  <p>数据截止：公司财务与公开文件检索截至2026年8月31日；财务控制文件日期为2026年8月25日，覆盖截至6月30日止六个月；市场行情与汇率截至8月31日。中期财务未经审计，但经安永按HKSRE 2410审阅。</p>
+  <p>本报告包含分析推算和情景假设，不构成投资建议。用户所称“Q2业绩”严格处理为官方2026H1累计业绩；没有独立Q2基础，也没有本期现金流量表，所有缺失项均保留为“未披露”或“不可计算”。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
