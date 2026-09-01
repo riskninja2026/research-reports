@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>网易 2026Q2 Fullscan 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">网易 09999.HK ｜ FULLSCAN 全景尽调 ｜ 数据截止 2026.09.01</div>
+    <h1>主营利润加速，<br>投资损失拖慢股东回报</h1>
+    <p class="lede">游戏毛利率升至76.1%，把Q2营业利润推高33.4%。<b>但29.54亿元投资损失、汇兑损失与25.5%有效税率，把归母利润压低18.8%。</b>这不是经营崩坏，也不只是无关紧要的会计噪音：它同时检验网易的游戏长线运营与资本配置。</p>
+    <div class="dual">
+      <div>
+        <div class="tag">Q2 营业利润 · 单季未经审计</div>
+        <div class="big a">+33.4%</div>
+        <div class="cap">人民币120.89亿元；收入同比增长7.9%，营业利润率升至40.2%。</div>
+      </div>
+      <div>
+        <div class="tag">Q2 归母净利润 · 单季未经审计</div>
+        <div class="big b">−18.8%</div>
+        <div class="cap">人民币69.81亿元；投资损失与税率上升反转了主营改善。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>利润表上有两家公司：经营中的网易，与投资中的网易</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>网易以自研和代理游戏为核心，Q2游戏及相关增值服务占收入83.1%；有道、网易云音乐和创新业务贡献其余16.9%。投资者买入的是开曼注册网易公司的股权，而不是境内VIE股权；集团通过子公司及合同安排合并相关经济利益。</li>
+      <li><b>本期成绩：</b>Q2收入301.07亿元、同比增长7.9%，毛利率升至70.5%，营业利润120.89亿元、同比增长33.4%；归母净利润却降至69.81亿元。</li>
+      <li><b>核心矛盾：</b>游戏平台收入分成成本下降、长青游戏与《燕云十六声》推动主营杠杆；29.54亿元投资损失、4.36亿元汇兑损失及25.5%有效税率又吞掉改善。经营质量强，资本配置结果弱。</li>
+      <li><b>容易踩的坑：</b>公司非GAAP净利润只剔除股份支付，仍包含投资损失、汇兑和税；Q2现金资本开支异常低且期末另有5.22亿元固定资产应付款，不能把单季FCF直接年化。</li>
+      <li><b>结论：</b><b>中性偏积极，置信度中等。</b>现价HK$188.80；压力、基准、乐观静态价值约HK$134、HK$204、HK$269。基准上行仅约8%，适合等Q3验证游戏收入与毛利率，而不是仅凭“净现金很多”追价。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>开发只是起点，持续更新和分成结构才决定游戏现金流</h2>
+  <p>网易既开发自有知识产权游戏，也代理暴雪等外部产品。游戏上线后，内容更新、服务器运营、社区维护与付费设计共同决定生命周期；平台和渠道按约定参与分成。收入先经过这些直接成本形成分部毛利，再扣除营销、管理和研发形成营业利润。最后叠加投资、利息、汇兑、税项与少数股东，才到普通股股东的净利润。</p>
+  <div class="steps">
+    <div class="step"><div class="n">STEP 1</div><b>研发与授权</b><p>自研承担研发与失败风险；代理游戏减少原创风险，却支付授权及收入分成。</p></div>
+    <div class="step"><div class="n">STEP 2</div><b>上线与长线运营</b><p>版本、活动、UGC和社区让老游戏延寿；关键不是注册量，而是留存、活跃与付费。</p></div>
+    <div class="step"><div class="n">STEP 3</div><b>平台与分成</b><p>渠道费和开发商分成进入营业成本；本季较低的平台分成是毛利率上升的主要解释。</p></div>
+    <div class="step"><div class="n">STEP 4</div><b>股东结果</b><p>主营现金再进入存款、投资、股息和回购；投资损益和股份支付会改变每股回报。</p></div>
+  </div>
+  <p>四个会计分部只披露收入、营业成本和毛利，<strong>不披露分部营业利润、资产或现金流</strong>。因此不能把游戏毛利率当成游戏净利率，也不能用有道或云音乐的上市市值再加一次到已包含它们的合并盈利里。公司非GAAP口径仅加回股份支付，与“剔除一切非经营项目”的调整利润不是一回事。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">基础财务 · 合并与分部地图</div>
+  <h2>五年增长不快，利润与现金增长很快；Q2把这条趋势推到极致</h2>
+  <p>控制性公告直接披露截至2026年6月30日止三个月的Q2损益和现金流，也披露H1累计口径。Q2不是由H1减Q1推算。公告未经审计；H1中期财务资料由罗兵咸永道按ISRE 2410审阅。完整年度历史使用后续年报中的可比列报。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">Q2 收入</div><div class="v">301.07<span class="u">亿元</span></div><div class="d"><span class="up">同比 +7.9%</span><span class="down">环比 −1.6%</span></div></div>
+    <div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">212.17<span class="u">亿元</span></div><div class="d"><span class="up">同比 +17.5%</span><span>70.5%</span></div></div>
+    <div class="cell"><div class="k">营业利润 / 利润率</div><div class="v">120.89<span class="u">亿元</span></div><div class="d"><span class="up">同比 +33.4%</span><span>40.2%</span></div></div>
+    <div class="cell"><div class="k">归母净利润</div><div class="v">69.81<span class="u">亿元</span></div><div class="d"><span class="down">同比 −18.8%</span><span>EPS 2.18元</span></div></div>
+    <div class="cell"><div class="k">经营现金流</div><div class="v">99.73<span class="u">亿元</span></div><div class="d"><span class="down">同比 −8.2%</span><span>直接披露Q2</span></div></div>
+    <div class="cell"><div class="k">自由现金流代理</div><div class="v">98.93<span class="u">亿元</span></div><div class="d"><span>经营现金流减两类现金资本开支</span></div></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span>
+    <p>FY2021—25收入年复合增长只有6.5%，营业利润却年增21.5%，自由现金流代理年增22.2%。核心原因不是突然爆发的销量，而是游戏组合与直接成本改善让毛利率从53.6%升至64.3%，费用没有同速增长。</p>
+    <p>Q2又把毛利率推到70.5%，但归母利润没有跟随。这不是五年经营趋势反转，而是投资损益与税率从营业利润以下反向拉扯。读网易必须同时保留经营表和资本配置表。</p>
+  </div>
+
+  <h3>五年完整年度轨迹</h3>
+  <div class="tblscroll" data-financials="history">
+    <table class="tbl" data-financials="history">
+      <caption>FY2021—25合并历史 · 人民币亿元；ROE为归母利润／平均归母权益的分析代理；资本开支含物业设备软件及无形资产、内容、版权</caption>
+      <thead><tr><th>FY</th><th>收入</th><th>毛利 / 率</th><th>营业利润 / 率</th><th>归母利润 / 率</th><th>EPS</th><th>ROE</th><th>CFO</th><th>CAPEX</th><th>自由现金流代理</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>876.06</td><td>469.71 / 53.6%</td><td>164.17 / 18.7%</td><td>168.57 / 19.2%</td><td>5.07</td><td>19.0%</td><td>249.27</td><td>31.10</td><td>218.17</td></tr>
+        <tr><td>2022</td><td>964.96</td><td>527.66 / 54.7%</td><td>196.29 / 20.3%</td><td>203.38 / 21.1%</td><td>6.23</td><td>20.3%</td><td>277.09</td><td>26.43</td><td>250.66</td></tr>
+        <tr><td>2023</td><td>1,034.68</td><td>630.63 / 60.9%</td><td>277.09 / 26.8%</td><td>294.17 / 28.4%</td><td>9.15</td><td>25.7%</td><td>353.31</td><td>42.76</td><td>310.55</td></tr>
+        <tr><td>2024</td><td>1,052.95</td><td>658.07 / 62.5%</td><td>295.84 / 28.1%</td><td>296.98 / 28.2%</td><td>9.28</td><td>22.6%</td><td>396.77</td><td>22.06</td><td>374.70</td></tr>
+        <tr><td>2025</td><td>1,126.26</td><td>724.02 / 64.3%</td><td>358.35 / 31.8%</td><td>337.60 / 30.0%</td><td>10.59</td><td>22.6%</td><td>507.40</td><td>20.52</td><td>486.87</td></tr>
+        <tr class="grp"><td>FY21—25 CAGR</td><td>+6.5%</td><td>+11.4%</td><td>+21.5%</td><td>+19.0%</td><td>—</td><td>—</td><td>+19.4%</td><td>—</td><td>+22.2%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cols" role="img" aria-label="网易FY2021至FY2025收入与营业利润趋势，具体数值见上表">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:77.8%"></div><div class="bar np" style="height:45.8%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:85.7%"></div><div class="bar np" style="height:54.8%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:91.9%"></div><div class="bar np" style="height:77.3%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:93.5%"></div><div class="bar np" style="height:82.6%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:100%"></div></div></div>
+  </div>
+  <div class="collabels"><div><b>FY21</b>收入 / 营业利润</div><div><b>FY22</b>收入 / 营业利润</div><div><b>FY23</b>收入 / 营业利润</div><div><b>FY24</b>收入 / 营业利润</div><div><b>FY25</b>收入 / 营业利润</div></div>
+  <div class="legend"><span><i class="p"></i>收入</span><span><i class="m"></i>营业利润</span></div>
+
+  <h3>Q2、环比与LTM桥</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>人民币亿元；LTM＝FY2025＋2026H1−2025H1；FCF为内容投入后代理</caption>
+      <thead><tr><th>指标</th><th>2025Q2</th><th>2026Q1</th><th>2026Q2</th><th>同比</th><th>环比</th><th>LTM</th></tr></thead>
+      <tbody>
+        <tr><td>收入</td><td>278.92</td><td>305.91</td><td>301.07</td><td class="up">+7.9%</td><td class="down">−1.6%</td><td>1,166.03</td></tr>
+        <tr><td>毛利 / 毛利率</td><td>180.52 / 64.7%</td><td>212.17 / 69.4%</td><td>212.17 / 70.5%</td><td class="up">+17.5%</td><td>0.0%</td><td>783.04 / 67.2%</td></tr>
+        <tr><td>营业利润 / 利润率</td><td>90.61 / 32.5%</td><td>126.57 / 41.4%</td><td>120.89 / 40.2%</td><td class="up">+33.4%</td><td class="down">−4.5%</td><td>410.79 / 35.2%</td></tr>
+        <tr><td>归母净利润</td><td>86.01</td><td>106.74</td><td>69.81</td><td class="down">−18.8%</td><td class="down">−34.6%</td><td>325.12</td></tr>
+        <tr><td>经营现金流</td><td>108.62</td><td>137.33</td><td>99.73</td><td class="down">−8.2%</td><td class="down">−27.4%</td><td>514.77</td></tr>
+        <tr><td>FCF代理</td><td>103.59</td><td>131.31</td><td>98.93</td><td class="down">−4.5%</td><td class="down">−24.7%</td><td>499.98</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Q2分部收入与毛利</h3>
+  <div class="stacks" role="img" aria-label="网易Q2收入与毛利分部构成，具体数值见表格">
+    <div class="stack"><div class="cap">收入构成 · 301.07亿元</div><div class="stackbar"><div class="seg p" style="width:83.1%">游戏 83.1%</div><div class="seg q" style="width:6.6%">音乐</div><div class="seg r" style="width:5.4%">创新</div><div class="seg" style="width:4.9%;background:#2C6A57">有道</div></div></div>
+    <div class="stack"><div class="cap">毛利构成 · 212.17亿元</div><div class="stackbar"><div class="seg p" style="width:89.8%">游戏 89.8%</div><div class="seg q" style="width:3.5%">音乐</div><div class="seg r" style="width:3.4%">创新</div><div class="seg" style="width:3.3%;background:#2C6A57">有道</div></div></div>
+  </div>
+  <div class="tblscroll">
+    <table class="tbl" data-financials="segments">
+      <caption>2026Q2单季 · 人民币亿元；利润披露只到毛利</caption>
+      <thead><tr><th>分部</th><th>收入</th><th>占比</th><th>同比</th><th>环比</th><th>毛利</th><th>毛利率</th><th>同比变化</th></tr></thead>
+      <tbody>
+        <tr><td>游戏及相关增值服务</td><td>250.23</td><td>83.1%</td><td class="up">+9.7%</td><td class="down">−2.7%</td><td>190.49</td><td>76.1%</td><td class="up">+5.9ppt</td></tr>
+        <tr><td>有道</td><td>14.67</td><td>4.9%</td><td class="up">+3.5%</td><td class="up">+8.8%</td><td>7.17</td><td>48.9%</td><td class="up">+5.9ppt</td></tr>
+        <tr><td>网易云音乐</td><td>19.77</td><td>6.6%</td><td>+0.4%</td><td>−0.2%</td><td>7.40</td><td>37.4%</td><td class="up">+1.4ppt</td></tr>
+        <tr><td>创新及其他</td><td>16.39</td><td>5.4%</td><td class="down">−3.5%</td><td class="up">+5.8%</td><td>7.11</td><td>43.4%</td><td class="up">+1.1ppt</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="profit">
+  <div class="slabel">利润质量 · 从营业利润到归母</div>
+  <h2>29.54亿元投资损失制造了反差，25.5%税率把反差放大</h2>
+  <p>Q2营业利润同比增加30.28亿元，但归母净利润减少16.20亿元。最主要的反向项目，是投资收益从上年同期盈利3.28亿元变成亏损29.54亿元；公司解释为股票投资公允价值下降及减值。汇兑由收益转为亏损、税费增加也形成压力。少数股东损益的变化则小幅缓冲。</p>
+
+  <div class="wfall" role="img" aria-label="从2025Q2归母净利润到2026Q2归母净利润的同比桥，具体数字见每行">
+    <div class="wrow"><div class="nm">2025Q2归母<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:86%"></div></div><div class="fig">86.01</div></div>
+    <div class="wrow"><div class="nm">营业利润改善<span>主营贡献</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:30%"></div></div><div class="fig up">+30.28</div></div>
+    <div class="wrow"><div class="nm">投资损益变化<span>盈利转亏损</span></div><div class="wtrack"><div class="wbar down" style="left:18%;width:33%"></div></div><div class="fig down">−32.82</div></div>
+    <div class="wrow"><div class="nm">汇兑变化<span>收益转亏损</span></div><div class="wtrack"><div class="wbar down" style="left:44%;width:6%"></div></div><div class="fig down">−5.51</div></div>
+    <div class="wrow"><div class="nm">利息及其他变化<span>同比减少</span></div><div class="wtrack"><div class="wbar down" style="left:47%;width:3%"></div></div><div class="fig down">−2.20</div></div>
+    <div class="wrow"><div class="nm">税费增加<span>有效税率14.7%→25.5%</span></div><div class="wtrack"><div class="wbar down" style="left:41%;width:9%"></div></div><div class="fig down">−8.98</div></div>
+    <div class="wrow"><div class="nm">少数股东影响<span>缓冲项</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:3%"></div></div><div class="fig up">+3.02</div></div>
+    <div class="wrow"><div class="nm">2026Q2归母<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:70%"></div></div><div class="fig">69.81</div></div>
+  </div>
+  <p class="small">人民币亿元。桥使用原始精度：营业利润、投资、利息、汇兑、其他、税费及净利润与归母之间差异逐项对账；显示值四舍五入。</p>
+
+  <h3>费用率下降，让毛利改善真正落到营业利润</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Q2经营费用 · 人民币亿元；费用率为占收入比例</caption>
+      <thead><tr><th>项目</th><th>2025Q2</th><th>2026Q2</th><th>同比</th><th>费用率变化</th><th>解释</th></tr></thead>
+      <tbody>
+        <tr><td>销售及市场</td><td>35.78 / 12.8%</td><td>36.79 / 12.2%</td><td>+2.8%</td><td class="up">−0.6ppt</td><td>投入增加低于收入</td></tr>
+        <tr><td>一般及管理</td><td>10.57 / 3.8%</td><td>8.05 / 2.7%</td><td class="up">−23.8%</td><td class="up">−1.1ppt</td><td>形成明显经营杠杆</td></tr>
+        <tr><td>研发</td><td>43.57 / 15.6%</td><td>46.44 / 15.4%</td><td>+6.6%</td><td class="up">−0.2ppt</td><td>绝对投入仍增长</td></tr>
+        <tr class="grp"><td>经营费用合计</td><td>89.91 / 32.2%</td><td>91.28 / 30.3%</td><td>+1.5%</td><td class="up">−1.9ppt</td><td>收入增长快于费用</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="quote">本季度最重要的盈利事实，不是“净利润下滑”，而是每100元收入形成约40元营业利润、却只有约23元归母利润。</div>
+
+  <h3>非GAAP没有替投资者消除投资风险</h3>
+  <div class="grid">
+    <div class="cell"><div class="k">GAAP归母净利润</div><div class="v">69.81<span class="u">亿元</span></div><div class="d"><span class="down">同比 −18.8%</span></div></div>
+    <div class="cell"><div class="k">归母股份支付加回</div><div class="v">7.66<span class="u">亿元</span></div><div class="d"><span>唯一调整项目</span></div></div>
+    <div class="cell"><div class="k">非GAAP归母</div><div class="v">77.47<span class="u">亿元</span></div><div class="d"><span class="down">同比 −18.7%</span></div></div>
+  </div>
+  <p>公司非GAAP归母只加回股份支付，不剔除投资损失、汇兑、利息或税，因此同比方向几乎没有变化。对普通股东而言，股份支付会稀释未来权益，投资损失也是真实资本配置结果；两者都不应被简单删除。用于估值的“核心经营NOPAT代理”会另行从营业利润出发，并明确标准化税率。</p>
+</section>
+
+<section class="reveal on" id="games">
+  <div class="slabel">游戏与产品周期 · 长青化、国际化、新品</div>
+  <h2>旧游戏撑住现金牛，新游戏决定下一次估值抬升</h2>
+  <p>Q2游戏及相关增值服务收入250.23亿元，同比增长9.7%，但环比下降2.7%；在线游戏占该分部97.7%。公司把同比增长归因于《梦幻西游》系列及《燕云十六声》等自研游戏，把环比下降归因于若干自研及代理游戏小幅回落。毛利率升至76.1%，管理层在电话会上把主要原因归结为平台收入分成成本下降。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">《蛋仔派对》注册用户</div><div class="v">7<span class="u">亿</span></div><div class="d"><span>管理层陈述；累计值</span></div></div>
+    <div class="cell"><div class="k">《蛋仔派对》月活</div><div class="v">&gt;1<span class="u">亿</span></div><div class="d"><span>管理层称保持在此水平</span></div></div>
+    <div class="cell"><div class="k">《逆水寒》手游大版本上线日活跃</div><div class="v">&gt;1,000<span class="u">万</span></div><div class="d"><span>管理层称并发用户两年新高</span></div></div>
+    <div class="cell"><div class="k">《燕云十六声》Steam好评</div><div class="v">&gt;87<span class="u">%</span></div><div class="d"><span>管理层陈述；Q2保持</span></div></div>
+    <div class="cell"><div class="k">《归唐》预告全球观看</div><div class="v">约4,000<span class="u">万</span></div><div class="d"><span>管理层陈述；不等于付费</span></div></div>
+    <div class="cell"><div class="k">单产品收入 / 利润</div><div class="v">未披露</div><div class="d"><span>不能用榜单排名代替财务贡献</span></div></div>
+  </div>
+
+  <div class="tline" aria-label="网易游戏产品验证时间线">
+    <div class="tstop"><div class="tw">2026Q2</div><b>老产品迭代</b><p>梦幻、第五人格、蛋仔、逆水寒、燕云继续贡献；暴雪代理产品在华更新。</p></div>
+    <div class="tstop warn"><div class="tw">2026.07</div><b>《遗忘之海》中国上线</b><p>初期学习曲线偏高、出现批评；管理层称将简化前期内容并持续优化。</p></div>
+    <div class="tstop"><div class="tw">开发中</div><b>《无限大》</b><p>持续打磨、展示新进度；没有给出正式上线日期或收入目标。</p></div>
+    <div class="tstop"><div class="tw">开发中</div><b>《归唐》</b><p>海外关注度较高；商业化、上线期和投入回收均未量化。</p></div>
+    <div class="tstop warn"><div class="tw">测试中</div><b>另两款产品</b><p>管理层只说达到用户要求后上线，没有给出确定时间表。</p></div>
+  </div>
+
+  <div class="finds">
+    <div class="find good"><div class="t">长线运营已被财务验证</div><p>FY2021—25游戏收入从678.19亿元增至921.49亿元，毛利从418.12亿元增至642.38亿元；Q2老产品与燕云继续支撑增长。利润不是押注单一新品才产生。</p></div>
+    <div class="find warn"><div class="t">新品仍未被财务验证</div><p>《遗忘之海》上线后管理层承认初期学习曲线问题；《无限大》《归唐》及测试产品都没有量化上线期、流水、留存或回收期。关注度不能先写进基准利润。</p></div>
+  </div>
+
+  <h3>国际化：方向成立，量化证据仍薄</h3>
+  <p>《燕云十六声》和《漫威争锋》在北美、欧洲等市场扩大覆盖；管理层称正准备《遗忘之海》全球上线，但未给日期。这些只是产品和运营信号。最新可量化地域信息仍只有FY2025：可报告分部收入的89.9%来自中国大陆，即境外约10.1%。Q2/H1地域收入、毛利、获客成本和现金回报均未披露，不能把海外榜单自动折算成利润。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>网易当前像一支由老将带队的球队：老产品仍能得分，且渠道成本下降让每分更值钱；新品名单不算空，但上场时间和效率没有给。估值升级需要新品带来可持续增量，而不是只看预告片播放量。</p></div>
+</section>
+
+<section class="reveal on" id="portfolio">
+  <div class="slabel">业务组合 · 有道、云音乐与创新业务</div>
+  <h2>非游戏占17%收入，却只贡献约10%毛利</h2>
+  <p>分部结构说明网易仍是高度集中的游戏公司。有道和云音乐的利润质量改善，能提供小幅组合缓冲；但由于规模较小，它们不足以在游戏周期向下时独立稳定集团。创新及其他收入继续收缩，电商是主要拖累。</p>
+  <div class="rows">
+    <div class="row"><div class="nm">有道<span>收入14.67亿元</span></div><div class="track"><div class="fill moss" style="width:4.9%"></div></div><div class="fig">+3.5%<span>毛利率48.9%</span></div></div>
+    <div class="row"><div class="nm">网易云音乐<span>收入19.77亿元</span></div><div class="track"><div class="fill soft" style="width:6.6%"></div></div><div class="fig">+0.4%<span>毛利率37.4%</span></div></div>
+    <div class="row"><div class="nm">创新及其他<span>收入16.39亿元</span></div><div class="track"><div class="fill alt" style="width:5.4%"></div></div><div class="fig down">−3.5%<span>毛利率43.4%</span></div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>经营信号与仍缺少的关键数据</caption>
+      <thead><tr><th>业务</th><th>Q2正面证据</th><th>边界 / 反证</th><th>下一验证点</th></tr></thead>
+      <tbody>
+        <tr><td>有道</td><td>学习服务推动增长；子曰4及AI工具继续迭代</td><td>绝对收入较小；AI订阅、客户留存与投入回收未量化</td><td>学习服务增速与营业利润</td></tr>
+        <tr><td>云音乐</td><td>毛利率同比升1.4ppt；管理层称DAU/MAU高于30%，续费改善</td><td>收入近乎持平；绝对会员数、ARPU及版权成本未披露</td><td>订阅收入、会员数与毛利率</td></tr>
+        <tr><td>创新及其他</td><td>毛利率小幅提高；严选聚焦宠物、香氛、家居</td><td>收入同比下降3.5%，公司明确电商减少</td><td>收入止跌与现金贡献</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>上市子公司只能做穿透校验，不能重复相加</h3>
+  <div class="grid">
+    <div class="cell"><div class="k">有道 · 网易持股</div><div class="v">56.6<span class="u">%</span></div><div class="d"><span>年报组织架构图，2026-03-31</span></div></div>
+    <div class="cell"><div class="k">有道持股市值</div><div class="v">约73.2<span class="u">亿元人民币</span></div><div class="d"><span>DAO市值×持股×汇率</span></div></div>
+    <div class="cell"><div class="k">云音乐 · 网易持股</div><div class="v">61.6<span class="u">%</span></div><div class="d"><span>年报组织架构图，2026-03-31</span></div></div>
+    <div class="cell"><div class="k">云音乐持股市值</div><div class="v">约101.6<span class="u">亿元人民币</span></div><div class="d"><span>9899.HK市值×持股×汇率</span></div></div>
+    <div class="cell"><div class="k">两项穿透值合计</div><div class="v">约174.8<span class="u">亿元人民币</span></div><div class="d"><span>仅作存在性与量级校验</span></div></div>
+    <div class="cell"><div class="k">正式估值处理</div><div class="v">不重复加总</div><div class="d"><span>盈利、现金已并入合并报表</span></div></div>
+  </div>
+  <p class="small">Wind股东表对两项持股给出不同口径；本报告以发行人年报组织架构图的56.6%与61.6%控制经济持股，并披露冲突。若把上市子公司持股市值加进估值，就必须同时从集团经营利润、净现金和少数股东中完整剔除对应业务；现有披露不足以无误完成该去重。</p>
+</section>
+
+<section class="reveal on" id="cash">
+  <div class="slabel">现金流与资本配置 · 现金牛如何回到每股</div>
+  <h2>1,675亿元净现金提供保护，但投资损失说明现金并非天然无风险</h2>
+  <p>按公司净现金定义纳入的资产合计为1,801.04亿元，其中包括受限现金及非流动存款；扣除126.04亿元借款后，公司定义净现金1,675.00亿元，另有213.36亿元长期投资。净现金约占按不含库存股计算的当前人民币股权价值三成，是估值的重要缓冲，却不等于全部可立即分派：受限现金、子公司、VIE、税务和经营需求都会影响可用性。</p>
+  <div class="grid">
+    <div class="cell"><div class="k">期末净现金</div><div class="v">1,675.00<span class="u">亿元</span></div><div class="d"><span>公司定义；精确对账1,674.999亿元</span></div></div>
+    <div class="cell"><div class="k">长期投资账面</div><div class="v">213.36<span class="u">亿元</span></div><div class="d"><span>估值按0%—70%信用</span></div></div>
+    <div class="cell"><div class="k">LTM FCF代理</div><div class="v">499.98<span class="u">亿元</span></div><div class="d"><span>CFO减两类现金资本开支</span></div></div>
+    <div class="cell"><div class="k">Q2 FCF / 营业利润</div><div class="v">81.8<span class="u">%</span></div><div class="d"><span>现金转化仍高</span></div></div>
+    <div class="cell"><div class="k">H1已付股息</div><div class="v">82.95<span class="u">亿元</span></div><div class="d"><span>现金流量表</span></div></div>
+    <div class="cell"><div class="k">H1母公司回购</div><div class="v">3.241<span class="u">亿美元</span></div><div class="d"><span>约280万ADS</span></div></div>
+  </div>
+
+  <div class="callout"><b>单季FCF不可直接年化。</b>Q2两类现金资本开支仅0.80亿元，期末固定资产采购应付款及计提债项却为5.22亿元，存在付款时点影响。报告采用内容投入后FCF代理，并用LTM平滑；公司没有披露正式“自由现金流”。</div>
+
+  <h3>股息、回购与股份支付要放在同一张表</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>截至2026-09-01可验证的资本回报与稀释</caption>
+      <thead><tr><th>项目</th><th>本期事实</th><th>经济含义</th><th>判断</th></tr></thead>
+      <tbody>
+        <tr><td>Q2股息</td><td>已批准每普通股US$0.096 / 每ADS US$0.480；截止日未支付</td><td>登记日09-03；普通股09-15派发，ADS预计约09-18支付</td><td>季度酌情决定，不是固定承诺</td></tr>
+        <tr><td>回购授权</td><td>上限US$5bn，至2029-01-09；截至06-30累计约US$2.3bn</td><td>截至该日执行约46%，仍有容量</td><td>执行节奏比授权更重要</td></tr>
+        <tr><td>H1母公司回购</td><td>约280万ADS / 1,403.6万普通股，US$324.1m</td><td>现金流量表另含购买子公司股份，不能混写</td><td>纯母公司口径以公告叙述为准</td></tr>
+        <tr><td>Q2股份支付</td><td>合并费用7.82亿元；归母非GAAP加回7.66亿元</td><td>非现金费用仍有未来稀释</td><td>不能完全忽略</td></tr>
+        <tr><td>未行使旧计划RSU</td><td>2026-07-31潜在4,314.3万股，约占1.35%</td><td>不等于全部会归属或发行</td><td>监测全面摊薄股数</td></tr>
+        <tr><td>8月新授予</td><td>112.37万股，零购买价，2027—29年9月1日分三批归属</td><td>每批受前一年度员工绩效门槛、持续资格及追索规定约束</td><td>规模小；绩效指标未披露</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>回购并未让Q2加权基本股数下降：同比反而增加0.5%，摊薄股数增加0.2%。公告没有拆解原因；时间点、奖励归属及库存股安排可能影响加权分母。这提醒投资者，评价回购要看全面摊薄股数和每股价值，而不是只看累计美元金额。计划剩余可授予容量约1.716亿股、约为现有不含库存股5.4%，只是授权上限，不是已发生稀释。</p>
+</section>
+
+<section class="reveal on" id="governance">
+  <div class="slabel">管理团队与股权结构分析 · 公司治理专项分析 · 区域市场与地理分布</div>
+  <h2>创始人控制力很强，VIE覆盖绝大部分收入；治理折价不能只看董事人数</h2>
+  <p>截至2026年2月28日，丁磊拥有约45.5%的实益权益，是决定战略和资本配置的关键人。公司通过合同安排控制境内VIE，FY2025约85.2%的合并收入来自VIE体系，但VIE资产只占合并资产约5.8%（剔除集团内部应收款）。这组反差说明轻资产游戏收入高度依赖牌照与合同控制，也说明“净现金很多”不等于所有资金都在上市公司母体自由流动。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">丁磊实益权益</div><div class="v">45.5<span class="u">%</span></div><div class="d"><span>截至2026-02-28</span></div></div>
+    <div class="cell"><div class="k">FY2025 VIE收入占比</div><div class="v">85.2<span class="u">%</span></div><div class="d"><span>FY2023为87.7%</span></div></div>
+    <div class="cell"><div class="k">FY2025 VIE资产占比</div><div class="v">5.8<span class="u">%</span></div><div class="d"><span>剔除集团内部应收</span></div></div>
+    <div class="cell"><div class="k">中国大陆收入占比</div><div class="v">89.9<span class="u">%</span></div><div class="d"><span>FY2025可报告分部收入</span></div></div>
+    <div class="cell"><div class="k">香港双重主要上市</div><div class="v">2026.06.30</div><div class="d"><span>香港规则约束增强</span></div></div>
+    <div class="cell"><div class="k">8月新授予潜在稀释</div><div class="v">0.035<span class="u">%</span></div><div class="d"><span>112.37万股，2027—29分三批</span></div></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span><p><span class="g">VIE</span>不是上市公司直接持有境内运营牌照公司的股权，而是通过一组合同取得经济利益和控制。报表按会计规则合并，不代表这些合同在所有争议情景下与直接股权同样稳固；估值中的现金信用因此不应给满。</p></div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>治理问题不是静态打分，而是它如何进入每股价值</caption>
+      <thead><tr><th>问题</th><th>已知事实</th><th>价值传导</th><th>可验证动作</th></tr></thead>
+      <tbody>
+        <tr><td>控制权集中</td><td>创始人权益接近一半；丁磊是广州网易及杭州乐读两家VIE的99%登记股东</td><td>战略一致性高，外部股东制衡较弱</td><td>重大投资、关联交易与回购纪律</td></tr>
+        <tr><td>VIE可执行性</td><td>公司明确合同安排尚未在中国大陆法院进行过验证</td><td>极端监管或争议时可能影响控制与资金上划</td><td>牌照、监管及合同安排变化</td></tr>
+        <tr><td>双重主要上市</td><td>2026-06-30生效，适用香港企业管治守则</td><td>增加持续披露与香港规则约束</td><td>后续年报治理披露与豁免变化</td></tr>
+        <tr><td>股权激励</td><td>新授予零购买价，设员工绩效门槛、持续资格及追索规定</td><td>绩效指标未披露，无法判断是否与ROIC、现金回报或每股价值挂钩</td><td>摊薄股数与回购抵消程度</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>地域透明度仍有限：FY2025可报告分部收入约89.9%来自中国大陆，Q2没有按中国／海外披露收入、预订额、利润或投入。国际化故事只能用产品榜单和用户反馈作早期信号，不能据此制造海外收入占比。公司也未披露可支持分部资本回报率的资产与现金流。</p>
+</section>
+
+<section class="reveal on" id="market">
+  <div class="slabel">投资逻辑与核心增长驱动 · 行业与宏观环境分析 · 竞争对手与同业估值对比 · 股价走势与技术分析 · 贝塔与阿尔法分析</div>
+  <h2>市场已为现金与长青能力付费，却没有为新品全面成功定价</h2>
+  <p>网易的可持续超额回报来自三件事：长青内容降低获客与研发重置频率、渠道分成下降提高每元收入的毛利、净现金让公司能跨周期投入。反方机制也同样清楚：游戏需求非线性、版号和海外本地化增加不确定性，单一爆款不能稳定复刻；当新品稀疏时，高毛利率更可能成为比较基数而非继续上升的起点。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">现价 · 2026-09-01</div><div class="v">188.80<span class="u">港元</span></div><div class="d"><span>16:08:18 HKT</span></div></div>
+    <div class="cell"><div class="k">Wind TTM / 预测PE</div><div class="v">16.24<span class="u">×</span></div><div class="d"><span>预测PE 14.02×</span></div></div>
+    <div class="cell"><div class="k">PB / 股息率</div><div class="v">3.16<span class="u">×</span></div><div class="d"><span>股息率2.41%</span></div></div>
+    <div class="cell"><div class="k">52周区间</div><div class="v">167.8—243.1</div><div class="d"><span>现价位于区间27.9%</span></div></div>
+    <div class="cell"><div class="k">三年最大回撤</div><div class="v">−33.15<span class="u">%</span></div><div class="d"><span>Wind日频，至2026-09-01</span></div></div>
+    <div class="cell"><div class="k">三年月线Beta</div><div class="v">0.40<span class="u">×</span></div><div class="d"><span>相对恒生科技，自算</span></div></div>
+  </div>
+
+  <h3>同业只提供边界，不提供自动答案</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>Wind快照 · 2026-09-01；预测口径依Wind一致化数据，但业务、会计与周期差异仍大</caption>
+      <thead><tr><th>公司</th><th>TTM PE</th><th>预测PE</th><th>PB</th><th>可比性判断</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td>网易</td><td>16.24×</td><td>14.02×</td><td>3.16×</td><td>游戏现金牛＋净现金</td></tr>
+        <tr><td>腾讯</td><td>14.82×</td><td>14.89×</td><td>3.07×</td><td>中心锚；社交、广告、金融科技更分散</td></tr>
+        <tr><td>哔哩哔哩</td><td>29.97×</td><td>27.51×</td><td>2.89×</td><td>数字娱乐侧证，盈利阶段与规模不同</td></tr>
+        <tr><td>Take-Two</td><td>亏损</td><td>135.04×</td><td>11.32×</td><td>纯游戏运营侧证，倍数不可作为中心锚</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>最有力的同业反证是腾讯。</strong>它的业务更分散、平台壁垒更强，集团TTM PE反而低于网易。Wind口径下，网易TTM／预测PE之差隐含预测盈利高于当前TTM，腾讯则大致持平；这与“网易盈利回落更快”相反。两者的业务和现金口径不同，因此这里只把集团PE作为估值合理性校验，不能机械压住网易剔除财务损益、再加资产价值的核心NOPAT倍数。</p>
+
+  <h3>价格告诉我们情绪位置，不替代价值</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>完整月末未复权价格回报，不含股息；相对收益为百分点</caption>
+      <thead><tr><th>区间</th><th>网易</th><th>恒生科技</th><th>相对恒生科技</th><th>恒生指数</th><th>相对恒指</th></tr></thead>
+      <tbody>
+        <tr><td>1年</td><td class="down">−9.4%</td><td>−18.6%</td><td class="up">+9.2</td><td>+2.0%</td><td class="down">−11.4</td></tr>
+        <tr><td>3年</td><td class="up">+17.5%</td><td>+10.5%</td><td class="up">+6.9</td><td>+39.1%</td><td class="down">−21.6</td></tr>
+        <tr><td>5年</td><td class="up">+35.8%</td><td>−30.1%</td><td class="up">+65.9</td><td>−1.2%</td><td class="up">+37.0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Wind日频接口没有返回统计Beta、相关系数或Alpha，本报告不补空值；月线自算对恒生科技Beta为0.395、相关系数0.386，三年年化波动约32.8%。低统计Beta主要反映历史共同波动较低，<strong>不等于新品失败、监管变化或投资减值的基本面风险小</strong>。经济Alpha要由长青收入、成本结构和资本回报证明，而不是由回归系数宣告。</p>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">估值分析与市场定价 · 反向预期</div>
+  <h2>基准价值约204港元：资产缓冲很厚，经营安全边际却不宽</h2>
+  <p>本报告使用“核心经营盈利倍数＋打折资产价值”的静态框架。LTM营业利润410.79亿元先按20%标准化税率形成税后经营利润，再扣除LTM少数股东利润6.62亿元，得到核心归母<span class="g">NOPAT</span>代理322.01亿元。这个方法剔除了营业利润以下的利息、投资与汇兑噪音，再分别给净现金和长期投资不同信用；由于两类资产仍为合并口径，最后扣除43.76亿元少数股东账面权益，作为少数股东资产请求权的审慎代理。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">LTM核心归母NOPAT代理</div><div class="v">322.01<span class="u">亿元</span></div><div class="d"><span>20%税率为分析假设</span></div></div>
+    <div class="cell"><div class="k">现价反推核心倍数</div><div class="v">11.68<span class="u">×</span></div><div class="d"><span>按基准资产信用并扣NCI</span></div></div>
+    <div class="cell"><div class="k">现价反推核心盈利</div><div class="v">289.43<span class="u">亿元</span></div><div class="d"><span>给13×时，低于LTM 10.1%</span></div></div>
+    <div class="cell"><div class="k">压力价值</div><div class="v">133.56<span class="u">港元</span></div><div class="d"><span class="down">较现价 −29.3%</span></div></div>
+    <div class="cell"><div class="k">基准价值</div><div class="v">204.09<span class="u">港元</span></div><div class="d"><span class="up">较现价 +8.1%</span></div></div>
+    <div class="cell"><div class="k">乐观价值</div><div class="v">268.97<span class="u">港元</span></div><div class="d"><span class="up">较现价 +42.5%</span></div></div>
+  </div>
+
+  <div class="steps">
+    <div class="step"><div class="n">01 · NORMALIZE</div><b>标准化经营盈利</b><p>营业利润税后化并扣少数股东，不把投资公允价值波动混入核心。</p></div>
+    <div class="step"><div class="n">02 · MULTIPLE</div><b>给周期倍数</b><p>压力10×、基准13×、乐观16×，由新品成功率与长青稳定性决定。</p></div>
+    <div class="step"><div class="n">03 · ASSETS</div><b>资产打折加回</b><p>净现金给60%—100%信用，长期投资给0%—70%，再扣少数股东权益代理。</p></div>
+    <div class="step"><div class="n">04 · PER SHARE</div><b>换算每股</b><p>使用32.0125亿不含库存股及人民币兑港元1.1561。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>静态情景估值 · 股权价值人民币十亿元；子公司已并表，不重复加市值；各情景扣少数股东账面权益4.376</caption>
+      <thead><tr><th>情景</th><th>核心盈利</th><th>核心倍数</th><th>净现金信用</th><th>长期投资信用</th><th>股权价值</th><th>每股港元</th></tr></thead>
+      <tbody>
+        <tr><td>压力</td><td>27.371</td><td>10×</td><td>60%</td><td>0%</td><td>369.830</td><td>133.56</td></tr>
+        <tr class="grp"><td>基准</td><td>32.201</td><td>13×</td><td>85%</td><td>40%</td><td>565.143</td><td>204.09</td></tr>
+        <tr><td>乐观</td><td>35.421</td><td>16×</td><td>100%</td><td>70%</td><td>744.792</td><td>268.97</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>价格梯：每一档都对应一个不同命题</h3>
+  <div class="rows">
+    <div class="row"><div class="nm">HK$134<span>压力锚</span></div><div class="track"><div class="fill alt" style="width:50%"></div></div><div class="fig">净现金打六折<span>盈利−15%</span></div></div>
+    <div class="row"><div class="nm">HK$189<span>现价</span></div><div class="track"><div class="fill soft" style="width:70%"></div></div><div class="fig">市场价<span>09-01收盘</span></div></div>
+    <div class="row"><div class="nm">HK$204<span>基准锚</span></div><div class="track"><div class="fill" style="width:76%"></div></div><div class="fig">13×核心<span>资产折价</span></div></div>
+    <div class="row"><div class="nm">HK$269<span>乐观锚</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">新品成功<span>资产高信用</span></div></div>
+  </div>
+
+  <div class="plain"><span class="pl">白话解读</span><p>现价并没有按16倍给核心游戏业务：把基准认可的现金与投资先扣掉、再加回少数股东请求权，剩余经营价值约等于核心盈利的11.7倍。问题在于这部分“便宜”依赖资产真实可用、投资损失不持续，以及现有游戏利润不塌陷。基准只多出约8%，尚不足以覆盖模型误差。</p></div>
+  <p class="small">估值不是公司指引。20%标准化税率、三组盈利、倍数和资产信用均为分析假设。少数股东账面权益只是其合并资产请求权的审慎代理，不是精确分部净现金分配。Wind市值使用总股本；情景每股值使用公告中不含库存股股数，因此两者有小幅口径差。上市有道与云音乐已并入利润、现金与少数股东，正式模型不另加其持股市值。</p>
+</section>
+
+<section class="reveal on" id="forecast">
+  <div class="slabel">盈利预测 · 有边界的三年情景</div>
+  <h2>管理层没有财务指引，精确小数只会制造虚假的确定性</h2>
+  <p>公司没有提供2026H2收入、预订额、利润率、资本开支或现金流指引，也没有披露单款游戏经济性。下面的三年框架只回答“什么经营轨迹与估值情景相容”，不冒充卖方一致预期。核心变量是游戏收入、毛利率能否守住、管线兑现频率，以及投资损失是否回归常态。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>分析情景 · 人民币十亿元；核心NOPAT＝收入×营业利润率×80%×97.98% LTM归母系数；FCF＝收入×表内FCF率</caption>
+      <thead><tr><th>情景</th><th>指标</th><th>2026E</th><th>2027E</th><th>2028E</th><th>核心假设</th></tr></thead>
+      <tbody>
+        <tr><td>压力</td><td>收入 / 营业利润率</td><td>117 / 34%</td><td>112 / 32%</td><td>116 / 33%</td><td>新品延迟，长青游戏回落</td></tr>
+        <tr><td></td><td>核心NOPAT / FCF / FCF率</td><td>31 / 43 / 37%</td><td>28 / 36 / 32%</td><td>30 / 39 / 34%</td><td>平台成本利好部分逆转</td></tr>
+        <tr class="grp"><td>基准</td><td>收入 / 营业利润率</td><td>119 / 35%</td><td>126 / 35.5%</td><td>134 / 36%</td><td>老游戏稳，新品按序贡献</td></tr>
+        <tr class="grp"><td></td><td>核心NOPAT / FCF / FCF率</td><td>33 / 48 / 40%</td><td>35 / 52 / 41%</td><td>38 / 56 / 42%</td><td>渠道结构大致维持</td></tr>
+        <tr><td>乐观</td><td>收入 / 营业利润率</td><td>121 / 36%</td><td>134 / 37%</td><td>148 / 38%</td><td>国际新品形成第二曲线</td></tr>
+        <tr><td></td><td>核心NOPAT / FCF / FCF率</td><td>34 / 51 / 42%</td><td>39 / 59 / 44%</td><td>44 / 68 / 46%</td><td>长青化提高增量利润率</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>管理层问答把不确定性暴露得很清楚</h3>
+  <div class="finds">
+    <div class="find warn"><div class="t">《遗忘之海》的承认比乐观措辞更重要</div><p>管理层在2026-08-20电话会上承认初期学习曲线过陡、批评影响体验，并称将简化早期内容；但没有回答分析师要求的下一季预订额。修复动作可验证，财务效果仍未披露。</p></div>
+    <div class="find"><div class="t">《无限大》仍没有可投资时间表</div><p>管理层当时称产品处于打磨阶段，并预告将在Gamescom展示进度；本报告未取得可核验的会后更新。公司未给发布日期、测试留存、预算或商业化目标。</p></div>
+    <div class="find"><div class="t">AI是叙事，不是模型输入</div><p>管理层把AI称为研发“放大器”，但没有披露开发周期、成本、质量或产能改善KPI。本报告不给任何AI效率红利。</p></div>
+    <div class="find"><div class="t">精简管线需要更高命中率</div><p>分析师明确提出新品较少且基数更高的问题；管理层重申精品战略，却没有给管线数量、档期或增长桥。基准只假设温和贡献，乐观情景才计入第二曲线。</p></div>
+  </div>
+  <p class="small">电话会没有发行人正式文字稿。官方页面与回放链接用于确认会议身份；观点依据二级转录，关键问答使用同一二级Quartr音频镜像核对。官方回放需填写访客信息，本报告未抓取其音频。会计数字全部回到HKEX公告；7月上线与8月活动是期后经营事项，不是Q2收入。</p>
+</section>
+
+<section class="reveal on" id="risk">
+  <div class="slabel">风险因素与预警信号 · 投资验证与筹码分析 · 多空辩论</div>
+  <h2>真正的争议不是Q2好不好，而是40%营业利润率能守多久</h2>
+  <div class="finds">
+    <div class="find good"><div class="t">多方最强证据</div><p>五年收入复合增速不高，营业利润和FCF代理却增长逾两成；Q2游戏毛利率上升近六个百分点，老产品活跃与海外榜单支持长线运营能力，1,675亿元净现金提高容错。</p></div>
+    <div class="find warn"><div class="t">空方最强证据</div><p>新品财务数据与海外分部数据缺失，管线被分析师形容为偏精简；腾讯估值并不更贵；29.54亿元投资损失和较高税率说明营业利润以下的资本配置可能持续侵蚀股东回报。</p></div>
+    <div class="find"><div class="t">争议如何解决</div><p>下一季若游戏收入维持约250亿元、游戏毛利率守在73%以上、集团营业利润率不低于36%，且大额投资损失不重复，基准情景可信度上升。</p></div>
+    <div class="find warn"><div class="t">什么会证伪</div><p>游戏收入跌破235亿元、毛利率回到70%以下，新作修复仍无留存或商业化证据，或投资损失连续两个季度显著侵蚀税前利润，均会把估值推向压力区。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>按对投资命题的破坏力排序；概率为定性判断，不是统计预测</caption>
+      <thead><tr><th>风险</th><th>当前信号</th><th>破坏路径</th><th>预警指标</th><th>判断</th></tr></thead>
+      <tbody>
+        <tr><td>游戏组合回落</td><td>Q2环比收入下降；新品经济性未披露</td><td>收入与高增量毛利同时收缩</td><td>分部收入、毛利率、老游戏活跃</td><td>高影响 / 中概率</td></tr>
+        <tr><td>管线延迟或失利</td><td>多款产品无日期；《遗忘之海》早期体验受批评</td><td>增长空档拉长，研发营销回报下降</td><td>测试、版号、发布日、留存与榜单持续性</td><td>高影响 / 中概率</td></tr>
+        <tr><td>投资与减值</td><td>Q2股票公允价值下降及减值，但无逐项标的</td><td>净利润、现金信用和估值折价恶化</td><td>投资损益、长期投资、13F与减值披露</td><td>中高影响 / 中概率</td></tr>
+        <tr><td>监管与VIE</td><td>收入高度集中境内VIE；合同安排尚未在中国大陆法院进行过验证</td><td>产品上线、控制权或资金上划受限</td><td>版号、数据规则、合同和分红路径</td><td>极高影响 / 低频</td></tr>
+        <tr><td>股东回报被稀释</td><td>回购与股份支付并存，Q2加权股数未下降</td><td>企业价值增长不能转成每股价值</td><td>全面摊薄股数、净回购、SBC／收入</td><td>中影响 / 中概率</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>筹码数据的决策价值有限：创始人持股高、流通结构稳定，但这不能证明短期供需。过去一年股价回落、却跑赢恒生科技，说明市场既下调了增长预期，也没有把公司当作普通高Beta科技股。投资验证应以经营和每股结果为主，不把技术位或名人框架当成独立买入理由。</p>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">最终投资建议与操作方案</div>
+  <h2>中性偏积极：等Q3把高毛利变成可持续证据，再决定是否提高估值</h2>
+  <p><strong>一句话判断：</strong>网易Q2的主营质量明显好于归母利润，但HK$188.80只比基准价值低约8%，在新品经济性、投资损失去向和地理贡献均未披露时，尚不是高置信度的深度折价。</p>
+
+  <div class="tline">
+    <div class="tstop"><div class="tw">现在</div><b>持有／观察</b><p>认可现金牛与资产缓冲，不为单季低资本开支和榜单追价。</p></div>
+    <div class="tstop"><div class="tw">下次财报</div><b>验证游戏利润</b><p>看收入、游戏毛利率、集团营业利润率与投资损失。</p></div>
+    <div class="tstop"><div class="tw">产品节点</div><b>验证新品经济性</b><p>要测试、档期、留存、预订额或收入，而非只有播放量。</p></div>
+    <div class="tstop warn"><div class="tw">失败边界</div><b>转向压力情景</b><p>收入与毛利同时跌破阈值，且资本配置拖累重复出现。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>下一可证伪检查表；公司未公布Q3业绩日期</caption>
+      <thead><tr><th>问题</th><th>升级信号</th><th>中性信号</th><th>降级信号</th></tr></thead>
+      <tbody>
+        <tr><td>游戏规模</td><td>单季收入≥250亿元</td><td>235—250亿元</td><td>&lt;235亿元</td></tr>
+        <tr><td>游戏毛利率</td><td>≥73%</td><td>70%—73%</td><td>&lt;70%</td></tr>
+        <tr><td>集团营业利润率</td><td>≥36%</td><td>33%—36%</td><td>&lt;33%</td></tr>
+        <tr><td>新品</td><td>披露可复核留存／预订额／档期</td><td>只有运营里程碑</td><td>继续延迟或修复无证据</td></tr>
+        <tr><td>资本配置</td><td>投资损失不再重复，净回购减少股数</td><td>波动可控</td><td>损失连续侵蚀税前利润</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>最强反方：</strong>腾讯在更分散的业务结构下以约14.8倍TTM PE交易，网易的16.2倍并不天然便宜；净现金调整后的低核心倍数只有在现金能回到股东、投资拖累不持续、游戏利润率可守时才成立。<strong>下一决定性证据：</strong>Q3分部收入与毛利率能否在新品信息仍有限时维持，而不是归母净利润因投资项目短期反弹。</p>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">术语表 · 读数口径</div>
+  <h2>十个概念，避免把不同的利润和股份混在一起</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>本报告含义</th><th>常见误读</th></tr></thead>
+      <tbody>
+        <tr><td><span class="g">GAAP</span></td><td>按美国会计准则列报的法定财务结果。</td><td>归母净利润包含投资、汇兑和税率波动。</td></tr>
+        <tr><td><span class="g">非GAAP</span></td><td>网易只加回股份支付后的归母净利润。</td><td>不是剔除所有非经营损益的“核心利润”。</td></tr>
+        <tr><td><span class="g">毛利率</span></td><td>收入扣直接成本后的比例；游戏成本含渠道及授权分成。</td><td>不等于分部营业利润率或净利率。</td></tr>
+        <tr><td><span class="g">FCF代理</span></td><td>经营现金流减购买物业设备软件、无形资产内容版权。</td><td>不是公司披露KPI，也未区分维持性与增长性投入。</td></tr>
+        <tr><td><span class="g">LTM</span></td><td>FY2025加2026H1、减2025H1所得最近十二个月。</td><td>不是把H1简单乘二。</td></tr>
+        <tr><td>NOPAT代理</td><td>营业利润按标准税率税后化，再扣少数股东利润。</td><td>20%税率是估值假设，不是指引。</td></tr>
+        <tr><td>VIE</td><td>通过合同安排控制并合并的境内运营实体。</td><td>会计合并不等同上市主体直接持有牌照公司股权。</td></tr>
+        <tr><td>ADS</td><td>美股存托凭证；1 ADS代表5股普通股。</td><td>港股每股与普通股为1:1，不可把ADS股息直接当港股股息。</td></tr>
+        <tr><td>SOTP</td><td>分部估值加总；本报告因去重资料不足只作穿透校验。</td><td>并表子公司市值不能在集团利润估值上再加一次。</td></tr>
+        <tr><td>全面摊薄股数</td><td>考虑潜在奖励归属后的每股价值分母。</td><td>回购金额增加不保证每股分母下降。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">证据、方法与披露边界</div>
+  <h2>会计由HKEX控制，观点标注管理层，估值保留可复算假设</h2>
+  <p>报告截止2026年9月1日。Q2指截至2026年6月30日止三个月；H1指同期六个月；LTM按已披露累计期桥接。金额默认人民币，股价和每股价值默认港元。原始会计输入保留人民币千元精度，页面展示值才四舍五入。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>证据分层与用途</caption>
+      <thead><tr><th>层级</th><th>来源</th><th>控制内容</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr><td>D · 披露</td><td>HKEX公告、年度报告、股息与月报表</td><td>会计、分部、股份、治理与期间</td><td>Q2未经审计；H1仅审阅</td></tr>
+        <tr><td>M · 管理层</td><td>官方演示与2026-08-20业绩会</td><td>产品进度、用户信号、经营解释</td><td>无量化财务指引</td></tr>
+        <tr><td>C · 计算</td><td>可执行账本与公式</td><td>LTM、FCF代理、估值与情景</td><td>不等于公司KPI或预测</td></tr>
+        <tr><td>A · 假设</td><td>标准化税率、倍数、资产信用</td><td>压力／基准／乐观边界</td><td>须随新证据重估</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>主要一手来源</h3>
+  <p><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000466_c.pdf">2026Q2及H1业绩公告</a>控制当期财务；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0415/2026041501231_c.pdf">2025年度报告</a>与<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0425/2024042503348_c.pdf">2023年度报告</a>控制可比五年历史、VIE和治理；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000506_c.pdf">Q2股息公告</a>控制记录与支付安排；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0811/2026081100971_c.pdf">经修订7月月报表</a>控制股数和未行使奖励；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082802681_c.pdf">8月奖励公告</a>控制期后授予。</p>
+  <p><a href="https://ir.netease.com/static-files/74d0f608-e795-4369-9436-4042158012bd">官方2Q26演示材料</a>用于产品披露；<a href="https://ir.netease.com/events/event-details/q2-2026-netease-inc-earnings-conference-call">官方电话会页面</a>与<a href="https://edge.media-server.com/mmc/p/2vy7kgxy">官方回放</a>用于确认会议身份。官方回放需填写访客信息且没有公开文字稿；少数问答依<a href="https://www.marketbeat.com/earnings/reports/2026-8-20-netease-inc-stock/">MarketBeat／Quartr二级转录</a>，并由同一二级来源的Quartr音频镜像抽查，不能控制会计事实。</p>
+  <p>行情、估值、同业、历史价格、指数和人民币汇率截至标注时点，数据来源于万得 Wind 金融数据服务。所有Wind派生回报均使用未复权月末价格、不含股息；自算Beta使用月频共同样本。报告没有使用缺失的日频Beta／Alpha值。</p>
+
+  <h3>已知缺口</h3>
+  <p>公司未披露Q2地理收入、单款游戏收入或利润、游戏预订额、付费率、ARPU、获客成本、分部营业利润／资产／现金流、投资损失逐项标的、2026H2量化指引及母公司可自由分派现金。上述项目保留为“未披露”，未用行业均值或模型猜测填充。股价、市值、汇率及预测PE会随市场变化；静态价值不是目标价承诺。</p>
+</section>
+
+<footer>
+  <p>网易 · 09999.HK / NTES · 2026Q2 Fullscan 全景尽调</p>
+  <p>研究截止：2026-09-01 ｜ 财务口径：US GAAP ｜ Q2未经审计，H1经审阅 ｜ 仅供研究，不构成投资建议</p>
+  <p>控制性论点：经营利润的改善真实，但当前价格需要Q3证明高毛利可持续，并需要资本配置停止侵蚀股东结果。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
