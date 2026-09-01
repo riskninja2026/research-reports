@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>古井贡酒 2026Q2 Fullscan 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">古井贡酒 000596.SZ / 200596.SZ ｜ 全景尽调 ｜ 数据截止 2026.09.01</div>
+    <h1>毛利率没有崩，<br>增长机器却在失速</h1>
+    <p class="lede">单二季度毛利率升到87.2%，看起来品牌池仍有韧性。<b>但收入同比下滑43.3%、销售费用几乎没降，经营现金流转负；管理层在5月、半年报之前所称的“库存合理”，也没有批价、动销或库存天数支持，期后未见量化更新。</b>厚现金和高派息能买时间，却不能替代渠道见底的证据。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">推算 2026Q2 毛利率</div>
+        <div class="big a">87.2%</div>
+        <div class="cap">同比提高6.98个百分点。公司未披露单季产品结构，不能把上升机械归因于提价或高端化。</div>
+      </div>
+      <div>
+        <div class="tag">推算 2026Q2 自由现金流代理</div>
+        <div class="big b">−4.71亿</div>
+        <div class="cap">上年同期为+18.92亿元；销售回款大降，是现金恶化快于利润的主要可见驱动之一。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>高毛利还在，渠道与现金的验证没有跟上</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>以年份原浆为利润核心、古井贡酒为大众价位基础，并通过控股黄鹤楼、明光扩展品牌与区域的徽酒龙头；销售以经销商先款后货为主。</li>
+      <li><b>单二季度：</b>由半年报减一季报推算，收入26.86亿元（−43.27%）、归母净利润5.58亿元（−58.14%）、经营现金流−3.69亿元。半年报与一季报均未经审计，单季不是公司独立披露。</li>
+      <li><b>核心矛盾：</b>毛利率升至87.22%，销售费用却仍为10.85亿元、同比+0.59%，费用率由22.78%跃升至40.38%。问题首先是收入规模、渠道效率与回款，而不是酿造成本失控。</li>
+      <li><b>容易踩的坑：</b>厂内存货107.95亿元主要是陈储中的半成品与在产品，<b>不等于经销商库存</b>；管理层在5月的2025年度业绩说明会称库存“合理”，但没有披露批价、开瓶、终端动销或分产品库存天数，半年报后也未见量化更新。</li>
+      <li><b>结论：</b><b>中性偏谨慎，等待验证。</b>A股现价100.88元，A股类股PE 25.99倍；按A、B股各自报价汇总，发行人经济市值470.76亿元、滚动PE约22.94倍。假设当前B/A折价不变，三情景A股交易价为61.69 / 119.43 / 190.54元；基准上行18.4%不足以抵消熊市近39%的下行，除非下半年收入、利润率与回款同时企稳。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>酒先在厂里变老，再经渠道变成收入与现金</h2>
+  <p>白酒不是“当期生产、当期售完”的普通快消品。粮食发酵成基酒后要陈储，再按酒龄、风味和包装组合成不同价位产品；品牌决定消费者愿意付多少，渠道决定酒能否真正从酒厂走到餐桌。古井的经济链条可以这样读：</p>
+  <div class="steps">
+    <div class="step"><div class="n">环节 1</div><b>酿造与陈储</b><p>半成品酒在厂内存放会占用资金，但也可能随酒龄增加价值；因此存货高不能直接等同滞销。</p></div>
+    <div class="step"><div class="n">环节 2</div><b>产品分层</b><p>年份原浆贡献近八成白酒收入、毛利率最高；古井贡酒覆盖更大众价位，黄鹤楼及其他承接外部品牌和区域扩张。</p></div>
+    <div class="step"><div class="n">环节 3</div><b>经销商先款后货</b><p>经销商通常先付款、酒厂再发货，降低应收风险；但酒厂确认收入后，经销商是否卖到终端仍是另一道问题。</p></div>
+    <div class="step"><div class="n">环节 4</div><b>费用换动销</b><p>广告、宴席、促销和人员投入推动终端销售。收入下滑而费用不降，利润会出现明显去杠杆。</p></div>
+  </div>
+  <p>公司同时发行A股与B股：总股本5.286亿股，其中A股4.086亿、B股1.20亿；两类股份市场价格不同，估值时不能把全部股本都按A股价计算。古井集团持股51.34%，最终控制人为亳州市国资委。本文把<span class="g">sell-in</span>（酒厂向经销商确认收入）与<span class="g">sell-through</span>（经销商真正卖到终端）严格分开，也把厂内<span class="g">基酒</span>与渠道库存分开；后文的<span class="g">合同负债</span>只代表预收与履约时点，<span class="g">自由现金流代理</span>则是经营现金流减现金资本开支。行业处于量缩、去库存和价格带重构期，品牌力仍重要，但渠道数据的举证标准应比顺风期更高。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">基础财务 · 产品与地区地图</div>
+  <h2>2024年以前的复利仍在报表里，滚动利润已退回2021年附近</h2>
+  <p>古井的白酒业务由年份原浆、古井贡酒、黄鹤楼及其他三类管理层产品系列构成；这些不是拥有独立资产负债表的法定分部。2021—2024年，公司依靠年份原浆与经销网络实现收入和利润复利；2025年出现断点，2026H1继续下行。地域披露仅到华北、华中、华南和国际，<b>公司没有披露安徽省内与省外收入</b>，不能把“华中”直接当成“省内”。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">2026H1 营业收入</div><div class="v">101.31<span class="u">亿元</span></div><div class="d"><span class="down">同比 −27.01%</span></div></div>
+    <div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">81.39<span class="u">亿元</span></div><div class="d"><span class="down">同比 −26.59%</span><span>80.33%</span></div></div>
+    <div class="cell"><div class="k">营业利润 / 利润率</div><div class="v">29.53<span class="u">亿元</span></div><div class="d"><span class="down">同比 −41.39%</span><span>29.14%</span></div></div>
+    <div class="cell"><div class="k">归母净利润 / 净利率</div><div class="v">21.64<span class="u">亿元</span></div><div class="d"><span class="down">同比 −40.89%</span><span>21.36%</span></div></div>
+    <div class="cell"><div class="k">经营现金流量净额</div><div class="v">15.43<span class="u">亿元</span></div><div class="d"><span class="down">同比 −62.87%</span></div></div>
+    <div class="cell"><div class="k">自由现金流代理</div><div class="v">11.35<span class="u">亿元</span></div><div class="d"><span class="down">同比 −64.65%</span><span>资本开支4.08亿元</span></div></div>
+  </div>
+
+  <div class="tblscroll" tabindex="0">
+    <table class="tbl">
+      <caption>滚动十二个月桥｜FY2025 − 2025H1 + 2026H1；人民币亿元</caption>
+      <thead><tr><th scope="col">收入</th><th scope="col">毛利 / 率</th><th scope="col">营业利润 / 率</th><th scope="col">归母净利 / 率</th><th scope="col">经营现金流</th><th scope="col">资本开支 / 自由现金流代理</th></tr></thead>
+      <tbody><tr><td>150.84</td><td>119.78 / 79.41%</td><td>29.55 / 19.59%</td><td>20.52 / 13.60%</td><td class="down">−6.65</td><td>11.27 / <span class="down">−17.92</span></td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="tblscroll" data-financials="history">
+    <table class="tbl" data-financials="history">
+      <caption>五年合并财务地图｜FY2021—FY2025；人民币亿元，EPS与ROE除外</caption>
+      <thead><tr><th scope="col">项目</th><th scope="col">2021</th><th scope="col">2022</th><th scope="col">2023</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">四年复合增速（CAGR）</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入</td><td>132.70</td><td>167.13</td><td>202.54</td><td>235.78</td><td>188.32</td><td>9.15%</td></tr>
+        <tr><td>毛利 / 率（推算）</td><td>99.66 / 75.10%</td><td>128.97 / 77.17%</td><td>160.14 / 79.07%</td><td>188.40 / 79.90%</td><td>149.25 / 79.26%</td><td>—</td></tr>
+        <tr><td>营业利润 / 率</td><td>31.02 / 23.37%</td><td>44.53 / 26.64%</td><td>62.83 / 31.02%</td><td>77.50 / 32.87%</td><td>50.40 / 26.76%</td><td>12.91%</td></tr>
+        <tr><td>归母净利润 / 率</td><td>22.98 / 17.32%</td><td>31.43 / 18.81%</td><td>45.89 / 22.66%</td><td>55.17 / 23.40%</td><td>35.49 / 18.85%</td><td>11.48%</td></tr>
+        <tr><td>每股收益（EPS，元） / 净资产收益率（ROE）</td><td>4.45 / 21.25%</td><td>5.95 / 17.93%</td><td>8.68 / 22.92%</td><td>10.44 / 23.89%</td><td>6.71 / 14.28%</td><td>—</td></tr>
+        <tr><td>经营现金流</td><td>52.54</td><td>31.08</td><td>44.96</td><td>47.28</td><td>19.47</td><td>—</td></tr>
+        <tr><td>资本开支</td><td>5.78</td><td>15.80</td><td>23.81</td><td>24.27</td><td>16.63</td><td>—</td></tr>
+        <tr><td>自由现金流代理</td><td>46.76</td><td>15.28</td><td>21.15</td><td>23.00</td><td>2.84</td><td>—</td></tr>
+        <tr><td>期末每股净资产（BVPS，元，推算）</td><td>31.29</td><td>35.04</td><td>40.72</td><td>46.65</td><td>47.39</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cols" role="img" aria-label="2021至2025年营业收入与归母净利润趋势，具体数值见上方五年财务表">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:56.3%"></div><div class="bar np" style="height:9.7%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:70.9%"></div><div class="bar np" style="height:13.3%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:85.9%"></div><div class="bar np" style="height:19.5%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:23.4%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:79.9%"></div><div class="bar np" style="height:15.1%"></div></div></div>
+  </div>
+  <div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div>
+  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
+  <p class="small">柱高按FY2024收入235.78亿元等比例绘制。2021—2024是扩张期；2025收入和利润柱同时回落，滚动十二个月又低于FY2025。</p>
+
+  <div data-financials="segments">
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>2026H1产品系列｜管理层产品口径，不是独立报告分部；人民币亿元</caption>
+        <thead><tr><th>系列</th><th>收入</th><th>白酒收入占比</th><th>同比</th><th>毛利率</th><th>毛利率变化</th></tr></thead>
+        <tbody>
+          <tr><td>年份原浆</td><td>79.65</td><td>79.68%</td><td class="down">−27.32%</td><td>85.03%</td><td>−0.11个百分点</td></tr>
+          <tr><td>古井贡酒</td><td>10.52</td><td>10.53%</td><td class="down">−11.14%</td><td>55.70%</td><td class="up">+3.66个百分点</td></tr>
+          <tr><td>黄鹤楼及其他</td><td>9.79</td><td>9.80%</td><td class="down">−34.57%</td><td>71.62%</td><td class="up">+1.00个百分点</td></tr>
+          <tr class="grp"><td>白酒合计</td><td>99.97</td><td>100.00%</td><td class="down">−26.71%</td><td>80.63%</td><td>−0.04个百分点</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="stacks">
+      <div class="stack"><div class="cap">2025H1白酒收入结构</div><div class="stackbar" role="img" aria-label="2025H1：年份原浆80.3%，古井贡酒8.7%，黄鹤楼及其他11.0%"><div class="seg p" style="width:80.3%">年份原浆 80.3%</div><div class="seg q" style="width:8.7%" aria-hidden="true"></div><div class="seg r" style="width:11.0%" aria-hidden="true"></div></div></div>
+      <div class="stack"><div class="cap">2026H1白酒收入结构</div><div class="stackbar" role="img" aria-label="2026H1：年份原浆79.7%，古井贡酒10.5%，黄鹤楼及其他9.8%"><div class="seg p" style="width:79.7%">年份原浆 79.7%</div><div class="seg q" style="width:10.5%" aria-hidden="true"></div><div class="seg r" style="width:9.8%" aria-hidden="true"></div></div></div>
+    </div>
+    <div class="legend"><span><i class="p"></i>年份原浆 80.3%→79.7%</span><span><i class="q"></i>古井贡酒 8.7%→10.5%</span><span><i class="r"></i>黄鹤楼及其他 11.0%→9.8%</span></div>
+
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>2026H1渠道与地区参考图｜人民币亿元；公司未披露省内/省外</caption>
+        <thead><tr><th>口径</th><th>收入</th><th>占总收入</th><th>同比</th><th>解释边界</th></tr></thead>
+        <tbody>
+          <tr><td>线上</td><td>6.58</td><td>6.50%</td><td class="up">+14.92%</td><td>规模仍小</td></tr>
+          <tr><td>线下</td><td>94.73</td><td>93.50%</td><td class="down">−28.81%</td><td>经销为主</td></tr>
+          <tr><td>华北</td><td>3.99</td><td>3.94%</td><td class="down">−50.71%</td><td>不等同省外</td></tr>
+          <tr><td>华中</td><td>91.25</td><td>90.07%</td><td class="down">−25.80%</td><td>含安徽、湖北等</td></tr>
+          <tr><td>华南</td><td>6.03</td><td>5.95%</td><td class="down">−21.46%</td><td>粗粒度区域</td></tr>
+          <tr><td>国际</td><td>0.04</td><td>0.04%</td><td class="down">−20.24%</td><td>不具估值材料性</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>这不是一家一直衰退的公司：2021—2024年，收入从132.70亿元长到235.78亿元，归母净利从22.98亿元升到55.17亿元，年份原浆和经销网络都曾真实扩张。<b>断点出现在2025年</b>，而滚动十二个月收入150.84亿元、归母20.52亿元，已比2024峰值分别低36%和63%。</p>
+    <p>本期最有支撑力的数字是毛利：年份原浆仍有85.03%毛利率，品牌池没有被成本击穿。最不舒服的数字是现金：滚动经营现金流已为负6.65亿元、自由现金流代理为负17.92亿元。高毛利只说明已确认收入的账面毛利仍高，不证明批价或终端承接；现金转负则说明回款和费用转化的节奏已经变差。</p>
+  </div>
+  <p class="small">毛利＝收入−营业成本；资本开支＝购建固定资产、无形资产和其他长期资产支付的现金；自由现金流代理＝经营现金流−该资本开支。CAGR＝(终值/初值)^(1/4)−1。2026H1及Q1未经审计；LTM只对流量项目使用加减桥。</p>
+</section>
+
+<section class="reveal on" id="quarter">
+  <div class="slabel">单二季度 · 盈利与现金桥</div>
+  <h2>收入掉了四成，销售费用一分钱也没有省下来</h2>
+  <p>公司没有单独发布Q2报表。以下数字只对可加总的损益与现金流项目按“2026H1−2026Q1”推算，并以相同方法计算2025Q2。单季EPS、ROE、产品、渠道与地区都没有同维度Q1基数，故不推算。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>推算单二季度｜人民币亿元；百分比由未取整元数计算</caption>
+      <thead><tr><th>指标</th><th>2026Q2</th><th>2025Q2</th><th>同比 / 变化</th><th>2026Q2利润率</th><th>2025Q2利润率</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入</td><td>26.86</td><td>47.34</td><td class="down">−43.27%</td><td>—</td><td>—</td></tr>
+        <tr><td>毛利</td><td>23.42</td><td>37.98</td><td class="down">−38.33%</td><td>87.22%</td><td>80.24%</td></tr>
+        <tr><td>营业利润</td><td>7.50</td><td>18.67</td><td class="down">−59.83%</td><td>27.92%</td><td>39.43%</td></tr>
+        <tr><td>归母净利润</td><td>5.58</td><td>13.32</td><td class="down">−58.14%</td><td>20.76%</td><td>28.13%</td></tr>
+        <tr><td>经营现金流</td><td class="down">−3.69</td><td>23.09</td><td class="down">摆动−26.78</td><td>—</td><td>—</td></tr>
+        <tr><td>资本开支 / FCF代理</td><td>1.02 / <span class="down">−4.71</span></td><td>4.17 / 18.92</td><td class="down">FCF摆动−23.63</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="profit-bridge-title">营业利润为何少了11.17亿元</h3>
+  <div class="tblscroll" tabindex="0">
+  <div class="wfall" style="min-width:680px" role="group" aria-labelledby="profit-bridge-title">
+    <div class="wrow"><div class="nm">2025Q2营业利润<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:100%"></div></div><div class="fig">18.67亿</div></div>
+    <div class="wrow"><div class="nm">毛利减少<span>收入下滑；毛利率改善部分抵消</span></div><div class="wtrack"><div class="wbar down" style="left:22.0%;width:78.0%"></div></div><div class="fig down">−14.56亿</div></div>
+    <div class="wrow"><div class="nm">税金及附加减少<span>正向缓冲</span></div><div class="wtrack"><div class="wbar up" style="left:22.0%;width:18.4%"></div></div><div class="fig up">+3.43亿</div></div>
+    <div class="wrow"><div class="nm">销售费用增加<span>费用刚性</span></div><div class="wtrack"><div class="wbar down" style="left:40.0%;width:0.4%"></div></div><div class="fig down">−0.06亿</div></div>
+    <div class="wrow"><div class="nm">管理及研发减少<span>小幅缓冲</span></div><div class="wtrack"><div class="wbar up" style="left:40.0%;width:1.6%"></div></div><div class="fig up">+0.29亿</div></div>
+    <div class="wrow"><div class="nm">财务收益减少<span>利息支撑变弱</span></div><div class="wtrack"><div class="wbar down" style="left:40.6%;width:1.0%"></div></div><div class="fig down">−0.18亿</div></div>
+    <div class="wrow"><div class="nm">其他项目净变动<span>收益、减值等</span></div><div class="wtrack"><div class="wbar down" style="left:40.2%;width:0.4%"></div></div><div class="fig down">−0.08亿</div></div>
+    <div class="wrow"><div class="nm">2026Q2营业利润<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:40.2%"></div></div><div class="fig">7.50亿</div></div>
+  </div>
+  </div>
+  <p class="small">桥接以未取整元数勾稽至7.498亿元；分项各自保留两位后，表面加总会出现0.01亿元舍入差。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">毛利率不是问题答案</div><p>成本降幅快于收入，使单季毛利率增加6.98个百分点。但Q1没有产品结构披露，无法确认是产品组合、发货节奏、成本结转还是其他因素。</p></div>
+    <div class="find warn"><div class="t">销售费用率跃升</div><p>单季销售费用10.85亿元、同比+0.59%，占收入40.38%，较上年高17.61个百分点。收入缩水后费用没有同步退坡。</p></div>
+    <div class="find warn"><div class="t">回款下降更快</div><p>单季销售收款29.58亿元，同比减少40.21亿元；经营流入减少超过流出节省，OCF由+23.09亿元转为−3.69亿元。</p></div>
+    <div class="find"><div class="t">广告仍在增加</div><p>H1广告费7.29亿元、同比+1.99%；综合促销费下降22.44%。品牌投放保持、促销收缩，却没有阻止收入下行。</p></div>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>把酒厂想成一台有固定推力的销售机器：广告、人员和渠道维护不会随着一个季度的收入立刻消失。当收入少了四成、销售费用还和去年一样，费用率自然翻上去。<b>这就是利润比收入跌得更快的原因</b>，不是酿酒成本突然失控。</p>
+    <p>毛利率升高反而要谨慎解读：分母缩小、产品发货结构和成本结转都可能抬高比例。只有批价、产品结构与终端动销同时披露，才能把“高毛利”翻译成真正的品牌定价权。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="channel">
+  <div class="slabel">品牌与渠道 · 白酒专项</div>
+  <h2>经销网络连续收缩，终端去库仍停留在管理层陈述</h2>
+  <p>正确的渠道审计要分三层。第一层是酒厂已经确认的收入，可以由财报验证；第二层是经销商手里的库存和批价；第三层是消费者真正开瓶、宴席和门店动销。古井披露了第一层，后两层没有给出可量化数据。</p>
+
+  <div class="steps">
+    <div class="step"><div class="n">第一层 · 可证</div><b>公司sell-in</b><p>H1白酒收入99.97亿元、同比−26.71%；经销为主、通常先款后货。</p></div>
+    <div class="step"><div class="n">第二层 · 未披露</div><b>经销库存与批价</b><p>没有古20/古8/古5的库存天数、批价、顺价率或省内外拆分。</p></div>
+    <div class="step"><div class="n">第三层 · 未披露</div><b>终端动销与开瓶</b><p>没有终端销量、开瓶率、宴席场次、复购或门店sell-through。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2026H1量价结构代理｜收入÷公司披露销量；不是单品（SKU）出厂价、批价或终端价</caption>
+      <thead><tr><th>系列</th><th>销量（吨）</th><th>销量同比</th><th>收入/吨代理（万元）</th><th>代理同比</th><th>成品库存同比</th></tr></thead>
+      <tbody>
+        <tr><td>年份原浆</td><td>38,826.65</td><td class="down">−16.66%</td><td>20.52</td><td class="down">−12.78%</td><td class="down">+10.73%</td></tr>
+        <tr><td>古井贡酒</td><td>19,340.35</td><td class="down">−1.56%</td><td>5.44</td><td class="down">−9.73%</td><td class="up">−22.80%</td></tr>
+        <tr><td>黄鹤楼及其他</td><td>11,023.48</td><td class="down">−27.50%</td><td>8.88</td><td class="down">−9.75%</td><td class="down">+10.71%</td></tr>
+        <tr class="grp"><td>三系列合计</td><td>69,190.48</td><td class="down">−15.04%</td><td>—</td><td>—</td><td class="down">+5.60%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>三系列收入合计少了36.43亿元。用对称量价桥拆分，销量效应约−21.19亿元、占58.2%；“收入/吨”所代表的产品规格、渠道和实现价结构效应约−15.24亿元、占41.8%。两者同时承压，不能把下滑只解释成酒厂主动少发货。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>经销商与区域｜公司只披露净变化，无法还原新增与退出的毛流量</caption>
+      <thead><tr><th>区域</th><th>2026H1期末</th><th>H1净变化</th><th>同比期末变化</th><th>收入同比</th><th>观察</th></tr></thead>
+      <tbody>
+        <tr><td>华北</td><td>1,288</td><td class="down">−37</td><td class="down">−90</td><td class="down">−50.71%</td><td>收入降幅最大</td></tr>
+        <tr><td>华中</td><td>2,762</td><td class="down">−94</td><td class="down">−247</td><td class="down">−25.80%</td><td>收缩主区域</td></tr>
+        <tr><td>华南</td><td>668</td><td class="up">+12</td><td class="up">+13</td><td class="down">−21.46%</td><td>加商未换来增长</td></tr>
+        <tr><td>国际</td><td>22</td><td class="down">−6</td><td class="up">+2</td><td class="down">−20.24%</td><td>规模极小</td></tr>
+        <tr class="grp"><td>合计</td><td>4,740</td><td class="down">−125</td><td class="down">−322</td><td>—</td><td>较2024末少349家</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finds">
+    <div class="find warn"><div class="t">“库存合理”证据等级低</div><p>管理层在5月说明会称省内外与主要产品库存处于合理区间，却没有库存天数、绝对量、批价和动销数据；对“是否压货”的提问主要回答会计准则，没有直面终端sell-through。</p></div>
+    <div class="find good"><div class="t">先款后货降低应收风险</div><p>前五大经销客户期末无应收账款，说明酒厂端信用纪律较强；但经销商可能以自有资金持货，这一事实仍不能证明终端已售出。</p></div>
+    <div class="find"><div class="t">公司库存不是渠道库存</div><p>H1合并存货107.95亿元，其中自制半成品及在产品99.80亿元；厂内半成品酒41.09万吨具有陈储属性，不能称为社会库存。</p></div>
+    <div class="find warn"><div class="t">行业先验仍偏弱</div><p>2026年3—7月全国白酒产量可比合计下降约15.3%；CADA/KPMG调研多数受访者报告销量、客单与利润走弱。这提高举证门槛，但不能替代古井公司数据。</p></div>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>三层渠道框架的决策含义很简单：当前能确认酒厂端收入下降，却不能确认终端库存是否见底。下一次真正提高置信度的披露，应是古20/古8/古5的批价、库存天数和终端动销。</p>
+  </div>
+  <p class="small">行业来源：Wind EDB国家统计局序列；<a href="https://assets.kpmg.com/content/dam/kpmgsites/cn/pdf/zh/2026/06/2026-chinese-baijiu-market-mid-term-research-report.pdf.coredownload.inline.pdf">中国酒业协会/KPMG 2026年中调研</a>（1,115份有效样本）；<a href="https://www.chinaprice.cn/slkjzsjcqkbg/61035.jhtml">中国价格信息网白酒批发价格指数</a>。行业样本不是古井渠道审计。</p>
+</section>
+
+<section class="reveal on" id="balance">
+  <div class="slabel">资产负债表 · 现金与存货</div>
+  <h2>现金足以承受下行，合同负债与现金转换却仍在变弱</h2>
+  <p>公司不是债务压力故事。2026H1货币资金133.02亿元、交易性金融资产6.03亿元；扣掉12.63亿元受限资金和4.58亿元借款及一年内到期非流动负债后，仍有可观的保守净流动性资产代理。但安全垫与经营趋势是两件事：滚动经营现金流已转负，预收款缓冲也明显低于上年。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">现金及现金等价物</div><div class="v">120.38<span class="u">亿元</span></div><div class="d"><span>2026H1期末</span></div></div>
+    <div class="cell"><div class="k">交易性金融资产</div><div class="v">6.03<span class="u">亿元</span></div><div class="d"><span>短期流动资产</span></div></div>
+    <div class="cell"><div class="k">保守净流动性资产</div><div class="v">121.83<span class="u">亿元</span></div><div class="d"><span>推算；含受限资金与债务扣减</span></div></div>
+    <div class="cell"><div class="k">合并存货</div><div class="v">107.95<span class="u">亿元</span></div><div class="d"><span class="down">同比 +14.80%</span></div></div>
+    <div class="cell"><div class="k">合同负债</div><div class="v">8.34<span class="u">亿元</span></div><div class="d"><span class="down">同比 −41.62%</span></div></div>
+    <div class="cell"><div class="k">LTM经营现金流</div><div class="v down">−6.65<span class="u">亿元</span></div><div class="d"><span>经营现金转换转负</span></div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>存货与预收边界｜人民币亿元</caption>
+      <thead><tr><th>项目</th><th>2026H1</th><th>2025年末</th><th>变化</th><th>正确读法</th></tr></thead>
+      <tbody>
+        <tr><td>原材料及包装物</td><td>1.71</td><td>4.18</td><td class="up">−59.14%</td><td>采购与生产结构</td></tr>
+        <tr><td>自制半成品及在产品</td><td>99.80</td><td>93.47</td><td class="down">+6.76%</td><td>主要为陈储中的基酒</td></tr>
+        <tr><td>库存商品</td><td>6.45</td><td>9.75</td><td class="up">−33.83%</td><td>厂内成品，不是渠道库存</td></tr>
+        <tr><td>合同负债</td><td>8.34</td><td>15.20</td><td class="down">−45.15%</td><td>预收与发货时点，季节性强</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>合同负债从2025年末15.20亿元升至2026Q1的23.05亿元，再降到H1的8.34亿元。Q1到H1的释放具有春节后季节性，上年同期也有类似方向；真正偏弱的信号是H1期末仍比2025H1低41.62%。经营现金流调节表同时显示，经营性应收项目从上年同期释放现金转为本期占用现金，现金摆动不是单一应收账款就能解释。</p>
+  <div class="callout"><b>资产安全垫的边界：</b>保守净流动性资产代理很厚，能覆盖分红、周转和阶段性经营压力；但LTM利润已经包含大量利息收入，把全部现金再无折扣加到P/E估值上会重复计价。</div>
+  <div class="plain"><span class="pl">白话解读</span><p>现金证明公司<b>暂时扛得住</b>，不证明盈利已经见底。库存里大部分是仍在陈储的酒，预收款则比上年少；一个讲资产安全，一个讲订单与回款，不能互相替代。</p></div>
+</section>
+
+<section class="reveal on" id="capacity">
+  <div class="slabel">智能园 · 重大产能专章</div>
+  <h2>八十亿元项目先形成折旧，单位成本与增量回报尚未披露</h2>
+  <p>古井酿酒生产智能化技术改造项目体量重大，2025年全面建成投产，并扩大了设计成品酒产能。项目可能替代落后产能并提升优质基酒储备，不能把设计增量全当作可销售新增量。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">品质与效率的战略选择权</div><p>管理层称智能园可淘汰低效产能、扩大优质基酒储备，并提高自动化与质量稳定性。这些路径在白酒长期竞争中具有合理性。</p></div>
+    <div class="find warn"><div class="t">产量没有跟上产能</div><p>2026H1三系列产量合计6.15万吨、同比仅+0.59%，同期销量−15.04%。半年产量不宜机械年化，但新增产能尚未体现为销售增量。</p></div>
+    <div class="find warn"><div class="t">折旧先进入成本</div><p>2025年制造费用同比+29.59%，管理层明确主要因智能园投运带来新增固定资产折旧；短期需求弱时，固定成本吸收会变差。</p></div>
+    <div class="find"><div class="t">回报指标全部未披露</div><p>公司没有单列优质基酒增量、单位制造成本、产能利用率、增量毛利、维护资本开支或项目内部收益率（IRR），不能把“智能制造”直接写成已兑现回报。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>智能园验证表｜披露与待验证项严格分开</caption>
+      <thead><tr><th>项目</th><th>当前证据</th><th>下一步需要什么</th><th>失败边界</th></tr></thead>
+      <tbody>
+        <tr><td>投入</td><td>预算82.90亿；FY2025末累计投入约69.26亿（推算）</td><td>剩余现金支出与维护资本开支</td><td>持续投入但无单位成本改善</td></tr>
+        <tr><td>产能</td><td>设计成品酒产能18万吨</td><td>可比利用率、替代与净增产能</td><td>长期低利用率</td></tr>
+        <tr><td>成本</td><td>新增折旧推高制造费用</td><td>单位成本、折旧吸收和良率</td><td>折旧拖累持续大于效率收益</td></tr>
+        <tr><td>回报</td><td>未披露项目ROIC/IRR</td><td>增量毛利与投入资本回报</td><td>资本回报低于资金成本</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="plain"><span class="pl">白话解读</span><p>智能园像一座已经交付的新工厂：折旧从投产起就会进成本，效率收益却要等产量、良率和销量爬升才出现。当前只能确认“钱已大体投入、产能已经可用”，<b>还不能确认每一元投入赚回了多少</b>。</p></div>
+  <p class="small">累计投入约69.26亿元＝项目预算82.896574亿元×2025年末累计投入比例83.55%，属于分析推算。2026H1期末项目工程进度接近完成，不代表经济回报完成。</p>
+</section>
+
+<section class="reveal on" id="capital">
+  <div class="slabel">股东回报 · 资本配置</div>
+  <h2>五年派现已超过同期融资，绝对股息仍随利润下调</h2>
+  <p>按利润归属年度统计，FY2021—FY2025累计现金分红约106.25亿元，超过2021年非公开发行募资总额50亿元。公司已从扩产融资期转为资本净返还者；但2025年每股总派息由6.00元降至4.40元，派息率提高更多是利润分母下降的结果。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>现金分红历史｜按利润归属年度；人民币亿元</caption>
+      <thead><tr><th>年度</th><th>现金分红</th><th>每股总派息</th><th>归母净利润</th><th>观察</th></tr></thead>
+      <tbody>
+        <tr><td>FY2021</td><td>11.63</td><td>2.20元</td><td>22.98</td><td>年度派息</td></tr>
+        <tr><td>FY2022</td><td>15.86</td><td>3.00元</td><td>31.43</td><td>年度派息</td></tr>
+        <tr><td>FY2023</td><td>23.79</td><td>4.50元</td><td>45.89</td><td>年度派息</td></tr>
+        <tr><td>FY2024</td><td>31.72</td><td>6.00元</td><td>55.17</td><td>含中期1.00元</td></tr>
+        <tr><td>FY2025</td><td>23.26</td><td>4.40元</td><td>35.49</td><td>含中期1.00元；派息率65.53%</td></tr>
+        <tr class="grp"><td>五年合计</td><td>106.25</td><td>—</td><td>—</td><td>高于2021定增50亿元</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">分年度现金分红均为展示舍入值；五年合计106.25亿元按未取整元数计算，因此不应机械加总表内两位小数。</p>
+  <div class="finds">
+    <div class="find good"><div class="t">现金回报是真实的</div><p>累计派现与实施公告均可核验，2025年末期每10股34元已于2026年7月实施；公司没有依赖回购制造股东回报叙事。</p></div>
+    <div class="find warn"><div class="t">派息率不能替代每股股息</div><p>2025年派息率从57.49%升至65.53%，但每股派息同比下降26.7%。盈利继续下滑时，维持高比例仍可能对应更少现金。</p></div>
+    <div class="find"><div class="t">FCF当前不覆盖派息</div><p>LTM自由现金流代理−17.92亿元，短期分红依赖存量现金而不是同期现金生成；资产负债表承受得住，但不可无限延续。</p></div>
+    <div class="find"><div class="t">2026H1不派中期股息</div><p>半年报不实施利润分配；未来是否恢复中期分红、是否给长期派息承诺均未披露。</p></div>
+  </div>
+  <div class="plain"><span class="pl">白话解读</span><p>过去五年，公司确实把很多现金还给了股东；但最近一年是“利润少了，分得比例更高，每股拿到的钱仍更少”。<b>分红可持续性最终要由现金流覆盖</b>，不能只看派息率。</p></div>
+</section>
+
+<section class="reveal on" id="governance">
+  <div class="slabel">治理 · 并购回报</div>
+  <h2>黄鹤楼承诺完成后仍减值，明光的资本回报依然不可见</h2>
+  <p>控制权稳定、债务低和国资背景降低了财务失序风险，但并购后的价值创造不能只看历史业绩承诺。黄鹤楼与明光均被并入“黄鹤楼及其他”系列，公司没有分别披露收入、利润、现金流与渠道库存。</p>
+
+  <div class="finds">
+    <div class="find warn"><div class="t">黄鹤楼：承诺后减值</div><p>2016年以8.16亿元收购51%，2021、2022年调整后承诺虽完成；2025年仍计提整体商誉减值6.17亿元，其中归母3.15亿元。2026H1“黄鹤楼及其他”收入再降34.57%。</p></div>
+    <div class="find"><div class="t">明光：没有减值不等于成功</div><p>2021年以2.00亿元收购60%，形成商誉0.61亿元；当前未单列收入、利润、现金流、库存和收购后ROIC，经济回报仍是“未披露”。</p></div>
+    <div class="find good"><div class="t">控制与换届稳定</div><p>古井集团持股51.34%，最终控制人为亳州市国资委；2026年董事换届以核心经营成员留任为主，不是控制权切换。</p></div>
+    <div class="find warn"><div class="t">子公司资金往来需问清</div><p>专项表列示对子公司及附属企业非经营性往来约4.93亿元，合并层面抵销、不是大股东占款；但利率、期限与少数股东是否同比例出资未披露。</p></div>
+  </div>
+  <p>公司2026H1无股权激励或员工持股计划。古井集团质押3,000万股，约占其持股11.05%、总股本5.68%，未达到高质押警戒线。年报所称“无重大关联交易”不等于零关联交易：仍存在小额日常关联采购与服务，当前未见控股股东非经营性占用。</p>
+  <div class="callout"><b>治理结论：</b>黄鹤楼是已经出现的并购回报反证，明光是尚未获得足够证据的未知项。正确写法不是“黄鹤楼失败、明光成功”，而是“前者已减值，后者回报未披露”。</div>
+  <div class="plain"><span class="pl">白话解读</span><p>业绩承诺只回答“某几年是否达标”，商誉减值才揭示长期预期被下修。黄鹤楼已经出现这张反证；明光因为数据太少，<b>结论应是未知，而不是成功</b>。</p></div>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">市场定价 · 同业 · 三情景</div>
+  <h2>在18—20倍估值锚下，现价要求温和恢复，基准上行仍不足以覆盖熊市下行</h2>
+  <p>2026年9月1日15:30:48，古井A股收于100.88元、当日涨停；B股收于56.41港元。按A股4.086亿股与B股1.20亿股各自报价汇总，发行人经济市值为470.76亿元，本报告以此作为估值分子。</p>
+  <p class="small">口径检查：Wind对A股线返回的533.25亿元“总市值2”等于把全部5.286亿股按A股价计算，可用于观察A股类股倍数，却不是整个发行人的经济市值。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">A股现价</div><div class="v">¥100.88</div><div class="d"><span>2026-09-01 15:30:48 CST</span></div></div>
+    <div class="cell"><div class="k">熊市A股交易价</div><div class="v down">¥61.69</div><div class="d"><span>假设当前B/A折价不变</span></div></div>
+    <div class="cell"><div class="k">基准A股交易价</div><div class="v">¥119.43</div><div class="d"><span>假设当前B/A折价不变</span></div></div>
+    <div class="cell"><div class="k">牛市A股交易价</div><div class="v">¥190.54</div><div class="d"><span>假设当前B/A折价不变</span></div></div>
+    <div class="cell"><div class="k">本报告锚下隐含预期</div><div class="v">利润+15–28%</div><div class="d"><span>FY2027较LTM；约18–20x PE</span></div></div>
+    <div class="cell"><div class="k">一句话判断</div><div class="v">中性偏谨慎</div><div class="d"><span>等待H2渠道与现金验证</span></div></div>
+  </div>
+
+  <h3>第一步 · 市场现在给什么价</h3>
+  <p>按A、B两类股份各自报价汇总，发行人经济市值470.76亿元；除以滚动归母净利润20.52亿元，PE约22.94倍，除以H1归母净资产248.91亿元，PB约1.89倍。Wind的A股类股口径五年分位显示：PE在46.94%、PB在6.37%、股息率在85.93%。价格低于历史账面倍数中枢，但利润分母也处在收缩期。</p>
+
+  <h3>第二步 · 同业给什么倍数</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>白酒同业市场截面｜Wind 2026-09-01 15:30–15:31 CST；古井先列原始A股类股口径</caption>
+      <thead><tr><th>公司</th><th>PE TTM</th><th>PB LF</th><th>股息率</th><th>FY2025收入同比</th><th>2026H1归母净利率</th></tr></thead>
+      <tbody>
+        <tr><td>古井贡酒A（原始类股）</td><td>25.99x</td><td>2.14x</td><td>4.36%</td><td class="down">−20.1%</td><td>21.4%</td></tr>
+        <tr><td>贵州茅台</td><td>19.95x</td><td>6.47x</td><td>4.00%</td><td class="down">−1.2%</td><td>49.1%</td></tr>
+        <tr><td>五粮液</td><td>21.31x</td><td>2.35x</td><td>7.18%</td><td class="down">−54.6%</td><td>30.8%</td></tr>
+        <tr><td>山西汾酒</td><td>14.46x</td><td>3.87x</td><td>5.44%</td><td class="up">+7.5%</td><td>30.6%</td></tr>
+        <tr><td>泸州老窖</td><td>15.43x</td><td>2.53x</td><td>7.34%</td><td class="down">−17.5%</td><td>41.4%</td></tr>
+        <tr><td>洋河股份</td><td>128.08x</td><td>1.26x</td><td>3.73%</td><td class="down">−33.5%</td><td>24.7%</td></tr>
+        <tr class="grp"><td>五家同业中位数</td><td>19.95x</td><td>2.53x</td><td>5.44%</td><td>−17.5%</td><td>30.8%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>洋河128倍PE是利润分母塌缩造成的失真，因此不用平均数。按A+B经济市值，古井PE 22.94倍，仍比同业PE中位数高约15%；PB 1.89倍则低约25%。这组“PE贵、PB便宜”不矛盾：滚动利润已经大幅下滑，净资产却由历史留存与现金支撑。表中PB LF的LF指最新财报口径；Wind所列4.36%股息率的分红窗口未在回包中说明，不能直接等同于FY2025官方每股派息口径。</p>
+
+  <h3>第三步 · 把经营假设写出来</h3>
+  <div class="steps">
+    <div class="step"><div class="n">熊市</div><b>下半年接近不赚钱</b><p>H2收入45亿元、净利率0%；FY2027利润再降5%，给14倍PE。</p></div>
+    <div class="step"><div class="n">基准</div><b>温和恢复但不回峰值</b><p>H2收入60亿元、净利率10%；FY2027利润增12%，给18倍PE。</p></div>
+    <div class="step"><div class="n">牛市</div><b>渠道与费用同步修复</b><p>H2收入75亿元、净利率18%；FY2027利润增15%，给22倍PE。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>FY2026E—FY2027E三情景｜分析假设，不是公司指引或Wind一致预期</caption>
+      <thead><tr><th>驱动 / 结果</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
+      <tbody>
+        <tr><td>2026H2收入 / 净利率</td><td>45亿 / 0%</td><td>60亿 / 10%</td><td>75亿 / 18%</td></tr>
+        <tr><td>FY2026E归母净利</td><td>21.64亿</td><td>27.64亿</td><td>35.14亿</td></tr>
+        <tr><td>FY2027增长 / 净利</td><td>−5% / 20.56亿</td><td>+12% / 30.96亿</td><td>+15% / 40.42亿</td></tr>
+        <tr><td>估值倍数</td><td>14x</td><td>18x</td><td>22x</td></tr>
+        <tr><td>发行人权益价值</td><td>287.86亿</td><td>557.30亿</td><td>889.14亿</td></tr>
+        <tr class="grp"><td>A股交易价情景（假设当前B/A折价不变）</td><td>61.69元</td><td>119.43元</td><td>190.54元</td></tr>
+        <tr><td>每股同权交叉值</td><td>54.46元</td><td>105.43元</td><td>168.21元</td></tr>
+        <tr><td>较A股现价</td><td class="down">−38.9%</td><td class="up">+18.4%</td><td class="up">+88.9%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">计算路径：FY2027归母净利 × PE＝发行人权益价值 → 按当前B/A经汇率调整后的折价映射A股交易价，并不保证未来折价不变；“每股同权交叉值”把价值除以5.286亿法定股份。两者差异来自市场分割，不是经营价值。</p>
+
+  <h3>把三档价值放在一把尺上</h3>
+  <div class="rows" aria-label="假设当前B/A折价不变的古井贡酒A股交易价情景与现价对比">
+    <div class="row"><div class="nm">熊市<span>H2接近不赚钱</span></div><div class="track"><div class="fill alt" style="width:32.4%"></div></div><div class="fig">¥61.69<span class="down">较现价−38.9%</span></div></div>
+    <div class="row"><div class="nm">现价<span>2026-09-01收盘</span></div><div class="track"><div class="fill soft" style="width:52.9%"></div></div><div class="fig">¥100.88<span>市场价</span></div></div>
+    <div class="row"><div class="nm">基准<span>温和恢复</span></div><div class="track"><div class="fill" style="width:62.7%"></div></div><div class="fig">¥119.43<span class="up">较现价+18.4%</span></div></div>
+    <div class="row"><div class="nm">牛市<span>渠道与费用同步修复</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">¥190.54<span class="up">较现价+88.9%</span></div></div>
+  </div>
+  <p class="small">尺条以牛市A股交易价190.54元为100%，其余长度按价格等比例绘制。</p>
+
+  <h3>第四步 · 现价到底在赌什么</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>以A+B发行人经济市值反推FY2027归母净利润</caption>
+      <thead><tr><th>假设PE</th><th>要求的FY2027净利</th><th>较LTM 20.52亿</th><th>较FY2025 35.49亿</th><th>含义</th></tr></thead>
+      <tbody>
+        <tr><td>14x</td><td>33.63亿</td><td class="up">+63.9%</td><td>−5.3%</td><td>低倍数要求更强盈利修复</td></tr>
+        <tr><td>18x</td><td>26.15亿</td><td class="up">+27.5%</td><td>−26.3%</td><td>温和恢复</td></tr>
+        <tr><td>19.95x</td><td>23.60亿</td><td class="up">+15.0%</td><td>−33.5%</td><td>同业中位锚</td></tr>
+        <tr><td>22x</td><td>21.40亿</td><td class="up">+4.3%</td><td>−39.7%</td><td>需保留估值溢价</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="plain">
+    <span class="pl">估值白话解读</span>
+    <p>现价没有要求利润重回2024年的55亿元，甚至没有要求回到2025年的35亿元；但<b>在本报告采用的18—20倍FY2027估值锚下</b>，现价对应滚动利润回升约15%—28%，即“会恢复、但不回峰值”。若改用14倍或22倍，隐含修复幅度会分别变成63.9%或4.3%，因此这不是市场共识的唯一答案。</p>
+    <p>假设当前B/A折价不变，基准A股交易价119.43元比现价高18.4%，熊市交易价61.69元则低近39%。推算Q2收入与回款、以及H1经销网络尚未反转，这不是足够对称的风险收益。涨停只说明短期预期改善，不能代替下半年经营验证。</p>
+  </div>
+  <p class="small">Wind一致预期数据未通过完整性校验，故未采用；全部预测均为本报告情景假设，不称为市场共识。</p>
+</section>
+
+<section class="reveal on" id="risks">
+  <div class="slabel">反证 · 风险登记</div>
+  <h2>最强多头是品牌毛利，最强空头是动销数据仍然缺席</h2>
+  <blockquote class="quote">古井已经证明向经销商确认的收入仍有高账面毛利；它还没有证明经销商和消费者愿意以同样速度、相近价格接住这些酒。</blockquote>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>风险与证伪清单｜下一披露期可观察</caption>
+      <thead><tr><th>风险</th><th>当前状态</th><th>支持多头的观察</th><th>削弱或否定的观察</th></tr></thead>
+      <tbody>
+        <tr><td>渠道动销</td><td>库存、批价、开瓶未披露</td><td>量化库存天数下降、批价企稳</td><td>继续只给定性“合理”</td></tr>
+        <tr><td>收入与费用</td><td>Q2收入−43%、销售费用持平</td><td>收入企稳且销售费用率回落</td><td>费用率维持高位、利润继续去杠杆</td></tr>
+        <tr><td>现金转换</td><td>Q2 OCF与LTM FCF转负</td><td>销售回款恢复、全年OCF转正</td><td>经营性应收继续占用现金</td></tr>
+        <tr><td>全国化</td><td>三大区域收入均下降</td><td>华北/华南止跌并披露省内外</td><td>华中集中度继续上升</td></tr>
+        <tr><td>智能园</td><td>折旧先行、IRR未披露</td><td>单位成本下降、利用率和ROIC提升</td><td>产能闲置、固定成本吸收恶化</td></tr>
+        <tr><td>并购回报</td><td>黄鹤楼减值、明光不透明</td><td>分品牌利润与现金回报披露</td><td>再次减值或合并口径继续下滑</td></tr>
+        <tr><td>股东回报</td><td>派息率高、绝对股息下降</td><td>FCF恢复后维持每股派息</td><td>用存量现金长期填补经营缺口</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finds">
+    <div class="find good"><div class="t">最强多头论证</div><p>年份原浆仍占白酒收入近80%，毛利率85%，2021—2024又曾实现真实复利；厚净现金和持续派现为调整期提供足够时间。若行业去库结束、收入恢复且销售费用绝对额不同比例上升，费用率可较快下降。</p></div>
+    <div class="find warn"><div class="t">最强空头论证</div><p>H1销量、收入/吨代理、经销商、地区收入和合同负债同步走弱，推算Q2现金已转负；新增产能与并购资产又抬高资本回报要求。高毛利可能只是收入缩量后的结构结果，不是终端需求的证明。</p></div>
+    <div class="find"><div class="t">当前未知</div><p>古20/古8/古5的批价与终端动销、省内外利润、智能园单位成本、黄鹤楼和明光的独立现金回报均未披露，无法用模型精确填补。</p></div>
+    <div class="find"><div class="t">决策原则</div><p>不因单日涨停追认见底，也不因渠道数据缺失直接断言压货；等可观察指标同时转正，再提高估值与经营置信度。</p></div>
+  </div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">最终判断</div>
+  <h2>中性偏谨慎：品牌池值得跟踪，见底证据仍不够</h2>
+  <p>古井不是资产负债表会先出问题的公司，也不是毛利率已经失守的品牌；真正的风险是渠道与需求调整持续时间超过本报告18—20倍估值锚所对应的温和恢复路径。假设当前B/A折价不变，基准情景虽有18.4%上行，熊市近39%下行，风险收益尚不对称。结论置信度为中等。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">提高置信度</div><p>2026H2收入至少约60亿元、净利率约10%；Q3/Q4销售回款与经营现金流转正，合同负债同比降幅收窄。</p></div>
+    <div class="find good"><div class="t">渠道确认</div><p>首次披露古20/古8/古5的库存天数、批价、开瓶或终端动销，并显示华北、华南不再显著落后。</p></div>
+    <div class="find"><div class="t">资本回报确认</div><p>智能园给出单位成本、利用率与增量回报；黄鹤楼、明光给出分品牌利润和现金流。</p></div>
+    <div class="find warn"><div class="t">逻辑失效</div><p>H2收入接近45亿元或更低、净利率接近0%，经营现金继续流出；假设当前B/A折价不变，对应A股熊市交易价约61.69元。</p></div>
+  </div>
+
+  <h3>把下一步验证排在时间线上</h3>
+  <div class="tline">
+    <div class="tstop warn"><span class="tw">2026Q3</span><b>收入与销售费用率</b><p>收入止跌、费用率回落，才能证明经营去杠杆结束。</p></div>
+    <div class="tstop"><span class="tw">2026Q3/Q4</span><b>回款与合同负债</b><p>OCF转正、同比预收降幅收窄，验证现金转换。</p></div>
+    <div class="tstop"><span class="tw">FY2026</span><b>渠道量化披露</b><p>批价、库存天数、终端动销至少出现一项可复核数据。</p></div>
+    <div class="tstop"><span class="tw">FY2026–27</span><b>智能园回报</b><p>单位成本、利用率与增量ROIC开始覆盖折旧。</p></div>
+    <div class="tstop"><span class="tw">持续</span><b>分红与并购</b><p>每股股息由现金生成覆盖，黄鹤楼不再减值。</p></div>
+  </div>
+
+  <div class="callout"><b>最强反方观点：</b>白酒去库存已接近尾声，古井以85%年份原浆毛利、厚现金和全国化网络足以在需求修复时释放显著费用杠杆；9月1日涨停可能是在提前交易这一拐点。若Q3/Q4收入、现金和批价同时反转，本报告的谨慎结论会显得过度保守。</div>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · 快速检索</div>
+  <h2>读懂白酒报表最容易混淆的词</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
+      <tbody>
+        <tr><td>年份原浆</td><td>古井的核心高毛利产品系列，并非单一SKU；包含不同酒龄、价位和规格。</td></tr>
+        <tr><td>基酒 / 半成品酒</td><td>完成发酵但仍需陈储、勾调的酒体；厂内存放既占资金，也具有熟化属性。</td></tr>
+        <tr><td>sell-in</td><td>酒厂向经销商发货并确认收入，回答“酒厂卖了多少”。</td></tr>
+        <tr><td>sell-through</td><td>经销商或门店真正卖给消费者，回答“消费者接了多少”；公司未披露。</td></tr>
+        <tr><td>批价 / 顺价率</td><td>经销环节实际交易价格 / 是否高于渠道综合成本；比建议零售价更接近渠道健康。</td></tr>
+        <tr><td>合同负债</td><td>公司已收款但尚未满足收入确认条件的预收款；季节性强，不等于经销商库存。</td></tr>
+        <tr><td>厂内成品库存</td><td>仍在公司合并报表内的成品酒；不是已经发给经销商的社会库存。</td></tr>
+        <tr><td>收入/吨代理</td><td>系列收入除以披露销量，混合了SKU、渠道和区域结构；不是出厂价、批价或终端价。</td></tr>
+        <tr><td>对称量价桥</td><td>用期初期末平均价格与平均销量对称分解收入变化，使量和价/结构效应严格加总。</td></tr>
+        <tr><td>归母净利润</td><td>归属于上市公司股东的净利润，扣除了黄鹤楼等子公司少数股东应占部分。</td></tr>
+        <tr><td>毛利率</td><td>收入减营业成本后占收入的比例；不扣销售、管理和研发费用。</td></tr>
+        <tr><td>销售费用率</td><td>广告、促销、人员等销售费用除以收入；收入下滑而费用刚性时会快速上升。</td></tr>
+        <tr><td>OCF</td><td>经营活动现金流量净额，衡量利润是否变成现金；受预收、应付和季节性影响。</td></tr>
+        <tr><td>资本开支</td><td>本文指购建固定资产、无形资产和其他长期资产支付的现金，不等于全部项目预算。</td></tr>
+        <tr><td>自由现金流代理</td><td>OCF减上述资本开支；是简化口径，不等于公司披露或经常性所有者收益。</td></tr>
+        <tr><td>商誉减值</td><td>收购资产组预期回报低于账面价值时确认的损失；不直接流出现金，但反映并购回报下修。</td></tr>
+        <tr><td>ROIC / IRR</td><td>投入资本回报率 / 项目内部收益率，用于检验智能园投入是否创造超过资金成本的回报。</td></tr>
+        <tr><td>LTM / TTM</td><td>最近十二个月滚动口径；本报告按FY2025−2025H1+2026H1计算流量项目。</td></tr>
+        <tr><td>A+B经济市值</td><td>A股与B股按各自市场报价和汇率汇总的发行人股权价值，而非把全部股份按A股价计算。</td></tr>
+        <tr><td>PE / PB</td><td>市盈率＝市值/滚动净利润；市净率＝市值/归母净资产。利润下滑时可出现PE高、PB低。</td></tr>
+        <tr><td>五年分位</td><td>当前估值在过去五年样本中的排位；本文历史分位使用Wind A股类股口径。</td></tr>
+        <tr><td>每股同权交叉值</td><td>发行人总价值除以5.286亿法定股份，不延续当前A/B市场折价的估值检查。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">方法 · 来源 · 置信度</div>
+  <h2>巨潮公告控制财务，Wind只控制带时点的市场数据</h2>
+  <p>财务、产品、地区、产销、库存、治理和分红均以发行人在巨潮资讯/深交所指定渠道披露的文件为控制源。Wind用于2026-09-01行情、A/B股市值口径、历史估值和同业交叉检查；其一致预期与股东自然语言回包出现结构错位，均未进入结论。行业调查与价格指数只提供先验背景，不替代古井终端数据。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>主要直接来源与证据边界</caption>
+      <thead><tr><th>来源</th><th>用途</th><th>边界</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://static.cninfo.com.cn/finalpage/2026-08-29/1225524329.PDF">2026年半年度报告</a></td><td>H1财务、产品、渠道、产销、库存、治理</td><td>未经审计；产品与渠道为H1，不是Q2</td></tr>
+        <tr><td><a href="https://static.cninfo.com.cn/finalpage/2026-04-29/1225237606.PDF">2026年第一季度报告</a></td><td>单Q2加减基数</td><td>未经审计；没有产品/渠道同维度拆分</td></tr>
+        <tr><td><a href="https://static.cninfo.com.cn/finalpage/2025-08-30/1224626939.PDF">2025年半年度报告</a>、<a href="https://static.cninfo.com.cn/finalpage/2025-04-28/1223320649.PDF">2025年第一季度报告</a></td><td>Q2同比基数</td><td>均未经审计；使用相同H1−Q1公式</td></tr>
+        <tr><td><a href="https://static.cninfo.com.cn/finalpage/2026-04-29/1225237594.PDF">2025年年度报告</a></td><td>五年历史、智能园、黄鹤楼减值、分红</td><td>经审计标准无保留意见</td></tr>
+        <tr><td><a href="https://static.cninfo.com.cn/finalpage/2026-05-25/1225329150.PDF">2025年度业绩说明会记录</a></td><td>渠道、智能园与黄鹤楼管理层陈述</td><td>发行人陈述；库存结论未量化、未独立验证</td></tr>
+        <tr><td><a href="https://static.cninfo.com.cn/finalpage/2026-08-29/1225524330.PDF">2026H1关联资金往来表</a></td><td>关联资金与子公司往来</td><td>子公司往来在合并层面抵销</td></tr>
+        <tr><td>Wind金融数据服务</td><td>2026-09-01行情、A/B经济市值、估值分位、同业</td><td>保留原始回包、单位、时间戳与异常排除</td></tr>
+        <tr><td><a href="https://assets.kpmg.com/content/dam/kpmgsites/cn/pdf/zh/2026/06/2026-chinese-baijiu-market-mid-term-research-report.pdf.coredownload.inline.pdf">CADA/KPMG 2026H1行业调研</a></td><td>行业量价与去库存背景</td><td>抽样调查，不是公司渠道审计</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>可执行数字模型逐项勾稽四个控制期损益表、现金流、资产负债表及产品/渠道汇总，全部通过。估值模型分别保留A股类股口径、A+B经济市值和每股同权交叉值。2026Q2收入、利润、费用、OCF、资本开支和FCF代理均可加减；单季EPS、ROE、BVPS、产品、渠道和地区不推算。</p>
+  <p class="small">财务证据截止2026-08-29，公开检索和行情截止2026-09-01。报告后有界检索未发现改变H1判断的后续重大公告；这不是对未来无事件的保证。所有量价桥、LTM、保守净流动性资产代理、三情景、A股交易价情景与证伪阈值均为分析推算，不是公司指引。除特别注明外，计算使用未取整输入，展示值可能有末位舍入差。</p>
+</section>
+
+<footer>
+  <p>数据截止2026-09-01。主要来源：巨潮资讯/深交所指定披露、发行人投资者关系记录、Wind金融数据服务、国家统计局行业序列及CADA/KPMG行业调查。</p>
+  <p>2026H1与Q1未经审计；单二季度仅对可加总流量项目按H1−Q1推算。估值情景不是一致预期或公司指引。本报告不构成任何投资建议、交易要约或个性化仓位建议。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
