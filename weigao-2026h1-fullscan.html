@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>威高股份 2026H1 Fullscan 全景尽调</title>
+<style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">威高股份 01066.HK ｜ 2026上半年（H1）FULLSCAN ｜ 数据截至 2026.09.04</div>
+    <h1>收入还在增长，<br>利润池却继续收缩</h1>
+    <p class="lede">带量采购（集采）没有让威高的收入增长消失，却把增长从收入端压成了毛利端的让利。2026H1收入仍是低个位数增长，<b>毛利率明显下降、公司调整利润仍双位数下降</b>。股价相对每股净资产的市净率已在深折价区，但只有利润率止跌，它才是价值；否则只是对低<span class="g">ROE</span>（净资产收益率）的合理折价。</p>
+
+    <div class="dual">
+      <div>
+        <div class="tag">2026H1 收入同比</div>
+        <div class="big a">+3.1%</div>
+        <div class="cap">收入端尚未失速，但不能单独证明集采冲击已经见底。</div>
+      </div>
+      <div>
+        <div class="tag">2026H1 公司调整归母净利润同比</div>
+        <div class="big b">−11.7%</div>
+        <div class="cap">剔除特殊项目及汇兑影响后仍双位数下降；报告归母净利润降幅更大。</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="reveal on" id="tldr">
+  <div class="slabel">三十秒版本 · 先看结论</div>
+  <h2>如果只读一屏，读这里</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>它是谁：</b>威高是覆盖通用医疗耗材、骨科、介入、药品包装和血液管理的医疗器械平台。医院和经销商采购产品，价格与中标量同时决定收入；其中通用医疗器械占H1分部收入约51%。</li>
+      <li><b>本期成绩：</b>2026H1收入68.490亿元（+3.1%），毛利31.707亿元（−4.0%），归属于01066股东的净利润7.741亿元（−23.2%）；公司自行剔除特殊项目和汇兑影响后的非香港财务报告准则（非HKFRS）归母净利润8.904亿元（−11.7%），经营现金流10.777亿元（+22.2%）。</li>
+      <li><b>核心矛盾：</b><span class="g">集采</span>（带量采购）让通用器械、骨科和冲管注射器降价。数量、结构或其他产品收入可能抵消部分价格影响，但公司未披露量价拆分；可验证的是销售成本增长10.1%，远快于收入，五年毛利率下行在H1继续。</li>
+      <li><b>容易踩的坑：</b>这不是一份可精确拆出的单二季度财报。Q1只披露“约33.5亿元”收入，因此只能机械得到Q2收入约35.0亿元、同比约+1%；Q2利润、分部、现金流和资本开支（CAPEX）均未披露，不能制造出来。</li>
+      <li><b>结论：</b><b>中性偏积极，置信度中等</b>。盘中价HK$3.255低于基准价值HK$3.42–4.42，但悲观价值HK$2.24–3.11仍意味着约5%–31%下行。低估值给了低成本修复期权，尚未给出利润率已经见底的证据。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reveal on" id="primer">
+  <div class="slabel">入门 · 三分钟看懂这门生意</div>
+  <h2>医院需要耗材，威高赚的是“数量 × 中标价 × 产品结构”</h2>
+  <p>把威高想成一组共享生产、销售和研发平台的医疗器械生意。通用器械包括临床护理、麻醉手术和医学检验；骨科销售植入物及耗材；介入覆盖肿瘤、血管和影像介入；药品包装包括预灌封、冲管注射器和自动给药装置；血液管理覆盖采集、储存、分离与灭菌。</p>
+  <div class="steps">
+    <div class="step"><div class="n">环节 1</div><b>研发与注册</b><p>产品先取得注册证，再通过医院准入、招标或经销网络销售；注册数量不等于商业化收入。</p></div>
+    <div class="step"><div class="n">环节 2</div><b>医院与经销商采购</b><p>国内客户包括医院和经销商，海外还有本地渠道；公司未披露医院端实际使用量与渠道库存。</p></div>
+    <div class="step"><div class="n">环节 3</div><b>集采重设价格</b><p>带量采购用更低价格换取约定采购量。收入可能增长，毛利率仍可能下降。</p></div>
+    <div class="step"><div class="n">环节 4</div><b>利润再投向平台</b><p>现金被用于研发、产线、收购、股息和回购；库存股能再用于激励，回购不自动等于永久缩股。</p></div>
+  </div>
+  <p>法律主体为山东威高集团医用高分子制品股份有限公司，在香港上市。2026年7月控股股东增持后，威高集团及实际控制人陈学利控制约46.6%的投票经济利益。集团五个经营板块中，骨科和部分药品包装业务存在重要少数股东，因此“分部利润”与最终归属于01066股东的利润不是一回事。文中带<span class="g">虚线下划线</span>的术语可在文末名词速查中找到。</p>
+</section>
+
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
+  <div class="slabel">公司概况、主营业务结构与五年财务概览</div>
+  <h2>收入五年几乎没变，盈利能力却一层层下台阶</h2>
+  <p>威高的H1收入由五类医疗器械产品构成，通用器械和药品包装是本期增长来源，骨科与介入拖累。会计分部表和管理层产品表对通用器械、介入的归类相差约1.16亿元；以下分部利润率只使用香港财务报告准则下的外部收入，绝不把两套口径拼接。本文把毛利加其他收入及损益，再减信用减值、销售、行政及研发费用，称为“本报告重建的经营利润代理”；公司没有呈报该小计。</p>
+
+  <div class="grid" data-financials="consolidated">
+    <div class="cell"><div class="k">2026H1 收入</div><div class="v">68.490<span class="u">亿元</span></div><div class="d"><span class="up">同比低个位数增长</span></div></div>
+    <div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">31.707<span class="u">亿元</span></div><div class="d"><span class="down">同比 −4.0%</span><span>46.29%</span></div></div>
+    <div class="cell"><div class="k">本报告重建的经营利润代理 / 利润率</div><div class="v">11.103<span class="u">亿元</span></div><div class="d"><span class="down">同比 −14.1%</span><span>16.21%</span></div></div>
+    <div class="cell"><div class="k">归母净利润 / 净利率</div><div class="v">7.741<span class="u">亿元</span></div><div class="d"><span class="down">同比 −23.2%</span><span>11.30%</span></div></div>
+    <div class="cell"><div class="k">经营现金流</div><div class="v">10.777<span class="u">亿元</span></div><div class="d"><span class="up">同比 +22.2%</span></div></div>
+    <div class="cell"><div class="k">公司调整归母净利润</div><div class="v">8.904<span class="u">亿元</span></div><div class="d"><span class="down">同比双位数下降</span><span>非HKFRS指标</span></div></div>
+  </div>
+  <p class="small"><b>每股地图：</b>H1基本及摊薄每股盈利均为RMB0.17，上年同期均为RMB0.22；公告数值已四舍五入，不据此制造精确同比。H1归母权益243.930亿元除以45.706亿股总发行分母，推算每股净资产RMB5.337；按1元人民币兑1.164港元换成HK$6.212，均为分析推算。</p>
+
+  <p class="small"><b>单Q2低精度桥：</b>H1收入68.490亿元减Q1发行人约数33.5亿元，得到Q2约35.0亿元；上年H1为66.440亿元，用Q1“约+5.3%”反推上年Q1约31.8亿元，得到上年Q2约34.6亿元，因此同比也只能写“约+1%”。Q1两个输入都是约数；单Q2利润、分部、现金流、利润率与资本开支均未披露。</p>
+  <p class="small"><b>H1现金边界：</b>2026H1完整现金资本开支未披露，因此不能形成完整自由现金流；后文只给“部分投资后现金代理”，不把它包装成完整自由现金流。</p>
+
+  <div class="tblscroll" data-financials="history">
+    <table class="tbl" data-financials="history">
+      <caption>五年合并财务历史｜人民币亿元；ROE按平均归母权益推算；现金CAPEX代理含购买物业厂房设备（PPE）、无形资产及PPE按金；自由现金流代理＝经营现金流−现金CAPEX代理</caption>
+      <thead><tr><th>年度</th><th>收入</th><th>毛利 / 率</th><th>经营利润代理 / 率</th><th>归母净利润 / 率</th><th>每股盈利（EPS）/ ROE</th><th>经营现金流（CFO）/ CAPEX / 自由现金流代理</th></tr></thead>
+      <tbody>
+        <tr><td>2021（重列）</td><td>133.140</td><td>75.163 / 56.45%</td><td>未披露</td><td>23.206 / 17.43%</td><td>0.51元 / 12.31%</td><td>最终重列口径未披露</td></tr>
+        <tr><td>2022（重列）</td><td>137.475</td><td>73.057 / 53.14%</td><td>35.020 / 25.47%</td><td>27.641 / 20.11%</td><td>0.61元 / 13.40%</td><td>22.949 / 11.138 / 11.810</td></tr>
+        <tr><td>2023</td><td>132.295</td><td>66.430 / 50.21%</td><td>25.653 / 19.39%</td><td>20.019 / 15.13%</td><td>0.44元 / 9.06%</td><td>27.985 / 6.857 / 21.129</td></tr>
+        <tr><td>2024</td><td>130.871</td><td>65.806 / 50.28%</td><td>27.286 / 20.85%</td><td>20.667 / 15.79%</td><td>0.46元 / 8.95%</td><td>27.900 / 6.474 / 21.425</td></tr>
+        <tr><td>2025</td><td>133.889</td><td>63.723 / 47.59%</td><td>21.865 / 16.33%</td><td>16.122 / 12.04%</td><td>0.36元 / 6.74%</td><td>25.506 / 8.326 / 17.180</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cols" role="img" aria-label="FY2021至FY2025营业收入与归母净利润趋势，统一以FY2022收入为百分之百高度">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:96.85%"></div><div class="bar np" style="height:16.88%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:20.11%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:96.23%"></div><div class="bar np" style="height:14.56%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:95.20%"></div><div class="bar np" style="height:15.03%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:97.39%"></div><div class="bar np" style="height:11.73%"></div></div></div>
+  </div>
+  <div class="collabels">
+    <div><b>2021</b>基期</div>
+    <div><b>2022</b>利润峰值</div>
+    <div><b>2023</b>利润下台阶</div>
+    <div><b>2024</b>短暂企稳</div>
+    <div><b>2025</b>再度收缩</div>
+  </div>
+  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
+  <p class="small">柱高按各年绝对值相对FY2022收入137.475亿元等比绘制，收入与利润共用一条尺度；这正是利润柱收缩快于收入柱的形状。</p>
+
+  <div data-financials="segments">
+    <div class="tblscroll">
+      <table class="tbl">
+        <caption>2026H1可报告分部｜外部收入与分部利润，人民币亿元；分部利润率使用同一分部外部收入</caption>
+        <thead><tr><th>分部</th><th>外部收入</th><th>收入占比</th><th>同比</th><th>分部利润</th><th>利润率</th><th>同比变化</th></tr></thead>
+        <tbody>
+          <tr><td>医疗器械</td><td>34.780</td><td>50.8%</td><td class="up">+5.4%</td><td>4.666</td><td>13.42%</td><td class="down">−2.19个百分点</td></tr>
+          <tr><td>骨科</td><td>6.982</td><td>10.2%</td><td class="down">−4.7%</td><td>1.634</td><td>23.39%</td><td class="up">+1.46个百分点</td></tr>
+          <tr><td>介入</td><td>9.634</td><td>14.1%</td><td class="down">−2.7%</td><td>−0.677</td><td>−7.03%</td><td class="down">−0.97个百分点</td></tr>
+          <tr><td>药品包装</td><td>12.536</td><td>18.3%</td><td class="up">+7.5%</td><td>4.791</td><td>38.22%</td><td class="down">−0.47个百分点</td></tr>
+          <tr><td>血液管理</td><td>4.544</td><td>6.6%</td><td>持平</td><td>0.531</td><td>11.69%</td><td class="up">+4.81个百分点</td></tr>
+          <tr><td>其他（租赁/应收账款保理融资）</td><td>—</td><td>—</td><td>—</td><td>0.164</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="stacks">
+    <div class="stack"><div class="cap">2025H1分部收入结构</div><div class="stackbar"><div class="seg p" style="width:49.67%">49.7%</div><div class="seg q" style="width:17.56%">17.6%</div><div class="seg r" style="width:32.77%">32.8%</div></div></div>
+    <div class="stack"><div class="cap">2026H1分部收入结构</div><div class="stackbar"><div class="seg p" style="width:50.78%">50.8%</div><div class="seg q" style="width:18.30%">18.3%</div><div class="seg r" style="width:30.92%">30.9%</div></div></div>
+  </div>
+  <div class="legend"><span><i class="p"></i>医疗器械</span><span><i class="q"></i>药品包装</span><span><i class="r"></i>骨科、介入、血液管理</span></div>
+  <p class="small">分部外部收入合计68.476亿元，比综合收入少0.013亿元，公告未解释该约0.02%残差。经营利润代理为毛利加其他收入/损益、减信用减值、销售、行政及研发费用；公司没有呈报“经营利润”小计。FY2023—25一致产品口径的两年复合增速为：医疗器械−2.73%、骨科+9.44%、介入+1.22%、药品包装+6.33%、血液管理−2.28%；这是产品收入复合年增长率（CAGR），不是会计分部利润序列。更早分部边界经历重组，故不拼出五年分部复合增速。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>最新滚动口径：最近十二个月（LTM）｜2025财年（FY2025）+ 2026H1 − 2025H1；人民币亿元；均为分析推算</caption>
+      <thead><tr><th>收入</th><th>毛利 / 率</th><th>归母净利润 / 率</th><th>公司调整归母净利润</th><th>经营现金流</th></tr></thead>
+      <tbody><tr><td>135.938</td><td>62.394 / 45.90%</td><td>13.780 / 10.14%</td><td>15.034</td><td>27.467</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>最重要的不是收入涨了还是跌了，而是<b>同样一元收入还剩多少利润</b>。2021—2025收入四年复合增速只有0.14%，几乎原地踏步；毛利率却从56.45%降到47.59%，归母净利率从17.43%降到12.04%，平均权益<span class="g">ROE</span>从12.31%降到6.74%。</p>
+    <p>H1延续同一条线：收入增加，毛利反而减少。费用控制缓冲了一部分冲击，但公司调整利润仍下降。现金回收比利润好看，后文会检验它是不是应收和资本开支时点造成的。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="profit-vbp">
+  <div class="slabel">投资逻辑、盈利能力与行业政策</div>
+  <h2>销售成本跑得比收入快，费用节约仍填不平毛利缺口</h2>
+  <p>公司明确把毛利率下降归因于通用医疗器械、骨科和冲管注射器的政策降价。问题不在“有没有收入”，而在新增收入的单位毛利更低。销售费用、行政费用和研发费用合计同比减少0.99亿元，仍不足以抵消毛利和其他收益减少。比较基期三类费用已按职能重新呈列，主要重分类员工成本；公司称重分类不改变总费用或当期表现。</p>
+
+  <div class="wfall" role="img" aria-label="2025H1至2026H1除税前利润桥，单位人民币亿元">
+    <div class="wrow"><div class="nm">2025H1除税前利润<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:87.56%"></div></div><div class="fig">12.259</div></div>
+    <div class="wrow"><div class="nm">毛利减少<span>销售成本快于收入</span></div><div class="wtrack"><div class="wbar down" style="left:78.08%;width:9.49%"></div></div><div class="fig down">−1.328</div></div>
+    <div class="wrow"><div class="nm">其他收入/损益<span>同比落差</span></div><div class="wtrack"><div class="wbar down" style="left:68.34%;width:9.73%"></div></div><div class="fig down">−1.363</div></div>
+    <div class="wrow"><div class="nm">信用减值增加<span>预期信用损失（ECL）扩大</span></div><div class="wtrack"><div class="wbar down" style="left:67.43%;width:0.92%"></div></div><div class="fig down">−0.128</div></div>
+    <div class="wrow"><div class="nm">销售费用减少<span>费用缓冲</span></div><div class="wtrack"><div class="wbar up" style="left:67.43%;width:4.91%"></div></div><div class="fig up">+0.688</div></div>
+    <div class="wrow"><div class="nm">行政与研发减少<span>费用缓冲</span></div><div class="wtrack"><div class="wbar up" style="left:72.34%;width:2.18%"></div></div><div class="fig up">+0.306</div></div>
+    <div class="wrow"><div class="nm">融资、联营及合营损益等<span>合计净拖累</span></div><div class="wtrack"><div class="wbar down" style="left:73.75%;width:0.77%"></div></div><div class="fig down">−0.108</div></div>
+    <div class="wrow"><div class="nm">2026H1除税前利润<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:73.75%"></div></div><div class="fig">10.325</div></div>
+  </div>
+  <p class="small">轨道以14亿元为100%，负向条从新累计值画至旧累计值，正向条从旧累计值画至新累计值；底层人民币千元数据精确调节至除税前利润同比减少1.934亿元，图中亿元数四舍五入至三位小数后会出现0.001亿元的展示差。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>集采与分部利润的可验证连接｜H1口径；金额人民币亿元</caption>
+      <thead><tr><th>业务</th><th>收入变化</th><th>利润变化</th><th>公司给出的原因</th><th>仍未披露</th></tr></thead>
+      <tbody>
+        <tr><td>通用医疗器械</td><td>+5.4%</td><td>5.151→4.666</td><td>核心产品自2025Q3起降价；产品结构与营销优化部分缓冲</td><td>销量、平均售价（ASP）降幅、中标份额、终端使用量</td></tr>
+        <tr><td>骨科</td><td>−4.7%</td><td>1.607→1.634</td><td>竞争、手术量波动与续标压低销量；费用控制支撑利润</td><td>医院份额、产品级价格与数量</td></tr>
+        <tr><td>药品包装</td><td>+7.5%</td><td>4.514→4.791</td><td>预灌封双位数增长；最新集采令冲管注射器价格大幅下降</td><td>两类产品各自毛利、价格降幅与订单量</td></tr>
+        <tr><td>介入</td><td>−2.7%</td><td>−0.600→−0.677</td><td>成熟产品受汇率影响；血栓清除装置Cleaner Vac商业化及教育投入仍高</td><td>精确美元口径增速及与HKFRS人民币收入的调节桥、单品收入和盈亏平衡时间</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finds">
+    <div class="find warn"><div class="t">毛利是真正断点</div><p>收入同比增加2.049亿元，销售成本却增加3.378亿元，毛利减少1.328亿元；毛利率较上年低3.43个百分点。</p></div>
+    <div class="find good"><div class="t">费用控制提供缓冲</div><p>销售、行政和研发费用均下降；研发投入与人员同步减少是否会削弱未来产品转化，是下一期要验证的风险，而非本期已证实的因果。</p></div>
+    <div class="find warn"><div class="t">汇兑噪音扩大</div><p>公司调整口径的归母净汇兑损失同比扩大；分部对账使用税前汇兑损失，是另一口径，不能互换。</p></div>
+    <div class="find"><div class="t">调整后仍然下降</div><p>报告归母7.741亿元，加归母股权激励0.200亿元、一次性费用0.050亿元和净汇兑损失0.914亿元，得到公司调整归母8.904亿元。</p></div>
+    <div class="find warn"><div class="t">15%优惠税率也需要续期</div><p>多家核心国内主体以高新技术企业资格适用15%所得税率，低于25%法定税率；年报所列证书期限分布在2024—26、2025—27，部分只写至2025，H1仍按15%计税却未交代全部续期或各主体利润暴露。洁瑞、威藤另享残障员工工资加计扣除。由于实体利润未披露，不能把10个百分点税率差机械换成集团盈利敏感度。美国业务适用21%联邦所得税，另加适用的州所得税；管理层判断经济合作与发展组织全球最低税框架“支柱二”不需补足税，但没有给定量桥。</p></div>
+  </div>
+
+  <p class="small"><b>H2风险边界：</b>管理层预计更多区域医疗器械集采落地、价格下行趋势延续，但没有量化产品范围与收入暴露；公司还警告原材料价格风险将继续影响生产成本，却未披露原料篮子、成本暴露、库存传导时滞、对冲或转嫁能力，因此不能把它反写成H1毛利率下降的已证实原因。管理层称国内终端需求缓慢修复、公立医院门诊与手术量改善，但预算约束和谨慎采购仍在；这属于发行人观察，不是独立行业统计。同一展望称多数产品边际降价压力缓解；未经审核演示稿进一步预计H2骨科收入改善、新品放量、药包利润率高于H1，并称汇率稳定时介入收入有望改善。以上均为未量化预期，不是已实现事实；通用器械H1利润率较前一半年度修复的说法也未披露计算机制，证据等级低于本期可复核的同比下降。</p>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>集采的难点是：<b>销量可能增长，利润仍会下降</b>。威高没有披露真实单价和销量，所以不能精确拆量价；本期可以确认的只是收入增长而毛利减少，新增收入的含金量下降。</p>
+    <p>多方需要看到降价影响见底，空方则会盯着管理层提示的价格、原材料和需求风险。下一期最有用的证据仍是毛利率和分部利润，而不是未量化的展望。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="cash-balance">
+  <div class="slabel">现金流、资本开支与资产负债表</div>
+  <h2>现金转换改善，但应收的尾部风险在变差</h2>
+  <p>经营现金流相对归母净利润改善，现金转换率升破100%。同时，净应收贸易款增速快于半年收入，最老一档应收升幅显著。现金改善和资产质量并非同一个方向，不能只看一张现金流量表。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">现金转换率（经营现金流÷归母净利润）</div><div class="v">139<span class="u">%</span></div><div class="d"><span class="up">上年同期87%</span></div></div>
+    <div class="cell"><div class="k">部分投资后现金代理</div><div class="v">7.411<span class="u">亿元</span></div><div class="d"><span>仅扣管理层所称物业/设施投入；非完整自由现金流</span></div></div>
+    <div class="cell"><div class="k">净现金（不含租赁）</div><div class="v">39.262<span class="u">亿元</span></div><div class="d"><span>现金+定存−借款</span></div></div>
+    <div class="cell"><div class="k">借款 / 租赁负债</div><div class="v">37.935<span class="u">/ 2.807亿元</span></div><div class="d"><span>债券已清零</span></div></div>
+    <div class="cell"><div class="k">净应收贸易款</div><div class="v">66.928<span class="u">亿元</span></div><div class="d"><span class="down">较年末 +8.8%</span></div></div>
+    <div class="cell"><div class="k">资本承担</div><div class="v">9.169<span class="u">亿元</span></div><div class="d"><span>已签约、尚未入账</span></div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>经营营运资金（NWC）｜人民币亿元；经营NWC＝存货+净应收贸易款−应付贸易款−合约负债</caption>
+      <thead><tr><th>期末</th><th>存货</th><th>净应收贸易款</th><th>应付贸易款</th><th>合约负债</th><th>经营NWC</th></tr></thead>
+      <tbody>
+        <tr><td>2022（重列）</td><td>23.238</td><td>54.923</td><td>14.333</td><td>3.804</td><td>60.023</td></tr>
+        <tr><td>2023</td><td>24.954</td><td>56.885</td><td>11.574</td><td>4.245</td><td>66.019</td></tr>
+        <tr><td>2024</td><td>25.284</td><td>60.784</td><td>11.675</td><td>3.499</td><td>70.894</td></tr>
+        <tr><td>2025</td><td>25.151</td><td>61.504</td><td>12.193</td><td>3.197</td><td>71.264</td></tr>
+        <tr><td>2026H1</td><td>25.443</td><td>66.928</td><td>14.006</td><td>3.274</td><td>75.092</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>净应收贸易款账龄｜人民币亿元；2026H1对2025年末</caption>
+      <thead><tr><th>账龄</th><th>2026H1</th><th>2025年末</th><th>变化</th><th>占本期应收</th></tr></thead>
+      <tbody>
+        <tr><td>0—90天</td><td>26.826</td><td>24.094</td><td>+11.3%</td><td>40.1%</td></tr>
+        <tr><td>91—180天</td><td>15.875</td><td>11.963</td><td>+32.7%</td><td>23.7%</td></tr>
+        <tr><td>181—365天</td><td>14.778</td><td>18.047</td><td>−18.1%</td><td>22.1%</td></tr>
+        <tr><td>超过365天</td><td>9.449</td><td>7.399</td><td class="down">+27.7%</td><td>14.1%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finds">
+    <div class="find good"><div class="t">流动性没有短期压力</div><p>借款中12.444亿元为一年内到期、25.491亿元为非流动；银行结余及现金加定期存款足以覆盖短债。H1融资成本1.171亿元，与上年同期近乎持平，主要是银行及其他借款利息；另有4.257亿元受限制存款未计入净现金代理。</p></div>
+    <div class="find warn"><div class="t">应收尾部正在积累</div><p>超过180天余额占比由41.4%降至36.2%，结构表面改善；但超过365天的最老一档反而增至9.449亿元，信用减值费用同比翻倍至0.254亿元。发行人在FY2025已承认部分国内医疗机构客户账期延长，增加运营成本并降低资产周转效率；H1却未按医院、经销商和关联方拆分账龄，因此不能量化哪类主体驱动最老余额。</p></div>
+    <div class="find warn"><div class="t">关联方集中度未更新</div><p>FY2025末55%的贸易应收总额、70%的保理应收和74%的贷款应收来自同系附属公司。H1贷款余额合计7.318亿元、保理应收1.716亿元，却没有更新关联方集中度；不能把全部应收简单叫作“医院欠款”。</p></div>
+    <div class="find"><div class="t">杠杆口径存在文字差异</div><p>公司披露杠杆率16.7%；只有把租赁负债加入借款才可复算，若按正文“借款及债券”文字定义则为15.6%。</p></div>
+    <div class="find warn"><div class="t">扩产回报尚无闭环</div><p>公司称预灌封/自动注射器产线约投入2亿元、计划2026—27投产，另有一次性器械及骨科设备升级约4亿元；现金支付节奏、利用率、订单和回报率均未披露。</p></div>
+  </div>
+
+  <p class="small"><b>H1现金口径：</b>H1没有披露购买设备、无形资产与设备按金的完整现金明细。7.411亿元只是经营现金流减去公司称已投入的3.366亿元物业/设施投资；该金额也未被明确标成现金支付，因此只能作部分投资后的敏感度代理，不能叫完整<span class="g">自由现金流（FCF）</span>或确定的上限。演示稿另称H1自由现金流4.24亿元，但同图使用的经营现金流8.82亿元恰好对应港交所公告上年同期8.816亿元，而不是本期10.777亿元；其脚注也要求实际数字以业绩公告为准。因此本文不采信4.24亿元为本期完整自由现金流，并把这处期间错配列作披露质量观察点。</p>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>现金流变好是好事，但还不能宣布回款问题解决。平均应收周转约170天，最久的一档欠款增加，坏账费用也翻倍。更稳妥的读法是：<b>现金转换本期改善，资产质量仍需下一期确认</b>。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="pipeline">
+  <div class="slabel">研发管线与专利</div>
+  <h2>注册证与专利很多，商业化回报仍是空白格</h2>
+  <p>医疗器械公司的研发价值不在“有多少项目”，而在注册后能否形成收入、毛利与现金。威高H1研发费用和研发人员都下降；公司披露大量专利及注册数量，却没有给产品级收入、价格、专利寿命或投资回报。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">H1研发费用</div><div class="v">3.022<span class="u">亿元</span></div><div class="d"><span class="down">同比 −7.1%</span></div></div>
+    <div class="cell"><div class="k">研发费用率</div><div class="v">4.4<span class="u">%</span></div><div class="d"><span>上年4.9%</span></div></div>
+    <div class="cell"><div class="k">研发人员</div><div class="v">1,188<span class="u">人</span></div><div class="d"><span class="down">较年末 −6.0%</span></div></div>
+    <div class="cell"><div class="k">中国注册证 / 专利存量</div><div class="v">987<span class="u">/ 1,247</span></div><div class="d"><span>其中发明专利312项</span></div></div>
+    <div class="cell"><div class="k">海外注册 / 专利存量</div><div class="v">1,314<span class="u">/ 270</span></div><div class="d"><span>发行人口径</span></div></div>
+    <div class="cell"><div class="k">FY2025资本化开发新增</div><div class="v">0.345<span class="u">亿元</span></div><div class="d"><span>约为当年费用化研发5.3%；H1未披露</span></div></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>研发产出与商业化证据｜H1披露及截至2026-09-04期后更新</caption>
+      <thead><tr><th>地区 / 项目</th><th>披露进度</th><th>可验证内容</th><th>关键缺口</th></tr></thead>
+      <tbody>
+        <tr><td>中国</td><td>新增150项专利、129项注册证</td><td>另有123项专利申请、46项完成研发待注册</td><td>创新程度、专利期限、收入与毛利</td></tr>
+        <tr><td>海外</td><td>33项专利申请、155项完成研发待注册</td><td>注册与专利存量继续扩张</td><td>获批概率、恒定汇率收入、市场准入成本</td></tr>
+        <tr><td>围术期设备</td><td>期后：监护仪7月30日注册；输注泵、呼吸机在开发</td><td>管理层预计1—2年完善组合</td><td>时间表属于管理层计划，无订单和单位经济</td></tr>
+        <tr><td>骨科新品</td><td>聚醚醚酮（PEEK）融合器、等离子电极、骨水泥填充器等获批</td><td>国内外证书继续增加</td><td>招标价格、手术使用量与替代份额</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>注册证像“准考证”，不是销售发票。威高有很宽的证书和专利库，但H1研发费用与研发人数同时下降，且没有把新证书连接到订单、收入和毛利。投资者真正需要的不是更多海外注册证，而是<b>哪一个新品能在集采降价后补回利润</b>。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="overseas">
+  <div class="slabel">海外业务</div>
+  <h2>海外贡献近半增量，但介入亏损仍拖着利润质量</h2>
+  <p>海外约占集团四分之一收入，增长快于集团并贡献接近一半净增量；增长来自亚洲其他地区和欧洲、中东及非洲，美国反而下降。公司没有披露海外利润、现金贡献或集团恒定汇率增速；管理层演示称介入收入按美元计同比低个位数增长，但未给精确率或与HKFRS人民币分部收入下降2.7%的调节桥。Argon主要属于介入业务，但地域表没有把美国收入与Argon利润逐项连接，因此“海外收入增长”不能直接翻译成“海外盈利改善”。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>2026H1地域收入｜人民币亿元</caption>
+      <thead><tr><th>地区</th><th>收入</th><th>占集团</th><th>同比</th><th>判断</th></tr></thead>
+      <tbody>
+        <tr><td>中国</td><td>51.253</td><td>74.9%</td><td>+2.1%</td><td>仍是绝对主体</td></tr>
+        <tr><td>美国</td><td>6.996</td><td>10.2%</td><td class="down">−3.3%</td><td>仅披露收入；未披露地区利润</td></tr>
+        <tr><td>亚洲及其他</td><td>5.555</td><td>8.1%</td><td class="up">+14.0%</td><td>海外最快增量</td></tr>
+        <tr><td>欧洲、中东及非洲</td><td>4.687</td><td>6.8%</td><td class="up">+13.6%</td><td>双位数增长</td></tr>
+        <tr class="grp"><td>海外合计</td><td>17.237</td><td>25.1%</td><td>+6.2%</td><td>未披露地区利润与现金</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finds">
+    <div class="find warn"><div class="t">汇兑损失扩大</div><p>归母调整口径净汇兑损失由0.413亿元增至0.914亿元；外币报表折算产生、计入其他综合收益（不计入当期净利润）的损失为1.245亿元，两者经济含义不同。</p></div>
+    <div class="find warn"><div class="t">八年前收购回报桥仍缺失</div><p>Argon于2018年1月完成并表，调整后收购对价约8.442亿美元。FY2025年报明确Argon因Cleaner Vac等新品推广费用增加而录得净亏损；H1只披露介入分部收入9.634亿元、亏损0.677亿元，没有Argon独立净资产、现金回报或累计投资回报率。无减值不等于收购回报达标。</p></div>
+    <div class="find warn"><div class="t">商誉集中，但年报测试通过</div><p>FY2025介入<span class="g">现金产生单元（CGU，即用于减值测试的一组资产）</span>商誉32.25亿元，占集团商誉约87%。当年未确认商誉减值：公司称可收回金额高于各现金产生单元账面值，且管理层认为合理可能的假设变动不会触发减值。测试采用十年显式预测、12.4%折现率及2.5%永续增长，却未量化安全边际，仍须监控。</p></div>
+    <div class="find warn"><div class="t">印尼试产表述不一致</div><p>管理层演示的一页称印尼静脉留置针工厂已在Q3启动试产，另一页展望却仍写H2将推进试产；未披露具体启动日、产能、订单、资本开支或回报率。因此本文只把它视为未经审核且需后续确认的期后进度陈述；科特迪瓦本地产能也仍是计划。</p></div>
+    <div class="find warn"><div class="t">汇率与融资保护不完整</div><p>集团只称以结构性金融合约部分对冲预测外币现金流，未披露合约金额与覆盖率。FY2025末Argon美元贷款约1.551亿美元，利率为担保隔夜融资利率（SOFR）+3.10%，并以子公司股权及多类资产担保；WW Cayman另有9.00亿元贷款，由上市公司及Argon香港、上海主体担保。H1未更新两笔贷款各自余额、契约或覆盖情况，不能把集团总借款下降等同海外平台去杠杆。</p></div>
+    <div class="find warn"><div class="t">关税与市场准入成本上升</div><p>公司称部分海外地区的关税和市场准入监管变化已经提高合规与运营成本，并干扰进一步增长；受影响地区、金额、缓解措施以及税务和资金汇回约束仍未披露。</p></div>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>海外增长快于国内，且约占四分之一收入；但美国收入下降、介入业务继续亏损、汇兑损失扩大。商誉只占归母权益约15%，集团总量尚非首要风险；87%的商誉却集中在亏损的介入业务上，<b>风险在集中度，不在集团比例</b>。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="capital-governance">
+  <div class="slabel">股东回报、管理与公司治理</div>
+  <h2>公司在回购，库存股却可能重新进入激励；资产置换也会改写归属利润</h2>
+  <p>资本分配要把四笔账同时看：股息下降、发行人回购、控股股东增持，以及可用库存股授予的激励计划。威高普瑞注入威高血液净化的关联资产置换，则会让并表规模变大、少数股东权益也变大，不能当作简单加法。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>一致口径股东回报｜每股人民币；当年中期+末期</caption>
+      <thead><tr><th>财年</th><th>全年每股股息</th><th>同比</th><th>备注</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>0.1420</td><td>—</td><td>后续年报汇总</td></tr>
+        <tr><td>2022</td><td>0.1650</td><td>+16.2%</td><td>—</td></tr>
+        <tr><td>2023</td><td>0.1677</td><td>+1.6%</td><td>—</td></tr>
+        <tr><td>2024</td><td>0.2154</td><td>+28.4%</td><td>五年高点</td></tr>
+        <tr><td>2025</td><td>0.1569</td><td>−27.2%</td><td>当前推算毛股息率约5.6%</td></tr>
+        <tr class="grp"><td>2026H1</td><td>0.0854</td><td>较2025H1 −11.9%</td><td>须10月16日特别股东大会批准</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">FY2021—25每股股息累计0.8470元，按当前总股本粗算现金分配约38.7亿元；同期普通股股本面值未增加，未见新增普通股净募资，因此在这一可观测口径上公司是净资本给予者。另有2026年回购1.334亿港元，但库存股未注销；资产置换拟发行的血液净化股份也尚未完成，均不能与已付股息混算。2025全年每股股息对应当前推算毛股息率约5.61%，但分红可变，不是价格底线。</p>
+  <p class="small">FY2022—25自由现金流代理累计约71.54亿元；用各年每股股息乘当前总股本粗算同期分配约32.22亿元，覆盖约2.22倍。这个覆盖倍数不是现金流量表中的精确配对：当前股数替代了各年加权股数，宣派与付款期间也可能错位。发行人演示稿称拟把2026H1派息率维持在约50%，但分母是剔除一次性非现金收入的“经营层面净利润”，属于管理层非准则口径，且仍待股东批准。年报股息政策没有承诺固定长期派息率，金额由董事会酌情提出并须股东大会批准。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>回购、增持与激励｜截至2026-09-03</caption>
+      <thead><tr><th>事项</th><th>数量 / 金额</th><th>经济含义</th><th>边界</th></tr></thead>
+      <tbody>
+        <tr><td>发行人2026年回购</td><td>3,259.8万股 / 1.334亿港元</td><td>库存股6,366.2万股，占H股约1.41%</td><td>未注销，可再用于激励</td></tr>
+        <tr><td>控股股东增持</td><td>3,055.2万股 / 约1.01亿港元</td><td>推算均价约HK$3.31，持股约46.61%</td><td>是控制人自己的钱，不是公司回购；不作内在价值底线</td></tr>
+        <tr><td>2014计划剩余奖励</td><td>2,815万股 / 认购价RMB3.58</td><td>约占总股本0.62%</td><td>旧计划已到期，剩余奖励仍可行使</td></tr>
+        <tr><td>2025 H股激励计划</td><td>上限为采纳日股本4.5%</td><td>可使用库存股或现有H股</td><td>截至H1没有授予；绩效指标具弹性</td></tr>
+        <tr><td>H1股份支付费用</td><td>0.356亿元</td><td>同比由0.130亿元增加</td><td>归母调整口径净费用为0.200亿元</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>威高普瑞—威高血液净化资产置换｜关联重大交易；人民币亿元</caption>
+      <thead><tr><th>项目</th><th>交易前</th><th>交易后 / 条款</th><th>投资者应看什么</th></tr></thead>
+      <tbody>
+        <tr><td>经济权益与并表</td><td>01066持普瑞94.0706%；血液净化为23.53%联营</td><td>血液净化持普瑞100%；01066直接持血液净化51.35%，集团合计52.10%</td><td>收入扩大，但普瑞归属权益下降、非控股权益上升</td></tr>
+        <tr><td>交易估值</td><td>普瑞资产法33.85</td><td>收益法估值85.108；为资产法的2.51倍</td><td>依赖利润承诺与政策假设</td></tr>
+        <tr><td>利润承诺</td><td>—</td><td>若2026完成：2026—28为6.395 / 7.202 / 7.835</td><td>短缺先以股份、再以现金补偿；01066按94.0706%承担</td></tr>
+        <tr><td>审批与交割</td><td>H1末待证监会注册；五名关联董事回避表决</td><td>证监会8月26日已注册；截至9月3日未找到HKEX交割公告</td><td>完成日、最终合并会计及比较重列、合并储备、非控股权益与归属每股影响仍未知</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="small">程序保障包括：01066独立股东于2月12日、威高血液净化独立股东于2月27日分别批准交易；公司设独立董事委员会，并聘嘉林资本（Gram Capital）为独立财务顾问。交易文件称威高普瑞2022—24年中国预灌封注射器市占率超过50%、国际销售位列前五；这是发行人/评估机构披露的单一子业务竞争锚，不能外推成威高集团整体份额。H1另以0.830亿元收购及增资取得苏州杰思拜尔55%股权，相关收入、利润及对H1增速贡献未披露，因此本期不能精确拆出有机增长。</p>
+
+  <div class="finds">
+    <div class="find warn"><div class="t">关联运营依赖不止代结算</div><p>除前述三类关联应收集中外，控股股东关联物流集团还代结算客户销售31.337亿元并收服务费0.717亿元，约为2.29%，FY2026/27上限为37.2/41.5亿元。此外，关联采购实际额8.568亿元、约占FY2025收入6.4%，关联销售3.707亿元、融资租赁/保理2.744亿元，关联存款连利息最高日余额1.225亿元；相应上限分别为采购11.0/12.1亿元、销售6.2/6.5亿元、融资租赁/保理每年6亿元、关联存款1.32亿元。续期公告规定采购条件不得劣于独立第三方并至少比较两家独立供应商，物流费不超过终端价3%且不高于独立第三方，另有季度上限监控；但未披露逐笔比价样本或实际价差。公告还设独立董事委员会并委任嘉林资本提供意见；其中需要表决的采购及物流支持续期已于2025年12月19日获独立股东近乎全票批准，威高集团及其联系人回避。2025年度独立非执行董事复核及德勤按上市规则第14A.56条核查未发现程序、定价政策、协议执行或上限例外；H1没有更新实际使用率。</p></div>
+    <div class="find warn"><div class="t">最大基金承诺尚余4.62亿元</div><p>松源医疗产业基金计划投入7.70亿元、持有38.5%，截至H1累计投入3.08亿元；余款约等于本报告净现金代理的12%。FY2025该基金亏损0.316亿元，集团账面值2.566亿元、低于上年2.688亿元；年报仍称余款在2020年成立后五年内缴付，但该期限到FY2025末已届满，H1没有更新催缴或延期安排。另有0.60亿元私募基金计划仅投入0.02亿元，以及0.731亿元韩国关联基金承诺、已投入0.211亿元；后两者回报和估值未披露。</p></div>
+    <div class="find warn"><div class="t">关联土地按评估价收购</div><p>3月27日公司以0.397亿元内部资金向威高生物科技收购7.63万平方米工业用地，卖方原始成本约0.253亿元，交易价等于1月19日独立评估值；三名关联董事回避，交易因比例低于5%豁免独立股东批准。灭菌及仓储中心提高周转、降低单位成本只是管理层预期，尚无投产、吞吐或回报证据。</p></div>
+    <div class="find warn"><div class="t">共同控制收购仍有H2现金余款</div><p>威高骨科2023年向同系附属公司收购组织修复业务威高新生，总代价10.30亿元，并按共同控制合并会计重列FY2022；H1公告称尚余1.03亿元预计在2026H2支付，约为本报告净现金代理的2.6%。公司未披露该业务收购后的独立利润、现金回报或投资回报率。</p></div>
+    <div class="find"><div class="t">H股全流通尚未实施</div><p>4,830万股非上市股份拟转H股，占总股本1.06%；8月末月报仍列为非上市，潜在流通增加尚未发生。</p></div>
+    <div class="find warn"><div class="t">回购不是永久缩股</div><p>截至9月3日，上市H股扣库存股后为44.587亿股，另有0.483亿股非上市股份；实际在外合计约45.070亿股。估值仍用45.706亿股总发行分母，把6,366.2万库存股视作可能重新发行。</p></div>
+  </div>
+
+  <p class="small"><b>置换会计边界：</b>年报称将按香港会计师公会《会计指引第5号——共同控制下业务合并的合并会计处理》（AG5）处理，犹如共同控制合并自威高血液净化2004年成立起生效，而不是把收购价重新分配到可辨认资产及商誉；公告也称处置不会确认损益。取得控制日主要资产及负债类别影响仍在评估，最终比较重列、合并储备（共同控制合并产生的权益调整）以及归属每股盈利和每股净资产仍待交割会计披露。</p>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>发行人回购和控股股东增持都是正面信号，但含义不同：前者花公司现金，后者花控制人现金。更关键的是，发行人回购的股票没有注销，而且新激励计划可以使用库存股，所以<b>回购能否提高每股价值，要等注销或授予条件兑现</b>。</p>
+    <p>资产置换不能只看并表规模。控制链变化会让归属于01066股东的比例变薄；最终每股影响要等交割会计披露。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="market-peers">
+  <div class="slabel">竞争对手、股价走势与贝塔/阿尔法</div>
+  <h2>股价相对每股盈利的市盈率折价很深，市净率只低于两家；同业差异不能直接套中位数</h2>
+  <p>威高在产品宽度、利润率和规模上都不同于纯耗材同业。普华和顺更接近血液净化与输液，振德、奥美偏敷料和低值耗材；威高骨科是合并子公司，不能作为外部估值锚重复计价。同行表能证明威高当前市盈率低于三家、市净率低于其中两家，也能检验三年经营轨迹，但不足以单独证明错价。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>同业三年轨迹｜Wind；序列均为FY2023→FY2024→FY2025；估值为各交易所本币下倍数；各财年均12月结</caption>
+      <thead><tr><th>公司</th><th>当前市盈率 / 市净率<br>PE（TTM，最近十二个月）/ PB（LF，最近一期）</th><th>收入同比</th><th>毛利率</th><th>平均净资产收益率</th><th>年末PE</th><th>年末PB</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td>威高股份</td><td>9.38x / 0.53x</td><td>−3.8% → −1.1% → +2.3%</td><td>50.2% → 50.3% → 47.6%</td><td>9.1% → 8.9% → 6.7%</td><td>13.37x → 10.04x → 10.64x</td><td>1.46x → 0.83x → 0.87x</td></tr>
+        <tr><td>普华和顺 01358.HK</td><td>27.32x / 0.30x</td><td>+25.8% → +13.9% → +7.1%</td><td>56.4% → 54.6% → 49.5%</td><td>3.8% → 3.8% → 2.4%</td><td>10.17x → 9.18x → 11.83x</td><td>0.30x → 0.35x → 0.43x</td></tr>
+        <tr><td>振德医疗 603301.SH</td><td>78.05x / 3.81x</td><td>−32.8% → +3.3% → +1.5%</td><td>34.7% → 34.0% → 33.9%</td><td>3.6% → 7.0% → 4.6%</td><td>12.40x → 28.53x → 66.72x</td><td>1.24x → 1.05x → 3.30x</td></tr>
+        <tr><td>奥美医疗 002950.SZ</td><td>23.00x / 1.51x</td><td>−34.5% → +20.7% → +10.4%</td><td>27.9% → 28.8% → 28.6%</td><td>3.5% → 11.1% → 7.1%</td><td>16.66x → 24.55x → 15.29x</td><td>1.87x → 1.66x → 1.85x</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">TTM表示最近十二个月，LF表示最近一期披露。当前同业估值取2026-09-04 13:50—13:56香港时间盘中，历史轨迹于14:45—14:49查询；年末倍数取各年最后交易日，并非业绩发布日期。净资产收益率统一采用Wind平均口径；发行人加权口径只作抽查，不混入跨市场表。弱利润会放大市盈率，三年倍数轨迹没有显示稳定的同业收敛关系。</p>
+
+  <div class="finds">
+    <div class="find warn"><div class="t">业绩后首日放量下跌</div><p>公告后首个完整交易日股价下跌3.88%，成交额1.063亿港元，为前一日2.54倍；至9月3日累计下跌7.61%。同期行业指数事件窗口查询失败，不报告超额收益，也不把价格变化归因于单一因素。</p></div>
+    <div class="find warn"><div class="t">长期相对表现弱</div><p>截至9月3日，不复权一年跌44.28%，同期恒生医疗保健指数跌16.97%；五年分别跌76.67%与39.26%，均不含股息。</p></div>
+    <div class="find"><div class="t">政策贝塔很高</div><p>收入横盘而毛利率持续下降，说明投标价格和集采规则比总医疗需求更能解释利润波动；这是经营贝塔，不是统计市场贝塔系数（beta）。</p></div>
+    <div class="find good"><div class="t">潜在阿尔法有三处</div><p>药品包装高利润、亚洲及欧洲、中东和非洲增长、介入若扭亏，均可在低估值上形成公司特有上行；当前只有收入证据，尚无完整现金与利润证据。</p></div>
+  </div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>威高比这组同行便宜很多，但同行本身并不整齐：上市地、产品、规模和利润阶段不同。把振德的高倍数直接套给威高，会制造虚假的精确。真正有用的比较是：<b>威高的毛利率更高，ROE却只在6%—7%；若资产回报不修复，低于一倍市净率可以成立</b>。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="valuation">
+  <div class="slabel">市场定价、业务组合估值与盈利预测</div>
+  <h2>深折价市净率给了低成本修复期权，但没有替投资者证明修复</h2>
+  <p>估值按“现价→同业→模型→区间”阅读：先检验现价在本模型下对应什么，再确认同业折价能否解释价格，之后用五分部<span class="g">SOTP</span>（分部加总法）建模，最后用正常化P/E和P/B—ROE交叉检查。所有情景均为分析假设，不是公司指引。</p>
+
+  <div class="grid">
+    <div class="cell"><div class="k">现价</div><div class="v">HK$3.255</div><div class="d"><span>2026-09-04 13:54 香港时间盘中</span></div></div>
+    <div class="cell"><div class="k">悲观价值（三法包络）</div><div class="v">2.24<span class="u">–3.11</span></div><div class="d"><span class="down">较现价 −31%~−5%</span></div></div>
+    <div class="cell"><div class="k">基准价值（三法包络）</div><div class="v">3.42<span class="u">–4.42</span></div><div class="d"><span class="up">较现价 +5%~+36%</span></div></div>
+    <div class="cell"><div class="k">乐观价值（三法包络）</div><div class="v">4.35<span class="u">–6.57</span></div><div class="d"><span class="up">较现价 +34%~+102%</span></div></div>
+    <div class="cell"><div class="k">现价反推可持续ROE</div><div class="v">6.2<span class="u">%</span></div><div class="d"><span>假设权益成本10%、长期增长2%</span></div></div>
+    <div class="cell"><div class="k">一句话判断</div><div class="v">中性偏积极</div><div class="d"><span>有低成本期权，缺利润率确认</span></div></div>
+  </div>
+
+  <h3>第一步 · 现价对应的是“低净资产收益率资产价”</h3>
+  <p>Wind盘中最近十二个月市盈率约9.38倍、最近一期市净率约0.53倍；盘中价除以前文推算每股净资产为0.524倍，与Wind快照交叉吻合。窄窗口查询显示，当前市盈率位于过去一年约38百分位、过去五年约17百分位；市净率分别约在1百分位和0.2百分位。用Gordon恒定增长关系式（把市净率与净资产收益率、权益成本和长期增长连接的模型）反推，在10%权益成本、2%长期增长这组假设下，现价只要求约6.2%的可持续净资产收益率，与FY2025实际值接近，并未嵌入明显修复。</p>
+
+  <h3>第二步 · 把同业比较当压力测试，不当定价公式</h3>
+  <p>上章的横截面与三年轨迹显示，可比公司的业务组合和盈利周期差异过大。模型因此不引用同业中位数，也不把相对折价设成回归目标；后续估值只使用威高自身的分部盈利、现金资产、归属权益和回报率建立边界。</p>
+
+  <h3>第三步 · 先用三年边界校验，再做五分部SOTP</h3>
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>FY2025基期至FY2028三年经营与现金边界｜分析假设，不是发行人指引</caption>
+      <thead><tr><th>驱动</th><th>悲观</th><th>基准</th><th>乐观</th></tr></thead>
+      <tbody>
+        <tr><td>FY2025—28收入CAGR</td><td>0%–2%</td><td>4%–6%</td><td>7%–9%</td></tr>
+        <tr><td>FY2028毛利率</td><td>44%–46%</td><td>47%–49%</td><td>50%–52%</td></tr>
+        <tr><td>FY2027 EPS</td><td>RMB0.30–0.33</td><td>RMB0.38–0.41</td><td>RMB0.44–0.47</td></tr>
+        <tr><td>FY2027经营现金流 / 归母净利润代理</td><td>80%–100%</td><td>100%–120%</td><td>120%–140%</td></tr>
+        <tr><td>FY2028收入 / 毛利</td><td>133.9–142.1 / 58.9–65.4亿元</td><td>150.6–159.5 / 70.8–78.1亿元</td><td>164.0–173.4 / 82.0–90.2亿元</td></tr>
+        <tr><td>FY2027归母 / CFO</td><td>13.7–15.1 / 11.0–15.1亿元</td><td>17.4–18.7 / 17.4–22.5亿元</td><td>20.1–21.5 / 24.1–30.1亿元</td></tr>
+        <tr><td>介入与集采</td><td>价格继续下压、介入不扭亏</td><td>毛利率企稳、介入亏损收窄</td><td>结构改善、介入接近盈亏平衡</td></tr>
+        <tr><td>现金与交易</td><td>扩产/营运资金持续吸收现金</td><td>CAPEX可控；置换影响中性</td><td>新品回报出现；置换每股增厚</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>以上收入CAGR明确以FY2025为基期；FY2027现金转换只是当年情景代理，不是“三年平均”。收入、毛利和现金输出是风险边界，只有FY2027每股盈利机械进入市盈率，不能假装成一套完整三表预测。分部加总法另把H1分部利润机械年化：由于分部利润已包含融资成本，模型先加回融资成本、扣除股份支付和投资物业净中央成本，再按有效税率20.59%形成<span class="g">税后经营利润近似值（NOPAT代理）</span>。其中H1中央去杠杆基础＝融资成本1.171亿元−股份支付0.356亿元−投资物业折旧0.028亿元+租金0.044亿元+未分配其他0.003亿元＝0.834亿元；随后年化、扣税，并施加情景压力系数和倍数。之后估100%合并经营价值，加入折价后的合并净现金39.262亿元和联营账面值17.920亿元，最后全额扣除H1非控股权益账面值17.766亿元。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>SOTP可执行桥｜人民币亿元，末行港元/股；45.706亿股保守总发行分母；利润口径明细已含80%/100%/115%情景压力系数</caption>
+      <thead><tr><th>项目</th><th>计算口径</th><th>悲观</th><th>基准</th><th>乐观</th></tr></thead>
+      <tbody>
+        <tr><td>医疗器械</td><td>年化税后分部利润×80%/100%/115%×4.5/6.5/8.5x</td><td>26.678</td><td>48.168</td><td>72.437</td></tr>
+        <tr><td>骨科</td><td>年化税后分部利润×80%/100%/115%×5.5/8.0/10.0x</td><td>11.414</td><td>20.754</td><td>29.833</td></tr>
+        <tr><td>介入</td><td>年化收入×0/0/0.4x；不施加利润压力系数</td><td>0</td><td>0</td><td>7.707</td></tr>
+        <tr><td>药品包装</td><td>年化税后分部利润×80%/100%/115%×6.0/8.5/10.5x</td><td>36.524</td><td>64.679</td><td>91.882</td></tr>
+        <tr><td>血液管理</td><td>年化税后分部利润×80%/100%/115%×4.5/6.5/8.5x</td><td>3.036</td><td>5.482</td><td>8.244</td></tr>
+        <tr><td>其他</td><td>年化税后分部利润×80%/100%/115%×2.0/3.0/4.0x</td><td>0.417</td><td>0.782</td><td>1.199</td></tr>
+        <tr><td>中央去杠杆调整</td><td>H1基础0.834×2×(1−20.59%)×80%/100%/115%×4.5/6.5/8.5x</td><td>4.767</td><td>8.608</td><td>12.944</td></tr>
+        <tr class="grp"><td>经营组合</td><td>上述已施压明细直接合计；不再二次乘系数</td><td>82.837</td><td>148.472</td><td>224.247</td></tr>
+        <tr><td>加：净现金</td><td>H1净现金39.262×40%/75%/90%</td><td>15.705</td><td>29.446</td><td>35.335</td></tr>
+        <tr><td>加：联营账面值</td><td>H1账面值17.920×40%/75%/90%</td><td>7.168</td><td>13.440</td><td>16.128</td></tr>
+        <tr><td>减：非控股权益</td><td>H1账面值，全额扣除</td><td colspan="3">−17.766（各情景相同）</td></tr>
+        <tr class="grp"><td>归母股权价值</td><td>经营组合+资产−非控股权益</td><td>87.944</td><td>173.592</td><td>257.944</td></tr>
+        <tr class="grp"><td>每股价值</td><td>人民币转港元</td><td>HK$2.24</td><td>HK$4.42</td><td>HK$6.57</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">半年年化忽略季节性，非控股权益用账面值而非公允价值，净现金与联营资产的归母归属也未单独披露；因此SOTP仍是情景工具，不是假精确答案。页面内公式可逐项复算；本地计算账本只作机器断言。</p>
+
+  <h3>第四步 · 正常化P/E、P/B—ROE与区间</h3>
+  <p>Wind一致预期FY2027每股盈利为0.4064元，但只有4家机构，区间0.3551—0.5367元；FY2028只剩2家且净利润预测转为下降。本文把FY2027每股盈利当作截至2026-09-04的“正常化盈利能力”，乘数结果是当前价值，不是2027年目标价，因此不另折现、也不加回未来股息。若改当作一年后目标价并以10%折现，基准市盈率区间会降至约HK$3.22–3.91，现价就在区间内——这是结论的重要时间敏感度。</p>
+
+  <div class="steps">
+    <div class="step"><div class="n">方法 A</div><b>正常化FY2027市盈率</b><p>悲观0.30–0.33元×7–8倍；基准0.38–0.41元×8–9倍；乐观0.44–0.47元×10–11倍，再按1元人民币=1.164港元换算。</p></div>
+    <div class="step"><div class="n">方法 B</div><b>P/B—可持续ROE</b><p>悲观/基准/乐观PB隐含可持续ROE约5.6%–6.0% / 6.4%–7.2% / 7.6%–8.4%。</p></div>
+    <div class="step"><div class="n">反向检验</div><b>市场利润门槛</b><p>现价若给9倍正常化P/E，反推归母净利润约14.20亿元，比2027E小样本共识低23.5%。</p></div>
+    <div class="step"><div class="n">怎么读</div><b>不机械取平均</b><p>SOTP看组合，P/E看利润，P/B看回报。三法包络表达不确定性，不是假精确目标价。</p></div>
+  </div>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>每股价值交叉检查｜港元；均为截至2026-09-04的当前价值口径</caption>
+      <thead><tr><th>情景</th><th>正常化P/E</th><th>P/B—ROE</th><th>SOTP</th><th>主要失败变量</th></tr></thead>
+      <tbody>
+        <tr><td>悲观</td><td>2.44–3.07</td><td>2.80–3.11</td><td>2.24</td><td>毛利率继续下降、介入不扭亏、现金被营运资金吸收</td></tr>
+        <tr><td>基准</td><td>3.54–4.30</td><td>3.42–4.04</td><td>4.42</td><td>毛利率不能企稳或资产置换稀释归属利润</td></tr>
+        <tr><td>乐观</td><td>5.12–6.02</td><td>4.35–4.97</td><td>6.57</td><td>药包/海外增量无法转成利润，介入持续亏损</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>把三档价值放在一把尺上</h3>
+  <div class="rows" aria-label="悲观、现价、基准和乐观情景价值对比">
+    <div class="row"><div class="nm">悲观<span>三法包络中点</span></div><div class="track"><div class="fill alt" style="width:49.0%"></div></div><div class="fig">HK$2.67<span class="down">范围2.24–3.11 · 较现价−31%~−5%</span></div></div>
+    <div class="row"><div class="nm">现价<span>9月4日13:54盘中</span></div><div class="track"><div class="fill soft" style="width:59.6%"></div></div><div class="fig">HK$3.255<span>市场价格</span></div></div>
+    <div class="row"><div class="nm">基准<span>毛利止跌、介入仍保守</span></div><div class="track"><div class="fill" style="width:71.8%"></div></div><div class="fig">HK$3.92<span class="up">范围3.42–4.42 · 较现价+5%~+36%</span></div></div>
+    <div class="row"><div class="nm">乐观<span>分部修复且介入获价值</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$5.46<span class="up">范围4.35–6.57 · 较现价+34%~+102%</span></div></div>
+  </div>
+  <p class="small">条形统一使用各情景三法包络中点，相对乐观中点HK$5.459等比绘制；区间涨跌幅按盘中价计算。价格为时间戳快照，非收市价。</p>
+
+  <div class="plain">
+    <span class="pl">一句话总结</span>
+    <p>当前价格低于基准区间下端，在本模型下所需修复不高；但悲观区间上端也只比现价低约5%，而分部加总法的非控股权益桥显示更深下行情景。因此最准确的判断不是“极度低估”，而是<b>估值先到了，基本面还没到</b>。如果下一期毛利率止跌、介入亏损收窄、长账龄应收回落，基准中枢有兑现基础；若三项都不出现，低市净率仍可能只是长期低净资产收益率的合理价。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="risks-debate">
+  <div class="slabel">风险、投资验证与多空辩论</div>
+  <h2>多方押修复，空方押趋势；裁判是三张下一期报表</h2>
+  <p>争议不在威高是否便宜，而在毛利、应收和介入三条恶化曲线是否接近终点。回购、控股股东增持和净现金提高下行承受力，却不能替代经营证据。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">最强多方证据</div><p>高利润药品包装仍在增长，海外贡献增量，现金转换改善；公司保持净现金，发行人与控股股东也都在买入。</p></div>
+    <div class="find warn"><div class="t">最强空方证据</div><p>五年收入近乎横盘、归母利润复合下降，毛利率持续走低；管理层还预计H2区域集采继续带来价格下行。</p></div>
+    <div class="find warn"><div class="t">资产质量风险</div><p>最老一档应收与信用减值费用同向上升；关联应收集中度只披露到2025末，H1没有更新。</p></div>
+    <div class="find warn"><div class="t">组合与交易风险</div><p>介入持续亏损、商誉高度集中；资产置换会抬高并表规模和非控股权益，最终合并会计、比较重列、合并储备及归属每股影响尚未出现。</p></div>
+  </div>
+
+  <div class="callout"><b>最强反方观点：</b>本报告可能低估了集采后的量增、药包预灌封增长和海外本地化的经营杠杆。若通用器械利润率已在2026上半年触底，Cleaner Vac转入规模化销售，且血液净化交易兑现承诺，当前低于账面值的定价会显得过度悲观。</div>
+
+  <div class="plain">
+    <span class="pl">白话解读</span>
+    <p>多空双方其实都不需要争论宏大故事。下一期只看三张表：<b>损益表</b>看毛利率，<b>分部表</b>看介入亏损，<b>应收账龄表</b>看超过一年余额。三者同时改善，低估值可能是机会；三者继续恶化，低估值就是结果。</p>
+  </div>
+</section>
+
+<section class="reveal on" id="decision">
+  <div class="slabel">最终投资建议与操作方案</div>
+  <h2>中性偏积极：价格有吸引力，确认点仍在未来</h2>
+  <p>基准价值HK$3.42–4.42高于盘中HK$3.255，悲观价值HK$2.24–3.11仍提供明确下行边界。净现金、回购和高利润药包给出保护；五年利润率下行、应收尾部与介入亏损限制置信度。结论为中性偏积极，置信度中等；在没有用户组合约束的情况下，不给仓位或止损指令。</p>
+
+  <div class="finds">
+    <div class="find good"><div class="t">经营确认</div><p>下一期集团毛利率不再同比下降，通用医疗器械分部利润率至少稳定在本期13.4%附近，才支持集采冲击见底。</p></div>
+    <div class="find good"><div class="t">组合确认</div><p>介入分部亏损应低于本期0.677亿元；药品包装利润继续增长，而非只见收入增长。</p></div>
+    <div class="find"><div class="t">现金确认</div><p>超过365天应收余额应低于9.449亿元，全年经营现金流继续覆盖归母净利润，并披露完整现金CAPEX。</p></div>
+    <div class="find warn"><div class="t">逻辑失效</div><p>若毛利率继续下降、介入亏损扩大、长账龄应收再增，或资产置换显著稀释归属利润，基准价值应下修至悲观区间。</p></div>
+  </div>
+
+  <h3>把验证点排在时间线上</h3>
+  <div class="tline">
+    <div class="tstop"><span class="tw">2026-10-16</span><b>中期股息特别股东大会</b><p>确认每股0.0854元是否获批。</p></div>
+    <div class="tstop"><span class="tw">2026-11-20前</span><b>股息支付</b><p>检验分配按计划落地。</p></div>
+    <div class="tstop warn"><span class="tw">资产置换交割后</span><b>重列与非控股权益</b><p>关注最终合并会计、比较重列、合并储备、归属每股影响和承诺兑现。</p></div>
+    <div class="tstop"><span class="tw">FY2026全年</span><b>三张表共同验证</b><p>毛利率、介入亏损与一年以上应收。</p></div>
+    <div class="tstop"><span class="tw">2027年</span><b>产线与新品商业化</b><p>自动给药装置、海外本地化和围术期设备须出现收入与回报。</p></div>
+  </div>
+</section>
+
+<section class="reveal on" id="glossary">
+  <div class="slabel">名词速查 · 快速检索</div>
+  <h2>读懂威高需要的词</h2>
+  <div class="tblscroll">
+    <table class="tbl gloss">
+      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
+      <tbody>
+        <tr><td>集采 / VBP</td><td>带量采购：采购方以承诺采购量换更低中标价；量可能增加，单位毛利仍会下降。</td></tr>
+        <tr><td>归母净利润</td><td>扣除子公司少数股东应占部分后，真正归属于01066股东的利润。</td></tr>
+        <tr><td>公司调整归母净利润</td><td>发行人剔除特殊项目和汇兑影响后的非HKFRS指标；不是审计准则规定的小计。</td></tr>
+        <tr><td>经营利润代理</td><td>本报告用毛利加其他收入/损益，再减信用减值、销售、行政和研发费用重建的指标；公司没有报告经营利润小计。</td></tr>
+        <tr><td>分部利润</td><td>管理层用于资源分配的业务利润，未计若干企业层面收入、汇兑、股份支付、联营/合营等项目。</td></tr>
+        <tr><td>产品口径 / 分部口径</td><td>管理层按产品分类的收入与会计经营分部不是同一张表；不能拿一张表的收入去除另一张表的利润。</td></tr>
+        <tr><td>CAPEX / PPE</td><td>资本开支 / 物业、厂房及设备。前者是形成长期资产的投入，后者是资产负债表中的相关资产。</td></tr>
+        <tr><td>EPS</td><td>每股盈利＝归属于普通股股东的利润÷加权平均股数；估值使用时须同时核对利润口径与股数。</td></tr>
+        <tr><td>CAGR</td><td>复合年增长率，把跨越多年的起点和终点换算成年均增速，不代表每年都按同一速度增长。</td></tr>
+        <tr><td>FY</td><td>财年。威高及本报告同业的完整财年均截至12月31日；H1则指上半年累计六个月。</td></tr>
+        <tr><td>CFO</td><td>经营活动现金流净额，表示经营活动实际流入的现金，仍可能受付款与收款时点影响。</td></tr>
+        <tr><td>FCF代理</td><td>自由现金流近似值。H1缺少完整现金CAPEX，本文只给“部分投资后现金代理”，且不把管理层投资额误当现金流量表项目。</td></tr>
+        <tr><td>经营NWC</td><td>经营营运资金＝存货+应收贸易款−应付贸易款−合约负债；增加通常会占用现金。</td></tr>
+        <tr><td>保理</td><td>企业以出售或质押应收款获得融资；这里的保理应收代表集团向客户提供融资后形成的资产。</td></tr>
+        <tr><td>ECL</td><td>预期信用损失，对未来可能收不回的应收款提前计提的会计费用。</td></tr>
+        <tr><td>ASP</td><td>平均售价。公司没有披露产品级平均售价，因此不能把收入变化精确拆成价格和销量。</td></tr>
+        <tr><td>SOFR</td><td>担保隔夜融资利率，部分美元浮息贷款使用的参考利率。</td></tr>
+        <tr><td>应收周转天数</td><td>用平均应收与收入估算收款速度；本报告约170天，不等于每张医院发票的真实账期。</td></tr>
+        <tr><td>商誉 / CGU</td><td>收购价格超过可辨认净资产形成商誉；减值测试在现金产生单元（CGU）层面进行。</td></tr>
+        <tr><td>库存股</td><td>公司回购后自己持有的股份，没有注销时可再次转让或用于员工激励。</td></tr>
+        <tr><td>非控股权益（NCI）</td><td>合并子公司中不属于上市公司股东的那部分净资产与利润。</td></tr>
+        <tr><td>SOTP</td><td>分部加总估值：分别估每块业务，再加净现金和联营资产，避免用一个倍数抹平差异。</td></tr>
+        <tr><td>NOPAT代理</td><td>税后经营利润近似值；本报告把年化分部利润按H1有效税率扣税，用于SOTP。</td></tr>
+        <tr><td>P/E</td><td>市盈率＝股价÷每股盈利；正常化P/E用一个更可持续的未来利润，而不是直接套本期噪音。</td></tr>
+        <tr><td>P/B</td><td>市净率＝股价÷每股净资产；低于1倍表示股价低于每股账面净资产，可能对应较低资产回报预期或其他风险折价。</td></tr>
+        <tr><td>Gordon关系式</td><td>把市净率与可持续净资产收益率、权益成本和长期增长联系起来的恒定增长估值模型。</td></tr>
+        <tr><td>ROE</td><td>净资产收益率＝归母净利润÷平均归母权益，衡量股东资金一年赚多少。</td></tr>
+        <tr><td>LTM / TTM</td><td>最近十二个月滚动口径；用全年加本期减上年同期，减少只看半年的季节性偏差。估值表中的TTM同样表示最近十二个月。</td></tr>
+        <tr><td>LF</td><td>最近一期披露，表示市净率分母采用最新已披露账面净资产。</td></tr>
+        <tr><td>HKFRS</td><td>香港财务报告准则；“非HKFRS指标”是公司自行调整的补充指标，不是准则规定小计。</td></tr>
+        <tr><td>pp</td><td>百分点。例如毛利率49.7%降到46.3%，下降约3.4个百分点，不是下降3.4%。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal on" id="methods">
+  <div class="slabel">方法与来源</div>
+  <h2>港交所控制会计事实，Wind只控制市场横截面</h2>
+  <p>当前财务、分部、地域、股息、回购、股权与重大交易均以港交所中文披露为控制源；2025年报由德勤审计，2026H1未经审核且只有审核委员会审阅。Wind用于带时间戳的价格、历史估值、同业和小样本一致预期；其跨市场单位异常值均已剔除。公司演示稿中的管线与本地化计划只作为管理层陈述。</p>
+
+  <div class="tblscroll">
+    <table class="tbl">
+      <caption>主要直接来源与证据边界</caption>
+      <thead><tr><th>文件</th><th>用途</th><th>证据边界</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500467_c.pdf">2026H1中期业绩公告</a></td><td>当前损益、分部、现金、资产、地域、研发、股息与回购</td><td>未经审核；审核委员会审阅不等于外部核数师审阅</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500477_c.pdf">2026H1中期股息公告</a></td><td>拟派股息与后续表决、支付日程</td><td>截至证据截止日仍待股东批准，不把拟派股息写成已支付</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0508/2026050800405_c.pdf">2026Q1最新营运表现</a></td><td>Q2期间边界</td><td>只有约数收入和定性分部方向；未经核数师审核或审阅</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042803346_c.pdf">2025年报</a></td><td>经审计五年数据、现金流、子公司、商誉、关联方与激励</td><td>德勤按香港审计准则审计；后续重列控制旧数</td></tr>
+        <tr><td><a href="https://www.hkexnews.hk/listedco/listconews/sehk/2018/0124/LTN20180124021.pdf">Argon收购完成公告</a></td><td>完成日、调整后对价及并表起点</td><td>未披露收购后累计现金回报或投资回报率；无减值不等于回报达标</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0429/2024042902735_c.pdf">2023年报</a></td><td>2021毛利、威高新生共同控制收购与2022重列</td><td>最终重列现金流未覆盖2021；新生独立回报未披露</td></tr>
+        <tr><td><a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0105/2026010502515_c.pdf">威高普瑞资产置换公告</a></td><td>估值、权益、利润承诺、关联关系与审批</td><td>截至截止日未找到交割公告；不进入历史并表</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0327/2026032702242.pdf">关联土地使用权收购</a></td><td>对价、独立评估、资金、回避与仓储用途</td><td>比例低于5%而豁免独立股东批准；经营效益只是管理层预期</td></tr>
+        <tr><td><a href="https://en.weigaogroup.com/uploads/20260825/abf574255faef0d936676e2e01915697.pdf">2026H1业绩演示稿</a></td><td>管线、本地化、介入美元口径、管理层计划及现金图期间错配核查</td><td>未经审核；印尼试产两页表述不一致、介入美元增速无精确率或HKFRS调节桥；现金图的当期经营现金流实为上期约数，故不采信其本期完整自由现金流；会计事实仍由HKEX公告控制</td></tr>
+        <tr><td><a href="https://www.csrc.gov.cn/csrc/c106395/c7655041/content.shtml">中国证监会注册批复</a></td><td>资产置换截至8月26日审批进度</td><td>获注册不等于已完成交割</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0430/2026043004205_c.pdf">关联韩国基金公告</a></td><td>承诺、期限、费用与回避</td><td>规模小；流程披露不独立证明回报</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1128/2025112802945_c.pdf">持续关连交易续期公告</a></td><td>采购/销售/物流/融资服务/存款上限、第三方比价、费率与季度监控</td><td>披露制度不等于披露逐笔样本或实际价差；采购及物流续期的最终批准见下一行</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1219/2025121902022_c.pdf">持续关连交易股东特别大会投票结果</a></td><td>采购及物流支持续期的最终审批状态</td><td>两项议案获独立股东近乎全票批准；威高集团及联系人回避</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0714/2026071400817_c.pdf">控股股东增持公告</a></td><td>数量、金额与持股变化</td><td>信心证据，不是估值底线</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0401/2026040104409_c.pdf">H股全流通申请</a></td><td>拟转换股份及监管边界</td><td>申请不等于转换完成</td></tr>
+        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090103228_c.pdf">8月月报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090301908_c.pdf">9月3日翌日披露</a></td><td>总发行、库存股与截至截止日的在外股数</td><td>估值保守使用全部总发行股份</td></tr>
+        <tr><td>Wind金融数据服务</td><td>威高现价13:54；同业快照13:50—13:56；历史轨迹查询14:45—14:49；另含估值分位、K线与一致预期</td><td>均为2026-09-04香港时间；会计绝对值不用Wind；同业平均ROE与发行人加权口径不混用；预测仅4/4/2家机构</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">电话会发现探针以1066:HK查询返回无匹配记录；发行人IR页也未找到官方问答逐字稿。因此本报告没有把二手纪要当作管理层问答，前瞻内容仅来自发行人演示材料。两份可执行计算账本复核H1/LTM、利润桥、分部利润率、营运资金、股本桥、反向ROE、三年情景与三种估值方法；Wind同业轨迹另有原始值、命令、时间戳和发行人抽查台账。每项发布值均有断言或来源公式。</p>
+</section>
+
+<footer>
+  <p>会计与公司事件证据截止2026-09-03；威高现价快照为2026-09-04 13:54香港时间，同业当前估值窗口为13:50—13:56，历史轨迹查询为14:45—14:49。主要来源：香港交易所中文公告及年报、中国证监会进度、发行人演示材料与Wind金融数据服务。</p>
+  <p>报告控制期间为2026H1；单Q2收入仅为低精度机械残差，单Q2利润、现金流与分部均未披露。SOTP、正常化P/E、P/B—ROE、部分投资后现金代理与验证阈值均为分析推算，不是公司指引。本报告不构成投资建议或交易要约。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
