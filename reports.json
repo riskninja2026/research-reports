@@ -1344,15 +1344,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "收入低个位数增长而毛利继续收缩；拆解集采、介入亏损、应收尾部、海外商誉、资产置换与低市净率下的三法估值边界。",
-      "verdict": "中性偏积极",
-      "verdict_code": "neutral-positive",
+      "hook": "集采与介入亏损压低盈利，现金流改善尚未消除长账龄风险；分部估值检验低价修复与股东归属。",
+      "verdict": "中性",
+      "verdict_code": "neutral",
       "published": "2026-09-04",
       "published_at": "2026-09-04T03:52:06-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "重建单一分部估值与股权桥，更新回购及分红口径，补全五年现金证据并统一为半年比较。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
