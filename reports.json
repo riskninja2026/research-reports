@@ -345,15 +345,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "检验第三方外拓与城市运营扩张，穿透包干制利润率、项目退出、应收回款、关联治理、股息与低估值的现金边界。",
-      "verdict": null,
-      "verdict_code": null,
+      "hook": "规模扩张尚未带动利润与现金改善，低估值仍需回款验证。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
       "published": "2026-08-21",
       "published_at": "2026-08-21T01:09:00-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "classic",
-      "style_hash": "e65895ac71853b897ef3203361e0c8c2",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "按新版研究框架重建财务与估值展示，纳入正式中报新增的现金流和关联交易实际额，并更新收盘行情；历史链接保留，分析期间仍为半年。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
