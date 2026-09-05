@@ -247,15 +247,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "营收三年停滞后重新加速，但扛利润的换成了批发与财富管理：信用卡坏账仍在生成、拨备多提18.5%消化风险；0.9倍净资产+5.1%股息率+35%中期分红明文锁定，中性偏积极。",
+      "hook": "营收停滞三年后重新加速，扛利润的换成批发与财富管理；0.9倍净资产、5.1%股息、35%中期分红托底，中性偏积极。",
       "verdict": "中性偏积极",
       "verdict_code": "neutral-positive",
       "published": "2026-08-29",
       "published_at": "2026-08-29T06:04:25-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "按新版全景尽调规范重写——单一主估值方法、赔率与持有回报按同一期限计算、篇幅压缩；数据截止与原版相同。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
