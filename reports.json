@@ -198,15 +198,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "利润转正已经坐实，但上半年经营现金流回落、回购未压低期末股份；穿透广告增长、服务器投入、游戏管线、股权激励与三情景估值。",
-      "verdict": "接近基准",
-      "verdict_code": null,
+      "hook": "广告带来盈利改善，期后发债回购仍需验证稀释、偿债和现金回报；现价要求超过基准。",
+      "verdict": "负面",
+      "verdict_code": "negative",
       "published": "2026-08-31",
       "published_at": "2026-08-31T12:36:55-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "更新至9月4日行情，补入已定价但待完成的票据、配售与回购条款；重建五年权益回报、可追溯推算及条件摊薄模型。原版未折现的未来价格不再直接与现价比较，倍数改由同业和盈利增长门槛约束；判断同步更新。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
