@@ -160,15 +160,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "二季度拨备前经营利润提速，但信用减值与第二阶段、重组贷款同步抬升；拆解普通股 PB 分母、资本工具和 2026 年末估值边界。",
-      "verdict": "中性偏积极",
-      "verdict_code": "neutral-positive",
+      "hook": "经营杠杆改善，但领先风险信号与有限估值保护仍需验证。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
       "published": "2026-09-01",
       "published_at": "2026-09-01T14:04:35-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "补齐普通股估值、情景赔率与银行监管口径，纠正旧版对批发融资依赖的过强判断；更新行情后，基准含息上行小于熊市损失，判断改为中性偏谨慎（观察）。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {

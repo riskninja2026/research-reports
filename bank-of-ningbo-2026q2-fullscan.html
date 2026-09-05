@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
-<title>宁波银行 2026 年中报与二季度 Fullscan 全景尽调</title>
+<title>宁波银行 2026H1/Q2 Fullscan 全景尽调</title>
 <style>
 :root{
   --paper:#EDEFF2;
@@ -253,25 +253,58 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
 .tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
 .tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
 </style>
 </head>
 <body>
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">宁波银行 002142.SZ ｜ FULLSCAN 全景尽调 ｜ 数据截至 2026.09.01</div>
-    <h1>利润跑得更快，<br>安全垫没有同步变厚</h1>
-    <p class="lede">二季度的表面答案很好：营收、计提信用减值前的经营利润和归母净利润都加速。<b>真正的分水岭不是增长能否继续，而是信用成本抬升究竟是审慎前置，还是零售与批发风险开始穿透。</b>因此，本报告给出“中性偏积极”，但不把稳定的不良率误读为风险已经见顶。</p>
+    <div class="eyebrow">宁波银行 002142.SZ ｜ 全景尽调 ｜ 财务截至 2026.06.30 · 行情截至 2026.09.04 收盘</div>
+    <h1>经营杠杆提速，<br>风险信号也在前移</h1>
+    <p class="lede">推算二季度营收和归母利润增长加快，上半年存款成本也明显下降。<b>更高减值有多少是主动前置、有多少反映风险迁移，现有披露尚不能拆分。</b>现价留出的基准上行小于熊市损失，经营改善还需要风险数据印证。</p>
     <div class="dual">
       <div>
-        <div class="tag">增长侧 ｜ 单季经营动能</div>
-        <div class="big a">提速</div>
-        <div class="cap">拨备前利润增速领先营收，费用效率改善；手续费恢复提供第二条增长腿。</div>
+        <div class="tag">增长侧 · 推算单季拨备前利润</div>
+        <div class="big a">+18.3%</div>
+        <div class="cap">2026Q2 拨备前利润代理 148.21 亿元；由半年累计减一季度累计推算。</div>
       </div>
       <div>
-        <div class="tag">风险侧 ｜ 中报时点信号</div>
-        <div class="big b">前移</div>
-        <div class="cap">第二阶段、逾期九十天以上及重组贷款均快于贷款规模增长，信用成本需要继续验证。</div>
+        <div class="tag">风险侧 · 第二阶段贷款较年初</div>
+        <div class="big b">+29.4%</div>
+        <div class="cap">2026 年 6 月末本集团第二阶段贷款及应计利息 561.92 亿元，明显快于贷款本金增长。</div>
       </div>
     </div>
   </div>
@@ -279,140 +312,111 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
 <main class="wrap">
 
+<div class="callout"><b>修订 2026-09-05：</b>补齐普通股估值、情景赔率与银行监管口径，纠正旧版对批发融资依赖的过强判断；更新行情后，基准含息上行小于熊市损失，判断改为中性偏谨慎（观察）。</div>
+
 <section class="reveal on" id="tldr">
   <div class="slabel">三十秒版本 · 先看结论</div>
-  <h2>好中报，但还不是可以忽略资产质量的中报</h2>
-  <div class="tldr">
-    <ul>
-      <li><b>它是谁：</b>宁波银行是一家以长三角为核心、通过公司贷款、零售金融、资金业务和资管子公司赚钱的跨区域上市城市商业银行；存款成本、信贷质量和资本约束共同决定可持续回报。</li>
-      <li><b>本期成绩：</b>由半年报减去一季报推得，2026Q2 营收 210.66 亿元、拨备前利润代理（计提信用减值前的经营利润）148.21 亿元、归母净利润 83.81 亿元，同比分别增长 12.9%、18.3% 和 13.9%。</li>
-      <li><b>核心矛盾：</b>二季度信用减值损失同比增长 26.3%；中报时点第二阶段贷款（信用风险显著增加、尚未减值）较年初增长 29.4%，重组贷款增长 24.1%，均快于贷款增长 12.5%。</li>
-      <li><b>容易踩的坑：</b>万得最近报告期市净率（PB LF）的分母含优先股和永续债等其他权益工具；用普通股权益并扣除七月已支付末期股息后，当前普通股 PB 约 0.96 倍，而非屏幕上的 0.82 倍。</li>
-      <li><b>结论：</b>以 2026E 每股普通股净资产（BVPS）37.85 元为基准，2026 年末情景为熊市 25.9–28.4 元、基准 36.0–37.9 元、乐观 43.5–51.6 元；现价 34.30 元对应基准空间有限，评级为中性偏积极。</li>
-    </ul>
-  </div>
+  <h2>好业绩是真的，风险见顶还没有证据</h2>
+  <div class="tldr"><ul>
+    <li><b>它是谁：</b>一家以长三角为核心的城市商业银行，靠存贷款利差、资金业务和财富管理赚钱；资本与拨备决定扩表上限。</li>
+    <li><b>本期成绩：</b>推算 2026Q2 营收 210.66 亿元、同比 +12.9%；归母净利润 83.81 亿元、同比 +13.9%。</li>
+    <li><b>核心矛盾：</b>推算 Q2 拨备前利润同比增 18.3%，信用减值总额增 26.3%；六月末第二阶段贷款较年初增 29.4%，快于贷款本金的 12.5%。</li>
+    <li><b>容易踩的坑：</b>Wind 的约 0.82 倍市净率与普通股口径不同；按普通股权益扣除已派末期股息，现价约 0.96 倍，低估程度会明显收窄。</li>
+    <li data-verdict="neutral-cautious"><b>结论：</b>中性偏谨慎（观察）。现价 34.50 元，基准 37.77 元，熊市 25.85 元；领先风险增速回落才支持上调。</li>
+  </ul></div>
 </section>
 
 <section class="reveal on" id="primer">
-  <div class="slabel">入门 · 三分钟看懂银行</div>
-  <h2>银行不是“借低贷高”这么简单，而是用资本承接风险</h2>
-  <p>宁波银行的利润链条可以拆成四步。先吸收存款及批发资金，再投向贷款和金融投资；利差形成<span class="g">净利息收入</span>，代销、托管和资产管理形成手续费；经营费用之后得到<span class="g">拨备前利润</span>；最后扣除<span class="g">信用减值</span>和税费，才是普通股股东真正得到的利润。</p>
+  <div class="slabel">入门 · 银行怎么赚钱</div>
+  <h2>先把钱的来源、去向和损失顺序排清楚</h2>
+  <p>宁波银行先用客户存款和市场资金筹钱，再投向贷款、债券与同业资产。资产收益减去负债成本形成<span class="g">净利息收入</span>，代销、托管和资产管理贡献手续费；扣除运营费用后得到<span class="g">拨备前利润</span>，再扣<span class="g">信用减值总额</span>和税费，才到股东利润。</p>
   <div class="steps">
-    <div class="step"><div class="n">STEP 1</div><b>筹集资金</b><p>客户存款是核心，央行借款与同业负债补充期限和流动性。</p></div>
-    <div class="step"><div class="n">STEP 2</div><b>配置资产</b><p>贷款、债券与同业资产共同创造收益，也共同消耗资本。</p></div>
-    <div class="step"><div class="n">STEP 3</div><b>赚取收入</b><p>净利息收入看数量与息差，非息收入看客户资产和市场活跃度。</p></div>
-    <div class="step"><div class="n">STEP 4</div><b>吸收损失</b><p>拨备先吸收预期信用损失，资本再承担超预期尾部风险。</p></div>
+    <div class="step"><div class="n">环节 1</div><b>客户把钱存进来</b><p>核心存款越稳定、成本越低，利率下行时的缓冲越大。</p></div>
+    <div class="step"><div class="n">环节 2</div><b>银行配置资产</b><p>贷款与投资创造收益，也消耗风险加权资产和资本。</p></div>
+    <div class="step"><div class="n">环节 3</div><b>收入先过费用</b><p>利息与手续费减经营成本，形成未扣信用损失的利润。</p></div>
+    <div class="step"><div class="n">环节 4</div><b>拨备吸收风险</b><p>预期损失先压利润，极端损失最终由普通股资本承担。</p></div>
   </div>
-  <p>读银行报表要把利润表与资产负债表放在一起：<span class="g">净息差</span>决定单位资产收入，<span class="g">不良贷款率</span>只显示已确认问题，而第二阶段、逾期和重组贷款更像前置信号；<span class="g">拨备覆盖率</span>与<span class="g">核心一级资本充足率</span>决定银行能否继续扩表。宁波银行无控股股东，主要股东之间相对均衡，这降低单一控制风险，也提高治理协调的重要性。</p>
+  <p>新读者最容易把存款当成工业企业的债务，把稳定的<span class="g">不良贷款率</span>当成风险见顶。银行还要同时看<span class="g">净息差</span>、第二阶段与逾期贷款、<span class="g">拨备覆盖率</span>以及<span class="g">核心一级资本充足率</span>。本报告把本集团、本公司与监管并表口径逐项标出，避免分母混用。</p>
+  <p>宁波银行在深圳上市，本报告研究这家上市银行及纳入合并报表的子公司，采用中国企业会计准则。半年报和季报未经审计；“推算单季”只表示两个可比累计流量相减，并非公司另行发布的季度表。贷款余额、风险分类与资本充足率描述的是期末状态，半年净息差使用平均资产，均不能照搬相减法。</p>
+  <p>银行业的共同压力是资产重定价与负债重定价不同步：旧贷款到期、利率重置和新增贷款定价会改变资产收益，定期存款到期则逐步释放负债成本改善。宁波银行半年报明确提到有效信贷需求不足与市场利率下行。判断竞争力，要看客户结算资金是否留下、信贷定价能否覆盖损失，以及利润留存能否支持资本消耗。</p>
 </section>
 
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">公司概况与基本信息 · 主营业务结构分析 · 五年财务概览 · 现金流与资本开支分析</div>
-  <h2>五年扩表很快，收入与利润没有掉队；回报率却在下台阶</h2>
-  <p>宁波银行通过总行、区域分支和四类主要子公司服务公司与个人客户，并用资金业务管理流动性及投资组合。五年间贷款和存款的复合增速均高于收入，规模驱动仍然清晰；但净息差持续收窄、净资产收益率回落，说明新增资产的单位回报已不如早期。</p>
-
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="bank">
+  <div class="slabel">基础财务 · 五年地图</div>
+  <h2>规模跑得比收入快，回报率仍在下台阶</h2>
+  <p>宁波银行通过公司、个人、资金和其他四个会计分部经营。五年贷款与存款复合增速都高于收入，利润增速也高于收入；与此同时，净息差与净资产收益率下行。该历史表没有拆分规模、费用和拨备各自的贡献。下列会计数据以深交所和巨潮资讯披露的合并口径为主，监管指标另标监管并表。</p>
   <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">2026H1 营业收入</div><div class="v">414.50<span class="u">亿元</span></div><div class="d"><span class="up">同比 +11.54%</span></div></div>
-    <div class="cell"><div class="k">净利息收入</div><div class="v">293.94<span class="u">亿元</span></div><div class="d"><span class="up">同比 +14.26%</span></div></div>
-    <div class="cell"><div class="k">归母净利润</div><div class="v">165.62<span class="u">亿元</span></div><div class="d"><span class="up">同比 +12.12%</span></div></div>
-    <div class="cell"><div class="k">净息差</div><div class="v">1.70<span class="u">%</span></div><div class="d"><span class="down">同比 −6 个基点</span></div></div>
-    <div class="cell"><div class="k">不良贷款率</div><div class="v">0.76<span class="u">%</span></div><div class="d"><span>较年初持平</span></div></div>
-    <div class="cell"><div class="k">核心一级资本充足率</div><div class="v">9.53<span class="u">%</span></div><div class="d"><span class="up">较年初 +19 个基点</span></div></div>
+    <div class="cell"><div class="k">营业总收入</div><div class="v">414.50<span class="u">亿元</span></div><div class="d"><span class="up">同比 +11.54%</span><span>2026H1 · 本集团</span></div></div>
+    <div class="cell"><div class="k">归母净利润</div><div class="v">165.62<span class="u">亿元</span></div><div class="d"><span class="up">同比 +12.12%</span><span>未经审计</span></div></div>
+    <div class="cell"><div class="k">净息差（NIM）</div><div class="v">1.70<span class="u">%</span></div><div class="d"><span class="down">同比 −6 个基点</span><span>年化</span></div></div>
+    <div class="cell"><div class="k">不良贷款率</div><div class="v">0.76<span class="u">%</span></div><div class="d"><span>较年初持平</span><span>本集团监管统计口径</span></div></div>
+    <div class="cell"><div class="k">拨备覆盖率</div><div class="v">373.35<span class="u">%</span></div><div class="d"><span>较年初 +0.19 个百分点</span><span>本集团监管统计口径</span></div></div>
+    <div class="cell"><div class="k">核心一级资本充足率</div><div class="v">9.53<span class="u">%</span></div><div class="d"><span>监管并表 · 信用风险权重法</span><span>单体 8.89%</span></div></div>
   </div>
 
-  <div class="tblscroll"><table class="tbl">
-    <caption>最新期利润与回报桥；2026H1 对 2025H1；金额单位：亿元</caption>
-    <thead><tr><th>指标</th><th>2026H1</th><th>2025H1</th><th>变化</th><th>口径</th></tr></thead>
+  <div class="tblscroll"><table class="tbl" data-financials="history">
+    <caption>2021–2025 年本集团历史 · 中国企业会计准则 · 金额单位：亿元，每股为元；年度报告经审计。资本充足率自 2024 年起按新办法计量，前后不完全可比</caption>
+    <thead><tr><th>项目</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>四年复合增速</th></tr></thead>
     <tbody>
-      <tr><td>手续费及佣金净收入</td><td>43.17</td><td>28.05</td><td>+53.90%</td><td>报表披露</td></tr>
-      <tr><td>拨备前利润代理</td><td>297.40</td><td>254.69</td><td>+16.77%</td><td>营业利润加信用减值</td></tr>
-      <tr><td>营业利润</td><td>181.63</td><td>161.17</td><td>+12.69%</td><td>报表披露</td></tr>
-      <tr><td>信用减值损失</td><td>115.77</td><td>93.52</td><td>+23.79%</td><td>利润表费用，不等于现金损失</td></tr>
-      <tr><td>基本每股收益</td><td>2.51 元</td><td>2.24 元</td><td>+12.05%</td><td>证监会规则第 9 号</td></tr>
-      <tr><td>加权平均净资产收益率</td><td>14.24%</td><td>13.80%</td><td>+0.44 个百分点</td><td>年化披露值</td></tr>
+      <tr><td>营业收入</td><td>527.74</td><td>578.79</td><td>615.85</td><td>666.31</td><td>719.69</td><td>8.06%</td></tr>
+      <tr><td>营业利润</td><td>204.78</td><td>253.92</td><td>280.28</td><td>315.48</td><td>323.41</td><td>—</td></tr>
+      <tr><td>归母净利润</td><td>195.46</td><td>230.75</td><td>255.35</td><td>271.27</td><td>293.33</td><td>10.68%</td></tr>
+      <tr><td>基本每股收益（EPS）</td><td>3.13</td><td>3.38</td><td>3.75</td><td>3.95</td><td>4.29</td><td>8.20%</td></tr>
+      <tr><td>普通股每股净资产</td><td>20.37</td><td>23.14</td><td>26.71</td><td>31.55</td><td>33.69</td><td>—</td></tr>
+      <tr><td>总资产</td><td>20,155.48</td><td>23,660.97</td><td>27,116.62</td><td>31,252.32</td><td>36,286.71</td><td>—</td></tr>
+      <tr><td>加权平均净资产收益率</td><td>16.64%</td><td>15.56%</td><td>15.08%</td><td>13.59%</td><td>13.11%</td><td>不适用</td></tr>
+      <tr><td>净息差（NIM）</td><td>2.21%</td><td>2.02%</td><td>1.88%</td><td>1.86%</td><td>1.74%</td><td>不适用</td></tr>
+      <tr><td>不良贷款率</td><td>0.77%</td><td>0.75%</td><td>0.76%</td><td>0.76%</td><td>0.76%</td><td>不适用</td></tr>
+      <tr><td>拨备覆盖率</td><td>525.52%</td><td>504.90%</td><td>461.04%</td><td>389.35%</td><td>373.16%</td><td>不适用</td></tr>
+      <tr><td>核心一级资本充足率</td><td>10.16%</td><td>9.75%</td><td>9.64%</td><td>9.84%</td><td>9.34%</td><td>不适用</td></tr>
+      <tr><td>客户贷款本金</td><td>8,627.09</td><td>10,460.02</td><td>12,527.18</td><td>14,760.63</td><td>17,333.14</td><td>19.06%</td></tr>
+      <tr><td>客户存款本金</td><td>10,528.87</td><td>12,970.85</td><td>15,662.98</td><td>18,363.45</td><td>20,248.83</td><td>17.76%</td></tr>
+      <tr><td>经营现金流</td><td colspan="6">不作为银行绩效代理：存贷款变化会机械放大现金流波动</td></tr>
+      <tr><td>资本开支</td><td colspan="6">不作为主要再投资指标：银行的核心再投资是受资本约束的生息资产扩张</td></tr>
+      <tr><td>自由现金流代理</td><td colspan="6">不适用：本报告改用普通股回报、信用成本、流动性与资本充足率</td></tr>
     </tbody>
   </table></div>
 
-  <div class="tblscroll"><table class="tbl">
-    <caption>最新资产负债表；2026-06-30 对 2025-12-31；金额单位：亿元</caption>
-    <thead><tr><th>指标</th><th>六月末</th><th>年初</th><th>变化</th><th>投资含义</th></tr></thead>
-    <tbody>
-      <tr><td>总资产</td><td>39,482.23</td><td>36,286.71</td><td>+8.81%</td><td>半年扩表速度较快</td></tr>
-      <tr><td>贷款本金</td><td>19,499.58</td><td>17,333.14</td><td>+12.50%</td><td>主要风险资产增长</td></tr>
-      <tr><td>存款本金</td><td>22,947.60</td><td>20,248.83</td><td>+13.33%</td><td>期末存款快于贷款</td></tr>
-      <tr><td>普通股 BVPS</td><td>36.76 元</td><td>33.69 元</td><td>+9.11%</td><td>尚未扣七月末期股息</td></tr>
-      <tr><td>拨备覆盖率</td><td>373.35%</td><td>373.16%</td><td>+0.19 个百分点</td><td>账面缓冲基本稳定</td></tr>
-    </tbody>
-  </table></div>
-
-  <div class="plain"><span class="pl">白话解读</span>
-    <p><b>五年故事：</b>2021–2025 年，营收和归母净利润年复合增速约为 8.1% 和 10.7%，贷款复合增速约 19.1%。资产跑得比收入快，靠的是规模、成本控制和拨备，而不是息差扩张。</p>
-    <p><b>本期变化：</b>2026H1 利润增长略快于收入，稳定的不良率与较厚拨备仍提供缓冲；但这是一张六月末资产负债表，不能直接叫作“二季度末新增风险已消失”。</p>
+  <div class="cols" role="img" aria-label="五年营业收入与归母净利润趋势，数值见上方表格">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:73.33%"></div><div class="bar np" style="height:27.16%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:80.42%"></div><div class="bar np" style="height:32.06%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:85.57%"></div><div class="bar np" style="height:35.48%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:92.58%"></div><div class="bar np" style="height:37.69%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:40.76%"></div></div></div>
   </div>
+  <div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div>
+  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
 
-  <h3>五年收入与归母净利润</h3>
-  <div class="cols">
-    <div class="col"><div class="bars"><div class="bar rev" style="height:73.3%"></div><div class="bar np" style="height:27.2%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:80.4%"></div><div class="bar np" style="height:32.1%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:85.6%"></div><div class="bar np" style="height:35.5%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:92.6%"></div><div class="bar np" style="height:37.7%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:40.8%"></div></div></div>
-  </div>
-  <div class="collabels">
-    <div><b>2021</b>527.74 / 195.46</div><div><b>2022</b>578.79 / 230.75</div><div><b>2023</b>615.85 / 255.35</div><div><b>2024</b>666.31 / 271.27</div><div><b>2025</b>719.69 / 293.33</div>
-  </div>
-  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span><span>单位：亿元；柱高以 2025 年营收为 100</span></div>
-
-  <div class="tblscroll">
-    <table class="tbl" data-financials="history">
-      <caption>完整年度合并历史；金额单位：亿元，比例与每股指标除外</caption>
-      <thead><tr><th>指标</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2021–25 复合增速 CAGR</th></tr></thead>
-      <tbody>
-        <tr><td>营业收入</td><td>527.74</td><td>578.79</td><td>615.85</td><td>666.31</td><td>719.69</td><td>8.06%</td></tr>
-        <tr><td>归母净利润</td><td>195.46</td><td>230.75</td><td>255.35</td><td>271.27</td><td>293.33</td><td>10.68%</td></tr>
-        <tr><td>基本每股收益 EPS（元）</td><td>3.13</td><td>3.38</td><td>3.75</td><td>3.95</td><td>4.29</td><td>8.20%</td></tr>
-        <tr><td>加权平均净资产收益率 ROE</td><td>16.64%</td><td>15.56%</td><td>15.08%</td><td>13.59%</td><td>13.11%</td><td>不适用</td></tr>
-        <tr><td>净息差 NIM</td><td>2.21%</td><td>2.02%</td><td>1.88%</td><td>1.86%</td><td>1.74%</td><td>不适用</td></tr>
-        <tr><td>总资产</td><td>20,155.48</td><td>23,660.97</td><td>27,116.62</td><td>31,252.32</td><td>36,286.71</td><td>15.83%</td></tr>
-        <tr><td>贷款本金</td><td>8,627.09</td><td>10,460.02</td><td>12,527.18</td><td>14,760.63</td><td>17,333.14</td><td>19.06%</td></tr>
-        <tr><td>存款本金</td><td>10,528.87</td><td>12,970.85</td><td>15,662.98</td><td>18,363.45</td><td>20,248.83</td><td>17.76%</td></tr>
-        <tr><td>不良贷款率</td><td>0.77%</td><td>0.75%</td><td>0.76%</td><td>0.76%</td><td>0.76%</td><td>不适用</td></tr>
-        <tr><td>拨备覆盖率</td><td>525.52%</td><td>504.90%</td><td>461.04%</td><td>389.35%</td><td>373.16%</td><td>不适用</td></tr>
-        <tr><td>核心一级资本充足率</td><td>10.16%</td><td>9.75%</td><td>9.64%</td><td>9.84%</td><td>9.34%</td><td>不适用</td></tr>
-        <tr><td>经营现金流</td><td colspan="6">不作为银行绩效代理：存贷款增长会机械放大现金流波动</td></tr>
-        <tr><td>资本开支</td><td colspan="6">不具决策意义：银行的主要再投资是受资本约束的生息资产扩张</td></tr>
-        <tr><td>自由现金流／所有者收益</td><td colspan="6">不适用：以普通股回报、资本充足率和信用成本框架替代</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>会计分部：公司业务仍最大，个人业务的风险消耗最重</h3>
+  <h3>分部结构：公司业务是增量主引擎，个人业务消耗更多减值</h3>
   <div data-financials="segments">
-    <div class="stacks">
-      <div class="stack"><div class="cap">2025H1 营收结构</div><div class="stackbar"><div class="seg p" style="width:42.24%">42.2</div><div class="seg q" style="width:27.81%">27.8</div><div class="seg r" style="width:29.21%">29.2</div><div class="seg m" style="width:0.74%;background:#2C6A57"></div></div></div>
-      <div class="stack"><div class="cap">2026H1 营收结构</div><div class="stackbar"><div class="seg p" style="width:43.02%">43.0</div><div class="seg q" style="width:26.53%">26.5</div><div class="seg r" style="width:29.48%">29.5</div><div class="seg m" style="width:0.97%;background:#2C6A57"></div></div></div>
+    <div class="stacks" role="img" aria-label="2025H1与2026H1会计分部营业收入结构">
+      <div class="stack"><div class="cap">2025H1 营收结构</div><div class="stackbar"><div class="seg p" style="width:42.24%">42.2%</div><div class="seg q" style="width:27.81%">27.8%</div><div class="seg r" style="width:29.95%">30.0%</div></div></div>
+      <div class="stack"><div class="cap">2026H1 营收结构</div><div class="stackbar"><div class="seg p" style="width:43.02%">43.0%</div><div class="seg q" style="width:26.53%">26.5%</div><div class="seg r" style="width:30.45%">30.5%</div></div></div>
     </div>
-    <div class="legend"><span><i class="p"></i>公司业务</span><span><i class="q"></i>个人业务</span><span><i class="r"></i>资金业务</span><span><i class="m"></i>其他</span></div>
+    <div class="legend"><span><i class="p"></i>公司业务</span><span><i class="q"></i>个人业务</span><span><i class="r"></i>资金及其他</span></div>
     <div class="tblscroll"><table class="tbl">
-      <caption>会计分部同比；金额单位：亿元</caption>
-      <thead><tr><th>分部</th><th>2026H1 收入</th><th>收入同比</th><th>2026H1 利润总额</th><th>利润同比</th><th>信用减值</th><th>判断</th></tr></thead>
+      <caption>2026H1 会计分部 · 本集团 · 金额单位：亿元；分部内部转移定价会影响横向比较</caption>
+      <thead><tr><th>分部</th><th>营业收入</th><th>同比</th><th>减值前营业利润</th><th>减值损失</th><th>分部利润</th></tr></thead>
       <tbody>
-        <tr><td>公司业务</td><td>178.33</td><td>+13.60%</td><td>87.31</td><td>+16.83%</td><td>45.69</td><td>规模与利润主引擎</td></tr>
-        <tr><td>个人业务</td><td>109.97</td><td>+6.42%</td><td>13.18</td><td>+6.12%</td><td>66.18</td><td>非息恢复，风险消耗高</td></tr>
-        <tr><td>资金业务</td><td>122.18</td><td>+12.56%</td><td>78.52</td><td>+6.98%</td><td>3.80</td><td>利息收入强，市场相关</td></tr>
-        <tr><td>其他业务</td><td>4.02</td><td>+47.25%</td><td>2.22</td><td>由亏转盈</td><td>0.10</td><td>体量有限</td></tr>
+        <tr><td>公司业务</td><td>178.33</td><td>+13.60%</td><td>132.99</td><td>45.69</td><td>87.31 亿元</td></tr>
+        <tr><td>个人业务</td><td>109.97</td><td>+6.42%</td><td>79.36</td><td>66.18</td><td>13.18</td></tr>
+        <tr><td>资金业务</td><td>122.18</td><td>+12.56%</td><td>82.32</td><td>3.80</td><td>78.52</td></tr>
+        <tr><td>其他业务</td><td>4.02</td><td>+47.25%</td><td>2.73</td><td>0.10</td><td>2.22</td></tr>
       </tbody>
     </table></div>
   </div>
-  <p class="small">历史数据来自公司各年度报告；CAGR =（2025 数值 ÷ 2021 数值）^(1/4)−1。2024 年起资本充足率改按《商业银行资本管理办法》计量，2021–2023 与 2024–2025 并非完全同方法口径。分部采用内部资金转移定价，分部负债口径出现可比断点，因此只比较收入、利润与减值，不把分部负债变化当成经营结论。</p>
+  <p>分部利润是扣减值、计入营业外收支后的税前利润，尚未扣集团所得税及少数股东损益，不能与归母净利润直接相比。公司业务的收入与利润贡献最大；个人业务承担较多减值；资金业务兼有净利息和市场相关收益。分部间资金转移定价将存款价值与贷款收益分配到不同业务，单看分部利润率不能推断产品的独立回报。</p>
+  <p>子公司又是另一层划分。永赢基金、永赢金租、宁银理财与宁银消金分别覆盖基金管理、租赁、理财和消费金融，其业绩已按合并规则进入集团，不能再与会计分部加总。私人银行资产也是财富管理资产中的一部分。阅读业务规模时，必须先分清资产由银行承担信用风险，还是由客户持有、银行赚管理和服务费。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>五年里贷款约翻倍，收入增长较慢，净息差和回报率也下降。个人业务减值明显高于扣减值后利润。下一步要看新增业务能否在承担风险成本之后，仍然提升股东回报。</p></div>
+  <p class="small">四年复合增速按 2021 至 2025 首尾值计算。五年柱高统一除以 2025 年营业收入 719.69 亿元；资本比率 2021–2023 与 2024–2025 存在计量办法断点。银行不使用工业企业自由现金流框架。</p>
 </section>
 
-<section class="reveal on" id="earnings">
-  <div class="slabel">投资逻辑与核心增长驱动 · 盈利能力深度分析</div>
-  <h2>二季度经营效率改善，但多赚的一元利润付出了更高拨备</h2>
-  <p>公司只披露半年累计数据，没有单独公布第二季度利润表。下表中的单季流量全部由“2026H1 减 2026Q1”推得，同比基数同理；任何资产负债表、净息差或资产质量指标都不作单季倒算。</p>
+<section class="reveal on" id="profit">
+  <div class="slabel">盈利 · 二季度</div>
+  <h2>经营效率变好，但新增收入约一半被更高减值吸收</h2>
+  <p>公司没有单独披露第二季度利润表。以下单季流量均由半年累计减一季度累计推算，去年同期也采用同一方法；任何资产负债表、净息差、贷款分类、资本或分部指标都不作单季倒算。</p>
   <div class="tblscroll"><table class="tbl">
-    <caption>单季流量推算；金额单位：亿元；星号表示派生值</caption>
+    <caption>推算单季流量 · 本集团 · 金额单位：亿元；星号为 H1 减 Q1</caption>
     <thead><tr><th>项目</th><th>2026H1</th><th>2026Q1</th><th>2026Q2*</th><th>2025Q2*</th><th>单季同比</th></tr></thead>
     <tbody>
       <tr><td>营业收入</td><td>414.50</td><td>203.84</td><td>210.66</td><td>186.65</td><td class="up">+12.9%</td></tr>
@@ -420,353 +424,294 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       <tr><td>手续费及佣金净收入</td><td>43.17</td><td>25.75</td><td>17.42</td><td>13.88</td><td class="up">+25.5%</td></tr>
       <tr><td>其他非息收入</td><td>77.39</td><td>31.21</td><td>46.18</td><td>43.86</td><td class="up">+5.3%</td></tr>
       <tr><td>拨备前利润代理</td><td>297.40</td><td>149.19</td><td>148.21</td><td>125.32</td><td class="up">+18.3%</td></tr>
-      <tr><td>信用减值损失</td><td>115.77</td><td>60.06</td><td>55.71</td><td>44.11</td><td class="down">+26.3%</td></tr>
+      <tr><td>信用减值总额</td><td>115.77</td><td>60.06</td><td>55.71</td><td>44.11</td><td class="down">+26.3%</td></tr>
       <tr><td>归母净利润</td><td>165.62</td><td>81.81</td><td>83.81</td><td>73.55</td><td class="up">+13.9%</td></tr>
     </tbody>
   </table></div>
-
-  <h3>二季度归母利润同比增量桥</h3>
-  <div class="wfall">
-    <div class="wrow"><div class="nm">2025Q2 归母利润<span>桥接起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:87.8%"></div></div><div class="fig">73.55</div></div>
-    <div class="wrow"><div class="nm">收入增加<span>规模、息差与非息合计</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:40%"></div></div><div class="fig">+24.01</div></div>
-    <div class="wrow"><div class="nm">拨备前成本<span>税金、管理费、其他业务成本</span></div><div class="wtrack"><div class="wbar down" style="left:48.1%;width:1.9%"></div></div><div class="fig">−1.12</div></div>
-    <div class="wrow"><div class="nm">信用减值<span>风险成本上升</span></div><div class="wtrack"><div class="wbar down" style="left:30.7%;width:19.3%"></div></div><div class="fig">−11.60</div></div>
-    <div class="wrow"><div class="nm">税费与少数股东等<span>利润表余项</span></div><div class="wtrack"><div class="wbar down" style="left:48.3%;width:1.7%"></div></div><div class="fig">−1.03</div></div>
-    <div class="wrow"><div class="nm">2026Q2 归母利润<span>桥接终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:100%"></div></div><div class="fig">83.81</div></div>
+  <h3>推算二季度归母利润同比增量桥</h3>
+  <div class="wfall" role="img" aria-label="推算2026Q2相对2025Q2归母净利润变化桥">
+    <div class="wrow"><div class="nm">2025Q2 归母利润<span>桥接起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:75.39%"></div></div><div class="fig">73.55</div></div>
+    <div class="wrow"><div class="nm">营业收入增加<span>净利息与非息合计</span></div><div class="wtrack"><div class="wbar up" style="left:75.39%;width:24.61%"></div></div><div class="fig">+24.01</div></div>
+    <div class="wrow"><div class="nm">拨备前成本增加<span>税金、管理费及其他</span></div><div class="wtrack"><div class="wbar down" style="left:98.85%;width:1.15%"></div></div><div class="fig">−1.12</div></div>
+    <div class="wrow"><div class="nm">信用减值增加<span>总额，不是贷款信用成本</span></div><div class="wtrack"><div class="wbar down" style="left:86.96%;width:11.89%"></div></div><div class="fig">−11.60</div></div>
+    <div class="wrow"><div class="nm">税费与少数股东等<span>利润表余项</span></div><div class="wtrack"><div class="wbar down" style="left:85.91%;width:1.06%"></div></div><div class="fig">−1.03</div></div>
+    <div class="wrow"><div class="nm">2026Q2 归母利润<span>桥接终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:85.91%"></div></div><div class="fig">83.81</div></div>
   </div>
-  <p class="small">拨备前利润代理 = 营业收入 − 税金及附加 − 业务及管理费 − 其他业务成本。桥图为报表项目机械桥接，不把信用减值变化解释为已实现损失。</p>
-
-  <div class="plain"><span class="pl">每 100 元收入发生了什么</span>
-    <p>2026Q2 每 100 元收入先形成约 70.36 元拨备前利润代理，利润表再扣除 26.45 元信用减值，最终留下 39.78 元归母利润。去年同期三项分别约为 67.14 元、23.63 元和 39.41 元：经营杠杆改善几乎被更高的风险成本抵销。信用减值是预期损失计量，不等于当期已经发生同额现金损失。</p>
-  </div>
-
-  <h3>公司将手续费恢复主要归因于资产管理，不宜线性外推</h3>
-  <div class="tblscroll"><table class="tbl">
-    <caption>2026H1 手续费拆分；金额单位：亿元</caption>
-    <thead><tr><th>项目</th><th>本期</th><th>上年同期</th><th>同比</th><th>解释</th></tr></thead>
-    <tbody>
-      <tr><td>手续费及佣金收入</td><td>58.73</td><td>37.19</td><td>+57.9%</td><td>公司解释为财富代销与资管增长</td></tr>
-      <tr><td>手续费及佣金支出</td><td>15.56</td><td>9.14</td><td>+70.2%</td><td>渠道与业务成本同步上升</td></tr>
-      <tr><td>资产管理费收入</td><td>29.94</td><td>16.04</td><td>+86.7%</td><td>约贡献毛手续费增量的 64.5%</td></tr>
-    </tbody>
-  </table></div>
-  <p>这条增长腿具备客户与产品基础，却明显受资本市场、产品结构和赎回行为影响。判断“非息增长是否结构化”的正确方法，是观察资管规模、非货基金占比与费率能否共同维持，而不是把一个强半年直接年化。</p>
+  <p>收入改善有两层含义。净利息收入增长体现资产规模与单位利差的合力，半年净息差下降表明增长还不是来自单位资产更赚钱。非息收入则要区分净手续费和其他非息：前者受客户资产规模、产品销售和渠道成本共同影响；后者含投资、公允价值与汇兑等项目，其单季回升不宜直接当成稳定的收费能力。</p>
+  <p>手续费收入与净收入也不相同。公司在半年报把手续费支出增加主要归因于渠道相关支出；因此观察财富增长时，既要看业务总量，也要看扣除渠道费用后留下多少。当前资料支持“收入增长带来经营杠杆”，尚不足以把全部非息改善归为持久的竞争优势。后续若收入放缓而费用和减值仍保持增速，拨备前利润领先归母利润的格局可能反转。</p>
+  <div class="plain"><span class="pl">为什么利润没有跟上拨备前增长？</span><p>二季度多出 24.01 亿元收入，拨备前成本只多 1.12 亿元；信用减值总额则多了 11.60 亿元，吸收约一半收入增量。接下来需要收入增长延续，且减值增速放缓，利润才能更充分受益。</p></div>
+  <p class="small">拨备前利润代理为营业收入减税金及附加、业务及管理费和其他业务成本。桥图各项来自两期推算值之差，终点与归母净利润增量 10.26 亿元一致。</p>
 </section>
 
-<section class="reveal on" id="risk-capital">
-  <div class="slabel">资产负债表与财务稳健性 · 风险因素与预警信号 · 银行专项</div>
-  <h2>不良率稳定是结果，第二阶段与重组贷款才是下一步</h2>
-  <p>六月末不良贷款率仍处低位，拨备覆盖充足，不能据此断言风险失控。关注类占比下降，但第二阶段、逾期九十天以上和重组贷款上升更快，且个人业务承担了最大的分部减值。更合理的判断是：安全垫仍厚，局部消耗速度正在加快。</p>
+<section class="reveal on" id="quality">
+  <div class="slabel">资产质量 · 资本</div>
+  <h2>不良率没动，领先指标和组合迁移已经动了</h2>
+  <p>六月末总不良率持平，不能单独回答风险方向：公司贷款增长改变了组合权重，第二阶段和重组贷款余额的增速明显更快，逾期占比则持平。负债重定价与资本改善提供缓冲，资产质量表仍需逐项读，不能把所有信号归为同一个方向。</p>
   <div class="tblscroll"><table class="tbl">
-    <caption>2026 年 6 月末资产质量；金额单位：百万元</caption>
-    <thead><tr><th>指标</th><th>余额</th><th>占比</th><th>较年初</th><th>读法</th></tr></thead>
+    <caption>资产质量信号 · 2026-06-30 对 2025-12-31；金额单位：亿元。均为本集团；五级分类按监管统计，阶段划分按会计附注</caption>
+    <thead><tr><th>指标</th><th>六月末</th><th>年初</th><th>变化</th><th>怎么读</th></tr></thead>
     <tbody>
-      <tr><td>不良贷款</td><td>14,794</td><td>0.76%</td><td>余额 +12.53%</td><td>比例稳定</td></tr>
-      <tr><td>关注类贷款</td><td>20,232</td><td>1.04%</td><td>余额 +2.59%；占比 −0.10 个百分点</td><td>分类压力暂未扩散</td></tr>
-      <tr><td>第二阶段贷款及利息</td><td>56,192</td><td>2.87%</td><td>+29.38%</td><td>增速明显更快</td></tr>
-      <tr><td>逾期贷款</td><td>16,799</td><td>0.86%</td><td>+12.20%</td><td>与扩表接近</td></tr>
-      <tr><td>逾期九十天以上</td><td>11,931</td><td>0.61%</td><td>+17.74%</td><td>迁徙压力上升</td></tr>
-      <tr><td>重组贷款</td><td>7,120</td><td>0.37%</td><td>+24.13%</td><td>需跟踪后续表现</td></tr>
-      <tr><td>贷款损失准备</td><td>55,235</td><td>覆盖率 373.35%</td><td>+12.59%</td><td>缓冲仍充足</td></tr>
+      <tr><td>不良贷款率</td><td>0.76%</td><td>0.76%</td><td>持平</td><td>存量结果稳定</td></tr>
+      <tr><td>关注类贷款</td><td>202.32／1.04%</td><td>197.21／1.14%</td><td>余额 +2.6%</td><td>占比改善</td></tr>
+      <tr><td>第二阶段贷款及利息</td><td>561.92</td><td>434.32</td><td class="down">+29.4%</td><td>信用风险显著增加，尚未减值</td></tr>
+      <tr><td>逾期贷款</td><td>167.99／0.86%</td><td>149.73／0.86%</td><td class="down">+12.2%</td><td>比例被贷款增长稀释</td></tr>
+      <tr><td>逾期九十天以上</td><td>119.31／0.61%</td><td>101.33</td><td class="down">+17.7%</td><td>按期限表推算余额</td></tr>
+      <tr><td>重组贷款</td><td>71.20／0.37%</td><td>57.36／0.33%</td><td class="down">+24.1%</td><td>观察纾困客户迁移</td></tr>
+      <tr><td>新生成不良率</td><td>未披露</td><td>未披露</td><td>不可比</td><td>不用品质余额增长代替</td></tr>
     </tbody>
   </table></div>
-  <p class="small">第二阶段余额包含应计利息，分母与贷款本金口径不同；逾期九十天以上占贷款本金约为机械计算值。关注、逾期、第二阶段、重组与不良并非互斥集合，不得相加。</p>
-
-  <h3>息差：负债降价有效，但资产端重定价尚未结束</h3>
   <div class="tblscroll"><table class="tbl">
-    <caption>2026H1 息差与资金结构线索</caption>
-    <thead><tr><th>观察项</th><th>变化</th><th>含义</th></tr></thead>
+    <caption>负债与资本缓冲 · 2026H1／2026-06-30；金额单位：亿元，比例除外</caption>
+    <thead><tr><th>指标</th><th>本期</th><th>比较基数</th><th>变化</th><th>口径与含义</th></tr></thead>
     <tbody>
-      <tr><td>生息资产收益率</td><td>同比 −45bp</td><td>利率下行与贷款重定价压低收入端</td></tr>
-      <tr><td>贷款收益率</td><td>同比 −52bp</td><td>核心资产收益压力更强</td></tr>
-      <tr><td>存款付息率</td><td>同比 −39bp</td><td>负债降价部分对冲</td></tr>
-      <tr><td>活期存款占比</td><td>35.57%，较年初 +1.14 个百分点</td><td>结构改善但仍需持续</td></tr>
-      <tr><td>日均客户存款</td><td>同比 +6.7%</td><td>低于贷款扩张所需</td></tr>
-      <tr><td>日均同业资金</td><td>同比 +57.6%</td><td>批发融资补位</td></tr>
-      <tr><td>日均央行借款</td><td>同比 +251.6%</td><td>资金来源更依赖政策工具</td></tr>
+      <tr><td>日均贷款</td><td>18,817.70</td><td>16,190.01</td><td>+16.23%</td><td>本集团利率分析</td></tr>
+      <tr><td>日均客户存款</td><td>21,655.47</td><td>20,291.64</td><td>+6.72%</td><td>平均增速落后贷款</td></tr>
+      <tr><td>客户存款成本率</td><td>1.32%</td><td>1.71%</td><td class="up">−0.39 个百分点</td><td>负债重定价兑现</td></tr>
+      <tr><td>活期存款占比</td><td>35.57%</td><td>34.43%</td><td class="up">+1.14 个百分点</td><td>期末结构改善</td></tr>
+      <tr><td>核心一级资本充足率</td><td>9.53%</td><td>9.34%</td><td class="up">+0.19 个百分点</td><td>监管并表；信用风险权重法</td></tr>
+      <tr><td>流动性覆盖率</td><td>203.48%</td><td>144.79%</td><td class="up">+58.69 个百分点</td><td>监管并表流动性缓冲</td></tr>
+      <tr><td>贷款信用成本代理</td><td>1.15%</td><td>未披露可比值</td><td>推算</td><td>H1 贷款减值年化除平均贷款</td></tr>
     </tbody>
   </table></div>
-  <blockquote class="quote">负债降价已对冲一部分资产收益压力；目前还没有证据证明息差已经见底。</blockquote>
-
-  <h3>资本与流动性：够用，但高增长不是免费的</h3>
-  <div class="grid">
-    <div class="cell"><div class="k">核心一级资本净额</div><div class="v">2,399.29<span class="u">亿元</span></div><div class="d"><span>普通股与留存收益为主</span></div></div>
-    <div class="cell"><div class="k">风险加权资产</div><div class="v">25,164.13<span class="u">亿元</span></div><div class="d"><span>资本消耗基数</span></div></div>
-    <div class="cell"><div class="k">一级资本充足率</div><div class="v">11.16<span class="u">%</span></div><div class="d"><span>监管缓冲 2.41 个百分点</span></div></div>
-    <div class="cell"><div class="k">资本充足率</div><div class="v">14.64<span class="u">%</span></div><div class="d"><span>监管缓冲 3.89 个百分点</span></div></div>
-    <div class="cell"><div class="k">流动性覆盖率</div><div class="v">203.48<span class="u">%</span></div><div class="d"><span>短期流动性充足</span></div></div>
-    <div class="cell"><div class="k">净稳定资金比例</div><div class="v">112.56<span class="u">%</span></div><div class="d"><span>长期资金约束合格</span></div></div>
-  </div>
-
-  <div class="tblscroll"><table class="tbl">
-    <caption>资本工具与期后事项；金额单位：亿元</caption>
-    <thead><tr><th>事项</th><th>金额</th><th>时点</th><th>资本层级与含义</th></tr></thead>
-    <tbody>
-      <tr><td>发行永续资本债</td><td>160</td><td>2026H1</td><td>补充其他一级资本，不增加核心一级资本；年度分派前置于普通股</td></tr>
-      <tr><td>赎回二级资本债</td><td>60</td><td>2026H1</td><td>减少二级资本；已反映在六月末资本比率</td></tr>
-      <tr><td>全额赎回二级资本债</td><td>35</td><td>2026-07-12</td><td>期后减少二级资本；静态测算使总资本充足率下降约 14 个基点</td></tr>
-      <tr><td>其他权益工具全年分派</td><td>10.48</td><td>全负担年化</td><td>普通股利润与股息折现须先扣除</td></tr>
-    </tbody>
-  </table></div>
-  <p class="small">七月赎回影响按 35 亿元除以六月末风险加权资产机械测算，未计入期后利润、风险加权资产和其他资本变化，因此不是公司披露的备考比率。</p>
-
-  <div class="plain"><span class="pl">信用成本压力测试</span>
-    <p>以半年平均贷款约 18,817.70 亿元计算，2026H1 贷款减值年化信用成本约 1.15%。若仅把该参数改为 1.25%／1.00%／0.80%，其余项目机械年化，普通股 EPS 约为 4.61／5.26／5.78 元，对应普通股 ROE 约为 13.07%／14.92%／16.40%。这不是盈利预测，而是显示估值对风险成本的敏感度。</p>
-  </div>
+  <p>期末客户存款增长 13.33%，略快于贷款本金增长 12.50%，吸收存款占负债的比例也上升；因此不能再沿用旧版“越来越依赖批发融资”的结论。真正要监测的是日均贷款与日均存款增速差，以及央行借款增加与回购融资减少后的综合成本。</p>
+  <p>第二阶段是会计预期损失分类，关注类是不良确认前的监管分类，两者既非同义词，也不能相加。重组贷款可能与阶段分类、逾期贷款重叠。第二阶段增加可以来自风险显著上升，也可能受到组合变化与迁移规则影响；在缺少完整迁移矩阵时，只能将其视为需要更多拨备或后续追踪的信号，不能断言这些贷款最终都会变成不良。</p>
+  <p>拨备覆盖率是存量准备与已确认不良的关系，无法单独证明下一期减值会下降。资本也是分层的：永续债通常补充其他一级资本，二级资本债补充总资本，普通股和留存收益才是核心一级资本的主要来源。新增贷款即使当期尚无明显损失，也会占用风险加权资产；因此利润增长、分红与扩表速度必须一起约束，授权发行资本债不能直接解除普通股资本限制。</p>
+  <div class="plain"><span class="pl">稳定的不良率为什么仍要警惕？</span><p>关注类占比下降、逾期占比持平，是有利或稳定的信号；第二阶段和重组贷款增长更快，则要求继续核实。需要看到这些风险信号放缓，并且资本在分红与扩表后仍保持缓冲，才足以提高对资产质量的信心。</p></div>
 </section>
 
-<section class="reveal on" id="portfolio">
-  <div class="slabel">区域市场与地理分布 · 行业与宏观环境 · 业务组合</div>
-  <h2>长三角和资管生态构成优势，也构成集中度</h2>
-  <p>贷款地域仍高度集中于浙江与江苏，行业投向以租赁和商务服务、制造、批发零售及房地产相关链条为主。区域密度有利于获客、风控与交叉销售，但房地产、出口制造和中小企业景气若同时承压，相关性会在压力期放大。</p>
-  <div class="tblscroll"><table class="tbl">
-    <caption>贷款组合；2026 年 6 月末</caption>
-    <thead><tr><th>维度</th><th>余额／占比</th><th>判断</th></tr></thead>
-    <tbody>
-      <tr><td>公司贷款及票据</td><td>14,129.54 亿元／72.46%</td><td>批发业务决定主要信用周期</td></tr>
-      <tr><td>个人贷款</td><td>5,370.04 亿元／27.54%</td><td>消费贷占零售主体</td></tr>
-      <tr><td>消费贷款</td><td>3,460.37 亿元／17.74%</td><td>收益较高，风险弹性也高</td></tr>
-      <tr><td>浙江</td><td>62.60%</td><td>核心根据地</td></tr>
-      <tr><td>江苏</td><td>23.24%</td><td>第二大区域</td></tr>
-      <tr><td>房地产贷款</td><td>8.64%</td><td>不含上下游与抵押物间接暴露</td></tr>
-    </tbody>
-  </table></div>
-
-  <h3>四个平台让收入不只依赖贷款，但并非无周期</h3>
-  <div class="tblscroll"><table class="tbl">
-    <caption>主要子公司；2026H1；金额单位：亿元</caption>
-    <thead><tr><th>平台</th><th>所有权</th><th>规模</th><th>营业收入</th><th>净利润</th></tr></thead>
-    <tbody>
-      <tr><td>永赢基金</td><td>71.49%</td><td>公募管理规模（AUM）7,571；非货 5,417</td><td>19.96</td><td>5.22</td></tr>
-      <tr><td>永赢金租</td><td>100%</td><td>总资产 1,722.37</td><td>36.40</td><td>16.69</td></tr>
-      <tr><td>宁银理财</td><td>100%</td><td>产品 AUM 6,563</td><td>9.51</td><td>6.14</td></tr>
-      <tr><td>宁银消金</td><td>94.17%</td><td>总资产 730.11</td><td>17.92</td><td>2.64</td></tr>
-    </tbody>
-  </table></div>
-  <p>按持股比例机械加权，四家平台净利润规模约为 29.05 亿元，约当集团归母利润的 17.5%；这只是量级感，不等于会计“贡献”，因为集团合并包含内部交易抵销、资金成本和分部归属差异。</p>
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>资管和租赁让宁波银行不只靠贷款利差赚钱，这是优势；但基金与理财受市场波动影响，消金与租赁又会消耗信用成本和资本，所以“业务更多元”并不等于“利润无周期”。</p>
+<section class="reveal on" id="growth">
+  <div class="slabel">业务结构 · 增长</div>
+  <h2>长三角密度与资管生态是优势，也放大组合集中</h2>
+  <p>浙江与江苏合计占本集团贷款 85.84%。管理层把区域客户经营视为交叉销售和结算资金沉淀的基础，但这种集中也让信用敞口聚集于同一经济带。上半年贷款增量主要来自对公贷款，个人贷款基本不增；公司将手续费增长主要归因于财富代销与资产管理。</p>
+  <div class="finds">
+    <div class="find good"><div class="t">公司贷款扛增长</div><p>公司贷款较年初增长 19.32%，个人贷款只增 0.47%。对公扩表支持利息收入，也让公司贷款不良余额的变化更重要。</p></div>
+    <div class="find warn"><div class="t">组合风险在换位</div><p>公司贷款不良率由 0.23% 升至 0.29%，个人贷款不良率由 1.94% 升至 2.00%；总率持平掩盖了内部迁移。</p></div>
+    <div class="find good"><div class="t">财富业务有基础</div><p>财富管理资产规模 14,300 亿元，其中私人银行资产规模 4,206 亿元；能否转为持续净手续费，还取决于产品、费率与渠道成本。</p></div>
+    <div class="find warn"><div class="t">手续费仍有周期</div><p>H1 手续费净收入增长 53.9%，推算 Q2 增速降到 25.5%；渠道支出增长更快，不能把强半年线性外推。</p></div>
   </div>
-  <div class="callout"><b>竞争优势的可验证版本：</b>如果资管规模增长、公司存款沉淀和区域客户交叉销售能同时降低资金成本并提升非息收入，宁波银行就能在息差下行中维持较高回报；反之，若增长越来越依赖批发融资且零售信用成本抬升，所谓生态优势会被资本消耗抵销。</div>
+  <p>客户经营是管理层的差异化策略；其可验证结果应是低成本存款与扣费后的净收入，而不仅是客户规模。公司披露的财富管理资产规模包含客户存款及金融投资，不能直接按统一费率推算收入；代销产品结构、市场涨跌和收费分成都会改变变现率。若资产管理规模增长而净手续费不增长，应优先检查产品结构和渠道费用，再讨论获客效率。</p>
+  <p>区域集中也有双面性。熟悉本地产业链有助于银行识别客户，但同一地区的订单、抵押物和企业现金流可能同步承压。对公贷款增量扩大时，报告期末的不良表现还未覆盖新贷款的完整风险周期；新增资产的质量需要随贷款逐渐到期、续贷和现金回收来检验。当前规模增长不应被自动解释为风险定价改善。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>管理层希望同一区域的企业、员工与财富客户互相带来业务。验证这一思路，要同时看到存款成本改善、净手续费增长和风险成本可控；客户规模本身还不能证明交叉销售有效。</p></div>
 </section>
 
 <section class="reveal on" id="governance">
-  <div class="slabel">股息政策与股东回报 · 管理团队与股权结构 · 公司治理专项分析</div>
-  <h2>股权制衡清晰；普通股回报仍服从于资本扩张</h2>
-  <p>公司无控股股东与实际控制人。宁波开发投资集团和华侨银行持股接近，雅戈尔位列第三，形成相对制衡的所有权结构。2026 年董事会经历换届与任职资格核准；没有披露覆盖普通股管理层的股权激励计划，因而治理观察应落在资产质量、资本纪律与关联交易，而非期权数量。</p>
-  <div class="tblscroll"><table class="tbl">
-    <caption>所有权、治理与股东回报</caption>
-    <thead><tr><th>事项</th><th>披露／推算</th><th>投资含义</th></tr></thead>
+  <div class="slabel">治理 · 股东回报</div>
+  <h2>两大股东集团接近等量，治理处于换届与资本补充窗口</h2>
+  <p>公司披露无控股股东或实际控制人。本地国资一致行动人和华侨银行两账户持股接近等量，提供潜在制衡条件；与此同时，董事会与独立董事在 2026 年集中换届，监事会职责已转交审计委员会，制度执行仍需观察。</p>
+  <div class="tblscroll"><table class="tbl txt">
+    <caption>治理与股东回报事项 · 截至 2026-09-05</caption>
+    <thead><tr><th>事项</th><th>披露事实</th><th>投资含义</th></tr></thead>
     <tbody>
-      <tr><td>宁波开发投资集团</td><td>18.74%</td><td>第一大股东</td></tr>
-      <tr><td>华侨银行及其合格境外机构投资者（QFII）账户</td><td>18.69% + 1.33%</td><td>战略股东与外资治理经验</td></tr>
-      <tr><td>雅戈尔集团</td><td>10.00%</td><td>重要产业股东</td></tr>
-      <tr><td>2025 末期股息</td><td>每股 0.90 元；2026-07-16 支付</td><td>六月末普通股权益尚未扣除</td></tr>
-      <tr><td>2026 中期股息</td><td>拟每股 0.40 元；尚需股东会批准</td><td>不能提前当作已支付现金</td></tr>
-      <tr><td>2025 普通股派息率</td><td>约 27.99%</td><td>留存仍是资本增长主来源</td></tr>
-      <tr><td>关联方授信余额</td><td>279.24 亿元，约为贷款本金 1.43%</td><td>规模可控，持续观察定价和资产质量</td></tr>
+      <tr><td>本地国资集团</td><td>宁波开发投资 18.74% 加宁兴资产 1.29%，合计约 20.03%</td><td>一致行动人；与另一大股东集团接近等量</td></tr>
+      <tr><td>华侨银行集团</td><td>直接持股 18.69%，其合格境外机构投资者账户 1.33%，合计约 20.02%</td><td>两账户合并看持股；无单一股东控制</td></tr>
+      <tr><td>普通股分红</td><td>2025 年全年每股 1.20 元；2026H1 拟每股 0.40 元，截至截止日待股东会批准</td><td>中期分红提高可见度，但不能提前算作已付现金</td></tr>
+      <tr><td>资本债授权</td><td>2026-09-07 股东会将审议最高 600 亿元永续债及／或二级资本债授权；公司已于 2026-07-12 赎回 35 亿元二级资本债</td><td>已赎回与待授权分开计量；新增工具不直接补充核心一级资本</td></tr>
+      <tr><td>监督机制</td><td>自 2025-12-31 不再设监事会，法定监督职责由董事会审计委员会承接</td><td>治理过渡期应看委员会实际履职</td></tr>
     </tbody>
   </table></div>
-  <p>2025 年报获得标准无保留审计意见；2026 中报未经审计。集团纳入合并范围的结构化主体资产规模为 2,663.82 亿元，约当总资产的 6.75%；结构化主体是否控制并表也是年报关键审计事项。对未并表的理财产品及基金、资管计划，集团披露的自身投资账面价值分别为 7.14 亿元和 17.28 亿元，最大损失敞口与账面价值相近，不能把产品管理规模当作集团损失敞口。</p>
-  <div class="plain"><span class="pl">分红口径陷阱</span>
-    <p>六月末每股普通股净资产 36.763 元包含随后支付的 2025 年末期股息。把 0.90 元从分母扣除后，观察口径约为 35.863 元；中期拟派 0.40 元尚未获批，不应再扣。普通股 PB 必须与普通股权益匹配。</p>
-  </div>
+  <p>关联交易也要分清口径：279.24 亿元是授信类关联交易余额，不是关联方贷款；财务附注的关联方贷款为 48.53 亿元。把前者直接除以贷款总额并称作“贷款集中度”，会夸大同一概念。</p>
+  <p>管理层沟通需要按时间核验。此前投资者交流强调控制负债成本、服务客户和资产质量，半年数据中存款成本下降已有对应结果；对于风险“总体稳健”的表述，则仍需与阶段贷款和重组增量共同判断。半年报对下半年净息差的表述是继续承压、预计降幅收窄，对手续费净收入则预计保持增长，这些属于未来展望，不能当成本期已实现的业绩。</p>
+  <p>股权相对均衡并不自动保证经营决策有效。股东之间是否形成实际制衡，还取决于董事会履职、关联交易审批和资本配置。监督职责转由审计委员会后，应观察信息披露与内控检查是否连贯；分红则要同时满足普通股股东回报和业务资本需求。当前最具体的事件是待审议的分红及资本债授权，其通过、发行和资本实际入账是不同节点。</p>
+  <div class="plain"><span class="pl">白话解读</span><p>股东相对均衡只是治理条件，董事会如何配置资本才是结果。下一步核实股东会决议、实际分红和发行安排，再看资本变化，不能把授权额度当作已补入的资金。</p></div>
 </section>
 
-<section class="reveal on" id="valuation">
-  <div class="slabel">估值分析与市场定价 · 竞争对手与同业估值对比 · 盈利预测</div>
-  <h2>市场已经给了增长信用，尚未给出息差见底溢价</h2>
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="P/B–ROE">
+  <div class="slabel">估值 · 市场定价</div>
+  <h2>现价押注回报率继续下台阶，基准空间约一成</h2>
+  <p>主方法采用银行原生的 P/B–ROE，因为普通股净资产承接损失、可持续 ROE 决定一单位净资产应值多少钱。下列均为 2026 年末情景价值，未折回行情日；股息折现也以同一年末为估值点。它们用于比较剩余持有期的情景损益，不能视作今天的内在价值或短期价格预测。</p>
   <div class="grid">
-    <div class="cell"><div class="k">现价</div><div class="v">34.30<span class="u">元</span></div><div class="d"><span>2026-09-01 收盘</span></div></div>
-    <div class="cell"><div class="k">2026 年末熊市情景</div><div class="v">25.9–28.4<span class="u">元</span></div><div class="d"><span class="down">未来约四个月 −24% 至 −17%</span></div></div>
-    <div class="cell"><div class="k">2026 年末基准情景</div><div class="v">36.0–37.9<span class="u">元</span></div><div class="d"><span class="up">未来约四个月 +5% 至 +10%</span></div></div>
-    <div class="cell"><div class="k">2026 年末乐观情景</div><div class="v">43.5–51.6<span class="u">元</span></div><div class="d"><span class="up">未来约四个月 +27% 至 +50%</span></div></div>
-    <div class="cell"><div class="k">市场隐含可持续 ROE</div><div class="v">10.9<span class="u">%</span></div><div class="d"><span>低于 2026E 一致预期</span></div></div>
-    <div class="cell"><div class="k">判断</div><div class="v">中性偏积极</div><div class="d"><span>基准赔率有限，验证路径清楚</span></div></div>
+    <div class="cell"><div class="k">现价</div><div class="v">34.50<span class="u">元</span></div><div class="d"><span>2026-09-04 15:30 北京时间 · Wind</span></div></div>
+    <div class="cell"><div class="k">熊市</div><div class="v">25.85<span class="u">元</span></div><div class="d"><span class="down">较现价 −25.1%</span></div></div>
+    <div class="cell"><div class="k">基准</div><div class="v">37.77<span class="u">元</span></div><div class="d"><span class="up">较现价 +9.5%</span></div></div>
+    <div class="cell"><div class="k">牛市</div><div class="v">51.51<span class="u">元</span></div><div class="d"><span class="up">较现价 +49.3%</span></div></div>
+    <div class="cell"><div class="k">隐含预期</div><div class="v">10.94<span class="u">% ROE</span></div><div class="d"><span>普通股净资产回报率；其他基准参数不变</span></div></div>
+    <div class="cell" data-verdict="neutral-cautious"><div class="k">判断</div><div class="v">中性偏谨慎</div><div class="d"><span>（观察）· 熊市损失大于基准上行</span></div></div>
   </div>
 
-  <h3>Step 1｜市场现在付什么：先把普通股分母对齐</h3>
-  <p>万得 LF 与本报告的普通股 PB 都是有效口径，却回答不同问题。前者是统一屏幕字段，后者把普通股价格与普通股权益匹配。若不先拆掉优先股、永续债与除息时点，所谓“低估值”没有可比意义。</p>
+  <h3>第一步 · 市场现在付什么价</h3>
+  <p>Wind 最近报告期市净率为 0.821 倍、滚动市盈率为 7.320 倍，均取自 2026-09-04 收盘快照。前者与扣除其他权益工具后的普通股分母不一致；基于六月末普通股权益并扣除七月已付末期股息，现价普通股市净率约 0.962 倍。Wind 同日预测每股净资产为 37.7735 元，模型按普通股口径使用，对应前瞻市净率约 0.913 倍；预测字段未单列其他权益调整，属于需要验证的输入假设。</p>
+  <p>同日市净率处于 Wind 过去五年约 20.25% 分位，历史查询窗口为 2021-09-06 至 2026-09-04。这说明屏幕倍数低于多数历史时点，却不能直接证明便宜：历史表中的净息差和回报率也已下降，其他权益工具与除息还会改变分母。五年上下四分位的具体倍数未返回，因此不用分位排名拼造历史价格区间。</p>
+
+  <h3>第二步 · 与同层城市商业银行相比</h3>
   <div class="tblscroll"><table class="tbl">
-    <caption>市场与普通股分母桥；金额和每股数值为人民币</caption>
-    <thead><tr><th>项目</th><th>数值</th><th>使用方式</th></tr></thead>
+    <caption>行情截至 2026-09-04 收盘；基本面为 2026H1。市净率与市盈率来源 Wind，均为屏幕口径；H1 指标来源 Wind 标准化数据，仅作交叉检查</caption>
+    <thead><tr><th>银行</th><th>最近报告期市净率</th><th>市盈率 TTM</th><th>净息差</th><th>不良率</th><th>核心一级资本</th></tr></thead>
     <tbody>
-      <tr><td>六月末归母权益</td><td>2,835.93 亿元</td><td>含其他权益工具</td></tr>
-      <tr><td>优先股／永续债</td><td>48.25／360.00 亿元</td><td>从普通股权益分母剔除</td></tr>
-      <tr><td>六月末普通股权益／BVPS</td><td>2,427.68 亿元／36.763 元</td><td>报表普通股口径</td></tr>
-      <tr><td>七月已支付末期股息</td><td>0.90 元／股</td><td>观察日分母应扣除</td></tr>
-      <tr><td>调整后普通股 BVPS／PB</td><td>35.863 元／0.956x</td><td>现价普通股观察口径</td></tr>
-      <tr><td>Wind PB LF／隐含 BVPS</td><td>0.816x／42.046 元</td><td>统一行情字段，不称普通股 PB</td></tr>
-      <tr><td>2026E 普通股 BVPS／PB</td><td>37.853 元／0.906x</td><td>情景估值共同分母</td></tr>
-      <tr><td>总市值</td><td>2,265 亿元</td><td>万得市场快照</td></tr>
-      <tr><td>2025 全年普通股股息率</td><td>1.20 元／股；现价约 3.50%</td><td>已披露全年普通股分派</td></tr>
-      <tr><td>Wind 已宣告／拟派股息率</td><td>3.79%</td><td>对应 0.90 元已付末期股息加 0.40 元待批准中期拟派</td></tr>
-      <tr><td>报告 ROE／全负担普通股 ROE</td><td>14.24%／13.79%</td><td>后者扣足优先股与永续债年度分派</td></tr>
+      <tr><td>宁波银行</td><td>0.821 倍</td><td>7.320 倍</td><td>1.70%</td><td>0.76%</td><td>9.53%</td></tr>
+      <tr><td>成都银行</td><td>0.896 倍</td><td>6.087 倍</td><td>1.67%</td><td>0.68%</td><td>8.97%</td></tr>
+      <tr><td>江苏银行</td><td>0.830 倍</td><td>6.236 倍</td><td>1.64%</td><td>0.81%</td><td>8.67%</td></tr>
+      <tr><td>南京银行</td><td>0.767 倍</td><td>6.485 倍</td><td>1.79%</td><td>0.82%</td><td>9.37%</td></tr>
     </tbody>
   </table></div>
-  <div class="callout"><b>模型解读：</b>在 2026E 普通股 BVPS 37.8528 元、普通股成本 Ke 11.5% 和长期增长率 g 5.0% 这组假设下，当前前瞻 PB 可解读为隐含可持续普通股 ROE 约 10.9%，较万得一致预期 13.16% 低约 2.3 个百分点。这是模型反推，不是市场参与者公开表达的预测。</div>
+  <p class="small">同业均为同层城市商业银行。屏幕市净率未逐家扣除其他权益工具，不能直接校准宁波银行的普通股倍数；招商银行仅作跨层背景，不进入同业中位数。</p>
 
-  <h3>Step 2｜同业怎么定价：LF 只作屏幕参照，不能硬横比普通股</h3>
-  <div class="tblscroll"><table class="tbl">
-    <caption>同业行情截至 2026-09-01；基本面为 2026H1；ROE 为半年度未年化口径</caption>
-    <thead><tr><th>银行</th><th>PB LF</th><th>滚动市盈率 PE TTM</th><th>H1 ROE</th><th>NIM</th><th>不良率 NPL</th><th>核心一级资本 CET1</th></tr></thead>
-    <tbody>
-      <tr><td>宁波银行</td><td>0.816x</td><td>7.28x</td><td>7.12%</td><td>1.70%</td><td>0.76%</td><td>9.53%</td></tr>
-      <tr><td>招商银行</td><td>0.900x</td><td>6.79x</td><td>6.71%</td><td>1.83%</td><td>0.94%</td><td>14.07%</td></tr>
-      <tr><td>成都银行</td><td>0.893x</td><td>6.07x</td><td>7.49%</td><td>1.67%</td><td>0.68%</td><td>8.97%</td></tr>
-      <tr><td>江苏银行</td><td>0.831x</td><td>6.24x</td><td>7.86%</td><td>1.64%</td><td>0.81%</td><td>8.67%</td></tr>
-      <tr><td>南京银行</td><td>0.763x</td><td>6.45x</td><td>7.25%</td><td>1.79%</td><td>0.82%</td><td>9.37%</td></tr>
-    </tbody>
-  </table></div>
-  <p class="small">同业 PB LF 均采用万得统一市场字段。各行优先股、永续债与除息因素未逐家重算，因此本表只展示市场屏幕位置，不用来证明普通股谁更便宜，也不直接校准下方情景 PB。</p>
-
-  <h3>Step 3｜先看市场模型：一致预期不是公司指引</h3>
-  <div class="tblscroll"><table class="tbl">
-    <caption>万得一致预期；金额单位：亿元，每股指标除外；Wind EPS 为归母净利除总股本，未扣其他权益工具分派</caption>
-    <thead><tr><th>年度</th><th>营业收入</th><th>归母净利润</th><th>Wind EPS</th><th>BVPS</th><th>ROE</th></tr></thead>
-    <tbody>
-      <tr><td>2026E</td><td>798.50</td><td>323.06</td><td>4.892</td><td>37.853</td><td>13.16%</td></tr>
-      <tr><td>2027E</td><td>886.08</td><td>361.80</td><td>5.478</td><td>42.422</td><td>13.27%</td></tr>
-      <tr><td>2028E</td><td>984.85</td><td>407.74</td><td>6.172</td><td>47.490</td><td>13.41%</td></tr>
-    </tbody>
-  </table></div>
-
-  <h3>银行原生经营框架：用 2027 正常化状态检验市场路径</h3>
-  <div class="tblscroll"><table class="tbl">
-    <caption>分析师 2027 情景；不是公司指引；金额单位：亿元，每股指标除外</caption>
-    <thead><tr><th>驱动／输出</th><th>熊市</th><th>基准</th><th>乐观</th></tr></thead>
-    <tbody>
-      <tr><td>贷款增速</td><td>6%–8%</td><td>9%–11%</td><td>12%–14%</td></tr>
-      <tr><td>净息差</td><td>1.50%–1.58%</td><td>1.62%–1.70%</td><td>1.74%–1.82%</td></tr>
-      <tr><td>手续费净收入增速</td><td>−5%–5%</td><td>8%–12%</td><td>15%–20%</td></tr>
-      <tr><td>贷款信用成本</td><td>1.25%</td><td>1.00%</td><td>0.80%</td></tr>
-      <tr><td>普通股派息率</td><td>30%</td><td>32%</td><td>35%</td></tr>
-      <tr><td>核心一级资本约束</td><td>不低于 8.8%</td><td>不低于 9.3%</td><td>不低于 9.6%</td></tr>
-      <tr><td>可持续普通股 ROE</td><td>9.5%</td><td>11.5%</td><td>13.0%</td></tr>
-      <tr><td>派生普通股净利润</td><td>245.6</td><td>299.2</td><td>339.3</td></tr>
-      <tr><td>派生普通股 EPS</td><td>3.72 元</td><td>4.53 元</td><td>5.14 元</td></tr>
-      <tr><td>派生年末普通股 BVPS</td><td>40.46 元</td><td>40.93 元</td><td>41.19 元</td></tr>
-    </tbody>
-  </table></div>
-  <p class="small">驱动区间定义三种经营状态；输出由普通股 ROE 与派息率机械生成：EPS = ROE × 期初 BVPS ÷ [1 − 0.5 × ROE ×（1 − 派息率）]，年末 BVPS = 期初 BVPS + EPS ×（1 − 派息率）。期初使用 2026E 普通股 BVPS，未建模其他综合收益、增发或回购。</p>
-
-  <div class="plain"><span class="pl">为什么不机械扩成三年情景</span>
-    <p>2026 年已有半年实际数，估值点又在 2026 年末；再给剩余四个月编三套全年经营路径，会制造虚假精度。因此 2026E 只用万得一致预期 BVPS 作为三种估值的共同分母。2027 是中报风险迁徙、息差和手续费能否正常化的第一个完整年度，所以本报告只对这个状态做有界压力测试。2028E 保留为市场远期参照，不把未知的息差与信用成本再机械外推一年；长期价值由明确的可持续 ROE、资本成本和增长率接管。</p>
-  </div>
-  <div class="tblscroll"><table class="tbl">
-    <caption>2027 正常化状态与三年市场路径的连接；普通股 EPS 已按全年其他权益工具分派 10.48 亿元调整</caption>
-    <thead><tr><th>2027 口径</th><th>普通股 EPS</th><th>年末普通股 BVPS</th><th>相对市场路径</th></tr></thead>
-    <tbody>
-      <tr><td>万得一致预期</td><td>5.32 元</td><td>42.42 元</td><td>2026–28 ROE 为 13.16%／13.27%／13.41%，接近本模型乐观状态</td></tr>
-      <tr><td>熊市状态</td><td>3.72 元</td><td>40.46 元</td><td>EPS 比可比一致预期低 30.1%</td></tr>
-      <tr><td>基准状态</td><td>4.53 元</td><td>40.93 元</td><td>EPS 比可比一致预期低 14.8%</td></tr>
-      <tr><td>乐观状态</td><td>5.14 元</td><td>41.19 元</td><td>EPS 比可比一致预期低 3.4%</td></tr>
-    </tbody>
-  </table></div>
-  <p class="small">因此，万得 2026–2028 路径不是本报告的基准预测，而是偏乐观的市场检验线：若 2027 普通股 ROE 只能落在 11.5% 左右，盈利和 BVPS 都会低于当前一致预期；只有接近乐观状态，才大致追上市场对利润的要求。</p>
-
-  <h3>Step 4｜再做独立模型：两种 PB 定主区间，股息折现只作检查</h3>
-  <div class="tblscroll"><table class="tbl">
-    <caption>2026 年末价格情景；以 2026E 普通股 BVPS 为共同分母；相对现价为未来约四个月的未折现价格变化</caption>
-    <thead><tr><th>情景</th><th>分析师情景 PB</th><th>合理 PB 法</th><th>合理 PB 假设</th><th>综合价格区间</th><th>相对现价</th></tr></thead>
-    <tbody>
-      <tr><td>熊市</td><td>0.75x</td><td>0.684x</td><td>ROE 9.5%／Ke 12.5%／g 3.0%</td><td>25.9–28.4 元</td><td>−24% 至 −17%</td></tr>
-      <tr><td>基准</td><td>0.95x</td><td>1.000x</td><td>ROE 11.5%／Ke 11.5%／g 5.0%</td><td>36.0–37.9 元</td><td>+5% 至 +10%</td></tr>
-      <tr><td>乐观</td><td>1.15x</td><td>1.364x</td><td>ROE 13.0%／Ke 11.0%／g 5.5%</td><td>43.5–51.6 元</td><td>+27% 至 +50%</td></tr>
-    </tbody>
-  </table></div>
-
+  <h3>第三步 · 主模型与交叉检验</h3>
   <div class="steps">
-    <div class="step"><div class="n">METHOD 1</div><b>统一分母</b><p>普通股价格只除以普通股 BVPS，不混入优先股与永续债。</p></div>
-    <div class="step"><div class="n">METHOD 2</div><b>市场情景</b><p>以当前普通股 PB 为中心，明确假设 0.75／0.95／1.15 倍，不把同业 LF 当作普通股硬横比。</p></div>
-    <div class="step"><div class="n">METHOD 3</div><b>经济锚</b><p>合理 PB =（可持续 ROE−g）÷（Ke−g）。</p></div>
-    <div class="step"><div class="n">CHECK</div><b>股息折现（DDM）</b><p>扣足其他权益分派后，2026 年末五年两阶段保守情景约 35.29 元；终值占 78.2%。</p></div>
+    <div class="step"><div class="n">方法 A</div><b>P/B–ROE：净资产值多少？</b><p>主方法把可持续普通股 ROE、权益成本与长期增长连接到合理市净率。</p></div>
+    <div class="step"><div class="n">方法 B</div><b>股息折现：现金能兑现多少</b><p>扣足其他权益工具分派，检验主模型有没有依赖过高的终值。</p></div>
+    <div class="step"><div class="n">怎么读</div><b>不把三档机械平均</b><p>基准决定判断，熊市定义损失，牛市只在风险指标转稳后开放。</p></div>
   </div>
-  <p class="small">DDM 的 2026E 普通股起始 EPS 为 4.7335 元，已从万得预测归母净利润中扣除全年其他权益工具分派；未来五年 EPS 增速依次为 8.0%、7.5%、7.0%、6.0%、5.0%，派息率依次为 30%、33%、36%、40%、45%，普通股成本为 11.5%，终值增长率为 5.0%。终值 45% 派息率隐含稳态 ROE 9.09%，因此它是独立的保守交叉检查，不与合理 PB 的基准 ROE 混称同一情景。</p>
+  <div class="tblscroll"><table class="tbl txt">
+    <caption>2026 年末 P/B–ROE 情景 · 共同分母为 Wind 2026E 普通股每股净资产 37.7735 元；均为分析假设，不是公司指引</caption>
+    <thead><tr><th>驱动</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据</th></tr></thead>
+    <tbody>
+      <tr><td>可持续普通股 ROE</td><td>9.5%</td><td>11.5%</td><td>13.0%</td><td>从 H1 充分计入其他权益分派后的约 13.8% 向下收敛；领先风险指标决定幅度</td></tr>
+      <tr><td>权益成本</td><td>12.5%</td><td>11.5%</td><td>11.0%</td><td>取分析者要求的双位数普通股回报作为门槛；基准计入区域集中、信用迁移和资本约束，熊市再加风险补偿，牛市仅小幅降低。不是实测融资成本</td></tr>
+      <tr><td>长期增长</td><td>3.0%</td><td>5.0%</td><td>5.5%</td><td>参照五年收入复合增速向成熟期下调；长期不延续高贷款增速。按增长除以 ROE 留存利润，三档隐含派息率分别约 68%、57%、58%</td></tr>
+      <tr><td>合理市净率</td><td>0.684 倍</td><td>1.000 倍</td><td>1.364 倍</td><td>由可持续回报、权益成本与增长共同决定</td></tr>
+      <tr><td>每股价值</td><td>25.85 元</td><td>37.77 元</td><td>51.51 元</td><td>共同普通股净资产分母乘以各情景合理市净率</td></tr>
+    </tbody>
+  </table></div>
 
-  <div class="rows">
-    <div class="row"><div class="nm">年末熊市下沿<span>风险迁徙 + 回报率下修</span></div><div class="track"><div class="fill alt" style="width:50.2%"></div></div><div class="fig">25.9<span>−24%</span></div></div>
-    <div class="row"><div class="nm">年末熊市上沿<span>分析师情景折价</span></div><div class="track"><div class="fill alt" style="width:55.0%"></div></div><div class="fig">28.4<span>−17%</span></div></div>
-    <div class="row"><div class="nm">当前价格<span>2026-09-01</span></div><div class="track"><div class="fill soft" style="width:66.5%"></div></div><div class="fig">34.3<span>观察点</span></div></div>
-    <div class="row"><div class="nm">年末基准区间<span>息差降幅收窄</span></div><div class="track"><div class="fill" style="width:73.5%"></div></div><div class="fig">36.0–37.9<span>+5% 至 +10%</span></div></div>
-    <div class="row"><div class="nm">年末乐观区间<span>信用成本回落 + ROE 稳定</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">43.5–51.6<span>+27% 至 +50%</span></div></div>
+  <div class="steps chain">
+    <div class="step"><div class="n">驱动</div><b>风险迁移放缓</b><p>第二阶段与重组增速回落</p></div>
+    <div class="step"><div class="n">收入 / 利润率</div><b>息差降幅收窄</b><p>费用效率保留拨备前增长</p></div>
+    <div class="step"><div class="n">盈利或净资产</div><b>ROE 11.5%</b><p>2026E BVPS 37.7735 元</p></div>
+    <div class="step"><div class="n">倍数 / 折现</div><b>合理 PB 1.000 倍</b><p>权益成本 11.5%，长期增长 5.0%</p></div>
+    <div class="step"><div class="n">每股价值</div><b>37.77 元</b><p>基准情景，2026 年末</p></div>
   </div>
-  <p>五年 PB LF 历史样本显示，当前屏幕读数位于约第十六百分位，但这个序列同样包含其他权益工具分母，不能直接当作普通股历史百分位。估值要重估，必须同时出现息差降幅继续收窄、领先风险指标稳定和普通股 ROE 不再下台阶，而不是只靠利润增速。</p>
-  <div class="plain"><span class="pl">一句话总结</span>
-    <p>屏幕上的低 PB 有分母错觉。按普通股口径，现价已经靠近基准价值下沿；进一步上涨需要回报率稳定的证据，而不是再来一个高增速季度。</p>
+
+  <div class="tblscroll"><table class="tbl sgrid">
+    <caption>行：可持续普通股 ROE（%）；列：权益成本（%）；长期增长固定 5.0%；格内为每股价值（元）</caption>
+    <thead><tr><th>ROE ＼ 权益成本</th><th>11.0%</th><th>11.5%</th><th>12.5%</th></tr></thead>
+    <tbody>
+      <tr><td>10.00%</td><td>31.48</td><td>29.06</td><td>25.18</td></tr>
+      <tr><td>10.94%</td><td>37.40</td><td class="implied">34.52</td><td>29.92</td></tr>
+      <tr><td>11.50%</td><td>40.92</td><td class="base">37.77</td><td>32.74</td></tr>
+      <tr><td>13.00%</td><td>50.36</td><td>46.49</td><td>40.29</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>第四步 · 现价隐含了什么</h3>
+  <div class="tblscroll"><table class="tbl txt" data-fullscan-role="implied">
+    <caption>以 P/B–ROE 基准模型反推；现价仅改变一项时的隐含值</caption>
+    <thead><tr><th>假设</th><th>基准假设</th><th>现价隐含</th><th>差距</th></tr></thead>
+    <tbody>
+      <tr><td>可持续普通股 ROE</td><td>11.50%</td><td>10.94%</td><td>−0.56 个百分点</td></tr>
+      <tr><td>普通股市净率</td><td>1.000 倍</td><td>0.913 倍</td><td>−0.087 倍</td></tr>
+      <tr><td>权益成本</td><td>11.50%</td><td>12.12%</td><td>+0.62 个百分点</td></tr>
+      <tr><td>长期增长</td><td>5.00%</td><td>无法单独反解</td><td>基准 ROE 等于权益成本时，改变增长率仍对应一倍净资产</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="rows" aria-label="情景价值与现价对比">
+    <div class="row"><div class="nm">熊市<span>回报率下修与风险补偿上升</span></div><div class="track"><div class="fill alt" style="width:50.18%"></div></div><div class="fig">25.85元<span class="down">较现价 −25.1%</span></div></div>
+    <div class="row"><div class="nm">现价<span>2026-09-04 收盘</span></div><div class="track"><div class="fill soft" style="width:66.98%"></div></div><div class="fig">34.50元<span>市场价</span></div></div>
+    <div class="row"><div class="nm">基准<span>风险增速回落，ROE 温和收敛</span></div><div class="track"><div class="fill" style="width:73.33%"></div></div><div class="fig">37.77元<span class="up">较现价 +9.5%</span></div></div>
+    <div class="row"><div class="nm">牛市<span>息差、信用成本与资本共振</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">51.51元<span class="up">较现价 +49.3%</span></div></div>
   </div>
+  <p class="small">条形按每股价值占牛市价值绘制；涨跌幅相对 34.50 元现价，不含尚未批准的中期股息。</p>
+
+  <div class="ffield" aria-label="P/B–ROE三档、股息折现、同业屏幕锚与现价">
+    <div class="frow"><div class="fnm">P/B–ROE<span>熊市</span></div><div class="ftrack"><div class="fbar alt" style="left:16.70%;width:0.80%"></div><div class="fmark" style="left:41.43%"></div></div><div class="fig">25.85</div></div>
+    <div class="frow"><div class="fnm">P/B–ROE<span>基准</span></div><div class="ftrack"><div class="fbar" style="left:50.78%;width:0.80%"></div></div><div class="fig">37.77</div></div>
+    <div class="frow"><div class="fnm">P/B–ROE<span>牛市</span></div><div class="ftrack"><div class="fbar moss" style="left:90.03%;width:0.80%"></div></div><div class="fig">51.51 元</div></div>
+    <div class="frow"><div class="fnm">股息折现<span>保守检查</span></div><div class="ftrack"><div class="fbar" style="left:43.68%;width:0.80%"></div></div><div class="fig">35.29</div></div>
+    <div class="frow"><div class="fnm">同业屏幕锚<span>城市商业银行</span></div><div class="ftrack"><div class="fbar" style="left:25.64%;width:13.92%"></div></div><div class="fig">28.97–33.85</div></div>
+  </div>
+  <p class="small">共同横轴：20.00–55.00 元；黑色竖线为 2026-09-04 收盘价 34.50 元。前三行是主方法单点情景，股息折现是独立交叉检验；同业锚用同层银行 0.767–0.896 倍屏幕市净率乘共同 BVPS，仅作市场背景。</p>
+  <div class="plain"><span class="pl">一句话总结</span><p>主方法按普通股净资产回报率决定合理市净率（P/B–ROE）。基准价值比现价高约一成，熊市损失更大；最关键的是普通股回报能否稳定，净资产预测的口径也仍待验证。</p></div>
 </section>
 
-<section class="reveal on" id="decision">
-  <div class="slabel">股价走势与技术分析 · 贝塔与阿尔法分析 · 投资验证与筹码分析 · 多空辩论 · 最终投资建议</div>
-  <h2>中性偏积极：经营兑现，赔率尚未到“忽略风险”的程度</h2>
-  <p>中报公告日股价上涨 3.64%；从公告前一日收盘至数据截止日累计上涨约 4.00%，同期沪深 300 上涨约 0.50%，短期相对收益约 3.5 个百分点。年初至今宁波银行上涨 25.59%，已接近 52 周高点 34.50 元。价格反应与正面解读相符，但不能证明因果；它至少提示一部分改善可能已经进入价格。</p>
-  <div class="finds">
-    <div class="find good"><div class="t">多头最强论据</div><p>拨备前经营动能强于表面利润，存款成本下降和资产管理收入恢复同时发生；不良率、拨备与资本仍提供可观缓冲。如果息差降幅继续收窄，当前折价可以转化为回报率稳定后的重估。</p></div>
-    <div class="find warn"><div class="t">空头最强反证</div><p>高速扩表越来越依赖批发与央行资金，领先风险指标的增速超过贷款，个人业务减值高企；资本市场活跃带来的手续费又具有周期性。利润增长可能只是更高风险投入与更强市场环境的阶段性回报。</p></div>
-    <div class="find good"><div class="t">阿尔法来源</div><p>统计贝塔本次数据返回为空，不能杜撰系数。可检验的经营阿尔法来自区域客户密度、低成本存款、信贷定价、资管交叉销售和长期较低不良率，而不是把高 ROE 自动命名为能力。</p></div>
-    <div class="find warn"><div class="t">数据置信度</div><p>报表利润、贷款分类与监管资本置信度较高；单季利润是累计值相减，置信度中等；管理层解释和市场反应只能作为线索。统计贝塔缺失，未用主观数字替代。</p></div>
-  </div>
-
-  <h3>下一次验证不看一句话，看指标与报表之间能否互相印证</h3>
-  <div class="tblscroll"><table class="tbl">
-    <caption>证伪清单</caption>
-    <thead><tr><th>变量</th><th>支持基准情景</th><th>转向谨慎</th></tr></thead>
+<section class="reveal on" id="valuation-appendix">
+  <div class="slabel">估值机制附录</div>
+  <h2>承重数字逐项落到输入、公式与页码</h2>
+  <p>合理市净率把可持续普通股回报、权益成本与长期增长连在一起；股息折现只检验现金分配，不与主方法机械平均。所有情景均为分析假设，舍入到正文显示位数。</p>
+  <div class="tblscroll"><table class="tbl txt" data-fullscan-role="derivations">
+    <caption>承重推算的推导 · 金额单位：亿元，每股为元；百分比按未舍入值计算</caption>
+    <thead><tr><th>数值</th><th>输入</th><th>公式</th><th>来源（页·附注）</th></tr></thead>
     <tbody>
-      <tr><td>净息差</td><td>同比降幅较上半年继续收窄</td><td>降幅重新扩大</td></tr>
-      <tr><td>负债质量</td><td>存款成本下降且活期占比稳定</td><td>同业与央行资金依赖继续跃升</td></tr>
-      <tr><td>资产质量</td><td>第二阶段、逾期、重组三项增速回落</td><td>继续显著快于贷款</td></tr>
-      <tr><td>个人业务</td><td>分部减值强度下降</td><td>风险成本仍吞噬大部分拨备前利润</td></tr>
-      <tr><td>非息收入</td><td>AUM 与费率共同支撑手续费</td><td>市场走弱即出现明显回吐</td></tr>
-      <tr><td>普通股资本</td><td>扩表与分红后仍维持充足缓冲</td><td>需要放慢资产增长或补充资本</td></tr>
+      <tr><td>推算 Q2 拨备前利润 148.21</td><td>H1 297.40；Q1 149.19</td><td>297.40 − 149.19 ＝ 148.21</td><td>半年报 p.74 分部表；一季报合并利润表</td></tr>
+      <tr><td>推算 Q2 信用减值总额同比 +26.3%</td><td>本期 55.71；上年同期 44.11</td><td>55.71 ÷ 44.11 − 1 ＝ 26.3%</td><td>半年报 p.3；一季报合并利润表</td></tr>
+      <tr><td>第二阶段贷款增长 +29.4%</td><td>561.92；年初 434.32</td><td>561.92 ÷ 434.32 − 1 ＝ 29.4%</td><td>半年报财务附注 p.23；五、6.1</td></tr>
+      <tr><td>六月末普通股 BVPS 36.76</td><td>归属于母公司股东权益 2,835.93；优先股 48.25；永续债 360.00；股本 66.04 亿股</td><td>（2,835.93 − 48.25 − 360.00）÷ 66.04 ＝ 36.76</td><td>半年报财务报表 p.2；附注五、27.3</td></tr>
+      <tr><td>现价普通股 PB 0.962 倍</td><td>现价 34.50；除息后 BVPS 35.86</td><td>34.50 ÷（36.76 − 0.90）＝ 0.962</td><td>Wind；2025 年权益分派公告</td></tr>
+      <tr><td>充分计入分派的年化普通股 ROE 13.788%</td><td>H1 利润 165.62 亿元；其他权益全年分派 10.48 亿元；平均普通股权益 2,326.335 亿元</td><td>（2 × 165.62 − 10.48）÷ 2,326.335 ＝ 13.788%</td><td>半年报利润表、附注五、27.1–27.3；按未舍入分派计算，期初期末均值代理</td></tr>
+      <tr><td>熊市价值 25.85</td><td>ROE 9.5%；权益成本 12.5%；增长 3.0%；BVPS 37.7735</td><td>合理 PB 为（9.5% − 3.0%）÷（12.5% − 3.0%）；再乘 37.7735 ＝ 25.85</td><td>分析假设；Wind 2026E BVPS</td></tr>
+      <tr><td>基准价值 37.77</td><td>ROE 11.5%；权益成本 11.5%；增长 5.0%；BVPS 37.7735</td><td>合理 PB 为（11.5% − 5.0%）÷（11.5% − 5.0%）；再乘 37.7735 ＝ 37.77</td><td>分析假设；Wind 2026E BVPS</td></tr>
+      <tr><td>牛市价值 51.51</td><td>ROE 13.0%；权益成本 11.0%；增长 5.5%；BVPS 37.7735</td><td>合理 PB 为（13.0% − 5.5%）÷（11.0% − 5.5%）；再乘 37.7735 ＝ 51.51</td><td>分析假设；Wind 2026E BVPS</td></tr>
+      <tr><td>现价隐含 ROE 10.94%</td><td>现价 PB 0.913；权益成本 11.5%；增长 5.0%</td><td>5.0% ＋ 0.913 ×（11.5% − 5.0%）＝ 10.94%</td><td>Wind；基准模型反推</td></tr>
+      <tr><td>股息折现价值 35.29</td><td>普通股 EPS 4.7334；五年增速 8.0% 至 5.0%；派息率 30% 至 45%；权益成本 11.5%；终值增长 5.0%</td><td>五年股息现值加终值现值 ＝ 35.29</td><td>Wind 2026E 归母利润；半年报其他权益工具</td></tr>
+      <tr><td>基准含拟议股息回报 +10.6%</td><td>基准价值 37.77；拟议中期股息 0.40；现价 34.50</td><td>（37.77 ＋ 0.40）÷ 34.50 − 1 ＝ 10.6%</td><td>中期利润分配方案；Wind</td></tr>
+      <tr><td>含拟议股息平衡价 32.21</td><td>熊市 25.85；基准 37.77；股息 0.40</td><td>（25.85 ＋ 37.77 ＋ 2 × 0.40）÷ 2 ＝ 32.21</td><td>同一主方法、同一年末；上述情景输入</td></tr>
+      <tr><td>持有期拟议股息率 1.16%</td><td>拟议股息 0.40；现价 34.50</td><td>0.40 ÷ 34.50 ＝ 1.16%</td><td>中期利润分配方案；Wind</td></tr>
     </tbody>
   </table></div>
+  <p>股息折现从预测归母利润中扣除其他权益工具全年分派，再除普通股股数，得到普通股起始收益。优先股分派按面值与股息率估算，永续债按各期本金与票息估算；新发工具按全年负担处理，是保守的正常化调整，不代表本期已经支付。合计年分派约 10.48 亿元，普通股起始 EPS 为 4.7334 元。</p>
+  <p>其后五年收益增速依次假设为 8.0%、7.5%、7.0%、6.0%、5.0%，派息率依次为 30%、33%、36%、40%、45%。增长参照当前盈利增速逐年降至成熟期，派息率从接近现有分配水平逐步提高，体现扩表放缓后资本需求降低；均是分析假设。权益成本沿用基准门槛，终值增长取 5.0%、派息率取 45%，隐含稳态 ROE 约 9.09%。</p>
+  <p>终值占股息折现价值约 78.2%，故它仍高度依赖远期现金分配。终值回报低于主方法基准，解释了两种方法价值的差异，不能以两个相近结果当成完全独立的证明。主方法各情景使用共同预测净资产，刻画的是长期回报与风险补偿差异，没有另外模拟当年突发信用损失对净资产的冲击；若出现额外减值，熊市分母还需再下调。</p>
+</section>
 
+<section class="reveal on" id="risks">
+  <div class="slabel">风险登记 · 验证</div>
+  <h2>最强反证来自风险迁移，不来自表面不良率</h2>
+  <p>多头需要更多证据表明风险已被提前覆盖；若第二阶段、重组与对公贷款不良持续快于贷款增长，风险迁移的解释会更强。下表按潜在论点损害排序，概率是基于当前信号的定性分析，不是统计预测。</p>
+  <div class="tblscroll"><table class="tbl txt" data-fullscan-role="risk-register">
+    <caption>风险登记 · 截至 2026-09-05；下一节点为 2026-09-07 股东会、2026Q3 报告与 2026 年报</caption>
+    <thead><tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>领先风险继续恶化</td><td>2026H1：第二阶段与重组增速高于贷款，对公贷款不良余额约 +45.5%</td><td>贷款减值上升，普通股 ROE 跌破基准</td><td>个人业务承担较多减值；详细敞口见分部表</td><td>中高</td><td>2026Q3：累计减值与不良；阶段迁移及细分减值待年报</td></tr>
+      <tr><td>2</td><td>负债改善不能持续</td><td>2026H1：存款成本下降，但日均贷款增速高出日均存款 9.51 个百分点</td><td>资产收益继续下行时，息差降幅再次扩大</td><td>净利息收入占 H1 营收 70.9%</td><td>中</td><td>2026Q3：净息差；日均结构待年报完整披露</td></tr>
+      <tr><td>3</td><td>资本债不能直接补核心一级资本</td><td>2026-09-05：资本债仍是待审授权，尚未发行</td><td>若使用授权，可补其他层级资本，核心一级资本仍靠普通股与留存</td><td>普通股资本需承担扩表与分红；见资本表</td><td>中</td><td>2026-09-07：股东会结果与后续实际发行</td></tr>
+      <tr><td>4</td><td>手续费随市场回落</td><td>2026H1：手续费增长较快，推算 Q2 增速已放缓</td><td>非息增长减速，营收更依赖利息与扩表</td><td>H1 手续费净收入 43.17 亿元</td><td>中</td><td>2026 年报：财富管理资产规模、收费和净手续费同步性</td></tr>
+    </tbody>
+  </table></div>
   <div class="tline">
-    <div class="tstop"><div class="tw">2026-08-20</div><b>中报基线</b><p>利润加速，领先风险指标抬升。</p></div>
-    <div class="tstop"><div class="tw">2026Q3 报告</div><b>第一次验证</b><p>观察净息差、不良与拨备、累计信用减值和普通股资本。</p></div>
-    <div class="tstop warn"><div class="tw">2026 年报</div><b>完整迁徙复核</b><p>核对第二阶段、逾期、重组、分部减值与资管规模。</p></div>
-    <div class="tstop"><div class="tw">滚动十二个月</div><b>估值再锚定</b><p>只在三个经营条件同时兑现时上调倍数。</p></div>
+    <div class="tstop"><span class="tw">2026-09-07</span><b>股东会</b><p>确认中期股息与资本债授权是否通过。</p></div>
+    <div class="tstop"><span class="tw">2026Q3</span><b>第一次经营复核</b><p>看净息差、累计信用减值、不良与资本的方向。</p></div>
+    <div class="tstop warn"><span class="tw">2026 年报</span><b>证伪窗口</b><p>若领先风险仍快于贷款、普通股资本回落，判断下调。</p></div>
   </div>
-  <div class="callout"><b>最终判断：</b>宁波银行的 2026Q2 是一份值得肯定的经营答卷，不是一张风险免检证。现价低于 2026 年末基准情景下沿约 5%，适合继续跟踪基本面兑现；在用户未提供组合约束的前提下，本报告不建议具体仓位、止损或交易指令。</div>
+  <div class="plain"><span class="pl">白话解读</span><p>下一份季报先检验息差、利润和资本；详细的阶段贷款与平均余额若未披露，继续追踪至年报。若风险增长持续快于贷款，基准回报假设需要下调。</p></div>
+</section>
+
+<section class="reveal on" id="decision" data-fullscan-role="decision">
+  <div class="slabel">最终判断</div>
+  <h2 data-verdict="neutral-cautious">中性偏谨慎：经营兑现，价格保护不足</h2>
+  <p>增长引擎仍在工作，存款成本改善也是真实缓冲；但估值没有给足够大的熊市保护，下一份报表必须让领先风险指标与利润互相印证。</p>
+  <div class="tblscroll"><table class="tbl txt" data-fullscan-role="decision-block">
+    <tbody>
+      <tr><td>论点</td><td>经营杠杆提速、负债成本下降，但第二阶段与重组贷款更快增长；市场定价的是普通股回报继续收敛。</td></tr>
+      <tr><td>基准对一致预期</td><td>采用截至 2026-09-04 的 Wind 2026E 每股净资产 37.7735 元作共同起点，未另行改写年度盈利预测；长期 ROE 11.5% 为分析假设，Wind 一致预期 ROE 字段为空，不能直接比较。</td></tr>
+      <tr><td>赔率</td><td>至 2026 年末，若拟议中期股息按时支付：基准含息上行约 10.6%，熊市含息下行约 23.9%，按未舍入情景值算上行对下行约 0.45 比 1。</td></tr>
+      <tr><td>平衡价</td><td>32.21 元：至 2026 年末，计入拟议中期股息后，基准上行与熊市下行相等的价格。这是情景模型的性质，不是交易指令。</td></tr>
+      <tr><td>持有回报</td><td>从 2026-09-04 至 2026 年末，拟议中期股息 0.40 元对应现价 1.16%，不再年化；尚待 2026-09-07 股东会批准及实际支付。未计未宣布的回购。</td></tr>
+      <tr><td>分项置信度</td><td>经营证据：高；资产质量与资本：中；治理：中；估值输入：低。最低项上调需核实预测净资产的普通股调整，并由年报验证可持续回报及阶段风险迁移。</td></tr>
+      <tr><td>判断</td><td>中性偏谨慎（观察）。熊市损失超过基准上行，且资产质量仍需验证；下一检查点是季度报告的息差、减值与资本，详细阶段迁移待年报。</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><b>最强反方观点：</b>对谨慎判断最有力的反证，是领先风险增速回落、负债成本优势持续，使当前较高减值更可能体现提前覆盖风险。若这些条件兑现且普通股资本稳定，现价可能低估回报韧性。反之，若风险迁移持续加快，更高减值就更难解释为单纯主动加垫，并可能把普通股回报压到现价隐含水平以下。</div>
 </section>
 
 <section class="reveal on" id="glossary">
   <div class="slabel">名词速查</div>
-  <h2>读懂这份报告需要的十三个词</h2>
+  <h2>读懂这家银行需要的十五个词</h2>
   <div class="tblscroll"><table class="tbl gloss">
-    <thead><tr><th>术语</th><th>白话解释</th><th>本报告怎么用</th></tr></thead>
+    <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
     <tbody>
-      <tr><td>净息差 NIM</td><td>净利息收入除以平均生息资产，衡量每单位资产的利差收入。</td><td>观察资产与负债重定价的净结果。</td></tr>
-      <tr><td>拨备前利润 PPOP</td><td>扣除税金、管理费用等经营成本后、计提信用减值前的利润。</td><td>隔离当期拨备选择，观察经营引擎。</td></tr>
-      <tr><td>信用成本</td><td>一定期间的贷款减值相对平均贷款的比例。</td><td>连接资产质量与普通股盈利。</td></tr>
-      <tr><td>第二阶段</td><td>信用风险显著增加但尚未形成信用减值的金融资产。</td><td>比不良率更早观察风险迁徙。</td></tr>
-      <tr><td>拨备覆盖率</td><td>贷款损失准备除以不良贷款余额。</td><td>衡量已识别不良的账面缓冲。</td></tr>
-      <tr><td>CET1</td><td>核心一级资本，主要由普通股资本和留存收益构成。</td><td>衡量扩表、分红和损失吸收能力。</td></tr>
-      <tr><td>NPL</td><td>不良贷款率，已进入次级、可疑或损失分类的贷款占比。</td><td>观察已经确认的信用问题。</td></tr>
-      <tr><td>PB</td><td>股价除以每股净资产；银行估值必须匹配普通股分子与分母。</td><td>主估值方法。</td></tr>
-      <tr><td>BVPS</td><td>每股净资产；普通股估值应只使用归属于普通股的权益。</td><td>PB 的分母。</td></tr>
-      <tr><td>基点 bp</td><td>利率与比例变化单位，一百个基点等于一个百分点。</td><td>描述净息差和资本比率变化。</td></tr>
-      <tr><td>AUM</td><td>资产管理规模，不等于管理人的自有资产或最大损失敞口。</td><td>观察资管业务规模与手续费基础。</td></tr>
-      <tr><td>PE TTM</td><td>现价除以过去十二个月每股盈利的滚动市盈率。</td><td>同业屏幕估值的辅助字段。</td></tr>
-      <tr><td>DDM</td><td>把未来可分给普通股的股息折现到今天。</td><td>只作 PB 估值的交叉检查。</td></tr>
+      <tr><td>净利息收入</td><td>贷款和投资收到的利息，减去存款及市场资金付出的利息。</td></tr>
+      <tr><td>净息差（NIM）</td><td>净利息收入相对平均生息资产的比例，衡量单位资产赚到的利差。</td></tr>
+      <tr><td>拨备前利润（PPOP）</td><td>营业收入扣除日常运营成本、但尚未扣信用减值的利润。</td></tr>
+      <tr><td>信用减值总额</td><td>利润表中各类金融资产预期损失的合计，不等同于贷款信用成本。</td></tr>
+      <tr><td>贷款信用成本</td><td>贷款减值计提相对平均贷款的年化比例，必须使用贷款口径分子。</td></tr>
+      <tr><td>不良贷款率（NPL）</td><td>次级、可疑和损失类贷款占贷款总额的比例，是已经确认的问题资产。</td></tr>
+      <tr><td>第二阶段贷款</td><td>信用风险显著增加、但尚未达到信用减值状态的贷款。</td></tr>
+      <tr><td>拨备覆盖率</td><td>贷款损失准备相对不良贷款余额的倍数，衡量账面安全垫。</td></tr>
+      <tr><td>核心一级资本充足率（CET1）</td><td>最硬的普通股资本相对风险加权资产的比例，约束扩表与分红。</td></tr>
+      <tr><td>风险加权资产（RWA）</td><td>按不同风险权重折算后的资产规模，是资本充足率的分母。</td></tr>
+      <tr><td>普通股每股净资产（BVPS）</td><td>扣除优先股和永续债等其他权益后，普通股股东每股对应的净资产。</td></tr>
+      <tr><td>市净率（PB）</td><td>股价除以每股净资产；银行估值要保证分子分母都属于普通股。</td></tr>
+      <tr><td>普通股净资产收益率（ROE）</td><td>普通股盈利相对平均普通股权益的回报率，决定合理市净率。</td></tr>
+      <tr><td>权益成本（Ke）</td><td>普通股投资者要求的最低年回报率，是估值的折现门槛。</td></tr>
+      <tr><td>股息折现模型（DDM）</td><td>把未来可分给普通股的现金股息折回到估值时点。</td></tr>
     </tbody>
   </table></div>
 </section>
 
-<section class="reveal on" id="methods">
-  <div class="slabel">方法、边界与来源</div>
-  <h2>披露、派生值、管理层表述与情景假设分开存放</h2>
-  <p><strong>会计事实：</strong>以宁波银行、深圳证券交易所及巨潮资讯披露为准。主要文件包括<a href="https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202608/W020260820687054352020.pdf">2026 年半年度报告</a>、<a href="https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202604/W020260427626440606933.pdf">2026 年一季度报告</a>、<a href="https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202604/W020260427623779586889.pdf">2025 年年度报告</a>、<a href="https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202504/W020250410581930864660.pdf">2024 年年度报告</a>、<a href="https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202404/W020240422594867576266.pdf">2023 年年度报告</a>、<a href="https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202304/W020230406686465475288.pdf">2022 年年度报告</a>和<a href="https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202204/W020220713552210343829.pdf">2021 年年度报告</a>。</p>
-  <p><strong>市场与一致预期：</strong>价格、估值、同业、指数和预测数据取自万得，截止北京时间 2026-09-01 收盘。数据来源于万得 Wind 金融数据服务。万得一致预期不是公司管理层指引，也不代表本报告背书。</p>
-  <p><strong>派生值：</strong>2026Q2 与 2025Q2 的利润表流量由对应半年累计值减一季度累计值；其他非息收入、拨备前利润、普通股权益、调整后 BVPS、信用成本、市场隐含 ROE、股息折现和价格区间按报告披露公式计算。金额因四舍五入可能存在尾差。</p>
-  <p><strong>未披露与未使用：</strong>公司未披露独立 Q2 资产负债表、单季净息差或结果后电话会；未制造这些口径。银行经营现金流、资本开支和传统自由现金流不具与工业企业相同的经济含义，改用资本、流动性、拨备和普通股回报框架。统计贝塔本次返回为空，报告没有用主观数字替代。</p>
-  <p><strong>估值限制：</strong>合理 PB 对可持续 ROE、成本权益与长期增长高度敏感；DDM 的大部分价值来自终值。价格区间对应 2026 年末，是从 2026-09-01 起未来约四个月的未折现情景变化，不是估值日现值，也不是目标价承诺。同业与历史 PB LF 未逐一重算普通股分母，只作屏幕背景。</p>
-</section>
-
 <footer>
-  <p>报告日期：2026-09-01。财务披露截止：2026-06-30；行情截止：2026-09-01。2025 年报经审计并获标准无保留意见；2026 中报与一季报未经审计。</p>
-  <p>本报告用于研究与教育，不构成投资建议、收益保证或任何证券买卖要约。读者应结合自身目标、期限、流动性与风险承受能力独立判断。</p>
+  <p>数据截止：财务数据截至 2026-06-30；公司公告检索截至 2026-09-05；行情为 2026-09-04 15:30 北京时间收盘快照（来源：Wind）。</p>
+  <p>来源：宁波银行官方披露的<a href="https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202608/W020260820687054352020.pdf">2026 年半年度报告</a>、<a href="https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202604/W020260427626440606933.pdf">2026 年第一季度报告</a>、<a href="https://www.nbcb.com.cn/about_nbcb/information_diclosure/periodic_report/202604/W020260427623779586889.pdf">2025 年年度报告</a>及此前年度报告；另据半年度第三支柱报告、中期利润分配方案、第二次临时股东会材料及官方投资者关系活动记录。市场与同业数据来源于 Wind。</p>
+  <p>审计状态：2022–2025 年年度报告经审计；2026 年半年度报告和第一季度报告未经审计。推算单二季度只用于利润表流量；单季净息差、贷款信用成本、资产质量、资本与分部均未制造。监管资本为监管并表口径，信用风险采用权重法，市场与操作风险采用标准法。</p>
+  <p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p>
 </footer>
 
 </main>
