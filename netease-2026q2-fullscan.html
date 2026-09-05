@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:,">
-<title>网易 2026Q2 Fullscan 全景尽调</title>
-<style>
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="data:,"><title>网易 2026Q2 Fullscan 全景尽调</title><meta name="description" content="网易2026Q2 Fullscan：核对经营利润与归母利润背离、无限大上线计划、现金归属及含股份支付的正常化盈利估值。中性偏谨慎。"><style>
 :root{
   --paper:#EDEFF2;
   --card:#F8F9FB;
@@ -253,541 +247,283 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
 .tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
 .tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
-</style>
-</head>
-<body>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">网易 09999.HK ｜ FULLSCAN 全景尽调 ｜ 数据截止 2026.09.01</div>
-    <h1>主营利润加速，<br>投资损失拖慢股东回报</h1>
-    <p class="lede">游戏毛利率升至76.1%，把Q2营业利润推高33.4%。<b>但29.54亿元投资损失、汇兑损失与25.5%有效税率，把归母利润压低18.8%。</b>这不是经营崩坏，也不只是无关紧要的会计噪音：它同时检验网易的游戏长线运营与资本配置。</p>
-    <div class="dual">
-      <div>
-        <div class="tag">Q2 营业利润 · 单季未经审计</div>
-        <div class="big a">+33.4%</div>
-        <div class="cap">人民币120.89亿元；收入同比增长7.9%，营业利润率升至40.2%。</div>
-      </div>
-      <div>
-        <div class="tag">Q2 归母净利润 · 单季未经审计</div>
-        <div class="big b">−18.8%</div>
-        <div class="cap">人民币69.81亿元；投资损失与税率上升反转了主营改善。</div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main class="wrap">
-
-<section class="reveal on" id="tldr">
-  <div class="slabel">三十秒版本 · 先看结论</div>
-  <h2>利润表上有两家公司：经营中的网易，与投资中的网易</h2>
-  <div class="tldr">
-    <ul>
-      <li><b>它是谁：</b>网易以自研和代理游戏为核心，Q2游戏及相关增值服务占收入83.1%；有道、网易云音乐和创新业务贡献其余16.9%。投资者买入的是开曼注册网易公司的股权，而不是境内VIE股权；集团通过子公司及合同安排合并相关经济利益。</li>
-      <li><b>本期成绩：</b>Q2收入301.07亿元、同比增长7.9%，毛利率升至70.5%，营业利润120.89亿元、同比增长33.4%；归母净利润却降至69.81亿元。</li>
-      <li><b>核心矛盾：</b>游戏平台收入分成成本下降、长青游戏与《燕云十六声》推动主营杠杆；29.54亿元投资损失、4.36亿元汇兑损失及25.5%有效税率又吞掉改善。经营质量强，资本配置结果弱。</li>
-      <li><b>容易踩的坑：</b>公司非GAAP净利润只剔除股份支付，仍包含投资损失、汇兑和税；Q2现金资本开支异常低且期末另有5.22亿元固定资产应付款，不能把单季FCF直接年化。</li>
-      <li><b>结论：</b><b>中性偏积极，置信度中等。</b>现价HK$188.80；压力、基准、乐观静态价值约HK$134、HK$204、HK$269。基准上行仅约8%，适合等Q3验证游戏收入与毛利率，而不是仅凭“净现金很多”追价。</li>
-    </ul>
-  </div>
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
+</style></head><body>
+<header class="hero"><div class="wrap"><div class="eyebrow">网易 09999.HK / NTES.O ｜ 全景尽调 ｜ 2026Q2 · 更新至2026.09.05</div><h1>高毛利已兑现<br>低估仍要盈利延续</h1><p class="lede">游戏经营明显改善，归母净利润却被投资和汇兑拖累，表面降幅低估了主营进步。<b>但看懂利润，不等于买到折价。</b>新品计划更清楚后，真正需要验证的是持续盈利，而当前股价已经预付了部分改善。</p><div class="dual"><div><div class="tag">Q2营业利润 · 同比</div><div class="big a">+33.4%</div><div class="cap">直接成本改善支持经营增量；不等于净利润增幅</div></div><div><div class="tag">Q2归母净利润 · 同比</div><div class="big b">-18.8%</div><div class="cap">投资、汇兑及税费抵消了主营改善</div></div></div></div></header>
+<main class="wrap"><div class="callout"><b>修订 2026-09-05：</b>按新版研究框架重建财务与估值底图，更新《无限大》计划、普通股分母与股息权利，统一情景现值和最终判断；保留季度、半年及证据边界。</div>
+<section class="reveal on" id="tldr" ><div class="slabel">三十秒版本 · 先看结论</div><h2>先分清经营改善与股东回报</h2>
+<div class="tldr"><ul>
+<li><b>它是谁：</b>以自研游戏为核心的内容集团，长期运营老产品，同时投入新品；有道与云音乐已分别上市，但仍纳入集团报表。</li>
+<li><b>本期成绩：</b>单季营业利润同比增33.4%，归母净利润却降18.8%。投资、汇兑和税费解释了背离，不能只看最后一行利润。</li>
+<li><b>核心矛盾：</b>老产品和成本结构支持更高利润率，股价也已要求这种改善延续；《无限大》定档提高了可观察性，却没有证明盈利规模。</li>
+<li><b>容易踩的坑：</b>非GAAP仍保留投资亏损，不能当作“干净利润”；含利息收益的估值若再加整笔集团净现金，还会重复计价。</li>
+<li data-verdict="neutral-cautious"><b>结论：</b>中性偏谨慎。现价189.10港元、基准198.93港元、熊市103.72港元，后两者均为今天的资本价值估计；关键验证是持续盈利，而非预约热度。</li>
+</ul></div>
 </section>
 
-<section class="reveal on" id="primer">
-  <div class="slabel">入门 · 三分钟看懂这门生意</div>
-  <h2>开发只是起点，持续更新和分成结构才决定游戏现金流</h2>
-  <p>网易既开发自有知识产权游戏，也代理暴雪等外部产品。游戏上线后，内容更新、服务器运营、社区维护与付费设计共同决定生命周期；平台和渠道按约定参与分成。收入先经过这些直接成本形成分部毛利，再扣除营销、管理和研发形成营业利润。最后叠加投资、利息、汇兑、税项与少数股东，才到普通股股东的净利润。</p>
-  <div class="steps">
-    <div class="step"><div class="n">STEP 1</div><b>研发与授权</b><p>自研承担研发与失败风险；代理游戏减少原创风险，却支付授权及收入分成。</p></div>
-    <div class="step"><div class="n">STEP 2</div><b>上线与长线运营</b><p>版本、活动、UGC和社区让老游戏延寿；关键不是注册量，而是留存、活跃与付费。</p></div>
-    <div class="step"><div class="n">STEP 3</div><b>平台与分成</b><p>渠道费和开发商分成进入营业成本；本季较低的平台分成是毛利率上升的主要解释。</p></div>
-    <div class="step"><div class="n">STEP 4</div><b>股东结果</b><p>主营现金再进入存款、投资、股息和回购；投资损益和股份支付会改变每股回报。</p></div>
-  </div>
-  <p>四个会计分部只披露收入、营业成本和毛利，<strong>不披露分部营业利润、资产或现金流</strong>。因此不能把游戏毛利率当成游戏净利率，也不能用有道或云音乐的上市市值再加一次到已包含它们的合并盈利里。公司非GAAP口径仅加回股份支付，与“剔除一切非经营项目”的调整利润不是一回事。</p>
+<section class="reveal on" id="primer" ><div class="slabel">入门</div><h2>玩家付费之后，收入与现金并不同步</h2>
+
+<p>网易卖的不是一次性软件授权，而是持续更新的游戏体验和内容服务。玩家可以免费进入部分游戏，再为道具、外观或服务付费；集团还经营学习服务、在线音乐及其他业务。收入确认通常随虚拟物品消耗、服务提供或预计使用期展开，因此收款、流水和财报收入的时间会错开。</p>
+<div class="steps"><div class="step"><div class="n">环节 1</div><b>创作内容</b><p>研发和运营团队先投入，成功率取决于产品体验。</p></div><div class="step"><div class="n">环节 2</div><b>吸引玩家</b><p>自有渠道及外部平台带来用户，也可能分走收入。</p></div><div class="step"><div class="n">环节 3</div><b>确认收入</b><p>玩家付费后，按履约进度确认；未履约部分留下合同负债。</p></div><div class="step"><div class="n">环节 4</div><b>形成股东所得</b><p>直接成本、持续研发、营销、税费和少数股东权益都要扣除。</p></div></div>
+<p>游戏行业争夺玩家时间和付费意愿。上线后仍需维护内容、社交关系与公平体验；投放带来流量，留存影响后续回报。老产品与新品的确定性不同，所以营业利润率和新品留存需要一起看。</p>
+<p>港股与美股代表同一开曼母公司经济权益；美国存托股每份对应普通股的换算在估值附录列明。本文以香港上市普通股为每股单位，以集团美国会计准则报表为会计基础，不把上市子公司的独立报表直接相加。集团收入包含少数股东分享的业务，而归母净利润才对应网易普通股东。</p>
+<p>先看列头：FY为全年，H1为上半年，Q2为第二季度；它们与最近十二个月是不同期间。标注“推算”的是可复算结果，“≈”是研究假设；“未披露”不代表业务没有发生。非GAAP是公司自定义调整口径。</p>
 </section>
 
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">基础财务 · 合并与分部地图</div>
-  <h2>五年增长不快，利润与现金增长很快；Q2把这条趋势推到极致</h2>
-  <p>控制性公告直接披露截至2026年6月30日止三个月的Q2损益和现金流，也披露H1累计口径。Q2不是由H1减Q1推算。公告未经审计；H1中期财务资料由罗兵咸永道按ISRE 2410审阅。完整年度历史使用后续年报中的可比列报。</p>
+<section class="reveal on" id="financials" data-fullscan-sector="internet-platform" data-fullscan-role="basic-financials"><div class="slabel">财务底图</div><h2>扩张主要来自游戏，利润率抬升已有多年基础</h2>
 
-  <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">Q2 收入</div><div class="v">301.07<span class="u">亿元</span></div><div class="d"><span class="up">同比 +7.9%</span><span class="down">环比 −1.6%</span></div></div>
-    <div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">212.17<span class="u">亿元</span></div><div class="d"><span class="up">同比 +17.5%</span><span>70.5%</span></div></div>
-    <div class="cell"><div class="k">营业利润 / 利润率</div><div class="v">120.89<span class="u">亿元</span></div><div class="d"><span class="up">同比 +33.4%</span><span>40.2%</span></div></div>
-    <div class="cell"><div class="k">归母净利润</div><div class="v">69.81<span class="u">亿元</span></div><div class="d"><span class="down">同比 −18.8%</span><span>EPS 2.18元</span></div></div>
-    <div class="cell"><div class="k">经营现金流</div><div class="v">99.73<span class="u">亿元</span></div><div class="d"><span class="down">同比 −8.2%</span><span>直接披露Q2</span></div></div>
-    <div class="cell"><div class="k">自由现金流代理</div><div class="v">98.93<span class="u">亿元</span></div><div class="d"><span>经营现金流减两类现金资本开支</span></div></div>
-  </div>
+<div class="grid" data-financials="consolidated"><div class="cell" ><div class="k">单季收入</div><div class="v">301.07亿</div><div class="d"><span>+7.9% 同比</span></div></div><div class="cell" ><div class="k">毛利 / 毛利率</div><div class="v">212.17亿</div><div class="d"><span>70.5%（推算）</span></div></div><div class="cell" ><div class="k">经营利润 / 利润率</div><div class="v">120.89亿</div><div class="d"><span>40.2%（推算）</span></div></div><div class="cell" ><div class="k"><span class="g">归母净利润</span>（GAAP）</div><div class="v">69.81亿</div><div class="d"><span>本集团，归属普通股东</span></div></div><div class="cell" ><div class="k">经营现金流</div><div class="v">99.73亿</div><div class="d"><span>Q2直接披露，非半年数</span></div></div><div class="cell" ><div class="k"><span class="g">自由现金流代理</span></div><div class="v">98.93亿</div><div class="d"><span>推算，含内容版权支出</span></div></div></div>
+<div class="tblscroll"><table class="tbl" data-financials="history"><caption>人民币亿元，EPS为人民币元/普通股｜本集团US GAAP；五年均已审计；港股与美股为同一母公司。归母利润含已终止业务的年度例外见下文。<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0425/2024042503348_c.pdf" target="_blank" rel="noopener noreferrer">2023年报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0415/2026041501231_c.pdf" target="_blank" rel="noopener noreferrer">2025年报</a>。</caption><thead><tr><th>项目</th><th>FY2021</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>四年复合增速（推算）</th></tr></thead><tbody><tr><td>营业收入</td><td>876.06</td><td>964.96</td><td>1,034.68</td><td>1,052.95</td><td>1,126.26</td><td>6.5%</td></tr>
+<tr><td>毛利</td><td>469.71</td><td>527.66</td><td>630.63</td><td>658.07</td><td>724.02</td><td>11.4%</td></tr>
+<tr><td>营业利润</td><td>164.17</td><td>196.29</td><td>277.09</td><td>295.84</td><td>358.35</td><td>21.5%</td></tr>
+<tr><td>归母净利润</td><td>168.57</td><td>203.38</td><td>294.17</td><td>296.98</td><td>337.60</td><td>19.0%</td></tr>
+<tr><td>摊薄每股盈利（元）</td><td>5.01</td><td>6.17</td><td>9.05</td><td>9.19</td><td>10.48</td><td>—</td></tr>
+<tr><td>平均权益回报率ROE（推算，%）</td><td>19.00</td><td>20.33</td><td>25.69</td><td>22.59</td><td>22.58</td><td>—</td></tr>
+<tr><td>经营现金流</td><td>249.27</td><td>277.09</td><td>353.31</td><td>396.77</td><td>507.40</td><td>19.4%</td></tr>
+<tr><td>资本开支（推算）</td><td>31.10</td><td>26.43</td><td>42.76</td><td>22.06</td><td>20.52</td><td>—</td></tr>
+<tr><td>自由现金流代理（推算）</td><td>218.17</td><td>250.66</td><td>310.55</td><td>374.70</td><td>486.87</td><td>22.2%</td></tr></tbody></table></div><div class="cols"><div class="col"><div class="bars"><div class="bar rev" style="height:77.78503731387246%"></div><div class="bar np" style="height:14.967122055782472%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:85.67823980164687%"></div><div class="bar np" style="height:18.057673051789987%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:91.86896125858613%"></div><div class="bar np" style="height:26.11883793205584%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:93.49121556127893%"></div><div class="bar np" style="height:26.368387309313572%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:29.975190322054697%"></div></div></div></div><div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div><div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div><p class="small">利润扩张快于收入扩张。两组柱共用五年最高收入刻度，不把利润单独放大；数据对应上表。</p>
+<p>年度收入与营业利润为持续经营口径；FY2022归母利润包含已终止业务贡献6.25亿元，当年持续经营归母为197.13亿元。EPS保留公告实际摊薄数，包含子公司稀释对分子的调整。平均权益回报率按期初期末归母权益平均计算，不是公司披露的加权指标。</p>
+<div class="tblscroll"><table class="tbl" ><caption><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000466_c.pdf" target="_blank" rel="noopener noreferrer">Q2及中期公告</a>损益及现金流表，第12–13页｜人民币亿元；季度未经审计，H1经审阅；TTM为<span class="g">最近十二个月</span>推算。</caption><thead><tr><th>项目</th><th>2025Q2</th><th>2026Q1</th><th>2026Q2</th><th>2026H1</th><th>TTM至2026H1</th></tr></thead><tbody><tr><td>营业收入</td><td>278.92</td><td>305.91</td><td>301.07</td><td>606.98</td><td>1,166.03</td></tr>
+<tr><td>毛利</td><td>180.52</td><td>212.17</td><td>212.17</td><td>424.34</td><td>783.04</td></tr>
+<tr><td>营业利润</td><td>90.61</td><td>126.57</td><td>120.89</td><td>247.46</td><td>410.79</td></tr>
+<tr><td>归母净利润</td><td>86.01</td><td>106.74</td><td>69.81</td><td>176.55</td><td>325.12</td></tr>
+<tr><td>毛利率（推算，%）</td><td>64.72</td><td>69.36</td><td>70.47</td><td>69.91</td><td>67.15</td></tr>
+<tr><td>营业利润率（推算，%）</td><td>32.49</td><td>41.37</td><td>40.16</td><td>40.77</td><td>35.23</td></tr>
+<tr><td>经营现金流</td><td>108.62</td><td>137.33</td><td>99.73</td><td>237.06</td><td>514.77</td></tr>
+<tr><td>资本开支（推算）</td><td>5.03</td><td>6.02</td><td>0.80</td><td>6.83</td><td>14.79</td></tr>
+<tr><td>自由现金流代理（推算）</td><td>103.59</td><td>131.31</td><td>98.93</td><td>230.23</td><td>499.98</td></tr></tbody></table></div>
+<p>单季基础金额直接取公告，比率和现金代理另标推算；滚动值只对流量项目采用全年加本期半年减上年半年。资本开支包括物业设备软件及无形资产内容版权的现金购买。复合增速覆盖四个年度间隔，空横线表示未列该项增速。</p>
+<div data-financials="segments"><div class="tblscroll"><table class="tbl" ><caption>分部收入、毛利与结构｜亿元、%；收入及毛利为披露，增速/占比/毛利率为推算。历史分部按重述后口径。</caption><thead><tr><th>分部</th><th>FY2021收入→FY2025收入</th><th>复合增速</th><th>Q2收入/同比</th><th>Q2毛利/毛利率</th><th>Q2收入占比</th><th>H1收入/同比</th></tr></thead><tbody><tr><td>游戏及相关增值服务</td><td>678.19→921.49</td><td>8.0%</td><td>250.23 / +9.7%</td><td>190.49 / 76.1%</td><td>83.1%</td><td>507.36 / +8.3%</td></tr>
+<tr><td>有道</td><td>53.54→59.09</td><td>2.5%</td><td>14.67 / +3.5%</td><td>7.17 / 48.9%</td><td>4.9%</td><td>28.15 / +3.6%</td></tr>
+<tr><td>云音乐</td><td>69.98→77.59</td><td>2.6%</td><td>19.77 / +0.4%</td><td>7.40 / 37.4%</td><td>6.6%</td><td>39.59 / +3.4%</td></tr>
+<tr><td>创新及其他</td><td>74.35→68.09</td><td>-2.2%</td><td>16.39 / -3.5%</td><td>7.11 / 43.4%</td><td>5.4%</td><td>31.88 / -4.0%</td></tr></tbody></table></div><div class="stacks"><div class="stack"><div class="cap">2025Q2收入结构</div><div class="stackbar"><div class="seg p" style="width:81.76801140297691%">游戏 81.8%</div><div class="seg q" style="width:5.08231061438285%"></div><div class="seg r" style="width:13.14967798264024%"></div></div></div><div class="stack"><div class="cap">2026Q2收入结构</div><div class="stackbar"><div class="seg p" style="width:83.11411079836259%">游戏 83.1%</div><div class="seg q" style="width:4.872232769577752%"></div><div class="seg r" style="width:12.013656432059658%"></div></div></div></div><p class="small">收入进一步集中于游戏。三色依次为游戏、有道、云音乐加创新及其他；分部明细仍以上表四项为准。</p></div>
+<p>历史结构按游戏相关业务重分类后的比较数连接，避免把分类调整当作增长。管理层仅对分部配置收入及毛利，不配置营业费用和资产；因此毛利率不是分部净利率。最新量化地域信息仍是FY2025中国内地收入占89.9%；本期没有对应季度地域表，跨平台游戏也缺少可加总的手机、电脑收入拆分。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>经营指标层：披露口径不等于可直接建模的用户经济性｜来源：中期公告附注2及业务回顾。</caption><thead><tr><th>指标</th><th>最近披露/状态</th><th>研究边界</th></tr></thead><tbody><tr><td><span class="g">合同负债</span></td><td>半年末192.97亿元；年初205.15亿元</td><td>集团履约余额，非纯游戏流水</td></tr>
+<tr><td>活跃用户 / 付费用户</td><td>集团及游戏统一口径未披露</td><td>不把不同产品用户机械相加</td></tr>
+<tr><td>每用户收入（ARPU）</td><td>同口径未披露</td><td>缺少用户分母，不由收入倒猜</td></tr>
+<tr><td>变现率 / 单位经济</td><td>抽佣率、游戏获客成本未披露</td><td>渠道成本变化不等于单用户利润</td></tr>
+<tr><td>股份支付 / 非GAAP归母利润</td><td>Q2集团股份支付7.82亿元；非GAAP归母77.47亿元</td><td>与归母调整差额的区别见利润拆解</td></tr>
+<tr><td>在线音乐 / 社交娱乐 / 学习服务</td><td>H1收入30.67 / 8.91 / 14.23亿元</td><td>收入类型，不是额外可相加的分部；Q2同口径子分类未披露</td></tr>
+<tr><td>新品上线计划</td><td>《无限大》官网计划2027年1月15日全球上线</td><td>进度及兑现条件见产品观察</td></tr></tbody></table></div>
+<div class="plain"><span class="pl">白话解读</span><p>多年表的重点不是收入突然加速，而是更多收入转成了利润。当前利润率处于更高水平，但集团总利润仍会被投资和税费影响；下一节把这种背离逐项拆开。</p></div>
 
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>FY2021—25收入年复合增长只有6.5%，营业利润却年增21.5%，自由现金流代理年增22.2%。核心原因不是突然爆发的销量，而是游戏组合与直接成本改善让毛利率从53.6%升至64.3%，费用没有同速增长。</p>
-    <p>Q2又把毛利率推到70.5%，但归母利润没有跟随。这不是五年经营趋势反转，而是投资损益与税率从营业利润以下反向拉扯。读网易必须同时保留经营表和资本配置表。</p>
-  </div>
-
-  <h3>五年完整年度轨迹</h3>
-  <div class="tblscroll" data-financials="history">
-    <table class="tbl" data-financials="history">
-      <caption>FY2021—25合并历史 · 人民币亿元；ROE为归母利润／平均归母权益的分析代理；资本开支含物业设备软件及无形资产、内容、版权</caption>
-      <thead><tr><th>FY</th><th>收入</th><th>毛利 / 率</th><th>营业利润 / 率</th><th>归母利润 / 率</th><th>EPS</th><th>ROE</th><th>CFO</th><th>CAPEX</th><th>自由现金流代理</th></tr></thead>
-      <tbody>
-        <tr><td>2021</td><td>876.06</td><td>469.71 / 53.6%</td><td>164.17 / 18.7%</td><td>168.57 / 19.2%</td><td>5.07</td><td>19.0%</td><td>249.27</td><td>31.10</td><td>218.17</td></tr>
-        <tr><td>2022</td><td>964.96</td><td>527.66 / 54.7%</td><td>196.29 / 20.3%</td><td>203.38 / 21.1%</td><td>6.23</td><td>20.3%</td><td>277.09</td><td>26.43</td><td>250.66</td></tr>
-        <tr><td>2023</td><td>1,034.68</td><td>630.63 / 60.9%</td><td>277.09 / 26.8%</td><td>294.17 / 28.4%</td><td>9.15</td><td>25.7%</td><td>353.31</td><td>42.76</td><td>310.55</td></tr>
-        <tr><td>2024</td><td>1,052.95</td><td>658.07 / 62.5%</td><td>295.84 / 28.1%</td><td>296.98 / 28.2%</td><td>9.28</td><td>22.6%</td><td>396.77</td><td>22.06</td><td>374.70</td></tr>
-        <tr><td>2025</td><td>1,126.26</td><td>724.02 / 64.3%</td><td>358.35 / 31.8%</td><td>337.60 / 30.0%</td><td>10.59</td><td>22.6%</td><td>507.40</td><td>20.52</td><td>486.87</td></tr>
-        <tr class="grp"><td>FY21—25 CAGR</td><td>+6.5%</td><td>+11.4%</td><td>+21.5%</td><td>+19.0%</td><td>—</td><td>—</td><td>+19.4%</td><td>—</td><td>+22.2%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="cols" role="img" aria-label="网易FY2021至FY2025收入与营业利润趋势，具体数值见上表">
-    <div class="col"><div class="bars"><div class="bar rev" style="height:77.8%"></div><div class="bar np" style="height:45.8%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:85.7%"></div><div class="bar np" style="height:54.8%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:91.9%"></div><div class="bar np" style="height:77.3%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:93.5%"></div><div class="bar np" style="height:82.6%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:100%"></div></div></div>
-  </div>
-  <div class="collabels"><div><b>FY21</b>收入 / 营业利润</div><div><b>FY22</b>收入 / 营业利润</div><div><b>FY23</b>收入 / 营业利润</div><div><b>FY24</b>收入 / 营业利润</div><div><b>FY25</b>收入 / 营业利润</div></div>
-  <div class="legend"><span><i class="p"></i>收入</span><span><i class="m"></i>营业利润</span></div>
-
-  <h3>Q2、环比与LTM桥</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>人民币亿元；LTM＝FY2025＋2026H1−2025H1；FCF为内容投入后代理</caption>
-      <thead><tr><th>指标</th><th>2025Q2</th><th>2026Q1</th><th>2026Q2</th><th>同比</th><th>环比</th><th>LTM</th></tr></thead>
-      <tbody>
-        <tr><td>收入</td><td>278.92</td><td>305.91</td><td>301.07</td><td class="up">+7.9%</td><td class="down">−1.6%</td><td>1,166.03</td></tr>
-        <tr><td>毛利 / 毛利率</td><td>180.52 / 64.7%</td><td>212.17 / 69.4%</td><td>212.17 / 70.5%</td><td class="up">+17.5%</td><td>0.0%</td><td>783.04 / 67.2%</td></tr>
-        <tr><td>营业利润 / 利润率</td><td>90.61 / 32.5%</td><td>126.57 / 41.4%</td><td>120.89 / 40.2%</td><td class="up">+33.4%</td><td class="down">−4.5%</td><td>410.79 / 35.2%</td></tr>
-        <tr><td>归母净利润</td><td>86.01</td><td>106.74</td><td>69.81</td><td class="down">−18.8%</td><td class="down">−34.6%</td><td>325.12</td></tr>
-        <tr><td>经营现金流</td><td>108.62</td><td>137.33</td><td>99.73</td><td class="down">−8.2%</td><td class="down">−27.4%</td><td>514.77</td></tr>
-        <tr><td>FCF代理</td><td>103.59</td><td>131.31</td><td>98.93</td><td class="down">−4.5%</td><td class="down">−24.7%</td><td>499.98</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>Q2分部收入与毛利</h3>
-  <div class="stacks" role="img" aria-label="网易Q2收入与毛利分部构成，具体数值见表格">
-    <div class="stack"><div class="cap">收入构成 · 301.07亿元</div><div class="stackbar"><div class="seg p" style="width:83.1%">游戏 83.1%</div><div class="seg q" style="width:6.6%">音乐</div><div class="seg r" style="width:5.4%">创新</div><div class="seg" style="width:4.9%;background:#2C6A57">有道</div></div></div>
-    <div class="stack"><div class="cap">毛利构成 · 212.17亿元</div><div class="stackbar"><div class="seg p" style="width:89.8%">游戏 89.8%</div><div class="seg q" style="width:3.5%">音乐</div><div class="seg r" style="width:3.4%">创新</div><div class="seg" style="width:3.3%;background:#2C6A57">有道</div></div></div>
-  </div>
-  <div class="tblscroll">
-    <table class="tbl" data-financials="segments">
-      <caption>2026Q2单季 · 人民币亿元；利润披露只到毛利</caption>
-      <thead><tr><th>分部</th><th>收入</th><th>占比</th><th>同比</th><th>环比</th><th>毛利</th><th>毛利率</th><th>同比变化</th></tr></thead>
-      <tbody>
-        <tr><td>游戏及相关增值服务</td><td>250.23</td><td>83.1%</td><td class="up">+9.7%</td><td class="down">−2.7%</td><td>190.49</td><td>76.1%</td><td class="up">+5.9ppt</td></tr>
-        <tr><td>有道</td><td>14.67</td><td>4.9%</td><td class="up">+3.5%</td><td class="up">+8.8%</td><td>7.17</td><td>48.9%</td><td class="up">+5.9ppt</td></tr>
-        <tr><td>网易云音乐</td><td>19.77</td><td>6.6%</td><td>+0.4%</td><td>−0.2%</td><td>7.40</td><td>37.4%</td><td class="up">+1.4ppt</td></tr>
-        <tr><td>创新及其他</td><td>16.39</td><td>5.4%</td><td class="down">−3.5%</td><td class="up">+5.8%</td><td>7.11</td><td>43.4%</td><td class="up">+1.1ppt</td></tr>
-      </tbody>
-    </table>
-  </div>
 </section>
 
-<section class="reveal on" id="profit">
-  <div class="slabel">利润质量 · 从营业利润到归母</div>
-  <h2>29.54亿元投资损失制造了反差，25.5%税率把反差放大</h2>
-  <p>Q2营业利润同比增加30.28亿元，但归母净利润减少16.20亿元。最主要的反向项目，是投资收益从上年同期盈利3.28亿元变成亏损29.54亿元；公司解释为股票投资公允价值下降及减值。汇兑由收益转为亏损、税费增加也形成压力。少数股东损益的变化则小幅缓冲。</p>
+<section class="reveal on" id="profit" ><div class="slabel">利润质量</div><h2>净利润回落不能否定经营进步，也不能一笔勾销损失</h2>
 
-  <div class="wfall" role="img" aria-label="从2025Q2归母净利润到2026Q2归母净利润的同比桥，具体数字见每行">
-    <div class="wrow"><div class="nm">2025Q2归母<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:86%"></div></div><div class="fig">86.01</div></div>
-    <div class="wrow"><div class="nm">营业利润改善<span>主营贡献</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:30%"></div></div><div class="fig up">+30.28</div></div>
-    <div class="wrow"><div class="nm">投资损益变化<span>盈利转亏损</span></div><div class="wtrack"><div class="wbar down" style="left:18%;width:33%"></div></div><div class="fig down">−32.82</div></div>
-    <div class="wrow"><div class="nm">汇兑变化<span>收益转亏损</span></div><div class="wtrack"><div class="wbar down" style="left:44%;width:6%"></div></div><div class="fig down">−5.51</div></div>
-    <div class="wrow"><div class="nm">利息及其他变化<span>同比减少</span></div><div class="wtrack"><div class="wbar down" style="left:47%;width:3%"></div></div><div class="fig down">−2.20</div></div>
-    <div class="wrow"><div class="nm">税费增加<span>有效税率14.7%→25.5%</span></div><div class="wtrack"><div class="wbar down" style="left:41%;width:9%"></div></div><div class="fig down">−8.98</div></div>
-    <div class="wrow"><div class="nm">少数股东影响<span>缓冲项</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:3%"></div></div><div class="fig up">+3.02</div></div>
-    <div class="wrow"><div class="nm">2026Q2归母<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:70%"></div></div><div class="fig">69.81</div></div>
-  </div>
-  <p class="small">人民币亿元。桥使用原始精度：营业利润、投资、利息、汇兑、其他、税费及净利润与归母之间差异逐项对账；显示值四舍五入。</p>
-
-  <h3>费用率下降，让毛利改善真正落到营业利润</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Q2经营费用 · 人民币亿元；费用率为占收入比例</caption>
-      <thead><tr><th>项目</th><th>2025Q2</th><th>2026Q2</th><th>同比</th><th>费用率变化</th><th>解释</th></tr></thead>
-      <tbody>
-        <tr><td>销售及市场</td><td>35.78 / 12.8%</td><td>36.79 / 12.2%</td><td>+2.8%</td><td class="up">−0.6ppt</td><td>投入增加低于收入</td></tr>
-        <tr><td>一般及管理</td><td>10.57 / 3.8%</td><td>8.05 / 2.7%</td><td class="up">−23.8%</td><td class="up">−1.1ppt</td><td>形成明显经营杠杆</td></tr>
-        <tr><td>研发</td><td>43.57 / 15.6%</td><td>46.44 / 15.4%</td><td>+6.6%</td><td class="up">−0.2ppt</td><td>绝对投入仍增长</td></tr>
-        <tr class="grp"><td>经营费用合计</td><td>89.91 / 32.2%</td><td>91.28 / 30.3%</td><td>+1.5%</td><td class="up">−1.9ppt</td><td>收入增长快于费用</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="quote">本季度最重要的盈利事实，不是“净利润下滑”，而是每100元收入形成约40元营业利润、却只有约23元归母利润。</div>
-
-  <h3>非GAAP没有替投资者消除投资风险</h3>
-  <div class="grid">
-    <div class="cell"><div class="k">GAAP归母净利润</div><div class="v">69.81<span class="u">亿元</span></div><div class="d"><span class="down">同比 −18.8%</span></div></div>
-    <div class="cell"><div class="k">归母股份支付加回</div><div class="v">7.66<span class="u">亿元</span></div><div class="d"><span>唯一调整项目</span></div></div>
-    <div class="cell"><div class="k">非GAAP归母</div><div class="v">77.47<span class="u">亿元</span></div><div class="d"><span class="down">同比 −18.7%</span></div></div>
-  </div>
-  <p>公司非GAAP归母只加回股份支付，不剔除投资损失、汇兑、利息或税，因此同比方向几乎没有变化。对普通股东而言，股份支付会稀释未来权益，投资损失也是真实资本配置结果；两者都不应被简单删除。用于估值的“核心经营NOPAT代理”会另行从营业利润出发，并明确标准化税率。</p>
+<p>同比毛利改善、费用增量有限，形成主要经营贡献；投资损益转负、汇兑转弱和税费增加则全部抵消了增量。评价产品能力看经营部分，评价股东财富也要保留其余影响。下图依据<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000466_c.pdf" target="_blank" rel="noopener noreferrer">Q2及中期公告</a>的完整损益表。</p>
+<div class="wfall"><div class="wrow"><div class="nm">上年归母<span>2025Q2起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:73.10145724241158%"></div></div><div class="fig">+86.01</div></div><div class="wrow"><div class="nm">毛利改善<span>收入减直接成本</span></div><div class="wtrack"><div class="wbar up" style="left:73.10145724241158%;width:26.898542757588416%"></div></div><div class="fig">+31.65</div></div><div class="wrow"><div class="nm">经营费用变化<span>销售、管理、研发</span></div><div class="wtrack"><div class="wbar down" style="left:98.83910669290191%;width:1.1608933070980978%"></div></div><div class="fig">-1.37</div></div><div class="wrow"><div class="nm">投资损益变化<span>公允价值及减值等</span></div><div class="wtrack"><div class="wbar down" style="left:70.94384911999154%;width:27.89525757291036%"></div></div><div class="fig">-32.82</div></div><div class="wrow"><div class="nm">汇兑变化<span>本季与上年同季</span></div><div class="wtrack"><div class="wbar down" style="left:66.26480884981308%;width:4.679040270178459%"></div></div><div class="fig">-5.51</div></div><div class="wrow"><div class="nm">利息及其他变化<span>营业利润以下</span></div><div class="wtrack"><div class="wbar down" style="left:64.39840783324419%;width:1.8664010165688847%"></div></div><div class="fig">-2.20</div></div><div class="wrow"><div class="nm">税费变化<span>实际税费</span></div><div class="wtrack"><div class="wbar down" style="left:56.766857447564554%;width:7.631550385679642%"></div></div><div class="fig">-8.98</div></div><div class="wrow"><div class="nm">少数股东及可赎回调整<span>归属上市公司股东</span></div><div class="wtrack"><div class="wbar up" style="left:56.766857447564554%;width:2.5629336011592243%"></div></div><div class="fig">+3.02</div></div><div class="wrow"><div class="nm">本季归母<span>2026Q2终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:59.3297910487238%"></div></div><div class="fig">+69.81</div></div></div><p class="small">经营改善被营业利润以下的损失抵消。单位亿元，各变化额为本季减上年同季；起终点为归母利润，共用累计金额刻度，细项按未舍入值勾稽。</p>
+<h3>费用杠杆有依据，永久低成本还缺验证</h3>
+<p>销售、管理、研发费用率分别为12.2%、2.7%、15.4%（推算）。披露将集团成本下降主要归因于较低<span class="g">收入分成</span>及产品成本。这支持当期毛利改善，却没有给出渠道、平台、单款游戏分别贡献多少；把全部改善命名为永久“渠道红利”超出了证据。</p>
+<p>新品测试、内容更新和全球发行可能使费用先于收入发生；老产品需求改善则可能摊薄固定团队成本。若收入放缓但费用继续下降，短期利润也许更好，产品供给却未必更强。持续性需要收入、毛利和费用共同验证。</p>
+<h3>公司调整口径没有替投资组合免责</h3>
+<p>公司非GAAP归母利润只加回归属母公司的<span class="g">股份支付</span>7.66亿元，并未剔除投资和汇兑损失；集团股份支付与归母调整额也不是同一个数。主估值继续把员工股权报酬作为成本，只对未来投资、汇兑及其他非经营净额作公开情景假设，不把公司非GAAP重命名为可持续盈利。</p>
+<p>本季投资损失29.54亿元、汇兑损失4.36亿元，实际税率25.5%（税费除税前利润推算）。公允价值波动未必当季耗用现金，但对应资产价值风险；减值更可能体现资本配置损失。税费不会随账面亏损等额回落，标准化盈利若加回损失又保留全部潜在抵税好处，会显得过于乐观。</p>
+<div class="plain"><span class="pl">白话解读</span><p>游戏赚得更多，扣除投资损失等项目后、归属于网易股东的账面利润仍可能减少。投资亏损不等于游戏毛利变差，也不是“假损失”；后续投资及汇兑披露将检验拖累是否重复。</p></div>
 </section>
 
-<section class="reveal on" id="games">
-  <div class="slabel">游戏与产品周期 · 长青化、国际化、新品</div>
-  <h2>旧游戏撑住现金牛，新游戏决定下一次估值抬升</h2>
-  <p>Q2游戏及相关增值服务收入250.23亿元，同比增长9.7%，但环比下降2.7%；在线游戏占该分部97.7%。公司把同比增长归因于《梦幻西游》系列及《燕云十六声》等自研游戏，把环比下降归因于若干自研及代理游戏小幅回落。毛利率升至76.1%，管理层在电话会上把主要原因归结为平台收入分成成本下降。</p>
+<section class="reveal on" id="engine" ><div class="slabel">产品与需求</div><h2>新品日期更清晰，长青能力仍是主要支撑</h2>
 
-  <div class="grid">
-    <div class="cell"><div class="k">《蛋仔派对》注册用户</div><div class="v">7<span class="u">亿</span></div><div class="d"><span>管理层陈述；累计值</span></div></div>
-    <div class="cell"><div class="k">《蛋仔派对》月活</div><div class="v">&gt;1<span class="u">亿</span></div><div class="d"><span>管理层称保持在此水平</span></div></div>
-    <div class="cell"><div class="k">《逆水寒》手游大版本上线日活跃</div><div class="v">&gt;1,000<span class="u">万</span></div><div class="d"><span>管理层称并发用户两年新高</span></div></div>
-    <div class="cell"><div class="k">《燕云十六声》Steam好评</div><div class="v">&gt;87<span class="u">%</span></div><div class="d"><span>管理层陈述；Q2保持</span></div></div>
-    <div class="cell"><div class="k">《归唐》预告全球观看</div><div class="v">约4,000<span class="u">万</span></div><div class="d"><span>管理层陈述；不等于付费</span></div></div>
-    <div class="cell"><div class="k">单产品收入 / 利润</div><div class="v">未披露</div><div class="d"><span>不能用榜单排名代替财务贡献</span></div></div>
-  </div>
-
-  <div class="tline" aria-label="网易游戏产品验证时间线">
-    <div class="tstop"><div class="tw">2026Q2</div><b>老产品迭代</b><p>梦幻、第五人格、蛋仔、逆水寒、燕云继续贡献；暴雪代理产品在华更新。</p></div>
-    <div class="tstop warn"><div class="tw">2026.07</div><b>《遗忘之海》中国上线</b><p>初期学习曲线偏高、出现批评；管理层称将简化前期内容并持续优化。</p></div>
-    <div class="tstop"><div class="tw">开发中</div><b>《无限大》</b><p>持续打磨、展示新进度；没有给出正式上线日期或收入目标。</p></div>
-    <div class="tstop"><div class="tw">开发中</div><b>《归唐》</b><p>海外关注度较高；商业化、上线期和投入回收均未量化。</p></div>
-    <div class="tstop warn"><div class="tw">测试中</div><b>另两款产品</b><p>管理层只说达到用户要求后上线，没有给出确定时间表。</p></div>
-  </div>
-
-  <div class="finds">
-    <div class="find good"><div class="t">长线运营已被财务验证</div><p>FY2021—25游戏收入从678.19亿元增至921.49亿元，毛利从418.12亿元增至642.38亿元；Q2老产品与燕云继续支撑增长。利润不是押注单一新品才产生。</p></div>
-    <div class="find warn"><div class="t">新品仍未被财务验证</div><p>《遗忘之海》上线后管理层承认初期学习曲线问题；《无限大》《归唐》及测试产品都没有量化上线期、流水、留存或回收期。关注度不能先写进基准利润。</p></div>
-  </div>
-
-  <h3>国际化：方向成立，量化证据仍薄</h3>
-  <p>《燕云十六声》和《漫威争锋》在北美、欧洲等市场扩大覆盖；管理层称正准备《遗忘之海》全球上线，但未给日期。这些只是产品和运营信号。最新可量化地域信息仍只有FY2025：可报告分部收入的89.9%来自中国大陆，即境外约10.1%。Q2/H1地域收入、毛利、获客成本和现金回报均未披露，不能把海外榜单自动折算成利润。</p>
-  <div class="plain"><span class="pl">白话解读</span><p>网易当前像一支由老将带队的球队：老产品仍能得分，且渠道成本下降让每分更值钱；新品名单不算空，但上场时间和效率没有给。估值升级需要新品带来可持续增量，而不是只看预告片播放量。</p></div>
+<p><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000466_c.pdf" target="_blank" rel="noopener noreferrer">Q2及中期公告</a>将同比增长归因于《梦幻西游》系列、《燕云十六声》等自研作品，也指出部分自研及代理产品导致环比回落。多款作品支持增长，体现运营能力而非每次首发都成功；缺少分产品收入表，贡献排序不再量化。</p>
+<h3>老产品的优势，在于已有关系与持续内容</h3>
+<p>成熟游戏累积角色、好友和社群，玩家存在迁移成本；研发团队也能利用长期反馈改进内容。不过，内容失衡、付费设计损害公平感或更强竞品都可能松动这些关系。持续回归和付费比首发热度更接近可持续竞争力。</p>
+<p>授权代理游戏占FY2025集团收入9.5%。外部作品补足内容供给，也附带续约、分成和协调风险；自研则自担失败与维护成本。作品组合的现金回报，比单看自研占比更重要。</p>
+<h3>《无限大》从信息缺口变成可验证计划</h3>
+<p><a href="https://www.anantagame.com/" target="_blank" rel="noopener noreferrer">《无限大》官方网站</a>截至2026年9月5日写明计划于2027年1月15日全球上线；发行商Steam页面亦列出计划日期。这替代了业绩会时仅待后续活动更新的状态。该日期是发行计划，不代表已经完成上线、取得各地区全部审批，或已经证明付费留存。</p>
+<p>计划日期明确后，需要看首发稳定性、付费留存和营销开支。预约量只回答“有人知道”，不回答每位玩家贡献多少利润。模型基准给予温和新品贡献，牛市才要求更强的海外变现；没有按潜在玩家规模直接估算利润。</p>
+<p>《遗忘之海》在2026年7月于中国上线，属于后续经营观察，不解释第二季度收入。业绩会被问到初期体验问题时，管理层承认学习门槛并谈及简化引导、改善玩家反馈；这是部分回答，并没有量化流水、留存恢复或投资回收。《归唐》仍处于开发阶段，缺乏足以纳入确定收入的发布时间。</p>
+<h3>增长的第二来源尚未改变集团重心</h3>
+<p>有道将增量归因于学习服务，云音乐强调音乐会员扩张。前者要平衡教学体验与获客开支，后者要在会员收入与版权成本之间留住差额。分部毛利改善有经济意义，最终还要扣除运营费用和其他股东的归属。</p>
+<p>海外扩大受众，也增加本地化和发行复杂度。缺少最新地域盈利拆分，产品进度尚不能证明独立利润贡献。对于AI，管理层只是相信其能加快开发、改善体验；没有量化基线，模型不另设效率提升率。</p>
+<div class="plain"><span class="pl">白话解读</span><p>老游戏仍是主要支撑，新品定档只是开始；上线后的持续付费和营销开支，才能检验新品是否增加利润。</p></div>
+<p class="small">电话会来自2026年8月20日二级自动转录及既有音频抽查，并非官方逐字稿；未取得量化后续业绩指引。最新产品日期以官网为准。</p>
 </section>
 
-<section class="reveal on" id="portfolio">
-  <div class="slabel">业务组合 · 有道、云音乐与创新业务</div>
-  <h2>非游戏占17%收入，却只贡献约10%毛利</h2>
-  <p>分部结构说明网易仍是高度集中的游戏公司。有道和云音乐的利润质量改善，能提供小幅组合缓冲；但由于规模较小，它们不足以在游戏周期向下时独立稳定集团。创新及其他收入继续收缩，电商是主要拖累。</p>
-  <div class="rows">
-    <div class="row"><div class="nm">有道<span>收入14.67亿元</span></div><div class="track"><div class="fill moss" style="width:4.9%"></div></div><div class="fig">+3.5%<span>毛利率48.9%</span></div></div>
-    <div class="row"><div class="nm">网易云音乐<span>收入19.77亿元</span></div><div class="track"><div class="fill soft" style="width:6.6%"></div></div><div class="fig">+0.4%<span>毛利率37.4%</span></div></div>
-    <div class="row"><div class="nm">创新及其他<span>收入16.39亿元</span></div><div class="track"><div class="fill alt" style="width:5.4%"></div></div><div class="fig down">−3.5%<span>毛利率43.4%</span></div></div>
-  </div>
+<section class="reveal on" id="cash" ><div class="slabel">现金与资本</div><h2>现金充裕降低融资风险，分配效率仍须单独评估</h2>
 
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>经营信号与仍缺少的关键数据</caption>
-      <thead><tr><th>业务</th><th>Q2正面证据</th><th>边界 / 反证</th><th>下一验证点</th></tr></thead>
-      <tbody>
-        <tr><td>有道</td><td>学习服务推动增长；子曰4及AI工具继续迭代</td><td>绝对收入较小；AI订阅、客户留存与投入回收未量化</td><td>学习服务增速与营业利润</td></tr>
-        <tr><td>云音乐</td><td>毛利率同比升1.4ppt；管理层称DAU/MAU高于30%，续费改善</td><td>收入近乎持平；绝对会员数、ARPU及版权成本未披露</td><td>订阅收入、会员数与毛利率</td></tr>
-        <tr><td>创新及其他</td><td>毛利率小幅提高；严选聚焦宠物、香氛、家居</td><td>收入同比下降3.5%，公司明确电商减少</td><td>收入止跌与现金贡献</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>上市子公司只能做穿透校验，不能重复相加</h3>
-  <div class="grid">
-    <div class="cell"><div class="k">有道 · 网易持股</div><div class="v">56.6<span class="u">%</span></div><div class="d"><span>年报组织架构图，2026-03-31</span></div></div>
-    <div class="cell"><div class="k">有道持股市值</div><div class="v">约73.2<span class="u">亿元人民币</span></div><div class="d"><span>DAO市值×持股×汇率</span></div></div>
-    <div class="cell"><div class="k">云音乐 · 网易持股</div><div class="v">61.6<span class="u">%</span></div><div class="d"><span>年报组织架构图，2026-03-31</span></div></div>
-    <div class="cell"><div class="k">云音乐持股市值</div><div class="v">约101.6<span class="u">亿元人民币</span></div><div class="d"><span>9899.HK市值×持股×汇率</span></div></div>
-    <div class="cell"><div class="k">两项穿透值合计</div><div class="v">约174.8<span class="u">亿元人民币</span></div><div class="d"><span>仅作存在性与量级校验</span></div></div>
-    <div class="cell"><div class="k">正式估值处理</div><div class="v">不重复加总</div><div class="d"><span>盈利、现金已并入合并报表</span></div></div>
-  </div>
-  <p class="small">Wind股东表对两项持股给出不同口径；本报告以发行人年报组织架构图的56.6%与61.6%控制经济持股，并披露冲突。若把上市子公司持股市值加进估值，就必须同时从集团经营利润、净现金和少数股东中完整剔除对应业务；现有披露不足以无误完成该去重。</p>
+<p>经营活动长期提供资金，金融资产储备也较充裕，主要问题是留存资金的回报。集团现金、子公司现金和母公司可派现金之间存在边界，流动性多不等于全部可自由分配。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>半年末资产与现金转换｜亿元；债务、应收及权益为集团披露，其余注明推算。</caption><thead><tr><th>项目</th><th>金额/比例</th><th>含义</th></tr></thead><tbody><tr><td>公司定义净现金（推算复核）</td><td>1,675.00</td><td>现金、定存、受限现金和短投等，扣除借款</td></tr>
+<tr><td>其中受限现金（推算）</td><td>44.51</td><td>受担保或其他使用限制</td></tr>
+<tr><td>排除受限现金后的净额（推算）</td><td>1,630.49</td><td>仍含子公司、存款与投资，不等于母公司可立即分配额</td></tr>
+<tr><td>借款 / 总资产（推算）</td><td>126.04 / 5.4%</td><td>较低借款占比有助缓冲融资压力；仍需检验币种、期限及资金可动用性</td></tr>
+<tr><td>长期投资</td><td>213.36</td><td>资产价值、流动性与退出价格风险</td></tr>
+<tr><td>H1经营资产负债变动（推算）</td><td>-24.09</td><td>合计现金影响，不等同于利润</td></tr>
+<tr><td>H1应收周转天数（推算）</td><td>16.5天</td><td>平均应收除半年收入，按实际半年天数换算</td></tr>
+<tr><td>TTM现金代理 / 营业利润（推算）</td><td>121.7%</td><td>需连同预收、非现金费用和付款时点看待</td></tr></tbody></table></div>
+<p>半年合同负债现金流变动为-11.27亿元，与期初期末余额差-12.17亿元不同，差额具体构成未单列。这项集团余额又覆盖不同业务，故收入加余额变化不能直接命名为游戏流水。预收模式有助现金周转，但若后续收入来自消耗旧余额，现金领先优势可能减弱。</p>
+<p>本季现金资本开支偏低，期末另有固定资产应付款5.22亿元。现金代理因此保留了付款时点的好处；设备和版权采购随项目安排波动，不能将这个季度直接年化为永续自由现金流。研发多数已在经营费用中扣除，较低固定资产投入也不表示创作内容无需持续投资。</p>
+<h3>回购有执行，净股数仍可能上升</h3>
+<p>FY2021至FY2025母公司现金股息合计432.37亿元，另有纯母公司回购执行51.70亿美元（均为推算）。完整融资表未识别到同期普通股融资流入，支持公司是资金净返还者。两类金额保留原币种和执行/结算边界，不机械合成精确净现金回报。</p>
+<p>按官方月度对价相加，Q2纯母公司回购约192.2百万美元；H1披露合计324.1百万美元。历史材料中存在不同的季度数字，本文采用港交所月度表且不猜测差额原因。现金流表“回购及购买子公司股权”是混合项目，不能全部算成母公司股东回报。</p>
+<p>FY2025发行在外普通股数净增0.76%，至2026年8月末又比年初增0.29%（推算）。回购与奖励股份交付同时发生时，买回股票不保证每股分母缩小。未来回购额度是董事会选择权，不是固定支出承诺；估值既不预设股数下降，也不另加“回购收益率”。</p>
+<p>股息亦需区分宣派、权利和收款日：Q2每普通股宣派0.096美元，但港股已于2026年9月2日除净。9月4日新买入者不因支付日在后而重新获得该次股息。今后的分红仍由董事会决定，持有回报只能使用明确标注的未来假设。</p>
+<div class="plain"><span class="pl">白话解读</span><p>现金储备有助缓冲融资压力，不保证任何时候都无需融资。股东还要看投资和股息回报，以及后续月报里回购抵消员工交股后的实际股数。</p></div>
 </section>
 
-<section class="reveal on" id="cash">
-  <div class="slabel">现金流与资本配置 · 现金牛如何回到每股</div>
-  <h2>1,675亿元净现金提供保护，但投资损失说明现金并非天然无风险</h2>
-  <p>按公司净现金定义纳入的资产合计为1,801.04亿元，其中包括受限现金及非流动存款；扣除126.04亿元借款后，公司定义净现金1,675.00亿元，另有213.36亿元长期投资。净现金约占按不含库存股计算的当前人民币股权价值三成，是估值的重要缓冲，却不等于全部可立即分派：受限现金、子公司、VIE、税务和经营需求都会影响可用性。</p>
-  <div class="grid">
-    <div class="cell"><div class="k">期末净现金</div><div class="v">1,675.00<span class="u">亿元</span></div><div class="d"><span>公司定义；精确对账1,674.999亿元</span></div></div>
-    <div class="cell"><div class="k">长期投资账面</div><div class="v">213.36<span class="u">亿元</span></div><div class="d"><span>估值按0%—70%信用</span></div></div>
-    <div class="cell"><div class="k">LTM FCF代理</div><div class="v">499.98<span class="u">亿元</span></div><div class="d"><span>CFO减两类现金资本开支</span></div></div>
-    <div class="cell"><div class="k">Q2 FCF / 营业利润</div><div class="v">81.8<span class="u">%</span></div><div class="d"><span>现金转化仍高</span></div></div>
-    <div class="cell"><div class="k">H1已付股息</div><div class="v">82.95<span class="u">亿元</span></div><div class="d"><span>现金流量表</span></div></div>
-    <div class="cell"><div class="k">H1母公司回购</div><div class="v">3.241<span class="u">亿美元</span></div><div class="d"><span>约280万ADS</span></div></div>
-  </div>
+<section class="reveal on" id="governance" ><div class="slabel">治理与归属</div><h2>控制关系清楚，不代表利益始终一致</h2>
 
-  <div class="callout"><b>单季FCF不可直接年化。</b>Q2两类现金资本开支仅0.80亿元，期末固定资产采购应付款及计提债项却为5.22亿元，存在付款时点影响。报告采用内容投入后FCF代理，并用LTM平滑；公司没有披露正式“自由现金流”。</div>
-
-  <h3>股息、回购与股份支付要放在同一张表</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>截至2026-09-01可验证的资本回报与稀释</caption>
-      <thead><tr><th>项目</th><th>本期事实</th><th>经济含义</th><th>判断</th></tr></thead>
-      <tbody>
-        <tr><td>Q2股息</td><td>已批准每普通股US$0.096 / 每ADS US$0.480；截止日未支付</td><td>登记日09-03；普通股09-15派发，ADS预计约09-18支付</td><td>季度酌情决定，不是固定承诺</td></tr>
-        <tr><td>回购授权</td><td>上限US$5bn，至2029-01-09；截至06-30累计约US$2.3bn</td><td>截至该日执行约46%，仍有容量</td><td>执行节奏比授权更重要</td></tr>
-        <tr><td>H1母公司回购</td><td>约280万ADS / 1,403.6万普通股，US$324.1m</td><td>现金流量表另含购买子公司股份，不能混写</td><td>纯母公司口径以公告叙述为准</td></tr>
-        <tr><td>Q2股份支付</td><td>合并费用7.82亿元；归母非GAAP加回7.66亿元</td><td>非现金费用仍有未来稀释</td><td>不能完全忽略</td></tr>
-        <tr><td>未行使旧计划RSU</td><td>2026-07-31潜在4,314.3万股，约占1.35%</td><td>不等于全部会归属或发行</td><td>监测全面摊薄股数</td></tr>
-        <tr><td>8月新授予</td><td>112.37万股，零购买价，2027—29年9月1日分三批归属</td><td>每批受前一年度员工绩效门槛、持续资格及追索规定约束</td><td>规模小；绩效指标未披露</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>回购并未让Q2加权基本股数下降：同比反而增加0.5%，摊薄股数增加0.2%。公告没有拆解原因；时间点、奖励归属及库存股安排可能影响加权分母。这提醒投资者，评价回购要看全面摊薄股数和每股价值，而不是只看累计美元金额。计划剩余可授予容量约1.716亿股、约为现有不含库存股5.4%，只是授权上限，不是已发生稀释。</p>
+<p>网易的上市权益与境内经营资产之间存在法律结构距离。投资者持有开曼母公司股票，部分境内业务通过<span class="g">协议控制（VIE）</span>安排纳入集团，而非由上市母公司直接拥有其股权。FY2025由VIE产生的收入占比为85.2%；相关合同可能不如直接股权有效，年报表示其在中国内地法院的可执行性尚未经检验。风险来自控制安排与资金转移，不宜泛化为当前业务不能正常经营。</p>
+<p>丁磊截至2026年2月28日的实益持股为45.5%，具有重大影响力；普通股并无不同投票权安排。创始人经济利益与长期经营有重合，也可能在投资、关联安排和资本分配上与小股东偏好不同。监督重点应是决策结果及披露，而不是把集中持股直接等同于更好或更差的治理。</p>
+<p>截至2026年3月31日公司架构图，有道持股56.6%、云音乐61.6%。两家仍受控制并合并报表，上市子公司股东分享各自经济利益。母公司净利润已扣除相应归属，子公司现金又包含于集团资产；在集团PE估值上再加整笔持股市值或现金，会造成重复计算。</p>
+<h3>激励的成本分为费用与可能稀释</h3>
+<p>2026年8月28日授出约112.37万股普通股等值的<span class="g">受限制股份单位（RSU）</span>，购买价为零，归属跨越2027至2029年，并附员工绩效条件和追回条款。公告称本次没有向董事、行政总裁或主要股东授予。这些条件限制即时套现，却不使激励变成无成本资金。</p>
+<p>8月月报的旧、新奖励合计可能交付约4,406.88万股，相当于发行在外股数约1.38%（推算）。它是潜在交付毛额，未扣绩效未达、取消或库存股交付，不是精确全面摊薄股数。主模型在普通股分母中留有缓冲，并已在利润端扣股份支付；不把全部未使用计划额度当作确定稀释。</p>
+<p>年报披露的净资产分配限制不是另一桶受限现金，不能再次扣除。治理检验应看每股现金与权益增量，而不只是授权规模。</p>
+<div class="plain"><span class="pl">白话解读</span><p>上市母公司并不独占集团所有现金和利润，员工奖励也可能增加分享利润的股票数量。后续月报和实际分配能检验小股东所得是否跟上经营进步。</p></div>
 </section>
 
-<section class="reveal on" id="governance">
-  <div class="slabel">管理团队与股权结构分析 · 公司治理专项分析 · 区域市场与地理分布</div>
-  <h2>创始人控制力很强，VIE覆盖绝大部分收入；治理折价不能只看董事人数</h2>
-  <p>截至2026年2月28日，丁磊拥有约45.5%的实益权益，是决定战略和资本配置的关键人。公司通过合同安排控制境内VIE，FY2025约85.2%的合并收入来自VIE体系，但VIE资产只占合并资产约5.8%（剔除集团内部应收款）。这组反差说明轻资产游戏收入高度依赖牌照与合同控制，也说明“净现金很多”不等于所有资金都在上市公司母体自由流动。</p>
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="正常化GAAP盈利PE"><div class="slabel">估值</div><h2>经营值得溢价，但现价只比基准低一点</h2>
 
-  <div class="grid">
-    <div class="cell"><div class="k">丁磊实益权益</div><div class="v">45.5<span class="u">%</span></div><div class="d"><span>截至2026-02-28</span></div></div>
-    <div class="cell"><div class="k">FY2025 VIE收入占比</div><div class="v">85.2<span class="u">%</span></div><div class="d"><span>FY2023为87.7%</span></div></div>
-    <div class="cell"><div class="k">FY2025 VIE资产占比</div><div class="v">5.8<span class="u">%</span></div><div class="d"><span>剔除集团内部应收</span></div></div>
-    <div class="cell"><div class="k">中国大陆收入占比</div><div class="v">89.9<span class="u">%</span></div><div class="d"><span>FY2025可报告分部收入</span></div></div>
-    <div class="cell"><div class="k">香港双重主要上市</div><div class="v">2026.06.30</div><div class="d"><span>香港规则约束增强</span></div></div>
-    <div class="cell"><div class="k">8月新授予潜在稀释</div><div class="v">0.035<span class="u">%</span></div><div class="d"><span>112.37万股，2027—29分三批</span></div></div>
-  </div>
+<div class="grid"><div class="cell" ><div class="k">现价</div><div class="v">189.10港元</div><div class="d"><span>2026-09-04 16:08 香港时间</span></div></div><div class="cell" ><div class="k">熊市</div><div class="v">103.72港元</div><div class="d"><span>-45.2% 相对现价（不含股息）</span></div></div><div class="cell" ><div class="k">基准</div><div class="v">198.93港元</div><div class="d"><span>+5.2% 相对现价（不含股息）</span></div></div><div class="cell" ><div class="k">牛市</div><div class="v">274.43港元</div><div class="d"><span>+45.1% 相对现价（不含股息）</span></div></div><div class="cell" ><div class="k">隐含预期</div><div class="v">36.03%</div><div class="d"><span>2027营业利润率；其他基准假设固定</span></div></div><div class="cell" data-verdict="neutral-cautious"><div class="k">判断</div><div class="v">中性偏谨慎</div><div class="d"><span>等待盈利持续性验证</span></div></div></div>
+<div class="steps"><div class="step"><div class="n">方法 A</div><b>正常化GAAP盈利PE</b><p>回答含股份支付的持续盈利，今天值多少。</p></div><div class="step"><div class="n">方法 B</div><b>已实现盈利检验</b><p>用已报告的滚动盈利和市场倍数检查溢价。</p></div><div class="step"><div class="n">怎么读</div><b>主方法不机械平均</b><p>情景值是条件判断；历史便宜不保证回归。</p></div></div>
+<h3>第一步 · 市场没有按困境企业定价</h3>
+<p>Wind滚动PE位于自身五年12.01–43.73倍区间的33.5%分位，中位17.81倍。自算PE为16.10倍，市净率（PB，市值对归母净资产）为3.13倍。与供应商差异涉及股数、滚动每股盈利与更新时间；模型统一用公司月报普通股数及集团归母口径。</p>
+<h3>第二步 · 同业折价不是自动买点</h3>
+<div class="tblscroll"><table class="tbl" ><caption>同变现模式分层比较｜2026年9月4日Wind截面；PE为滚动、PB为最近披露；中国/香港/美国会计准则不完全相同。</caption><thead><tr><th>公司</th><th>市场</th><th>PE（倍）</th><th>PB（倍）</th><th>可比性边界</th></tr></thead><tbody><tr><td>网易</td><td>HKEX</td><td>16.26</td><td>3.16</td><td>大型长青游戏组合；含其他业务</td></tr>
+<tr><td>心动</td><td>HKEX</td><td>11.24</td><td>4.16</td><td>游戏外还有TapTap平台</td></tr>
+<tr><td>IGG</td><td>HKEX</td><td>6.55</td><td>1.17</td><td>移动游戏，产品结构不同</td></tr>
+<tr><td>三七互娱</td><td>深交所</td><td>12.65</td><td>2.98</td><td>发行与投放结构不同</td></tr>
+<tr><td>吉比特</td><td>上交所</td><td>12.86</td><td>4.76</td><td>规模较小，产品集中度不同</td></tr></tbody></table></div>
+<p>四家正盈利游戏同业PE中位11.94倍；基准PE取16倍，因为长青作品组合与规模可获得溢价，同时低于自身历史中位。这较同业中位高34.0%，并非纯低倍数判断。港股游戏为首层，A股同模式为补充；综合平台和亏损公司不进主要参照。</p>
+<h3>第三步 · 为可持续利润付价，不给非GAAP加分</h3>
+<p>选择<span class="g">正常化归母利润</span>PE，因为主营盈利、股份支付和投资损益能分离评估。四个分部缺少同口径独立营业利润，精确<span class="g">分部加总估值（SOTP）</span>缺乏可靠分摊依据。模型保留净利息，不再加净现金、长期投资或上市子公司持股价值。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>2027全年研究情景｜除推算结果外均为≈分析假设，不是指引；股份支付作为费用保留。</caption><thead><tr><th>驱动</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据</th></tr></thead><tbody><tr><td>游戏收入（亿元）</td><td>930</td><td>1,080</td><td>1,190</td><td>以最近游戏规模为起点；老品回落/温和新品/海外付费兑现</td></tr>
+<tr><td>其他业务收入（亿元）</td><td>180</td><td>180</td><td>190</td><td>参照年度分部规模，前两档稳定，牛市略增</td></tr>
+<tr><td>集团收入（亿元，推算）</td><td>1,110</td><td>1,260</td><td>1,380</td><td>游戏与其余三业务相加</td></tr>
+<tr><td>营业利润率（%）</td><td>32</td><td>38</td><td>40</td><td>含SBC；基准高于TTM但低于H1，牛市接近本季</td></tr>
+<tr><td>净利息（亿元）</td><td>28</td><td>33</td><td>36</td><td>参照TTM利息，留出降息及分配影响</td></tr>
+<tr><td>投资/汇兑/其他净额（亿元）</td><td>-15</td><td>0</td><td>0</td><td>熊市继续拖累；其余两档不依赖资产升值</td></tr>
+<tr><td>税率（%）</td><td>23</td><td>21</td><td>20</td><td>参考已披露税负；熊市保留更高税费压力</td></tr>
+<tr><td>少数股东及子公司稀释缓冲（亿元）</td><td>8</td><td>8</td><td>10</td><td>基于近期归属扣减，预留利润和稀释变化</td></tr>
+<tr><td>正常化归母利润（亿元，推算）</td><td>275.51</td><td>396.32</td><td>460.40</td><td>经营利润加净利息和非经营项，扣税及归属缓冲</td></tr>
+<tr><td>远期持续盈利增速（%）</td><td>2</td><td>7</td><td>10</td><td>分别对应低增长、长青延续、较强新品贡献；非永续承诺</td></tr>
+<tr><td>2027年末PE（倍）</td><td>12</td><td>16</td><td>19</td><td>取自身历史与同业为锚；低位/组合溢价/新品持续性溢价</td></tr>
+<tr><td>今日资本价值（港元/股，推算）</td><td>103.72</td><td>198.93</td><td>274.43</td><td>用上述盈利及PE定末期价值，再按同期限折现</td></tr></tbody></table></div>
+<p>三档均采用10%的港元<span class="g">要求回报（Ke）</span>，基于最近可得香港十年债券收益率3.64%加6.36个百分点权益风险余量；该债息为9月3日Wind新闻整理值，非9月4日成交报价。预测股数取32.5亿股，因为已在月报股数与奖励潜在交付量之上留出缓冲。</p>
+<p>预测2027全年盈利，在2027年末定价，再折回2026年9月4日。基准没有要求本期最高利润率永久维持，却高于滚动水平，仍需产品表现支持；熊市同时压低收入、利润率与倍数，是联合压力而非发生概率预测。</p>
+<div class="steps chain"><div class="step"><div class="n">经营驱动</div><b>游戏1,080亿元</b><p>长青延续，加温和新品贡献。</p></div><div class="step"><div class="n">收入 / 利润率</div><b>1,260亿元 / 38%</b><p>其余业务规模平稳。</p></div><div class="step"><div class="n">归母盈利</div><b>396.32亿元</b><p>扣税、少数股东及稀释缓冲。</p></div><div class="step"><div class="n">倍数 / 折现</div><b>16倍 / 10%</b><p>历史、同业及权益风险为锚。</p></div><div class="step"><div class="n">资本价值现值</div><b>198.93港元</b><p>预测股数已预留潜在稀释。</p></div></div><div class="ffield" aria-label="估值区间与市场参照"><div class="frow"><div class="fnm">正常化盈利PE<span>熊市，PE上下各移1倍</span></div><div class="ftrack"><div class="fbar alt" style="left:14.615226159219722%;width:7.202768392585401%"></div><div class="fmark" style="left:53.79166666666666%"></div></div><div class="fig">95.08–112.36</div></div><div class="frow"><div class="fnm">正常化盈利PE<span>基准，PE上下各移1倍</span></div><div class="ftrack"><div class="fbar " style="left:52.70790889626931%;width:10.361054519502572%"></div></div><div class="fig">186.50–211.37</div></div><div class="frow"><div class="fnm">正常化盈利PE<span>牛市，PE上下各移1倍</span></div><div class="ftrack"><div class="fbar moss" style="left:83.32622339161307%;width:12.03624704351256%"></div></div><div class="fig">259.98–288.87</div></div><div class="frow"><div class="fnm">已实现盈利检验<span>TTM × 四家游戏同业PE范围</span></div><div class="ftrack"><div class="fbar " style="left:6.56637286201215%;width:30.42521051662257%"></div></div><div class="fig">75.76–148.78</div></div><div class="frow"><div class="fnm">自身历史参照<span>TTM × 自身PE低点至中位</span></div><div class="ftrack"><div class="fbar moss" style="left:32.89795875898836%;width:27.983788413938647%"></div></div><div class="fig">138.96–206.12</div></div></div><p class="small">主方法把预计持续的每股利润乘市盈率（PE，即股价相当于年利润的倍数），再换算成今天价值。横轴：港元60–300；黑线是现价。前三行仅移动PE，后两行独立使用最近十二个月盈利（TTM）。</p>
+<p>已实现盈利检验低于主方法超过15%，因为滚动利润含投资及汇兑拖累，同业范围也未给同等溢价。正常化与溢价均需验证；不把不同口径取平均。</p>
+<div class="tblscroll"><table class="tbl sgrid"><caption>行：2027营业利润率（%）；列：年末PE（倍）；单元格为港元/股资本价值现值。深色边框为基准，浅红底为现价隐含，其他假设固定。</caption><thead><tr><th>营业利润率 ＼ PE</th><th>12倍</th><th>16倍</th><th>19倍</th></tr></thead><tbody><tr><td>32%</td><td>126.72</td><td>168.95</td><td>200.63</td></tr><tr><td>36.03%</td><td>141.83</td><td class="implied">189.10</td><td>224.56</td></tr><tr><td>38%</td><td>149.20</td><td class="base">198.93</td><td>236.23</td></tr><tr><td>40%</td><td>156.69</td><td>208.92</td><td>248.10</td></tr></tbody></table></div>
+<h3>第四步 · 股价已要求经营改善保留相当部分</h3>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="implied"><caption>一次只反推一项；其他输入固定于基准，均为资本现值口径，不包含未来现金股息。</caption><thead><tr><th>假设</th><th>基准假设</th><th>现价隐含</th><th>差距</th></tr></thead><tbody><tr><td>2027收入</td><td>1,260亿元</td><td>1,194.75亿元</td><td>-65.25亿元</td></tr>
+<tr><td>2027营业利润率</td><td>38%</td><td>36.03%</td><td>-1.97个百分点</td></tr>
+<tr><td>2027正常化归母利润</td><td>396.32亿元</td><td>376.73亿元</td><td>-4.9%</td></tr>
+<tr><td>2027年末PE</td><td>16倍</td><td>15.21倍</td><td>-0.79倍</td></tr>
+<tr><td>要求回报 / 股数 / 汇率</td><td>10% / 32.5亿股 / 人民币每港元0.86458</td><td>固定，不单独识别</td><td>同一股价不足以同时反推所有变量</td></tr></tbody></table></div>
+<p>隐含利润率仍高于过去完整年度；现价不是只要求“保持老水平”。任一反推值成立也不代表其他变量必然成立，特别是倍数与盈利往往在新游失利时一起下降。</p>
+<div class="rows" aria-label="情景资本现值与现价对比"><div class="row"><div class="nm">熊市<span>老品、费用与倍数共同承压</span></div><div class="track"><div class="fill alt" style="width:37.79514381087384%"></div></div><div class="fig">103.72<span>-45.2%</span></div></div><div class="row"><div class="nm">现价<span>2026年9月4日收市</span></div><div class="track"><div class="fill soft" style="width:68.90735641383439%"></div></div><div class="fig">189.10<span>市场价</span></div></div><div class="row"><div class="nm">基准<span>高利润率部分延续</span></div><div class="track"><div class="fill " style="width:72.490191595409%"></div></div><div class="fig">198.93<span>+5.2%</span></div></div><div class="row"><div class="nm">牛市<span>新品形成更持久的回报</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">274.43<span>+45.1%</span></div></div></div><p class="small">基准与现价接近，熊市折价明显更深。条宽按每股资本现值除以牛市值；涨跌幅以港股收市价为基准，未加未来股息。</p>
+<div class="plain"><span class="pl">一句话总结</span><p>基准资本价值只比现价高约5.2%，熊市则低约45.2%。好的产品组合已经得到一定认可；关键是往后的利润兑现能否足以补偿下行情景。</p></div>
 
-  <div class="plain"><span class="pl">白话解读</span><p><span class="g">VIE</span>不是上市公司直接持有境内运营牌照公司的股权，而是通过一组合同取得经济利益和控制。报表按会计规则合并，不代表这些合同在所有争议情景下与直接股权同样稳固；估值中的现金信用因此不应给满。</p></div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>治理问题不是静态打分，而是它如何进入每股价值</caption>
-      <thead><tr><th>问题</th><th>已知事实</th><th>价值传导</th><th>可验证动作</th></tr></thead>
-      <tbody>
-        <tr><td>控制权集中</td><td>创始人权益接近一半；丁磊是广州网易及杭州乐读两家VIE的99%登记股东</td><td>战略一致性高，外部股东制衡较弱</td><td>重大投资、关联交易与回购纪律</td></tr>
-        <tr><td>VIE可执行性</td><td>公司明确合同安排尚未在中国大陆法院进行过验证</td><td>极端监管或争议时可能影响控制与资金上划</td><td>牌照、监管及合同安排变化</td></tr>
-        <tr><td>双重主要上市</td><td>2026-06-30生效，适用香港企业管治守则</td><td>增加持续披露与香港规则约束</td><td>后续年报治理披露与豁免变化</td></tr>
-        <tr><td>股权激励</td><td>新授予零购买价，设员工绩效门槛、持续资格及追索规定</td><td>绩效指标未披露，无法判断是否与ROIC、现金回报或每股价值挂钩</td><td>摊薄股数与回购抵消程度</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>地域透明度仍有限：FY2025可报告分部收入约89.9%来自中国大陆，Q2没有按中国／海外披露收入、预订额、利润或投入。国际化故事只能用产品榜单和用户反馈作早期信号，不能据此制造海外收入占比。公司也未披露可支持分部资本回报率的资产与现金流。</p>
 </section>
 
-<section class="reveal on" id="market">
-  <div class="slabel">投资逻辑与核心增长驱动 · 行业与宏观环境分析 · 竞争对手与同业估值对比 · 股价走势与技术分析 · 贝塔与阿尔法分析</div>
-  <h2>市场已为现金与长青能力付费，却没有为新品全面成功定价</h2>
-  <p>网易的可持续超额回报来自三件事：长青内容降低获客与研发重置频率、渠道分成下降提高每元收入的毛利、净现金让公司能跨周期投入。反方机制也同样清楚：游戏需求非线性、版号和海外本地化增加不确定性，单一爆款不能稳定复刻；当新品稀疏时，高毛利率更可能成为比较基数而非继续上升的起点。</p>
+<section class="reveal on" id="valuation-appendix" ><div class="slabel">估值机制附录</div><h2>把货币、股数与期限放在同一尺度</h2>
 
-  <div class="grid">
-    <div class="cell"><div class="k">现价 · 2026-09-01</div><div class="v">188.80<span class="u">港元</span></div><div class="d"><span>16:08:18 HKT</span></div></div>
-    <div class="cell"><div class="k">Wind TTM / 预测PE</div><div class="v">16.24<span class="u">×</span></div><div class="d"><span>预测PE 14.02×</span></div></div>
-    <div class="cell"><div class="k">PB / 股息率</div><div class="v">3.16<span class="u">×</span></div><div class="d"><span>股息率2.41%</span></div></div>
-    <div class="cell"><div class="k">52周区间</div><div class="v">167.8—243.1</div><div class="d"><span>现价位于区间27.9%</span></div></div>
-    <div class="cell"><div class="k">三年最大回撤</div><div class="v">−33.15<span class="u">%</span></div><div class="d"><span>Wind日频，至2026-09-01</span></div></div>
-    <div class="cell"><div class="k">三年月线Beta</div><div class="v">0.40<span class="u">×</span></div><div class="d"><span>相对恒生科技，自算</span></div></div>
-  </div>
+<p>每股口径：<span class="g">美国存托股（ADS）</span>每份对应5股普通股。2026年6月5日至9月4日两地各有64个交易日观察，按统一美元口径的日均成交额，香港约为美国的1.92倍（推算），据此以港股为主市场。不是按股数流通比例判断流动性。两地非同步收市也意味着价格折算不是可即时交易的无风险价差。</p>
+<p>Wind价格时间为港股2026年9月4日16:08:06香港时间；美股当日常规收市价为119.29美元/ADS，交叉折合187.06港元/普通股。汇率取同日中间价：1美元＝6.7787人民币、1港元＝0.86458人民币，单位由中国外汇交易中心公告核对；未来汇率固定是模型假设。当前每股归母净资产为人民币52.20元，采用半年末权益和8月股数，注明日期错位。</p>
+<p class="small">分母原数：8月末不含库存股发行在外3,201,250,981股；已披露奖励毛额44,068,795股；合计压力代理3,245,319,776股；预测取3,250,000,000股。预留股份与未用计划容量不重复相加。来源：9月4日月报及奖励附注。</p>
+<p>三档<span class="g">资本价值现值（PV）</span>＝2027正常化归母利润÷预测普通股数÷人民币每港元汇率×年末PE÷折现因子。折现因子＝(1＋10%)^(483÷365)＝1.13442145。净利息已保留，营业利润含租赁和股份支付。当前TTM重估不再折现；历史参照不采用高峰倍数作为中枢。</p>
+<p>FY2025四季已宣派普通股DPS为0.135、0.114、0.114和0.232美元，合计0.595美元，按当前汇率约4.67港元。未来年股息假设4港元，低于该历史折值；按期限均匀应计并于期末一次支付，现值为4.67港元。实际宣派日与支付时点可能不同，股息为投资者税费前，已除净本期股息不计入未来所得。</p>
+<p>要求回报的风险余量是研究判断，不是市场实测风险溢价；同期美国十年国债4.78%仅作跨币种核对。FY2025末短期借款加权利率2.16%反映债务资金成本，不替代股权回报要求。计算保留未舍入数，展示按表头精度舍入；万元/千元统一换为亿元后运算。</p>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="derivations"><caption>承重推算明细｜金额默认亿元，每股及比率另标；公式显示值经舍入，精确输入与结果按原始披露精度计算。</caption><thead><tr><th>数值</th><th>输入</th><th>公式</th><th>来源（页·附注）</th></tr></thead><tbody><tr><td>Q2现金代理<br>98.93 亿元</td><td>经营现金流、含内容现金投入</td><td>99.72929 − 0.80339 ＝ 98.93</td><td>中期公告第13–14页，现金流及补充资料</td></tr>
+<tr><td>TTM收入<br>1,166.03 亿元</td><td>FY2025、2026H1、2025H1</td><td>1,126.25807 + 606.97827 − 567.20209 ＝ 1,166.03</td><td>年报合并损益表；中期公告第12页</td></tr>
+<tr><td>TTM营业利润<br>410.79 亿元</td><td>同上期间，营业利润</td><td>358.34867 + 247.46171 − 195.02243 ＝ 410.79</td><td>年报及中期合并损益表</td></tr>
+<tr><td>TTM归母利润<br>325.12 亿元</td><td>同上期间，归母利润</td><td>337.59800 + 176.54762 − 189.02167 ＝ 325.12</td><td>年报及中期合并损益表</td></tr>
+<tr><td>TTM现金代理<br>499.98 亿元</td><td>滚动现金流、资本开支</td><td>514.77285 − 14.78938 ＝ 499.98</td><td>两期中期与全年现金流表</td></tr>
+<tr><td>公司定义净现金<br>1,675.00 亿元</td><td>现金、定存、受限现金、短投等减借款</td><td>228.14542 + 1,019.78645 + 44.47483 + 505.99638 + 2.60000 + 0.03775 − 126.04170 ＝ 1,675.00</td><td>中期公告第11页资产负债表、现金说明</td></tr>
+<tr><td>排除受限现金净额<br>1,630.49 亿元</td><td>公司定义净现金、受限余额</td><td>1,674.99913 − 44.51258 ＝ 1,630.49</td><td>中期公告资产负债表，受限现金两项</td></tr>
+<tr><td>未来期限股息<br>5.29 港元/股</td><td>年DPS假设4港元，483天</td><td>4 × 483 ÷ 365 ＝ 5.29</td><td>年报股息表与未来分析假设</td></tr>
+<tr><td>熊市资本现值<br>103.72 港元/股</td><td>熊市末期股价、共同折现因子</td><td>117.662040 ÷ 1.13442145 ＝ 103.72</td><td>情景模型，非公司预测</td></tr>
+<tr><td>基准收入<br>1,260.00 亿元</td><td>游戏、其他业务</td><td>1080 + 180 ＝ 1,260.00</td><td>分部规模锚与研究假设</td></tr>
+<tr><td>基准归母利润<br>396.32 亿元</td><td>收入、利润率、非经营项、税、归属缓冲</td><td>(1260亿元 × 38% + 33 + 0) × (1 − 21%) − 8 ＝ 396.32</td><td>情景模型；归属基准参照中期损益表</td></tr>
+<tr><td>基准资本现值<br>198.93 港元/股</td><td>基准末期股价、共同折现因子</td><td>225.673008 ÷ 1.13442145 ＝ 198.93</td><td>情景模型，非公司预测</td></tr>
+<tr><td>牛市资本现值<br>274.43 港元/股</td><td>牛市末期股价、共同折现因子</td><td>311.315232 ÷ 1.13442145 ＝ 274.43</td><td>情景模型，非公司预测</td></tr>
+<tr><td>隐含营业利润率<br>36.03 %</td><td>现价反推利润、基准其他项</td><td>[(376.733744 + 8) ÷ (1 − 21%) − 33] ÷ 1,260亿元 × 100 ＝ 36.03</td><td>主方法反解；股价来自Wind</td></tr>
+<tr><td>平衡价<br>155.99 港元/股</td><td>基准、熊市资本与股息现值</td><td>(203.598194 + 108.385812) ÷ 2 ＝ 155.99</td><td>情景值与同期限未来股息假设</td></tr>
+<tr><td>现值赔率<br>0.18 倍</td><td>两情景总现值、现价</td><td>(203.598194 − 189.10) ÷ (189.10 − 108.385812) ＝ 0.18</td><td>上述现值；相对要求回报，不是胜率</td></tr>
+<tr><td>两地成交额比<br>1.92 倍</td><td>三个月同币种日均成交额</td><td>219,978,040.43 ÷ 114,533,183.16 ＝ 1.92</td><td>Wind日线，2026年6月5日至9月4日；固定汇率换算</td></tr></tbody></table></div>
 
-  <h3>同业只提供边界，不提供自动答案</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Wind快照 · 2026-09-01；预测口径依Wind一致化数据，但业务、会计与周期差异仍大</caption>
-      <thead><tr><th>公司</th><th>TTM PE</th><th>预测PE</th><th>PB</th><th>可比性判断</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>网易</td><td>16.24×</td><td>14.02×</td><td>3.16×</td><td>游戏现金牛＋净现金</td></tr>
-        <tr><td>腾讯</td><td>14.82×</td><td>14.89×</td><td>3.07×</td><td>中心锚；社交、广告、金融科技更分散</td></tr>
-        <tr><td>哔哩哔哩</td><td>29.97×</td><td>27.51×</td><td>2.89×</td><td>数字娱乐侧证，盈利阶段与规模不同</td></tr>
-        <tr><td>Take-Two</td><td>亏损</td><td>135.04×</td><td>11.32×</td><td>纯游戏运营侧证，倍数不可作为中心锚</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p><strong>最有力的同业反证是腾讯。</strong>它的业务更分散、平台壁垒更强，集团TTM PE反而低于网易。Wind口径下，网易TTM／预测PE之差隐含预测盈利高于当前TTM，腾讯则大致持平；这与“网易盈利回落更快”相反。两者的业务和现金口径不同，因此这里只把集团PE作为估值合理性校验，不能机械压住网易剔除财务损益、再加资产价值的核心NOPAT倍数。</p>
-
-  <h3>价格告诉我们情绪位置，不替代价值</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>完整月末未复权价格回报，不含股息；相对收益为百分点</caption>
-      <thead><tr><th>区间</th><th>网易</th><th>恒生科技</th><th>相对恒生科技</th><th>恒生指数</th><th>相对恒指</th></tr></thead>
-      <tbody>
-        <tr><td>1年</td><td class="down">−9.4%</td><td>−18.6%</td><td class="up">+9.2</td><td>+2.0%</td><td class="down">−11.4</td></tr>
-        <tr><td>3年</td><td class="up">+17.5%</td><td>+10.5%</td><td class="up">+6.9</td><td>+39.1%</td><td class="down">−21.6</td></tr>
-        <tr><td>5年</td><td class="up">+35.8%</td><td>−30.1%</td><td class="up">+65.9</td><td>−1.2%</td><td class="up">+37.0</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>Wind日频接口没有返回统计Beta、相关系数或Alpha，本报告不补空值；月线自算对恒生科技Beta为0.395、相关系数0.386，三年年化波动约32.8%。低统计Beta主要反映历史共同波动较低，<strong>不等于新品失败、监管变化或投资减值的基本面风险小</strong>。经济Alpha要由长青收入、成本结构和资本回报证明，而不是由回归系数宣告。</p>
 </section>
 
-<section class="reveal on" id="valuation">
-  <div class="slabel">估值分析与市场定价 · 反向预期</div>
-  <h2>基准价值约204港元：资产缓冲很厚，经营安全边际却不宽</h2>
-  <p>本报告使用“核心经营盈利倍数＋打折资产价值”的静态框架。LTM营业利润410.79亿元先按20%标准化税率形成税后经营利润，再扣除LTM少数股东利润6.62亿元，得到核心归母<span class="g">NOPAT</span>代理322.01亿元。这个方法剔除了营业利润以下的利息、投资与汇兑噪音，再分别给净现金和长期投资不同信用；由于两类资产仍为合并口径，最后扣除43.76亿元少数股东账面权益，作为少数股东资产请求权的审慎代理。</p>
+<section class="reveal on" id="risks" ><div class="slabel">风险与验证</div><h2>最重要的风险，是好利润率和新产品同时落空</h2>
 
-  <div class="grid">
-    <div class="cell"><div class="k">LTM核心归母NOPAT代理</div><div class="v">322.01<span class="u">亿元</span></div><div class="d"><span>20%税率为分析假设</span></div></div>
-    <div class="cell"><div class="k">现价反推核心倍数</div><div class="v">11.68<span class="u">×</span></div><div class="d"><span>按基准资产信用并扣NCI</span></div></div>
-    <div class="cell"><div class="k">现价反推核心盈利</div><div class="v">289.43<span class="u">亿元</span></div><div class="d"><span>给13×时，低于LTM 10.1%</span></div></div>
-    <div class="cell"><div class="k">压力价值</div><div class="v">133.56<span class="u">港元</span></div><div class="d"><span class="down">较现价 −29.3%</span></div></div>
-    <div class="cell"><div class="k">基准价值</div><div class="v">204.09<span class="u">港元</span></div><div class="d"><span class="up">较现价 +8.1%</span></div></div>
-    <div class="cell"><div class="k">乐观价值</div><div class="v">268.97<span class="u">港元</span></div><div class="d"><span class="up">较现价 +42.5%</span></div></div>
-  </div>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="risk-register"><caption>按对论点的损伤排序｜截至2026年9月5日；概率为定性判断，不赋予伪精确胜率。</caption><thead><tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr></thead><tbody><tr><td>1</td><td>毛利改善不能延续</td><td>2026H1利润率高于完整年度</td><td>产品结构或收入分成变化→集团利润率回落</td><td>情景利润率从38%回到32%，并可能伴随倍数收缩</td><td>中</td><td>2026Q3披露：游戏毛利、收入与三费方向</td></tr>
+<tr><td>2</td><td>新品进度或付费留存不及预期</td><td>2026年9月官网已给出计划日期</td><td>内容体验→留存与付费→新增盈利不足</td><td>单游戏敞口未披露；影响情景中的游戏收入及PE</td><td>中</td><td>2027年1月15日计划上线及随后运营更新</td></tr>
+<tr><td>3</td><td>投资配置继续损害净资产</td><td>2026Q2已有资产损失</td><td>估值调整、减值→股东盈利和账面权益</td><td>熊市允许非经营项再拖累15亿元，未假设全部恢复</td><td>中</td><td>2026Q3投资附注、处置现金及减值，年度审计再核对</td></tr>
+<tr><td>4</td><td>分配不及预期或稀释持续</td><td>2026年8月仍有待归属奖励</td><td>留存现金回报不足、股数增加→每股所得减少</td><td>零未来股息时平衡价降至151.33港元</td><td>中</td><td>2026年9月月报及下一次季报的派息决定</td></tr>
+<tr><td>5</td><td>法规及控制结构变化</td><td>FY2025境内VIE占比较高</td><td>许可或资金转移受约束→经营、折现要求受影响</td><td>无法从公开资料量化单项损失，不另造法律风险折价</td><td>低至中</td><td>2026年余下期间跟踪许可、数据及VIE正式公告</td></tr></tbody></table></div>
+<p>2026Q3先检验现有业务，计划上线日检验执行，2027全年检验新品盈利。首发收入不足以证明持续回报；若留存好但费用更高，利润也可能慢于销售兑现。长青持续超预期时，则应重估基础。</p>
+<div class="plain"><span class="pl">白话解读</span><p>最需要防的是老游戏利润率回落，同时新品赚不到预期的钱。下一次业绩先看游戏毛利和费用，新品上线后再看持续付费。</p></div>
+<div class="tline"><div class="tstop"><span class="tw">2026Q3</span><b>先看现有业务</b><p>披露日期待公告；对照产品表现与经营费用。</p></div><div class="tstop"><span class="tw">2027年1月15日</span><b>观察计划落地</b><p>官方计划，不保证收入；首发体验只是起点。</p></div><div class="tstop warn"><span class="tw">2027全年</span><b>留存与利润共同验证</b><p>若依靠高投放而缺乏持续付费，基准盈利需下修。</p></div></div><p class="small">验证由经营延续走向新品回报。日期窗口与上表一致，警示节点针对基准假设的失效，不把未公布的业绩发布日期写成确定日程。</p>
 
-  <div class="steps">
-    <div class="step"><div class="n">01 · NORMALIZE</div><b>标准化经营盈利</b><p>营业利润税后化并扣少数股东，不把投资公允价值波动混入核心。</p></div>
-    <div class="step"><div class="n">02 · MULTIPLE</div><b>给周期倍数</b><p>压力10×、基准13×、乐观16×，由新品成功率与长青稳定性决定。</p></div>
-    <div class="step"><div class="n">03 · ASSETS</div><b>资产打折加回</b><p>净现金给60%—100%信用，长期投资给0%—70%，再扣少数股东权益代理。</p></div>
-    <div class="step"><div class="n">04 · PER SHARE</div><b>换算每股</b><p>使用32.0125亿不含库存股及人民币兑港元1.1561。</p></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>静态情景估值 · 股权价值人民币十亿元；子公司已并表，不重复加市值；各情景扣少数股东账面权益4.376</caption>
-      <thead><tr><th>情景</th><th>核心盈利</th><th>核心倍数</th><th>净现金信用</th><th>长期投资信用</th><th>股权价值</th><th>每股港元</th></tr></thead>
-      <tbody>
-        <tr><td>压力</td><td>27.371</td><td>10×</td><td>60%</td><td>0%</td><td>369.830</td><td>133.56</td></tr>
-        <tr class="grp"><td>基准</td><td>32.201</td><td>13×</td><td>85%</td><td>40%</td><td>565.143</td><td>204.09</td></tr>
-        <tr><td>乐观</td><td>35.421</td><td>16×</td><td>100%</td><td>70%</td><td>744.792</td><td>268.97</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>价格梯：每一档都对应一个不同命题</h3>
-  <div class="rows">
-    <div class="row"><div class="nm">HK$134<span>压力锚</span></div><div class="track"><div class="fill alt" style="width:50%"></div></div><div class="fig">净现金打六折<span>盈利−15%</span></div></div>
-    <div class="row"><div class="nm">HK$189<span>现价</span></div><div class="track"><div class="fill soft" style="width:70%"></div></div><div class="fig">市场价<span>09-01收盘</span></div></div>
-    <div class="row"><div class="nm">HK$204<span>基准锚</span></div><div class="track"><div class="fill" style="width:76%"></div></div><div class="fig">13×核心<span>资产折价</span></div></div>
-    <div class="row"><div class="nm">HK$269<span>乐观锚</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">新品成功<span>资产高信用</span></div></div>
-  </div>
-
-  <div class="plain"><span class="pl">白话解读</span><p>现价并没有按16倍给核心游戏业务：把基准认可的现金与投资先扣掉、再加回少数股东请求权，剩余经营价值约等于核心盈利的11.7倍。问题在于这部分“便宜”依赖资产真实可用、投资损失不持续，以及现有游戏利润不塌陷。基准只多出约8%，尚不足以覆盖模型误差。</p></div>
-  <p class="small">估值不是公司指引。20%标准化税率、三组盈利、倍数和资产信用均为分析假设。少数股东账面权益只是其合并资产请求权的审慎代理，不是精确分部净现金分配。Wind市值使用总股本；情景每股值使用公告中不含库存股股数，因此两者有小幅口径差。上市有道与云音乐已并入利润、现金与少数股东，正式模型不另加其持股市值。</p>
 </section>
 
-<section class="reveal on" id="forecast">
-  <div class="slabel">盈利预测 · 有边界的三年情景</div>
-  <h2>管理层没有财务指引，精确小数只会制造虚假的确定性</h2>
-  <p>公司没有提供2026H2收入、预订额、利润率、资本开支或现金流指引，也没有披露单款游戏经济性。下面的三年框架只回答“什么经营轨迹与估值情景相容”，不冒充卖方一致预期。核心变量是游戏收入、毛利率能否守住、管线兑现频率，以及投资损失是否回归常态。</p>
+<section class="reveal on" id="decision" data-fullscan-role="decision" data-verdict="neutral-cautious"><div class="slabel">最终判断</div><h2>中性偏谨慎：等待更好的价格或更强的持续盈利证据</h2>
 
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>分析情景 · 人民币十亿元；核心NOPAT＝收入×营业利润率×80%×97.98% LTM归母系数；FCF＝收入×表内FCF率</caption>
-      <thead><tr><th>情景</th><th>指标</th><th>2026E</th><th>2027E</th><th>2028E</th><th>核心假设</th></tr></thead>
-      <tbody>
-        <tr><td>压力</td><td>收入 / 营业利润率</td><td>117 / 34%</td><td>112 / 32%</td><td>116 / 33%</td><td>新品延迟，长青游戏回落</td></tr>
-        <tr><td></td><td>核心NOPAT / FCF / FCF率</td><td>31 / 43 / 37%</td><td>28 / 36 / 32%</td><td>30 / 39 / 34%</td><td>平台成本利好部分逆转</td></tr>
-        <tr class="grp"><td>基准</td><td>收入 / 营业利润率</td><td>119 / 35%</td><td>126 / 35.5%</td><td>134 / 36%</td><td>老游戏稳，新品按序贡献</td></tr>
-        <tr class="grp"><td></td><td>核心NOPAT / FCF / FCF率</td><td>33 / 48 / 40%</td><td>35 / 52 / 41%</td><td>38 / 56 / 42%</td><td>渠道结构大致维持</td></tr>
-        <tr><td>乐观</td><td>收入 / 营业利润率</td><td>121 / 36%</td><td>134 / 37%</td><td>148 / 38%</td><td>国际新品形成第二曲线</td></tr>
-        <tr><td></td><td>核心NOPAT / FCF / FCF率</td><td>34 / 51 / 42%</td><td>39 / 59 / 44%</td><td>44 / 68 / 46%</td><td>长青化提高增量利润率</td></tr>
-      </tbody>
-    </table>
-  </div>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="decision-block"><caption>同一期限决策框架｜从2026年9月4日至2027年12月31日；使用主方法，不与交叉检验切换。</caption><tbody><tr><td>论点</td><td>盈利结构优于表面归母降幅所暗示，但现价已经依赖部分高利润率与新品贡献延续；历史经营质量不等于足够折价。</td></tr>
+<tr><td>基准对一致预期</td><td>无可确认财年的2027一致预期；Wind仅给预测PE14.078倍，未说明预测年，不能反称模型领先市场。以隐含预期表作可检验替代。</td></tr>
+<tr><td>赔率</td><td>计入同期限未来股息现值后，基准上行7.7%，熊市下行42.7%；相对10%要求回报的现值赔率0.18倍。它不是胜率，也不是期末投资回报赔率。</td></tr>
+<tr><td>平衡价</td><td>155.99港元：在上述基准与熊市、相同未来股息假设下，上行与下行金额相等；这是情景属性，不是交易指令。</td></tr>
+<tr><td>持有回报</td><td>483天未来股息假设5.29港元，约现价2.8%；未来回购贡献0。基准若兑现，含股息期末总回报22.1%、折合年化16.3%；熊市对应-35.0%。这些条件回报不可与当前现值空间混同。</td></tr>
+<tr><td>分项置信度</td><td>经营证据：高；现金与资产：中；治理归属：中；估值输入：低。2026Q3费用表现和2027H1披露的新品运营、盈利信息可提升最低项；只有上线日期不足以升级。</td></tr>
+<tr><td>判断</td><td>中性偏谨慎（等待验证）。优先检验季度游戏经营与计划首发，若持续盈利基础改变，重做模型而非只移动倍数。</td></tr></tbody></table></div>
+<div class="callout"><b>最强反方观点：</b>长青作品的持续性与新品全球回报可能超过谨慎假设，投资损失又不再重复，等待者可能错过盈利上台阶后的重估。能够推翻当前谨慎判断的是持续付费与盈利的共同证据；若靠投放换热度、费用和资产损失反复，基准也将失效。</div>
 
-  <h3>管理层问答把不确定性暴露得很清楚</h3>
-  <div class="finds">
-    <div class="find warn"><div class="t">《遗忘之海》的承认比乐观措辞更重要</div><p>管理层在2026-08-20电话会上承认初期学习曲线过陡、批评影响体验，并称将简化早期内容；但没有回答分析师要求的下一季预订额。修复动作可验证，财务效果仍未披露。</p></div>
-    <div class="find"><div class="t">《无限大》仍没有可投资时间表</div><p>管理层当时称产品处于打磨阶段，并预告将在Gamescom展示进度；本报告未取得可核验的会后更新。公司未给发布日期、测试留存、预算或商业化目标。</p></div>
-    <div class="find"><div class="t">AI是叙事，不是模型输入</div><p>管理层把AI称为研发“放大器”，但没有披露开发周期、成本、质量或产能改善KPI。本报告不给任何AI效率红利。</p></div>
-    <div class="find"><div class="t">精简管线需要更高命中率</div><p>分析师明确提出新品较少且基数更高的问题；管理层重申精品战略，却没有给管线数量、档期或增长桥。基准只假设温和贡献，乐观情景才计入第二曲线。</p></div>
-  </div>
-  <p class="small">电话会没有发行人正式文字稿。官方页面与回放链接用于确认会议身份；观点依据二级转录，关键问答使用同一二级Quartr音频镜像核对。官方回放需填写访客信息，本报告未抓取其音频。会计数字全部回到HKEX公告；7月上线与8月活动是期后经营事项，不是Q2收入。</p>
 </section>
 
-<section class="reveal on" id="risk">
-  <div class="slabel">风险因素与预警信号 · 投资验证与筹码分析 · 多空辩论</div>
-  <h2>真正的争议不是Q2好不好，而是40%营业利润率能守多久</h2>
-  <div class="finds">
-    <div class="find good"><div class="t">多方最强证据</div><p>五年收入复合增速不高，营业利润和FCF代理却增长逾两成；Q2游戏毛利率上升近六个百分点，老产品活跃与海外榜单支持长线运营能力，1,675亿元净现金提高容错。</p></div>
-    <div class="find warn"><div class="t">空方最强证据</div><p>新品财务数据与海外分部数据缺失，管线被分析师形容为偏精简；腾讯估值并不更贵；29.54亿元投资损失和较高税率说明营业利润以下的资本配置可能持续侵蚀股东回报。</p></div>
-    <div class="find"><div class="t">争议如何解决</div><p>下一季若游戏收入维持约250亿元、游戏毛利率守在73%以上、集团营业利润率不低于36%，且大额投资损失不重复，基准情景可信度上升。</p></div>
-    <div class="find warn"><div class="t">什么会证伪</div><p>游戏收入跌破235亿元、毛利率回到70%以下，新作修复仍无留存或商业化证据，或投资损失连续两个季度显著侵蚀税前利润，均会把估值推向压力区。</p></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>按对投资命题的破坏力排序；概率为定性判断，不是统计预测</caption>
-      <thead><tr><th>风险</th><th>当前信号</th><th>破坏路径</th><th>预警指标</th><th>判断</th></tr></thead>
-      <tbody>
-        <tr><td>游戏组合回落</td><td>Q2环比收入下降；新品经济性未披露</td><td>收入与高增量毛利同时收缩</td><td>分部收入、毛利率、老游戏活跃</td><td>高影响 / 中概率</td></tr>
-        <tr><td>管线延迟或失利</td><td>多款产品无日期；《遗忘之海》早期体验受批评</td><td>增长空档拉长，研发营销回报下降</td><td>测试、版号、发布日、留存与榜单持续性</td><td>高影响 / 中概率</td></tr>
-        <tr><td>投资与减值</td><td>Q2股票公允价值下降及减值，但无逐项标的</td><td>净利润、现金信用和估值折价恶化</td><td>投资损益、长期投资、13F与减值披露</td><td>中高影响 / 中概率</td></tr>
-        <tr><td>监管与VIE</td><td>收入高度集中境内VIE；合同安排尚未在中国大陆法院进行过验证</td><td>产品上线、控制权或资金上划受限</td><td>版号、数据规则、合同和分红路径</td><td>极高影响 / 低频</td></tr>
-        <tr><td>股东回报被稀释</td><td>回购与股份支付并存，Q2加权股数未下降</td><td>企业价值增长不能转成每股价值</td><td>全面摊薄股数、净回购、SBC／收入</td><td>中影响 / 中概率</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>筹码数据的决策价值有限：创始人持股高、流通结构稳定，但这不能证明短期供需。过去一年股价回落、却跑赢恒生科技，说明市场既下调了增长预期，也没有把公司当作普通高Beta科技股。投资验证应以经营和每股结果为主，不把技术位或名人框架当成独立买入理由。</p>
+<section class="reveal on" id="glossary" ><div class="slabel">名词速查</div><h2>容易混淆的是归属、时间与调整口径</h2>
+<div class="tblscroll"><table class="tbl gloss" ><caption></caption><thead><tr><th>术语</th><th>白话解释</th></tr></thead><tbody><tr><td>美国存托股（ADS）</td><td>在美国交易、代表一组普通股的凭证；本报告价格换算回港股普通股，不把两个报价直接相比。</td></tr>
+<tr><td>协议控制（VIE）</td><td>通过合同安排而非直接股权控制境内经营主体；合并会计不等于直接法律所有权。</td></tr>
+<tr><td>受限制股份单位（RSU）</td><td>满足归属条件后可能交付的股份奖励；费用与实际交股时间不同。</td></tr>
+<tr><td>股份支付（SBC）</td><td>用股权激励员工的报酬。即使当季不支付现金，仍属于股东承担的成本。</td></tr>
+<tr><td>合同负债（递延收入）</td><td>已收取或到期应收、但仍需提供服务的金额；不是额外利润。</td></tr>
+<tr><td>归母净利润（PAT）</td><td>扣除税费并区分子公司其他股东后，归属于网易普通股东的利润。</td></tr>
+<tr><td>最近十二个月（TTM）</td><td>跨年滚动拼接的流量期间，适合看盈利规模；不能用同样加减法拼接期末余额。</td></tr>
+<tr><td>自由现金流代理（FCF）</td><td>经营现金流减设备软件、无形资产及内容版权现金购买；不是公司承诺的可分红金额。</td></tr>
+<tr><td>正常化归母利润（分析口径）</td><td>对未来经营和非经营项目明确作假设的利润；与公司非GAAP口径不同。</td></tr>
+<tr><td>分部加总估值（SOTP）</td><td>分别估业务再加总，并处理现金、债务和少数股东；需要可靠独立利润与归属边界。</td></tr>
+<tr><td>要求回报（Ke）</td><td>研究中为承担股权风险所要求的回报；用于把未来价值换成今天的比较金额。</td></tr>
+<tr><td>资本价值现值（PV）</td><td>把期末股票价值折回今天，不含另列的未来现金股息；与期末股价目标并非同一时间点。</td></tr>
+<tr><td><span class="g">公允价值损益</span>（估值变动）</td><td>资产因市场或估值变化形成的利润影响，现金可能尚未实现，但经济价值风险仍存在。</td></tr>
+<tr><td>收入分成（渠道及合作成本）</td><td>部分销售收入需要分给渠道或合作方；比例、产品组合变化会影响毛利。</td></tr></tbody></table></div>
 </section>
-
-<section class="reveal on" id="decision">
-  <div class="slabel">最终投资建议与操作方案</div>
-  <h2>中性偏积极：等Q3把高毛利变成可持续证据，再决定是否提高估值</h2>
-  <p><strong>一句话判断：</strong>网易Q2的主营质量明显好于归母利润，但HK$188.80只比基准价值低约8%，在新品经济性、投资损失去向和地理贡献均未披露时，尚不是高置信度的深度折价。</p>
-
-  <div class="tline">
-    <div class="tstop"><div class="tw">现在</div><b>持有／观察</b><p>认可现金牛与资产缓冲，不为单季低资本开支和榜单追价。</p></div>
-    <div class="tstop"><div class="tw">下次财报</div><b>验证游戏利润</b><p>看收入、游戏毛利率、集团营业利润率与投资损失。</p></div>
-    <div class="tstop"><div class="tw">产品节点</div><b>验证新品经济性</b><p>要测试、档期、留存、预订额或收入，而非只有播放量。</p></div>
-    <div class="tstop warn"><div class="tw">失败边界</div><b>转向压力情景</b><p>收入与毛利同时跌破阈值，且资本配置拖累重复出现。</p></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>下一可证伪检查表；公司未公布Q3业绩日期</caption>
-      <thead><tr><th>问题</th><th>升级信号</th><th>中性信号</th><th>降级信号</th></tr></thead>
-      <tbody>
-        <tr><td>游戏规模</td><td>单季收入≥250亿元</td><td>235—250亿元</td><td>&lt;235亿元</td></tr>
-        <tr><td>游戏毛利率</td><td>≥73%</td><td>70%—73%</td><td>&lt;70%</td></tr>
-        <tr><td>集团营业利润率</td><td>≥36%</td><td>33%—36%</td><td>&lt;33%</td></tr>
-        <tr><td>新品</td><td>披露可复核留存／预订额／档期</td><td>只有运营里程碑</td><td>继续延迟或修复无证据</td></tr>
-        <tr><td>资本配置</td><td>投资损失不再重复，净回购减少股数</td><td>波动可控</td><td>损失连续侵蚀税前利润</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p><strong>最强反方：</strong>腾讯在更分散的业务结构下以约14.8倍TTM PE交易，网易的16.2倍并不天然便宜；净现金调整后的低核心倍数只有在现金能回到股东、投资拖累不持续、游戏利润率可守时才成立。<strong>下一决定性证据：</strong>Q3分部收入与毛利率能否在新品信息仍有限时维持，而不是归母净利润因投资项目短期反弹。</p>
-</section>
-
-<section class="reveal on" id="glossary">
-  <div class="slabel">术语表 · 读数口径</div>
-  <h2>十个概念，避免把不同的利润和股份混在一起</h2>
-  <div class="tblscroll">
-    <table class="tbl gloss">
-      <thead><tr><th>术语</th><th>本报告含义</th><th>常见误读</th></tr></thead>
-      <tbody>
-        <tr><td><span class="g">GAAP</span></td><td>按美国会计准则列报的法定财务结果。</td><td>归母净利润包含投资、汇兑和税率波动。</td></tr>
-        <tr><td><span class="g">非GAAP</span></td><td>网易只加回股份支付后的归母净利润。</td><td>不是剔除所有非经营损益的“核心利润”。</td></tr>
-        <tr><td><span class="g">毛利率</span></td><td>收入扣直接成本后的比例；游戏成本含渠道及授权分成。</td><td>不等于分部营业利润率或净利率。</td></tr>
-        <tr><td><span class="g">FCF代理</span></td><td>经营现金流减购买物业设备软件、无形资产内容版权。</td><td>不是公司披露KPI，也未区分维持性与增长性投入。</td></tr>
-        <tr><td><span class="g">LTM</span></td><td>FY2025加2026H1、减2025H1所得最近十二个月。</td><td>不是把H1简单乘二。</td></tr>
-        <tr><td>NOPAT代理</td><td>营业利润按标准税率税后化，再扣少数股东利润。</td><td>20%税率是估值假设，不是指引。</td></tr>
-        <tr><td>VIE</td><td>通过合同安排控制并合并的境内运营实体。</td><td>会计合并不等同上市主体直接持有牌照公司股权。</td></tr>
-        <tr><td>ADS</td><td>美股存托凭证；1 ADS代表5股普通股。</td><td>港股每股与普通股为1:1，不可把ADS股息直接当港股股息。</td></tr>
-        <tr><td>SOTP</td><td>分部估值加总；本报告因去重资料不足只作穿透校验。</td><td>并表子公司市值不能在集团利润估值上再加一次。</td></tr>
-        <tr><td>全面摊薄股数</td><td>考虑潜在奖励归属后的每股价值分母。</td><td>回购金额增加不保证每股分母下降。</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="reveal on" id="methods">
-  <div class="slabel">证据、方法与披露边界</div>
-  <h2>会计由HKEX控制，观点标注管理层，估值保留可复算假设</h2>
-  <p>报告截止2026年9月1日。Q2指截至2026年6月30日止三个月；H1指同期六个月；LTM按已披露累计期桥接。金额默认人民币，股价和每股价值默认港元。原始会计输入保留人民币千元精度，页面展示值才四舍五入。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>证据分层与用途</caption>
-      <thead><tr><th>层级</th><th>来源</th><th>控制内容</th><th>限制</th></tr></thead>
-      <tbody>
-        <tr><td>D · 披露</td><td>HKEX公告、年度报告、股息与月报表</td><td>会计、分部、股份、治理与期间</td><td>Q2未经审计；H1仅审阅</td></tr>
-        <tr><td>M · 管理层</td><td>官方演示与2026-08-20业绩会</td><td>产品进度、用户信号、经营解释</td><td>无量化财务指引</td></tr>
-        <tr><td>C · 计算</td><td>可执行账本与公式</td><td>LTM、FCF代理、估值与情景</td><td>不等于公司KPI或预测</td></tr>
-        <tr><td>A · 假设</td><td>标准化税率、倍数、资产信用</td><td>压力／基准／乐观边界</td><td>须随新证据重估</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>主要一手来源</h3>
-  <p><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000466_c.pdf">2026Q2及H1业绩公告</a>控制当期财务；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0415/2026041501231_c.pdf">2025年度报告</a>与<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0425/2024042503348_c.pdf">2023年度报告</a>控制可比五年历史、VIE和治理；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000506_c.pdf">Q2股息公告</a>控制记录与支付安排；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0811/2026081100971_c.pdf">经修订7月月报表</a>控制股数和未行使奖励；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082802681_c.pdf">8月奖励公告</a>控制期后授予。</p>
-  <p><a href="https://ir.netease.com/static-files/74d0f608-e795-4369-9436-4042158012bd">官方2Q26演示材料</a>用于产品披露；<a href="https://ir.netease.com/events/event-details/q2-2026-netease-inc-earnings-conference-call">官方电话会页面</a>与<a href="https://edge.media-server.com/mmc/p/2vy7kgxy">官方回放</a>用于确认会议身份。官方回放需填写访客信息且没有公开文字稿；少数问答依<a href="https://www.marketbeat.com/earnings/reports/2026-8-20-netease-inc-stock/">MarketBeat／Quartr二级转录</a>，并由同一二级来源的Quartr音频镜像抽查，不能控制会计事实。</p>
-  <p>行情、估值、同业、历史价格、指数和人民币汇率截至标注时点，数据来源于万得 Wind 金融数据服务。所有Wind派生回报均使用未复权月末价格、不含股息；自算Beta使用月频共同样本。报告没有使用缺失的日频Beta／Alpha值。</p>
-
-  <h3>已知缺口</h3>
-  <p>公司未披露Q2地理收入、单款游戏收入或利润、游戏预订额、付费率、ARPU、获客成本、分部营业利润／资产／现金流、投资损失逐项标的、2026H2量化指引及母公司可自由分派现金。上述项目保留为“未披露”，未用行业均值或模型猜测填充。股价、市值、汇率及预测PE会随市场变化；静态价值不是目标价承诺。</p>
-</section>
-
-<footer>
-  <p>网易 · 09999.HK / NTES · 2026Q2 Fullscan 全景尽调</p>
-  <p>研究截止：2026-09-01 ｜ 财务口径：US GAAP ｜ Q2未经审计，H1经审阅 ｜ 仅供研究，不构成投资建议</p>
-  <p>控制性论点：经营利润的改善真实，但当前价格需要Q3证明高毛利可持续，并需要资本配置停止侵蚀股东结果。</p>
-</footer>
-
+<footer><p>数据截止：财务截至2026年6月30日；经营与公告更新至2026年9月5日；港股行情为2026年9月4日16:08:06香港时间。报告更新于2026年9月5日。</p>
+<p>来源：<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0425/2024042503348_c.pdf" target="_blank" rel="noopener noreferrer">2023年报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0415/2026041501231_c.pdf" target="_blank" rel="noopener noreferrer">2025年报</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000466_c.pdf" target="_blank" rel="noopener noreferrer">Q2及中期公告</a>（2026年8月20日）；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0521/2026052100816_c.pdf" target="_blank" rel="noopener noreferrer">2026Q1公告</a>（5月21日）；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090401510_c.pdf" target="_blank" rel="noopener noreferrer">8月月报</a>（9月4日）；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082802681_c.pdf" target="_blank" rel="noopener noreferrer">股权奖励公告</a>（8月28日）；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000506_c.pdf" target="_blank" rel="noopener noreferrer">股息分派表</a>；<a href="https://www.anantagame.com/" target="_blank" rel="noopener noreferrer">无限大官网</a>与<a href="https://store.steampowered.com/app/4814120/ANANTA/?l=english" target="_blank" rel="noopener noreferrer">发行商Steam页面</a>。</p>
+<p>市场与同业来源：Wind金融数据服务，2026年9月5日提取；价格以最近交易日为准；<a href="https://hzf.mofcom.gov.cn/article/zyfw/jrfw/jrfwywzn/jrfwwh/hlfxglzy/202609/7872.html" target="_blank" rel="noopener noreferrer">中国外汇交易中心汇率公告转载</a>核对报价单位。电话会仅将明确识别的二级转录作辅助，非官方逐字稿。</p>
+<p>审计状态：年度财务报表经普华永道审计，2025年意见无保留；2026H1财务资料依据国际审阅准则2410号审阅，单季Q2和非GAAP资料未经审计。情景与推算不属于审计意见范围。</p>
+<p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p></footer>
 </main>
-
 <script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -804,5 +540,4 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   els.forEach(function(e){ io.observe(e); });
 })();
 </script>
-</body>
-</html>
+</body></html>
