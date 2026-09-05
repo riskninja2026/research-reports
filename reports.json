@@ -215,8 +215,8 @@
       "name": "比亚迪",
       "name_en": "BYD",
       "tickers": [
-        "01211.HK",
-        "002594.SZ"
+        "002594.SZ",
+        "01211.HK"
       ],
       "ticker_label": null,
       "venue": "HKEX",
@@ -227,15 +227,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "利润先回来了，份额还没有：Q2毛利与费用桥修复，但H1海外结构不能证明单季因果，17倍框架下H2门槛很高。",
-      "verdict": "中性偏谨慎",
-      "verdict_code": "neutral-cautious",
+      "hook": "单季盈利与海外毛利修复，能否转成股东现金仍取决于扩张和周转投入。",
+      "verdict": "负面",
+      "verdict_code": "negative",
       "published": "2026-08-31",
       "published_at": "2026-08-31T12:58:53-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "统一估值模型与折现期间，补入8月产销和股数；纠正出口同比、地区归属及质保准备口径，并重建可复算财务与资本回报分析。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
