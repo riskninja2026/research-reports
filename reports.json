@@ -106,15 +106,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "双引擎增长已经成立，但成熟酒店与零售单位经济仍待修复；穿透同店、直接贡献、现金返还、治理、稀释与现价隐含预期。",
-      "verdict": "谨慎积极",
-      "verdict_code": null,
+      "hook": "加盟与零售扩张已兑现，但成熟酒店和营销后盈利仍待修复，基准现值空间不足以抵消熊市风险。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
       "published": "2026-09-04",
       "published_at": "2026-09-04T03:33:33-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "补充酒店与零售专用财务框架，校正历史权益精度，更新市场数据，并以明确折现期限的单一主方法重建估值及风险判断。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
