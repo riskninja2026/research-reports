@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
 <title>安踏体育 2026H1 Fullscan 全景尽调</title>
+<!-- 标题格式固定：{名称} {期间} Fullscan 全景尽调（英文报告：{Name} {Period} Fullscan Full Diligence，且 <html lang="en">）；标题不写论点。 -->
 <style>
 :root{
   --paper:#EDEFF2;
@@ -253,520 +254,149 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
 .tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
 .tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
 </style>
 </head>
 <body>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">安踏体育 02020.HK ｜ FULLSCAN 全景尽调 ｜ 数据截止 2026.08.31</div>
-    <h1>利润没有标题那么快，<br>资产也没有市场那么简单</h1>
-    <p class="lede">上半年，多品牌组合继续扩大收入和经营利润，但成熟品牌在二季度同时降速。<b>真正的张力不是“增长还是不增长”，而是高质量增量能否跑赢资本配置的复杂度：</b>Amer 已是重要资产，PUMA 又将占用现金，而终端退出速度正在变慢。</p>
-
-    <div class="dual">
-      <div>
-        <div class="tag">经调整归母利润 · 2026H1</div>
-        <div class="big a">+9.6%</div>
-        <div class="cap">剔除联营公司损益及相关一次性项目；比报告归母利润的标题增速更接近并表业务底色。</div>
-      </div>
-      <div>
-        <div class="tag">PUMA拟购股份 · 当前MARK较欧元成本</div>
-        <div class="big b">−26.5%</div>
-        <div class="cap">Wind 2026-08-31市值与每股EUR35交易价的同币种比较；交易截至报告期末尚未交割。</div>
-      </div>
-    </div>
-  </div>
-</header>
-
+<header class="hero"><div class="wrap">
+<div class="eyebrow">安踏体育 02020.HK ｜ 全景尽调 ｜ 2026H1财务 · 2026.09.04行情</div>
+<h1>品牌能赚钱，<br>资本配置正在抬高门槛</h1>
+<p class="lede">安踏上半年收入、经营利润和现金流一起改善，多品牌策略仍在产生回报。<b>但把增长变成每股价值，还要跨过投资与现金归属两道门槛。</b>成熟品牌终端降速，海外少数股权继续占用资本；判断应落在可持续盈利与支付价格，而不是利润标题。</p>
+<div class="dual"><div><div class="tag">2026H1经营溢利 · 同比</div><div class="big a">+16.1%</div><div class="cap">融资、联营损益及税项之前的集团经营结果。</div></div><div><div class="tag">2026H1公司调整归母利润 · 同比</div><div class="big b">+9.6%</div><div class="cap">剔除联营损益及相关一次性项目后，归母增长较慢；并非生意没有增长。</div></div></div>
+</div></header>
 <main class="wrap">
-
-<section class="reveal on" id="tldr">
-  <div class="slabel">三十秒版本 · 先看结论</div>
-  <h2>如果只读一屏，读这里</h2>
-  <div class="tldr">
-    <ul>
-      <li><b>它是谁：</b>安踏是“品牌＋零售”多品牌体育用品集团；安踏、FILA与其他品牌构成并表经营，Amer Sports以联营公司入账，PUMA仍是待交割投资。</li>
-      <li><b>本期成绩：</b>2026H1收入人民币435.07亿元、经营溢利117.60亿元；报告归母利润被Amer配售稀释利得放大，剔除联营与一次项后的增长为<b>9.6%</b>。</li>
-      <li><b>核心矛盾：</b>所有其他品牌贡献了约三分之二的收入与经营溢利增量，但Q2安踏和FILA零售额都只剩低单位数增长，其他品牌也较Q1降档。</li>
-      <li><b>容易踩的坑：</b>公司只披露H1财务；单Q2是未经审阅的终端零售增长区间，不是集团收入，更不能倒推单季利润、现金流或FCF。</li>
-      <li><b>结论：</b>除息前现价HKD77.70；交易后SOTP熊市/基准/牛市为HKD62.2/83.0/106.2。基准上行仅约7%，判断为<b>中性偏积极</b>，需要Q3终端回稳和PUMA交割纪律共同确认。</li>
-    </ul>
-  </div>
+<div class="callout"><b>修订 2026-09-05：</b>加入租赁付款后现金流、最新股份与换股生效日，重做投资及现金归属假设、情景估值和含息赔率；财务仍以中期披露为准。</div>
+<section class="reveal on" id="tldr"><div class="slabel">三十秒版本 · 先看结论</div><h2>好公司与好价格，需要分开回答</h2>
+<div class="tldr"><ul>
+<li><b>它是谁：</b>经营安踏、FILA及户外品牌的运动鞋服集团；Amer是联营投资，PUMA仍是待完成的少数股权收购。</li>
+<li><b>本期成绩：</b>上半年收入约435亿元，经营溢利约118亿元；公司调整归母利润增长9.6%，租赁付款后自由现金流约93亿元。</li>
+<li><b>核心矛盾：</b>其他品牌贡献约三分之二的收入增量，成熟品牌终端却在降速；并购回报决定经营成果能留下多少。</li>
+<li><b>容易踩的坑：</b>Amer被动摊薄产生的利得不是卖货现金；集团存款、联营持股市值，也不等于普通股东随时可拿走的钱。</li>
+<li data-verdict="neutral-cautious"><b>结论：</b>中性偏谨慎。现价HK$76.10，基准HK$77.4、熊市HK$56.6；先等成熟品牌终端与投资回报的证据改善。</li>
+</ul></div></section>
+<section class="reveal on" id="primer"><div class="slabel">入门</div><h2>消费者买的是品牌，股东持有的是一套经营和投资组合</h2>
+<p>安踏体育用品有限公司在香港上市，本报告以港币柜台为估值证券。安踏品牌面向大众运动，FILA兼具运动与时尚定位，DESCENTE、KOLON SPORT等覆盖不同户外需求。集团从产品设计、品牌推广到门店、电商及经销渠道获取收入，既赚产品差价，也承担零售端的租金、人工、库存与营销成本。</p>
+<div class="steps"><div class="step"><div class="n">环节 1</div><b>消费者付钱</b><p>消费者在直营、电商或经销商终端购买鞋服。</p></div><div class="step"><div class="n">环节 2</div><b>集团确认收入</b><p>直营零售和向经销商供货的确认环节不同，终端流水不等于集团收入。</p></div><div class="step"><div class="n">环节 3</div><b>扣掉经营成本</b><p>产品成本、营销、门店费用和税项之后，还要分给非控股股东。</p></div><div class="step"><div class="n">环节 4</div><b>留下或再投现金</b><p>现金用于分红、品牌投入及收购；联营投资独立检验回报。</p></div></div>
+<p>阅读前先分清<span class="g">并表</span>和<span class="g">权益法</span>：前者把子公司收入成本逐行合并，后者只记录分占损益与净资产变化。Amer不进入安踏的集团收入，PUMA完成后也拟采用权益法。不同品牌的经营利润尚未扣集团税项及<span class="g">非控股权益</span>，不是归母利润。</p>
+<p>本次主报表是H1已审阅财务；独立Q2只有<span class="g">零售流水</span>增长区间，含适用增值税，并覆盖集团、分销商及加盟商终端，未经审计或审阅且可能调整。没有可用于相减的Q1财务报表，故单Q2收入、利润及现金流均未披露。</p>
+<p>管理层把市场描述为消费更理性、促销压力仍在。运动鞋服依赖品牌定位、产品迭代和渠道效率；高毛利只有覆盖营销、门店及库存成本后，才能转为股东回报。没有可比份额序列，本期不判断市占率是否扩大。</p>
 </section>
-
-<section class="reveal on" id="primer">
-  <div class="slabel">入门 · 三分钟看懂这门生意</div>
-  <h2>三层利润，不能用一个增长率概括</h2>
-  <p>安踏的经济结构有三层：集团自己经营的品牌与门店、以<span class="g">权益法</span>确认的Amer Sports，以及尚未完成的PUMA少数股权交易。读财报时，必须把终端<span class="g">零售流水</span>、<span class="g">并表</span>收入与股东最终得到的利润分开。</p>
-  <div class="steps">
-    <div class="step"><div class="n">STEP 1</div><b>卖给消费者</b><p>直营门店与电商形成集团收入；分销商门店的终端流水不等于集团当期收入。</p></div>
-    <div class="step"><div class="n">STEP 2</div><b>三大分部赚钱</b><p>安踏、FILA、所有其他品牌各自贡献毛利与经营溢利，总部费用再完成对账。</p></div>
-    <div class="step"><div class="n">STEP 3</div><b>联营公司入账</b><p>Amer不并入安踏收入，只在经营溢利以下确认分占利润；配售稀释利得属于一次性。</p></div>
-    <div class="step"><div class="n">STEP 4</div><b>现金再分配</b><p>经营现金用于股息、品牌投入和收购；PUMA若交割，将同时减少现金并增加一项联营投资。</p></div>
-  </div>
-  <p>因此，这不是简单的“运动鞋服公司P/E”问题。正确估值要用<span class="g">SOTP</span>（分部加总）：先给并表核心业务定价，再单独处理金融净资产、Amer权益和PUMA承诺，避免把同一份利润或现金算两次。</p>
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="sportswear-apparel"><div class="slabel">财务与品牌地图</div><h2>收入结构变宽，利润与现金的口径也更重要</h2>
+<p>三个正式报告分部为安踏、FILA和所有其他品牌，总部及未分配项目完成经营利润对账。集团不含联营公司的业务主要来自中国，未呈报地域分部；JACK WOLFSKIN自并购后纳入其他品牌，使组合的历史增速包含外购增长。</p>
+<div class="grid" data-financials="consolidated"><div class="cell" ><div class="k">营业收入</div><div class="v">435.07<span class="u">亿元</span></div><div class="d"><span>2026H1 · 本集团 · 同比+12.9%</span></div></div><div class="cell" ><div class="k">毛利 / 毛利率</div><div class="v">277.92<span class="u">亿元</span></div><div class="d"><span>63.9% · 同比+0.5个百分点</span></div></div><div class="cell" ><div class="k">经营溢利 / 利润率</div><div class="v">117.60<span class="u">亿元</span></div><div class="d"><span>27.0%</span></div></div><div class="cell" ><div class="k">归母净利润 / 净利率</div><div class="v">94.87<span class="u">亿元</span></div><div class="d"><span>21.8% · 含联营特殊利得</span></div></div><div class="cell" ><div class="k">经营现金流量净额</div><div class="v">130.81<span class="u">亿元</span></div><div class="d"><span>同比+19.7% · 包含已收利息</span></div></div><div class="cell" ><div class="k">租赁付款后自由现金流</div><div class="v">92.78<span class="u">亿元</span></div><div class="d"><span>推算 · 集团代理，非公司定义</span></div></div></div>
+<div class="tblscroll"><table class="tbl" data-financials="history"><caption>IFRS/HKFRS合并口径；年度已审计；金额人民币亿元，每股元。利润及比率取FY2025五年概要，现金取后发年报比较列。</caption><thead><tr><th>项目</th><th>FY2021</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th></tr></thead><tbody><tr><td>营业收入</td><td>493.28</td><td>536.51</td><td>623.56</td><td>708.26</td><td>802.19</td></tr><tr><td>毛利</td><td>304.04</td><td>323.18</td><td>390.28</td><td>440.32</td><td>497.34</td></tr><tr><td>毛利率（%）</td><td>61.6</td><td>60.2</td><td>62.6</td><td>62.2</td><td>62.0</td></tr><tr><td>经营溢利</td><td>109.89</td><td>112.30</td><td>153.67</td><td>165.95</td><td>190.91</td></tr><tr><td>经营利润率（%）</td><td>22.3</td><td>20.9</td><td>24.6</td><td>23.4</td><td>23.8</td></tr><tr><td>归母净利润</td><td>77.20</td><td>75.90</td><td>102.36</td><td>155.96</td><td>135.88</td></tr><tr><td>归母净利率（%）</td><td>15.7</td><td>14.1</td><td>16.4</td><td>22.0</td><td>16.9</td></tr><tr><td>基本每股收益EPS（人民币元）</td><td>2.87</td><td>2.82</td><td>3.69</td><td>5.55</td><td>4.89</td></tr><tr><td>净资产收益率ROE（公司定义，%）</td><td>29.2</td><td>24.0</td><td>23.8</td><td>27.6</td><td>21.3</td></tr><tr><td>每股股东权益（人民币元）</td><td>10.70</td><td>12.68</td><td>18.17</td><td>21.86</td><td>23.52</td></tr><tr><td>经营现金流量净额</td><td>118.61</td><td>121.47</td><td>196.34</td><td>167.41</td><td>209.96</td></tr><tr><td>现金资本开支</td><td>14.93</td><td>17.36</td><td>13.94</td><td>34.60</td><td>27.16</td></tr><tr><td>租赁负债现金付款</td><td>26.37</td><td>31.38</td><td>41.51</td><td>42.75</td><td>47.00</td></tr><tr><td>租赁后自由现金流FCF（推算）</td><td>77.31</td><td>72.73</td><td>140.89</td><td>90.06</td><td>135.80</td></tr><tr><td>公司定义自由现金流FCF</td><td>103.69</td><td>104.15</td><td>178.23</td><td>132.54</td><td>161.06</td></tr></tbody></table></div><div class="tblscroll"><table class="tbl" data-financials="interim"><caption>H1按国际及香港会计准则第34号已审阅；人民币亿元，每股元。滚动期间（TTM）为推算，H1的ROE为年化披露值。</caption><thead><tr><th>项目</th><th>2025H1</th><th>2026H1</th><th>TTM2026H1</th></tr></thead><tbody><tr><td>营业收入</td><td>385.44</td><td>435.07</td><td>851.82</td></tr><tr><td>毛利</td><td>244.25</td><td>277.92</td><td>531.01</td></tr><tr><td>毛利率（%）</td><td>63.4</td><td>63.9</td><td>62.3</td></tr><tr><td>经营溢利</td><td>101.31</td><td>117.60</td><td>207.20</td></tr><tr><td>经营利润率（%）</td><td>26.3</td><td>27.0</td><td>24.3</td></tr><tr><td>归母净利润</td><td>70.31</td><td>94.87</td><td>160.44</td></tr><tr><td>归母净利率（%）</td><td>18.2</td><td>21.8</td><td>18.8</td></tr><tr><td>基本每股收益EPS（人民币元）</td><td>2.53</td><td>3.42</td><td>不作简单拼接</td></tr><tr><td>净资产收益率ROE（公司定义，%）</td><td>22.6</td><td>27.8</td><td>不作简单拼接</td></tr><tr><td>每股股东权益（人民币元）</td><td>22.72</td><td>25.63</td><td>不作简单拼接</td></tr><tr><td>经营现金流量净额</td><td>109.31</td><td>130.81</td><td>231.46</td></tr><tr><td>现金资本开支</td><td>12.23</td><td>14.53</td><td>29.46</td></tr><tr><td>租赁负债现金付款</td><td>22.41</td><td>23.50</td><td>48.09</td></tr><tr><td>租赁后自由现金流FCF（推算）</td><td>74.67</td><td>92.78</td><td>153.91</td></tr><tr><td>公司定义自由现金流FCF</td><td>75.42</td><td>116.30</td><td>201.94</td></tr></tbody></table></div><p>FY2024报告净利含Amer上市及配售利得，故次年报告利润下降不等于核心经营衰退。FY2023现金资本开支由原13.21亿元调整为13.94亿元，其他FCF项由−0.09亿元变为0.64亿元，公司FCF不变；后发现金表单列土地使用权付款。每股与ROE不是可相加流量，TTM列不简单相减。</p>
+<div class="cols" role="img" aria-label="五年收入和归母净利，共用最高收入刻度"><div class="col"><div class="bars"><div class="bar rev" style="height:61.492%"></div><div class="bar np" style="height:9.624%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:66.881%"></div><div class="bar np" style="height:9.462%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:77.732%"></div><div class="bar np" style="height:12.760%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:88.291%"></div><div class="bar np" style="height:19.442%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:100.000%"></div><div class="bar np" style="height:16.939%"></div></div></div></div><div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div><div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
+<p class="small">收入连续扩大，报告净利的高点却受到投资事项影响。两组柱高共用五年最高营业收入；不把利润另行放大。</p>
+<div class="tblscroll"><table class="tbl" data-financials="segments"><caption>人民币亿元；五年序列按品牌报告分部；同比与CAGR推算。JACK WOLFSKIN并购纳入，其他品牌不是纯有机序列。</caption><thead><tr><th>报告分部</th><th>FY2021 / 22 / 23 / 24 / 25收入</th><th>四年复合增速CAGR（推算）</th><th>2025H1→2026H1收入</th><th>收入同比</th><th>H1毛利 / 率</th><th>H1经营溢利 / 率</th></tr></thead><tbody><tr><td>安踏</td><td>240.12 / 277.23 / 303.06 / 335.22 / 347.54</td><td>9.7%</td><td>169.50 → 177.71</td><td>+4.8%</td><td>97.83 / 55.1%</td><td>39.92 / 22.5%</td></tr><tr><td>FILA</td><td>218.22 / 215.23 / 251.03 / 266.26 / 284.69</td><td>6.9%</td><td>141.82 → 150.45</td><td>+6.1%</td><td>101.94 / 67.8%</td><td>43.15 / 28.7%</td></tr><tr><td>所有其他品牌</td><td>34.94 / 44.05 / 69.47 / 106.78 / 169.96</td><td>48.5%</td><td>74.12 → 106.91</td><td>+44.2%</td><td>78.15 / 73.1%</td><td>35.38 / 33.1%</td></tr><tr><td>总部/未分配</td><td>不形成品牌收入</td><td>不适用</td><td>不适用</td><td>不适用</td><td>不适用</td><td>−0.85</td></tr></tbody></table></div>
+<div class="stacks"><div class="stack"><div class="cap">2025H1分部收入结构</div><div class="stackbar"><div class="seg p" style="width:43.9757%">安踏</div><div class="seg q" style="width:36.7943%">FILA</div><div class="seg r" style="width:19.2300%">其他</div></div></div><div class="stack"><div class="cap">2026H1分部收入结构</div><div class="stackbar"><div class="seg p" style="width:40.8463%">安踏</div><div class="seg q" style="width:34.5806%">FILA</div><div class="seg r" style="width:24.5731%">其他</div></div></div></div>
+<p class="small">其他品牌占比扩大，成熟品牌仍占主要收入。结构条按两期同范围分部收入计算；组合包含新增品牌，不代表同店增长。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>H1财务来自HKEX；零售增长按原区间保留，其他品牌排除2025-01-01后加入的品牌，门店及折扣来自官方演示。</caption><thead><tr><th>经营指标</th><th>比较期或Q1</th><th>本期或Q2</th><th>范围</th></tr></thead><tbody><tr><td>零售增长：安踏</td><td>Q1高单位数</td><td>Q2低单位数</td><td>H1中单位数</td></tr><tr><td>零售增长：FILA</td><td>Q1的10–20%低段</td><td>Q2低单位数</td><td>H1中单位数</td></tr><tr><td>零售增长：其他品牌</td><td>Q1的40–45%</td><td>Q2的25–30%</td><td>H1的35–40%</td></tr><tr><td>安踏直营 / 电商 / 批发等收入</td><td>63.21 / 61.31 / 44.98亿元</td><td>65.60 / 69.49 / 42.62亿元</td><td>前列2025H1，后列2026H1</td></tr><tr><td>集团电商收入占比</td><td>34.8%</td><td>35.7%</td><td>2026H1电商收入同比+15.7%</td></tr><tr><td>平均存货 / 应收 / 应付周转</td><td>136 / 19 / 52天</td><td>130 / 17 / 44天</td><td>公司定义；不是渠道库存</td></tr><tr><td>安踏成人 / 儿童 / FILA合计店数</td><td>7,203 / 2,652 / 2,040（合计推算）</td><td>7,122 / 2,560 / 1,954</td><td>年末→中期；期末店数</td></tr><tr><td>DESCENTE / KOLON / MAIA店数</td><td>256 / 209 / 52</td><td>261 / 212 / 53</td><td>年末→中期；不推同店</td></tr><tr><td>正价折扣 / 售罄 / 单价</td><td>DESCENTE、KOLON均>9折</td><td>集团可比售罄、销量与均价未披露</td><td>官方演示，品牌级范围</td></tr><tr><td>销售及分销开支</td><td>132.72亿元</td><td>150.99亿元</td><td>2025H1→2026H1</td></tr><tr><td>广告宣传占比 / 研发成本</td><td>6.6% / 9.91亿元</td><td>6.6% / 11.06亿元</td><td>广告包含于经营开支，不重复相加</td></tr><tr><td>研发活动成本占比</td><td>2.6%</td><td>2.5%</td><td>公司定义占比</td></tr><tr><td>鞋 / 服装 / 配饰收入</td><td>163.90 / 208.86 / 12.68亿元</td><td>171.58 / 248.61 / 14.88亿元</td><td>产品维度，不与品牌相加</td></tr></tbody></table></div>
+<p>五年收入与经营利润的复合增长分别为12.9%和14.8%（推算）；其他品牌增长更快，但其收益既包含经营扩张，也包含组合变化。产品维度中，服装收入较鞋类扩张更快；渠道维度中，电商增长快于集团，两者不能相加作为不同来源的收入增量。</p>
+<div class="plain"><span class="pl">白话解读</span><p>上半年收入约435亿元，其中其他品牌约107亿元，已不再是小补充。品牌收入未直接变成股东利润，零售增速也不是季度财务增速。后面的利润与现金两节检验这些收入留下多少钱。</p></div>
+<p class="small">CAGR为FY2021至FY2025四年间隔；TTM按FY2025加本期H1减上年H1。FY2023资本开支采用后发比较分类；其余重列说明随表，缺项不以半年简单年化填补。</p>
 </section>
-
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">基础财务 · 合并与业务地图</div>
-  <h2>五年收入增长逾六成，增长重心从主品牌移向组合</h2>
-  <p>2026H1简明中期财务报告按IAS 34及HKAS 34编制，<strong>未经审计，但经毕马威按HKSRE 2410独立审阅</strong>。公司正式报告分部只有安踏、FILA、所有其他品牌；JACK WOLFSKIN自2025年5月底并表，使后一个分部的历史增长并非纯有机。</p>
-
-  <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">2026H1 收入</div><div class="v">435.07<span class="u">亿元</span></div><div class="d"><span class="up">同比 +12.9%</span></div></div>
-    <div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">277.92<span class="u">亿元</span></div><div class="d"><span class="up">同比 +13.8% · 63.9%</span></div></div>
-    <div class="cell"><div class="k">经营溢利 / 利润率</div><div class="v">117.60<span class="u">亿元</span></div><div class="d"><span class="up">同比 +16.1% · 27.0%</span></div></div>
-    <div class="cell"><div class="k">经调整归母净利润</div><div class="v">72.30<span class="u">亿元</span></div><div class="d"><span>前值65.97亿元 · 剔除联营及相关一次项</span></div></div>
-    <div class="cell"><div class="k">经营现金流</div><div class="v">130.81<span class="u">亿元</span></div><div class="d"><span class="up">同比 +19.7%</span></div></div>
-    <div class="cell"><div class="k">公司定义自由现金流</div><div class="v">116.30<span class="u">亿元</span></div><div class="d"><span>前值75.42亿元 · 含收购现金基数</span></div></div>
-  </div>
-
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>表面上六项都很好看：收入、毛利、经营利润和现金同时增长。更关键的结构变化在分部：<b>安踏与FILA仍是利润底盘，新增增长却主要由其他品牌提供</b>。这提高了组合质量，也让并购口径、品牌拆分不足和资本配置变得更重要。</p>
-    <p>公司调整利润才是观察并表业务的起点；报告归母利润还包括Amer的权益法收益和一次性配售稀释利得，不能把它的标题增速直接外推。</p>
-  </div>
-
-  <h3>五年合并轨迹</h3>
-  <div class="tblscroll">
-    <table class="tbl" data-financials="history">
-      <caption>FY2021–25经审计历史 · 人民币百万元；资本开支及FCF按公司表列口径；FY2023采用后发比较分类</caption>
-      <thead><tr><th>FY</th><th>收入</th><th>毛利率</th><th>经营溢利</th><th>经营利润率</th><th>报告归母净利润</th><th>EPS（元）</th><th>ROE</th><th>OCF</th><th>资本开支</th><th>自由现金流（公司定义）</th></tr></thead>
-      <tbody>
-        <tr><td>2021</td><td>49,328</td><td>61.6%</td><td>10,989</td><td>22.3%</td><td>7,720</td><td>2.87</td><td>29.2%</td><td>11,861</td><td>1,493</td><td>10,369</td></tr>
-        <tr><td>2022</td><td>53,651</td><td>60.2%</td><td>11,230</td><td>20.9%</td><td>7,590</td><td>2.82</td><td>24.0%</td><td>12,147</td><td>1,736</td><td>10,415</td></tr>
-        <tr><td>2023</td><td>62,356</td><td>62.6%</td><td>15,367</td><td>24.6%</td><td>10,236</td><td>3.69</td><td>23.8%</td><td>19,634</td><td>1,394</td><td>17,823</td></tr>
-        <tr><td>2024</td><td>70,826</td><td>62.2%</td><td>16,595</td><td>23.4%</td><td>15,596</td><td>5.55</td><td>27.6%</td><td>16,741</td><td>3,460</td><td>13,254</td></tr>
-        <tr><td>2025</td><td>80,219</td><td>62.0%</td><td>19,091</td><td>23.8%</td><td>13,588</td><td>4.89</td><td>21.3%</td><td>20,996</td><td>2,716</td><td>16,106</td></tr>
-        <tr class="grp"><td>FY21–25 CAGR</td><td>12.93%</td><td>—</td><td>14.81%</td><td>—</td><td>报告口径断点</td><td>—</td><td>—</td><td>15.35%</td><td>—</td><td>11.64%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="cols" role="img" aria-label="FY2021至FY2025收入与报告归母利润趋势，具体数值见上表">
-    <div class="col"><div class="bars"><div class="bar rev" style="height:61.49%"></div><div class="bar np" style="height:9.62%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:66.88%"></div><div class="bar np" style="height:9.46%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:77.73%"></div><div class="bar np" style="height:12.76%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:88.29%"></div><div class="bar np" style="height:19.44%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:16.94%"></div></div></div>
-  </div>
-  <div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div>
-  <div class="legend"><span><i class="p"></i>收入</span><span><i class="m"></i>报告归母利润</span></div>
-  <p class="small">两组柱高都以FY2025收入为100%等比绘制，没有给利润另设纵轴。FY2024报告利润包含Amer上市及配售稀释利得，FY2025比较因此出现口径断点；图形只展示报告值，不暗示核心利润在FY2025倒退。</p>
-
-  <h3>最近十二个月桥接</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>LTM＝FY2025＋2026H1－2025H1 · 人民币百万元；公司调整利润剔除联营损益及相关一次项</caption>
-      <thead><tr><th>口径</th><th>收入</th><th>毛利</th><th>经营溢利</th><th>报告归母利润</th><th>公司调整利润</th><th>OCF</th><th>资本开支</th><th>公司FCF</th></tr></thead>
-      <tbody><tr class="grp"><td>LTM至2026-06</td><td>85,182</td><td>53,101</td><td>20,720</td><td>16,044</td><td>13,018</td><td>23,146</td><td>2,946</td><td>20,194</td></tr></tbody>
-    </table>
-  </div>
-  <p class="small">期末每股股东权益为人民币25.63元。LTM公司FCF延续公司定义，包含收购附属公司现金；不是企业自由现金流FCFF，也不是单Q2数据。</p>
-
-  <h3>三大分部：其他品牌从补充项变成第三支柱</h3>
-  <div class="stacks" role="img" aria-label="2025H1与2026H1三大报告分部收入结构">
-    <div class="stack"><div class="cap">2025H1收入结构</div><div class="stackbar"><div class="seg p" style="width:43.98%">44.0%</div><div class="seg q" style="width:36.79%">36.8%</div><div class="seg r" style="width:19.23%">19.2%</div></div></div>
-    <div class="stack"><div class="cap">2026H1收入结构</div><div class="stackbar"><div class="seg p" style="width:40.85%">40.8%</div><div class="seg q" style="width:34.58%">34.6%</div><div class="seg r" style="width:24.57%">24.6%</div></div></div>
-  </div>
-  <div class="legend"><span><i class="p"></i>安踏</span><span><i class="q"></i>FILA</span><span><i class="r"></i>所有其他品牌</span></div>
-
-  <div class="tblscroll" data-financials="segments">
-    <table class="tbl">
-      <caption>分部历史与最新经济性 · 人民币百万元；CAGR为FY2021–25四年间隔</caption>
-      <thead><tr><th>分部</th><th>FY2021收入</th><th>FY2025收入</th><th>CAGR</th><th>2026H1收入</th><th>同比</th><th>毛利率</th><th>经营利润率</th></tr></thead>
-      <tbody>
-        <tr><td>安踏</td><td>24,012</td><td>34,754</td><td>9.68%</td><td>17,771</td><td>+4.8%</td><td>55.1%</td><td>22.5%</td></tr>
-        <tr><td>FILA</td><td>21,822</td><td>28,469</td><td>6.87%</td><td>15,045</td><td>+6.1%</td><td>67.8%</td><td>28.7%</td></tr>
-        <tr><td>所有其他品牌</td><td>3,494</td><td>16,996</td><td>48.51%</td><td>10,691</td><td>+44.2%</td><td>73.1%</td><td>33.1%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>产品拆分 · 2026H1人民币百万元；产品不是会计分部</caption>
-      <thead><tr><th>产品</th><th>收入</th><th>同比</th><th>收入占比</th><th>对集团增量贡献</th></tr></thead>
-      <tbody>
-        <tr><td>鞋类</td><td>17,158</td><td>+4.7%</td><td>39.4%</td><td>15.5%</td></tr>
-        <tr><td>服装</td><td>24,861</td><td>+19.0%</td><td>57.1%</td><td>80.1%</td></tr>
-        <tr><td>配饰</td><td>1,488</td><td>+17.4%</td><td>3.4%</td><td>4.4%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">其他品牌五年增长含品牌加入与并购，不等于同店或有机增长。集团（不含联营公司）的收入、费用、资产与负债主要来自中国，公司未呈报地域分部；海外愿景不能替代会计披露。</p>
+<section class="reveal on" id="profit"><div class="slabel">盈利质量</div><h2>组合改善是真的，归母增量却有一大块来自会计利得</h2>
+<p>毛利率上升不能简单归因为提价：其他品牌自身毛利率下降，集团却上升，品牌权重改变了合并表现。公司把FILA经营利润率改善主要归于效率，把安踏利润率下降主要归于品牌和研发投入；成熟品牌并非一齐扩张利润率。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>人民币亿元；利润标签逐层相减，不能统称“扣非”。</caption><thead><tr><th>归母口径 / 调节</th><th>2025H1</th><th>2026H1</th><th>含义</th></tr></thead><tbody><tr><td>报告归母</td><td>70.31</td><td>94.87</td><td>含所有联营与特殊利得</td></tr><tr><td>减：Amer稀释利得</td><td>0</td><td>15.49</td><td>非现金资本事项</td></tr><tr><td>仅剔稀释利得后</td><td>70.31</td><td>79.38</td><td>仍保留经常联营利润</td></tr><tr><td>再减：全部联营净利润</td><td>4.34</td><td>7.08</td><td>不是Amer单体贡献</td></tr><tr><td>公司调整归母</td><td>65.97</td><td>72.30</td><td>保留净融资结果</td></tr><tr><td>核心经营利润代理（推算）</td><td>60.55</td><td>67.61</td><td>再移除税后非租赁金融结果，方法见附录</td></tr></tbody></table></div>
+<div class="wfall" role="img" aria-label="归母同比桥，人民币亿元"><div class="wrow"><div class="nm">2025H1归母<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0.0000%;width:67.6448%"></div></div><div class="fig">70.31</div></div><div class="wrow"><div class="nm">经营溢利<span>两期差额</span></div><div class="wtrack"><div class="wbar up" style="left:67.6448%;width:15.6725%"></div></div><div class="fig">+16.29</div></div><div class="wrow"><div class="nm">净融资结果<span>两期差额</span></div><div class="wtrack"><div class="wbar down" style="left:82.4610%;width:0.8563%"></div></div><div class="fig">−0.89</div></div><div class="wrow"><div class="nm">联营净利润<span>两期差额</span></div><div class="wtrack"><div class="wbar up" style="left:82.4610%;width:2.6361%"></div></div><div class="fig">+2.74</div></div><div class="wrow"><div class="nm">Amer稀释利得<span>两期差额</span></div><div class="wtrack"><div class="wbar up" style="left:85.0972%;width:14.9028%"></div></div><div class="fig">+15.49</div></div><div class="wrow"><div class="nm">税项<span>两期差额</span></div><div class="wtrack"><div class="wbar down" style="left:94.6604%;width:5.3396%"></div></div><div class="fig">−5.55</div></div><div class="wrow"><div class="nm">非控股损益<span>两期差额</span></div><div class="wtrack"><div class="wbar down" style="left:91.2738%;width:3.3866%"></div></div><div class="fig">−3.52</div></div><div class="wrow"><div class="nm">2026H1归母<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0.0000%;width:91.2738%"></div></div><div class="fig">94.87</div></div></div>
+<p class="small">经营改善先增加利润，税项与非控股股东分配抵消一部分；桥中各项是两期差额，精确对上报告归母变化。稀释利得来自联营融资，不是安踏收到的经营现金。</p>
+<p>把联营因素全部移走，才得到<span class="g">公司调整归母利润</span>；这并未豁免持续营销、股份支付或租赁成本。集团销售及分销开支增速快过收入，品牌维持热度需要持续投入。研发金额增加、占比略降也只是投入证据：公司没有逐产品回报率和持续售价溢价数据，不能把研发费用增长直接变成护城河分数。</p>
+<p>公司调整归母增长较经营利润慢，税项与非控股损益也是原因。其他品牌的分部经营利润属于整个被合并主体；直接乘归母市盈率，会多算合作股东的经济权益。</p>
+<p>估值进一步使用<span class="g">核心经营利润代理</span>：从公司调整归母中移走税后非租赁金融结果，保留租赁经济成本。这让单列现金和债务与利润资本化相匹配，但集团税率和金融收益的少数股东分配未单列，因此代理值是分析估计，不是精确披露的核心归母。</p>
+<div class="plain"><span class="pl">白话解读</span><p>报告归母约95亿元，公司调整归母约72亿元。两者均不含少数股东利润；差别在于是否保留联营和相关特殊利得，后者仍含净融资结果。估值还需匹配这些投资和融资收益，才能决定哪些资产另加。</p></div>
 </section>
-
-<section class="reveal on" id="profit">
-  <div class="slabel">盈利能力 · 增量与利润质量</div>
-  <h2>经营增量换了发动机，报告净利又被Amer一次性放大</h2>
-  <p>集团毛利率的提升主要来自高毛利率其他品牌占比上升；安踏仍在增加品牌、研发与全球化投入，FILA则靠营运效率抵消产品质感成本和电商低毛利组合。分部经营利润可以完整对账，但其他品牌内部不能再拆。</p>
-
-  <div class="wfall" role="img" aria-label="2025H1至2026H1经营溢利变动桥，单位人民币百万元">
-    <div class="wrow"><div class="nm">2025H1经营溢利<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:86.15%"></div></div><div class="fig">10,131</div></div>
-    <div class="wrow"><div class="nm">安踏<span>分部增量</span></div><div class="wtrack"><div class="wbar up" style="left:86.15%;width:0.39%"></div></div><div class="fig">+46</div></div>
-    <div class="wrow"><div class="nm">FILA<span>分部增量</span></div><div class="wtrack"><div class="wbar up" style="left:86.54%;width:3.23%"></div></div><div class="fig">+380</div></div>
-    <div class="wrow"><div class="nm">所有其他品牌<span>分部增量</span></div><div class="wtrack"><div class="wbar up" style="left:89.77%;width:9.18%"></div></div><div class="fig">+1,080</div></div>
-    <div class="wrow"><div class="nm">总部及未分配<span>亏损收窄</span></div><div class="wtrack"><div class="wbar up" style="left:98.95%;width:1.05%"></div></div><div class="fig">+123</div></div>
-    <div class="wrow"><div class="nm">2026H1经营溢利<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0;width:100%"></div></div><div class="fig">11,760</div></div>
-  </div>
-  <p class="small">所有条形共用2026H1经营溢利为100%的横轴；四项增量精确合计人民币1,629百万元。其他品牌一项贡献66.3%，但JACK WOLFSKIN并表使其不等于纯有机增量。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>股东利润三层口径 · 人民币百万元；由上到下逐步剔除联营因素</caption>
-      <thead><tr><th>口径</th><th>2026H1</th><th>2025H1</th><th>利润率</th><th>该口径回答什么</th></tr></thead>
-      <tbody>
-        <tr><td>报告股东应占溢利</td><td>9,487</td><td>7,031</td><td>21.8%</td><td>法定归母结果；含联营利润与稀释利得</td></tr>
-        <tr><td>只剔除Amer稀释利得</td><td>7,938</td><td>同报告口径</td><td>18.2%</td><td>保留经常性联营贡献后的可比利润</td></tr>
-        <tr><td>公司调整归母利润</td><td>7,230</td><td>6,597</td><td>16.6%</td><td>再剔除联营损益，更接近并表业务</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="finds">
-    <div class="find good"><div class="t">增量集中，但不是空转</div><p>经营利润桥的终点高于收入增速，说明组合变化与FILA效率改善确实产生经营杠杆，而不只是一次性会计利得。</p></div>
-    <div class="find warn"><div class="t">其他品牌内部仍是黑箱</div><p>DESCENTE、KOLON SPORT、JACK WOLFSKIN与MAIA ACTIVE没有独立财务，无法验证哪一个品牌贡献利润、哪一个仍在投入期。</p></div>
-    <div class="find"><div class="t">调整利润率反而下行</div><p>公司调整利润率比上年低0.5个百分点，说明经营利润率改善没有全部流到剔除联营后的普通股东利润。</p></div>
-    <div class="find warn"><div class="t">标题利润不可年化</div><p>Amer配售稀释利得是资本事项产生的非现金一次性收益，不能作为下一年度盈利基数。</p></div>
-  </div>
-
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>本期最干净的读法是：<b>生意本身在变好，但没有报告净利看起来那么快</b>。报告归母利润同比增长34.9%；只剔除Amer稀释利得后为人民币7,938百万元、同比增长12.9%，但仍含联营利润；公司调整归母利润为人民币7,230百万元、同比增长9.6%，再剔除了联营损益。本报告进一步扣除税后非租赁融资收益所得的核心经营利润代理同比增长11.7%，这是分析派生值，不是公司披露口径。</p>
-  </div>
+<section class="reveal on" id="engine"><div class="slabel">品牌与终端验证</div><h2>多品牌提供增长，但尚未证明每个品牌都能复制成功</h2>
+<p>安踏与FILA在Q2仍是正增长，只是较Q1降档；其他品牌也从更高区间回落。方向一致足以让全年外推更谨慎，却不支持“季度收入下跌”的说法。更重要的检验是，同一品牌范围内的终端需求能否转成可盈利的收入，而不是集团合并范围是否继续变大。</p>
+<p>其他品牌贡献了66.1%的H1收入增量（推算）。这是增长集中度的事实，不是DESCENTE单品牌的成绩：会计组合包含JACK WOLFSKIN，营运公告的同比范围却排除新加入品牌。因此，分部收入高增与较窄范围的零售增速之间，没有可计算的“并购贡献差额”。</p>
+<h3>品牌溢价要由价格和回款证明</h3>
+<p>公司演示称DESCENTE、KOLON SPORT全渠道零售折扣维持正价九折以上，这是两品牌的管理层经营披露，不宜外推到安踏、FILA或新并购品牌。它支持部分户外品牌的价格韧性，却缺少销量、退货、库龄和同期营销支出的完整对照；维持折扣与增加获客成本可以同时发生。</p>
+<p>直营让集团确认更多终端收入，也承担租金、人工和库存；电商则有平台费、促销及退货。渠道是否更划算，要看扣完这些费用后留下的钱，不能单看毛利率或线上占比。</p>
+<h3>管理层陈述与可验证问题分开</h3>
+<div class="finds"><div class="find good"><div class="t">已有运营证据</div><p>电商收入增长，部分户外品牌折扣有支撑；这些比长期全球化愿景更接近当期执行，但鉴证强度低于财务主表。</p></div><div class="find warn"><div class="t">净关店未必等于提效</div><p>安踏成人、儿童及FILA期末店数减少；没有同店或平均有效营业面积数据，不能从期末店数反推单店效率。</p></div><div class="find"><div class="t">目标可以逐项验收</div><p>正式演示给出年末门店区间。应核对实际店数、成熟店表现和利润率，而非只检查是否开够店。</p></div><div class="find warn"><div class="t">问答证据仍有限</div><p>已取得官方回放及演示，未取得可核实的公开问答逐字稿；品牌利润、库存拆分及PUMA回报路径暂不作回答质量评分。</p></div></div>
+<p>全球化愿景不是盈利指引。新品牌产品、店型更新尚缺独立利润和回收期；若只有店数和投入增加，却说不清单品牌赚多少钱，扩张可能增加复杂度而非每股回报。</p>
+<div class="plain"><span class="pl">白话解读</span><p>约三分之二的收入增量来自其他品牌，增长并非平均分布。零售、折扣、店铺和现金需要一起看：关掉一些店后，如果消费者购买与门店后现金都改善，才更接近提效；如果只是换了渠道或合并范围，答案仍需等待。</p></div>
 </section>
-
-<section class="reveal on" id="brand-channel">
-  <div class="slabel">品牌与渠道 · Q2退出速度</div>
-  <h2>二季度仍增长，但三个品牌口径同时降档</h2>
-  <p>公司对单Q2只披露按零售价值计算的终端区间。该口径含增值税并覆盖集团、分销商及加盟商终端交易，明确不代表集团收入；数据亦未经审计或审阅。它最适合回答“消费者端速度往哪走”，不适合制造单季利润表。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>零售额同比区间 · 经营口径，不是收入；2026其他品牌排除2025-01-01后加入集团的品牌</caption>
-      <thead><tr><th>品牌口径</th><th>2026Q1</th><th>2026Q2</th><th>2026H1</th><th>方向判断</th></tr></thead>
-      <tbody>
-        <tr><td>安踏品牌</td><td>高单位数</td><td>低单位数</td><td>中单位数</td><td>成熟主品牌降速，仍正增长</td></tr>
-        <tr><td>FILA品牌</td><td>10–20%低段</td><td>低单位数</td><td>中单位数</td><td>降速幅度最大</td></tr>
-        <tr><td>所有其他品牌</td><td>40–45%</td><td>25–30%</td><td>35–40%</td><td>仍高增，但退出速度下移</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">会计分部“所有其他品牌”包含JACK WOLFSKIN完整并表增量；本表零售口径排除该品牌，故不能用H1零售区间验证分部收入增速。</p>
-
-  <h3>门店收缩与线上增长同时发生</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>单品牌门店 · 公司演示；目标是FY2026年末</caption>
-      <thead><tr><th>品牌/业态</th><th>2025-12-31</th><th>2026-06-30</th><th>H1净变动</th><th>FY2026目标</th></tr></thead>
-      <tbody>
-        <tr><td>安踏成人</td><td>7,203</td><td>7,122</td><td>−81</td><td>7,100–7,200</td></tr>
-        <tr><td>安踏儿童</td><td>2,652</td><td>2,560</td><td>−92</td><td>2,500–2,600</td></tr>
-        <tr><td>FILA三业态合计</td><td>2,040</td><td>1,954</td><td>−86</td><td>1,900–2,000</td></tr>
-        <tr><td>DESCENTE</td><td>256</td><td>261</td><td>+5</td><td>270–280</td></tr>
-        <tr><td>KOLON SPORT</td><td>209</td><td>212</td><td>+3</td><td>210–220</td></tr>
-        <tr><td>MAIA ACTIVE</td><td>52</td><td>53</td><td>+1</td><td>60–70</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p class="small"><b>指引边界：</b>系统性的FY2026量化展望只有年末门店数区间；集团及品牌收入、毛利率、经营利润率、库存、资本开支与自由现金流指引均未披露，管理层讨论亦说明各品牌不适用统一增长目标。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">线上仍是增量渠道</div><p>集团电商收入增长15.7%，占收入35.7%；安踏电商收入增长13.3%。这与成熟品牌净关店共同显示渠道组合正向线上迁移；门店效率是否改善仍需同店或店效同比验证。</p></div>
-    <div class="find good"><div class="t">高端户外价盘有支撑</div><p>公司演示称DESCENTE与KOLON SPORT全渠道零售折扣均维持正价九折以上；这是品牌级管理层披露，不能外推到安踏或FILA。</p></div>
-    <div class="find warn"><div class="t">库存健康只到集团层</div><p>平均库存周转130天较上年缩短，但品牌库存、库龄、售罄、同店、客单价与退货率均未披露。</p></div>
-    <div class="find warn"><div class="t">公开回放没有Q&amp;A</div><p>40分41秒官方回放在管理层展望后结束，没有分析师提问；不能评价回答质量，也不能把演示陈述伪装成问答。</p></div>
-  </div>
-
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>Q2的信号不是“收入崩了”，而是<b>所有品牌口径的终端速度都比Q1慢</b>。成熟品牌净关店、线上增长，DESCENTE、KOLON SPORT与MAIA ACTIVE小幅净开店；公司没有披露关店原因或店效同比，不能把净关店直接写成提效。下一步要看的不是H1漂亮的累计数，而是Q3终端能否重新加速，以及集团库存健康能否下沉到各品牌。</p>
-  </div>
+<section class="reveal on" id="cash"><div class="slabel">现金与资本回报</div><h2>付完租赁仍有现金，但公司FCF不等于可分配现金</h2>
+<p>新比较首先补上店铺租赁。现金流表把租赁负债付款放在融资活动；公司FCF却从经营现金流起算，未扣这一笔。因此<span class="g">租赁付款后自由现金流</span>比公司定义更适合观察品牌零售的现金负担，但仍包含已收利息，未扣全部公司融资支出，也不等同于归母可分红现金。</p>
+<p>本期该代理为92.78亿元，上年同期为74.67亿元，同比增长24.3%（推算）。两期均不扣收购现金，也不加其他投资小项。去年公司FCF另外被JACK WOLFSKIN收购付款压低；其购买价分摊完成后，公司FCF比较值从75.48亿元重列为75.42亿元，财务地图采用后者。不能把包含并购低基数的高增速归功于纯经营改善。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>本集团；来源H1财务状况表及附注，账面数据不代表可全部分派。</caption><thead><tr><th>资产负债或承诺</th><th>2026-06-30（亿元）</th><th>可用性与负担</th></tr></thead><tbody><tr><td>现金等价物 / 超三个月定存</td><td>169.94 / 453.17亿元</td><td>期限和账户归属不同，不全是母公司现金</td></tr><tr><td>抵押存款</td><td>2.90</td><td>主要为外汇远期抵押</td></tr><tr><td>银行借款 / 融资票据</td><td>38.49 / 90.00</td><td>均主要一年内到期</td></tr><tr><td>可转债账面负债</td><td>106.39</td><td>估值改用欧元本金同日折算</td></tr><tr><td>公司净现金</td><td>391.13</td><td>公司定义，未扣租赁</td></tr><tr><td>租赁负债</td><td>78.54</td><td>现金和利润已留租赁成本，估值不再扣一次</td></tr><tr><td>资本承担</td><td>83.39</td><td>总部、物流、园区及门店装修等</td></tr><tr><td>非控股权益</td><td>77.74</td><td>不是债务；现金归属准备另为分析假设</td></tr><tr><td>存货 / 应收贸易 / 应付贸易</td><td>103.54 / 37.88 / 35.27</td><td>余额不能代替整份营运资金现金桥</td></tr></tbody></table></div>
+<p>期末存货比年末减少，平均周转天数改善；但应付周转也缩短，公司归因于付款时间差异。部分周转指标改善与付款周期缩短并存，缺少完整现金调节表，不能将存货余额下降直接归因为同额现金释放。</p>
+<p>维持性与成长性资本开支未完整拆分，项目回收期也缺少复算数据。估值为承诺资金预留现金；租赁成本留在经营盈利内，不再重复扣租赁负债。</p>
+<p>FY2021–2025现金流量表向母公司普通股股东支付股息合计228.42亿元、购回自身股份27.96亿元；扣除同期普通股配售所得后，净返还151.41亿元（推算）。这说明普通股口径是净回报者；可转债融资另列为债务，不能计作永久股东回报，也不能把受托人购股全部当注销回购。</p>
+<p>本次中期股息每股HK$1.51，2026-09-08除息、9月9日记录、9月22日派付；宣告总额约为公司调整归母的一半。未来全年分配并未提前承诺；观察期仅计这笔股息，不假设后续分红回购。</p>
+<div class="plain"><span class="pl">白话解读</span><p>付完租赁后仍留下约93亿元，说明利润并非只停在账上。可是公司净现金约391亿元还没有解决存款归属、资本承诺和收购付款的问题。现金质量是支持项，可自由分配多少则需要逐项扣清。</p></div>
 </section>
-
-<section class="reveal on" id="cash-balance">
-  <div class="slabel">现金流 · 资产负债表 · 股东回报</div>
-  <h2>现金转化扎实，FCF标题却混进了收购基数</h2>
-  <p>经营现金流与经营溢利大体匹配，存货和应收也从年末下降。公司定义<span class="g">自由现金流</span>为经营现金流减资本开支、收购附属公司现金并加其他小项；因此同比比较必须先处理去年JACK WOLFSKIN收购现金。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>H1现金桥 · 人民币百万元；2025H1为PPA完成后的重列数</caption>
-      <thead><tr><th>项目</th><th>2026H1</th><th>2025H1</th><th>解释</th></tr></thead>
-      <tbody>
-        <tr><td>经营现金流</td><td>13,081</td><td>10,931</td><td>经营层现金产出</td></tr>
-        <tr><td>资本性开支</td><td>(1,453)</td><td>(1,223)</td><td>公司FCF表口径</td></tr>
-        <tr><td>收购附属公司</td><td>—</td><td>(2,170)</td><td>上年JACK WOLFSKIN现金对价</td></tr>
-        <tr><td>其他</td><td>2</td><td>4</td><td>不重大</td></tr>
-        <tr class="grp"><td>公司定义FCF</td><td>11,630</td><td>7,542</td><td>同比增幅含收购低基数</td></tr>
-        <tr><td>分析口径：剔除收购现金</td><td>同公司口径</td><td>9,712</td><td>同比+19.8%；不是公司KPI</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026-06-30流动性与承诺 · 人民币百万元</caption>
-      <thead><tr><th>项目</th><th>金额</th><th>投资解释</th></tr></thead>
-      <tbody>
-        <tr><td>现金及现金等价物</td><td>16,994</td><td>可即时动用主体，含多币种</td></tr>
-        <tr><td>期限超过三个月定存</td><td>45,317</td><td>流动与非流动定存合计</td></tr>
-        <tr><td>已抵押存款</td><td>290</td><td>主要为外汇远期抵押品</td></tr>
-        <tr><td>借贷</td><td>(23,488)</td><td>银行、融资票据及可转债账面负债</td></tr>
-        <tr class="grp"><td>公司定义净现金</td><td>39,113</td><td>未扣租赁负债7,854</td></tr>
-        <tr><td>资本承担</td><td>8,339</td><td>园区、总部、物流及门店装修等</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="finds">
-    <div class="find good"><div class="t">现金覆盖经营利润</div><p>H1经营现金流/经营溢利为111.2%，自由现金流/经营现金流为88.9%；半年季节性存在，但利润并非只停在应收。</p></div>
-    <div class="find good"><div class="t">库存绝对额下降</div><p>期末存货较年末减少14.8%，平均周转日同比缩短；应收贸易账款也下降17.9%。</p></div>
-    <div class="find warn"><div class="t">应付天数也缩短</div><p>平均应付周转由52天下降到44天，可能加快供应商现金支付，不能把所有营运资本变化都归为“效率改善”。</p></div>
-    <div class="find"><div class="t">股息仍以调整利润为锚</div><p>中期每股HKD1.51，折合人民币36.37亿元，为公司调整利润的50.3%；除净日在9月8日。</p></div>
-  </div>
-
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>现金质量是本期最扎实的支持项。剔除去年收购造成的比较噪音后，FCF改善与经营现金流几乎同速；这比标题的五成增长更真实。<b>但净现金不是完全自由现金</b>：它还要覆盖资本承担、租赁和PUMA交易。</p>
-  </div>
+<section class="reveal on" id="capital"><div class="slabel">投资与每股权益</div><h2>Amer已有盈利贡献，PUMA付款仍待条件达成</h2>
+<p>截至中期，集团实际经济持有Amer约2.20亿股、占37.63%，账面值177.44亿元；分占Amer本身利润7.20亿元，与集团全部联营公司净利润7.08亿元不同。权益披露中的投票比例和视作持有股份并非同一经济持股，估值以实际持股乘市场价格，不采用较大的权益申报数字。</p>
+<p>按本次收盘价与中间价，Amer实际持股的未折价市值约439.5亿元（推算）。它是可观察的上市资产，却不是安踏可随时无成本变现的存款：战略持股、处置税费、市场波动与汇率都会影响实际回收额。分占利润已从核心盈利剔除，才可以在分部加总估值（SOTP）中单独计价。</p>
+<p>PUMA拟购约4,301万股、29.06%，每股€35，总对价约€15.06亿，<b>不含税及专业费用</b>。通函估计专业费用1.26亿元；应付交易税另计。9月5日未取得交割完成公告；通函预期Q4条件成就后再转让，完成后拟按联营入账。</p>
+<p>最新PUMA收盘€23.83，较协议价低31.9%（推算）；这不是已确认会计减值，而是当前市场定价与合同成本的差距。拟购股权未折价市值为80.4亿元，对价按同日汇率约118.0亿元。支付现金与取得股权必须同进同出，不能只把“增加一个全球品牌”作为增长加分。</p>
+<p>若截至2026-12-31仍未达到无条件日期，协议次营业日终止，安踏须支付€1亿；这不同于条件已满足、转让跨年的延迟。特定后续要约或出售还可能触发额外价款，本模型假设不触发。少数股权缺少控制权，不能直接套用国内品牌整合的权限与回报。</p>
+<h3>激励和可转债影响不同的分母</h3>
+<p>最新月报确认普通股约27.97亿股、库存股为零。5月授予约379万股奖励由已购现有股份满足，不新增法律股本；归属安排为2027年30%、2029年70%，具体绩效门槛在私人通知中，外部股东难以判断是否奖励真实资本回报。奖励归属会影响EPS可用股数，不能与新增发行混为一谈。</p>
+<p>€15亿零息<span class="g">可转债</span>则可能新增股份。截止日现行换股价HK$99.80，潜在约1.23亿股；2026-09-10起才调整为HK$97.78、潜在约1.25亿股。估值分别计算保留债务与转换后去债加股两种状态，不同时扣本金又加潜在股。</p>
+<div class="plain"><span class="pl">白话解读</span><p>Amer是已经持有的资产，PUMA是仍需付款的交易；两者要分开。PUMA市场价低于收购价约31.9%，意味着报告需要给出回报修复的证据，而不能仅靠品牌名气。下一步先验收交易条件，再验收少数股权的实际收益。</p></div>
 </section>
-
-<section class="reveal on" id="portfolio">
-  <div class="slabel">资本配置 · Amer与PUMA</div>
-  <h2>Amer已创造可见价值，PUMA拟交易仍在为转型预期定价</h2>
-  <p>Amer已是权益法联营公司，分占利润与市值都能观察；PUMA则处在交易承诺阶段，尚未进入安踏资产负债表。两项投资必须按法律状态分别处理：前者是已有资产，后者要在交割情景中同时扣现金、加股权。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>上市投资穿透 · 市值与汇率取2026-08-31；账面与持股取2026-06-30</caption>
-      <thead><tr><th>项目</th><th>Amer Sports</th><th>PUMA拟购股份</th></tr></thead>
-      <tbody>
-        <tr><td>法律/会计状态</td><td>持股37.63%；权益法联营</td><td>拟购29.06%；尚未交割</td></tr>
-        <tr><td>H1进入安踏利润</td><td>分占利润人民币720百万元</td><td>未进入</td></tr>
-        <tr><td>安踏账面值</td><td>人民币17,744百万元</td><td>未确认</td></tr>
-        <tr><td>当前gross look-through</td><td>人民币44,959百万元</td><td>人民币8,674百万元</td></tr>
-        <tr><td>交易成本</td><td>历史投资，不在本次重算</td><td>EUR1,505.5百万元；每股EUR35</td></tr>
-        <tr><td>当前隐含PUMA股价</td><td>—</td><td>约EUR25.74</td></tr>
-        <tr><td>核心风险</td><td>税务、流动性、汇率与非控制折价</td><td>监管、交割、转型、治理及mark-to-cost缺口</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="finds">
-    <div class="find good"><div class="t">Amer已验证一部分组合能力</div><p>H1 Amer收入与税后利润均增长，安踏的权益法利润随之上升；当前持股市值明显高于账面值，但这不是可即时分配现金。</p></div>
-    <div class="find warn"><div class="t">PUMA是少数股权，不是整合并表</div><p>完成后拟按权益法核算，安踏希望取得监事会席位但没有控制权；不能把PUMA全部收入并入增长故事。</p></div>
-    <div class="find warn"><div class="t">若交割，支付的是2027年以后修复</div><p>通函估值建立在PUMA转型后收入与EBITDA恢复的预期上；2026仍是过渡年，当前市场mark低于交易价。</p></div>
-    <div class="find"><div class="t">集团承受得起，但机会成本真实</div><p>按当前汇率，对价约占期末公司净现金三成。若PUMA恢复延后，损失首先体现为现金少了、联营回报却未跟上。</p></div>
-  </div>
-
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>Amer像一笔已经长大的投资；PUMA像一张尚未兑现的期权。安踏的资产负债表足以完成拟交易，问题不是“会不会没钱”，而是<b>若交割，用这笔钱拟换来的少数股权能否产生高于现金机会成本的长期回报</b>。</p>
-  </div>
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="SOTP"><div class="slabel">估值与隐含预期</div><h2>经营没有失去价值，现价却缺少充足的下行缓冲</h2>
+<div class="grid"><div class="cell" ><div class="k">现价</div><div class="v">HK$76.10</div><div class="d"><span>2026-09-04 16:08:06 香港时间</span></div></div><div class="cell" ><div class="k">熊市</div><div class="v">HK$56.6</div><div class="d"><span>较现价−25.7% · 不含期间股息</span></div></div><div class="cell" ><div class="k">基准</div><div class="v">HK$77.4</div><div class="d"><span>较现价+1.7% · 不含期间股息</span></div></div><div class="cell" ><div class="k">牛市</div><div class="v">HK$100.5</div><div class="d"><span>较现价+32.0% · 不含期间股息</span></div></div><div class="cell" ><div class="k">隐含预期</div><div class="v">10.47<span class="u">倍</span></div><div class="d"><span>先扣本次股息与基准独立资产；余价相当于多少年核心盈利</span></div></div><div class="cell" data-verdict="neutral-cautious"><div class="k">判断</div><div class="v">中性偏谨慎</div><div class="d"><span>估值输入与终端验证仍弱</span></div></div></div><div class="steps"><div class="step"><div class="n">方法 A</div><b>分部加总估值（SOTP）：经营与投资分别值多少？</b><p>核心经营利润资本化，现金、债务与非并表投资独立处理。</p></div><div class="step"><div class="n">方法 B</div><b>正常化整体市盈率（PE）：量级能否对上？</b><p>保留经常联营和净融资收益，不再另加投资与现金；只作交叉检验。</p></div><div class="step"><div class="n">怎么读</div><b>一个主方法决定三档</b><p>各档为2026年末、扣本次股息后的检验价值；含息赔率在最终判断计算，不机械平均。</p></div></div>
+<h3>第一步 · 历史低倍数并不等于便宜</h3>
+<p>Wind市盈率TTM为11.52倍、最近一期市净率（PB）为2.58倍；自身五年PE范围11.48–51.09倍，中位22.01倍，PB范围2.57–13.97倍、中位4.25倍。当前数值靠近区间低端，但精确分位未能核实。按披露每股股东权益与本次中间价自算PB为2.57倍，与标准化口径接近；这不是核心品牌资产回报的独立证明。</p>
+<p>历史PE包含不同年份Amer特殊利得，直接比较可能把会计分母变化当成估值压缩。用剔除稀释利得的TTM归母重算，整体PE为12.69倍（推算），仍包含经常联营与净融资结果，和下文核心盈利倍数不是同一个分母。</p>
+<h3>第二步 · 溢价的依据是经营轨迹，不是品牌名单</h3><div class="tblscroll"><table class="tbl" ><caption>Wind 2026-09-04快照及标准化财务；安踏会计列由HKEX控制。预测PE未标明统一预测年度，不反推为可比一致预期；特步历史含出售业务口径变化。</caption><thead><tr><th>公司</th><th>滚动/预测市盈率PE</th><th>市净率PB</th><th>H1收入增长 / 毛利率</th><th>FY23→24→25收入（亿元）</th><th>同期毛利率</th><th>同期ROE</th></tr></thead><tbody><tr><td>安踏体育</td><td>11.52 / 12.03</td><td>2.58</td><td>12.9% / 63.9%</td><td>623.56→708.26→802.19</td><td>62.6→62.2→62.0%</td><td>23.8→27.6→21.3%</td></tr><tr><td>李宁</td><td>10.08 / 12.20</td><td>1.06</td><td>2.8% / 50.9%</td><td>276.0→286.8→296.0</td><td>48.4→49.4→49.0%</td><td>13.1→11.9→10.9%</td></tr><tr><td>特步国际</td><td>6.57 / 7.02</td><td>0.77</td><td>−0.6% / 46.4%</td><td>143.5→135.8→141.5</td><td>42.2→43.2→42.8%</td><td>12.0→14.1→14.5%</td></tr><tr><td>361度</td><td>6.08 / 5.73</td><td>0.74</td><td>8.0% / 41.8%</td><td>84.2→100.7→111.5</td><td>41.1→41.5→41.5%</td><td>11.3→12.4→13.5%</td></tr></tbody></table></div>
+<p>李宁毛利率修复而资本回报走低，特步出售业务改变比较范围，361度从较低基数扩大收入。安踏组合毛利更高，但渠道、租赁及联营结构不同，整体PE只能约束估值区间，不能推出精确的核心业务溢价。</p>
+<h3>第三步 · 先给经营定价，再逐项处理资产</h3><div class="tblscroll"><table class="tbl txt" ><caption>2026年末情景检验价值；不是价格预测或公司指引。基于中期资产表冻结并扣已公告分配，不预先计入此后自由现金流；不对短期情景终值另行折现。</caption><thead><tr><th>驱动 / 输出</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据</th></tr></thead><tbody><tr><td>FY2026经营情景</td><td>成熟品牌持续承压</td><td>核心增速延续H1</td><td>H1代理简单年化</td><td>终端范围放缓与品牌组合改善共同设边界，非公司指引</td></tr><tr><td>核心经营利润代理（亿元）</td><td>118.00</td><td>126.46</td><td>135.22</td><td>以FY2025代理和H1同口径结果外推，税/非控股权益分配未单列</td></tr><tr><td>同比（推算）</td><td>+4.2%</td><td>+11.7%</td><td>+19.4%</td><td>对FY2025核心代理，不对报告归母</td></tr><tr><td>经营盈利资本化倍数</td><td>8倍</td><td>11倍</td><td>14倍</td><td>参照同业整体PE区间及安踏组合质量；非同口径机械溢价</td></tr><tr><td>对应中期持续盈利增长</td><td>0%</td><td>5%</td><td>10%</td><td>分析假设：成熟品牌压力、稳定组合、有利扩张三种状态；不是永续公式</td></tr><tr><td>Amer市值计入</td><td>70%</td><td>80%</td><td>90%</td><td>战略少数持股、变现税费及市值波动折价，幅度为分析假设</td></tr><tr><td>PUMA市值计入</td><td>70%</td><td>85%</td><td>100%</td><td>少数治理与转型执行折价，对价及披露估计专业费用全额预留；税项及或有追加未量化</td></tr><tr><td>金融净资产代理（亿元）</td><td>215.89</td><td>215.89</td><td>215.89</td><td>排除抵押资金，预留全部非控股权益及资本承担；不是实际母公司现金</td></tr><tr><td>已公告股息处理</td><td>从资产扣款</td><td>从资产扣款</td><td>从资产扣款</td><td>按全股本预留HK$1.51；持有回报加回一次</td></tr><tr><td>PUMA情景</td><td>完成交易</td><td>完成交易</td><td>完成交易</td><td>均非已发生事实；未完成差额见风险表</td></tr><tr><td>SOTP价值（HK$/股）</td><td>56.6</td><td>77.4</td><td>100.5</td><td>保留债务及转换去债加股两种状态取较低值</td></tr></tbody></table></div><div class="steps chain"><div class="step"><div class="n">驱动</div><b>成熟品牌稳定、组合贡献延续</b><p>基准经营路径，等待终端数据检验</p></div><div class="step"><div class="n">经营变化</div><b>11.7%核心代理增速</b><p>H1同口径同比应用于FY2025</p></div><div class="step"><div class="n">盈利</div><b>126.46亿元</b><p>FY2026核心经营盈利估计</p></div><div class="step"><div class="n">倍数与资产</div><b>11倍及独立资产</b><p>倍数参照同业区间及组合质量，资产折价来自上表</p></div><div class="step"><div class="n">每股价值</div><b>HK$77.4</b><p>SOTP基准；期间股息不在此重复加</p></div></div><div class="tblscroll"><table class="tbl sgrid"><caption>行：经营盈利倍数；列：FY2026核心经营利润代理（亿元）。两项全幅均令价值变化超过5%；其余用基准假设。粗框为基准，底色为含息总回报为零的现价隐含，对应除息后HK$74.59；隐含倍数显示舍入，格内按未舍入值。</caption><thead><tr><th>倍数 ＼ 核心盈利</th><th>118.00</th><th>126.46</th><th>135.22</th></tr></thead><tbody><tr><td>8.00倍</td><td>58.9</td><td>61.7</td><td>64.6</td></tr><tr><td>10.47倍（隐含）</td><td>70.9</td><td class="implied">74.6</td><td>78.4</td></tr><tr><td>11.00倍</td><td>73.5</td><td class="base">77.4</td><td>81.4</td></tr><tr><td>14.00倍</td><td>88.2</td><td>93.1</td><td>98.1</td></tr></tbody></table></div>
+<p>敏感性表对应的价值差距显示，倍数是主要变量。完整预留资本承担也会减少资产信用；这是保守假设，不是已发生损失。两项每股敞口见风险表。</p>
+<h3>第四步 · 当前价格需要怎样的盈利</h3><div class="tblscroll"><table class="tbl txt" data-fullscan-role="implied"><caption>以HK$74.59除息后价值加已公告股息，匹配现价；每行只反求一个驱动，其他取基准；不是市场参与者实际预测的调查。</caption><thead><tr><th>假设</th><th>基准假设</th><th>现价隐含</th><th>差距</th></tr></thead><tbody><tr><td>经营盈利资本化倍数</td><td>11.00倍</td><td>10.47倍</td><td>−0.53倍</td></tr><tr><td>FY2026核心盈利（亿元）</td><td>126.46</td><td>120.32</td><td>−4.9%</td></tr><tr><td>核心盈利同比</td><td>+11.7%</td><td>+6.2%</td><td>以同一FY2025代理为基数</td></tr></tbody></table></div><div class="rows" aria-label="SOTP情景价格阶梯"><div class="row"><div class="nm">熊市<span>增长压力与投资折价</span></div><div class="track"><div class="fill alt" style="width:56.3184%"></div></div><div class="fig">56.6<span>−25.7%</span></div></div><div class="row"><div class="nm">现价<span>9月4日收盘，除息前</span></div><div class="track"><div class="fill soft" style="width:75.7214%"></div></div><div class="fig">76.10<span>市场价</span></div></div><div class="row"><div class="nm">基准<span>组合盈利继续增长</span></div><div class="track"><div class="fill " style="width:77.0149%"></div></div><div class="fig">77.4<span>+1.7%</span></div></div><div class="row"><div class="nm">牛市<span>多品牌与投资修复</span></div><div class="track"><div class="fill moss" style="width:100.0000%"></div></div><div class="fig">100.5<span>+32.0%</span></div></div></div><p class="small">条形共用最高价值；差距未加期间股息。换算用9月4日人民银行中间价：1港元＝0.86458元、1美元＝6.7787元、1欧元＝7.8397元人民币，来源Wind；不是可成交即期报价。</p><div class="ffield" aria-label="SOTP与交叉检验和历史市场参照，统一轴"><div class="frow"><div class="fnm">分部加总SOTP<span>熊市</span></div><div class="ftrack"><div class="fbar alt" style="left:18.0444%;width:0.8000%"></div><div class="fmark" style="left:40.1111%"></div></div><div class="fig">56.6</div></div><div class="frow"><div class="fnm">分部加总SOTP<span>基准</span></div><div class="ftrack"><div class="fbar " style="left:41.1556%;width:0.8000%"></div></div><div class="fig">77.4</div></div><div class="frow"><div class="fnm">分部加总SOTP<span>牛市</span></div><div class="ftrack"><div class="fbar moss" style="left:66.8222%;width:0.8000%"></div></div><div class="fig">100.5</div></div><div class="frow"><div class="fnm">正常化整体PE<span>交叉检验</span></div><div class="ftrack"><div class="fbar " style="left:20.4444%;width:26.6667%"></div></div><div class="fig">58.4–82.4</div></div><div class="frow"><div class="fnm">历史PB参照<span>低值至中位数</span></div><div class="ftrack"><div class="fbar " style="left:38.5556%;width:55.2222%"></div></div><div class="fig">74.7–124.4</div></div></div><p class="small">主法基准靠近现价，历史PB参照却明显更宽，显示“回到过去倍数”并非保守假设。横轴：HK$40–130；黑线为现价，细标为情景点值。交叉检验与历史重定价仅检验量级，不参与主法平均。</p>
+<div class="plain"><span class="pl">一句话总结</span><p>主法把经营与投资分别估价后相加。最关键的是愿意为核心利润付多少倍，现价隐含倍数只略低于基准。现价HK$76.10接近基准HK$77.4，下行余地却更大；成熟品牌恢复与收购回报，决定这笔价格是否有支撑。</p></div>
 </section>
-
-<section class="reveal on" id="governance">
-  <div class="slabel">治理与激励 · 每股价值</div>
-  <h2>奖励计划不发新股，可转债才是主要潜在扩股项</h2>
-  <p>5月股份奖励由受托人持有的现有股份满足，因此不会新增法律股本；但归属会减少信托持股并进入未来EPS分母。可转债则可能真正新增股份，且中期股息已触发换股价调整。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>股份奖励与2029可转债 · 截止2026-08-31可得公告</caption>
-      <thead><tr><th>项目</th><th>规模/条款</th><th>每股影响</th><th>证据缺口</th></tr></thead>
-      <tbody>
-        <tr><td>已发行普通股</td><td>2,796,653,300股</td><td>估值基本分母</td><td>—</td></tr>
-        <tr><td>受托人持有奖励股</td><td>25,547,364股</td><td>已包含在总股本</td><td>未来归属节奏依条件</td></tr>
-        <tr><td>5月新增授予</td><td>约3.79百万股；357名员工</td><td>现有股份满足，不另加法律股本</td><td>绩效门槛只在私人通知，未披露</td></tr>
-        <tr><td>归属安排</td><td>2027-05-01为30%；2029-05-01为70%</td><td>逐步进入可用EPS股数</td><td>门槛与权重不可验证</td></tr>
-        <tr><td>可转债换股价</td><td>2026-09-10起HKD97.78</td><td>显著高于截止日股价</td><td>未来股价与转换选择未知</td></tr>
-        <tr><td>全数转换潜在股份</td><td>125,088,464股</td><td>扩大后占4.28%</td><td>估值需同步加回债务，不能只加股</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>短期别把两类“稀释”混在一起：奖励股已经买在信托里，不会再发行；可转债才可能新增股本。真正的治理缺口是<b>员工奖励的业绩门槛没有公开</b>，投资者无法判断奖励的是增长、利润还是长期股东回报。</p>
-  </div>
-</section>
-
-<section class="reveal on" id="market-context">
-  <div class="slabel">行业 · 同业 · 市场行为</div>
-  <h2>市场愿意为质量付溢价，却没有给增长失速免责</h2>
-  <p>Wind快照显示安踏相对李宁、特步与361度的核心品牌同业中位数拥有明显估值溢价。这个溢价有更高毛利率、多品牌组合和净现金支持，但Q2成熟品牌降速意味着“质量溢价”仍要靠后续经营兑现。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>港股品牌同业 · Wind 2026-08-31收市后；预测P/E为供应商标准化口径</caption>
-      <thead><tr><th>公司</th><th>价格(HKD)</th><th>P/E TTM</th><th>预测P/E</th><th>P/B LF</th><th>股息率</th><th>2026 YTD</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>安踏体育</td><td>77.70</td><td>11.764x</td><td>12.339x</td><td>2.633x</td><td>3.33%</td><td>−2.17%</td></tr>
-        <tr><td>李宁</td><td>13.63</td><td>10.151x</td><td>12.201x</td><td>1.068x</td><td>4.95%</td><td>−25.88%</td></tr>
-        <tr><td>特步国际</td><td>3.67</td><td>7.033x</td><td>7.486x</td><td>0.821x</td><td>7.48%</td><td>−29.34%</td></tr>
-        <tr><td>361度</td><td>4.505</td><td>6.159x</td><td>5.806x</td><td>0.747x</td><td>7.44%</td><td>−20.18%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">三家同业的P/E与P/B中位数显著低于安踏。安踏Wind TTM分母可能包含Amer一次性利得，故不能替代本报告正常化估值。滔搏是零售商且标准化财务单位异常，不进入核心中位数。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">三年相对收益近乎持平</div><p>2023-08-31至2026-08-31，安踏未复权月末价格收益为−12.05%，恒生非必需性消费价格指数为−12.36%，几何相对收益约+0.35%。</p></div>
-    <div class="find"><div class="t">统计Beta偏低</div><p>36个月收益观察推算Beta为0.537、相关系数0.644；Wind风险接口的Beta为空，因此采用本地可执行月频计算。</p></div>
-    <div class="find warn"><div class="t">低Beta不是低经营风险</div><p>品牌需求、折扣和并购回报可以与指数不同步；月频统计也会淡化月中波动，不能把它当作本金保护。</p></div>
-    <div class="find warn"><div class="t">消费者仍谨慎</div><p>公司演示将行业环境概括为低增高质与促销偏强；这是管理层背景判断，不是安踏份额或定价权的独立证明。</p></div>
-  </div>
-
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>安踏比同业贵，不是市场没看见风险，而是市场愿意为组合和盈利质量付钱。<b>接下来决定溢价能否保住的，不是历史Beta，而是成熟品牌能否止住降速、其他品牌能否继续贡献利润。</b></p>
-  </div>
-</section>
-
-<section class="reveal on" id="valuation">
-  <div class="slabel">估值 · 交易后SOTP</div>
-  <h2>现价隐含核心业务约十倍，基准安全边际不厚</h2>
-
-  <div class="grid">
-    <div class="cell"><div class="k">除息前现价</div><div class="v">HK$77.70</div><div class="d"><span>2026-08-31 16:08:51 HKT</span></div></div>
-    <div class="cell"><div class="k">熊市价值</div><div class="v">HK$62.2</div><div class="d"><span class="down">较现价 −20.0%</span></div></div>
-    <div class="cell"><div class="k">基准价值</div><div class="v">HK$83.0</div><div class="d"><span class="up">较现价 +6.9%</span></div></div>
-    <div class="cell"><div class="k">牛市价值</div><div class="v">HK$106.2</div><div class="d"><span class="up">较现价 +36.6%</span></div></div>
-    <div class="cell"><div class="k">现价隐含核心P/E</div><div class="v">≈10.0x</div><div class="d"><span>扣除基准资产计入后</span></div></div>
-    <div class="cell"><div class="k">一句话判断</div><div class="v">中性偏积极</div><div class="d"><span>基准空间小，右尾靠经营确认</span></div></div>
-  </div>
-
-  <div class="steps">
-    <div class="step"><div class="n">STEP 1</div><b>洗净核心利润</b><p>从公司调整利润再剔除税后非租赁融资收益；WHY：现金要单独加，利息不能再被资本化一次。</p></div>
-    <div class="step"><div class="n">STEP 2</div><b>归属金融净资产</b><p>流动资源减非CB借款、CB欧元本金及非控股权益；WHY：核心利润是归母口径，合并现金也要保守归属。</p></div>
-    <div class="step"><div class="n">STEP 3</div><b>单列上市投资</b><p>Amer按当前mark折价；PUMA按交割后同时扣对价、加折后mark；WHY：防止利润和现金双重计算。</p></div>
-    <div class="step"><div class="n">STEP 4</div><b>换成每股价值</b><p>统一以HKD/CNY中间价换算，并检查可转债全转换；WHY：高价值情景不能忽略潜在股本。</p></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>三情景驱动 · 金额为人民币百万元；折价均为分析假设，不是公司指引</caption>
-      <thead><tr><th>驱动</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
-      <tbody>
-        <tr><td>FY2026E核心经营净利润</td><td>11,800</td><td>12,646</td><td>13,522</td></tr>
-        <tr><td>核心业务P/E</td><td>8.0x</td><td>11.0x</td><td>14.0x</td></tr>
-        <tr><td>Amer当前mark计入比例</td><td>70%</td><td>80%</td><td>90%</td></tr>
-        <tr><td>PUMA当前mark计入比例</td><td>70%</td><td>85%</td><td>100%</td></tr>
-        <tr><td>PUMA交易处理</td><td>交割后</td><td>交割后</td><td>交割后</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">FY2025核心经营利润代理为人民币11,325百万元；2026H1代理为6,761百万元、同比11.7%。熊市接近低增长全年，基准把H1核心增速应用于FY2025，牛市将H1简单年化。核心倍数以同业预测中位数与安踏Wind预测P/E为边界参照。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>交易后SOTP输出 · 人民币百万元；每股为除息前HKD</caption>
-      <thead><tr><th>项目</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
-      <tbody>
-        <tr><td>核心业务价值</td><td>94,400</td><td>139,101</td><td>189,314</td></tr>
-        <tr><td>金融净资产代理</td><td colspan="3">30,226（三情景相同）</td></tr>
-        <tr><td>Amer折后价值</td><td>31,471</td><td>35,967</td><td>40,463</td></tr>
-        <tr><td>PUMA交易净调整</td><td>(5,723)</td><td>(4,422)</td><td>(3,121)</td></tr>
-        <tr class="grp"><td>股东价值</td><td>150,375</td><td>200,873</td><td>256,883</td></tr>
-        <tr><td>每股价值</td><td>HK$62.15</td><td>HK$83.03</td><td>HK$106.18</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">汇率：1 HKD＝RMB0.8651、1 EUR＝RMB7.8344、1 USD＝RMB6.7828，均为Wind返回的2026-08-31中国人民银行中间价，不是可成交即期价。若PUMA不交割，基准价值约HKD84.85；交割承诺使基准价值减少约HKD1.83/股。牛市价值越过换股价后，基本与全转换口径比较取较低值；当前基本口径略低。</p>
-
-  <h3>把三档价值放在一把尺上</h3>
-  <div class="rows" aria-label="安踏体育情景价值与现价对比">
-    <div class="row"><div class="nm">熊市<span>成熟品牌更慢、资产折价扩大</span></div><div class="track"><div class="fill alt" style="width:58.54%"></div></div><div class="fig">HK$62.2<span class="down">较现价 −20.0%</span></div></div>
-    <div class="row"><div class="nm">除息前现价<span>2026-08-31收市后</span></div><div class="track"><div class="fill soft" style="width:73.18%"></div></div><div class="fig">HK$77.70<span>市场价</span></div></div>
-    <div class="row"><div class="nm">基准<span>核心延续、PUMA按折后mark</span></div><div class="track"><div class="fill" style="width:78.20%"></div></div><div class="fig">HK$83.0<span class="up">较现价 +6.9%</span></div></div>
-    <div class="row"><div class="nm">牛市<span>多品牌与联营资产共同兑现</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$106.2<span class="up">较现价 +36.6%</span></div></div>
-  </div>
-
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>现价已经接近基准价值，不是“闭眼捡便宜”。好处是市场扣除现金和上市投资后，只给核心业务约十倍利润；坏处是<b>基准上行很薄，任何成熟品牌继续降速或PUMA回报延后，都会把价值推向熊市</b>。中性偏积极，靠的是右尾，不是当前安全垫。</p>
-  </div>
-</section>
-
-<section class="reveal on" id="decision">
-  <div class="slabel">风险 · 多空辩论 · 最终判断</div>
-  <h2>中性偏积极：组合质量成立，重估证据还差两块</h2>
-  <p>安踏的核心品牌、现金转化和Amer资产共同构成下盘；其他品牌让增长曲线更陡。结论置信度为中等，因为Q2退出速度与PUMA回报仍未被财务结果验证。当前不把未披露的品牌利润、海外占比或管理层愿景提前资本化。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">多头最强证据</div><p>其他品牌已经从收入增量延伸到经营利润增量，FILA效率也在改善；这比只靠并购扩收入更有质量。</p></div>
-    <div class="find warn"><div class="t">空头最强证据</div><p>三个品牌口径Q2同时降速，而PUMA当前mark低于收购成本；需求和资本配置可能在同一时间变差。</p></div>
-    <div class="find"><div class="t">确认条件</div><p>下一次运营更新中，安踏与FILA至少回到中单位数附近，且其他品牌不依赖口径变化维持增量。</p></div>
-    <div class="find warn"><div class="t">失效条件</div><p>成熟品牌继续低单位数或转负、库存天数反弹，同时PUMA交割后没有清晰权益法利润路径，基准倍数应下修。</p></div>
-  </div>
-
-  <div class="callout"><b>最强反方观点：</b>本报告仍可能低估安踏的品牌运营能力。若成熟品牌终端增长迅速恢复，DESCENTE/KOLON的正价增长延续，Amer继续放大利润，而PUMA转型按通函假设兑现，那么当前核心业务隐含倍数会显得过低，牛市价值并不激进。反过来，四件事只要同时落空两件，所谓组合溢价就会变成复杂度折价。</div>
-
-  <h3>把验证点排在时间线上</h3>
-  <div class="tline">
-    <div class="tstop"><span class="tw">2026-09</span><b>除息与换股价调整</b><p>除息后价格比较须减HKD1.51；9月10日起用HKD97.78检查转换。</p></div>
-    <div class="tstop warn"><span class="tw">下一次运营公告</span><b>Q2降速是否延续</b><p>终端流水仍只作方向信号，继续与集团收入严格分开。</p></div>
-    <div class="tstop"><span class="tw">2026H2</span><b>JACK WOLFSKIN落地</b><p>新店型和产品需要收入、亏损、折扣或店效才能验证复兴。</p></div>
-    <div class="tstop warn"><span class="tw">2026Q4 / 年内</span><b>PUMA交割条件</b><p>若完成，重算净现金、联营资产、汇率敞口与权益法贡献路径。</p></div>
-    <div class="tstop"><span class="tw">FY2026结果</span><b>利润与库存验收</b><p>核对店数目标、品牌增量质量、FILA利润率和全年现金转换。</p></div>
-  </div>
-
-  <div class="plain"><span class="pl">最终判断</span>
-    <p><b>中性偏积极，不追逐标题利润。</b>最优路径是Q3终端回稳、全年核心利润保持双位数附近增长、PUMA按纪律交割；最差路径是成熟品牌与收购回报同步下修。下一次可证伪检查不是年报，而是下一份终端运营公告。</p>
-  </div>
-</section>
-
-<section class="reveal on" id="glossary">
-  <div class="slabel">名词速查 · 快速检索</div>
-  <h2>读懂安踏需要的十二个词</h2>
-  <div class="tblscroll">
-    <table class="tbl gloss">
-      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
-      <tbody>
-        <tr><td>零售流水</td><td>消费者在集团、分销商与加盟商终端买货的零售价值；可看需求方向，但不等于安踏当期会计收入。</td></tr>
-        <tr><td>并表</td><td>子公司的收入、成本、资产和负债逐项纳入集团报表；JACK WOLFSKIN已并表，Amer没有。</td></tr>
-        <tr><td>权益法</td><td>对有重大影响但不控制的联营公司，只按持股比例确认利润与净资产变化，不把全部收入并入。</td></tr>
-        <tr><td>所有其他品牌</td><td>正式报告分部，合并多个品牌；不是DESCENTE单一品牌，也没有逐品牌财务拆分。</td></tr>
-        <tr><td>公司调整归母利润</td><td>报告归母利润剔除联营公司损益及联营投资相关一次性利得/亏损后的公司KPI。</td></tr>
-        <tr><td>稀释利得</td><td>联营公司发行新股后，安踏持股比例下降但分占净资产变化产生的会计收益；不是卖货现金。</td></tr>
-        <tr><td>自由现金流（公司定义）</td><td>经营现金流减资本开支和收购附属公司现金，再加其他小项；不同于Wind FCFF。</td></tr>
-        <tr><td>库存周转天数</td><td>平均库存相当于多少天销售成本；天数下降通常更健康，但集团平均不能替代品牌库龄。</td></tr>
-        <tr><td>SOTP</td><td>分部加总估值：核心业务、金融净资产和上市投资分别估值，避免把资产与利润重复计算。</td></tr>
-        <tr><td>Gross look-through</td><td>按被投资公司市值乘持股比例得到的穿透市场值，未扣税、流动性、少数股权或处置折价。</td></tr>
-        <tr><td>除息前 / Cum-dividend</td><td>股价仍包含即将派发股息的状态；除息后做比较，要同步从价值或价格扣除同一股息。</td></tr>
-        <tr><td>可转债</td><td>可按约定价格转换为股票的债券；估值跨过换股价时，要同时考虑债务消失和股数增加。</td></tr>
-        <tr><td>Beta</td><td>历史上个股收益对基准波动的统计敏感度，不是经营风险或最大亏损的保证。</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="reveal on" id="methods">
-  <div class="slabel">方法与来源</div>
-  <h2>HKEX控制会计，Wind控制带时间戳的市场层</h2>
-  <p>财务、分部、现金、股本、股息和交易状态均以香港交易所中文文件为控制源；公司演示只用于门店数量与目标、品牌折扣等管理层经营披露。Wind用于行情、同业、汇率、Amer/PUMA市场mark及可执行的月频统计。Wind标准化2026H1营业利润与HKEX不一致，已由HKEX覆盖。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>主要直接来源与证据边界</caption>
-      <thead><tr><th>来源</th><th>用途</th><th>边界</th></tr></thead>
-      <tbody>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600214_c.pdf">2026H1中期业绩公告</a></td><td>控制财务、分部、现金、Amer、PUMA状态</td><td>未经审计；经HKSRE 2410审阅</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0717/2026071700329_c.pdf">2026Q2/H1营运表现</a></td><td>单Q2零售增长区间</td><td>未经审计/审阅；不是集团收入</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0413/2026041300451_c.pdf">2026Q1营运表现</a></td><td>Q1→Q2退出速度</td><td>同为终端经营口径</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0409/2026040900841_c.pdf">2025年报</a></td><td>五年历史、现金流、分部、融资收益</td><td>经审计；历史利润有Amer一次项</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042401867_c.pdf">PUMA收购通函</a></td><td>对价、治理、估值与交割条件</td><td>交易计划；截止期末未完成</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0515/2026051501182_c.pdf">2026股份奖励公告</a></td><td>授予、归属与现有股份安排</td><td>具体绩效门槛未公开</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600832_c.pdf">可转债换股价调整公告</a></td><td>HKD97.78换股价与潜在股份</td><td>2026-09-10生效；转换取决于持有人</td></tr>
-        <tr><td><a href="https://manager.wisdomir.com/files/394/2026/0826/20260826143025_86025395_sc.pdf">公司2026H1业绩演示</a></td><td>品牌折扣、门店数量与目标</td><td>管理层披露，不替代审阅财务</td></tr>
-        <tr><td><a href="https://www.webcast-eqs.com/anta26ir/en">官方业绩回放</a></td><td>确认演示流程与公开Q&amp;A边界</td><td>无官方逐字稿/字幕；回放未收录Q&amp;A</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">官方回放音频长40分41秒；机器转录曾把HKD1.51误写为HKD0.151，故没有作为数字或问答证据。所有CAGR、LTM、利润桥、FCF基数调整、SOTP、CB检查与图形几何均来自本地可执行计算账本。PUMA行情接口报错后，仅采用Wind标准化市值与同日中间价，没有伪造股价。</p>
-  <p class="small">数据来源于万得 Wind 金融数据服务。市场与汇率截止2026-08-31；会计截止2026-06-30，文件截止2026-08-31。情景、折价、核心利润代理及证伪阈值均为分析假设，不是公司指引。</p>
-</section>
-
+<section class="reveal on" id="valuation-appendix"><div class="slabel">估值机制附录</div><h2>利润、现金和股份，各只计算一次</h2><p>SOTP从利润中移除非租赁金融结果，包含资产收益和公司融资费用，保留租赁成本及股份支付。因此独立扣融资债务，租赁不再扣第二次；税率及金融收益归属按集团口径估计。</p>
+<p><span class="g">现金归属准备</span>取全额非控股权益账面值，<b>不是已识别的少数股东存款</b>；经营利润不再重复扣少数权益。抵押存款及资本承担另行预留。非现金金融投资、小额联营不额外给价值，其利润已移除，属于保守遗漏。</p>
+<p class="small">股数采用已发行2,796,653,300股，包含受托人25,547,364股。未来全转换加125,088,464股并去除欧元债本金。三档未转换价值为56.58／77.38／100.47港元，全转换为58.81／78.72／100.82港元，均取前者。换股固定欧元兑港元8.1541，与市场汇率不同，名义换股价不等于经济转换门槛。</p>
+<p>观察期为9月4日至2026年末，共118天。股息按全股本预留36.51亿元后，从情景资产扣除；这略高于公司以可获派股份及公告时汇率估计的36.37亿元，不替代实际宣告额。赔率再加每股1.51港元一次；不预计后续现金积累或未公告分红回购，也不把历史股息率年化。平衡价仅是这组三情景的数学性质。</p>
+<p>PUMA另全额预留披露估计专业费用；已付比例不明，可能偏保守。未量化交易税及特定事件追加价款未扣，故模型不是全包成本报价。未达无条件日付款只用于风险表的期限失败状态，不计入完成交易的三情景。</p>
+<p>整体PE交叉检验：TTM报告归母减去本期稀释利得后为14,495百万元，乘分析区间10–14倍，不另加现金或投资。历史PB参照：五年低值至中位数乘当前每股股东权益。均扣本次股息，分别为HK$58.4–82.4及HK$74.7–124.4，不与主法平均。</p><div class="tblscroll"><table class="tbl txt" data-fullscan-role="derivations"><caption>承重推算由未舍入模型生成；公式末项为输出，乘法用中点。金额输入通常为人民币百万元；股份×外币价格×汇率的原始单位按公式换算。</caption><thead><tr><th>数值</th><th>输入</th><th>公式</th><th>来源（页·附注）</th></tr></thead><tbody><tr><td>PUMA专业费用准备 1.26亿元</td><td>百万元→亿元</td><td>126.051÷100＝1.26</td><td>原始公告·印刷IV-4附注4</td></tr><tr><td>PUMA期限未达付款 7.84亿元</td><td>欧元·汇率→亿元</td><td>100,000,000 · 7.8397÷100,000,000＝7.84</td><td>原始公告·印刷p21；Wind·9月4日·中间价:欧元兑人民币</td></tr><tr><td>H1租赁后FCF 92.78亿元</td><td>百万元→亿元</td><td>(13,081−1,453−2,350)÷100＝92.78</td><td>H1公告·第48</td></tr><tr><td>同期租赁后FCF 74.67亿元</td><td>百万元→亿元</td><td>(10,931−1,223−2,241)÷100＝74.67</td><td>H1公告·第48</td></tr><tr><td>TTM租赁后FCF 153.91亿元</td><td>百万元→亿元</td><td>(13,580＋9,278−7,467)÷100＝153.91</td><td>FY2025年报·第139；FY2025年报·第140</td></tr><tr><td>TTM报告归母 160.44亿元</td><td>百万元→亿元</td><td>(13,588＋9,487−7,031)÷100＝160.44</td><td>FY2025年报·第13；H1公告·第44</td></tr><tr><td>TTM公司调整归母 130.18亿元</td><td>百万元→亿元</td><td>(12,385＋7,230−6,597)÷100＝130.18</td><td>FY2025年报·第12；H1公告·第7</td></tr><tr><td>归母同比桥合计 24.56亿元</td><td>百万元→亿元</td><td>(1,629−89＋274＋1,549−555−352)÷100＝24.56</td><td>H1公告·第44</td></tr><tr><td>FY2025核心盈利代理 113.25亿元</td><td>百万元→亿元</td><td>[12,385−(1,151＋334) · (1−28.6%)]÷100＝113.25</td><td>FY2025年报·第12；FY2025年报·第135</td></tr><tr><td>H1核心盈利代理 67.61亿元</td><td>百万元→亿元</td><td>[7,230−(507＋157) · (1−29.4%)]÷100＝67.61</td><td>H1公告·第7；H1公告·第44</td></tr><tr><td>预留后金融净资产代理 215.89亿元</td><td>百万元→亿元</td><td>[62,601−290−3,849−9,000−11,759.550−7,774−8,339]÷100＝215.89</td><td>H1公告·第37；原始公告·原文件第5页；文本L103–L108</td></tr><tr><td>欧元债本金重估 117.60亿元</td><td>百万欧元·汇率→亿元</td><td>1,500 · 7.8397÷100＝117.60</td><td>原始公告·原文件第5页；文本L103–L108；Wind·9月4日·中间价:欧元兑人民币</td></tr><tr><td>Amer实际持股市值 439.54亿元</td><td>股·美元/股·汇率→亿元</td><td>219,577,535 · 29.53 · 6.7787÷100,000,000＝439.54</td><td>H1公告·原文件第39页；文本L1438–L1440；Wind·9月4日·Amer当地日线收盘</td></tr><tr><td>PUMA拟购股权市值 80.36亿元</td><td>股·欧元/股·汇率→亿元</td><td>43,014,760 · 23.83 · 7.8397÷100,000,000＝80.36</td><td>H1公告·原文件第39页；文本L1448–L1452；Wind·9月4日·PUMA当地日线收盘</td></tr><tr><td>PUMA现金对价 118.03亿元</td><td>欧元·汇率→亿元</td><td>1,505,516,600 · 7.8397÷100,000,000＝118.03</td><td>H1公告·原文件第39页；文本L1451–L1455；Wind·9月4日·中间价:欧元兑人民币</td></tr><tr><td>全股本股息准备 36.51亿元</td><td>股·港元/股·汇率→亿元</td><td>2,796,653,300 · 1.51 · 0.86458÷100,000,000＝36.51</td><td>H1公告·原文件第1页；文本L34–L34；原始公告·原文件第2页；文本L52–L58</td></tr><tr><td>含息平衡价 68.5港元/股</td><td>输出港元/股</td><td>(77.38214＋56.57834＋2 · 1.51)÷2＝68.5</td><td>原始公告·原文件第2页；文本L52–L58；原始公告·原文件第5页；文本L127–L129</td></tr><tr><td>现价隐含核心倍数 10.47倍</td><td>输出倍</td><td>[(76.10−1.51) · 2,417.93051−48,003.29054]÷12,645.57592＝10.47</td><td>Wind·9月4日·安踏港股收盘；H1公告·原文件第1页；文本L34–L34</td></tr><tr><td>现价隐含核心盈利 120.32亿元</td><td>百万元→亿元</td><td>[(76.10−1.51) · 2,417.93051−48,003.29054]÷11÷100＝120.32</td><td>Wind·9月4日·安踏港股收盘；H1公告·原文件第1页；文本L34–L34</td></tr><tr><td>观察期股息率 1.98%</td><td>输出%</td><td>1.51÷76.10 · 100＝1.98</td><td>H1公告·原文件第1页；文本L34–L34；Wind·9月4日·安踏港股收盘</td></tr><tr><td>熊市核心盈利 118.00亿元</td><td>百万元→亿元</td><td>11,800÷100＝118.00</td><td>分析假设，来源见情景表</td></tr><tr><td>熊市SOTP价值 56.6港元/股</td><td>输出港元/股</td><td>[11,800.0000 · 8＋21,589.4500＋43,953.9355 · 70%＋8,036.0197 · 70%−11,802.7985−126.0510−3,651.0751]÷2,417.93051＝56.6</td><td>H1公告·第37；H1公告·原文件第39页；文本L1438–L1440</td></tr><tr><td>熊市含息赔率 −23.7%</td><td>输出%</td><td>[(56.57834＋1.51)÷76.10−1] · 100＝−23.7</td><td>原始公告·原文件第2页；文本L52–L58；原始公告·原文件第5页；文本L127–L129</td></tr><tr><td>基准核心盈利 126.46亿元</td><td>百万元→亿元</td><td>11,324.71000 · (1＋11.66357%)÷100＝126.46</td><td>FY2025年报·第12；FY2025年报·第135</td></tr><tr><td>基准SOTP价值 77.4港元/股</td><td>输出港元/股</td><td>[12,645.5759 · 11＋21,589.4500＋43,953.9355 · 80%＋8,036.0197 · 85%−11,802.7985−126.0510−3,651.0751]÷2,417.93051＝77.4</td><td>H1公告·第37；H1公告·原文件第39页；文本L1438–L1440</td></tr><tr><td>基准含息赔率 3.7%</td><td>输出%</td><td>[(77.38214＋1.51)÷76.10−1] · 100＝3.7</td><td>原始公告·原文件第2页；文本L52–L58；原始公告·原文件第5页；文本L127–L129</td></tr><tr><td>牛市核心盈利 135.22亿元</td><td>百万元→亿元</td><td>2 · 6,761.21600÷100＝135.22</td><td>H1公告·第7</td></tr><tr><td>牛市SOTP价值 100.5港元/股</td><td>输出港元/股</td><td>[13,522.4320 · 14＋21,589.4500＋43,953.9355 · 90%＋8,036.0197 · 100%−11,802.7985−126.0510−3,651.0751]÷2,417.93051＝100.5</td><td>H1公告·第37；H1公告·原文件第39页；文本L1438–L1440</td></tr><tr><td>牛市含息赔率 34.0%</td><td>输出%</td><td>[(100.46531＋1.51)÷76.10−1] · 100＝34.0</td><td>原始公告·原文件第2页；文本L52–L58；原始公告·原文件第5页；文本L127–L129</td></tr></tbody></table></div></section>
+<section class="reveal on" id="risks"><div class="slabel">风险与验证</div><h2>最危险的组合是终端放慢，同时加大投资付款</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="risk-register"><caption>按对本报告论点的伤害排序；概率档为分析判断，不是统计概率。</caption><thead><tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr></thead><tbody><tr><td>1</td><td>成熟品牌需求继续降速</td><td>2026Q2：安踏与FILA均低单位数正增长</td><td>折扣和营销压力使经营盈利与倍数一起下修</td><td>核心倍数每少1倍约影响HK$5.2/股</td><td>中高：下降方向已见，持续性待验</td><td>2026Q3营运更新：至少一项成熟品牌恢复，非收购口径</td></tr><tr><td>2</td><td>PUMA少数股权回报延迟</td><td>2026-09-05：尚无交割完成披露</td><td>先支付合同对价，再等待转型利润</td><td>期限失败须付约7.84亿元；相对完成交易基准少受约HK$1.7/股拖累，并非零损失</td><td>中：未获完成披露，条件及执行待验</td><td>2026Q4：条件成就、付款与治理权文件</td></tr><tr><td>3</td><td>户外组合增量不可复制</td><td>2026H1：其他品牌含并购，单品牌利润未拆分</td><td>低效新品牌消耗已有品牌现金</td><td>品牌独立现金流和少数权益分配缺失，不能精确分摊</td><td>中：组合增长已见，但归因不足</td><td>FY2026结果：单品牌贡献、折扣及库存变化</td></tr><tr><td>4</td><td>存款归属或承诺资金释放不及预期</td><td>2026-06-30：集团净现金不等于母公司可分派额</td><td>资产信用高估令每股价值下降</td><td>全额资本承担准备约HK$3.4/股；非控股权益准备约HK$3.2/股</td><td>中：准备是假设，非穿透现金核对</td><td>FY2026结果：资本支出兑现、现金分布、债务与股息</td></tr><tr><td>5</td><td>Amer市值及汇率回撤</td><td>2026-09-04：上市持股市值高于账面</td><td>独立资产信用下降，不一定改变同期经营利润</td><td>计入比例每少10个百分点约影响HK$1.8/股</td><td>中：公开股价可变，战略持股不等于现钱</td><td>2026Q3 Amer结果及后续减持/融资披露</td></tr></tbody></table></div><div class="plain"><span class="pl">白话解读</span><p>若成熟品牌需求继续放慢，同时需要支付海外投资款，盈利与可分配资金会一同承压。下一次营运更新检验终端，交易披露检验付款、条件及治理权；不能只等利润标题。</p></div><div class="tline"><div class="tstop"><span class="tw">2026-09-08</span><b>股息除净</b><p>股票不再附本次股息权利；实际派付安排在9月22日，模型按除息后价值比较。</p></div><div class="tstop"><span class="tw">2026-09-10</span><b>换股条款生效</b><p>新价格与潜在股份生效，不回写为当前条款。</p></div><div class="tstop warn"><span class="tw">2026Q3</span><b>终端与品牌验收</b><p>同口径成熟品牌继续下行则调低经营情景。</p></div><div class="tstop warn"><span class="tw">2026Q4</span><b>PUMA交易状态</b><p>核对实际付款、治理权限与回报路径。</p></div><div class="tstop"><span class="tw">FY2026</span><b>现金与利润闭环</b><p>兑现品牌利润、租赁后现金与资本投入。</p></div></div></section>
+<section class="reveal on" id="decision" data-fullscan-role="decision"><div class="slabel">最终判断</div><h2 data-verdict="neutral-cautious">中性偏谨慎：等待经营兑现，不替资本配置预付溢价</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="decision-block"><caption>SOTP主方法；同一观察窗口，未作仓位或交易指令。</caption><thead><tr><th>项目</th><th>判断依据</th></tr></thead><tbody><tr><td>论点</td><td>并表品牌持续赚钱，但终端降速、现金归属与海外少数股权成本提高了每股价值的兑现要求。</td></tr><tr><td>基准对一致预期</td><td>无一致预期可比：本次预测PE没有统一年度及核心利润口径。以隐含预期表替代，基准核心盈利略高于现价反求值，不把供应商预测PE倒推成卖方共识。</td></tr><tr><td>赔率</td><td>同一118天观察期、含已公告股息：基准+3.7%，熊市−23.7%。下行明显大于基准上行，均来自SOTP，不使用交叉检验替换。</td></tr><tr><td>平衡价</td><td>HK$68.5：含同期间每股股息后，基准上行与熊市下行相等的价格，只是本报告情景的性质。</td></tr><tr><td>持有回报</td><td>2026-09-04至12-31：已公告股息HK$1.51、贡献1.98%，9月22日派发；未来回购贡献按0计，不代表公司永久不回购。股息已从期末资产扣除，回报仅加回一次。</td></tr><tr><td>分项置信度</td><td>财务及现金证据 高（主表已审阅，租赁支付可复算）；品牌论点 中（营运范围与独立利润不足）；估值输入 中（倍数、税/非控股权益归属及投资折价是假设）；治理与收购 中（少数权益及绩效门槛约束）。提升较弱支柱需要Q3终端回稳，以及交割后的治理和收益披露。</td></tr><tr><td>判断</td><td>中性偏谨慎（等待验证）：基准价值略高于现价，但含息赔率不对称地偏向下行；不以质量较高替代价格缓冲。下一检查点为2026Q3营运更新。</td></tr></tbody></table></div><div class="callout"><b>最强反方：</b>本报告可能对组合运营能力和现金准备过于保守；若成熟品牌很快恢复、户外定价稳定且海外投资兑现回报，保守预留会低估价值。<b>失败边界：</b>若成熟品牌继续下行，库存压力与投资付款同时上升，“品牌能赚钱，资本配置正在抬高门槛”将不只是估值约束，经营盈利假设也需下修。</div></section>
+<section class="reveal on" id="glossary"><div class="slabel">名词速查</div><h2>读懂经营、投资与每股价值的不同口径</h2><div class="tblscroll"><table class="tbl gloss" ><caption></caption><thead><tr><th>术语</th><th>白话解释</th></tr></thead><tbody><tr><td>并表</td><td>控制的子公司逐行并入集团；利润中仍可能有少数股东的一份。</td></tr><tr><td>权益法</td><td>不控制但有重大影响：记分占利润与净资产，不合并全部收入。</td></tr><tr><td>非控股权益</td><td>子公司中属于其他股东的权益；账面金额不等于现金归属。</td></tr><tr><td>零售流水</td><td>终端消费者交易额，可能含税及经销渠道，不等于会计收入。</td></tr><tr><td>公司调整归母利润</td><td>公司定义：归母剔除联营及相关一次性损益，仍留净融资结果。</td></tr><tr><td>稀释利得</td><td>联营发股改变分占净资产而产生的利得，不是卖货现金。</td></tr><tr><td>核心经营利润代理</td><td>再移除税后非租赁金融结果；保留租赁，税率和归属含假设。</td></tr><tr><td>租赁付款后自由现金流</td><td>经营现金减资本开支及融资列租赁付款；不扣收购，仍含利息收入。</td></tr><tr><td>分部加总估值（SOTP）</td><td>经营、现金债务、独立投资分别计价，相同收益不得重复计算。</td></tr><tr><td>直营与批发</td><td>向消费者销售与向经销商供货，收入确认及库存风险不同。</td></tr><tr><td>资本承担</td><td>已承诺但未全部支付的资本开支，不等于本期支出或债务。</td></tr><tr><td>可转债</td><td>可按约定转普通股；不转保留债务，转换则去债增股。</td></tr><tr><td>股息除净</td><td>该日起股票不再附本次股息权利，不等于当日已支付现金。</td></tr><tr><td>现金归属准备</td><td>集团资金尚未穿透到归母的保守预留，不是已查明受限资金。</td></tr><tr><td>滚动期间（TTM）</td><td>完整年度加最新半年减上年同期的流量；每股及存量不能照搬。</td></tr></tbody></table></div></section>
 <footer>
-  <p>财务控制文件：安踏体育2026年中期业绩公告；报告期为2026H1。单Q2仅有终端零售额区间，未披露单季损益、现金流、资本开支或自由现金流。</p>
-  <p>本报告为公开资料研究，不构成投资建议、交易要约或收益保证。估值为除息前口径；9月8日除息后的同口径比较须扣除每股HKD1.51。</p>
-</footer>
+<p>数据截止：财务2026-06-30；公告检索至2026-09-05；港股行情2026-09-04 16:08:06 香港时间，Amer及PUMA采用同日当地收盘，汇率为同日人民银行中间价。</p>
+<p>来源：<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600214_c.pdf">安踏2026中期业绩公告</a>、FY2021–2025年报；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0717/2026071700329_c.pdf">Q2/H1营运公告</a>、Q1营运公告、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042401867_c.pdf">PUMA收购通函</a>、9月1日月报、股份奖励、股息及可转债公告；<a href="https://manager.wisdomir.com/files/394/2026/0826/20260826143025_86025395_sc.pdf">官方业绩演示</a>、<a href="https://www.webcast-eqs.com/anta26ir/en">官方回放</a>；数据来源于万得Wind金融数据服务。</p>
+<p>审计状态：年度报表已审计；中期按IAS 34及HKAS 34编制、未经审计但经毕马威按HKSRE 2410审阅。营运公告及演示未经审计或审阅，不替代财务主表。推算、代理及情景均非公司指引。</p>
+<p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p>
+</footer></main>
 
-</main>
 <script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -783,5 +413,4 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   els.forEach(function(e){ io.observe(e); });
 })();
 </script>
-</body>
-</html>
+</body></html>

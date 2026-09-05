@@ -78,15 +78,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "Q2三个品牌口径同时降档，但H1经营利润与现金仍强；穿透其他品牌增量、Amer/PUMA资本配置、可转债与交易后SOTP。",
-      "verdict": "中性偏积极",
-      "verdict_code": "neutral-positive",
+      "hook": "品牌仍能赚钱，但成熟品牌终端降速、现金归属与海外少数股权成本抬高每股价值的兑现要求。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
       "published": "2026-08-31",
       "published_at": "2026-08-31T12:52:31-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "加入租赁付款后现金流、最新股份与换股生效日，重做投资及现金归属假设、情景估值和含息赔率；财务仍以中期披露为准。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
