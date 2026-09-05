@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
-<title>NVIDIA FY2027 Q2 Full Diligence</title>
+<title>NVIDIA FY2027 Q2 Fullscan Full Diligence</title>
 <style>
 :root{
   --paper:#EDEFF2;
@@ -253,26 +253,59 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
 .tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
 .tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
 </style>
 </head>
 <body>
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">NVIDIA NVDA · FULL DILIGENCE · FINANCIALS THROUGH 26 JULY 2026 · MARKET THROUGH 26 AUGUST</div>
+    <div class="eyebrow">NVIDIA NVDA · FULL DILIGENCE · FINANCIALS THROUGH 26 JULY 2026 · MARKET THROUGH 26 AUGUST 2026</div>
     <h1>The moat is widening.<br>The balance sheet is underwriting it.</h1>
-    <p class="lede">The quarter confirms extraordinary demand, and the next chip generation is already shipping. <b>But NVIDIA is no longer just selling chips: it is reserving future supply, buying cloud capacity, letting big customers pay later, and guaranteeing other people's infrastructure.</b> Owning the stock now means trusting two things at once — the technology monopoly, and NVIDIA's judgment as a lender.</p>
+    <p class="lede">The quarter confirms extraordinary demand, and the next chip generation is already shipping. <b>But NVIDIA now finances its own demand.</b> It reserves future supply, buys cloud capacity, lets selected customers pay later and guarantees other people's infrastructure, so owning the stock means trusting the CUDA platform lock-in and NVIDIA's judgment as a credit allocator at once.</p>
 
     <div class="dual">
       <div>
-        <div class="tag">OPERATING CASH FLOW / GAAP NET INCOME</div>
+        <div class="tag">OPERATING CASH FLOW / GAAP NET INCOME · Q2 FY2027</div>
         <div class="big a">40.3%</div>
-        <div class="cap">Only 40 cents of each dollar of reported quarterly profit arrived as operating cash — the rest is tied up in customer IOUs, inventory and timing.</div>
+        <div class="cap">Only 40 cents of each dollar of reported quarterly profit arrived as operating cash — the rest is tied up in customer IOUs, inventory and tax timing.</div>
       </div>
       <div>
-        <div class="tag">CONTINGENT SUPPORT / LIQUID FINANCIAL RESOURCES</div>
+        <div class="tag">MAXIMUM GUARANTEE CEILING / CASH AND MARKETABLE DEBT</div>
         <div class="big b">1.9×</div>
-        <div class="cap">Maximum guarantees for others' infrastructure are now nearly twice NVIDIA's own cash and bond holdings.</div>
+        <div class="cap">Once the SB Energy cap phases in from FY2029, maximum guarantees for other people's infrastructure would be nearly twice NVIDIA's own cash and bond holdings; US$3.5bn is in force today.</div>
       </div>
     </div>
   </div>
@@ -280,113 +313,90 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 
 <main class="wrap">
 
+<div class="callout">Revised 2026-09-05: rewritten under the current Fullscan contract — one primary valuation method, odds and carry on one horizon, shorter; data cutoff unchanged from the original.</div>
 <section class="reveal on" id="tldr">
   <div class="slabel">THE THIRTY-SECOND VERSION</div>
   <h2>If you read only one screen, read this one</h2>
-  <div class="tldr" aria-label="Executive summary">
+  <div class="tldr" aria-label="Thirty-second summary">
     <ul>
-      <li><b>Who NVIDIA is:</b> the designer of the chips and systems that train and run AI. It owns no factories — contract manufacturers build the chips — and its CUDA software keeps customers on the platform. Quarterly revenue hit US$96.2bn, more than double a year ago, and about 62 cents of every revenue dollar became net profit.</li>
-      <li><b>The new twist:</b> NVIDIA increasingly helps finance its own demand. Big customers get up to a year to pay, NVIDIA buys cloud capacity and equity stakes in its ecosystem, and it has promised guarantees that can reach US$108.5bn. Demand is real — but NVIDIA now shares its customers' credit risk.</li>
-      <li><b>Earnings caution:</b> reported profit is flattered by US$7.8bn of investment gains this quarter, and only 40% of reported profit arrived as operating cash — customers paying later, a big inventory build ahead of the new Rubin chips, and tax timing absorbed the rest.</li>
-      <li><b>China:</b> the next-quarter outlook assumes zero China Data Center compute revenue. Any recovery is upside, but being shut out also hands local rivals room to grow into global competitors.</li>
-      <li><b>The verdict:</b> constructive, with a higher risk label than a pure chip story deserves. The base-case value is US$254–321 per share against an after-hours price of US$219.53; the bear case is US$106–148. The price sits below base value — but the bear case is a long way down.</li>
+      <li><b>Who:</b> NVIDIA designs the chips and systems that train and run AI. It owns no factories — contract manufacturers build the chips — and its CUDA software keeps customers on the platform; Data Center is 92.5% of revenue.</li>
+      <li><b>This period:</b> quarterly revenue reached US$96.2bn, more than double a year ago, and about 62 cents of every revenue dollar became net profit — but only 40% of that profit arrived as operating cash.</li>
+      <li><b>The tension:</b> NVIDIA increasingly helps finance its own demand: selected investment-grade customers get 90 days up to a year to pay, it buys cloud capacity and equity stakes in its ecosystem, and its guarantees can reach US$108.5bn. Demand is real — but NVIDIA now shares its customers' credit risk.</li>
+      <li><b>The trap:</b> the headline 26× trailing P/E (price-to-earnings ratio) is struck at the regular close on earnings holding US$30.6bn of trailing investment gains; at the after-hours price the raw multiple is 27.5×, and about 32× with those gains stripped. The outlook also assumes zero China Data Center compute revenue, so recovery there is upside, not the base case.</li>
+      <li data-verdict="neutral-cautious"><b>Verdict:</b> Neutral-cautious (watch): the business is exceptional; the odds are not — the base case is worth about US$254 a share against a US$219.53 price, and the downside to the US$106 bear case is larger than the upside. It improves if margin holds the promised floor and guarantees shrink through use.</li>
     </ul>
   </div>
 </section>
 
 <section class="reveal on" id="primer">
-  <div class="slabel">PRIMER · THREE MINUTES ON THE BUSINESS</div>
-  <h2>A chip designer that became the arms dealer of AI</h2>
-  <p>NVIDIA designs <span class="g">GPUs</span> — processors built to do huge numbers of calculations in parallel, which is exactly what training and running AI models requires. It is a <span class="g">fabless</span> company: it designs the chips and systems, and contract manufacturers fabricate them. Its customers are mostly the giant cloud companies (<span class="g">hyperscalers</span>), AI-cloud providers, enterprises and governments building AI computing capacity.</p>
+  <div class="slabel">PRIMER</div>
+  <h2>Designs the AI chips, outsources the factories, and now helps finance the buyers</h2>
+  <p>NVIDIA designs <span class="g">GPU</span>s — processors built to do huge numbers of calculations in parallel, exactly what training and running AI models requires. It is a <span class="g">fabless</span> company: it designs the chips and systems, and contract manufacturers fabricate them. Its customers are mostly the giant cloud companies (<span class="g">hyperscaler</span>s), AI-cloud providers, enterprises and governments building AI capacity.</p>
   <div class="steps">
-    <div class="step"><div class="n">STEP 1</div><b>Design the platform</b><p>Chips, networking and whole systems, refreshed on a yearly cadence — Blackwell today, Vera Rubin next.</p></div>
-    <div class="step"><div class="n">STEP 2</div><b>Sell to the AI builders</b><p>Cloud giants and AI companies buy systems by the tens of billions. One direct customer alone was 16% of quarterly revenue.</p></div>
-    <div class="step"><div class="n">STEP 3</div><b>CUDA keeps them</b><p>The software layer NVIDIA chips are programmed through. Leaving means rebuilding performance and reliability elsewhere — costly, so customers stay.</p></div>
-    <div class="step"><div class="n">STEP 4</div><b>Now: finance the buyers</b><p>The new step this report scrutinizes — longer payment terms, equity stakes, cloud purchases and guarantees that support customers' own build-outs.</p></div>
+    <div class="step"><div class="n">Step 1 ·</div><b>Design the platform</b><p>Chips, networking and whole systems, refreshed yearly: Blackwell today, Vera Rubin next.</p></div>
+    <div class="step"><div class="n">Step 2 ·</div><b>Sell to the AI builders</b><p>Cloud giants and AI companies buy systems by the tens of billions; one direct customer alone was 16% of quarterly revenue.</p></div>
+    <div class="step"><div class="n">Step 3 ·</div><b>CUDA keeps them</b><p>The software layer NVIDIA chips are programmed through; leaving means rebuilding performance and reliability elsewhere.</p></div>
+    <div class="step"><div class="n">Step 4 ·</div><b>Now: finance the buyers</b><p>Longer payment terms, equity stakes, cloud purchases and guarantees behind customers' build-outs — the step this report scrutinizes.</p></div>
   </div>
-  <p>Three reading aids before the tables. First, the <b>calendar</b>: NVIDIA's fiscal year runs ahead of the calendar — "FY2027" is roughly calendar 2026, and this report covers the quarter ended 26 July 2026. Second, the <b>product map</b>: "Data Center" — the AI-chip business — is 92.5% of revenue; the gaming graphics business that made NVIDIA famous is now a sideline. Third, the <b>numbers to trust</b>: figures here come from SEC filings; the earnings call and broker research supply context only. Terms with a <span class="g">dotted underline</span> are defined in the glossary near the end.</p>
-  <p>Why this quarter matters: the AI build-out is entering its capital-heavy phase. Some of NVIDIA's biggest customers are spending more on data centers than their businesses generate in cash, and NVIDIA itself has started standing behind some of that spending. The central question of this report is not "is AI demand real?" — it clearly is — but "how much of NVIDIA's future demand depends on NVIDIA's own balance sheet, and what is that risk worth?"</p>
+  <p>Three reading aids. First, the <b>calendar</b>: NVIDIA's fiscal year runs ahead of the calendar — FY2027 is roughly calendar 2026, this report covers the quarter ended 26 July 2026, and the fourth quarter of FY2027 contains an extra week. Second, the <b>product map</b>: "Data Center", the AI-chip business, is 92.5% of revenue; the two audited <span class="g">segment</span>s are Compute &amp; Networking and Graphics, while "market platforms" are a management sales taxonomy. Third, the <b>numbers to trust</b>: figures come from SEC filings, the quarter is unaudited under U.S. GAAP, and the call and broker research supply context only. Terms like <span class="g">CUDA</span> carry a dotted underline and are defined in the glossary.</p>
+  <p>Why this quarter matters: the AI build-out is entering its capital-heavy phase, some of NVIDIA's biggest customers are spending more on data centers than they generate in cash, and NVIDIA has started standing behind some of that spending. The question is not whether AI demand is real, but how much of NVIDIA's future demand depends on its own balance sheet.</p>
 </section>
 
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">FINANCIAL MAP · FIVE-YEAR RECORD</div>
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="semis-hardware">
+  <div class="slabel">FINANCIAL MAP</div>
   <h2>Revenue doubled; cash conversion did not</h2>
-  <p>NVIDIA is a Delaware corporation listed on Nasdaq. It designs accelerated-computing systems and makes money on processors, networking, systems and software, sold to cloud providers, equipment makers, system integrators and AI model builders. Its two official accounting <span class="g">segments</span> are Compute &amp; Networking and Graphics; the "market platform" view further down is a management sales taxonomy, not a second set of audited segments. The 13-week quarter is unaudited under U.S. GAAP, and fiscal 2027 contains an extra week in its fourth quarter.</p>
+  <p>NVIDIA, a Delaware corporation listed on Nasdaq, sells processors, networking, systems and software to cloud providers, equipment makers and AI model builders. Its reportable segments are Compute &amp; Networking and Graphics; the market-platform view below is a management taxonomy.</p>
 
   <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">Q2 revenue</div><div class="v">96.221<span class="u">USD bn</span></div><div class="d"><span class="up">+105.9% YoY</span></div></div>
-    <div class="cell"><div class="k">Gross profit</div><div class="v">72.142<span class="u">USD bn</span></div><div class="d"><span>75.0% margin</span></div></div>
-    <div class="cell"><div class="k">Operating income</div><div class="v">63.734<span class="u">USD bn</span></div><div class="d"><span>66.2% margin</span></div></div>
-    <div class="cell"><div class="k">GAAP net income</div><div class="v">59.688<span class="u">USD bn</span></div><div class="d"><span>62.0% margin · EPS $2.46</span></div></div>
-    <div class="cell"><div class="k">Operating cash flow</div><div class="v">24.077<span class="u">USD bn</span></div><div class="d"><span>Quarterly cash generation</span></div></div>
-    <div class="cell"><div class="k">Company-defined FCF</div><div class="v">21.341<span class="u">USD bn</span></div><div class="d"><span class="up">+58.7% YoY</span></div></div>
+    <div class="cell"><div class="k">Revenue</div><div class="v">96.221<span class="u">USD bn</span></div><div class="d"><span class="up">+105.9% YoY</span></div></div>
+    <div class="cell"><div class="k">Gross profit / margin</div><div class="v">72.142<span class="u">USD bn</span></div><div class="d"><span>75.0% margin</span></div></div>
+    <div class="cell"><div class="k">Operating income / margin</div><div class="v">63.734<span class="u">USD bn</span></div><div class="d"><span>66.2% margin</span></div></div>
+    <div class="cell"><div class="k">Net income (attributable) / margin</div><div class="v">59.688<span class="u">USD bn</span></div><div class="d"><span>62.0% margin · diluted EPS $2.46</span></div></div>
+    <div class="cell"><div class="k">Operating cash flow</div><div class="v">24.077<span class="u">USD bn</span></div><div class="d"><span class="down">40.3% of net income vs 85.6% in FY2026</span></div></div>
+    <div class="cell"><div class="k">Free cash flow (company FCF)</div><div class="v">21.341<span class="u">USD bn</span></div><div class="d"><span class="up">+58.7% YoY</span></div></div>
   </div>
 
-  <h3>Five-year income record</h3>
-  <div class="tblscroll" data-financials="history">
+  <h3>Five-year record</h3>
+  <div class="tblscroll">
     <table class="tbl" data-financials="history">
-      <caption>Audited U.S.-GAAP income record · USD billions; diluted EPS, capital expenditure, company-defined free cash flow and ROE continue in the adjacent narrow tables</caption>
-      <thead><tr><th>Fiscal year</th><th>Revenue</th><th>Gross profit / margin</th><th>Operating income / margin</th><th>Net income / margin</th></tr></thead>
+      <caption>Basis: consolidated U.S. GAAP, fiscal years ending in late January; FY2022–FY2026 audited (PwC), the Q2 FY2027 quarter and first half unaudited as filed in the Form 10-Q · USD billions except per-share data and ratios; FY2022–FY2024 EPS split-adjusted (June 2024, ten-for-one); R&amp;D ratio, cash conversion and ROE proxy derived</caption>
+      <thead><tr><th>Item</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>FY2026</th></tr></thead>
       <tbody>
-        <tr><td>2022</td><td>26.914</td><td>17.475 / 64.9%</td><td>10.041 / 37.3%</td><td>9.752 / 36.2%</td></tr>
-        <tr><td>2023</td><td>26.974</td><td>15.356 / 56.9%</td><td>4.224 / 15.7%</td><td>4.368 / 16.2%</td></tr>
-        <tr><td>2024</td><td>60.922</td><td>44.301 / 72.7%</td><td>32.972 / 54.1%</td><td>29.760 / 48.8%</td></tr>
-        <tr><td>2025</td><td>130.497</td><td>97.858 / 74.99%</td><td>81.453 / 62.4%</td><td>72.880 / 55.8%</td></tr>
-        <tr><td>2026</td><td>215.938</td><td>153.463 / 71.07%</td><td>130.387 / 60.4%</td><td>120.067 / 55.6%</td></tr>
+        <tr><td>Revenue</td><td>26.914</td><td>26.974</td><td>60.922</td><td>130.497</td><td>215.938</td></tr>
+        <tr><td>Gross profit</td><td>17.475</td><td>15.356</td><td>44.301</td><td>97.858</td><td>153.463</td></tr>
+        <tr><td>Gross margin</td><td>64.9%</td><td>56.9%</td><td>72.7%</td><td>75.0%</td><td>71.1%</td></tr>
+        <tr><td>Operating income</td><td>10.041</td><td>4.224</td><td>32.972</td><td>81.453</td><td>130.387</td></tr>
+        <tr><td>Operating margin</td><td>37.3%</td><td>15.7%</td><td>54.1%</td><td>62.4%</td><td>60.4%</td></tr>
+        <tr><td>Net income (attributable)</td><td>9.752</td><td>4.368</td><td>29.760</td><td>72.880</td><td>120.067</td></tr>
+        <tr><td>Net margin</td><td>36.2%</td><td>16.2%</td><td>48.8%</td><td>55.8%</td><td>55.6%</td></tr>
+        <tr><td>Diluted EPS (USD)</td><td>0.385</td><td>0.174</td><td>1.19</td><td>2.94</td><td>4.90</td></tr>
+        <tr><td>R&amp;D / revenue (derived)</td><td>19.6%</td><td>27.2%</td><td>14.2%</td><td>9.9%</td><td>8.6%</td></tr>
+        <tr><td>Operating cash flow</td><td>9.108</td><td>5.641</td><td>28.090</td><td>64.089</td><td>102.718</td></tr>
+        <tr><td>Capex purchases</td><td>0.976</td><td>1.833</td><td>1.069</td><td>3.236</td><td>6.042</td></tr>
+        <tr><td>Company FCF</td><td>8.049</td><td>3.750</td><td>26.947</td><td>60.724</td><td>96.575</td></tr>
+        <tr><td>Operating cash flow ÷ net income (derived)</td><td>93.4%</td><td>129.1%</td><td>94.4%</td><td>87.9%</td><td>85.6%</td></tr>
+        <tr><td>ROE proxy (net income ÷ average equity)</td><td>44.8%</td><td>17.9%</td><td>91.5%</td><td>119.2%</td><td>101.5%</td></tr>
       </tbody>
     </table>
   </div>
-  <div class="cols" role="img" aria-label="Five-year revenue and net income trend; values are in the five-year income record above">
-    <div class="col"><div class="bars"><div class="bar rev" style="height:12.5%"></div><div class="bar np" style="height:4.5%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:12.5%"></div><div class="bar np" style="height:2.0%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:28.2%"></div><div class="bar np" style="height:13.8%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:60.4%"></div><div class="bar np" style="height:33.8%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:100.0%"></div><div class="bar np" style="height:55.6%"></div></div></div>
+  <div class="cols" role="img" aria-label="Five-year revenue and attributable net income; values are in the table above">
+    <div class="col"><div class="bars"><div class="bar rev" style="height:12.46%"></div><div class="bar np" style="height:4.52%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:12.49%"></div><div class="bar np" style="height:2.02%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:28.21%"></div><div class="bar np" style="height:13.78%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:60.43%"></div><div class="bar np" style="height:33.75%"></div></div></div>
+    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:55.60%"></div></div></div>
   </div>
   <div class="collabels">
-    <div><b>FY2022</b></div>
-    <div><b>FY2023</b></div>
-    <div><b>FY2024</b></div>
-    <div><b>FY2025</b></div>
-    <div><b>FY2026</b></div>
+    <div><b>FY2022</b></div><div><b>FY2023</b></div><div><b>FY2024</b></div><div><b>FY2025</b></div><div><b>FY2026</b></div>
   </div>
-  <div class="legend"><span><i class="p"></i>Revenue</span><span><i class="m"></i>Net income</span></div>
-  <p class="small">Bar heights are proportional to each value against FY2026 revenue of US$215.938bn; exact figures are in the table above. The shape is the whole AI cycle: two flat years, then revenue octupling in three — with net income climbing almost in step.</p>
-
-  <div class="tblscroll" data-financials="history">
-    <table class="tbl" data-financials="history">
-      <caption>Split-adjusted diluted earnings per share · USD</caption>
-      <thead><tr><th>Fiscal year</th><th>Diluted EPS</th></tr></thead>
-      <tbody>
-        <tr><td>2022</td><td>$0.385</td></tr>
-        <tr><td>2023</td><td>$0.174</td></tr>
-        <tr><td>2024</td><td>$1.19</td></tr>
-        <tr><td>2025</td><td>$2.94</td></tr>
-        <tr><td>2026</td><td>$4.90</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>From FY2022 through FY2026, revenue compounded at <strong>68.30%</strong> a year, while gross profit, operating income and net income compounded at 72.15%, 89.83% and 87.32% — profits grew even faster than sales, which is what operating leverage means. That happened despite the FY2023 slump, when a gaming downturn and inventory write-downs briefly crushed margins.</p>
-
-  <div class="tblscroll" data-financials="history">
-    <table class="tbl">
-      <caption>Cash conversion and return on average equity · USD billions; ROE is analyst-derived</caption>
-      <thead><tr><th>Fiscal year</th><th>Operating cash flow</th><th>Capex purchases</th><th>Company-defined FCF</th><th>ROE proxy</th></tr></thead>
-      <tbody>
-        <tr><td>2022</td><td>9.108</td><td>0.976</td><td>8.049</td><td>44.8%</td></tr>
-        <tr><td>2023</td><td>5.641</td><td>1.833</td><td>3.750</td><td>17.9%</td></tr>
-        <tr><td>2024</td><td>28.090</td><td>1.069</td><td>26.947</td><td>91.5%</td></tr>
-        <tr><td>2025</td><td>64.089</td><td>3.236</td><td>60.724</td><td>119.2%</td></tr>
-        <tr><td>2026</td><td>102.718</td><td>6.042</td><td>96.575</td><td>101.5%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">Company-defined free cash flow equals operating cash flow less purchases of property, equipment and intangible assets and related principal payments; the small principal payment is included in each displayed FCF but shown outside the capex-purchases column. ROE divides net income by average beginning and ending equity. FY2022 and FY2023 EPS are adjusted for the June 2024 ten-for-one split. Four-year CAGRs use unrounded endpoints.</p>
+  <div class="legend"><span><i class="p"></i>Revenue</span><span><i class="m"></i>Net income (attributable)</span></div>
+  <p class="small">Two flat years, then revenue octupling in three with profit almost in step; both series scale to FY2026 revenue.</p>
+  <p>Revenue compounded at <strong>68.30%</strong> a year from FY2022 to FY2026 — a four-interval CAGR on unrounded endpoints — and net income at 87.32%: profits outran sales, which is operating leverage, despite the FY2023 slump when a gaming downturn and write-downs crushed margins.</p>
 
   <h3>Quarter sequence and latest run rate</h3>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>Quarterly reported results and LTM bridge · USD billions</caption>
+      <caption>Reported quarters and the trailing-twelve-month (LTM) bridge · USD billions; LTM = FY2026 + FY2027 H1 − FY2026 H1; LTM operating margin 65.2%, net income inflated by security gains; book value US$228.984bn, US$9.48 per share, annualized H1 ROE roughly 122%</caption>
       <thead><tr><th>Period</th><th>Revenue</th><th>Gross margin</th><th>Operating income</th><th>Net income</th><th>Company FCF</th></tr></thead>
       <tbody>
         <tr><td>Q2 FY2026</td><td>46.743</td><td>72.4%</td><td>28.440</td><td>26.422</td><td>13.450</td></tr>
@@ -395,581 +405,413 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
       </tbody>
     </table>
   </div>
-  <p class="small">LTM equals FY2026 plus FY2027 first half less FY2026 first half. LTM operating margin is 65.214%, while free cash flow remained above two-fifths of revenue. LTM net income includes large equity-security gains (gains on shares NVIDIA owns in other companies) and is not normalized owner earnings (profit adjusted to what the business durably produces). Latest-period book value is US$228.984 billion, or approximately US$9.48 per period-end share; annualized first-half ROE is about 122%, but mark-to-market gains inflate the numerator.</p>
 
   <h3>Two revenue maps serve different decisions</h3>
   <div data-financials="segments">
     <div class="tblscroll">
       <table class="tbl">
-        <caption>Q2 FY2027 market platforms · USD billions; current taxonomy was introduced in Q1 and only displayed comparisons were recast</caption>
-        <thead><tr><th>Market platform</th><th>Revenue</th><th>Group mix</th><th>Q/Q</th><th>Y/Y</th><th>Decision use</th></tr></thead>
+        <caption>Q2 FY2027 · USD billions · platforms are a management taxonomy introduced in Q1 FY2027 (one company moved from ACIE to Hyperscale, comparisons recast); segment operating income excludes unallocated items</caption>
+        <thead><tr><th>Unit</th><th>Q2 revenue</th><th>Group mix</th><th>Q/Q</th><th>Y/Y</th><th>Segment operating income</th><th>Segment margin</th></tr></thead>
         <tbody>
-          <tr><td>Hyperscale</td><td>48.710</td><td>50.6%</td><td>+13%</td><td>+102%</td><td>Direct cloud and large-scale infrastructure demand</td></tr>
-          <tr><td>ACIE</td><td>40.313</td><td>41.9%</td><td>+25%</td><td>+138%</td><td>AI clouds, industrial, enterprise and sovereign demand</td></tr>
-          <tr class="grp"><td>Data Center</td><td>89.023</td><td>92.5%</td><td>Derived above</td><td>+117%</td><td>Hyperscale plus ACIE</td></tr>
-          <tr><td>Edge Computing</td><td>7.198</td><td>7.5%</td><td>+13%</td><td>+27%</td><td>Workstations, gaming PCs and edge systems</td></tr>
+          <tr class="grp"><td>Market platforms</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Hyperscale</td><td>48.710</td><td>50.6%</td><td>+13%</td><td>+102%</td><td>—</td><td>—</td></tr>
+          <tr><td>ACIE (AI clouds, industrial, enterprise)</td><td>40.313</td><td>41.9%</td><td>+25%</td><td>+138%</td><td>—</td><td>—</td></tr>
+          <tr><td>Data Center (Hyperscale + ACIE)</td><td>89.023</td><td>92.5%</td><td>+18%</td><td>+117%</td><td>—</td><td>—</td></tr>
+          <tr><td>Edge Computing</td><td>7.198</td><td>7.5%</td><td>+13%</td><td>+27%</td><td>—</td><td>—</td></tr>
+          <tr class="grp"><td>Reportable segments</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Compute &amp; Networking</td><td>88.299</td><td>91.8%</td><td>—</td><td>+114%</td><td>62.696</td><td>71.0%</td></tr>
+          <tr><td>Graphics</td><td>7.922</td><td>8.2%</td><td>—</td><td>+46%</td><td>3.899</td><td>49.2%</td></tr>
         </tbody>
       </table>
     </div>
-
     <div class="stacks">
-      <div class="stack"><div class="cap">Q2 FY2026 platform mix (derived from disclosed Y/Y rates)</div><div class="stackbar"><div class="seg p" style="width:51.6%">51.6%</div><div class="seg q" style="width:36.3%">36.3%</div><div class="seg r" style="width:12.1%">12.1%</div></div></div>
+      <div class="stack"><div class="cap">Q2 FY2026 platform mix (recast comparatives)</div><div class="stackbar"><div class="seg p" style="width:51.7%">51.7%</div><div class="seg q" style="width:36.2%">36.2%</div><div class="seg r" style="width:12.1%">12.1%</div></div></div>
       <div class="stack"><div class="cap">Q2 FY2027 platform mix</div><div class="stackbar"><div class="seg p" style="width:50.6%">50.6%</div><div class="seg q" style="width:41.9%">41.9%</div><div class="seg r" style="width:7.5%">7.5%</div></div></div>
     </div>
     <div class="legend"><span><i class="p"></i>Hyperscale</span><span><i class="q"></i>ACIE</span><span><i class="r"></i>Edge Computing</span></div>
-    <p class="small">The prior-year mix is derived by unwinding each platform's disclosed Y/Y growth (+102% / +138% / +27%) from its current revenue. The shift is ACIE's: AI clouds, enterprise and sovereign demand growing faster than the hyperscalers themselves, while Edge shrinks toward 7.5%.</p>
-
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>Statutory segments · Q2 USD billions; FY2022–FY2026 CAGR uses reported endpoints</caption>
-        <thead><tr><th>Reportable segment</th><th>Q2 revenue</th><th>Segment operating income</th><th>Segment margin</th><th>FY22–26 revenue CAGR</th></tr></thead>
-        <tbody>
-          <tr><td>Compute &amp; Networking</td><td>88.299</td><td>62.696</td><td>71.004%</td><td>104.6%</td></tr>
-          <tr><td>Graphics</td><td>7.922</td><td>3.899</td><td>49.2%</td><td>9.1%</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <p class="small">The shift is ACIE's: AI clouds, enterprises and governments grow faster than the hyperscalers; Edge grew 27% year on year but its share fell to 7.5%.</p>
   </div>
-  <p class="small">ACIE means AI Clouds, Industrial &amp; Enterprise. One company was moved from ACIE to Hyperscale in Q2, and the displayed comparisons were recast. Statutory segment income excludes corporate SBC (stock-based compensation), unallocated infrastructure, acquisition and other items, so its margins do not reconcile directly to the consolidated margin.</p>
+
+  <h3>Sector watch-items at quarter-end</h3>
+  <div class="grid">
+    <div class="cell"><div class="k">Inventory</div><div class="v">31.575<span class="u">USD bn</span></div><div class="d"><span class="down">+47.5% from year-end</span><span>provisions 0.784</span></div></div>
+    <div class="cell"><div class="k">Accounts receivable</div><div class="v">63.059<span class="u">USD bn</span></div><div class="d"><span class="down">+63.9% from year-end</span><span>DSO 60 vs 45 days</span></div></div>
+    <div class="cell"><div class="k">Top-five A/R concentration</div><div class="v">70%</div><div class="d"><span>five customers · ≈US$44.1bn</span></div></div>
+    <div class="cell"><div class="k">R&amp;D expense</div><div class="v">7.054<span class="u">USD bn</span></div><div class="d"><span>+64% YoY · 7.3% of revenue</span></div></div>
+    <div class="cell"><div class="k">Stock-based compensation</div><div class="v">2.027<span class="u">USD bn</span></div><div class="d"><span>2.1% of revenue · a non-GAAP cost</span></div></div>
+    <div class="cell"><div class="k">Non-GAAP net income</div><div class="v">53.954<span class="u">USD bn</span></div><div class="d"><span>+118% YoY · ex security gains</span></div></div>
+  </div>
 
   <div class="plain">
     <span class="pl">PLAIN ENGLISH</span>
-    <p>The scale is hard to overstate: this single quarter's revenue (US$96.2bn) is more than three and a half times NVIDIA's <b>entire</b> FY2022 year, and the rolling twelve months (US$303.0bn) is about eleven times that year. Margins are the kind normally seen in software, not hardware: 75 cents of gross profit per revenue dollar, 62 cents of net profit.</p>
-    <p>The one blemish sits in the cash column. Over full years, NVIDIA converts profit to cash beautifully. But <b>this quarter</b> operating cash flow (US$24.1bn) was only about 40% of reported net income (US$59.7bn). Two reasons, detailed later: customers are being allowed to pay later, and inventory is being stockpiled ahead of the Rubin launch. Neither is alarming by itself — but both move risk onto NVIDIA's own books, which is the thread the rest of this report pulls.</p>
+    <p>This quarter's revenue (US$96.2bn) is more than three and a half times NVIDIA's <b>entire</b> FY2022 year. The margins belong to software, not hardware: 75 cents of gross profit per revenue dollar, 62 of net profit.</p>
+    <p>The blemish is the cash column: over full years NVIDIA converts most of its profit to cash (87.9% of net income in FY2025 and 85.6% in FY2026), but <b>this quarter</b> operating cash flow (US$24.1bn) was only about 40% of net income (US$59.7bn), because customers may pay later and inventory is stockpiled before Rubin. Both move risk onto NVIDIA's own books, the thread this report pulls.</p>
   </div>
-</section>
-
-<section class="reveal on" id="product">
-  <div class="slabel">PRODUCT · R&amp;D · CUDA</div>
-  <h2>Rubin is early; the lifecycle stack is the moat</h2>
-  <p>The near-term test is the handoff from the current Blackwell chips to the next generation, <span class="g">Vera Rubin</span>. The filings do not reveal product-level yields or margins, so investors can only watch for the absence of bad news: the transition needs to happen without another inventory write-down or a deeper drop in the group's gross margin.</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Roadmap and commercialization evidence at the results cutoff</caption>
-      <thead><tr><th>Layer</th><th>Evidence</th><th>What remains unproven</th></tr></thead>
-      <tbody>
-        <tr><td>Blackwell Ultra</td><td>Majority of system shipments and vast majority of revenue</td><td>System-level unit volume, ASP and customer utilization</td></tr>
-        <tr><td>Vera Rubin</td><td>Production began; management targets a material next-quarter contribution</td><td>Yield, HBM configuration, realized mix and gross margin</td></tr>
-        <tr><td>Vera CPU optionality</td><td>Call-only: management described about US$20bn of total server-CPU demand and preliminarily expects FY2028 CPU revenue to more than double</td><td>Realized NVIDIA CPU revenue, attach rate, gross margin and customer adoption</td></tr>
-        <tr><td>Networking</td><td>Call corroborates sequential acceleration; Spectrum-X Ethernet rose 2.6× Y/Y</td><td>Networking dollars and product-level profitability</td></tr>
-        <tr><td>CUDA lifecycle</td><td>One architecture spans training, post-training, inference, networking and edge</td><td>Independent cost per useful token across normalized workloads</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>R&amp;D is expensed; infrastructure is the fastest-growing input</h3>
-  <p>NVIDIA spent <strong>US$7.054 billion</strong> on R&amp;D this quarter, up 64% from a year ago. Within that, spending on computing infrastructure — the machines NVIDIA uses to develop its own products — grew 127%, and pay grew 30%. All of this is expensed as it happens rather than parked on the balance sheet, so the profit numbers already absorb it. What the filings cannot tell you is the return on any particular architecture. The practical test: does each yearly product generation raise customers' useful output faster than memory, power and software costs rise?</p>
-  <p>People and patents back the machine: at FY2026 year-end, 31,000 of roughly 42,000 employees — about three-quarters — worked in R&amp;D. NVIDIA holds numerous patents expiring between March 2026 and June 2045, but discloses no count or per-patent revenue; protection rests on patents, trade secrets and licenses together. The recent non-exclusive Groq technology license is a live example of return risk: its US$2.5 billion developed-technology asset still has to be turned into commercial products, and the larger goodwill piece is an accounting entry, not proof of a moat.</p>
-
-  <div class="plain"><span class="pl">PLAIN ENGLISH</span><p>CUDA is not just a programming interface. The hard-to-copy layer is everything around it in production — the kernels, inference engines, memory management, routing and system integration that make AI hardware actually deliver. A rival can let you port your code; reproducing the performance and reliability is the expensive part. But this advantage is re-earned workload by workload — custom chips built by the cloud giants and rival merchant silicon keep testing it.</p></div>
-
-  <h3>Memory moves the margin trough</h3>
-  <p>Management told investors on the call that gross margin should bottom at 71%–72% in Q4 FY2027 and settle at 72%–73% in FY2028 after price increases. The pressure is real: Samsung and SK hynix both describe tight server-memory supply and the commercial ramp of <span class="g">HBM4</span>, the high-bandwidth memory NVIDIA's systems depend on. Goldman reads the promised floor as a possible end to the market's memory-cost fears — but a floor promised is not a floor delivered. The claim fails if margin breaks below the stated trough, or if the price increases themselves start to dent demand.</p>
+  <p class="small">Company FCF is NVIDIA's own measure: operating cash flow less purchases of, and principal payments on, property, equipment and intangibles; volumes and selling prices are not disclosed.</p>
 </section>
 
 <section class="reveal on" id="industry">
-  <div class="slabel">INDUSTRY · CHINA · OVERSEAS</div>
-  <h2>Demand is strong, but the buyers are financing it</h2>
-  <p>The biggest customers' own filings back up NVIDIA's demand story: cloud revenue is accelerating and AI infrastructure spending is enormous. The same filings show the strain. Free cash flow is falling at some buyers as they borrow and raise capital to build, and customer-designed accelerator chips remain a workload-specific alternative. Booming demand and stretched buyers can be true at the same time — that combination is precisely why NVIDIA's new financing role matters.</p>
+  <div class="slabel">PRODUCT · INDUSTRY</div>
+  <h2>Demand is real and increasingly financed; Rubin must land without a write-down</h2>
+  <p>The near-term test is the handoff from Blackwell to the next generation, <span class="g">Vera Rubin</span>. The filings reveal no product-level yields or margins, so investors can only watch for the absence of bad news: no inventory write-down, no deeper drop in group gross margin.</p>
+  <div class="finds">
+    <div class="find good"><div class="t">Blackwell (incl. Ultra)</div><p>The architecture is the majority of system shipments and the vast majority of revenue; the Ultra refresh drove the sequential Data Center ramp, but its own share, volume, price and utilization are undisclosed.</p></div>
+    <div class="find"><div class="t">Vera Rubin</div><p>Production shipments began in Q3 FY2027 and management targets a material next-quarter contribution; yield, memory configuration, mix and margin unproven.</p></div>
+    <div class="find"><div class="t">Vera CPU (call only)</div><p>Management described about US$20bn of server-CPU demand and preliminarily expects CPU revenue to more than double in FY2028; realized revenue and margin unproven.</p></div>
+    <div class="find warn"><div class="t">Networking</div><p>Another record quarter on the call, Spectrum-X Ethernet up 2.6× year on year; the filing discloses no networking dollars, so profitability is unknown.</p></div>
+  </div>
+  <p>Research spending is expensed as incurred, so reported profit already absorbs it: the quarter's outlay rose 64% from a year ago, driven by a 127% jump in compute infrastructure and 30% higher pay, and 31,000 of roughly 42,000 employees worked in research at FY2026 year-end. The filings cannot show the return on any architecture; the test is whether each yearly generation raises customers' useful output faster than memory, power and software costs rise. CUDA is where that test is fought, workload by workload.</p>
 
+  <h3>Memory moves the margin trough</h3>
+  <p>Management told investors on the call that gross margin should bottom at 71%–72% in Q4 FY2027 and settle at 72%–73% in FY2028 after price increases. The pressure is real: Samsung and SK hynix both describe tight server-memory supply and the ramp of <span class="g">HBM4</span>, the high-bandwidth memory NVIDIA's systems depend on. A floor promised is not a floor delivered; the claim fails if margin breaks the trough or the price increases dent demand.</p>
+
+  <h3>Demand is strong, but the buyers are financing it</h3>
+  <p>The biggest customers' own filings back the demand story and show the strain: cloud revenue is accelerating while free cash flow falls at some buyers as they borrow to build. Booming demand and stretched buyers can both be true.</p>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>Official hyperscaler evidence · latest reported quarter or fiscal year; periods differ</caption>
-      <thead><tr><th>Buyer ecosystem</th><th>Demand evidence</th><th>Capital evidence</th><th>Investment read</th></tr></thead>
+      <caption>Official hyperscaler evidence · latest reported quarter or fiscal year; periods and definitions differ</caption>
+      <thead><tr><th>Buyer</th><th>Demand evidence</th><th>Capital evidence</th></tr></thead>
       <tbody>
-        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm">Alphabet</a></td><td>Google Cloud +82%</td><td>Q2 capex US$44.9bn; FCF −US$5.9bn</td><td>Capacity demand is real; funding intensity is rising</td></tr>
-        <tr><td><a href="https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast">Microsoft</a></td><td>Azure +43%</td><td>FY2026 PP&amp;E additions US$115.9bn</td><td>Large backlog and construction pipeline</td></tr>
-        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260630xex991.htm">Amazon</a></td><td>AWS +37%</td><td>Q2 cash capex US$53.1bn; TTM FCF −US$7.6bn</td><td>Growth is fast; cash burden is visible</td></tr>
-        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm">Meta</a></td><td>AI infrastructure remains strategic</td><td>Q2 capex US$31.1bn; 2026 guide US$130–145bn</td><td>Internal demand is large but concentrated</td></tr>
+        <tr><td>Alphabet</td><td>Google Cloud +82%</td><td>Q2 capex US$44.9bn; FCF −US$5.9bn</td></tr>
+        <tr><td>Microsoft</td><td>Azure +43%</td><td>FY2026 PP&amp;E additions US$115.9bn</td></tr>
+        <tr><td>Amazon</td><td>AWS +37%</td><td>Q2 cash capex US$53.1bn; TTM FCF −US$7.6bn</td></tr>
+        <tr><td>Meta</td><td>AI infrastructure remains strategic</td><td>Q2 capex US$31.1bn; 2026 guide US$130–145bn</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="small">The companies use different cloud, capex and free-cash-flow definitions. The table tests direction and financing capacity, not NVIDIA revenue attribution. Custom-silicon share is not independently quantified here.</p>
+  <p class="small">Definitions of cloud, capex and free cash flow differ by company; the table tests direction, not NVIDIA revenue attribution.</p>
 
   <h3>China is excluded from the base case</h3>
-  <p>China has effectively dropped out of the numbers. Licensed H200 shipments were under 1% of quarterly Data Center revenue; the first half absorbed a US$0.4 billion charge for H200 inventory and purchase obligations; licensed units must pass a U.S. inspection and carry a 25% tariff NVIDIA says it cannot pass on. The next-quarter outlook assumes <b>zero</b> China Data Center compute revenue.</p>
-  <p>The damage is not just lost sales. NVIDIA itself warns that being locked out helps rival hardware and developer ecosystems grow — including globally relevant open AI models running on competing platforms. So China stays out of the base case as revenue, remains possible upside if licensing improves, and meanwhile incubates future competition.</p>
-
-  <h3>Reported geography is a billing map, not consumption</h3>
-  <p>Customers headquartered outside the United States were 38% of Q2 revenue — but read that carefully. NVIDIA warns that where a direct customer is headquartered can differ from where products ship or who ultimately uses them. Concentration has the same blind spot: one direct customer was 16% of Q2 revenue, while a separately described AI research company may be buying through several direct and indirect channels at once, so true end-customer concentration is unknowable from the filing.</p>
-  <p>Currency, unusually, is a non-issue: essentially all sales are billed in U.S. dollars, hedging covers mainly operating expenses, and the related first-half amounts were not significant. Nearly all cash held abroad can come home without extra federal tax (about US$1.7 billion could incur foreign or state tax). The overseas risks that actually matter are export licensing and the offshore manufacturing chain, not exchange rates.</p>
+  <p>China has effectively dropped out of the numbers. Licensed H200 shipments were under 1% of quarterly Data Center revenue; the first half absorbed a US$0.4 billion charge for H200 inventory and purchase obligations; licensed units carry a 25% tariff NVIDIA says it cannot pass on. The next-quarter outlook assumes <b>zero</b> China Data Center compute revenue. NVIDIA warns that being locked out helps rival hardware and developer ecosystems grow — upside if licensing improves, an incubator of competition until then.</p>
 
   <div class="plain">
     <span class="pl">PLAIN ENGLISH</span>
-    <p>Follow the money in the buyer table: Alphabet's cloud is growing 82% but its free cash flow went <b>negative</b>; Amazon's trailing-year free cash flow is negative too; Microsoft added US$115.9bn of plant in a year; Meta plans up to US$145bn of 2026 capex (capital spending). Free cash flow is falling at some of these buyers, and debt and equity funding are rising. That doesn't make the demand fake — it means <b>part of the demand is financed</b>, and financed demand is more fragile in a downturn.</p>
+    <p>Follow the money in the buyer table: Alphabet's cloud is growing 82% but its free cash flow went <b>negative</b>, Amazon's trailing-year free cash flow is negative too, and Microsoft added US$115.9bn of plant in a year. That does not make the demand fake — it means <b>part of the demand is financed</b>, and financed demand is more fragile in a downturn.</p>
   </div>
 </section>
 
 <section class="reveal on" id="quality">
-  <div class="slabel">EARNINGS QUALITY · NON-GAAP</div>
+  <div class="slabel">EARNINGS QUALITY</div>
   <h2>Operating leverage is real; GAAP income overstates the run rate</h2>
-  <p>The core machine got stronger this quarter — but the reported bottom line got extra help from below the operating line. Gains on equity investments equaled 10.87% of quarterly pretax income; across the first half they reached US$23.707 billion, or 16.76% of pretax income. Those gains come from NVIDIA's investment portfolio riding the AI boom, not from selling chips, and they can reverse.</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Q2 earnings-quality bridge · USD billions except margins</caption>
-      <thead><tr><th>Item</th><th>Reported value</th><th>Economic reading</th></tr></thead>
-      <tbody>
-        <tr><td>Equity-security gains</td><td>7.771</td><td>Mark-to-market and transaction gains; non-operating</td></tr>
-        <tr><td>Non-GAAP net income</td><td>53.954</td><td>Excludes equity gains but now includes SBC</td></tr>
-        <tr><td>Stock-based compensation</td><td>2.027</td><td>Real compensation cost retained in the new non-GAAP definition</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>A definitional change helps here: from Q1 FY2027, NVIDIA's own <span class="g">non-GAAP</span> profit measure stopped adding back <span class="g">stock-based compensation</span> — employee pay in shares is now counted as the real cost it is. Credit where due: that makes the adjusted number closer to true owner earnings, and it means the remaining gap between GAAP and adjusted profit is now driven more visibly by the investment gains, deal costs and tax effects.</p>
-
+  <p>The core machine got stronger, but the bottom line got help from below the operating line. Gains on equity investments of US$7.771bn equaled 10.87% of quarterly pretax income; across the first half they reached US$23.707bn, or 16.76% of pretax income, and US$30.6bn over the last twelve months — the amount the valuation strips. Those <span class="g">equity-security gains</span> come from NVIDIA's investment portfolio riding the AI boom, not from selling chips, and they can reverse.</p>
+  <p>A definitional change helps: from Q1 FY2027, NVIDIA's own <span class="g">non-GAAP</span> profit measure stopped adding back <span class="g">stock-based compensation</span> — employee pay in shares is now counted as the real cost it is. The remaining gap between GAAP and adjusted profit is now driven visibly by investment gains, deal costs and tax effects.</p>
   <div class="finds">
-    <div class="find good"><div class="t">Positive interpretation</div><p>Gross margin held near three-quarters while operating expense was only 8.8% of revenue. The platform is converting exceptional growth into operating leverage.</p></div>
-    <div class="find warn"><div class="t">Necessary adjustment</div><p>Raw TTM P/E uses earnings inflated by security gains. A filing-derived gain-adjusted proxy is roughly 31.8–32.8× at the after-hours price.</p></div>
+    <div class="find good"><div class="t">Positive interpretation</div><p>Gross margin held near three-quarters while operating expense was only 8.7% of revenue. The platform is converting exceptional growth into operating leverage.</p></div>
+    <div class="find warn"><div class="t">Necessary adjustment</div><p>The raw trailing P/E uses earnings inflated by security gains. On the after-hours price the raw multiple is 27.5×; the filing-derived, gain-adjusted proxy is roughly 31.6–32.7×.</p></div>
   </div>
-
   <div class="plain">
     <span class="pl">PLAIN ENGLISH</span>
-    <p>Practical takeaway: when you see "NVIDIA trades at 26× earnings," remember the "earnings" include investment windfalls. Strip those out and the multiple is closer to <b>32× — the headline number understates what you are actually paying for the chip business</b>. This distinction between what the chip business earns and what the portfolio earned this quarter runs through the valuation section below.</p>
+    <p>When you read that NVIDIA trades at 26 times earnings, that figure is struck at the regular close and on earnings that include investment windfalls. On the after-hours price the same raw multiple is 27.5×, and stripping the windfalls takes it to about <b>32×: the headline understates what you are paying for the chip business</b>. That distinction runs through the valuation section.</p>
   </div>
 </section>
 
-<section class="reveal on" id="credit">
-  <div class="slabel">CASH · CREDIT · CALL</div>
+<section class="reveal on" id="balance">
+  <div class="slabel">BALANCE SHEET · CREDIT</div>
   <h2>NVIDIA is becoming a credit allocator</h2>
-  <p>Here is the report's core concern in one sentence: even as profits soared, less of them arrived as cash, because NVIDIA is extending credit to customers and building inventory. <span class="g">Accounts receivable</span> — money customers owe but haven't paid — grew faster than revenue after selected investment-grade customers were given terms of 90 days up to a year for large multi-quarter builds. Inventory rose ahead of the Rubin launch. Neither proves demand is weak; both shift timing and counterparty risk onto NVIDIA.</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Working-capital and customer-credit indicators · USD billions unless stated</caption>
-      <thead><tr><th>Indicator</th><th>Latest</th><th>Change / comparison</th><th>Boundary</th></tr></thead>
-      <tbody>
-        <tr><td>Accounts receivable</td><td>63.059</td><td>+63.9% from FY2026 year-end</td><td>Includes terms of 90 days to one year for qualifying builds</td></tr>
-        <tr><td>Days sales outstanding</td><td>60 days</td><td>45 days sequentially</td><td>Company metric; not a default forecast</td></tr>
-        <tr><td>Top-five A/R concentration</td><td>70%</td><td>≈US$44.1bn using rounded shares</td><td>Direct customers, not ultimate end users</td></tr>
-        <tr><td>Inventory</td><td>31.575</td><td>+47.5% from year-end</td><td>Rubin build plus supply positioning</td></tr>
-        <tr><td>Q2 FCF / GAAP NI</td><td>35.8%</td><td>Far below the annual run rate</td><td>Taxes and working capital are major drivers</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <p>Even as profits soared, less of them arrived as cash, because NVIDIA is extending credit to customers and building inventory. <span class="g">Accounts receivable</span> — money customers owe but have not paid — grew faster than revenue after selected investment-grade customers were given terms of 90 days up to one year for large multi-quarter builds. Days sales outstanding (<span class="g">DSO</span>) jumped from 45 to 60 in a single quarter, and the balance sits with the five direct customers the financial map counts. Inventory rose ahead of the Rubin launch. Neither proves demand is weak; both shift timing and counterparty risk onto NVIDIA.</p>
 
   <h3>Liquidity and the investment book</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Quarter-end balance-sheet bridge · USD billions</caption>
-      <thead><tr><th>Component</th><th>Carrying value</th><th>Valuation treatment</th></tr></thead>
-      <tbody>
-        <tr><td>Cash + marketable debt securities</td><td>56.586</td><td>Liquid financial resources</td></tr>
-        <tr><td>Debt</td><td>33.366</td><td>Fully deducted</td></tr>
-        <tr class="grp"><td>Conservative net cash</td><td>23.220</td><td>Added once in FCFF valuation</td></tr>
-        <tr><td>Marketable equity</td><td>42.783</td><td>Scenario haircut</td></tr>
-        <tr><td>Public equity in other assets</td><td>4.957</td><td>Locked / long-term classification</td></tr>
-        <tr><td>Non-marketable equity</td><td>47.898</td><td>Cost/observable-transaction valuation risk</td></tr>
-        <tr><td>Equity-method infrastructure investments</td><td>3.300</td><td>Financing-ecosystem exposure</td></tr>
-        <tr class="grp"><td>Reconciled equity-investment footprint</td><td>98.938</td><td>Not operating cash; counted once</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <p>Liquid resources are ample but not the whole story. Cash and marketable debt securities of US$56.586bn against US$33.366bn of debt leave US$23.220bn of net cash, which the valuation adds once. Around it sits a US$98.897bn equity-investment footprint — marketable and non-marketable stakes plus equity-method investments — that is not operating cash, is valued partly on sparse private transactions, and is haircut by scenario.</p>
 
   <h3>Three contractual populations, not one debt number</h3>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>Gross disclosed contractual perimeter · USD billions; populations are not presented as additive expected cash use</caption>
+      <caption>Gross disclosed contractual perimeter · USD billions; the three populations are not presented as additive expected cash use</caption>
       <thead><tr><th>Population</th><th>Amount</th><th>Composition</th><th>Economic boundary</th></tr></thead>
       <tbody>
-        <tr><td>Primary scheduled commitments</td><td>366.0</td><td>Supply/capacity 279; cloud 29; own leases 25; equity 25; capex 8</td><td>Timing, cancellation and resale rights vary</td></tr>
-        <tr><td>Additional agreements</td><td>56.0</td><td>AI-cloud contracts 36; third-party leases 20</td><td>Filing supplies no overlap reconciliation</td></tr>
-        <tr><td>Maximum gross guarantees</td><td>108.5</td><td>Existing AI-cloud support plus the phased SB Energy/OpenAI cap</td><td>Contingent ceiling, not booked debt or expected loss</td></tr>
+        <tr><td>Primary scheduled commitments</td><td>366.0</td><td>Supply 279; cloud 29; leases 25; equity 25; capex 8</td><td>Timing, cancellation and resale rights vary</td></tr>
+        <tr><td>Additional agreements</td><td>56.0</td><td>AI-cloud contracts 36; third-party leases 20</td><td>The filing supplies no overlap reconciliation</td></tr>
+        <tr><td>Maximum gross guarantees</td><td>108.5</td><td>Existing AI-cloud support 3.5 plus the phased SB Energy cap of 105</td><td>Contingent ceiling, not debt or expected loss</td></tr>
       </tbody>
     </table>
   </div>
-  <p>The largest single piece deserves its own paragraph. After quarter-end, NVIDIA signed a guarantee of up to <b>US$105 billion</b> supporting SB Energy data-center sites whose capacity OpenAI will use. It phases in across nine sites as each becomes ready for service — the first expected in FY2029 — shrinks as the tenant pays, and can end early under specified credit conditions. The existing, smaller guarantee pool has US$0.712 billion of escrow behind it. The risk is what happens on failure: if a supported customer defaults, NVIDIA may inherit long leases, keep paying site costs, or make substantial payments, and getting money back through indemnities may be slow or incomplete.</p>
-  <p>Separately, NVIDIA talks about helping mobilize more than US$500 billion of third-party infrastructure capital. Today that rests on preliminary, nonbinding memoranda — outside investors still underwrite each project themselves, with NVIDIA possibly offering project-specific residual-value support. Treat it as a financing funnel, not funded capacity.</p>
-
-  <h3>The call answered the roadmap and deflected the cash question</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Earnings-call Q&amp;A audit · eight analyst questions were present</caption>
-      <thead><tr><th>Question</th><th>Management answer</th><th>Unresolved decision variable</th></tr></thead>
-      <tbody>
-        <tr><td>Why guide FY2028 now?</td><td>Preliminary growth outlook is supply-constrained; customer forecasts imply more</td><td>Unconstrained demand and exact product bridge</td></tr>
-        <tr><td>How much cash and what return hurdle?</td><td>CEO defended platform durability; CFO emphasized early supply timing</td><td>Annual cash schedule, IRR, credit threshold and loss probability</td></tr>
-        <tr><td>Which supply constraint is worst?</td><td>The entire chain is challenged</td><td>Memory, foundry, networking, power and construction ranking</td></tr>
-        <tr><td>Why finance custom-silicon customers?</td><td>Strategic relationship and platform-confidence framing</td><td>Conflict economics and customer-level return</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="callout"><b>Transcript boundary:</b> the available full call text is a third-party, speaker-tagged transcript with obvious ASR errors in product and company names. SEC filings, the release and official presentation control every numeral and spelling. The call controls only management intent and the answer-quality audit.</div>
+  <p>The largest piece: after quarter-end NVIDIA signed a <span class="g">guarantee</span> of up to <b>US$105 billion</b> supporting SB Energy data-center sites whose capacity OpenAI will use. It phases in across nine sites as each becomes ready — the first expected in FY2029 — shrinks as the tenant pays and can end early under specified credit conditions; NVIDIA also holds an option to extend credit support to about 3.8 more gigawatts, and the smaller existing pool has US$0.712 billion of escrow behind it. If a supported customer defaults, NVIDIA may have to pay.</p>
+  <p>Separately, NVIDIA talks about helping mobilize more than US$500 billion of third-party infrastructure capital, resting on preliminary, nonbinding memoranda — the capital providers underwrite each project, though NVIDIA may at its option provide limited residual-value support on specific ones — so it is a financing funnel, not funded capacity, and not an exposure-free one. Management rejects the credit framing outright: on the call the CFO said NVIDIA is "not making loans". The cash question went unanswered even so: asked what the commitments require in FY2028 cash, the CEO defended platform durability and the CFO said the supply commitments are concentrated in the first three years. No return hurdle or loss probability was disclosed — and none was asked for.</p>
 
   <div class="plain">
     <span class="pl">PLAIN ENGLISH</span>
-    <p>Think of NVIDIA as quietly adding a second job: part chip monopolist, part development bank for the AI build-out. The evidence: customers now take longer to pay (<span class="g">DSO</span> — the average days to collect a sale — jumped from 45 to 60 in one quarter, and five customers owe roughly US$44bn between them); NVIDIA has signed US$366bn of scheduled commitments — mostly supply and capacity, plus cloud, leases, equity and capex — and US$56bn of additional agreements; and its maximum guarantees, at US$108.5bn, are 1.9× its own cash and bonds.</p>
-    <p>Three cautions on reading those giant numbers. They are <b>gross ceilings, not expected losses</b> — the loss probabilities are undisclosed. The filing provides <b>no overlap reconciliation</b>, so they cannot simply be added into one total. And the biggest guarantee doesn't even start until FY2029. The problem is narrower: management was directly asked what the cash schedule, return hurdle and loss tolerance are — and did not answer. Shareholders are underwriting a credit book with no published credit policy.</p>
+    <p>NVIDIA now does two jobs: selling chips, and financing the people who buy them. Customers take longer to pay (days to collect a sale went from 45 to 60 in one quarter; five customers owe roughly US$44bn), and the perimeter above runs to US$366bn of scheduled commitments, US$56bn of additional agreements and US$108.5bn of maximum guarantees.</p>
+    <p>Three cautions. They are <b>gross ceilings, not expected losses</b> — loss probabilities are undisclosed. The filing provides <b>no overlap reconciliation</b>, so they cannot be added into one total. And the biggest guarantee does not start until FY2029. Management did not answer the cash question, so shareholders are underwriting a credit book with no published credit policy.</p>
   </div>
 </section>
 
-<section class="reveal on" id="allocation">
-  <div class="slabel">CAPITAL ALLOCATION · SBC · GOVERNANCE</div>
+<section class="reveal on" id="capital">
+  <div class="slabel">CAPITAL · GOVERNANCE</div>
   <h2>Buybacks offset dilution; investments change the risk budget</h2>
-  <p>Over the cycle NVIDIA gives capital back: from FY2022 through the first half of FY2027, buybacks and dividends totaled about US$141.7 billion, against roughly US$29.1 billion flowing in from employee stock plans and net new debt — about 4.9 dollars returned per dollar raised. The ratio does not erase the existing debt or the growing investment and commitment perimeter — and the mix is shifting: this half-year, more cash went into equity stakes in other companies (US$42.4bn) than into buybacks (US$39.0bn).</p>
-
+  <p>Over the cycle NVIDIA gives capital back: from FY2022 through the first half of FY2027, buybacks and dividends totaled about US$141.7 billion against roughly US$29.1 billion raised from employee stock plans and net new debt — 4.9 dollars returned per dollar raised. The mix is shifting: this half-year more cash went into equity stakes than into buybacks.</p>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>First-half capital allocation · USD billions</caption>
+      <caption>First-half capital allocation · H1 FY2027 · USD billions</caption>
       <thead><tr><th>Item</th><th>H1 FY2027</th><th>Interpretation</th></tr></thead>
       <tbody>
-        <tr><td>Company-defined FCF</td><td>69.895</td><td>Before treating SBC as owner cost</td></tr>
+        <tr><td>Company FCF</td><td>69.895</td><td>Before charging SBC as an owner cost</td></tr>
         <tr><td>Cash repurchases</td><td>39.044</td><td>More than current employee issuance</td></tr>
-        <tr><td>Cash dividends</td><td>6.290</td><td>Quarterly dividend increased to $0.25/share</td></tr>
-        <tr><td>Equity-security purchases</td><td>42.404</td><td>Strategic and customer-ecosystem allocation</td></tr>
-        <tr><td>Debt proceeds</td><td>24.896</td><td>New senior notes; not operating cash</td></tr>
+        <tr><td>Cash dividends</td><td>6.290</td><td>Quarterly dividend raised from $0.01 to $0.25 per share on 18 May 2026</td></tr>
+        <tr><td>Equity-security purchases</td><td>42.404</td><td>Strategic and ecosystem allocation</td></tr>
+        <tr><td>Debt proceeds</td><td>24.896</td><td>New senior notes, not operating cash</td></tr>
         <tr><td>SBC expense</td><td>3.954</td><td>Economic compensation cost</td></tr>
       </tbody>
     </table>
   </div>
-  <p>On dilution: this quarter's buybacks were 2.94× the gross shares issued to employees. The share count went from 24.221 billion to 24.147 billion — 32 million issued, 12 million withheld for tax, 94 million bought back — a net drop of 0.31%. Good, but one quarter of offset says nothing about future years.</p>
+  <p>On dilution: this quarter's buybacks were 2.94× the gross shares issued to employees, and the share count fell from 24.221 billion to 24.147 billion, a net drop of 0.31%. One quarter of offset says nothing about future years.</p>
 
-  <h3>Equity pay has real hurdles and a long expense tail</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Latest proxy and quarter-end award economics; named-executive data do not describe the full employee pool</caption>
-      <thead><tr><th>Control</th><th>Disclosed evidence</th><th>Investment reading</th></tr></thead>
-      <tbody>
-        <tr><td>Award price</td><td>No options outstanding since FY2024; RSUs and PSUs have no exercise price</td><td>ESPP buys at 85% of the lower offering- or purchase-date fair value</td></tr>
-        <tr><td>FY2026 grant concentration</td><td>69.186m maximum-potential shares: NEOs 1.5057%; directors 0.0312%; other employees 98.4631%</td><td>PSUs are counted at maximum payout; employee-level concentration is not disclosed</td></tr>
-        <tr><td>Single-year PSU hurdle</td><td>Non-GAAP operating income US$46bn / US$71bn / US$96bn</td><td>Threshold / base / stretch; no award below threshold</td></tr>
-        <tr><td>Multi-year PSU hurdle</td><td>Relative TSR at 25th / 50th / 75th percentile</td><td>Three-year test; CEO payout cap 150%, other named executives 200%</td></tr>
-        <tr><td>Outstanding-award bridge</td><td>189m opening + 49m grants − 63m vested − 7m cancelled = 168m</td><td>Gross awards remain larger than the one-quarter share-count decline</td></tr>
-        <tr><td>Expense timing</td><td>US$19.4bn aggregate unearned SBC; weighted periods are 2.6 years for RSU/PSU/market PSU awards and 0.9 years for ESPP</td><td>Attribution differs by award; this is not a straight-line cash claim</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">The CEO receives only performance stock units; other named executives receive half their target equity as service-only RSUs. The FY2026 stretch goals were automatically reduced after new H20 controls, but realized performance also exceeded the original stretch levels. One weakness remains: the single-year executive metric adds SBC back, reducing discipline over the equity-pay cost itself.</p>
+  <h3>Equity pay is performance-linked, but the only scored year paid 150–200% of target</h3>
+  <p>No stock options have been outstanding since FY2024; the live economics are restricted and performance stock units. The Fiscal 2026 single-year hurdle was non-GAAP operating income of US$46bn, US$71bn and US$96bn at threshold, target and stretch — and that stretch had been cut automatically from US$120bn when the H20 export controls landed, then cleared with US$137.3bn. That paid 200% of target to the named executives other than the CEO and 150% to the CEO, whose award is capped there because he receives performance units only. The multi-year hurdle is three-year relative shareholder return, on the same split; the proxy sets no FY2027 goal. The tail is long: US$19.4bn of unearned stock pay will be expensed over about 2.6 years. One weakness in the FY2026 design: that single-year metric added SBC back, weakening discipline over the equity-pay cost — non-GAAP stopped excluding SBC only from Q1 FY2027.</p>
 
   <h3>Founder influence is economic, not majority control</h3>
-  <p>Founder-CEO Jen-Hsun Huang holds 3.58% of the company per the March proxy (all directors and officers together: 3.94%), and part of his stake sits in foundation shares in which the proxy says he has no financial interest. The board had nine independent directors plus Huang at the proxy date, with an independent lead director; a July appointment later expanded it. So the founder leads by influence and track record, not by votes.</p>
-  <p>The big index managers' stakes carry mismatched dates: Vanguard's 7.31% is as of end-March 2026, while BlackRock's 7.43% rests on a December 2023 holding, split-adjusted — so the apparent ranking means little.</p>
-  <p>Governance watch items: board risk oversight explicitly covers business-model, supply-chain, investment and regulatory risks — yet NVIDIA discloses no Chief Compliance Officer even as export controls and customer financing grow more consequential. Related-person deals need governance-committee approval. The proxy also notes Huang's two adult children work at NVIDIA under standard compensation processes, neither reporting to him.</p>
-  <p>One relationship to watch rather than fear: the Huang Foundation agreed to buy CoreWeave GPU compute to donate to universities and nonprofits, while NVIDIA planned ordinary-course free engineering help for certain recipients. The proxy does not put a number on NVIDIA's service cost and does not treat the foundation's spending as NVIDIA revenue. It is a perception and conflict-monitoring item, not evidence of circular revenue.</p>
-
-  <h3>Competition inquiries are broad; China is further advanced</h3>
-  <p>Antitrust regulators in the EU, U.S., UK, China and South Korea have all asked NVIDIA for information — covering GPU sales, supply allocation, investments in AI model companies, roadmaps, and customer and supplier agreements. France is separately examining whether gaming and data-center GPUs are distinct markets.</p>
-  <p>China is furthest along: on 15 September 2025, its regulator preliminarily found that NVIDIA's export-compliant degraded products discriminated against Chinese customers and breached conditions of the Mellanox merger approval. Possible remedies range from fines to restrictions on networking products and operations. The filing discloses no maximum exposure or reserve for these matters; the only closure is a formal disposition — clean or otherwise.</p>
-  <p class="small">A March 2026 court order certified a shareholder class action over 2017–2018 channel-inventory and crypto-demand statements; damages are unspecified and NVIDIA is defending the case. A governance reminder, not a quantified valuation deduction.</p>
+  <p>Founder-CEO Jen-Hsun Huang held 3.58% of the company at the March proxy date; all directors and officers together held 3.94%. Nine of the ten directors were independent, with an independent lead director, and a July appointment expanded the board to eleven. NVIDIA still discloses no Chief Compliance Officer, as export controls and customer financing grow more consequential. Two competition matters are open. In September 2025 China's antitrust authorities published a preliminary finding that NVIDIA's export-compliant degraded products discriminated unfairly against Chinese customers and violated the Mellanox approval terms. The French competition authority is separately asking whether gaming and data-center GPUs are distinct products. Neither an exposure nor a reserve is disclosed for either.</p>
 
   <div class="plain">
     <span class="pl">PLAIN ENGLISH</span>
-    <p>The shareholder-friendly facts: buybacks and dividends have returned about 4.9× what stock plans and new debt brought in; executive stock awards carry real profit and share-price hurdles; and the CEO's equity awards are performance-only. The watch-list: US$19.4bn of already-granted stock pay will hit expenses over the coming years; five antitrust authorities are asking questions, with China already at a preliminary adverse finding with no disclosed maximum penalty; and the company has no disclosed Chief Compliance Officer while its export-control and customer-financing exposures grow.</p>
+    <p>The shareholder-friendly facts: buybacks and dividends have returned about 4.9× what stock plans and new debt brought in; executive awards carry profit and share-price hurdles, though the Fiscal 2026 profit goal was cut with the export controls and then paid out at 200% of target for the other named executives and 150% for the CEO, capped there because his equity is performance-only. The watch-list: US$19.4bn of granted stock pay will hit expenses over the coming years; China is at a preliminary adverse finding with no disclosed maximum penalty; and there is no disclosed Chief Compliance Officer while export-control and customer-financing exposures grow.</p>
   </div>
 </section>
 
-<section class="reveal on" id="valuation">
-  <div class="slabel">MARKET · FORECAST · VALUATION</div>
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="Owner-FCFF DCF">
+  <div class="slabel">VALUATION</div>
   <h2>The price discounts execution, not a demand collapse</h2>
-  <p>Valuing NVIDIA means answering three questions in order: what does the market pay today, what is the chip business itself worth under different futures, and how much should be deducted for the financing promises documented above? This section walks through all three, then reads back what the current price implies.</p>
 
   <div class="grid">
-    <div class="cell"><div class="k">Price</div><div class="v">$219.53</div><div class="d"><span>26 Aug 2026 20:01 ET after-hours</span></div></div>
-    <div class="cell"><div class="k">Bear value (two methods)</div><div class="v">$105.51<span class="u">–148.00</span></div><div class="d"><span class="down">−52% to −33% vs price</span></div></div>
-    <div class="cell"><div class="k">Base value (two methods)</div><div class="v">$254.03<span class="u">–321.10</span></div><div class="d"><span class="up">+16% to +46% vs price</span></div></div>
-    <div class="cell"><div class="k">Bull value (two methods)</div><div class="v">$537.82<span class="u">–551.46</span></div><div class="d"><span class="up">+145% to +151% vs price</span></div></div>
-    <div class="cell"><div class="k">The price implies</div><div class="v">FY28 growth ≈46%</div><div class="d"><span>vs management's preliminary 70% outlook</span></div></div>
-    <div class="cell"><div class="k">One-line verdict</div><div class="v">Constructive</div><div class="d"><span>with a higher risk classification</span></div></div>
+    <div class="cell"><div class="k">Price</div><div class="v">$219.53</div><div class="d"><span>2026-08-26 20:01 ET <span class="g">after-hours indication</span></span></div></div>
+    <div class="cell"><div class="k">Bear value</div><div class="v">$105.51</div><div class="d"><span class="down">−52% vs price</span></div></div>
+    <div class="cell"><div class="k">Base value</div><div class="v">$254.03</div><div class="d"><span class="up">+16% vs price</span></div></div>
+    <div class="cell"><div class="k">Bull value</div><div class="v">$551.46</div><div class="d"><span class="up">+151% vs price</span></div></div>
+    <div class="cell"><div class="k">Implied expectation</div><div class="v">FY2028 growth ≈46.5%</div><div class="d"><span>vs management's preliminary 70%</span></div></div>
+    <div class="cell" data-verdict="neutral-cautious"><div class="k">Verdict</div><div class="v">Neutral-cautious</div><div class="d"><span>(watch) · downside exceeds upside</span></div></div>
   </div>
-
 
   <h3>Step 1 · What the market pays now</h3>
-  <p>NVIDIA closed the pre-release session at US$209.66. At 20:01 ET, the after-hours indication was US$219.53, up 4.71% — about US$5.301 trillion of market value on the filing share count. (After-hours prices are indicative; the next regular session settles them.) The move rewards the strong outlook while keeping a discount for the margin dip, cash conversion and customer financing.</p>
-  <p>Goldman expected range-bound trading before the call, then outperformance afterward. Its estimates moved the same way: its Jan-2028 and Jan-2029 revenue forecasts rose 13.1% and 20.9% after the call while its gross-margin forecasts fell about 2.3 points — more volume, thinner margin, higher EPS overall. One broker's dated opinion, not independent proof.</p>
+  <p>NVIDIA closed the pre-release session at US$209.66; the after-hours indication in the tiles is 4.71% higher, about US$5.301 trillion of market value. The close paid 26.3 times trailing earnings, 22.1 times book and 16.7 times sales — the lowest earnings multiple of NVIDIA's own five years against a median of 58.1×, though that denominator holds the equity gains.</p>
 
-
-  <h3>Step 2 · Peers clarify the economics, not the multiple</h3>
+  <h3>Step 2 · What the premium buys</h3>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>Three completed years from issuer filings · growth and profitability; fiscal calendars and product scope differ</caption>
-      <thead><tr><th>Company / period</th><th>Revenue CAGR</th><th>Gross-margin path</th><th>Operating-margin path</th></tr></thead>
+      <caption>Three completed fiscal years from issuer filings (calendars and scope differ); multiples at the 2026-08-26 close from Wind, on each vendor's denominator</caption>
+      <thead><tr><th>Company · period</th><th>Revenue CAGR</th><th>Gross-margin path</th><th>Raw TTM P/E</th><th>P/B</th><th>P/S</th></tr></thead>
       <tbody>
-        <tr><td>NVIDIA · FY24–26</td><td>88.3%</td><td>−1.65pt end to end</td><td>+6.26pt end to end</td></tr>
-        <tr><td>AMD · FY23–25</td><td>23.6%</td><td>46.1% → 49.35% → 49.5%</td><td>1.8% → 7.4% → 10.7%</td></tr>
-        <tr><td>Broadcom · FY23–25</td><td>33.6%</td><td>68.9% → 63.0% → 67.8%</td><td>45.2% → 26.1% → 39.9%</td></tr>
-        <tr><td>TSMC · CY23–25</td><td>32.7%</td><td>54.4% → 56.1% → 59.9%</td><td>42.6% → 45.7% → 50.8%</td></tr>
+        <tr><td>NVIDIA · FY2024–FY2026</td><td>88.3%</td><td>72.7% → 75.0% → 71.1%</td><td>26.3×</td><td>22.1×</td><td>16.7×</td></tr>
+        <tr><td>AMD · FY2023–FY2025</td><td>23.6%</td><td>46.1% → 49.4% → 49.5%</td><td>122.0×</td><td>11.7×</td><td>19.0×</td></tr>
+        <tr><td>Broadcom · FY2023–FY2025</td><td>33.6%</td><td>68.9% → 63.0% → 67.8%</td><td>57.7×</td><td>19.3×</td><td>22.4×</td></tr>
+        <tr><td>TSMC · CY2023–CY2025</td><td>32.7%</td><td>54.4% → 56.1% → 59.9%</td><td>31.2×</td><td>10.8×</td><td>15.6×</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Each peer tests one part of the story: AMD is the merchant-silicon alternative, Broadcom the custom-chip-and-networking path, TSMC the manufacturing layer everyone depends on. NVIDIA grew far faster than all three while keeping the highest margin ceiling. One caveat: Broadcom's company-wide numbers are distorted by the VMware acquisition — its semiconductor segment alone compounded at 14.4% with a 57.6% final segment margin (a measure that excludes some corporate costs).</p>
+  <p>Each peer tests one part of the story: AMD merchant silicon, Broadcom the custom-chip path, TSMC the manufacturing layer. NVIDIA grew far faster than all three with the highest margin ceiling, yet carries the lowest raw price-to-earnings ratio of the four — its earnings hold investment gains, and the market may be charging for margins that fade. Broadcom's is distorted by VMware, so the model builds value from scratch.</p>
 
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Regular-close market snapshot on 26 August 2026; Wind multiples use each vendor denominator</caption>
-      <thead><tr><th>Company</th><th>Raw TTM P/E</th><th>Last-fiscal P/B</th><th>TTM P/S</th><th>Dividend yield</th></tr></thead>
-      <tbody>
-        <tr><td>NVIDIA</td><td>26.3×</td><td>22.1×</td><td>16.7×</td><td>0.13%</td></tr>
-        <tr><td>AMD</td><td>122.0×</td><td>11.7×</td><td>19.0×</td><td>n/a</td></tr>
-        <tr><td>Broadcom</td><td>57.7×</td><td>19.3×</td><td>22.4×</td><td>0.88%</td></tr>
-        <tr><td>TSMC</td><td>31.2×</td><td>10.8×</td><td>15.6×</td><td>0.66%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="plain">
-    <span class="pl">PLAIN ENGLISH</span>
-    <p>Strange but true: <b>NVIDIA carries the lowest price-to-earnings ratio in its own peer group</b> — 26.3× versus 31× to 122× — despite the fastest growth and fattest margins. Three reasons not to celebrate too fast: NVIDIA's "E" is inflated by investment gains (closer to 32× without them); AMD's high multiple reflects depressed, recovering earnings rather than expensiveness; and the market may simply be charging NVIDIA for the risk that today's extraordinary margins fade. That is why the model below builds value from scratch instead of borrowing a peer's multiple.</p>
-  </div>
-
-  <h3>Step 3 · The model: value the chip business, then charge for the promises</h3>
-  <p class="small">Vocabulary for the tables. <b>Owner FCFF</b> (free cash flow to the firm) is this report's strict cash measure: after-tax operating profit, plus depreciation, minus capital spending and minus the cash absorbed as <span class="g">working capital</span> — the receivables and inventory growth documented earlier — with stock pay treated as a real expense (no add-back). A <b>DCF</b> (discounted cash flow) totals those future cash flows in today's money; the <b>WACC</b> (weighted average cost of capital) is the annual return investors demand — higher risk means a higher rate and a lower value — and <b>terminal growth (g)</b> is the assumed permanent growth after the forecast years. The <b>capital-risk haircut</b> is this model's signature deduction: an assumed loss rate applied to the scheduled commitments and guarantees, charged directly against value. <b>NWC</b> is net working capital; <b>D&amp;A</b> is depreciation and amortization. A <b>basis point (bp)</b> is one hundredth of a percentage point — 350bp = 3.5%.</p>
+  <h3>Step 3 · The model, and the charge for the promises</h3>
   <div class="steps">
-    <div class="step"><div class="n">STEP 3A</div><b>Project the business</b><p>Three futures for revenue and margin (FY2028–30), anchored on management's supply-constrained FY2028 outlook in the Base case.</p></div>
-    <div class="step"><div class="n">STEP 3B</div><b>Convert profit to owner cash</b><p>Deduct tax, capex and the cash swallowed by customer credit and inventory. Stock pay counts as a cost.</p></div>
-    <div class="step"><div class="n">STEP 3C</div><b>Discount, add assets, charge for risk</b><p>Discount at the WACC, add net cash once plus a haircut share of the equity stakes, then subtract assumed losses on commitments and guarantees.</p></div>
+    <div class="step"><div class="n">Method A</div><b>Owner-FCFF DCF: what is the chip business worth after the financing promises?</b><p>Chosen because working-capital absorption and the commitment haircut enter the cash flow directly.</p></div>
+    <div class="step"><div class="n">Method B</div><b>FY2029 normalized earnings: does a multiple agree?</b><p>Strips security gains, applies a scenario multiple, discounts two years.</p></div>
+    <div class="step"><div class="n">How to read</div><b>Not averaged</b><p>The DCF sets the ladder and the odds; the multiple checks them.</p></div>
   </div>
-
+  <p>Three futures for FY2028–FY2030; each driver carries its origin in the last column. Bear is not a demand collapse — it still grows, then sags. The methods disagree: the cross-check prints about 40% above the DCF in Bear and 26% in Base, because it stops at FY2029 earnings and never charges the FY2030 fade the DCF's terminal value carries. The verdict rests on the DCF ladder.</p>
   <div class="tblscroll">
     <table class="tbl">
-      <caption>Consolidated scenario drivers · sequences are FY28 / FY29 / FY30; operating margin includes SBC; Bear/Bull cash-conversion and asset rows are stated as changes from Base where so labeled</caption>
-      <thead><tr><th>Driver</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
+      <caption>Consolidated scenario model · analyst assumptions, not company guidance · FY2028 / FY2029 / FY2030; USD billions unless stated; signed cells are changes from Base</caption>
+      <thead><tr><th>Driver or output</th><th>Bear</th><th>Base</th><th>Bull</th><th>Basis</th></tr></thead>
       <tbody>
-        <tr><td>FY27 revenue anchor</td><td>$395bn</td><td>$410bn</td><td>$425bn</td></tr>
-        <tr><td>Revenue growth</td><td>50% / 5% / flat</td><td>70% / 1.18× / 10%</td><td>80% / 30% / 20%</td></tr>
-        <tr><td>Gross margin</td><td>70% / 65% / 60%</td><td>72.5% / 70% / 67%</td><td>73% / 72% / 70%</td></tr>
-        <tr><td>GAAP operating margin</td><td>61% / 56% / 50%</td><td>64.7% / 62.3% / 59%</td><td>66% / 65.2% / 63.2%</td></tr>
-        <tr><td>WACC / terminal g</td><td>11.0% / 2.5%</td><td>9.5% / 350bp</td><td>8.5% / 4.5%</td></tr>
-        <tr><td>Tax rate</td><td>+1.5pt in FY28; +2pt thereafter (vs Base)</td><td>17.5% / 18.0% / 19.0%</td><td>−150bp through FY29; −200bp in FY30 (vs Base)</td></tr>
-        <tr><td>D&amp;A / sales</td><td>Unchanged in FY28; +0.1pt in FY29 and FY30 (vs Base)</td><td>1.2% through FY29; 1.3% in FY30</td><td>1.1% each year</td></tr>
-        <tr><td>Capex / sales</td><td>+0.5pt each year (vs Base)</td><td>3.0% / 3.5% / 4.0%</td><td>2.8% in FY28; +0.2pt each year</td></tr>
-        <tr><td>NWC / incremental revenue</td><td>+1,000bp / +500bp / unchanged (vs Base)</td><td>15% each year</td><td>−5pt / −7pt / −9pt (vs Base)</td></tr>
-        <tr><td>Equity holdings recognized</td><td>50%</td><td>70%</td><td>90%</td></tr>
-        <tr><td>Scheduled commitments stranded</td><td>3× Base</td><td>5%</td><td>None</td></tr>
-        <tr><td>Guarantee expected loss</td><td>4× Base</td><td>5%</td><td>None</td></tr>
+        <tr class="grp"><td>Drivers</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>FY2027 revenue anchor</td><td>$395bn</td><td>$410bn</td><td>$425bn</td><td>Reported H1 of 177.8 plus the 108.0 third-quarter guide gives 285.8; the Q4 stub of 109 / 124 / 139 on a 14-week quarter is an analyst assumption</td></tr>
+        <tr><td>Revenue growth</td><td>50% / 5% / flat</td><td>70% / 18% / 10%</td><td>80% / 30% / 20%</td><td>Management's preliminary call outlook, then faded</td></tr>
+        <tr><td>Gross margin</td><td>70% / 65% / 60%</td><td>72.5% / 70% / 67%</td><td>73% / 72% / 70%</td><td>The guided trough and recovery band, then faded</td></tr>
+        <tr><td>GAAP operating margin</td><td>61% / 56% / 50%</td><td>64.7% / 62.3% / 59%</td><td>66% / 65.2% / 63.2%</td><td>Opex grows slower than revenue; SBC left in</td></tr>
+        <tr><td><span class="g">WACC</span> / terminal growth</td><td>11.0% / 2.5%</td><td>9.5% / 3.5%</td><td>8.5% / 4.5%</td><td>4.55pt over the 4.95% coupon on the 2036 notes; moves with the credit thesis</td></tr>
+        <tr><td>Tax rate</td><td>+1.5 / +2 / +2pt</td><td>17.5% / 18.0% / 19.0%</td><td>−150 / −150 / −200bp</td><td>Analyst path; jurisdiction mix</td></tr>
+        <tr><td>D&amp;A / sales</td><td>flat / +0.1 / +0.1pt</td><td>1.2% / 1.2% / 1.3%</td><td>1.1% each year</td><td>Recent ratios; outsourced manufacturing</td></tr>
+        <tr><td>Capex / sales</td><td>+0.5pt each year</td><td>3.0% / 3.5% / 4.0%</td><td>2.8%, then +0.2pt</td><td>Rises with owned test, network and cloud capacity</td></tr>
+        <tr><td><span class="g">NWC</span> / incremental revenue</td><td>+1,000 / +500bp / flat</td><td>15% each year</td><td>−5 / −7 / −9pt</td><td>The extended terms behind the DSO move</td></tr>
+        <tr><td>Equity holdings recognized</td><td>50%</td><td>70%</td><td>90%</td><td>No observable marks on the non-marketable half</td></tr>
+        <tr><td>Commitments stranded · guarantee loss</td><td>3× / 4× Base</td><td>5% each</td><td>none</td><td>No disclosed loss probabilities; stress factors</td></tr>
+        <tr class="grp"><td>Outputs</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td><span class="g">Owner FCFF</span></td><td>229.8 / 256.0 / 226.5</td><td>316.4 / 382.4 / 395.6</td><td>377.1 / 504.2 / 589.0</td><td>—</td></tr>
+        <tr><td>FY2029 normalized EPS · target P/E</td><td>$11.35 · 16×</td><td>$17.40 · 22×</td><td>$22.78 · 28×</td><td>Base is TSMC's 31.2× less a 30% analyst haircut for the shorter runway; Bear 16× sits below NVIDIA's five-year-low multiple, Bull 28× just under TSMC's — a ±6× spread no disclosure sizes</td></tr>
+        <tr><td>Value per share · owner-FCFF DCF</td><td>$105.51</td><td>$254.03</td><td>$551.46</td><td>—</td></tr>
+        <tr><td>Value per share · earnings cross-check</td><td>$148.00</td><td>$321.10</td><td>$537.82</td><td>—</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="small">The middle Base revenue factor (1.18×) multiplies the prior-year level rather than expressing a margin. The Base FY28 growth rate of 70% is the call's preliminary, supply-constrained management outlook. Note what Bear is: it still assumes 50% growth next year. It is not a demand-collapse scenario — it tests what happens if margins sag, cash conversion stays weak and some committed capital is stranded even while sales keep growing.</p>
+  <p class="small">The haircut and equity-recognition rates are illustrative stress factors, not expected losses; the appendix carries the arithmetic.</p>
 
-  <p class="small">Each NWC percentage is the share of incremental revenue absorbed by receivables, inventory and other operating balances. The model therefore links customer-credit terms and inventory build directly to owner cash rather than assuming accounting growth converts one-for-one.</p>
+  <div class="steps chain">
+    <div class="step"><div class="n">Driver</div><b>70% FY2028 growth</b><p>Management's preliminary outlook on the call</p></div>
+    <div class="step"><div class="n">Revenue / margin</div><b>US$697.0bn · 72.5% gross margin</b><p>The US$410bn anchor grown 70%; operating margin 64.7%</p></div>
+    <div class="step"><div class="n">Owner FCFF</div><b>US$316.4bn → 382.4bn → 395.6bn</b><p>After tax, capex and working capital</p></div>
+    <div class="step"><div class="n">Discount / bridge</div><b>WACC 9.5% · terminal growth 3.5%</b><p>Plus net cash US$23.2bn and 70% of equity holdings, less the US$26.5bn haircut</p></div>
+    <div class="step"><div class="n">Per share</div><b>US$254.03</b><p>Equity value over 24.285bn diluted shares</p></div>
+  </div>
 
   <div class="tblscroll">
-    <table class="tbl">
-      <caption>Scenario outputs · USD billions; each sequence is FY28 / FY29 / FY30</caption>
-      <thead><tr><th>Case</th><th>Revenue</th><th>Owner FCFF</th><th>Owner FCFF margin</th><th>Capital-risk haircut</th><th>Case falsifier</th></tr></thead>
+    <table class="tbl sgrid">
+      <caption>Sensitivity of the Base owner-FCFF DCF · rows: FY2028 revenue growth (%); columns: FY2030 gross margin (%); cells: value per share (US$); the discount rate is inverted in the implied table instead</caption>
+      <thead><tr><th>FY2028 growth ＼ FY2030 gross margin</th><th>60%</th><th>67%</th><th>72%</th></tr></thead>
       <tbody>
-        <tr><td>Bear</td><td>592.5 / 622.1 / unchanged</td><td>229.8 / 256.0 / 226.5</td><td>38.8% / 41.1% / 36.4%</td><td>85.0</td><td>Margins recover while commitments sell through</td></tr>
-        <tr><td>Base</td><td>697.0 / 822.5 / 904.7</td><td>316.4 / 382.4 / 395.6</td><td>45.4% / 46.5% / 43.7%</td><td>26.5</td><td>FY28 growth misses 60% or GM stays below 72%</td></tr>
-        <tr><td>Bull</td><td>765.0 / 994.5 / 1,193.4</td><td>377.1 / 504.2 / 589.0</td><td>49.3% / 50.7% / 49.4%</td><td>0</td><td>Supply, power or customer capital blocks the ramp</td></tr>
+        <tr><td>≈46.5% (price-implied)</td><td>194.24</td><td class="implied">219.53</td><td>237.60</td></tr>
+        <tr><td>70% (Base)</td><td>224.67</td><td class="base">254.03</td><td>275.01</td></tr>
+        <tr><td>80%</td><td>237.60</td><td>268.69</td><td>290.90</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="small">Capital-risk haircut applies the displayed rates to US$422 billion of scheduled commitments and to the maximum-guarantee population defined in “NVIDIA is becoming a credit allocator.” These are analyst stress assumptions, not expected losses or reported liabilities.</p>
 
-  <h3>Two methods, one explicit balance-sheet bridge</h3>
+  <h3>Step 4 · What the price assumes</h3>
+  <p>Run the Base model backwards one assumption at a time: the price asks for materially less than management describes. <b>The market is not paying for management's forecast</b> — not proof of cheapness, since the discount may be the charge for guidance credibility, margin durability or commitment losses. But it does not assume a demand collapse.</p>
   <div class="tblscroll">
-    <table class="tbl">
-      <caption>Per-share value at the results date · methods are reconciled, not averaged</caption>
-      <thead><tr><th>Method</th><th>Bear</th><th>Base</th><th>Bull</th><th>Load-bearing input</th></tr></thead>
+    <table class="tbl txt" data-fullscan-role="implied">
+      <caption>Each row inverts the Base model at the price, changing only that assumption</caption>
+      <thead><tr><th>Assumption</th><th>Base case</th><th>Implied by the price</th><th>Gap</th></tr></thead>
       <tbody>
-        <tr><td>Economic FCFF DCF</td><td>$105.51</td><td>$254.03</td><td>$551.46</td><td>Owner cash margin and terminal duration</td></tr>
-        <tr><td>FY29 normalized earnings</td><td>$148.00</td><td>$321.10</td><td>$537.82</td><td>Normalized earnings and a two-year discount</td></tr>
+        <tr><td>FY2028 revenue growth</td><td>70%</td><td>≈46.5%</td><td>−23.5pt</td></tr>
+        <tr><td>WACC, all else Base</td><td>9.5%</td><td>≈10.4%</td><td>+0.9pt</td></tr>
+        <tr><td>FY2030 gross margin, all else Base</td><td>67%</td><td>≈58.8%</td><td>−8.2pt</td></tr>
+        <tr><td>FY2029 multiple (cross-check)</td><td>22×</td><td>≈15.0×</td><td>−7×</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="small">How the two methods stay honest with each other: the DCF adds the conservative net cash once and a scenario share of the US$93.940 billion of non-operating equity holdings; the separately classified locked public position is never added twice. The earnings cross-check works differently. Its EPS keeps normalized interest income, so net cash is not added again. It strips security gains, adds the same haircutted holdings once, applies the scenario target P/E (16×/22×/28×, tabulated in the valuation appendix) to FY29 earnings, discounts two years back, and divides by the current 24.285 billion diluted shares. Both methods subtract the same capital-risk deduction.</p>
 
-  <h3>The scenario values on one ruler</h3>
   <div class="rows" aria-label="Scenario DCF values versus the market price">
-    <div class="row"><div class="nm">Bear DCF<span>Margins sag; committed capital strands</span></div><div class="track"><div class="fill alt" style="width:19.1%"></div></div><div class="fig">$105.51<span class="down">−52% vs price</span></div></div>
-    <div class="row"><div class="nm">After-hours price<span>26 Aug 2026, 20:01 ET</span></div><div class="track"><div class="fill soft" style="width:39.8%"></div></div><div class="fig">$219.53<span>indication</span></div></div>
-    <div class="row"><div class="nm">Base DCF<span>Management's supply-constrained path</span></div><div class="track"><div class="fill" style="width:46.1%"></div></div><div class="fig">$254.03<span class="up">+16% vs price</span></div></div>
-    <div class="row"><div class="nm">Bull DCF<span>Ramp, margins and credit all hold</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">$551.46<span class="up">+151% vs price</span></div></div>
+    <div class="row"><div class="nm">Bear DCF<span>Margins sag; commitments strand</span></div><div class="track"><div class="fill alt" style="width:19.13%"></div></div><div class="fig">$105.51<span class="down">−52% vs price</span></div></div>
+    <div class="row"><div class="nm">Price<span>2026-08-26, 20:01 ET</span></div><div class="track"><div class="fill soft" style="width:39.81%"></div></div><div class="fig">$219.53<span>indication</span></div></div>
+    <div class="row"><div class="nm">Base DCF<span>The supply-constrained path</span></div><div class="track"><div class="fill" style="width:46.06%"></div></div><div class="fig">$254.03<span class="up">+16% vs price</span></div></div>
+    <div class="row"><div class="nm">Bull DCF<span>Ramp and credit hold</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">$551.46<span class="up">+151% vs price</span></div></div>
   </div>
-  <p class="small">Bars are proportional to the bull DCF value of $551.46; percentage gaps use the $219.53 after-hours indication. The earnings cross-check brackets each case the same way: Bear $148.00, Base $321.10, Bull $537.82 — so the full Base span quoted in the verdict is $254–321.</p>
+  <p class="small">Bars scale to the Bull value; gaps use the after-hours indication.</p>
 
-  <h3>Step 4 · What the current price implicitly assumes</h3>
-  <p>Run the Base model backwards, changing only next year's growth: the after-hours price implies FY28 revenue growth of about <strong>46.457%</strong> — well below management's own preliminary outlook of 70%. In plain terms, <b>the market is not paying for management's forecast</b>. That is not automatic proof the stock is cheap: the discount may be the market's charge for guidance credibility, margin durability, the working-capital drag, possible commitment losses, or a lower long-run multiple. But it does mean a demand collapse is not what today's price assumes.</p>
-  <div class="callout"><b>External cross-check:</b> after the call, Goldman raised its twelve-month target to US$300 from US$285, keeping a 30× multiple on normalized EPS raised to US$10 from US$9.50. That target sits inside this report's Base interval — but it uses the same normalized-earnings logic, so it is agreement, not independent confirmation. Goldman's Jan-2029 forecast is more bullish than this report's Base on revenue, margin and EPS.</div>
-</section>
-
-<section class="reveal on" id="risks">
-  <div class="slabel">RISKS · MONITORING</div>
-  <h2>The operating thesis is intact; the evidentiary burden is higher</h2>
-  <div class="finds">
-    <div class="find good"><div class="t">Strongest evidence for</div><p>Data Center, cloud demand and architecture cadence remain exceptional. Rubin is already shipping, and the outlook excludes a China recovery.</p></div>
-    <div class="find warn"><div class="t">Strongest evidence against</div><p>Part of future demand depends on NVIDIA investments, extended terms, cloud purchases, leases or guarantees whose returns and loss probabilities are undisclosed.</p></div>
-    <div class="find"><div class="t">Alternative explanation</div><p>Goldman's post-call view is that clearer margin and commitment disclosure improves risk assessment. It does not resolve cash timing, contract overlap or loss probability.</p></div>
-    <div class="find"><div class="t">Resolution path</div><p>Track sell-through, utilization, receivable aging, commitment reduction, realized guarantee cash, Rubin mix and normalized gross margin together.</p></div>
+  <div class="ffield" aria-label="Valuation ranges by method and scenario against the price">
+    <div class="frow"><div class="fnm">Owner-FCFF DCF<span>Bear</span></div><div class="ftrack"><div class="fbar alt" style="left:1.20%;width:0.60%"></div><div class="fmark" style="left:25.98%"></div></div><div class="fig">$105.51</div></div>
+    <div class="frow"><div class="fnm">Owner-FCFF DCF<span>Base</span></div><div class="ftrack"><div class="fbar" style="left:33.48%;width:0.60%"></div></div><div class="fig">$254.03</div></div>
+    <div class="frow"><div class="fnm">Owner-FCFF DCF<span>Bull</span></div><div class="ftrack"><div class="fbar moss" style="left:98.14%;width:0.60%"></div></div><div class="fig">$551.46</div></div>
+    <div class="frow"><div class="fnm">FY2029 earnings<span>cross-check method</span></div><div class="ftrack"><div class="fbar" style="left:10.43%;width:84.74%"></div></div><div class="fig">$148.00–537.82</div></div>
+    <div class="frow"><div class="fnm">Five-year multiple<span>market anchor, no model</span></div><div class="ftrack"><div class="fbar" style="left:23.84%;width:55.07%"></div></div><div class="fig">$209.66–462.96</div></div>
   </div>
+  <p class="small">Axis: US$100–560 per share; the black line is the after-hours indication. Rows one to three are the primary method's scenarios, row four the cross-check, row five model-free — NVIDIA's own trailing multiple at its five-year low and median, struck on the 2026-08-26 regular close, so its floor is that close, not the after-hours mark.</p>
 
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Observable validation map; thresholds are analyst tests, not company guidance</caption>
-      <thead><tr><th>Variable</th><th>Confirms</th><th>Breaks</th></tr></thead>
-      <tbody>
-        <tr><td>Rubin transition</td><td>Material Q3 mix with stable inventory provisions</td><td>Mix delay, yield issue or another large charge</td></tr>
-        <tr><td>Gross margin</td><td>FY2028 recovery into management's stated range</td><td>Q4 below the stated trough or no FY2028 recovery</td></tr>
-        <tr><td>Customer financing</td><td>Cloud commitments decline as third parties use capacity</td><td>Assumed leases, payments or indemnity receivables rise</td></tr>
-        <tr><td>Hyperscaler demand</td><td>Cloud growth and capex remain aligned</td><td>Capex cuts coincide with cloud/backlog slowdown</td></tr>
-        <tr><td>CUDA economics</td><td>Normalized production cost per useful token retains a lead</td><td>Custom or rival silicon closes the gap across major workloads</td></tr>
-        <tr><td>China ecosystem</td><td>Approved competitive product restores developer access</td><td>Domestic ecosystems expand globally while foreclosure persists</td></tr>
-      </tbody>
-    </table>
+  <div class="plain">
+    <span class="pl">THE BOTTOM LINE</span>
+    <p>Charge for the financing promises and the base case is worth about US$254 a share, the bear case US$106 — the margin of safety is the credibility of the base case, not the price. What settles it: the promised margin trough, and whether commitments shrink through use.</p>
   </div>
 </section>
-
-<section class="reveal on" id="decision">
-  <div class="slabel">FINAL JUDGMENT</div>
-  <h2>Constructive, but no longer a pure platform multiple</h2>
-  <p class="quote">NVIDIA still owns the strongest operating evidence in AI infrastructure. The new discount rate belongs to credit allocation, not to demand.</p>
-  <p>At the post-results price, the Base valuation spans US$254–321 per share — above the US$219.53 indication. The Bear range is US$106–148; the Bull methods converge near US$538–551. Upside outweighs downside across the scenarios, which supports a constructive long-term view. But this is not a low-risk earnings chase: only the lower end of the Base range offers a modest margin of safety, and the Bear case sits roughly half the current price away.</p>
-  <div class="callout"><b>Stance:</b> positive, with a higher risk classification than a pure chip-platform story. The thesis strengthens if the next quarter's guidance turns into real Rubin shipments, cash collection and stable receivable quality while the scheduled commitments shrink through use. It weakens if gross margin breaks the promised floor, or if the guarantees start converting into assumed leases and actual cash payments.</div>
-  <p><strong>Strongest counterargument:</strong> management's preliminary FY2028 outlook is limited by supply, not demand — and the balance-sheet structures may end up as a profitable second business with few realized losses. <strong>Failure boundary:</strong> customer-financed demand, weaker cash conversion and lower margins persisting <em>together</em> would invalidate the premium platform valuation. Confidence is medium: the operating disclosures are strong, but customer-level utilization, returns and credit economics are absent.</p>
-
-  <h3>The checkpoints, in order</h3>
-  <div class="tline">
-    <div class="tstop"><span class="tw">Q3 FY2027</span><b>Rubin becomes material</b><p>Material next-quarter mix with stable inventory provisions — no new charge.</p></div>
-    <div class="tstop warn"><span class="tw">Q4 FY2027</span><b>The margin trough</b><p>Gross margin must hold management's stated 71–72% floor.</p></div>
-    <div class="tstop"><span class="tw">FY2028</span><b>Recovery and growth test</b><p>Margin back into 72–73% and the preliminary supply-constrained outlook converting to revenue.</p></div>
-    <div class="tstop"><span class="tw">FY2029</span><b>Guarantees go live</b><p>SB Energy sites reach ready-for-service; watch commitments decline through use, not conversion into payments.</p></div>
-  </div>
-
-</section>
-
 
 <section class="reveal on" id="valuation-appendix">
   <div class="slabel">VALUATION APPENDIX</div>
-  <h2>Reference detail behind the model</h2>
-  <p>Reference material only; every load-bearing conclusion lives in the valuation section above. Here: the Street-expectation snapshot, price history and technical map, peer research intensity, and the earnings cross-check inputs.</p>
+  <h2>How the load-bearing numbers were built</h2>
+  <p>Owner FCFF = EBIT × (1 − tax) + D&amp;A (depreciation and amortization) − capex − working-capital absorption, with no SBC add-back. The DCF discounts FY2028–FY2030 at the scenario weighted average cost of capital (WACC), adds a terminal value of FY2030 FCFF × (1 + g) ÷ (WACC − g), adds net cash once and the scenario share of the equity holdings, subtracts the capital-risk haircut and divides by 24.285 billion diluted shares. Its rate is anchored on NVIDIA's own funding cost, the 4.95% coupon on the 2036 notes issued in June 2026. The cross-check strips security gains and keeps a normalized other-income line of 0.2% / 0.4% / 0.5% of revenue by scenario — an analyst stand-in for interest on the retained cash, so net cash is not added twice. It then applies the scenario multiple to FY2029 normalized net income, discounts two years, adds the recognized equity holdings less the haircut, and divides by the same 24.285 billion diluted count as the DCF. The scenario share path — that count 1.5% higher in Bear where issuance outruns buybacks, 24.30bn in Base (effectively flat), 1.4% lower in Bull — sets only the FY2029 EPS in the scenario table.</p>
   <div class="tblscroll">
-    <table class="tbl">
-      <caption>Goldman Sachs / Visible Alpha snapshot on 26 August 2026 · variance to Street consensus; non-GAAP labels follow Goldman</caption>
-      <thead><tr><th>Expectation test</th><th>Variance to Street</th><th>Reading</th></tr></thead>
+    <table class="tbl txt" data-fullscan-role="derivations">
+      <caption>Every load-bearing figure · USD millions in inputs unless stated</caption>
+      <thead><tr><th>Figure</th><th>Inputs</th><th>Formula</th><th>Source (page · note)</th></tr></thead>
       <tbody>
-        <tr><td>Q2 results</td><td>Revenue +4.2%; Data Center +3.6%; Edge +11.3%; non-GAAP EPS +6.1%; gross margin +14bp</td><td>Broad execution beat, not a material margin beat</td></tr>
-        <tr><td>Q3 guide</td><td>Revenue midpoint +US$2.61bn; implied non-GAAP EPS +4.6%; gross margin −92bp</td><td>Revenue and EPS ahead, with a near-term margin reset</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Front-adjusted regular-close price returns through 26 August 2026; benchmark spreads are price returns, not annualized alpha</caption>
-      <thead><tr><th>Horizon</th><th>NVIDIA</th><th>Nasdaq 100</th><th>SOX</th></tr></thead>
-      <tbody>
-        <tr><td>20 trading days</td><td>+10.34%</td><td>+7.47%</td><td>+11.14%</td></tr>
-        <tr><td>60 trading days</td><td>−6.44%</td><td>−4.23%</td><td>−10.45%</td></tr>
-        <tr><td>Year to date</td><td>+12.56%</td><td>+15.74%</td><td>+63.93%</td></tr>
-        <tr><td>Three years</td><td>+356.49%</td><td>+95.59%</td><td>+232.16%</td></tr>
-        <tr><td>Five years</td><td>+853.35%</td><td>+91.28%</td><td>+244.51%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">Read the returns table like this: over five years NVIDIA is up 853% against 91% for the Nasdaq 100 — historic outperformance — but year-to-date it is up 12.6% while the semiconductor index (SOX) is up 63.9%. The long-term leader has recently been the sector laggard. The post-results indication would reclaim the short moving averages, though its after-hours volume was unavailable. Support and resistance are monitoring zones, not valuation inputs.</p>
-  <div class="tblscroll">
-    <table class="tbl gloss">
-      <caption>Technical and liquidity map at the regular close; monitoring heuristic, not intrinsic value</caption>
-      <thead><tr><th>Signal</th><th>Evidence</th><th>Reading</th></tr></thead>
-      <tbody>
-        <tr><td>Moving averages</td><td>Below the 5-, 10- and 20-day averages; above the 60-, 120- and 250-day averages</td><td>Weak short trend inside an intact medium- and long-term trend</td></tr>
-        <tr><td>Liquidity</td><td>179.9m shares and US$38.08bn traded; 1.54× and 1.52× their 20-day averages</td><td>Results-day turnover was elevated; after-hours turnover was unavailable</td></tr>
-        <tr><td>Monitoring levels</td><td>Support at the 60-day area, then US$202.55 and US$191.5–193; resistance at US$215.6–217.6, then US$227.92 / US$232.01 / US$236.27</td><td>Price must reclaim short averages and recent swing highs to confirm momentum</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Research intensity across the same issuer-filing windows</caption>
-      <thead><tr><th>Company / period</th><th>R&amp;D / revenue path</th></tr></thead>
-      <tbody>
-        <tr><td>NVIDIA · FY24–26</td><td>−5.6pt end to end</td></tr>
-        <tr><td>AMD · FY23–25</td><td>25.9% → 25.04% → 23.4%</td></tr>
-        <tr><td>Broadcom · FY23–25</td><td>14.7% → 18.1% → 17.2%</td></tr>
-        <tr><td>TSMC · CY23–25</td><td>8.4% → 7.1% → 6.5%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Normalized-earnings cross-check inputs at FY29</caption>
-      <thead><tr><th>Input</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
-      <tbody>
-        <tr><td>Normalized diluted EPS</td><td>$11.35</td><td>$17.40</td><td>$22.78</td></tr>
-        <tr><td>Scenario diluted shares, billions</td><td>24.65</td><td>24.30</td><td>23.95</td></tr>
-        <tr><td>Target P/E</td><td>16×</td><td>22×</td><td>28×</td></tr>
+        <tr><td>40.3% — Q2 cash conversion</td><td>Operating cash flow 24,077; net income 59,688</td><td>24,077 ÷ 59,688</td><td>Release; 10-Q</td></tr>
+        <tr><td>1.9× — guarantees to liquid resources</td><td>Guarantees 108.5bn; cash 22,443 + marketable debt 34,143</td><td>108.5 ÷ 56.586</td><td>10-Q Note 10</td></tr>
+        <tr><td>US$302.970bn LTM revenue; US$192.880bn LTM net income</td><td>215,938 and 120,067; 177,837 and 118,010; 90,805 and 45,197</td><td>FY2026 + H1 FY2027 − H1 FY2026 = 302,970 and 192,880</td><td>FY2026 10-K; 10-Q</td></tr>
+        <tr><td>68.30% — revenue CAGR FY2022–FY2026</td><td>26,914 → 215,938, four intervals</td><td>(215,938 ÷ 26,914)^(1/4) − 1</td><td>FY2023, FY2026 10-K</td></tr>
+        <tr><td>US$23.220bn — conservative net cash</td><td>Cash 22,443; marketable debt 34,143; debt 1,000 + 32,366</td><td>22,443 + 34,143 − 33,366 = 23,220</td><td>10-Q balance sheet</td></tr>
+        <tr><td>US$93.940bn equity holdings; US$98.897bn footprint</td><td>Marketable 42,783; non-marketable 51,157 (47,898 of non-marketable equity plus 3,259 of equity-method investments, disclosed as US$3.3bn); public equity in other assets 4,957</td><td>42,783 + 51,157 = 93,940; 42,783 + 4,957 + 51,157 = 98,897</td><td>10-Q Notes 5, 6</td></tr>
+        <tr><td>US$422bn commitments; US$108.5bn maximum guarantees</td><td>Schedules 366 and 56; guarantees 3.5 and 105 (USD bn)</td><td>366 + 56; 3.5 + 105</td><td>10-Q Note 10</td></tr>
+        <tr><td>US$697.0bn — Base FY2028 revenue</td><td>FY2027 anchor 410bn (H1 177.837 plus the 108.0 Q3 guide plus an assumed 124 Q4); growth 70%</td><td>410bn × 1.70</td><td>Scenario table; call</td></tr>
+        <tr><td>US$26.5bn / US$85.0bn — Base / Bear haircut</td><td>5% of 422 and of 108.5; 15% of 422 and 20% of 108.5</td><td>21.1 + 5.4; 63.3 + 21.7</td><td>Scenario table</td></tr>
+        <tr><td>US$105.51 / 254.03 / 551.46 — DCF per share</td><td>Owner FCFF FY2028–FY2030; scenario WACC and g; net cash 23.220; recognized share of 93.940; haircut; 24.285bn shares</td><td>Σ FCFF ÷ (1 + WACC)^t + TV ÷ (1 + WACC)^3 + net cash + equity − haircut, ÷ shares</td><td>Scenario</td></tr>
+        <tr><td>US$148.00 / 321.10 / 537.82 — earnings cross-check</td><td>FY2029 EPS 11.35 / 17.40 / 22.78 on the scenario share path 24.65 / 24.30 / 23.95bn, which sets those EPS only; multiple 16 / 22 / 28; normalized other income 0.2% / 0.4% / 0.5% of revenue; equity and haircut as above</td><td>Net income × multiple ÷ (1 + WACC)² + equity − haircut, ÷ 24.285bn</td><td>Scenario</td></tr>
+        <tr><td>≈46.5% — price-implied FY2028 growth</td><td>Base model; price 219.53</td><td>Solve FY2028 growth so value = price</td><td>Wind</td></tr>
+        <tr><td>≈10.4% WACC · ≈58.8% FY2030 gross margin · ≈15.0× FY2029 multiple</td><td>Base model; price 219.53</td><td>Solve one assumption at a time so that value = price</td><td>Implied table</td></tr>
+        <tr><td>27.5× raw; 31.6–32.7× gain-adjusted trailing P/E</td><td>Market value 5,301bn (the after-hours price on shares outstanding, as in the last row); LTM net income 192,880 less pre-tax equity gains 30,552 (8,918 − 2,073 + 23,707), pre-tax or after an illustrative 17% tax</td><td>5,301 ÷ 192,880; 5,301 ÷ 162,328 and 5,301 ÷ 167,522</td><td>10-K; release</td></tr>
+        <tr><td>−52% / +16% / +151% (DCF) and −33% / +46% (cross-check) — gaps versus the price</td><td>105.51, 254.03, 551.46 and 148.00, 321.10; price 219.53</td><td>Value ÷ price − 1</td><td>Ladder</td></tr>
+        <tr><td>−46.0% / +21.6% / +157.1% — carry-inclusive odds, three years</td><td>The DCF gaps above; carry 5.90% over three years</td><td>Gap + carry</td><td>Decision block</td></tr>
+        <tr><td>US$191.04 — carry-adjusted break-even price</td><td>Bear 105.51; Base 254.03; carry 5.90% over three years</td><td>(105.51 + 254.03) ÷ (2 × (1 − 0.058981)), on the unrounded carry; the market sits 14.9% above it</td><td>Decision block</td></tr>
+        <tr><td>≈1.9% a year, 5.90% over three years — carry</td><td>Forward dividend US$1.00 a share (the $0.25 quarterly rate set on 18 May 2026) on the 219.53 indication; H1 FY2027 repurchases 39,044 annualized against the market value below</td><td>(1.00 ÷ 219.53 = 0.46%) + (39,044 doubled ÷ 5,301,000 = 1.47%), compounded three years</td><td>10-Q; Wind</td></tr>
+        <tr><td>US$209.66–462.96 — five-year multiple band (market anchor)</td><td>Close 209.66; trailing multiple 26.3053, the five-year low; median 58.0855, 1,255 sessions</td><td>209.66 × 58.0855 ÷ 26.3053</td><td>Wind</td></tr>
+        <tr><td>22× — Base FY2029 target multiple</td><td>TSMC trailing multiple 31.2037 at the 2026-08-26 close; 30% haircut for the shorter runway</td><td>31.2037 × (1 − 30%) = 21.84, to 22</td><td>Wind; peers</td></tr>
+        <tr><td>US$5.301tn — after-hours market value</td><td>Price 219.53; 24.147bn shares outstanding at 26 July 2026</td><td>219.53 per share on 24.147bn shares = 5,301bn</td><td>Wind; 10-Q</td></tr>
       </tbody>
     </table>
   </div>
 </section>
 
+<section class="reveal on" id="risks">
+  <div class="slabel">RISKS</div>
+  <h2>The operating thesis is intact; the evidentiary burden is higher</h2>
+  <p>The strongest evidence for the thesis is operating: demand, cloud growth and the yearly architecture cadence remain exceptional, Rubin is shipping, and the outlook excludes China. Against it: part of future demand now depends on NVIDIA's own investments, terms, leases and guarantees, whose returns and loss probabilities are undisclosed.</p>
+  <div class="tblscroll">
+    <table class="tbl txt" data-fullscan-role="risk-register">
+      <caption>Ranked by damage to the thesis; status as of the 2026-08-26 filings; likelihood is the analyst's ordinal judgment with its basis — the filings disclose no probabilities</caption>
+      <thead><tr><th>Rank</th><th>Risk</th><th>Status</th><th>Path</th><th>Exposure</th><th>Likelihood</th><th>Next observable</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Customer-financing losses on commitments and guarantees</td><td>Q2 FY2027: US$366bn plus US$56bn scheduled and US$108.5bn of maximum guarantees; the US$105bn cap starts in FY2029</td><td>A supported tenant defaults and NVIDIA inherits leases or pays; stranded commitments hit margins</td><td>Bear haircut US$85.0bn, about US$3.50 per share; each 5% of the perimeter is US$26.5bn</td><td>Medium — contracted and concentrated, but the largest cap starts only in FY2029</td><td>Q3 FY2027: commitments declining through use, no assumed leases</td></tr>
+        <tr><td>2</td><td>Gross-margin trough deeper than promised</td><td>Q3 FY2027 guide 74.0% ±50 basis points; the call adds a Q4 trough and an FY2028 recovery band</td><td>Memory and HBM4 pricing flow into gross margin, owner FCFF and terminal value</td><td>Five points of FY2030 gross margin move the Base value by about US$21 per share</td><td>Medium — the trough is guided, but memory price is the one input management does not set</td><td>Q4 FY2027 gross margin against the promised floor</td></tr>
+        <tr><td>3</td><td>Cash conversion and receivables</td><td>Q2 FY2027: DSO 60 days versus 45; receivables up 63.9% from year-end</td><td>Extended terms and inventory absorb cash; a default turns a timing gap into a loss</td><td>Base absorbs 15% of incremental revenue; Bear adds 1,000bp in FY2028</td><td>Medium — the terms are granted, so the gap persists unless customers pay faster</td><td>Q3 FY2027 DSO and receivable aging; a falling top-five share</td></tr>
+        <tr><td>4</td><td>Rubin transition and inventory</td><td>Q2 FY2027: inventory up 47.5% from year-end; provisions US$0.784bn; Rubin shipments began in Q3</td><td>A yield or mix slip forces a write-down, as in FY2023</td><td>A repeat of the FY2023 write-downs would push margin below the Bear path</td><td>Medium — the Blackwell ramp drew yield-related provisions in Q2 FY2025, and inventory provisions ran US$1.6bn in FY2025 and US$4.0bn in FY2026</td><td>Q3 FY2027: Rubin mix, stable provisions</td></tr>
+        <tr><td>5</td><td>China foreclosure and competition inquiries</td><td>Q3 FY2027 outlook assumes zero China Data Center compute revenue; antitrust finding published September 2025; French inquiry open</td><td>The lost market incubates rival ecosystems; remedies could restrict networking</td><td>No maximum exposure or reserve disclosed; China is upside-only in the model</td><td>Medium — the finding is published and unremedied, with no disclosed timetable</td><td>Disposition of the China finding; licensing through FY2028</td></tr>
+        <tr><td>6</td><td>Hyperscaler financing strain</td><td>Q2 2026: Alphabet free cash flow −US$5.9bn, Amazon trailing −US$7.6bn, while capex rises</td><td>Capex cuts reach orders, pulling FY2028 growth toward the Bear path</td><td>Base-to-Bear FY2028 revenue gap about US$105bn</td><td>Medium–Low — needs a capex cut, not a slowdown; the buyers' guides still rise</td><td>Calendar-2027 capex guides on the Q4 2026 calls</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="plain">
+    <span class="pl">PLAIN ENGLISH</span>
+    <p>Rank one decides the thesis: whether the financing promises stay promises. The US$366bn of scheduled commitments, US$56bn of additional agreements and US$108.5bn of maximum guarantees are ceilings, not expected losses — and even the bear case charges only US$85.0bn of them, about US$3.50 a share. So the damage would arrive through the margin trough and slower growth long before a guarantee is called. What settles it is use, not talk: commitments running off as capacity is used, no assumed leases, receivables collected on time.</p>
+  </div>
+  <div class="tline">
+    <div class="tstop"><span class="tw">Q3 FY2027</span><b>Rubin becomes material</b><p>A material mix with stable inventory provisions and no new charge.</p></div>
+    <div class="tstop warn"><span class="tw">Q4 FY2027</span><b>The margin trough</b><p>Gross margin must hold the floor management stated on the call; a break below it cuts the Base path.</p></div>
+    <div class="tstop"><span class="tw">FY2028</span><b>Recovery and growth test</b><p>Margin back into the guided band and the supply-constrained outlook converting into revenue.</p></div>
+    <div class="tstop"><span class="tw">FY2029</span><b>Guarantees go live</b><p>SB Energy sites reach ready-for-service; commitments should decline through use.</p></div>
+  </div>
+</section>
+
+<section class="reveal on" id="decision" data-fullscan-role="decision">
+  <div class="slabel">DECISION</div>
+  <h2 data-verdict="neutral-cautious">Neutral-cautious (watch): an exceptional business at odds that are not yet generous</h2>
+  <p>NVIDIA owns the strongest operating evidence in AI infrastructure, yet on this report's own model the downside to the bear case is wider than the upside to the base case, and the credit economics that would size that downside — hurdle rates, loss probabilities — are nowhere disclosed.</p>
+  <div class="tblscroll">
+    <table class="tbl txt" data-fullscan-role="decision-block">
+      <tbody>
+        <tr><td>Thesis</td><td>The platform moat keeps widening while NVIDIA's own balance sheet underwrites a growing share of demand; the price discounts execution risk, not a demand collapse, and shareholders carry a credit book with no published credit policy.</td></tr>
+        <tr><td>Base vs consensus</td><td>No usable post-results consensus. Wind's snapshot (queried 2026-08-26) carries no vintage and is stale against the first half plus the third-quarter guide. The implied-expectations table stands in its place: the price asks for FY2028 growth of about 46.5% against the Base case. The one dated post-call broker mark is Goldman Sachs's US$300 target. It sits inside the Base interval, but it shares the normalized-earnings logic.</td></tr>
+        <tr><td>Odds</td><td>Owner-FCFF DCF against the after-hours price, on the model's own three-year horizon and with carry included in each: Bear −46.0% versus Base +21.6%, Bull +157.1%. The cross-check method is not mixed in.</td></tr>
+        <tr><td>Break-even price</td><td>US$191.04 — the carry-adjusted price at which base upside equals bear downside over the same three years; the market sits 14.9% above it.</td></tr>
+        <tr><td>Carry</td><td>About 1.9% a year, 5.9% compounded over the model's three-year horizon: the dividend at its current US$0.25 quarterly rate (set 18 May 2026) is 0.46% of the after-hours price, plus a buyback yield of roughly 1.47% from annualizing H1 FY2027 repurchases against the US$5.301tn after-hours market value.</td></tr>
+        <tr><td>Confidence by pillar</td><td>Thesis evidence — High: the commitment, guarantee and receivable disclosures are filed, not inferred. Cash and balance sheet — Medium: quarterly cash conversion and undisclosed credit economics. Governance — Medium: no Chief Compliance Officer, open antitrust matters. Lowest pillar, valuation inputs — Low: FY2028 growth rests on a call-only outlook and the terminal margin does most of the work; the observable that would move it is a dated FY2028 revenue framing in the Q4 FY2027 guidance.</td></tr>
+        <tr><td>Verdict</td><td>Neutral-cautious (watch). Bear downside exceeds base upside even after carry; the band improves if gross margin holds the promised floor and guarantees shrink through use rather than convert into assumed leases and payments. Next checkpoint: the Q3 FY2027 results — Rubin mix, receivable aging, commitment run-off.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout"><b>Strongest counterargument:</b> the preliminary FY2028 outlook is limited by supply, not demand, and the balance-sheet structures may end up a profitable second business with few realized losses — in which case the moat is widening and the balance sheet is underwriting it profitably. <b>Failure boundary:</b> customer-financed demand, weaker cash conversion and lower margins persisting together would invalidate the premium platform valuation.</div>
+</section>
+
 <section class="reveal on" id="glossary">
-  <div class="slabel">GLOSSARY · IN ORDER OF APPEARANCE</div>
+  <div class="slabel">GLOSSARY</div>
   <h2>The terms you need for an AI-infrastructure company</h2>
   <div class="tblscroll">
     <table class="tbl gloss">
       <thead><tr><th>Term</th><th>Plain-English meaning</th></tr></thead>
       <tbody>
-        <tr><td>GPU / accelerated computing</td><td>Processors that run huge numbers of calculations in parallel — the hardware AI models are trained and run on.</td></tr>
+        <tr><td>Graphics processing unit (GPU)</td><td>A processor that runs huge numbers of calculations in parallel — the hardware AI models train and run on.</td></tr>
         <tr><td>Fabless</td><td>A chip company that designs chips but owns no factories; contract manufacturers fabricate them.</td></tr>
-        <tr><td>Hyperscaler</td><td>A giant cloud-computing company (e.g. the Alphabet/Microsoft/Amazon/Meta tier) that buys computing hardware at enormous scale.</td></tr>
-        <tr><td>Data Center (platform)</td><td>NVIDIA's label for its AI-computing business — 92.5% of revenue this quarter. Hyperscale plus ACIE.</td></tr>
-        <tr><td>ACIE</td><td>AI Clouds, Industrial &amp; Enterprise — NVIDIA's bucket for AI-cloud providers, companies, industry and governments.</td></tr>
-        <tr><td>CUDA</td><td>NVIDIA's software layer. Code and skills built on it are costly to move to rival hardware — the core of the moat.</td></tr>
-        <tr><td>Blackwell / Vera Rubin</td><td>The current and next chip generations. NVIDIA now replaces its architecture roughly every year.</td></tr>
-        <tr><td>HBM / HBM4</td><td>High-bandwidth memory stacked next to AI chips; scarce and expensive, and currently the main squeeze on NVIDIA's margins.</td></tr>
-        <tr><td>Segment</td><td>A business unit reported separately in the accounts. NVIDIA's two are Compute &amp; Networking and Graphics.</td></tr>
-        <tr><td>Gross / operating margin</td><td>Profit after direct product costs / after all operating costs, each as a share of revenue.</td></tr>
-        <tr><td>SBC</td><td>Stock-based compensation — paying employees in shares. A real cost to owners through dilution even though no cash leaves.</td></tr>
-        <tr><td>Non-GAAP</td><td>A company's own adjusted profit measure. NVIDIA's now keeps SBC as a cost and strips investment gains.</td></tr>
+        <tr><td>Hyperscaler</td><td>A giant cloud-computing company that buys hardware at enormous scale.</td></tr>
+        <tr><td>Data Center · Hyperscale · AI Clouds, Industrial &amp; Enterprise (ACIE)</td><td>NVIDIA's labels for its AI-computing business, 92.5% of revenue: Hyperscale is the cloud giants; ACIE is AI clouds, enterprises, industry and governments.</td></tr>
+        <tr><td>CUDA software platform</td><td>NVIDIA's software layer; code and skills built on it are costly to move to rival hardware — the moat.</td></tr>
+        <tr><td>Blackwell / Vera Rubin</td><td>The current and next chip generations; the architecture now changes roughly every year.</td></tr>
+        <tr><td>High-bandwidth memory (HBM4)</td><td>Memory stacked next to AI chips; scarce, expensive, and the main squeeze on margins.</td></tr>
+        <tr><td>After-hours indication</td><td>A price quoted after the regular session closes; indicative until the next session settles it — this report's US$219.53.</td></tr>
+        <tr><td>Segment (reportable)</td><td>A business unit reported separately in the audited accounts: Compute &amp; Networking and Graphics.</td></tr>
+        <tr><td>Stock-based compensation (SBC)</td><td>Paying employees in shares — a real cost to owners through dilution even though no cash leaves.</td></tr>
+        <tr><td>Non-GAAP profit</td><td>A company's own adjusted profit measure; NVIDIA's now keeps SBC as a cost and strips investment gains.</td></tr>
         <tr><td>Equity-security gains</td><td>Paper and realized gains on shares NVIDIA owns in other companies — investment results, not chip profits.</td></tr>
-        <tr><td>OCF</td><td>Operating cash flow — cash actually generated by running the business.</td></tr>
-        <tr><td>Company FCF vs owner FCFF</td><td>Company FCF = operating cash flow minus capex. Owner FCFF (this report's stricter measure) also charges stock pay and the cash absorbed by receivables and inventory.</td></tr>
-        <tr><td>Working capital / NWC</td><td>Cash tied up in running the business — customer IOUs and inventory minus supplier credit. When it grows, profit outruns cash.</td></tr>
-        <tr><td>Accounts receivable / DSO</td><td>Money customers owe / the average days it takes to collect. NVIDIA's DSO jumped from 45 to 60 days this quarter.</td></tr>
-        <tr><td>Guarantee (contingent)</td><td>A promise to cover someone else's obligations if they fail — a ceiling of possible loss, not booked debt.</td></tr>
-        <tr><td>DCF</td><td>Discounted cash flow — valuing a business by adding up its forecast future cash in today's money.</td></tr>
-        <tr><td>WACC</td><td>Weighted average cost of capital — the yearly return investors demand for the risk; the DCF's discount rate.</td></tr>
-        <tr><td>Terminal growth (g)</td><td>The modest permanent growth rate assumed after the explicit forecast years.</td></tr>
-        <tr><td>P/E (raw vs gain-adjusted)</td><td>Price over trailing earnings. NVIDIA's raw 26.3× rises to roughly 31.8–32.8× once investment gains are stripped out of the earnings.</td></tr>
-        <tr><td>LTM / TTM</td><td>The last (trailing) twelve months — a rolling year that smooths seasonality.</td></tr>
-        <tr><td>After-hours indication</td><td>The price in post-close electronic trading; thinner volume, so treat it as provisional until the next session.</td></tr>
-        <tr><td>RSU / PSU</td><td>Restricted stock units vest with time; performance stock units require profit or share-price hurdles. NVIDIA's CEO gets PSUs only.</td></tr>
-        <tr><td>YoY / Q/Q</td><td>Change versus the same period a year earlier / versus the prior quarter.</td></tr>
-        <tr><td>CAGR</td><td>Compound annual growth rate — the steady yearly rate that carries the starting value to the ending value.</td></tr>
-        <tr><td>Capex</td><td>Capital expenditure — cash spent on long-lived assets such as equipment, buildings and data centers.</td></tr>
-        <tr><td>P/B · P/S</td><td>Price over book value / price over sales — alternative pricing multiples to P/E.</td></tr>
-        <tr><td>Basis point (bp)</td><td>One hundredth of a percentage point; 350bp = 3.5%.</td></tr>
-        <tr><td>TSR</td><td>Total shareholder return — share-price change plus dividends; "relative TSR" ranks it against peers.</td></tr>
-        <tr><td>ESPP</td><td>Employee stock purchase plan — staff buy shares at a discount (here, 85% of the lower of two reference prices).</td></tr>
-        <tr><td>NEO</td><td>Named executive officer — the top executives whose pay the proxy statement details individually.</td></tr>
-        <tr><td>IRR</td><td>Internal rate of return — the annualized return an investment actually earns.</td></tr>
-        <tr><td>ASP</td><td>Average selling price.</td></tr>
+        <tr><td>Company FCF vs owner FCFF</td><td>Company FCF is NVIDIA's own measure: operating cash flow minus capital spending and the principal paid on it. Owner FCFF, this report's stricter measure, also charges stock pay and the cash absorbed by receivables and inventory.</td></tr>
+        <tr><td>Working capital (NWC)</td><td>Cash tied up in running the business — customer IOUs and inventory minus supplier credit; when it grows, profit outruns cash.</td></tr>
+        <tr><td>Accounts receivable / days sales outstanding (DSO)</td><td>Money customers owe / the average days to collect it; NVIDIA's DSO jumped from 45 to 60 days.</td></tr>
+        <tr><td>Guarantee (contingent)</td><td>A promise to cover someone else's obligations if they fail — a ceiling of possible loss, not debt.</td></tr>
+        <tr><td>Weighted average cost of capital (WACC)</td><td>The yearly return investors demand for the risk; the DCF's discount rate.</td></tr>
+        <tr><td>Terminal growth</td><td>The growth rate assumed forever after the forecast years; with the discount rate it sets most of a DCF's value — here 2.5% to 4.5% by scenario.</td></tr>
+        <tr><td>Carry</td><td>What you collect while you wait — dividends plus buybacks, about 1.9% a year here — added to both the upside and the downside so the odds cover the same three years.</td></tr>
+        <tr><td>Restricted / performance stock units (RSU / PSU)</td><td>RSUs vest with time; PSUs need profit or share-price hurdles; the CEO receives PSUs only.</td></tr>
       </tbody>
     </table>
   </div>
-</section>
-
-<section class="reveal on" id="methods">
-  <div class="slabel">METHOD · SOURCES</div>
-  <h2>SEC filings control the numbers; the call controls intent</h2>
-  <p>The Form 10-Q controls quarter-end financial, contractual and risk facts. The filed release and CFO commentary control quarter comparisons, non-GAAP reconciliations and outlook. The official presentation supplies the product narrative. The third-party transcript is used only for management claims and Q&amp;A behavior. Dated Goldman research is secondary evidence for consensus and external forecasts; it never overrides the primary record.</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Primary and decision-useful companion sources</caption>
-      <thead><tr><th>Source</th><th>Use</th><th>Authority boundary</th></tr></thead>
-      <tbody>
-        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm">FY2027 Q2 Form 10-Q</a></td><td>Statements, segments, customers, investments, contracts and risks</td><td>Unaudited U.S. GAAP interim filing</td></tr>
-        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm">Filed earnings release</a></td><td>Quarter comparisons, outlook and non-GAAP bridge</td><td>Furnished 8-K exhibit</td></tr>
-        <tr><td><a href="https://s201.q4cdn.com/141608511/files/doc_financials/2027/Q227/Q2FY27-CFO-Commentary.pdf">Official CFO commentary</a></td><td>DSO, inventory, commitments and guarantees</td><td>Management commentary; not audited</td></tr>
-        <tr><td><a href="https://s201.q4cdn.com/141608511/files/doc_financials/2027/Q227/NVDA-F2Q27-Quarterly-Presentation-final-1.pdf">Official investor presentation</a></td><td>Quarter map, platform and Rubin evidence</td><td>Management presentation</td></tr>
-        <tr><td><a href="https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2026/NVIDIA-2nd-Quarter-FY27-Financial-Results/default.aspx">Official earnings event</a></td><td>Webcast control for the vendor call text</td><td>No issuer-written transcript at cutoff</td></tr>
-        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm">FY2026</a> · <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm">FY2024</a> · <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm">FY2023</a> · <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm">FY2022 Forms 10-K</a></td><td>Audited history, R&amp;D and patents</td><td>PwC-audited annual filings; split-adjusted EPS where needed</td></tr>
-        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000036/nvda-20260512.htm">2026 proxy statement</a></td><td>Ownership, board and related-person governance</td><td>Ownership dates differ by holder</td></tr>
-        <tr><td><a href="https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm">AMD</a> · <a href="https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm">Broadcom</a> · <a href="https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm">TSMC</a></td><td>Three-year peer operating trajectories</td><td>Issuer filings control; fiscal calendars and scope differ</td></tr>
-        <tr><td><a href="https://news.samsung.com/global/samsung-electronics-announces-second-quarter-2026-results">Samsung</a> · <a href="https://news.skhynix.com/en/q2-2026-business-results/">SK hynix</a></td><td>HBM4 and memory-supply corroboration</td><td>No NVIDIA allocation or supplier-share proof</td></tr>
-        <tr><td>Goldman Sachs Global Investment Research · two notes dated 26 August 2026</td><td>Consensus bridge, estimate revisions and external valuation cross-check</td><td>Secondary sell-side opinion; disclosed NVIDIA client, investment-banking and market-making relationships</td></tr>
-        <tr><td>Wind Financial Data Service</td><td>Regular close, after-hours, peers and market cross-checks</td><td>SEC values override accounting conflicts</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">All derived figures are reproduced in deterministic ledgers. Segment CAGRs use filed endpoints. LTM equals FY2026 plus FY2027 H1 less FY2026 H1. Gain-adjusted P/E removes a pre-tax or illustrative after-tax range rather than claiming a company non-GAAP measure. DCF forecasts are annual from FY2028 through FY2030; terminal value begins after FY2030. Commitment and guarantee haircuts are scenario losses, not reclassifications of gross amounts as debt.</p>
-  <div class="callout"><b>Known gaps:</b> NVIDIA does not disclose networking dollars, ultimate end-customer concentration, customer-level utilization, contract overlap, guarantee recovery timing or independent CUDA cost-per-token benchmarks. Missing values remain missing.</div>
 </section>
 
 <footer>
-  <p>Financial data through 26 July 2026; issuer, call and dated secondary-research evidence through 26 August; market through the 20:01 ET after-hours indication on 26 August 2026. Sources: NVIDIA, SEC filings, official peer disclosures, earnings-call evidence, Goldman Sachs and Wind.</p>
-  <p>This report is for research discussion. CAGRs, LTM, FCF, owner FCFF, gain-adjusted P/E, stress losses, forecasts and intrinsic values are analyst calculations and do not constitute company guidance or investment advice.</p>
+  <p>Data through: financial statements through 26 July 2026 (Form 10-Q filed 26 August 2026); call and dated secondary research through 26 August 2026; market data through the 2026-08-26 20:01 ET after-hours indication.</p>
+  <p>Sources: NVIDIA Forms 10-K for FY2022–FY2026 and the Q2 FY2027 Form 10-Q; the 26 August 2026 earnings release and CFO commentary (Form 8-K exhibits) and investor presentation; the 2026 proxy statement and 2026 Forms 8-K; a third-party speaker-tagged transcript of the 26 August 2026 earnings call, used only for management intent because its speech-to-text layer misspells product and company names (SEC filings control every numeral); AMD, Broadcom and TSMC annual filings; Alphabet, Microsoft, Amazon and Meta earnings releases; Samsung and SK hynix quarterly results; two Goldman Sachs notes dated 26 August 2026 (secondary opinion; disclosed banking and market-making relationships); Wind Financial Data Service for prices, multiples and indices.</p>
+  <p>Audit status: FY2022–FY2026 annual statements are audited (PwC); the Q2 FY2027 quarter and first half are unaudited U.S. GAAP interim statements; CFO commentary, presentation and call are management materials. Every derived figure is reproduced in the valuation appendix.</p>
+  <p>This report is a personal research record for reference only. It is not investment advice, an offer or a solicitation; the author holds no investment-advisory licence, and the verdict band, scenario values and break-even price are analytical assumptions, not instructions to trade. Investing involves risk; decide independently.</p>
 </footer>
 
 </main>

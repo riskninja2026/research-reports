@@ -1104,15 +1104,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "拆解 Rubin 交接、Data Center 与网络结构、现金转化、客户信用与云容量承诺、股权投资、SBC、监管风险及三情景估值。",
-      "verdict": "Constructive",
-      "verdict_code": null,
+      "hook": "需求真实、Rubin 已出货，但英伟达开始为自己的需求融资：延期付款、云容量与最高1,085亿美元担保；正面（观察）。",
+      "verdict": "Neutral-cautious",
+      "verdict_code": "neutral-cautious",
       "published": "2026-08-26",
       "published_at": "2026-08-26T23:12:23-04:00",
-      "revised": "2026-08-29",
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "47c6e17527d733f6130c7c0c82c51d32",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "rewritten under the current Fullscan contract — one primary valuation method, odds and carry on one horizon, shorter; data cutoff unchanged from the original."
+      },
+      "generation": "v2.7",
+      "style_hash": "98547e9cd052402be43c4ff92d55d442",
       "lang": "en"
     },
     {
