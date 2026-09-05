@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:,">
-<title>中国电信 2026年中期 Fullscan 全景尽调</title>
-<style>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="data:,"><title>中国电信 2026H1及推算Q2 Fullscan 全景尽调</title><style>
 :root{
   --paper:#EDEFF2;
   --card:#F8F9FB;
@@ -253,608 +247,1843 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
 .tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
 .tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
-</style>
-</head>
-<body>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">中国电信 00728.HK / 601728.SH ｜ 全景尽调 ｜ 财务截止 2026.06.30 · 行情 2026.08.28</div>
-    <h1>税率扰动了报表，<br>AI仍要证明回报</h1>
-    <p class="lede">中国电信的红利记录依然可靠，算力投入也已从口号变成资本配置。报表下滑确受增值税口径扰动，却没有可审计的还原桥。<b>市场真正需要的不是更多调用量，而是智能业务把折旧、回款与资本成本覆盖后，能否让股东回报率恢复。</b></p>
-
-    <div class="dual">
-      <div>
-        <div class="tag">资本回报 · FY2021至2026H1分派 / A股募资</div>
-        <div class="big a">2.47×</div>
-        <div class="cap">现金回报不是故事：FY2021至2026H1已宣派股息明显超过2021年A股上市募集的资本。</div>
-      </div>
-      <div>
-        <div class="tag">资本转向 · 算力网占2026H1 Capex</div>
-        <div class="big b">48%</div>
-        <div class="cap">总投资仍受控，但资源已大幅转向算力；项目IRR、回收期和折旧覆盖均未披露。</div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main class="wrap">
-
-<section class="reveal on" id="tldr">
-  <div class="slabel">三十秒版本 · 先看结论</div>
-  <h2>如果只读一屏，读这里</h2>
-  <div class="tldr">
-    <ul>
-      <li><b>它是谁：</b>中国电信是同时在上海和香港上市的国有综合运营商。移动、宽带和固网贡献成熟现金底盘，云、数据中心、算力与行业数字化承担增长任务。</li>
-      <li><b>本期成绩：</b>2026年上半年收入2,604.71亿元（同比−4.1%），归母净利润195.88亿元（−14.9%）；公司口径自由现金流289.27亿元（+121.3%）。利润承压，现金表却明显变好。</li>
-      <li><b>核心矛盾：</b>按FY2021至2026H1已宣派口径，现金分派约为2021年A股募资的2.47倍，红利底盘有证据；与此同时，算力网投入已占上半年资本开支约48%，新增资本尚无独立回报率。</li>
-      <li><b>容易踩的坑：</b>增值税税率变化会压低净额收入，但公司没有给出量化桥，不能把全部下滑都还原掉；Token调用、智算利用率和用户数证明“有人用”，不等于已经证明单位经济和现金回报。</li>
-      <li><b>结论：</b><b>中性观察</b>。00728.HK于2026年8月28日收报HK$4.870，略高于基准价值HK$4.80–4.86；在ROE、长账龄应收和智能业务利润首次给出同向证据前，不预付AI溢价。</li>
-    </ul>
-  </div>
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
+</style></head><body><header class="hero"><div class="wrap"><div class="eyebrow">中国电信 00728.HK ｜ 2026年中期及推算单二季度 ｜ 更新 2026.09.05</div>
+<h1>现金回升之后<br>股息仍待修复</h1>
+<p class="lede">自由现金流大增、派息比例提高，容易让人把中国电信重新看作稳步加息的收息股。<b>现金恢复与盈利恢复不是同一件事</b>：报表利润仍下滑，算力投资正在接替传统网络投资。价值取决于新投入能否留下可持续分红，而非调用量有多大。</p>
+<div class="dual"><div><div class="tag">支持面 · 公司口径自由现金流同比</div><div class="big a">+121.3%</div><div class="cap">2026年上半年；新定义下的现金改善，需要放回资本开支与租赁付款一起看。</div></div><div><div class="tag">约束面 · 每股中期股息同比</div><div class="big b">−11.4%</div><div class="cap">同为上半年分配，利润下降幅度超过派息比例提高带来的缓冲。</div></div></div></div></header><main class="wrap"><div class="callout">
+<b>修订 2026-09-05：</b>更新行情及股息折现模型；纠正<span class="g">资本承诺</span>的比较基期、实际支付与宣派股息的区分，并按除净日重算持有期分红。</div>
+<section class="reveal on" id="tldr" >
+<div class="slabel">三十秒版本 · 先看结论</div>
+<h2>先分清现金回升与分红能力</h2>
+<div class="tldr">
+<ul>
+<li>
+<b>它是谁：</b>把通信网络、云和算力卖给个人、家庭与政企客户的运营商；本页估值对象是H股。</li>
+<li>
+<b>本期成绩：</b>上半年收入≈2,605亿元、归母净利润≈196亿元；推算单二季度归母同比下降13.5%。</li>
+<li>
+<b>核心矛盾：</b>现金流好转，但传统业务变现承压，新增算力的利润与回款还缺少独立说明。</li>
+<li>
+<b>容易踩的坑：</b>公司自由现金流不等于全部可分红现金；调高派息比例，也不保证每股股息增长。</li>
+<li data-verdict="neutral-cautious">
+<b>结论：</b>中性偏谨慎。现价≈4.66港元，一年后除息价值基准≈4.75、熊市≈2.88港元；现金覆盖和盈利同步修复才支持上调。</li>
+</ul>
+</div>
 </section>
-
-<section class="reveal on" id="primer">
-  <div class="slabel">入门 · 三分钟看懂这门生意</div>
-  <h2>先收通信服务费，再把网络能力卖给政企客户</h2>
-  <p>把中国电信理解成两层生意。第一层是面向个人和家庭的移动、宽带与固网连接，用户按月付费；第二层是面向政府和企业的云、数据中心、专线、算力与数字化项目。前者规模大、增速低，后者承担增长，也更依赖项目交付、折旧和回款。</p>
-  <div class="steps">
-    <div class="step"><div class="n">环节 1</div><b>用户支付通信费</b><p>移动与宽带订阅形成稳定服务收入，是网络维护、分红和新投资的主要现金来源。</p></div>
-    <div class="step"><div class="n">环节 2</div><b>网络转成企业服务</b><p>同一张云网向政企客户销售云、IDC、专线和行业方案，合同结构比个人订阅更复杂。</p></div>
-    <div class="step"><div class="n">环节 3</div><b>资本开支形成资产</b><p>基站、光网、机楼与智算设备先花现金，再通过折旧进入利润表；利用率和价格决定回报。</p></div>
-    <div class="step"><div class="n">环节 4</div><b>剩余现金回到股东</b><p>经营现金覆盖投资后形成<span class="g">自由现金流</span>；董事会再在分红、再投资和流动性之间分配。</p></div>
-  </div>
-  <p>三个结构性事实要先记住。第一，00728.HK与601728.SH是同一发行人的H股和A股，价格不同但共享合并利润与总股本。第二，按<span class="g">IFRS</span>（国际财务报告准则），集团只有一个法定经营分部；移动、固网、产业数字化等只是收入类型，不能当作有独立利润的可估值分部。第三，运营商先投入网络再逐年折旧，所以<span class="g">EBITDA</span>只观察折旧前产出，不能替代<span class="g">ROE</span>或现金回报。行业已经从连接增量转向存量经营与算力竞争，本报告的问题不是“要不要做AI”，而是“新增资本能不能赚到要求回报”。</p>
+<section class="reveal on" id="primer" >
+<div class="slabel">入门</div>
+<h2>网络先花钱，订阅和项目再把钱赚回来</h2>
+<p>中国电信的核心收入来自移动、固网、智慧家庭及产业数字化服务。消费者按月付费，政企客户还购买专线、云资源、数据中心与数字化项目；项目收入需要交付和验收，收费时间未必跟收入确认同步。终端与设备销售另有较低附加值的收入，不宜和持续服务费等量看待。</p>
+<div class="steps">
+<div class="step">
+<div class="n">环节 1</div>
+<b>用户与企业付费</b>
+<p>订阅费、资源使用费和项目合同形成收入。</p>
+</div>
+<div class="step">
+<div class="n">环节 2</div>
+<b>网络承载服务</b>
+<p>共享基站、光网、机房及计算资源，维持可用性与交付。</p>
+</div>
+<div class="step">
+<div class="n">环节 3</div>
+<b>扣除经营与投资</b>
+<p>人工、网络运营和折旧影响利润；新建资产还要支付现金。</p>
+</div>
+<div class="step">
+<div class="n">环节 4</div>
+<b>分配可用现金</b>
+<p>股息与再投资竞争同一份现金，租赁和流动性需求也要满足。</p>
+</div>
+</div>
+<p>A股与H股属于同一发行人，分享同一合并利润，但交易价格与股息税后待遇不同。本次沿用既有H股研究范围，以港交所<span class="g">国际财务报告准则（IFRS）</span>文件为会计主源；A股<span class="g">中国企业会计准则（CAS）</span>材料只在明确标注处补充。金额默认人民币；每股情景价值为港元。公司只有一个法定经营分部，收入类别和管理层的新分类不是多家独立企业。</p>
+<p>成熟连接业务依赖客户留存、单位收费和成本效率；算力服务增加了设备更新、利用率及收费兑现的风险。集团境外收入和资产各低于10%，主要风险仍来自内地经营。以下<span class="g">推算单二季度</span>是同口径半年累计减一季度；中期财务未经审计但已审阅，季报未经审计，运营和管理层测算不享有相同保证。</p>
 </section>
-
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">基础财务 · 公司概况 · 业务结构</div>
-  <h2>五年仍在增长，最新半年却同时丢了收入与利润率</h2>
-  <p>中国电信向个人、家庭及政企客户提供连接、云网和数字化服务。五年增长主要来自产业数字化与利润率改善，移动和固网保持低个位数扩张；最新半年四类收入全部下降，现金改善则与利润方向相反。公司不单列毛利，也不披露业务线利润，本节以EBITDA、经营利润和收入类型替代不可得的分部毛利。</p>
-
-  <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">2026H1 收入</div><div class="v">2,604.71<span class="u">亿元</span></div><div class="d"><span class="down">同比 −4.1%</span></div></div>
-    <div class="cell"><div class="k">EBITDA / 总收入</div><div class="v">743.57<span class="u">亿元</span></div><div class="d"><span class="down">同比 −7.7%</span><span>28.55%</span></div></div>
-    <div class="cell"><div class="k">经营利润 / 利润率</div><div class="v">229.79<span class="u">亿元</span></div><div class="d"><span class="down">同比 −19.5%</span><span>8.82%</span></div></div>
-    <div class="cell"><div class="k">归母净利润 / 净利率</div><div class="v">195.88<span class="u">亿元</span></div><div class="d"><span class="down">同比 −14.9%</span><span>7.52%</span></div></div>
-    <div class="cell"><div class="k">经营现金流</div><div class="v">约614<span class="u">亿元</span></div><div class="d"><span class="up">同比 +29.7%</span><span>公司演示口径</span></div></div>
-    <div class="cell"><div class="k">公司口径自由现金流</div><div class="v">289.27<span class="u">亿元</span></div><div class="d"><span class="up">同比 +121.3%</span></div></div>
-    <div class="cell"><div class="k">公司资本开支</div><div class="v">324<span class="u">亿元</span></div><div class="d"><span class="up">同比 −5.3%</span><span>其中算力网接近一半</span></div></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>最新每股与回报指标｜2026H1；人民币元/股，ROE除外</caption>
-      <thead><tr><th>基本及摊薄EPS</th><th>加权平均ROE</th><th>期末BVPS（推算）</th><th>LTM EPS（推算）</th><th>LTM ROE（推算）</th></tr></thead>
-      <tbody><tr><td>0.21</td><td>4.2%</td><td>5.157</td><td>0.325</td><td>6.34%</td></tr></tbody>
-    </table>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl" data-financials="history">
-      <caption>五年合并财务历史｜FY2021—FY2025；人民币十亿元，每股与比率除外；EBITDA为行业毛利替代指标</caption>
-      <thead><tr><th>项目</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>四年CAGR</th></tr></thead>
-      <tbody>
-        <tr><td>营业收入</td><td>439.553</td><td>481.448</td><td>513.551</td><td>529.417</td><td>529.559</td><td>4.77%</td></tr>
-        <tr><td>服务收入</td><td>402.828</td><td>434.928</td><td>464.965</td><td>482.033</td><td>485.424</td><td>4.77%</td></tr>
-        <tr><td>EBITDA / 服务收入</td><td>123.914 / 30.76%</td><td>130.359 / 29.97%</td><td>136.830 / 29.43%</td><td>140.847 / 29.22%</td><td>143.872 / 29.64%</td><td>3.80%</td></tr>
-        <tr><td>经营利润 / 利润率</td><td>30.948 / 7.04%</td><td>33.427 / 6.94%</td><td>37.128 / 7.23%</td><td>39.803 / 7.52%</td><td>39.674 / 7.49%</td><td>6.41%</td></tr>
-        <tr><td>归母净利润 / 净利率</td><td>25.949 / 5.90%</td><td>27.593 / 5.73%</td><td>30.446 / 5.93%</td><td>33.012 / 6.24%</td><td>33.185 / 6.27%</td><td>6.34%</td></tr>
-        <tr><td>EPS（元） / ROE</td><td>0.31 / 6.55%</td><td>0.30 / 6.41%</td><td>0.33 / 6.96%</td><td>0.36 / 7.37%</td><td>0.36 / 7.27%</td><td>—</td></tr>
-        <tr><td>期末BVPS（元）</td><td>4.685</td><td>4.722</td><td>4.840</td><td>4.944</td><td>5.036</td><td>—</td></tr>
-        <tr><td>经营现金流</td><td>137.533</td><td>136.432</td><td>137.508</td><td>145.049</td><td>125.069</td><td>—</td></tr>
-        <tr><td>公司资本开支</td><td>86.723</td><td>92.528</td><td>98.838</td><td>93.513</td><td>80.364</td><td>—</td></tr>
-        <tr><td>自由现金流代理：CFO−Capex</td><td>50.810</td><td>43.904</td><td>38.670</td><td>51.536</td><td>44.705</td><td>—</td></tr>
-        <tr><td>DPS（人民币元）</td><td>0.1700</td><td>0.1960</td><td>0.2332</td><td>0.2598</td><td>0.2720</td><td>12.47%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="cols" role="img" aria-label="五年营业收入与归母净利润趋势，数值见上方五年合并财务历史表">
-    <div class="col"><div class="bars"><div class="bar rev" style="height:83.0%"></div><div class="bar np" style="height:4.9%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:90.9%"></div><div class="bar np" style="height:5.2%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:97.0%"></div><div class="bar np" style="height:5.7%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:100.0%"></div><div class="bar np" style="height:6.2%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:100.0%"></div><div class="bar np" style="height:6.3%"></div></div></div>
-  </div>
-  <div class="collabels">
-    <div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div>
-  </div>
-  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
-  <p class="small">柱高以FY2025收入为共同标尺等比绘制；利润柱与收入柱共用同一尺度，具体数值见上表。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>推算单二季度与LTM桥｜Q2均为H1减Q1；人民币十亿元；LTM＝FY2025＋2026H1−2025H1</caption>
-      <thead><tr><th>指标</th><th>2025Q2推算</th><th>2026Q2推算</th><th>同比 / 变化</th><th>LTM</th></tr></thead>
-      <tbody>
-        <tr><td>收入</td><td>135.971</td><td>128.504</td><td>−5.49%</td><td>518.561</td></tr>
-        <tr><td>EBITDA</td><td>43.853</td><td>40.482</td><td>−7.69%</td><td>137.641</td></tr>
-        <tr><td>经营利润 / 利润率</td><td>17.801 / 13.09%</td><td>14.828 / 11.54%</td><td>−16.70% / −1.55个百分点</td><td>34.104 / 6.58%</td></tr>
-        <tr><td>归母净利润 / 净利率</td><td>14.153 / 10.41%</td><td>12.238 / 9.52%</td><td>−13.53% / −0.89个百分点</td><td>29.756 / 5.74%</td></tr>
-        <tr><td>经营现金流 / Capex / FCF</td><td>未披露</td><td>未披露</td><td>—</td><td>约139.124 / 78.564 / 60.560</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div data-financials="segments">
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>IFRS收入类型｜2026H1；人民币十亿元；集团法定经营分部仍只有一个</caption>
-        <thead><tr><th>收入类型</th><th>金额</th><th>占比</th><th>同比</th><th>业务线利润</th><th>经济含义</th></tr></thead>
-        <tbody>
-          <tr><td>移动通信</td><td>105.438</td><td>40.48%</td><td>−1.06%</td><td>未披露</td><td>最大收入池，受税目与存量竞争影响</td></tr>
-          <tr><td>固网及智慧家庭</td><td>61.781</td><td>23.72%</td><td>−3.67%</td><td>未披露</td><td>宽带增长放缓，融合价值更重要</td></tr>
-          <tr><td>产业数字化</td><td>69.881</td><td>26.83%</td><td>−6.64%</td><td>未披露</td><td>云、IDC与项目收入混合</td></tr>
-          <tr><td>其他</td><td>23.371</td><td>8.97%</td><td>−9.80%</td><td>未披露</td><td>终端等非服务收入偏弱</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>可比服务收入层级｜FY2021与FY2025；人民币十亿元；CAGR按四年端点复合</caption>
-        <thead><tr><th>服务线</th><th>FY2021</th><th>FY2025</th><th>四年CAGR</th><th>投资含义</th></tr></thead>
-        <tbody>
-          <tr><td>移动通信服务</td><td>184.158</td><td>204.528</td><td>2.66%</td><td>成熟底盘</td></tr>
-          <tr><td>固网及智慧家庭服务</td><td>113.522</td><td>125.979</td><td>2.64%</td><td>低个位数增长</td></tr>
-          <tr><td>产业数字化服务</td><td>98.945</td><td>147.307</td><td>10.46%</td><td>唯一显著高增大项，FY2025已放缓</td></tr>
-          <tr><td>其他服务</td><td>6.203</td><td>7.610</td><td>5.24%</td><td>规模较小</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>五年故事并不差：收入每年复合增长4.77%，归母净利润复合增长6.34%，每股股息复合增长12.47%。但增长越来越依赖产业数字化，传统移动和固网只保持低个位数。</p>
-    <p>最新半年换了方向：四类收入全部下降，归母净利润跌14.9%，ROE从上年同期5.0%降到4.2%；公司口径自由现金流却翻倍以上。<b>利润表说“承压”，现金表说“改善”</b>，后文要判断现金改善有多少来自经营质量、多少来自付款时点。</p>
-  </div>
-  <p class="small">五年数据由港交所年报串联。ROE为平均归母权益口径；BVPS与LTM指标为分析推算。公司FY2025起把自由现金流改为经营现金流减资本开支，历史表因此统一使用同一分析代理。报告不披露传统毛利、业务线利润或可审计地理分部；“未披露”不以估计补齐。分部组合图跳过：IFRS只有一个法定经营分部，收入类型不是独立利润分部。</p>
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="telecom">
+<div class="slabel">财务与业务地图</div>
+<h2>五年分红跑赢利润，本期两者都遇到约束</h2>
+<p>长期利润增长曾快于收入，但最新半年报表盈利已低于历史运行水平。经营规模并没有消失，变化在于每单位业务的净收入与资本回报。本节集中列出参照数据；公司按费用性质列报，因此以<span class="g">折旧前经营产出（EBITDA）</span>和经营利润替代未单列的毛利指标。</p>
+<div class="grid" data-financials="consolidated">
+<div class="cell" >
+<div class="k">营业收入</div>
+<div class="v">2,604.71<span class="u">亿元</span>
+</div>
+<div class="d">
+<span>2026H1 · 本集团</span>
+</div>
+</div>
+<div class="cell" >
+<div class="k">归母净利润</div>
+<div class="v">195.88<span class="u">亿元</span>
+</div>
+<div class="d">
+<span>基本及摊薄每股盈利（EPS）0.21元</span>
+</div>
+</div>
+<div class="cell" >
+<div class="k">EBITDA率</div>
+<div class="v">28.55<span class="u">%</span>
+</div>
+<div class="d">
+<span>推算 · 分母为总收入</span>
+</div>
+</div>
+<div class="cell" >
+<div class="k">移动<span class="g">每用户平均收入</span>（ARPU）</div>
+<div class="v">43.5<span class="u">元/月</span>
+</div>
+<div class="d">
+<span>公司披露 · 同定义但税目变更</span>
+</div>
+</div>
+<div class="cell" >
+<div class="k">资本开支/收入</div>
+<div class="v">≈12.4<span class="u">%</span>
+</div>
+<div class="d">
+<span>推算 · 公司资本开支口径</span>
+</div>
+</div>
+<div class="cell" >
+<div class="k">
+<span class="g">每股股息（DPS）</span>
+</div>
+<div class="v">0.1606<span class="u">元</span>
+</div>
+<div class="d">
+<span>中期宣派 · 人民币含税</span>
+</div>
+</div>
+</div>
+<div class="tblscroll">
+<table class="tbl" data-financials="history">
+<caption>本集团IFRS；H股主源、A股补充另注。损益、权益及每股数据取2025年报比较数，2021为重列；现金流取各年报及后续比较数。财务报表已审计，资本开支与股息为管理层披露；单位亿元，每股及比率除外。现金付款按支付年，不等于对应财年宣派额。毛利及毛利率未披露。</caption>
+<thead>
+<tr>
+<th>项目</th>
+<th>2021</th>
+<th>2022</th>
+<th>2023</th>
+<th>2024</th>
+<th>2025</th>
+<th>四年复合增速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营业收入</td>
+<td>4,395.53</td>
+<td>4,814.48</td>
+<td>5,135.51</td>
+<td>5,294.17</td>
+<td>5,295.59</td>
+<td>+4.8%（推算）</td>
+</tr>
+<tr>
+<td>服务收入</td>
+<td>4,028.28</td>
+<td>4,349.28</td>
+<td>4,649.65</td>
+<td>4,820.33</td>
+<td>4,854.24</td>
+<td>—</td>
+</tr>
+<tr>
+<td>EBITDA（推算）</td>
+<td>1,239.14</td>
+<td>1,303.59</td>
+<td>1,368.30</td>
+<td>1,408.47</td>
+<td>1,438.72</td>
+<td>—</td>
+</tr>
+<tr>
+<td>实际折旧摊销</td>
+<td>929.66</td>
+<td>969.32</td>
+<td>997.02</td>
+<td>1,010.44</td>
+<td>1,041.98</td>
+<td>—</td>
+</tr>
+<tr>
+<td>经营利润</td>
+<td>309.48</td>
+<td>334.27</td>
+<td>371.28</td>
+<td>398.03</td>
+<td>396.74</td>
+<td>—</td>
+</tr>
+<tr>
+<td>归母净利润</td>
+<td>259.49</td>
+<td>275.93</td>
+<td>304.46</td>
+<td>330.12</td>
+<td>331.85</td>
+<td>+6.3%（推算）</td>
+</tr>
+<tr>
+<td>经营利润率（推算）</td>
+<td>7.04%</td>
+<td>6.94%</td>
+<td>7.23%</td>
+<td>7.52%</td>
+<td>7.49%</td>
+<td>—</td>
+</tr>
+<tr>
+<td>归母净利率（推算）</td>
+<td>5.90%</td>
+<td>5.73%</td>
+<td>5.93%</td>
+<td>6.24%</td>
+<td>6.27%</td>
+<td>—</td>
+</tr>
+<tr>
+<td>EPS（元）</td>
+<td>0.31</td>
+<td>0.30</td>
+<td>0.33</td>
+<td>0.36</td>
+<td>0.36</td>
+<td>—</td>
+</tr>
+<tr>
+<td>净资产收益率（ROE，推算）</td>
+<td>6.55%</td>
+<td>6.41%</td>
+<td>6.96%</td>
+<td>7.37%</td>
+<td>7.27%</td>
+<td>—</td>
+</tr>
+<tr>
+<td>经营现金流</td>
+<td>1,375.33</td>
+<td>1,364.32</td>
+<td>1,375.08</td>
+<td>1,450.49</td>
+<td>1,250.69</td>
+<td>—</td>
+</tr>
+<tr>
+<td>公司资本开支</td>
+<td>867.23</td>
+<td>925.28</td>
+<td>988.38</td>
+<td>935.13</td>
+<td>803.64</td>
+<td>—</td>
+</tr>
+<tr>
+<td>自由现金流代理（推算）</td>
+<td>508.10</td>
+<td>439.04</td>
+<td>386.70</td>
+<td>515.36</td>
+<td>447.05</td>
+<td>—</td>
+</tr>
+<tr>
+<td>年度每股股息（元）</td>
+<td>0.1700</td>
+<td>0.1960</td>
+<td>0.2332</td>
+<td>0.2598</td>
+<td>0.2720</td>
+<td>+12.5%（推算）</td>
+</tr>
+<tr>
+<td>每股净资产（推算，元）</td>
+<td>4.68</td>
+<td>4.72</td>
+<td>4.84</td>
+<td>4.94</td>
+<td>5.04</td>
+<td>—</td>
+</tr>
+<tr>
+<td>实际支付股息</td>
+<td>84.39</td>
+<td>265.37</td>
+<td>200.59</td>
+<td>235.27</td>
+<td>250.64</td>
+<td>—</td>
+</tr>
+<tr>
+<td>租赁本金付款</td>
+<td>140.35</td>
+<td>158.97</td>
+<td>146.47</td>
+<td>154.28</td>
+<td>167.92</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cols" role="img" aria-label="五年收入与归母利润共用收入最大值刻度">
+<div class="col">
+<div class="bars">
+<div class="bar rev" style="height:83.0036%">
+</div>
+<div class="bar np" style="height:4.9001%">
+</div>
+</div>
+</div>
+<div class="col">
+<div class="bars">
+<div class="bar rev" style="height:90.9149%">
+</div>
+<div class="bar np" style="height:5.2106%">
+</div>
+</div>
+</div>
+<div class="col">
+<div class="bars">
+<div class="bar rev" style="height:96.9771%">
+</div>
+<div class="bar np" style="height:5.7493%">
+</div>
+</div>
+</div>
+<div class="col">
+<div class="bars">
+<div class="bar rev" style="height:99.9732%">
+</div>
+<div class="bar np" style="height:6.2339%">
+</div>
+</div>
+</div>
+<div class="col">
+<div class="bars">
+<div class="bar rev" style="height:100.0000%">
+</div>
+<div class="bar np" style="height:6.2665%">
+</div>
+</div>
+</div>
+</div>
+<div class="collabels">
+<div>
+<b>2021</b>
+</div>
+<div>
+<b>2022</b>
+</div>
+<div>
+<b>2023</b>
+</div>
+<div>
+<b>2024</b>
+</div>
+<div>
+<b>2025</b>
+</div>
+</div>
+<div class="legend">
+<span>
+<i class="p">
+</i>营业收入</span>
+<span>
+<i class="m">
+</i>归母净利润</span>
+</div>
+<p class="small">收入近年趋平，利润在同一收入刻度下仍较薄。两系列共用五年收入最大值，不把利润单独放大。</p>
+<div class="tblscroll">
+<table class="tbl" >
+<caption>货币流量单位亿元；Q2损益及比率为推算，用户季度净增为披露值。<span class="g">滚动十二个月</span>（TTM）截至2026年6月末。ARPU是每用户平均收入；5G为网络用户，不是套餐用户。</caption>
+<thead>
+<tr>
+<th>项目</th>
+<th>2025H1或期末</th>
+<th>2026H1或期末</th>
+<th>2025Q2</th>
+<th>2026Q2 / 同比</th>
+<th>TTM推算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营业收入</td>
+<td>2,714.69</td>
+<td>2,604.71</td>
+<td>1,359.71</td>
+<td>1,285.04 / −5.5%</td>
+<td>5,185.61</td>
+</tr>
+<tr>
+<td>经营利润</td>
+<td>285.49</td>
+<td>229.79</td>
+<td>178.01</td>
+<td>148.28 / −16.7%</td>
+<td>341.04</td>
+</tr>
+<tr>
+<td>归母净利润</td>
+<td>230.17</td>
+<td>195.88</td>
+<td>141.53</td>
+<td>122.38 / −13.5%</td>
+<td>297.56</td>
+</tr>
+<tr>
+<td>EBITDA</td>
+<td>805.88</td>
+<td>743.57</td>
+<td>438.53</td>
+<td>404.82 / −7.7%</td>
+<td>1,376.41</td>
+</tr>
+<tr>
+<td>经营利润率（推算）</td>
+<td>10.52%</td>
+<td>8.82%</td>
+<td>13.09%</td>
+<td>11.54%</td>
+<td>6.58%</td>
+</tr>
+<tr>
+<td>归母净利率（推算）</td>
+<td>8.48%</td>
+<td>7.52%</td>
+<td>10.41%</td>
+<td>9.52%</td>
+<td>5.74%</td>
+</tr>
+<tr>
+<td>移动ARPU（元/月）</td>
+<td>46.0</td>
+<td>43.5</td>
+<td>未单列</td>
+<td>未单列</td>
+<td>不拼接</td>
+</tr>
+<tr>
+<td>宽带综合ARPU（元/月）</td>
+<td>48.3</td>
+<td>45.8</td>
+<td>未单列</td>
+<td>未单列</td>
+<td>不拼接</td>
+</tr>
+<tr>
+<td>移动用户：期末/季度净增（万户）</td>
+<td>43,271</td>
+<td>44,243</td>
+<td>324</td>
+<td>188</td>
+<td>不适用</td>
+</tr>
+<tr>
+<td>5G网络用户：期末/季度净增（万户）</td>
+<td>28,202</td>
+<td>32,250</td>
+<td>1,581</td>
+<td>837</td>
+<td>不适用</td>
+</tr>
+<tr>
+<td>宽带用户：期末/季度净增（万户）</td>
+<td>19,860</td>
+<td>20,128</td>
+<td>49</td>
+<td>−28</td>
+<td>不适用</td>
+</tr>
+<tr>
+<td>经营现金流（演示披露）</td>
+<td>≈473</td>
+<td>≈614</td>
+<td>不列精确值</td>
+<td>不列精确值</td>
+<td>不拼接</td>
+</tr>
+<tr>
+<td>公司资本开支</td>
+<td>≈342</td>
+<td>≈324</td>
+<td>未披露</td>
+<td>未披露</td>
+<td>不拼接</td>
+</tr>
+<tr>
+<td>公司自由现金流</td>
+<td>130.72</td>
+<td>289.27</td>
+<td>未披露</td>
+<td>未披露</td>
+<td>不拼接</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-financials="segments">
+<div class="tblscroll">
+<table class="tbl" >
+<caption>单位亿元。前四行为IFRS互斥收入类别，均未披露业务线利润。新主营分类的上年数已重述，通信加智能与主营差异为取整；云、智能数据中心跨分类，不另计集团收入。</caption>
+<thead>
+<tr>
+<th>收入类型</th>
+<th>2025H1</th>
+<th>2026H1</th>
+<th>同比</th>
+<th>占总收入（推算）</th>
+<th>FY2021–25复合增速（推算）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>移动通信服务</td>
+<td>1,065.72</td>
+<td>1,054.38</td>
+<td>−1.1%</td>
+<td>40.5%</td>
+<td>+2.7%</td>
+</tr>
+<tr>
+<td>固网及智慧家庭</td>
+<td>641.33</td>
+<td>617.81</td>
+<td>−3.7%</td>
+<td>23.7%</td>
+<td>+2.6%</td>
+</tr>
+<tr>
+<td>产业数字化</td>
+<td>748.53</td>
+<td>698.81</td>
+<td>−6.6%</td>
+<td>26.8%</td>
+<td>+10.5%</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>259.11</td>
+<td>233.71</td>
+<td>−9.8%</td>
+<td>9.0%</td>
+<td>不可比</td>
+</tr>
+<tr>
+<td>新口径主营收入</td>
+<td>2,492.66</td>
+<td>2,440.95</td>
+<td>−2.1%</td>
+<td>非独立分部</td>
+<td>口径变更</td>
+</tr>
+<tr>
+<td>其中：通信</td>
+<td>2,201.76</td>
+<td>2,129.55</td>
+<td>−3.3%</td>
+<td>主营子集</td>
+<td>口径变更</td>
+</tr>
+<tr>
+<td>其中：智能</td>
+<td>290.90</td>
+<td>311.41</td>
+<td>+7.1%</td>
+<td>主营子集</td>
+<td>口径变更</td>
+</tr>
+<tr>
+<td>交叉标签：天翼云</td>
+<td>—</td>
+<td>≈618</td>
+<td>+7.8%</td>
+<td>不可相加</td>
+<td>不可比</td>
+</tr>
+<tr>
+<td>交叉标签：智能数据中心</td>
+<td>—</td>
+<td>≈201</td>
+<td>+9.3%</td>
+<td>不可相加</td>
+<td>不可比</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="stacks">
+<div class="stack">
+<div class="cap">2025年上半年收入构成</div>
+<div class="stackbar">
+<div class="seg p" style="width:39.2575%">
+</div>
+<div class="seg q" style="width:23.6244%">
+</div>
+<div class="seg r" style="width:37.1181%">
+</div>
+</div>
+</div>
+<div class="stack">
+<div class="cap">2026年上半年收入构成</div>
+<div class="stackbar">
+<div class="seg p" style="width:40.4797%">
+</div>
+<div class="seg q" style="width:23.7190%">
+</div>
+<div class="seg r" style="width:35.8013%">
+</div>
+</div>
+</div>
+</div>
+<div class="legend">
+<span>
+<i class="p">
+</i>移动通信</span>
+<span>
+<i class="q">
+</i>固网及智慧家庭</span>
+<span>
+<i class="r">
+</i>产业数字化及其他</span>
+</div>
+<p class="small">收入构成变化有限，集团收缩不只发生在某一类别。为清晰显示，后两项合并；条形各自归一为完整收入。</p>
+</div>
+<p>物联网连接为8.06亿户，对比上年末7.46亿户；公司<span class="g">每用户流量</span>（DOU）同比增长10.6%，绝对DOU未披露。服务使用仍在增长，并不等于同幅度变现。半年ROE披露值由5.0%降至4.2%，不是年化数；TTM EPS推算为0.325元，期末每股净资产推算为5.157元。</p>
+<div class="plain">
+<span class="pl">白话解读</span>
+<p>五年归母利润复合增速≈6.3%，而每股股息复合增速≈12.5%，后者包含提高分配比例的贡献。本期用户和使用量继续增加，但宽带单季已经净减；接下来应观察单位收费和回款，而不是把连接数当作收入。</p>
+</div>
+<p>历史ROE按年初年末归母权益均值推算；发行当年的简单平均不等于加权ROE。现金流代理统一为经营现金流减公司资本开支，公司原FCF在2025年改定义，旧新报告值不直接串联。Q1已有IFRS现金流，但H1只披露低精度经营现金流，故季度现金不作精确拼接。</p>
 </section>
-
-<section class="reveal on" id="tax">
-  <div class="slabel">政策变化 · 盈利机制</div>
-  <h2>增值税造成口径断点，真实影响仍无法量化</h2>
-  <p>自2026年1月1日起，手机流量、短信和彩信、互联网宽带接入由“增值电信服务”改为“基础电信服务”，对应<span class="g">增值税（VAT）</span>税率从6%升至9%。固定含税账单下，净额收入会机械下降；但客户价格、受影响业务范围和进项抵扣会改变实际结果。</p>
-
-  <div class="callout"><b>公司给了方向，没有给桥。</b>管理层称剔除税目变化后主营收入“基本稳定”、净利润“保持良好增长”；港交所公告、演示稿和A股半年报都没有披露收入、EBITDA、税前利润或归母净利润的逐项调整额。因此本报告不制作“还原后Q2”。</div>
-
-  <div class="wfall" role="img" aria-label="归母净利润从2025年上半年的23.017十亿元，经经营利润下降、财务净额、投资及其他、联营合营、税项及少数股东归属变化，变为2026年上半年的19.588十亿元">
-    <div class="wrow"><div class="nm">2025H1归母利润<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:100%"></div></div><div class="fig">23.017</div></div>
-    <div class="wrow"><div class="nm">经营利润变化<span>报表主因</span></div><div class="wtrack"><div class="wbar down" style="left:75.80%;width:24.20%"></div></div><div class="fig">−5.570</div></div>
-    <div class="wrow"><div class="nm">财务净额<span>同比变化</span></div><div class="wtrack"><div class="wbar up" style="left:75.80%;width:.87%"></div></div><div class="fig">+0.201</div></div>
-    <div class="wrow"><div class="nm">投资及其他<span>同比变化</span></div><div class="wtrack"><div class="wbar up" style="left:76.67%;width:4.20%"></div></div><div class="fig">+0.967</div></div>
-    <div class="wrow"><div class="nm">联营及合营<span>同比变化</span></div><div class="wtrack"><div class="wbar up" style="left:80.87%;width:2.48%"></div></div><div class="fig">+0.570</div></div>
-    <div class="wrow"><div class="nm">税项及归属<span>同比变化</span></div><div class="wtrack"><div class="wbar up" style="left:83.35%;width:1.75%"></div></div><div class="fig">+0.403</div></div>
-    <div class="wrow"><div class="nm">2026H1归母利润<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:85.10%"></div></div><div class="fig">19.588</div></div>
-  </div>
-  <p class="small">桥中正项依次为财务净额、投资及其他、联营合营、税项及少数股东归属的同比变化；合计精确回到归母利润。它回答“报表哪一行变化”，不回答经营利润下降中有多少来自VAT。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">可证的抵消</div><p>经营利润同比少55.70亿元，线下财务、投资、联营、税项及归属合计抵消21.41亿元，因此报告净利降幅小于经营利润降幅。</p></div>
-    <div class="find warn"><div class="t">利润质量</div><p>CAS扣非归母净利174.90亿元、同比−19.5%；非经常性净收益20.98亿元，占报告归母利润10.7%。</p></div>
-    <div class="find warn"><div class="t">不能做的归因</div><p>税率、价格、业务组合、季节性与费用节奏没有拆开，任何单项“解释全部下滑”的结论都超过证据。</p></div>
-    <div class="find"><div class="t">下一份答案</div><p>后续正式文件若提供受影响收入基数及利润桥，市场才可能把会计扰动与真实经营斜率分开。</p></div>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>同一张含税账单，税率提高后公司确认的净收入会变少，所以报表确实被“压”了一层。<b>但压了多少，公司没有算给投资者看。</b>因此可以说税制让数字更难比较，不能说剔除税制后所有业务都在增长。</p>
-  </div>
-  <p class="small">本节只使用正式税务公告和公司定性口径。图中P&amp;L行项目桥可审计，因此展示；VAT、业务量价与费用驱动仍不能再拆，故不制作“经营归因桥”。</p>
+<section class="reveal on" id="profit" >
+<div class="slabel">盈利机制</div>
+<h2>成本缓冲了下滑，却没有给出税目影响的答案</h2>
+<p>收入缩减超过费用节省，是报表经营利润下滑的直接原因；税目改变究竟贡献了多少，则是另一道尚待量化的问题。自2026年初，手机流量、短信彩信及互联网宽带接入改按基础电信服务缴纳增值税，税率从6%转为9%。固定含税账单下，可确认的净额收入下降；实际影响还取决于客户价格、适用业务与进项抵扣。</p>
+<p>公司表示剔除税目影响后主营收入“基本稳定”、净利润“保持良好增长”。这是管理层的方向性说明，没有收入、费用和税后利润的金额调节表，因此不能把报表下跌全部视为税项噪音。ARPU同样受收入定义影响，全额降幅不等于纯粹降价。</p>
+<div class="tblscroll">
+<table class="tbl" >
+<caption>IFRS利润桥，单位亿元；费用为负值。少数股东损益从集团利润中扣除，因此其变化反向计入归母桥。</caption>
+<thead>
+<tr>
+<th>项目</th>
+<th>2025H1</th>
+<th>2026H1</th>
+<th>对归母变化贡献（推算）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营业收入</td>
+<td>2,714.69</td>
+<td>2,604.71</td>
+<td>−109.98</td>
+</tr>
+<tr>
+<td>网络运营支持</td>
+<td>−782.88</td>
+<td>−771.43</td>
+<td>+11.45</td>
+</tr>
+<tr>
+<td>折旧摊销</td>
+<td>−520.39</td>
+<td>−513.78</td>
+<td>+6.61</td>
+</tr>
+<tr>
+<td>雇员成本</td>
+<td>−504.38</td>
+<td>−493.89</td>
+<td>+10.49</td>
+</tr>
+<tr>
+<td>销售及管理</td>
+<td>−327.83</td>
+<td>−327.59</td>
+<td>+0.24</td>
+</tr>
+<tr>
+<td>其他经营费用</td>
+<td>−293.72</td>
+<td>−268.23</td>
+<td>+25.49</td>
+</tr>
+<tr>
+<td>财务净额</td>
+<td>−2.94</td>
+<td>−0.93</td>
+<td>+2.01</td>
+</tr>
+<tr>
+<td>投资及其他</td>
+<td>1.07</td>
+<td>10.74</td>
+<td>+9.67</td>
+</tr>
+<tr>
+<td>联营及合营</td>
+<td>12.33</td>
+<td>18.03</td>
+<td>+5.70</td>
+</tr>
+<tr>
+<td>所得税</td>
+<td>−65.76</td>
+<td>−62.78</td>
+<td>+2.98</td>
+</tr>
+<tr>
+<td>少数股东归属</td>
+<td>0.02</td>
+<td>−1.03</td>
+<td>+1.05</td>
+</tr>
+<tr>
+<td>归母利润变化</td>
+<td>—</td>
+<td>—</td>
+<td>−34.29</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="wfall" role="img" aria-label="收入成本至归母利润的同刻度变化桥">
+<div class="wrow">
+<div class="nm">2025H1归母利润<span>期间总额</span>
+</div>
+<div class="wtrack">
+<div class="wbar tot" style="left:0.0000%;width:100.0000%">
+</div>
+</div>
+<div class="fig">+230.17</div>
+</div>
+<div class="wrow">
+<div class="nm">营业收入<span>同比报表贡献</span>
+</div>
+<div class="wtrack">
+<div class="wbar down" style="left:52.2179%;width:47.7821%">
+</div>
+</div>
+<div class="fig">−109.98</div>
+</div>
+<div class="wrow">
+<div class="nm">网络运营支持<span>同比报表贡献</span>
+</div>
+<div class="wtrack">
+<div class="wbar up" style="left:52.2179%;width:4.9746%">
+</div>
+</div>
+<div class="fig">+11.45</div>
+</div>
+<div class="wrow">
+<div class="nm">折旧摊销<span>同比报表贡献</span>
+</div>
+<div class="wtrack">
+<div class="wbar up" style="left:57.1925%;width:2.8718%">
+</div>
+</div>
+<div class="fig">+6.61</div>
+</div>
+<div class="wrow">
+<div class="nm">雇员成本<span>同比报表贡献</span>
+</div>
+<div class="wtrack">
+<div class="wbar up" style="left:60.0643%;width:4.5575%">
+</div>
+</div>
+<div class="fig">+10.49</div>
+</div>
+<div class="wrow">
+<div class="nm">销售及管理<span>同比报表贡献</span>
+</div>
+<div class="wtrack">
+<div class="wbar up" style="left:64.6218%;width:0.1043%">
+</div>
+</div>
+<div class="fig">+0.24</div>
+</div>
+<div class="wrow">
+<div class="nm">其他经营费用<span>同比报表贡献</span>
+</div>
+<div class="wtrack">
+<div class="wbar up" style="left:64.7261%;width:11.0744%">
+</div>
+</div>
+<div class="fig">+25.49</div>
+</div>
+<div class="wrow">
+<div class="nm">财务净额<span>同比报表贡献</span>
+</div>
+<div class="wtrack">
+<div class="wbar up" style="left:75.8005%;width:0.8733%">
+</div>
+</div>
+<div class="fig">+2.01</div>
+</div>
+<div class="wrow">
+<div class="nm">投资及其他<span>同比报表贡献</span>
+</div>
+<div class="wtrack">
+<div class="wbar up" style="left:76.6738%;width:4.2012%">
+</div>
+</div>
+<div class="fig">+9.67</div>
+</div>
+<div class="wrow">
+<div class="nm">联营及合营<span>同比报表贡献</span>
+</div>
+<div class="wtrack">
+<div class="wbar up" style="left:80.8750%;width:2.4764%">
+</div>
+</div>
+<div class="fig">+5.70</div>
+</div>
+<div class="wrow">
+<div class="nm">所得税<span>同比报表贡献</span>
+</div>
+<div class="wtrack">
+<div class="wbar up" style="left:83.3514%;width:1.2947%">
+</div>
+</div>
+<div class="fig">+2.98</div>
+</div>
+<div class="wrow">
+<div class="nm">少数股东归属<span>同比报表贡献</span>
+</div>
+<div class="wtrack">
+<div class="wbar up" style="left:84.6461%;width:0.4562%">
+</div>
+</div>
+<div class="fig">+1.05</div>
+</div>
+<div class="wrow">
+<div class="nm">2026H1归母利润<span>期间总额</span>
+</div>
+<div class="wtrack">
+<div class="wbar tot" style="left:0.0000%;width:85.1023%">
+</div>
+</div>
+<div class="fig">+195.88</div>
+</div>
+</div>
+<p class="small">费用节省只吸收部分收入损失，投资及税项又缓冲净利下降。桥按累计水平衔接，金额见上表；它是报表归因，不是增值税影响估计。</p>
+<p>网络运营、人工和其他费用都减少，但抵消能力有上限。实际折旧摊销已从费用行直接提取，并非用EBITDA倒算；其小幅下降还不能证明算力新增投资不会抬高未来折旧。利润之外的投资、联营及税项改善降低了归母跌幅，却不构成通信主业恢复的证据。</p>
+<p>A股CAS补充给出扣非归母净利174.90亿元，同比−19.5%；非经常性净收益为20.98亿元。其中现金结算股权激励的公允价值变动属于非经常性因素。该补充支持“经营压力重于表面净利”的方向，具体CAS项目不混进IFRS季度桥。</p>
+<div class="plain">
+<span class="pl">白话解读</span>
+<p>利润桥像逐行对账：成本降了，仍没完全抵掉收入少收的部分。要判断税目改变后生意有没有恢复，下一份披露需要把可比收入、经营利润和税后结果放在同一口径下。</p>
+</div>
 </section>
-
-<section class="reveal on" id="core">
-  <div class="slabel">核心通信 · 量价</div>
-  <h2>用户盘仍在扩，单位收入却继续下滑</h2>
-  <p>成熟通信业务的问题不是用户突然流失，而是增量放缓与单位收入下降同时发生。移动、5G网络和宽带用户同比仍增长，但单二季度净增均弱于上年，宽带甚至转为净减；同口径<span class="g">ARPU</span>也在下降。税制可以影响报表口径，却不能解释全部用户变现压力。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>核心通信量价观察｜用户为2026Q2末；ARPU为2026H1；发行人运营口径</caption>
-      <thead><tr><th>指标</th><th>本期</th><th>同比 / 上年</th><th>本期单季净增</th><th>上年同期单季净增</th></tr></thead>
-      <tbody>
-        <tr><td>移动用户</td><td>442.43百万</td><td>+2.25%</td><td>+1.88百万</td><td>+3.24百万</td></tr>
-        <tr><td>5G网络用户</td><td>322.50百万</td><td>+14.35%</td><td>+8.37百万</td><td>+15.81百万</td></tr>
-        <tr><td>有线宽带用户</td><td>201.28百万</td><td>+1.35%</td><td>−0.28百万</td><td>+0.49百万</td></tr>
-        <tr><td>移动ARPU</td><td>43.5元</td><td>上年46.0元 / −5.4%</td><td>—</td><td>—</td></tr>
-        <tr><td>宽带综合ARPU</td><td>45.8元</td><td>上年48.3元 / −5.2%</td><td>—</td><td>—</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>客户总数还在增加，但新增速度变慢，每位客户贡献的月收入也下降。移动ARPU从46.0元降到43.5元，宽带综合ARPU从48.3元降到45.8元；宽带单季还少了28万户。<b>规模底盘没有塌，价格与结构压力却是真实的。</b></p>
-  </div>
-  <p class="small">融合ARPU人民币128元是公司新增披露的另一项指标，未给同口径同比，不能与移动或宽带ARPU直接比较。用户数据来自两期港交所主要运营数据公告；ARPU来自2026H1发行人演示的同口径对照。</p>
+<section class="reveal on" id="growth" >
+<div class="slabel">新业务与回报</div>
+<h2>AI使用量已有规模，股东回报还缺关键一环</h2>
+<p>AI采用规模已经有证据，投资回报却尚未形成可核算的业务闭环。集团的连接客户、机房、政企关系和网络复用可以降低交付门槛，但这些资源能否转成超额回报，要看收费、利用率、折旧以及客户付款，而不是把全部云收入都乘上科技股倍数。</p>
+<p>本期算力网资本开支≈154亿元，同比增加97%；集团总资本开支却略降，意味着资金结构正在重排。按披露时口径，自有加接入的智算规模为118.8百亿亿次/秒，另披露半年自有规模新增24.8百亿亿次/秒。前者不是纯自有资产，也不是可以直接乘服务单价的出售量。新建、租赁及接入的经济负担要分别识别。</p>
+<p>公司披露智算利用率94%，但没有完整定义分母、统计时段与训练推理范围；高功率机架利用率超过80%是另一指标，不代表所有机柜。新增高功率项目14个、容量1.6GW说明供给布局；土地、供电能力、上架设备与可收费负载并不是同一阶段。高利用率能证明资源被使用，尚不能证明收入覆盖更新成本。</p>
+<div class="tblscroll">
+<table class="tbl txt" >
+<caption>2026-08-20上证路演中心公开文字问答；四条实质答复，不是完整逐字稿。问题中的未经确认数字不当作公司事实。</caption>
+<thead>
+<tr>
+<th>官方问答主题</th>
+<th>回答状态（分析判断）</th>
+<th>信息边界</th>
+<th>仍需核验</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>经营环境与业绩</td>
+<td>已答经营概况</td>
+<td>仅定性说明可比增长</td>
+<td>增值税量化桥、客户定价与净利润影响</td>
+</tr>
+<tr>
+<td>Token进展</td>
+<td>已答采用规模</td>
+<td>货币化部分未答</td>
+<td>付费调用、单位收入、推理成本与毛利</td>
+</tr>
+<tr>
+<td>资本开支与规划</td>
+<td>已答投入方向</td>
+<td>回报与约束部分回答</td>
+<td>全年数值上限、项目回收期、折旧峰值</td>
+</tr>
+<tr>
+<td>通信网与算力网协同</td>
+<td>已答技术路线</td>
+<td>财务贡献未量化</td>
+<td>可归属节省、订单、收入及利润</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>截至披露时，TokenHub日调用超过1万亿Token、TeleAgent用户超过60万、行业智能体420余个，构成客户采用的线索。Token是模型处理的信息单位，调用既可能收费，也可能包含测试或内部用途；公开材料没有给出可比付费率、留存和推理毛利。因此调用数不能直接转成收入预测。</p>
+<p>内部AI应用超过300个、提质增效超过14亿元属于管理层测算，基准、毛净口径和入账位置不完整。这些节省可能已经进入人工及运营费用，再加到估值利润会重复计算。公司对智能收入占比的远景目标是超过20%，不是下一年度承诺；年度可比增长目标也没有金额区间。</p>
+<p>最有价值的下一步不是再报一个更大的规模，而是给出同一业务的收入、折旧前贡献、维护投入和收款。若新增算力主要填补传统业务下降，集团价值未必增加；若新服务通过现有渠道以低获客成本实现回款，才有理由提高长期增长或降低风险补偿。两种路径都不需要预先把云与智能收入拆成独立利润分部。</p>
+<div class="plain">
+<span class="pl">白话解读</span>
+<p>算力被使用，和算力替股东赚钱，中间还隔着收费与成本。现在能看见客户采用，却看不见独立利润；继续观察应把新增业务的回款和折旧覆盖放在利用率之后。</p>
+</div>
 </section>
-
-<section class="reveal on" id="ai">
-  <div class="slabel">新业务 · AI与算力</div>
-  <h2>采用规模已经可见，单位经济仍是空白</h2>
-  <p>公司正在把“云网融合运营商”升级为AI服务商。基础设施、产品用户与行业覆盖都证明需求侧不是概念；但<span class="g">Token</span>调用不是收入，智算利用率也没有公开分母。可估值的闭环还缺单价、付费率、毛利、折旧覆盖和回款。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">TokenHub日调用</div><div class="v">&gt;1万亿</div><div class="d"><span>发行人披露，未独立验证</span></div></div>
-    <div class="cell"><div class="k">TeleAgent用户</div><div class="v">&gt;60<span class="u">万</span></div><div class="d"><span>期后；Skills超过2万</span></div></div>
-    <div class="cell"><div class="k">智云城市</div><div class="v">30<span class="u">个</span></div><div class="d"><span>部署数，不等于验收回款</span></div></div>
-    <div class="cell"><div class="k">智算利用率</div><div class="v">94%</div><div class="d"><span>分母与时段未定义</span></div></div>
-    <div class="cell"><div class="k">自有及接入智算</div><div class="v">118.8<span class="u">EFLOPS</span></div><div class="d"><span>不等于全部自有资产</span></div></div>
-    <div class="cell"><div class="k">内部效率效益</div><div class="v">&gt;14<span class="u">亿元</span></div><div class="d"><span>管理层测算，不等同利润</span></div></div>
-    <div class="cell"><div class="k">CAS研发费用</div><div class="v">52.08<span class="u">亿元</span></div><div class="d"><span class="up">同比 +8.9%</span><span>投入不等于产出</span></div></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>管理层新收入地图｜2026H1；人民币十亿元；与IFRS收入类型是重分类，不能相加</caption>
-      <thead><tr><th>口径</th><th>金额</th><th>同比</th><th>证据边界</th></tr></thead>
-      <tbody>
-        <tr><td>主营收入</td><td>244.095</td><td>−2.07%</td><td>通信加智能，存在百万元级四舍五入差</td></tr>
-        <tr><td>通信收入</td><td>212.955</td><td>−3.28%</td><td>成熟现金来源</td></tr>
-        <tr><td>智能收入</td><td>31.141</td><td>+7.05%</td><td>重述同比基数；未披露独立利润</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>智能化证据阶梯｜从建设到股东回报</caption>
-      <thead><tr><th>层级</th><th>现有证据</th><th>关键缺口</th><th>当前估值权重</th></tr></thead>
-      <tbody>
-        <tr><td>基础设施</td><td>AIDC收入201亿元、同比+9.3%；新增14个大功率项目</td><td>项目IRR、维护资本、折旧覆盖</td><td>中</td></tr>
-        <tr><td>产品采用</td><td>420个行业智能体、3.9万客户、央企渗透率96%</td><td>活跃与付费定义、客户留存</td><td>中</td></tr>
-        <tr><td>收入转化</td><td>智能收入保持正增长</td><td>云与AI独立增量、合同质量</td><td>低</td></tr>
-        <tr><td>利润与现金</td><td>未单列</td><td>毛利、推理成本、应收、现金贡献</td><td>零</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="callout"><b>目标只有方向，没有区间。</b>公司把2026年目标表述为可比主营收入、EBITDA和净利润稳健增长，智能收入快速增长；“十五五”远景是智能收入占比超过20%、净利润增速高于收入。两者都不是可直接放进模型的数字指引。</div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>目前可以确认三件事：算力建起来了、产品有人用、智能收入口径在增长。不能确认的也有三件事：每次调用收多少钱、提供服务要花多少钱、这些项目多久收回现金。<b>使用量是商业化的起点，不是资本回报的终点。</b></p>
-  </div>
-  <p class="small">最新官方文字区只有四条实质管理层答复；公开问答未形成完整逐字稿。TokenHub、TeleAgent与智云城市数据截至公告发布日，属于期后运营快照。天翼云收入与“智能收入”披露边界交叉，不另行加总。新业务模块触发；CAPEX/折旧并未超过两倍，不触发独立CAPEX压力专章，回报问题在本节与现金节共同处理。</p>
+<section class="reveal on" id="cash" >
+<div class="slabel">现金与负债</div>
+<h2>付款口径与旧账质量，决定现金好转能留多久</h2>
+<p>现金改善是真实的方向性进展，但尚不足以单独证明分配能力永久提高。公司定义的<span class="g">自由现金流（FCF）</span>扣除公司资本开支，并不另外扣租赁本金；当期投资确认额也不等于现金流量表中的资产付款。应收、应付和预收的变化又会让经营现金流偏离利润。</p>
+<div class="tblscroll">
+<table class="tbl txt" >
+<caption>单位亿元，除资本承诺明确为CAS补充外，其余为IFRS。<span class="g">应收账龄</span>按拨备前余额；资产负债表差额不直接等同现金流归因。</caption>
+<thead>
+<tr>
+<th>项目</th>
+<th>2025年末</th>
+<th>2026年6月末</th>
+<th>解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>净应收账款</td>
+<td>531.46</td>
+<td>717.94</td>
+<td>较年末+35.1%</td>
+</tr>
+<tr>
+<td>两年以上应收（拨备前）</td>
+<td>72.55</td>
+<td>100.58</td>
+<td>较年末+38.6%</td>
+</tr>
+<tr>
+<td>应收损失准备</td>
+<td>147.32</td>
+<td>207.97</td>
+<td>是累计准备，非当期新增费用</td>
+</tr>
+<tr>
+<td>贸易应付款</td>
+<td>1,497.04</td>
+<td>1,564.56</td>
+<td>增加可暂时保留现金</td>
+</tr>
+<tr>
+<td>合同负债</td>
+<td>671.13</td>
+<td>602.05</td>
+<td>下降消耗预收支持</td>
+</tr>
+<tr>
+<td>现金及现金等价物</td>
+<td>613.94</td>
+<td>406.57</td>
+<td>不等于全部可自由分配资金</td>
+</tr>
+<tr>
+<td>银行存款及受限现金</td>
+<td>384.13</td>
+<td>296.43</td>
+<td>合并项目，非全数受限</td>
+</tr>
+<tr>
+<td>借款合计</td>
+<td>100.23</td>
+<td>84.95</td>
+<td>含短期及长期借款</td>
+</tr>
+<tr>
+<td>租赁负债合计</td>
+<td>392.90</td>
+<td>385.61</td>
+<td>现金付款另需承受</td>
+</tr>
+<tr>
+<td>已签约资本承诺（CAS）</td>
+<td>167.71</td>
+<td>237.19</td>
+<td>较年末+41.4%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>客户付款和供应商付款需要一起观察。收入同比下降时，净应收较年末反而增加，季节性尚未剔除；旧账也增加，说明信用暴露并没有随现金流好转自动消失；准备余额变动还包含核销和其他项目，不宜全部当作新增坏账损失。账龄不能直接等同逾期，也没有足够的AI业务应收拆分，把集团旧账全归咎于AI同样过度。</p>
+<p>另一侧，贸易应付款增加有助于暂时保留现金，合同负债下降则方向相反。现有H1 IFRS公告没有完整现金流量表，演示稿的经营现金流只精确到亿元；这些余额变化可以提出问题，不能凭几项差额拼出精确现金桥。A股CAS经营现金流为603.75亿元、购建资产支付263.59亿元，单位和列报不同，保留为独立参照，不与IFRS一季度相减。</p>
+<p>用最近完整年度做更严格的现金检查：FY2025经营现金流1,250.69亿元，扣现金资本支出731.15亿元和租赁本金167.92亿元，余量为351.62亿元（推算），相对实际支付股息覆盖1.40倍。该余量仍不是完整股权自由现金流，尚未逐项处理利息归类、投资收购及营运资金储备；它只是比公司FCF多一道付款检查。</p>
+<p>本期公司FCF对宣派中期股息的表面覆盖约1.97倍，但两者既不是相同现金支付时点，也没有完整纳入租赁。已签约资本承诺是未来约束，不是当期花费；较年末上升尤其值得跟踪。短期借款负担较小不等于资产组合都可变现，理财、公允价值资产与银行存款应分别看待。估值不再额外加集团现金。</p>
+<div class="plain">
+<span class="pl">白话解读</span>
+<p>现金流改善给分红提供支持，但公司FCF不是一张可以全部寄给股东的支票。先看客户旧账能否收回，再看资产和租赁付款之后还剩多少，全年现金覆盖比半年单一指标更有判断力。</p>
+</div>
 </section>
-
-<section class="reveal on" id="cash">
-  <div class="slabel">现金转换 · 资本配置</div>
-  <h2>自由现金流跳升主要来自营运资金时点</h2>
-  <p>中国会计准则补充报表显示，经营现金流改善并非来自收现同步加速。经营性应收占用和经营性应付分别贡献现金，两项合计超过总增量；剩余项目反向抵消。公司口径自由现金流足以覆盖中期股息，但不能把半年付款节奏直接外推成永久现金能力。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>经营现金流变化桥｜2025H1至2026H1；人民币十亿元；CAS补充口径</caption>
-      <thead><tr><th>项目</th><th>金额 / 变化</th><th>性质</th><th>解释</th></tr></thead>
-      <tbody>
-        <tr><td>2025H1经营现金流</td><td>47.034</td><td>起点</td><td>比较基数</td></tr>
-        <tr><td>经营性应收占用改善</td><td>+8.025</td><td>正贡献</td><td>当期回款节奏改善</td></tr>
-        <tr><td>经营性应付贡献改善</td><td>+12.506</td><td>正贡献</td><td>包含付款时点影响</td></tr>
-        <tr><td>其他经营现金变化（推算）</td><td>−7.190</td><td>抵消</td><td>总增量减上述两项</td></tr>
-        <tr><td>2026H1经营现金流</td><td>60.375</td><td>终点</td><td>同比增加13.341</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="wfall" role="img" aria-label="经营现金流从2025年上半年的47.034十亿元，经应收和应付贡献、其他项目抵消，变为2026年上半年的60.375十亿元">
-    <div class="wrow"><div class="nm">2025H1 CFO<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:69.62%"></div></div><div class="fig">47.034</div></div>
-    <div class="wrow"><div class="nm">应收占用改善<span>正贡献</span></div><div class="wtrack"><div class="wbar up" style="left:69.62%;width:11.88%"></div></div><div class="fig">+8.025</div></div>
-    <div class="wrow"><div class="nm">应付贡献改善<span>正贡献</span></div><div class="wtrack"><div class="wbar up" style="left:81.50%;width:18.50%"></div></div><div class="fig">+12.506</div></div>
-    <div class="wrow"><div class="nm">其他经营变化<span>推算抵消</span></div><div class="wtrack"><div class="wbar down" style="left:89.36%;width:10.64%"></div></div><div class="fig">−7.190</div></div>
-    <div class="wrow"><div class="nm">2026H1 CFO<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:89.36%"></div></div><div class="fig">60.375</div></div>
-  </div>
-  <p class="small">条形位置以桥中最高累计水平67.565十亿元为100%共同刻度；“其他经营变化”为总增量扣除应收与应付贡献后的分析余项。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>资本开支重排与承诺｜2026H1；人民币十亿元；非算力为分析反推</caption>
-      <thead><tr><th>投向</th><th>金额</th><th>同比</th><th>判断</th></tr></thead>
-      <tbody>
-        <tr><td>算力网</td><td>15.4</td><td>+97.0%</td><td>资源向AI基础设施集中</td></tr>
-        <tr><td>非算力资本开支</td><td>17.0</td><td>约−35.6%</td><td>传统及其他投入被压缩</td></tr>
-        <tr><td>已签约资本承诺</td><td>23.719</td><td>+41.4%</td><td>期末尚未入账的后续支出</td></tr>
-        <tr><td>其中：电信设备</td><td>20.440</td><td>承诺构成</td><td>占已签约承诺86.2%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="grid">
-    <div class="cell"><div class="k">FCF / 已宣派中期股息</div><div class="v">1.97<span class="u">倍</span></div><div class="d"><span class="up">前瞻覆盖；上年同期0.79倍</span></div></div>
-    <div class="cell"><div class="k">IFRS与CAS现金流桥</div><div class="v">未披露</div><div class="d"><span>管理口径约数与CAS有差异</span></div></div>
-    <div class="cell"><div class="k">销售商品及服务收现</div><div class="v">+1.0%</div><div class="d"><span>远低于经营现金流增幅</span></div></div>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>公司这半年“更有现金”，主要因为收款和付款的时间点对它有利，而不是利润突然加速。应收和应付两项合计贡献205.31亿元，已经超过经营现金流133.41亿元的总增量；其他项目反而抵消。</p>
-    <p>投资总额略降，但其中154亿元转向算力网，占比接近一半，期末已签约资本承诺又同比增加41.4%。<b>风险不是当期花得失控，而是未来支出已锁定一部分，钱正从成熟网络搬到回报尚未披露的新资产。</b></p>
-  </div>
-  <p class="small">公司自由现金流定义为经营现金流减资本开支；演示稿只披露约数，与CAS精确现金流存在差异，公司未给桥。购买商品及劳务现金支出变化来自直接法，不能与间接法营运资金项目相加。所有推算保留原口径和舍入限制。</p>
+<section class="reveal on" id="capital" >
+<div class="slabel">分配与治理</div>
+<h2>分红记录可靠，未来增量仍要靠盈利和现金</h2>
+<p>公司过去确实支付了可观现金，不能因此把未来每股股息增长当作承诺。按现金流量表，FY2021–FY2025累计已付股息1,036.26亿元，相对2021年A股发行扣费净款475.16亿元为2.18倍（推算）。这项比较覆盖限定五年中的现金股息与该次净募集，不是公司自上市以来全部股权融资、回购和分配的终身净额。</p>
+<p>逐年现金付款及年度DPS见财务地图：两者分列，避免把宣派年度直接当作支付年度；以上累计额只汇总已付现金。</p>
+<p>本期派息率75%，比上年中期提高3个百分点，但利润池缩小仍导致中期DPS下降。提高派息率是在盈利与再投资之间重新分配，不是经营增长；未来若资本支出回升，继续提高比例的余地会更受约束。以高派息替代盈利修复，只能在现金允许的范围内持续。</p>
+<p>H股本次固定派发0.185633港元，对应人民币0.1606元；2026-09-02除净、2026-09-09登记，计划2026-10-13支付。9月4日收盘买入不再附带这次股息权利，不能因尚未付款再计入未来回报。后文所有分红采用税前口径；税后收入取决于股东身份及适用安排。</p>
+<p>治理的关键是控制权与现金使用边界。母集团持股及表决权均为63.90%，国家控股能够支持长期投入，但并不自动保证少数股东回报优先。CAS披露工程设计及维修客户辅助服务两类关联采购合计188.08亿元（推算）；这是选定服务类别而非所有关联采购，也不等于存在利润转移。公允定价还需要合同、费率及第三方参照。</p>
+<p>现金结算的H股增值权在本期全部行权完成，不发行新股；公司与个人业绩条件曾共同决定归属。期末负债降为零不代表激励没有成本，结算消耗现金，公允价值变化也曾进入损益。模型按8月末A/H已发行股份合计计算每股值，基本与摊薄股数无新增潜在普通股差异；未来回购收益率假设为零，不预支未承诺的资本回报。</p>
+<div class="plain">
+<span class="pl">白话解读</span>
+<p>过去实际分红证明了分配意愿，但年度宣派、实际到账和除净后的新买入权利是三件事。下一次判断分红能力，应把全年盈利和现金覆盖放在一起，而不是只看派息比例。</p>
+</div>
 </section>
-
-<section class="reveal on" id="balance">
-  <div class="slabel">资产负债 · 风险预警</div>
-  <h2>流动性防线充足，真正要盯的是长账龄应收</h2>
-  <p>短期偿债不是核心风险：现金、存款、金融资产与未使用授信提供了缓冲。问题在资产质量。收入下降时，应收净额仍增长，一年以上和两年以上余额增长更快；信用减值费用也升至62.91亿元、同比增加16.5%，既增加保护，也确认风险需要更多覆盖。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>贸易应收与减值｜2026年6月末对上年同期；人民币十亿元</caption>
-      <thead><tr><th>项目</th><th>本期</th><th>同比 / 变化</th><th>质量判断</th></tr></thead>
-      <tbody>
-        <tr><td>应收毛额</td><td>92.591</td><td>+7.5%</td><td>收入逆风下仍扩张</td></tr>
-        <tr><td>减值准备</td><td>20.797</td><td>+30.14%</td><td>损失缓冲增加</td></tr>
-        <tr><td>应收净额</td><td>71.794</td><td>+2.37%</td><td>净额增长仍快于收入</td></tr>
-        <tr><td>超过一年余额</td><td>22.787</td><td>+34.88%</td><td>占毛额24.61%</td></tr>
-        <tr><td>超过两年余额</td><td>10.058</td><td>+50.19%</td><td>占毛额10.86%</td></tr>
-        <tr><td>减值覆盖率</td><td>22.46%</td><td>+3.90个百分点</td><td>覆盖增强，账龄风险仍在</td></tr>
-        <tr><td>平均余额<span class="g">DSO</span>（推算）</td><td>43.4天</td><td>+5.7天</td><td>未达到专项阈值，但方向恶化</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="grid">
-    <div class="cell"><div class="k">现金及当期银行存款</div><div class="v">703.00<span class="u">亿元</span></div><div class="d"><span>其中受限30.54亿元</span></div></div>
-    <div class="cell"><div class="k">公允价值计入损益金融资产</div><div class="v">540.96<span class="u">亿元</span></div><div class="d"><span>流动与非流动合计</span></div></div>
-    <div class="cell"><div class="k">银行贷款</div><div class="v">84.95<span class="u">亿元</span></div><div class="d"><span>不含租赁负债</span></div></div>
-    <div class="cell"><div class="k">财务公司存款及委托贷款</div><div class="v">196.62<span class="u">亿元</span></div><div class="d"><span>集团体系资金负债</span></div></div>
-    <div class="cell"><div class="k">租赁负债</div><div class="v">385.61<span class="u">亿元</span></div><div class="d"><span>网络与场地长期承诺</span></div></div>
-    <div class="cell"><div class="k">未使用信贷额度</div><div class="v">2,058.08<span class="u">亿元</span></div><div class="d"><span>融资余量充足</span></div></div>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>公司短期不缺融资渠道，银行借款也不重；所以“会不会还不上债”不是本期矛盾。现金及长短期存款较年末减少347.53亿元，同时公允价值金融资产增加414.64亿元，主要像是资金搬到结构性存款及理财，而非同额经营消耗。更值得担心的是客户欠款越来越老：两年以上应收同比增长50.19%，拨备虽然更厚，却只是减震垫。</p>
-    <p>这也解释了为什么不能把上半年的现金流改善直接归给AI或政企业务：集团没有披露应收按业务线拆分。<b>现金时点变好，不等于存量账款已经变年轻。</b></p>
-  </div>
-  <p class="small">DSO按期初与期末净应收平均值除以半年收入再乘181天粗算；该值低于营运资金专项的180天触发线，因此不生成独立周转压力专章。现金与当期存款含财务公司法定准备金；公允价值金融资产中包括短期低风险结构性存款及理财产品，也有非流动项目。若只取不受限的当期现金及存款，再扣银行贷款、财务公司吸收存款、委托贷款和全部租赁负债，分析余量约5.28亿元；若再扣分期付款设备款则转负。该压力口径又没有纳入公允价值金融资产及长期存款，故不把它命名为“净现金”。本期未披露重大或有事项。</p>
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="DDM">
+<div class="slabel">估值与预期</div>
+<h2>基准修复接近现价，尚未形成宽裕的下行缓冲</h2>
+<p>主方法采用<span class="g">股息折现（DDM）</span>，因为业务成熟且现金分配直接决定股东所得；FY2027市盈率只作交叉检验。以下情景格与阶梯是2027-09-04的一年后除息价值，不是今天的现值。持有期分红另列，当前合理现值在情景表中明确区分。</p>
+<div class="grid" >
+<div class="cell" >
+<div class="k">现价</div>
+<div class="v">4.655<span class="u">港元</span>
+</div>
+<div class="d">
+<span>2026-09-04 16:08 香港时间</span>
+</div>
+</div>
+<div class="cell" >
+<div class="k">熊市</div>
+<div class="v">2.88<span class="u">港元</span>
+</div>
+<div class="d">
+<span>一年后除息 · 较现价−38.1%</span>
+</div>
+</div>
+<div class="cell" >
+<div class="k">基准</div>
+<div class="v">4.75<span class="u">港元</span>
+</div>
+<div class="d">
+<span>一年后除息 · 较现价+2.0%</span>
+</div>
+</div>
+<div class="cell" >
+<div class="k">牛市</div>
+<div class="v">6.54<span class="u">港元</span>
+</div>
+<div class="d">
+<span>一年后除息 · 较现价+40.5%</span>
+</div>
+</div>
+<div class="cell" >
+<div class="k">隐含预期</div>
+<div class="v">332<span class="u">亿元</span>
+</div>
+<div class="d">
+<span>FY2027归母利润 · 其余固定基准</span>
+</div>
+</div>
+<div class="cell" data-verdict="neutral-cautious">
+<div class="k">判断</div>
+<div class="v">中性偏谨慎</div>
+<div class="d">
+<span>等待现金与盈利共同验证</span>
+</div>
+</div>
+</div>
+<div class="steps">
+<div class="step">
+<div class="n">方法 A</div>
+<b>DDM：未来分红能支持什么股价？</b>
+<p>一期分红权利加后续持续分红，现金不能再重复加回。</p>
+</div>
+<div class="step">
+<div class="n">方法 B</div>
+<b>下一年度PE：盈利的市场参照</b>
+<p>同业倍数核查终端价值，不把估值差异机械平均。</p>
+</div>
+<div class="step">
+<div class="n">怎么读</div>
+<b>现值、期末值与回报分开</b>
+<p>期末股价加持有期分红才是同一年度的经济所得。</p>
+</div>
+</div>
+<h3>第一步 · 当前估值并非处于历史低端</h3>
+<p>Wind给出的TTM市盈率为12.434倍，处于自身五年72.35%分位；市净率0.784倍位于49.59%分位。按最新归母净资产与本次官方股息折算率自算PB为0.781倍，TTM PE为12.38倍；小幅差异可能与汇率或供应商基期有关，尚未逐项调节，不强行调平。历史分位是已返回序列统计，不把不完整日序列样本当五年最低值。</p>
+<p>同日毛股息率6.22%，年初至今股价变动−8.43%，均为Wind口径；追踪股息率包含过去分配，不是未来承诺，价格涨跌也不是含息回报。原始行情PB零值已排除，以上PB来自基本面接口。两地定价不混成总市值，本模型以总股数分摊归母利润、直接计算H股每股价值。</p>
+<h3>第二步 · 电信的估值资格仍需盈利兑现</h3>
+<div class="tblscroll">
+<table class="tbl" >
+<caption>来源：Wind，2026-09-04收盘；倍数单位倍，增长为各公司报表口径交叉检查。预测PE没有对应明细预测年度，不等于可比FY2027一致预期。</caption>
+<thead>
+<tr>
+<th>H股公司</th>
+<th>TTM PE</th>
+<th>预测PE</th>
+<th>毛股息率</th>
+<th>H1收入同比</th>
+<th>H1归母同比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中国电信</td>
+<td>12.43</td>
+<td>12.69</td>
+<td>6.22%</td>
+<td>−4.1%</td>
+<td>−14.9%</td>
+</tr>
+<tr>
+<td>中国移动</td>
+<td>11.39</td>
+<td>10.95</td>
+<td>6.80%</td>
+<td>−3.1%</td>
+<td>−6.3%</td>
+</tr>
+<tr>
+<td>中国联通</td>
+<td>9.47</td>
+<td>6.88</td>
+<td>2.71%</td>
+<td>+0.6%</td>
+<td>−34.6%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>第一层可比只有另外两家全国运营商；不为凑数量混入设备商或海外不同制度企业。电信TTM PE高于两者，股息率低于移动；各家的政企业务、损益结构和分配政策不同，低倍数不是无条件便宜。基准PE交叉值4.61港元与DDM接近；真正的分歧在于恢复速度和长期增长，而不是更换估值方法就能消除风险。</p>
+<h3>第三步 · 基准要求利润恢复到上一完整年度</h3>
+<div class="tblscroll">
+<table class="tbl txt" >
+<caption>均为分析假设及推算，非公司指引；一年期2026-09-04至2027-09-04。未来分红按权利应计，除净与结算日未公布。</caption>
+<thead>
+<tr>
+<th>驱动/输出</th>
+<th>熊市</th>
+<th>基准</th>
+<th>牛市</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026H2收入同比</td>
+<td>−3.0%</td>
+<td>+0.0%</td>
+<td>+3.0%</td>
+<td>参照去年下半年，测试承压、持平、回升</td>
+</tr>
+<tr>
+<td>2026H2归母同比</td>
+<td>−10.0%</td>
+<td>+0.0%</td>
+<td>+8.0%</td>
+<td>围绕本期压力，基准不预支下半年增利</td>
+</tr>
+<tr>
+<td>2026E收入/归母（亿元）</td>
+<td>5,108.2 / 287.4</td>
+<td>5,185.6 / 297.6</td>
+<td>5,263.0 / 305.7</td>
+<td>实际H1加H2情景，不直接年化半年</td>
+</tr>
+<tr>
+<td>2027E收入/归母（亿元）</td>
+<td>5,100.0 / 275.0</td>
+<td>5,295.6 / 331.9</td>
+<td>5,500.0 / 370.0</td>
+<td>基准恢复FY2025规模；熊承压、牛改善</td>
+</tr>
+<tr>
+<td>全年派息率</td>
+<td>70%</td>
+<td>75%</td>
+<td>80%</td>
+<td>参照本期75%，两端测试分配调整，非指引</td>
+</tr>
+<tr>
+<td>
+<span class="g">股权成本</span>Ke</td>
+<td>9.5%</td>
+<td>8.5%</td>
+<td>8.0%</td>
+<td>参照移动毛股息率加本模型长期增长所得约8.6%，基准近似取8.5%；熊提高、牛降低，非债券成本</td>
+</tr>
+<tr>
+<td>永续股息增长g</td>
+<td>1.0%</td>
+<td>1.8%</td>
+<td>2.2%</td>
+<td>低于历史DPS复合增长，依次要求可持续ROE约3.3%/7.2%/11.0%</td>
+</tr>
+<tr>
+<td>2027E全年DPS（港元）</td>
+<td>0.2432</td>
+<td>0.3144</td>
+<td>0.3739</td>
+<td>由归母利润、总股数和全年派息率推算</td>
+</tr>
+<tr>
+<td>一年分红权利D1（港元）</td>
+<td>0.2265</td>
+<td>0.3006</td>
+<td>0.3663</td>
+<td>已除净中期股息剔除，未来半年度占比假设65%</td>
+</tr>
+<tr>
+<td>一年后除息价值V1（港元）</td>
+<td>2.88</td>
+<td>4.75</td>
+<td>6.54</td>
+<td>DDM主方法，后续按g增长</td>
+</tr>
+<tr>
+<td>今天现值V0（港元）</td>
+<td>2.84</td>
+<td>4.65</td>
+<td>6.39</td>
+<td>同期分红及终端价值折现一年</td>
+</tr>
+<tr>
+<td>PE交叉检验倍数</td>
+<td>9倍</td>
+<td>11倍</td>
+<td>13倍</td>
+<td>参照联通9.47、移动11.386倍；熊盈利承压，牛要求长期增长溢价</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>资金成本合理性另作交叉检查：CAS六月末短借加权利率2.1%、长期信用借款合同利率上限2.80%；情景权益要求回报明显更高。这是存量借款成本参照，不是估值日边际融资报价，也不能仅凭借款便宜证明权益估值安全。</p>
+<div class="steps chain">
+<div class="step">
+<div class="n">经营驱动</div>
+<b>2026H2归母持平</b>
+<p>基准不直接恢复本期税目损失。</p>
+</div>
+<div class="step">
+<div class="n">规模与利润</div>
+<b>2027E归母331.85亿元</b>
+<p>恢复FY2025规模，对应本模型收入路径。</p>
+</div>
+<div class="step">
+<div class="n">分配</div>
+<b>全年DPS≈0.3144港元</b>
+<p>基于75%派息与同一总股数。</p>
+</div>
+<div class="step">
+<div class="n">折现与增长</div>
+<b>Ke 8.5% · g 1.8%</b>
+<p>参照同业分配与可持续资本回报，取值见情景表。</p>
+</div>
+<div class="step">
+<div class="n">每股期末值</div>
+<b>4.75港元</b>
+<p>除去持有期分红权利后的价值。</p>
+</div>
+</div>
+<div class="tblscroll">
+<table class="tbl sgrid">
+<caption>敏感性：行＝Ke（%），列＝g（%），格内一年后除息价值（港元）。其余固定基准，D2随g重算；框为基准，底色为当前价格反推Ke后的终端值，不是今日股价。</caption>
+<thead>
+<tr>
+<th>Ke＼g</th>
+<th>0.5%</th>
+<th>1.8%</th>
+<th>3.0%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7.5%</td>
+<td>4.51</td>
+<td>5.58</td>
+<td>7.12</td>
+</tr>
+<tr>
+<td>8.496%（现价隐含）</td>
+<td>3.94</td>
+<td class="implied">4.75</td>
+<td>5.83</td>
+</tr>
+<tr>
+<td>8.5%</td>
+<td>3.94</td>
+<td class="base">4.75</td>
+<td>5.83</td>
+</tr>
+<tr>
+<td>9.5%</td>
+<td>3.50</td>
+<td>4.13</td>
+<td>4.93</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>第四步 · 现价要求的并不是零增长利润</h3>
+<div class="tblscroll">
+<table class="tbl txt" data-fullscan-role="implied">
+<caption>每行仅改变一个输入，以今天DDM现值等于现价反解；改变盈利时，同时更新本年与后续分红篮子。</caption>
+<thead>
+<tr>
+<th>主方法输入</th>
+<th>基准假设</th>
+<th>现价隐含</th>
+<th>差距</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2027归母利润</td>
+<td>331.85亿元</td>
+<td>332.04亿元</td>
+<td>基本相当，需恢复FY2025利润规模</td>
+</tr>
+<tr>
+<td>股权成本Ke</td>
+<td>8.50%</td>
+<td>8.50%</td>
+<td>几乎无差，未体现额外收益补偿</td>
+</tr>
+<tr>
+<td>长期股息增长g</td>
+<td>1.80%</td>
+<td>1.80%</td>
+<td>几乎无差，仍依赖长期资本回报</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="rows" aria-label="一年后情景价值与现价的对比">
+<div class="row">
+<div class="nm">熊市<span>一年后除息价值（推算）</span>
+</div>
+<div class="track">
+<div class="fill alt" style="width:44.0367%">
+</div>
+</div>
+<div class="fig">2.88港元<span>较现价−38.1%</span>
+</div>
+</div>
+<div class="row">
+<div class="nm">现价<span>2026-09-04收盘</span>
+</div>
+<div class="track">
+<div class="fill soft" style="width:71.1774%">
+</div>
+</div>
+<div class="fig">4.655港元<span>市场价</span>
+</div>
+</div>
+<div class="row">
+<div class="nm">基准<span>一年后除息价值（推算）</span>
+</div>
+<div class="track">
+<div class="fill " style="width:72.6300%">
+</div>
+</div>
+<div class="fig">4.75港元<span>较现价+2.0%</span>
+</div>
+</div>
+<div class="row">
+<div class="nm">牛市<span>一年后除息价值（推算）</span>
+</div>
+<div class="track">
+<div class="fill moss" style="width:100.0000%">
+</div>
+</div>
+<div class="fig">6.54港元<span>较现价+40.5%</span>
+</div>
+</div>
+</div>
+<p class="small">基准期末值离现价不远，熊市落差更大。条宽按显示值相对牛市绘制，标示涨跌不含持有期分红；总回报见最终判断。</p>
+<div class="ffield" aria-label="主方法局部敏感性、PE与同业独立锚">
+<div class="frow">
+<div class="fnm">DDM<span>熊市</span>
+</div>
+<div class="ftrack">
+<div class="fbar alt" style="left:13.3333%;width:2.8333%">
+</div>
+<div class="fmark" style="left:44.2500%">
+</div>
+</div>
+<div class="fig">2.80–2.97港元</div>
+</div>
+<div class="frow">
+<div class="fnm">DDM<span>基准</span>
+</div>
+<div class="ftrack">
+<div class="fbar " style="left:43.0000%;width:5.8333%">
+</div>
+</div>
+<div class="fig">4.58–4.93港元</div>
+</div>
+<div class="frow">
+<div class="fnm">DDM<span>牛市</span>
+</div>
+<div class="ftrack">
+<div class="fbar moss" style="left:71.1667%;width:9.3333%">
+</div>
+</div>
+<div class="fig">6.27–6.83港元</div>
+</div>
+<div class="frow">
+<div class="fnm">PE交叉<span>三情景范围</span>
+</div>
+<div class="ftrack">
+<div class="fbar " style="left:18.8333%;width:49.1667%">
+</div>
+</div>
+<div class="fig">3.13–6.08港元</div>
+</div>
+<div class="frow">
+<div class="fnm">同业市场锚<span>同一基准EPS</span>
+</div>
+<div class="ftrack">
+<div class="fbar " style="left:32.8333%;width:13.3333%">
+</div>
+</div>
+<div class="fig">3.97–4.77港元</div>
+</div>
+</div>
+<p class="small">估值范围的主要差别来自利润及回报要求。横轴2–8港元；黑线是现价。DDM各区间为Ke上下0.25个百分点；市场锚将两家同业TTM PE用于同一FY2027基准EPS，非独立盈利预测。</p>
+<div class="plain">
+<span class="pl">一句话总结</span>
+<p>现价≈4.66港元，基准今天现值≈4.65港元，市场大体已经支付了利润修复的价格。真正需要验证的是未来分红能否来自经营与回款，而非继续挤压再投资空间。</p>
+</div>
 </section>
-
-<section class="reveal on" id="shareholders">
-  <div class="slabel">股东回报 · 治理</div>
-  <h2>分红记录可信，持续性仍取决于利润而非派息比例</h2>
-  <p>中国电信已经证明它愿意把现金还给股东。最新半年利润池收缩，公司提高分配比例，仍无法维持每股股息；继续靠提高比例托住DPS的空间有限。国资控股和A/H双重上市提供稳定性，也要求少数股东持续核查关联交易、董事会制衡与资本回报。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">中期DPS</div><div class="v">0.1606<span class="u">元</span></div><div class="d"><span class="down">同比 −11.37%</span></div></div>
-    <div class="cell"><div class="k">分配比例</div><div class="v">75%</div><div class="d"><span class="up">同比 +3个百分点</span></div></div>
-    <div class="cell"><div class="k">股息总额</div><div class="v">146.96<span class="u">亿元</span></div><div class="d"><span>股份数基本稳定</span></div></div>
-    <div class="cell"><div class="k">H股每股港币等值</div><div class="v">0.185633<span class="u">港元</span></div><div class="d"><span>公司公告换算</span></div></div>
-    <div class="cell"><div class="k">母集团持股</div><div class="v">63.90%</div><div class="d"><span>国家控股</span></div></div>
-    <div class="cell"><div class="k">H股占总股本</div><div class="v">15.17%</div><div class="d"><span>A股占其余部分</span></div></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>资本回报与治理核查</caption>
-      <thead><tr><th>事项</th><th>披露 / 分析值</th><th>少数股东含义</th></tr></thead>
-      <tbody>
-        <tr><td>FY2021至2026H1已宣派现金</td><td>约1,181.9亿元</td><td>2021年A股上市以来的净返还资本</td></tr>
-        <tr><td>2021年A股IPO总募资</td><td>479.03亿元</td><td>与2021年A股上市后现金返还比较</td></tr>
-        <tr><td>持续关联服务</td><td>工程建设及末梢维护采购约188.08亿元</td><td>公开材料不足以验证完全公允定价</td></tr>
-        <tr><td>董事会角色</td><td>董事长兼任首席执行官</td><td>属于守则偏离，以董事会制衡解释</td></tr>
-        <tr><td>股份回购</td><td>报告期未发生</td><td>每股回报依赖现金分红而非缩股</td></tr>
-        <tr><td>股票增值权</td><td>支付14.24亿元；公允价值收益6.72亿元；期末负债为零</td><td>现金结算，不稀释普通股，但影响现金与非经常性损益</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>股息的好消息是，按FY2021至2026H1已宣派口径，公司现金分派约1,181.9亿元，远高于2021年A股募资479.03亿元。坏消息是，派息率升到75%仍挡不住中期DPS下降11.37%——<b>分母利润不恢复，单靠把蛋糕切得更大不能长期抬高每股股息。</b></p>
-  </div>
-  <p class="small">累计分派按各年DPS乘当前股份数近似并加本期中期总额，只用于比较2021年A股上市后的股东现金回报与募集资本。股息为税前毛口径；实际H股预扣税取决于持有人身份。持续关联采购规模不等同利润转移。</p>
+<section class="reveal on" id="valuation-appendix" >
+<div class="slabel">估值机制附录</div>
+<h2>把分红权利与终端股价放在同一时间轴</h2>
+<p>设D1为估值日至一年后新增的税前分红权利；假设FY2026末期与FY2027中期在期限内除净，忽略短期付款滞后和年内折现差异。已经除净的本期中期股息不属于D1。以后年度半年度分红占全年65%，全年派息率在各情景内保持一致；这是季节性假设，不是已宣布日程。</p>
+<p>FY2027全年DPS为盈利预测除总股数、乘派息率并换汇。D2覆盖FY2027末期及FY2028中期，故D2＝FY2027 DPS×(1＋65%×g)；后续年度篮子按g增长。终端价值V1＝D2/(Ke−g)，今天现值V0＝(D1＋V1)/(1＋Ke)。总回报用V1加D1，不把今天现值当一年后卖出所得。敏感性改变g时同步改变D2；隐含盈利反解也同时改变D1和D2。</p>
+<div class="tblscroll">
+<table class="tbl txt" data-fullscan-role="derivations">
+<caption>承重推算；原报表百万元、港元/股与百分比分开标注。显示舍入，计算保留完整精度。</caption>
+<thead>
+<tr>
+<th>数值</th>
+<th>输入</th>
+<th>公式</th>
+<th>来源（页·附注）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>收入四年复合增速（CAGR）</td>
+<td>439,553→529,559；百万元</td>
+<td>[(末年/首年)^(1/4)−1]×100 ＝ 4.77%</td>
+<td>2025年报财务概要/股息表</td>
+</tr>
+<tr>
+<td>归母利润四年复合增速（CAGR）</td>
+<td>25,949→33,185；百万元</td>
+<td>[(末年/首年)^(1/4)−1]×100 ＝ 6.34%</td>
+<td>2025年报财务概要/股息表</td>
+</tr>
+<tr>
+<td>DPS四年复合增速（CAGR）</td>
+<td>0.1700→0.2720；元/股</td>
+<td>[(末年/首年)^(1/4)−1]×100 ＝ 12.47%</td>
+<td>2025年报财务概要/股息表</td>
+</tr>
+<tr>
+<td>本期Q2营业收入</td>
+<td>H1 260,471；Q1 131,967（百万元）</td>
+<td>半年−一季度 ＝ 128,504百万元</td>
+<td>中期p15–17；一季报p9–11</td>
+</tr>
+<tr>
+<td>TTM营业收入</td>
+<td>年报 529,559；本/上H1 260,471/271,469（百万元）</td>
+<td>年报＋本期半年−上年半年 ＝ 518,561百万元</td>
+<td>2025年报p243–244；中期p15–17</td>
+</tr>
+<tr>
+<td>本期Q2归母利润</td>
+<td>H1 19,588；Q1 7,350（百万元）</td>
+<td>半年−一季度 ＝ 12,238百万元</td>
+<td>中期p15–17；一季报p9–11</td>
+</tr>
+<tr>
+<td>TTM归母利润</td>
+<td>年报 33,185；本/上H1 19,588/23,017（百万元）</td>
+<td>年报＋本期半年−上年半年 ＝ 29,756百万元</td>
+<td>2025年报p243–244；中期p15–17</td>
+</tr>
+<tr>
+<td>Q2归母同比</td>
+<td>本期12,238；上年14,153（百万元）</td>
+<td>(本期/上年−1)×100 ＝ −13.53%</td>
+<td>同口径H1减Q1</td>
+</tr>
+<tr>
+<td>归母同比金额桥</td>
+<td>收入−10,998；费用+5,428；财务+201；投资+967；联营+570；税+298；归属+105（百万元）</td>
+<td>各行贡献相加 ＝ −3,429百万元</td>
+<td>中期p15–17</td>
+</tr>
+<tr>
+<td>两年以上旧账变化</td>
+<td>10,058/7,255（百万元，拨备前）</td>
+<td>(6月末/年末−1)×100 ＝ 38.64%</td>
+<td>中期p23应收附注</td>
+</tr>
+<tr>
+<td>签约资本承诺变化</td>
+<td>23,718.737/16,771.077（百万元）</td>
+<td>(6月末/年末−1)×100 ＝ 41.43%</td>
+<td>CAS半年报承诺附注</td>
+</tr>
+<tr>
+<td>全年现金余量</td>
+<td>经营125,069；购建73,115；租赁本金16,792（百万元）</td>
+<td>经营−购建−本金 ＝ 35,162百万元</td>
+<td>2025年报合并现金流</td>
+</tr>
+<tr>
+<td>五年已付股息</td>
+<td>8,439＋26,537＋20,059＋23,527＋25,064（百万元）</td>
+<td>五年现金付款合计 ＝ 103,626百万元</td>
+<td>各年报合并现金流</td>
+</tr>
+<tr>
+<td>已付股息/净募集</td>
+<td>股息103,626；A股发行净款47,516（百万元）</td>
+<td>现金股息/发行净款 ＝ 2.18倍</td>
+<td>各年报现金流；2022年报权益表</td>
+</tr>
+<tr>
+<td>熊市一年分红权利</td>
+<td>26E DPS0.254113；已除净0.185633；27E DPS0.243156（港元）；半年度占65%</td>
+<td>26E DPS−已除净＋27E DPS×65% ＝ 0.2265港元/股</td>
+<td>情景假设；8月20日股息公告</td>
+</tr>
+<tr>
+<td>基准一年分红权利</td>
+<td>26E DPS0.281896；已除净0.185633；27E DPS0.314381（港元）；半年度占65%</td>
+<td>26E DPS−已除净＋27E DPS×65% ＝ 0.3006港元/股</td>
+<td>情景假设；8月20日股息公告</td>
+</tr>
+<tr>
+<td>牛市一年分红权利</td>
+<td>26E DPS0.308909；已除净0.185633；27E DPS0.373891（港元）；半年度占65%</td>
+<td>26E DPS−已除净＋27E DPS×65% ＝ 0.3663港元/股</td>
+<td>情景假设；8月20日股息公告</td>
+</tr>
+<tr>
+<td>基准后续分红篮子</td>
+<td>27E DPS 0.314381港元；半年度65%；g1.8%</td>
+<td>27E DPS×(1＋65%×1.8%) ＝ 0.3181港元/股</td>
+<td>情景假设</td>
+</tr>
+<tr>
+<td>熊市一年后价值</td>
+<td>D2 0.244736港元；Ke 9.5%；g 1.0%</td>
+<td>D2/(Ke−g) ＝ 2.88港元/股</td>
+<td>情景假设</td>
+</tr>
+<tr>
+<td>基准一年后价值</td>
+<td>D2 0.318060港元；Ke 8.5%；g 1.8%</td>
+<td>D2/(Ke−g) ＝ 4.75港元/股</td>
+<td>情景假设</td>
+</tr>
+<tr>
+<td>牛市一年后价值</td>
+<td>D2 0.379238港元；Ke 8%；g 2.2%</td>
+<td>D2/(Ke−g) ＝ 6.54港元/股</td>
+<td>情景假设</td>
+</tr>
+<tr>
+<td>基准今天现值</td>
+<td>V1 4.747158港元；D1 0.300611港元；Ke8.5%</td>
+<td>(V1＋D1)/(1＋Ke) ＝ 4.65港元/股</td>
+<td>同一年度模型</td>
+</tr>
+<tr>
+<td>熊市一年含息回报</td>
+<td>V1 2.879249；D1 0.226531；现价4.655（港元）</td>
+<td>[(V1＋D1)/现价−1]×100 ＝ −33.28%</td>
+<td>情景假设；Wind</td>
+</tr>
+<tr>
+<td>基准一年含息回报</td>
+<td>V1 4.747158；D1 0.300611；现价4.655（港元）</td>
+<td>[(V1＋D1)/现价−1]×100 ＝ 8.44%</td>
+<td>情景假设；Wind</td>
+</tr>
+<tr>
+<td>一年平衡价</td>
+<td>两档V1及D1，均见上列</td>
+<td>(熊V1＋熊D1＋基准V1＋基准D1)/2 ＝ 4.08港元/股</td>
+<td>主方法情景；不是买入指示</td>
+</tr>
+<tr>
+<td>现价隐含Ke</td>
+<td>现价4.655；基准D1/D2及g固定</td>
+<td>求解现价＝(D1＋D2/(Ke−g))/(1＋Ke) ＝ 8.496%</td>
+<td>同一DDM反解</td>
+</tr>
+<tr>
+<td>现价隐含g</td>
+<td>现价4.655；基准Ke、DPS固定；D2随g改变</td>
+<td>求解现价＝[D1＋DPS×(1＋65%×g)/(Ke−g)]/(1＋Ke) ＝ 1.804%</td>
+<td>同一DDM反解</td>
+</tr>
+<tr>
+<td>现价隐含27E归母</td>
+<td>现价4.655；Ke8.5%、g1.8%、派息75%、半年度65%，股数及汇率见下</td>
+<td>先反解全年DPS，再除汇率与派息率、乘总股数 ＝ 33,204百万元</td>
+<td>同一DDM反解</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>PE交叉值＝FY2027 EPS×官方折算率×情景PE；市场锚使用相同基准EPS与两家同业的TTM倍数，故只提供估值参照。风险倍数、长期增长与折现率均为分析假设，没有可核验的债券收益率输入，不包装成精确资本资产定价模型。</p>
+<p class="small">总股数91,507,138,699股，取8月末A/H月报；换汇固定使用8月20日股息公告的1人民币＝1.155869港元，不是9月4日即期汇率。未来汇率波动另成估值风险。</p>
 </section>
-
-<section class="reveal on" id="valuation">
-  <div class="slabel">市场定价 · 盈利预测 · 估值</div>
-  <h2>现价已计入ROE修复；本报告模型无需单列AI溢价</h2>
-
-  <div class="grid">
-    <div class="cell"><div class="k">现价</div><div class="v">4.870<span class="u">HKD</span></div><div class="d"><span>2026-08-28收市</span></div></div>
-    <div class="cell"><div class="k">熊市价值</div><div class="v">2.92<span class="u">–3.63</span></div><div class="d"><span class="down">较现价 −40%~−25%</span></div></div>
-    <div class="cell"><div class="k">基准价值</div><div class="v">4.80<span class="u">–4.86</span></div><div class="d"><span>较现价 −1.4%~−0.2%</span></div></div>
-    <div class="cell"><div class="k">牛市价值</div><div class="v">6.30<span class="u">–6.43</span></div><div class="d"><span class="up">较现价 +29%~+32%</span></div></div>
-    <div class="cell"><div class="k">隐含预期</div><div class="v">ROE约7.3%</div><div class="d"><span>高于当前LTM水平</span></div></div>
-    <div class="cell"><div class="k">判断</div><div class="v">中性</div><div class="d"><span>价格贴近基准区</span></div></div>
-  </div>
-
-  <h3>第一步 · 市场现在给什么价</h3>
-  <p>Wind于2026年8月28日收市后显示，中国电信H股的P/E高于两家运营商同业，P/B位于中国移动与中国联通之间，毛股息率也低于中国移动。它不是板块里最便宜的“纯红利股”，定价更像是对税务扰动后盈利修复的等待。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>港股运营商价格与估值快照｜Wind；2026-08-28约16:08 HKT</caption>
-      <thead><tr><th>公司</th><th>价格（HKD）</th><th>P/E TTM</th><th>P/B LF</th><th>毛股息率</th><th>20日 / 2026 YTD</th></tr></thead>
-      <tbody>
-        <tr><td>中国电信</td><td>4.870</td><td>13.008x</td><td>0.820x</td><td>5.95%</td><td>+2.74% / −7.82%</td></tr>
-        <tr><td>中国移动</td><td>79.400</td><td>11.348x</td><td>1.027x</td><td>6.83%</td><td>−1.62% / +3.82%</td></tr>
-        <tr><td>中国联通</td><td>5.630</td><td>9.470x</td><td>0.401x</td><td>2.71%</td><td>−16.22% / −26.20%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>第二步 · 同业只说明相对位置，不直接给目标价</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>三大运营商两期经营执行｜2025H1=100；利润率按各公司法定口径复算</caption>
-      <thead><tr><th>公司</th><th>2026H1收入指数</th><th>EBITDA / 主营服务收入</th><th>净利率</th><th>资本开支指数</th><th>执行位置</th></tr></thead>
-      <tbody>
-        <tr><td>中国移动</td><td>98.9</td><td>39.8% → 38.4%</td><td>15.5% → 14.7%</td><td>104.5</td><td>利润率最高，算力投入使Capex增加</td></tr>
-        <tr><td>中国电信</td><td>96.0</td><td>32.3% → 30.5%</td><td>8.5% → 7.5%</td><td>94.7</td><td>总量收缩，投资结构转向算力</td></tr>
-        <tr><td>中国联通</td><td>100.6</td><td>30.4% → 26.6%</td><td>7.2% → 4.7%</td><td>119.1</td><td>收入较稳，利润率压缩最深</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">三家公司对主营、服务收入与EBITDA的定义并不完全一致；本表只比较斜率。中国移动资本开支由经营现金流减公司自由现金流近似反推。双重上市使供应商总市值存在A/H混合口径，本报告只做每股权益估值。</p>
-
-  <h3>第三步 · 先写清剧本，再用两种股权模型互证</h3>
-  <p>模型不把调用量直接乘倍数，也不覆盖已经发生的半年。FY2026先把2026H1实际值与三档H2假设相加；FY2027—28才使用增长、利润率和现金转换驱动。熊市假设通信继续缩量、算力折旧先于利润；基准假设H2同比持平；牛市要求智能收入、利润率与回款同时兑现。三档都是分析情景，不是公司指引。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>两种估值方法与互证规则</caption>
-      <tbody>
-        <tr><td><b>方法 A · FY2026E股息资本化</b>　用各情景全年每股盈利与派息率推算股息，再除以要求的毛股息率；适合现金分红稳定的运营商。</td></tr>
-        <tr><td><b>方法 B · P/B—ROE</b>　从每股净资产出发，把可持续ROE与权益成本比较；回报越接近要求回报，合理P/B越接近1倍。</td></tr>
-        <tr><td><b>怎么读 · 互证，不取平均</b>　两法都来自长期股权回报关系，只用于检验结论是否依赖单一口径，不制造伪精确中点。</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">式中<span class="g">Ke</span>是股东要求的最低年回报率；g是长期增长率；P/B＝股价÷每股净资产。换算使用公司本次H股股息采用的一周平均0.86515 RMB/HKD，并以香港金管局2026-07-31人民币收市中间价1.16275 HKD/RMB交叉检查；两者差异低于1%，但前者不是估值日即期汇率。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>FY2026E—FY2028E三情景总表｜2026为H1实际＋H2情景；金额为人民币十亿元</caption>
-      <thead><tr><th>驱动 / 结果</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
-      <tbody>
-        <tr><td>H2收入 / EBITDA / 归母同比</td><td>−3% / −8% / −10%</td><td>0% / 0% / 0%</td><td>+3% / +5% / +8%</td></tr>
-        <tr><td>H2 FCF绝对额</td><td>−3.0</td><td>3.0</td><td>12.0</td></tr>
-        <tr><td>2027/28收入增速</td><td>+1%<br>+1%</td><td>+2%<br>+3%</td><td>+4%<br>+5%</td></tr>
-        <tr><td>2027/28 EBITDA率</td><td>25.7%<br>25.6%</td><td>27.0%<br>27.5%</td><td>28.0%<br>28.8%</td></tr>
-        <tr><td>2027/28净利率</td><td>5.4%<br>5.4%</td><td>6.0%<br>6.3%</td><td>6.5%<br>7.1%</td></tr>
-        <tr><td>2027/28 FCF / 归母</td><td>0.90x<br>0.95x</td><td>1.00x<br>1.05x</td><td>1.15x<br>1.25x</td></tr>
-        <tr class="grp"><td>营业收入 2026/27/28</td><td>510.818<br>515.926<br>521.086</td><td>518.561<br>528.932<br>544.800</td><td>526.304<br>547.356<br>574.724</td></tr>
-        <tr><td>EBITDA 2026/27/28</td><td>132.578<br>132.593<br>133.398</td><td>137.641<br>142.812<br>149.820</td><td>140.805<br>153.260<br>165.520</td></tr>
-        <tr><td>归母净利润 2026/27/28</td><td>28.739<br>27.860<br>28.139</td><td>29.756<br>31.736<br>34.322</td><td>30.569<br>35.578<br>40.805</td></tr>
-        <tr><td>FCF 2026/27/28</td><td>25.927<br>25.074<br>26.732</td><td>31.927<br>31.736<br>36.039</td><td>40.927<br>40.915<br>51.007</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p class="small">现金假设特意不把上半年营运资金红利年化：2025H2 FCF为316.33亿元，三档2026H2仅假设−30亿元、30亿元和120亿元，分别对应付款时点明显反转、部分反转和较温和反转。因此基准与牛市FY2027 FCF近乎持平，不是模型遗漏，而是现金转换回归常态；该路径的置信度低于利润预测。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>每股价值交叉检查｜港元；两法不作机械平均</caption>
-      <thead><tr><th>情景</th><th>股息资本化</th><th>P/B—ROE</th><th>主要假设</th></tr></thead>
-      <tbody>
-        <tr><td>熊市</td><td>3.63</td><td>2.92</td><td>FY2026E归母287.39亿元；派息70%；目标收益率7.0%；ROE / Ke＝5.5% / 9.5%</td></tr>
-        <tr><td>基准</td><td>4.86</td><td>4.80</td><td>FY2026E归母297.56亿元；派息75%；目标收益率5.8%；ROE / Ke＝7.2% / 8.5%</td></tr>
-        <tr><td>牛市</td><td>6.30</td><td>6.43</td><td>FY2026E归母305.69亿元；派息80%；目标收益率4.9%；ROE / Ke＝8.5% / 8.0%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">股息法：价值＝FY2026E EPS(HKD)×派息率÷目标毛股息率；目标收益率以Wind同业当日区间为中枢并向两端加减风险溢价。P/B法：g＝ROE×留存率；合理P/B＝(ROE−g)÷(Ke−g)；价值＝合理P/B×BVPS(HKD)，且各情景使用与股息法相同的派息率。Ke是分析敏感性，不是公司指引。两法同属Gordon/clean-surplus家族，不能视为独立证据，也不再另加现金。未采用SOTP：公司没有智能业务独立利润、资本占用与现金流。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>基准P/B价值敏感性｜HKD/股；固定派息率75%</caption>
-      <thead><tr><th>可持续ROE \ Ke</th><th>8.0%</th><th>8.5%</th><th>9.0%</th></tr></thead>
-      <tbody>
-        <tr><td>6.5%</td><td>4.56</td><td>4.23</td><td>3.94</td></tr>
-        <tr><td>7.2%</td><td>5.19</td><td>4.80</td><td>4.47</td></tr>
-        <tr><td>8.0%</td><td>5.96</td><td>5.50</td><td>5.11</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">敏感性说明：现价附近需要ROE约7.2%且Ke约8.5%的组合；若股东要求回报上升0.5个百分点而ROE不变，基准P/B价值降至HK$4.47。目标收益率与Ke只是有界假设，不能被误读为可观测事实。</p>
-
-  <h3>把三档价值放在一把尺上</h3>
-  <div class="rows" aria-label="中国电信情景价值与现价对比">
-    <div class="row"><div class="nm">熊市<span>通信继续缩量、现金转化偏弱</span></div><div class="track"><div class="fill alt" style="width:45.4%"></div></div><div class="fig">HK$2.92<span class="down">两法2.92–3.63 · 较现价−40%~−25%</span></div></div>
-    <div class="row"><div class="nm">现价<span>2026-08-28收市</span></div><div class="track"><div class="fill soft" style="width:75.7%"></div></div><div class="fig">HK$4.870<span>市场价</span></div></div>
-    <div class="row"><div class="nm">基准<span>税务扰动消退、ROE温和修复</span></div><div class="track"><div class="fill" style="width:74.7%"></div></div><div class="fig">HK$4.80<span>两法4.80–4.86 · 较现价−1.4%~−0.2%</span></div></div>
-    <div class="row"><div class="nm">牛市<span>智能利润与回款同时兑现</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$6.43<span class="up">两法6.30–6.43 · 较现价+29%~+32%</span></div></div>
-  </div>
-  <p class="small">条形以熊市与基准区间低端、牛市区间高端作为主标尺，并相对HK$6.43等比绘制；每行同时列示两法区间。涨跌幅按现价HK$4.870与区间端点计算。</p>
-
-  <h3>第四步 · 这个价格意味着什么</h3>
-  <div class="plain">
-    <span class="pl">一句话总结</span>
-    <p>现价略高于基准价值区间。按Wind P/B和基准增长假设反推，市场需要可持续ROE约7.3%，高于当前LTM平均权益口径约6.34%。这不是一个“只要税务正常化就必然上行”的价格：<b>基准修复已经没有安全垫，真正的上行来自智能业务首次证明利润与现金。</b></p>
-  </div>
+<section class="reveal on" id="risks" >
+<div class="slabel">风险与验证</div>
+<h2>现金与盈利若不能同行，收息逻辑就要下修</h2>
+<div class="tblscroll">
+<table class="tbl txt" data-fullscan-role="risk-register">
+<caption>按对分红论点的潜在伤害排序，概率为定性判断，阈值为研究条件而非公司承诺。</caption>
+<thead>
+<tr>
+<th>排序</th>
+<th>风险</th>
+<th>现状</th>
+<th>传导</th>
+<th>敞口</th>
+<th>概率</th>
+<th>下一观察点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>现金好转只属付款时点</td>
+<td>2026H1旧账与应付均增加</td>
+<td>回款或供应商结算逆转，压缩分红资金</td>
+<td>FY2025扣购建及租赁本金余量351.62亿元仍非完整可分配现金</td>
+<td>中高</td>
+<td>FY2026年报：相同付款口径覆盖实际股息至少1倍</td>
+</tr>
+<tr>
+<td>2</td>
+<td>利润修复不兑现</td>
+<td>2026H1可比增长只有方向说明</td>
+<td>净收入下降持续，基准盈利恢复落空</td>
+<td>基准FY2027归母331.85亿元；熊市275.00亿元</td>
+<td>中高</td>
+<td>2026Q3：同口径单季经营利润同比止跌，并检查税目桥</td>
+</tr>
+<tr>
+<td>3</td>
+<td>算力回报低于资金成本</td>
+<td>2026H1算力资本开支扩张</td>
+<td>折旧、更新和价格压力压低可留存回报</td>
+<td>缺独立利润与现金，敞口无法从利用率直接量化</td>
+<td>中</td>
+<td>FY2026年报：算力收入、贡献及付款能否连成同口径链条</td>
+</tr>
+<tr>
+<td>4</td>
+<td>派息或除净节奏变化</td>
+<td>2026-09-02本期H股已除净</td>
+<td>分配比例或未来时间表偏离模型</td>
+<td>一年权利篮子及终端值同时改变</td>
+<td>中</td>
+<td>2027-09-04：预计年度分红权利与实际除净逐项核对</td>
+</tr>
+<tr>
+<td>5</td>
+<td>治理及关联资金使用</td>
+<td>2026H1母集团控制权集中</td>
+<td>低回报投资或关联安排减少股东可得现金</td>
+<td>未取得定价全貌，不把关联采购直接视为损失</td>
+<td>中低</td>
+<td>FY2026年报：关联合同、资本承诺及减值变化</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>最强反证不是“所有新投资都会失败”，而是客户使用和技术能力增长，同时资本回报仍偏低。如果收入必须以更多设备、应收和付款延期换来，派息意愿只能缓解波动，不能永久提高价值。相反，现金覆盖改善与利润止跌同步出现，才足以降低本报告要求的风险补偿。</p>
+<div class="tline">
+<div class="tstop warn">
+<span class="tw">2026Q3</span>
+<b>核验经营利润方向</b>
+<p>同口径单季利润与税目说明，先检验恢复是否发生。</p>
+</div>
+<div class="tstop">
+<span class="tw">FY2026年报</span>
+<b>核验全年现金覆盖</b>
+<p>现金资产付款、租赁及实际股息一并比较。</p>
+</div>
+<div class="tstop">
+<span class="tw">2027-09-04</span>
+<b>核验持有期权利篮子</b>
+<p>预测时间表与真实除净日逐笔对照。</p>
+</div>
+</div>
 </section>
-
-<section class="reveal on" id="decision">
-  <div class="slabel">多空辩论 · 最终判断</div>
-  <h2>中性：红利有锚，重估要等回报率</h2>
-  <p>最强多方证据是税务口径确有扰动、总资本开支受控、现金分红记录扎实；最强空方证据是报告利润率尚未恢复、智能业务没有独立回报、长账龄应收继续增长。价格已经贴近基准价值，结论置信度为中等。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">经营确认</div><p>正式文件给出可审计税务桥，通信收入停止收缩，智能收入继续领先且首次披露利润或现金贡献。</p></div>
-    <div class="find good"><div class="t">红利确认</div><p>全年正常化经营现金在支付供应商、算力投资和股息后仍有余量，每股分派重新由利润增长推动。</p></div>
-    <div class="find warn"><div class="t">回报失效</div><p>算力折旧上升、智能利润仍不透明，集团ROE无法向估值所需水平靠拢。</p></div>
-    <div class="find warn"><div class="t">现金失效</div><p>一年以上应收与信用减值继续快于收入，或自由现金流随付款节奏恢复而明显回落。</p></div>
-  </div>
-
-  <div class="quote">中国电信已经证明基础设施有人使用；下一阶段要证明新增资本赚到股东要求的回报。</div>
-  <div class="callout"><b>最强反方观点：</b>运营商的云网一体化可能让单项目IRR难以拆分，采用规模和内部效率也可能领先财务披露。若税务扰动消退后ROE、现金转换与长账龄应收同时改善，本报告对AI商业化的谨慎权重应上修。</div>
-
-  <h3>把验证点排在时间线上</h3>
-  <div class="tline">
-    <div class="tstop"><span class="tw">FY2026全年</span><b>税务与利润桥</b><p>披露受影响基数，或至少让报告利润率出现可验证修复。</p></div>
-    <div class="tstop"><span class="tw">FY2026全年</span><b>现金与分红</b><p>正常化现金覆盖投资和股息，不再主要依靠付款时点。</p></div>
-    <div class="tstop"><span class="tw">下一期中报</span><b>智能业务闭环</b><p>首次给出利润、折旧覆盖、付费或现金贡献中的至少一项。</p></div>
-    <div class="tstop warn"><span class="tw">每个报告期</span><b>应收证伪</b><p>长账龄与减值若继续快于收入，现金质量判断下修。</p></div>
-  </div>
+<section class="reveal on" id="decision" data-fullscan-role="decision" data-verdict="neutral-cautious">
+<div class="slabel">最终判断</div>
+<h2>中性偏谨慎：修复已在价内，下行还需更多补偿</h2>
+<div class="tblscroll">
+<table class="tbl txt" data-fullscan-role="decision-block">
+<caption>一年经济持有期，收益率为税前、未计交易费及分红再投资。</caption>
+<thead>
+<tr>
+<th>判断项</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>论点</td>
+<td>现金恢复改善分配条件，但高派息比例不能替代经营盈利和新投资回报的修复。</td>
+</tr>
+<tr>
+<td>基准对一致预期</td>
+<td>无一致预期可比：现有预测PE没有完整预测明细。基准FY2027归母331.85亿元；主方法现价隐含≈332.04亿元，已要求恢复至先前完整年度水平。</td>
+</tr>
+<tr>
+<td>赔率</td>
+<td>同一一年期DDM，计税前应计股息：熊市−33.3%，基准+8.4%；损失幅度显著大于基准所得，未按情景概率加权。</td>
+</tr>
+<tr>
+<td>平衡价</td>
+<td>4.08港元；两档期末价值及各自分红合计的中点，使基准上行与熊市下行等额，仅是情景性质。</td>
+</tr>
+<tr>
+<td>持有回报</td>
+<td>2026-09-04至2027-09-04：基准分红权利≈0.3006港元，毛收益率6.46%；回购收益率假设0%。不含已除净中期权利，不代表保证现金到账。</td>
+</tr>
+<tr>
+<td>分项置信度</td>
+<td>论点证据：高；估值输入：中；现金及资产负债表：中；治理：中。最弱环节由全年现金付款后分红覆盖、关联定价与明确AI回报披露改善，不靠规模口号提高置信度。</td>
+</tr>
+<tr>
+<td>判断</td>
+<td>中性偏谨慎（等待验证）：价格接近基准现值，但含息下行仍更大。下一检验点为2026Q3利润方向及FY2026全年现金覆盖。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout">
+<b>最强反方：</b>现金改善可能比模型假设更持久，AI收入若凭现有渠道实现高质量回款，利润恢复与重估会早于保守预期。<b>失败边界：</b>若全年投资与租赁付款后的现金覆盖转弱，同时利润修复继续缺席，分配能力的基准假设应下修；若两者同步改善，则上调判断，而不等所有未知数消失。</div>
 </section>
-
-<section class="reveal on" id="glossary">
-  <div class="slabel">名词速查 · 快速检索</div>
-  <h2>读懂运营商财务需要的词</h2>
-  <div class="tblscroll">
-    <table class="tbl gloss">
-      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
-      <tbody>
-        <tr><td>IFRS</td><td>国际财务报告准则；本报告以港交所IFRS公告控制合并财务，A股CAS报表只作补充。</td></tr>
-        <tr><td>EBITDA</td><td>息税折旧摊销前利润。运营商资产重，EBITDA用于观察折旧前经营产出，但不是现金流。</td></tr>
-        <tr><td>归母净利润</td><td>扣除少数股东份额后，归属于中国电信股东的净利润。</td></tr>
-        <tr><td>ROE</td><td>净资产收益率＝归母净利润÷平均归母权益，衡量股东资金赚取回报的效率。</td></tr>
-        <tr><td>自由现金流（FCF）</td><td>本报告历史代理为经营现金流减公司资本开支；公司FY2025起也采用类似定义。</td></tr>
-        <tr><td>Capex</td><td>资本开支：建设基站、光网、机房和智算设备的现金投入，之后通过折旧影响利润。</td></tr>
-        <tr><td>VAT</td><td>增值税。部分电信服务税目由6%调整至9%，固定含税价格下会压低净额收入。</td></tr>
-        <tr><td>Token</td><td>大模型处理文本或数据的计量单位；调用量表示使用规模，不直接等于收入或利润。</td></tr>
-        <tr><td>AIDC</td><td>人工智能数据中心，承载训练、推理和高密度算力；价值取决于利用率、价格、折旧和回款。</td></tr>
-        <tr><td>ARPU</td><td>每用户平均收入，常用于观察移动或宽带客户的单位变现水平；不同业务口径不能直接混比。</td></tr>
-        <tr><td>DSO</td><td>应收账款周转天数，粗略表示收入形成后多久收回现金；本报告按平均净应收推算。</td></tr>
-        <tr><td>LTM / TTM</td><td>最近十二个月滚动口径，用来消除半年报的季节性。</td></tr>
-        <tr><td>EPS / BVPS</td><td>每股盈利 / 每股净资产；分别是P/E与P/B估值的分母。</td></tr>
-        <tr><td>P/E / P/B</td><td>市盈率 / 市净率，即股价分别相对于每股盈利和每股净资产的倍数。</td></tr>
-        <tr><td>Ke</td><td>权益成本，股东承担这只股票风险所要求的最低年回报率；越高则估值越低。</td></tr>
-        <tr><td>g</td><td>长期增长率，用于P/B—ROE等长期股权价值关系。</td></tr>
-        <tr><td>CAGR</td><td>复合年均增速，把起点到终点的总增长折算成每年的复合速度。</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="reveal on" id="methods">
-  <div class="slabel">方法与来源</div>
-  <h2>港交所控制财务，官方问答只补充经营信号</h2>
-  <p>合并财务、季度推算、股息、应收和股本均以港交所中文文件为控制源；发行人演示与上证路演中心文字问答只用于运营指标、目标和管理层解释；Wind用于带时间戳的港股价格与同业估值。2026年中期财务未经审核，但已经审核委员会审阅，并由毕马威按香港审阅准则完成独立审阅；FY2025年报获无保留审计意见。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>主要直接来源与证据边界</caption>
-      <thead><tr><th>文件</th><th>用途</th><th>边界</th></tr></thead>
-      <tbody>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000376_c.pdf">2026年中期业绩公告</a></td><td>IFRS财务、收入、应收、股息</td><td>未经审核但经独立审阅</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0423/2026042301111_c.pdf">2026年第一季度报告</a></td><td>推算单二季度基数</td><td>按IFRS编制的未经审核季度财务</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0814/2025081400351_c.pdf">2025年中期业绩公告</a></td><td>同比半年基数与应收账龄</td><td>未经审核但经独立审阅</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0201/2026020100076_c.pdf">增值税税目调整公告</a></td><td>受影响业务与生效日</td><td>未披露量化影响</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000571_c.pdf">A股半年度报告的港交所版本</a></td><td>CAS现金流、研发与减值补充</td><td>不与IFRS承重数字混算</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0427/2026042701621_c.pdf">FY2025中文年报</a></td><td>五年历史、资本与治理</td><td>经审计且无保留意见</td></tr>
-        <tr><td><a href="https://www.chinatelecom-h.com/tc/ir/presentations/intpre260820.pdf">发行人中期业绩演示</a></td><td>智能业务、算力与方向性目标</td><td>管理层口径，不替代财务主表</td></tr>
-        <tr><td><a href="https://roadshow.sseinfo.com/activityDetails/39928">上证路演中心业绩说明会</a></td><td>本期官方文字问答</td><td>四条实质答复，不是完整逐字稿</td></tr>
-        <tr><td><a href="https://apidocs.hkma.gov.hk/documentation/market-data-and-statistics/monthly-statistical-bulletin/er-ir/er-eeri-daily/">香港金管局每日汇率API</a></td><td>人民币兑港币换算交叉检查</td><td>最新可取值为2026-07-31，不是估值日即期</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">第三方电话会供应商以728:HK返回的“最新”文本实际属于2025年中期，已排除。单Q2均按两期H1分别减Q1推算；历史FCF、非算力Capex、现金桥余项、DSO、LTM、三年情景、估值与累计分派均为可复算分析值，不是公司指引。分部组合图因法定单一分部跳过；归母利润的P&amp;L行项目桥可审计并已展示，但VAT、量价与费用之间的经营归因桥因证据不足跳过。</p>
-</section>
-
-<footer>
-  <p>财务资料截止2026-08-20，报告期截至2026-06-30；行情截止2026-08-28约16:08 HKT。主要来源：香港交易所中文公告与年报、中国电信投资者关系材料、上证路演中心官方文字问答及Wind金融数据服务。</p>
-  <p>推算包括单Q2、LTM、历史FCF代理、现金桥余项、非算力资本开支、DSO、每股换算、三年情景与估值。所有情景均为分析假设；本报告不构成投资建议、盈利保证或交易要约。</p>
-</footer>
-
-</main>
-
-<script>
+<section class="reveal on" id="glossary" >
+<div class="slabel">名词速查</div>
+<h2>把业务、会计与分红用词分开</h2>
+<div class="tblscroll">
+<table class="tbl gloss">
+<thead>
+<tr>
+<th>术语</th>
+<th>白话解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>国际财务报告准则（IFRS）</td>
+<td>本页H股会计主源；同口径比较才能相减。</td>
+</tr>
+<tr>
+<td>中国企业会计准则（CAS）</td>
+<td>A股补充口径，不能替代缺失的IFRS现金流。</td>
+</tr>
+<tr>
+<td>折旧前经营产出（EBITDA）</td>
+<td>经营利润加实际折旧摊销；不等于可分红现金。</td>
+</tr>
+<tr>
+<td>每用户平均收入（ARPU）</td>
+<td>按平均用户与月数计算，先看移动或宽带定义。</td>
+</tr>
+<tr>
+<td>每用户流量（DOU）</td>
+<td>平均用户的上网使用量，增长不自动带来相同收费增长。</td>
+</tr>
+<tr>
+<td>推算单二季度</td>
+<td>半年累计减一季累计，余额项目不这样处理。</td>
+</tr>
+<tr>
+<td>滚动十二个月（TTM）</td>
+<td>最近完整年度加本期半年、减上年同期。</td>
+</tr>
+<tr>
+<td>自由现金流（FCF）</td>
+<td>公司定义从经营现金流扣资本开支，租赁付款需另看。</td>
+</tr>
+<tr>
+<td>每股股息（DPS）</td>
+<td>先区分归属财年、实际支付及新买入者有无权利。</td>
+</tr>
+<tr>
+<td>应收账龄</td>
+<td>客户欠款自确认后的时间，不直接等同逾期天数。</td>
+</tr>
+<tr>
+<td>资本承诺</td>
+<td>已经签约、尚待履行的投资支出，不是本期现金付款。</td>
+</tr>
+<tr>
+<td>股息折现（DDM）</td>
+<td>把预期分红按要求回报折算成价值。</td>
+</tr>
+<tr>
+<td>股权成本（Ke）</td>
+<td>模型中的最低要求回报，不是公司借款利率。</td>
+</tr>
+<tr>
+<td>永续增长（g）</td>
+<td>后续年度分红持续增长的假设，依赖留存与资本回报。</td>
+</tr>
+<tr>
+<td>除净与分红权利</td>
+<td>除净日后新买入不再附带该次已宣派股息。</td>
+</tr>
+<tr>
+<td>现金结算增值权</td>
+<td>现金支付股价与行权价差额，不发行股份，但仍占用现金。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section><footer><p>数据截止：财务2026-06-30；最新完整年度2025-12-31；公开补充至2026-09-05；Wind行情2026-09-04 16:08 香港时间。</p><p>来源：<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000376_c.pdf">2026年中期业绩公告</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0423/2026042301111_c.pdf">IFRS一季报</a>及比较期；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0427/2026042701621_c.pdf">2025年报</a>及历年年报；<a href="https://www.chinatelecom-h.com/tc/ir/presentations/intpre260820.pdf">中期演示</a>、<a href="https://www.chinatelecom-h.com/sc/media/press/p260820.pdf">新闻稿</a>、<a href="https://roadshow.sseinfo.com/activityDetails/39928">官方文字问答</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000552_c.pdf">H股股息公告</a>及9月1日月报。数据来源于万得 Wind 金融数据服务。</p><p>审计状态：IFRS年度报表经审计；中期财务未经审核但由毕马威按香港审阅准则第2410号审阅；季报、运营、投资者材料及管理层测算未经审计。2026年A股半年报为CAS补充。情景、推算和风险阈值不是公司指引。</p><p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p></footer></main><script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els = document.querySelectorAll('.reveal');
@@ -869,6 +2098,4 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
   els.forEach(function(e){ io.observe(e); });
 })();
-</script>
-</body>
-</html>
+</script></body></html>

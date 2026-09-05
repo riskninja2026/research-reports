@@ -371,27 +371,30 @@
       "name": "中国电信",
       "name_en": "China Telecom",
       "tickers": [
-        "00728.HK",
-        "601728.SH"
+        "601728.SH",
+        "00728.HK"
       ],
       "ticker_label": null,
       "venue": "HKEX",
       "sector_zh": "通信服务",
       "chip": "电信运营",
-      "period_label": "2026中期",
+      "period_label": "2026中期及推算Q2",
       "cutoff": "2026-06-30",
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "穿透增值税口径扰动、单二季度利润压力、算力资本转向、AI商业化、应收账龄、股息与ROE修复的估值边界。",
-      "verdict": "中性",
-      "verdict_code": "neutral",
+      "hook": "现金回升不等于分红恢复：盈利压力、算力投入与实际付款覆盖，决定股息增长能否兑现。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
       "published": "2026-08-21",
       "published_at": "2026-08-21T04:06:56-04:00",
-      "revised": "2026-08-29",
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "更新行情及股息折现模型；纠正资本承诺的比较基期、实际支付与宣派股息的区分，并按除净日重算持有期分红。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
