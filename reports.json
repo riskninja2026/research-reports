@@ -1389,15 +1389,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "拆解手机高端化、AIoT变现、汽车单位经济、AI与芯片投入、海外增长、现金质量、治理及事件后估值。",
-      "verdict": null,
-      "verdict_code": null,
+      "hook": "高端化未保住单位利润；重核现金索取权与期后稀释，以全分摊利润估值检验汽车及AI修复。",
+      "verdict": "负面",
+      "verdict_code": "negative",
       "published": "2026-08-19",
       "published_at": "2026-08-19T06:50:58-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "classic",
-      "style_hash": "e65895ac71853b897ef3203361e0c8c2",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "重核现金资本开支与中期审阅状态，重建净金融资产及稀释股数代理，加入期后激励与注销股份；以全分摊利润驱动分部估值，统一情景、敏感性和最终判断。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
