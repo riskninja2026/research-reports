@@ -597,15 +597,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "东深现行机制缓冲短期水量波动，其他水务扩张却伴随较低利润率、应收与资本投入；拆解一次性收益、现金覆盖、2027供水价格与分部估值边界。",
-      "verdict": "中性",
-      "verdict_code": "neutral",
+      "hook": "东深经营期限要求区分续期与不续期情景；利润增长仍需回款与现金分配验证，按分部加总重估当前质量溢价。",
+      "verdict": "负面",
+      "verdict_code": "negative",
       "published": "2026-08-28",
       "published_at": "2026-08-28T23:37:18-04:00",
-      "revised": "2026-08-29",
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "更新行情及期后公告，补充东深经营期限和资产交还条款，改用分部加总主估值，并统一现金股息与平衡价的计算口径。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
