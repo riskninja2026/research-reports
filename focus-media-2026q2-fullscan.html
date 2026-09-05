@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:,">
-<title>分众传媒 2026年中期业绩全景尽调</title>
-<style>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="data:,"><title>分众传媒 2026Q2 Fullscan 全景尽调</title><style>
 :root{
   --paper:#EDEFF2;
   --card:#F8F9FB;
@@ -202,340 +195,103 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   .reveal{opacity:1;transform:none;transition:none}
 }
 :focus-visible{outline:2px solid var(--plum);outline-offset:3px}
-</style>
-</head>
-<body>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">分众传媒 002027.SZ ｜ 全景尽调 ｜ 财务截至2026.06.30 · 行情截至2026.08.18收盘</div>
-    <h1>主业没有崩，<br>客户结构却在变窄</h1>
-    <p class="lede">上半年归母净利润继续增长，楼宇媒体毛利率也在改善，表面上像是广告需求复苏。<b>但处置数禾抬高了报表利润，互联网增量又高度集中于阿里体系；新潮交易还会先稀释每股价值，再等待协同。</b>当前价格已接近独立经营的基准价值上沿，后续回报取决于客户多元化和并购兑现，而不是利润表标题。</p>
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
 
-    <div class="dual">
-      <div>
-        <div class="tag">单二季度广告主业扣非代理同比</div>
-        <div class="big a">−3.1%</div>
-        <div class="cap">剔除权益法投资收益后的分析口径，弱于上半年、但远好于公司扣非表观降幅。</div>
-      </div>
-      <div>
-        <div class="tag">第一大客户收入占比</div>
-        <div class="big b">21.1%</div>
-        <div class="cap">按匿名客户表与关联方披露的相同金额勾稽推断为阿里体系。</div>
-      </div>
-    </div>
-  </div>
-</header>
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
 
-<main class="wrap">
-
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">财务底图</div>
-  <h2>轻资产媒体网络仍有高毛利，五年盈利却未回到前高</h2>
-  <p>分众向品牌广告主及代理商销售楼宇电梯电视、海报和影院银幕广告发布服务，自营网络承担媒资租赁与运营成本，加盟及参股网络扩大覆盖。广告通过工作、居住和消费场景交付；截至七月末，自营媒体约二百二十五万台／个，另合作三千六百余家影院。收入以楼宇媒体为绝对核心，客户行业切换和物业成本共同决定利润率。</p>
-
-  <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">营业收入</div><div class="v">59.91<span class="u">亿元</span></div><div class="d"><span class="down">同比 −1.98%</span><span>2026年上半年</span></div></div>
-    <div class="cell"><div class="k">毛利</div><div class="v">42.26<span class="u">亿元</span></div><div class="d"><span class="up">毛利率 70.54%</span><span>同比 +2.25pt</span></div></div>
-    <div class="cell"><div class="k">营业利润</div><div class="v">35.18<span class="u">亿元</span></div><div class="d"><span class="up">同比 +11.03%</span><span>利润率 58.71%</span></div></div>
-    <div class="cell"><div class="k">归母净利润</div><div class="v">31.28<span class="u">亿元</span></div><div class="d"><span class="up">同比 +17.39%</span><span class="down">扣非 22.91亿元</span></div></div>
-    <div class="cell"><div class="k">经营活动现金流量净额</div><div class="v">44.53<span class="u">亿元</span></div><div class="d"><span class="up">同比 +30.91%</span><span>含回款释放</span></div></div>
-    <div class="cell"><div class="k">自由现金流代理</div><div class="v">39.61<span class="u">亿元</span></div><div class="d"><span class="up">同比 +19.85%</span><span>现金资本开支 4.92亿元</span></div></div>
-  </div>
-
-  <h3>最新每股与资本回报</h3>
-  <div class="grid">
-    <div class="cell"><div class="k">基本每股收益</div><div class="v">0.2166<span class="u">元</span></div><div class="d"><span>半年累计</span></div></div>
-    <div class="cell"><div class="k">加权净资产收益率</div><div class="v">20.44<span class="u">%</span></div><div class="d"><span>半年口径，不简单年化</span></div></div>
-    <div class="cell"><div class="k">每股归母净资产</div><div class="v">0.969<span class="u">元</span></div><div class="d"><span>期末权益／实际总股本</span></div></div>
-  </div>
-
-  <h3>五年合并财务轨迹</h3>
-  <div class="tblscroll">
-    <table class="tbl" data-financials="history">
-      <caption>完整年度；金额为亿元，每股指标为元，FCF代理为经营现金流减现金资本开支</caption>
-      <thead><tr><th>年度</th><th>收入</th><th>毛利／率</th><th>营业利润／率</th><th>归母净利／率</th><th>EPS／ROE</th><th>BVPS</th><th>经营现金流</th><th>资本开支</th><th>自由现金流代理</th></tr></thead>
-      <tbody>
-        <tr><td>2021</td><td>148.36</td><td>100.20／67.53%</td><td>77.45／52.20%</td><td>60.63／40.87%</td><td>0.4198／33.13%</td><td>1.273</td><td>95.90</td><td>2.50</td><td>93.40</td></tr>
-        <tr><td>2022</td><td>94.25</td><td>56.28／59.71%</td><td>35.07／37.21%</td><td>27.90／29.60%</td><td>0.1932／14.82%</td><td>1.174</td><td>66.99</td><td>0.95</td><td>66.04</td></tr>
-        <tr><td>2023</td><td>119.04</td><td>77.94／65.48%</td><td>57.92／48.65%</td><td>48.27／40.55%</td><td>0.3342／28.42%</td><td>1.225</td><td>76.78</td><td>2.73</td><td>74.05</td></tr>
-        <tr><td>2024</td><td>122.62</td><td>81.25／66.26%</td><td>60.41／49.27%</td><td>51.55／42.04%</td><td>0.3570／29.91%</td><td>1.179</td><td>66.42</td><td>3.18</td><td>63.23</td></tr>
-        <tr><td>2025</td><td>127.59</td><td>89.93／70.48%</td><td>38.92／30.51%</td><td>29.46／23.09%</td><td>0.2040／18.28%</td><td>0.987</td><td>72.09</td><td>1.57</td><td>70.52</td></tr>
-        <tr class="grp"><td>2021—25 CAGR</td><td>−3.70%</td><td>−2.67%／—</td><td>−15.80%／—</td><td>−16.51%／—</td><td>与归母一致／—</td><td>−6.17%</td><td>−6.89%</td><td>—</td><td>−6.79%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>最新季度与滚动口径</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>单二季度由半年累计减一季度累计推算；LTM为上年全年加本期半年、减上年同期</caption>
-      <thead><tr><th>指标</th><th>2026年单二季度</th><th>同比／变化</th><th>LTM</th></tr></thead>
-      <tbody>
-        <tr><td>营业收入</td><td>30.76亿元</td><td class="down">−5.48%</td><td>126.38亿元</td></tr>
-        <tr><td>毛利率</td><td>72.24%</td><td class="up">+0.81pt</td><td>71.57%</td></tr>
-        <tr><td>营业利润</td><td>16.46亿元</td><td class="down">−8.54%</td><td>42.42亿元</td></tr>
-        <tr><td>归母净利润</td><td>13.39亿元</td><td class="down">−12.49%</td><td>34.10亿元</td></tr>
-        <tr><td>扣非归母净利润</td><td>12.24亿元</td><td class="down">−17.06%</td><td>25.45亿元</td></tr>
-        <tr><td>经营活动现金流量净额</td><td>23.15亿元</td><td class="up">+23.61%</td><td>82.60亿元</td></tr>
-        <tr><td>现金资本开支</td><td>2.78亿元</td><td class="down">约为上年五倍</td><td>5.53亿元</td></tr>
-        <tr><td>自由现金流代理</td><td>20.37亿元</td><td class="up">+11.91%</td><td>77.08亿元</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>媒体分部与增长结构</h3>
-  <div data-financials="segments" class="tblscroll">
-    <table class="tbl">
-      <caption>2026年上半年；金额为亿元；CAGR使用2021—2025完整年度可比端点</caption>
-      <thead><tr><th>媒体类型</th><th>收入／占比</th><th>同比</th><th>毛利率</th><th>四年CAGR</th><th>经济特征</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>楼宇媒体</td><td>56.29／93.95%</td><td>−0.05%</td><td>69.77%</td><td>−3.04%</td><td>核心利润池，承担媒资租赁</td></tr>
-        <tr><td>影院媒体</td><td>3.45／5.76%</td><td class="down">−26.29%</td><td>82.64%</td><td>−14.08%</td><td>高毛利、小体量、波动大</td></tr>
-        <tr><td>其他</td><td>0.17／0.29%</td><td class="up">+42.57%</td><td>78.41%</td><td>+16.75%</td><td>规模尚不具决策意义</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">二〇二五年营业利润、归母与扣非利润均受到数禾长期股权投资减值影响；跨越该季度的LTM不能视为稳态。半年报未经审计。历史CAGR只描述完整周期端点，不代表线性趋势。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">客户迁移</div>
-  <h2>互联网接棒快消，增长却集中在关联客户</h2>
-  <p>广告预算并非全面回暖，而是在行业之间迁移。日用消费品仍是最大收入池，但收缩幅度超过集团降幅；互联网迅速补位，房产家居也反弹。问题在于，行业看似更分散，实际客户集中度却明显提高。</p>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026年上半年客户行业结构；楼宇、影院及其他媒体合并，金额为亿元</caption>
-      <thead><tr><th>客户行业</th><th>收入</th><th>收入占比</th><th>同比</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>日用消费品</td><td>28.99</td><td>48.39%</td><td class="down">−14.74%</td></tr>
-        <tr><td>互联网</td><td>16.55</td><td>27.63%</td><td class="up">+68.04%</td></tr>
-        <tr><td>交通</td><td>3.22</td><td>5.38%</td><td class="down">−21.73%</td></tr>
-        <tr><td>房产家居</td><td>2.90</td><td>4.85%</td><td class="up">+51.10%</td></tr>
-        <tr><td>娱乐休闲</td><td>2.86</td><td>4.78%</td><td class="down">−20.31%</td></tr>
-        <tr><td>商业及服务业</td><td>2.31</td><td>3.86%</td><td class="down">−4.30%</td></tr>
-        <tr><td>通讯</td><td>1.52</td><td>2.54%</td><td class="down">−53.47%</td></tr>
-        <tr><td>杂项</td><td>1.55</td><td>2.59%</td><td class="down">−20.78%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="grid">
-    <div class="cell"><div class="k">第一大客户收入</div><div class="v">12.64<span class="u">亿元</span></div><div class="d"><span class="down">集中度显著偏高</span><span>匿名披露</span></div></div>
-    <div class="cell"><div class="k">前五大客户</div><div class="v">41.70<span class="u">%</span></div><div class="d"><span class="down">当期集中度</span><span>较全年口径上升</span></div></div>
-    <div class="cell"><div class="k">非经常性损益</div><div class="v">8.38<span class="u">亿元</span></div><div class="d"><span class="down">占归母利润 26.8%</span><span>主要来自数禾退出</span></div></div>
-  </div>
-
-  <div class="flowbox">
-    <svg viewBox="0 0 920 250" role="img" aria-label="分众传媒2026年上半年客户行业收入同比变化桥">
-      <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6D7B88"/></marker></defs>
-      <line x1="205" y1="125" x2="246" y2="125" stroke="#6D7B88" stroke-width="2" marker-end="url(#arrow)"/>
-      <line x1="425" y1="125" x2="466" y2="125" stroke="#6D7B88" stroke-width="2" marker-end="url(#arrow)"/>
-      <line x1="645" y1="125" x2="686" y2="125" stroke="#6D7B88" stroke-width="2" marker-end="url(#arrow)"/>
-      <rect x="25" y="68" width="180" height="114" fill="#A32B57"/><text x="115" y="103" text-anchor="middle" fill="#FFFFFF" font-size="13">日消收缩</text><text x="115" y="145" text-anchor="middle" fill="#FFFFFF" font-size="25" font-weight="600">−5.01亿元</text>
-      <rect x="245" y="68" width="180" height="114" fill="#2C6A57"/><text x="335" y="103" text-anchor="middle" fill="#FFFFFF" font-size="13">互联网增长</text><text x="335" y="145" text-anchor="middle" fill="#FFFFFF" font-size="25" font-weight="600">+6.70亿元</text>
-      <rect x="465" y="68" width="180" height="114" fill="#A32B57"/><text x="555" y="103" text-anchor="middle" fill="#FFFFFF" font-size="13">其余行业合计</text><text x="555" y="145" text-anchor="middle" fill="#FFFFFF" font-size="25" font-weight="600">−2.90亿元</text>
-      <rect x="685" y="68" width="210" height="114" fill="#1E4B8F"/><text x="790" y="103" text-anchor="middle" fill="#E9EDF3" font-size="13">阿里广告收入增量</text><text x="790" y="145" text-anchor="middle" fill="#FFFFFF" font-size="25" font-weight="600">+7.73亿元</text>
-    </svg>
-    <div class="flow-note"><span class="badge">结构桥</span><span>阿里体系广告收入增量大于互联网客户整体增量，说明其他互联网客户合计并未同步扩张；金额来自关联方附注与客户行业表的同比差分。</span></div>
-  </div>
-
-  <div class="callout"><b>勾稽而非实名：</b>前五客户表的第一名未披露名称，但其金额及占比与阿里巴巴集团及附属企业广告收入、杭州灏月及关联方交易表完全一致，应表述为“按金额勾稽推断”。</div>
-  <p>利润质量也呈现同样的“表面弱、底层没那么差”。公司扣非仍包含权益法投资收益，而上年同期数禾贡献形成高基数；剔除该项后的分析代理显示，上半年广告主业同比增长约8.0%，单二季度为 <strong>12.208亿元，较上年同期下降</strong>。该代理未进一步调整税项和其他投资收益，不是公司定义的KPI。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">资源效率</div>
-  <h2>电视屏扩、海报减，毛利改善更像结构优化</h2>
-  <p>核心楼宇收入基本稳定，而点位结构主动向电视屏倾斜，楼宇成本同步下降。这个组合支持“屏型、位置和租金结构优化”，却无法证明提价或填充率上升：点位为七月末快照，财务为上半年累计，公司也没有披露单屏收入、实际折扣、同点位销售或续租率。</p>
-  <div class="rows">
-    <div class="row"><div class="nm">自营电视<span>较年末</span></div><div class="track"><div class="fill" style="width:29%"></div></div><div class="fig">+3.5%</div></div>
-    <div class="row"><div class="nm">自营海报<span>较年末</span></div><div class="track"><div class="fill alt" style="width:100%"></div></div><div class="fig">−12.1%</div></div>
-    <div class="row"><div class="nm">加盟电视<span>较年末</span></div><div class="track"><div class="fill soft" style="width:79%"></div></div><div class="fig">−9.6%</div></div>
-    <div class="row"><div class="nm">参股海报<span>较年末</span></div><div class="track"><div class="fill soft" style="width:47%"></div></div><div class="fig">−5.7%</div></div>
-  </div>
-  <p class="small">横条按绝对变化幅度相对最大项标准化；只表示方向与幅度，不代表点位规模。自营媒体合计较年末减少4.0%，但电视与海报的经营权质量并不等同。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">楼宇媒体成本</div><div class="v">−8.24<span class="u">%</span></div><div class="d"><span class="up">降幅快于收入</span><span>上半年同比</span></div></div>
-    <div class="cell"><div class="k">租赁现金支出</div><div class="v">12.18<span class="u">亿元</span></div><div class="d"><span class="up">同比减少 1.16亿元</span><span>含本金及利息</span></div></div>
-    <div class="cell"><div class="k">应收周转天数代理</div><div class="v">97.7<span class="u">天</span></div><div class="d"><span>高集中客户仍需监测</span></div></div>
-  </div>
-  <p>公司引述的第三方刊例价数据显示广告市场增长，但刊例价不等于实际成交价，也不能与分众收入直接作“超预期／低于预期”比较。核心电梯资源的稀缺性提供议价基础，广告预算周期和物业租金刚性则构成经营杠杆；当前证据只确认成本效率，不足以确认需求全面复苏。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">现金回报</div>
-  <h2>回款抬高现金流，高股息仍由金融资产提供缓冲</h2>
-  <p>经营现金流增长主要来自应收项目由占用转为释放，而不是经营利润同步扩张。将经营性应收和应付变化剔除后，现金创造反而小幅下降；再扣租赁现金，才更接近楼宇媒体网络可分配给股东的所有者收益。</p>
-  <div class="grid">
-    <div class="cell"><div class="k">应收项目同比顺风</div><div class="v">+12.28<span class="u">亿元</span></div><div class="d"><span class="down">不可机械外推</span></div></div>
-    <div class="cell"><div class="k">营运资金调整OCF代理</div><div class="v">37.07<span class="u">亿元</span></div><div class="d"><span class="down">同比 −2.53%</span></div></div>
-    <div class="cell"><div class="k">所有者FCF代理</div><div class="v">27.43<span class="u">亿元</span></div><div class="d"><span>再扣租赁现金</span><span>扣非覆盖 119.8%</span></div></div>
-    <div class="cell"><div class="k">压力口径所有者FCF</div><div class="v">19.38<span class="u">亿元</span></div><div class="d"><span class="down">再扣应收释放</span></div></div>
-    <div class="cell"><div class="k">租赁调整后净现金</div><div class="v">89.29<span class="u">亿元</span></div><div class="d"><span>含理财与定存，扣借款和租赁</span></div></div>
-    <div class="cell"><div class="k">分红后净现金</div><div class="v">54.63<span class="u">亿元</span></div><div class="d"><span class="up">偿债并非核心风险</span></div></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>资本回报与治理边界；金额为亿元</caption>
-      <thead><tr><th>事项</th><th>最新事实</th><th>投资含义</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>2021—25累计返还</td><td>现金分红253.89；同期FCF代理367.24；无证券发行</td><td>分红约占FCF的69.1%，现金层面为净资本返还者</td></tr>
-        <tr><td>2025年末期股息</td><td>27.44；每股0.19元，七月支付</td><td>报告利润受减值压低，派息由存量金融资产缓冲</td></tr>
-        <tr><td>2026年中期股息</td><td>拟派7.22；每股0.05元</td><td>日历年两笔合计每股约0.24元，现价收益率约4.8%</td></tr>
-        <tr><td>回购与员工持股</td><td>无股份回购；员工计划余量约0.01%</td><td>本期不存在回购抵销交易稀释</td></tr>
-        <tr><td>控制与关联监督</td><td>江南春控制23.72%；阿里一致行动体系8.88%</td><td>创始人兼董事长、总裁和CEO；关联广告缺第三方折扣区间</td></tr>
-        <tr><td>云锋基金</td><td>拟认购2.00；关联方拟认购6.00</td><td>高分红之外仍有财务投资，需监测资本配置纪律</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>分众依然是低传统杠杆、强金融资产覆盖的现金给予者，但“现金很多”不等于每一笔资本配置都创造价值。分红可持续性要由正常化所有者FCF覆盖，而不是依赖持续压缩应收或变现金融资产。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">并购事件</div>
-  <h2>新潮先带来规模与稀释，协同尚未进入报表</h2>
-  <p>新潮的住宅社区网络与分众的核心商务楼宇、大客户池具有互补性，但交易本身并不便宜。当前修订稿以股份支付为主，既没有业绩承诺，也没有减值补偿；原股东先承受经济份额下降，再等待客户导流、统一媒资采购和单屏收入改善。</p>
-  <div class="grid">
-    <div class="cell"><div class="k">九成股权交易对价</div><div class="v">77.94<span class="u">亿元</span></div><div class="d"><span>股份 77.648亿元</span><span>现金 0.296亿元</span></div></div>
-    <div class="cell"><div class="k">拟发行股份</div><div class="v">14.65<span class="u">亿股</span></div><div class="d"><span>修订稿发行价 5.30元</span><span class="down">旧股东份额稀释 9.21%</span></div></div>
-    <div class="cell"><div class="k">备考商誉</div><div class="v">46.80<span class="u">亿元</span></div><div class="d"><span class="down">占备考净资产 19.05%</span><span>无减值补偿</span></div></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>新潮历史经营；2025M9为前九个月，金额为亿元</caption>
-      <thead><tr><th>期间</th><th>收入</th><th>归母净利润</th><th>毛利率</th><th>解读</th></tr></thead>
-      <tbody>
-        <tr><td>2023</td><td>18.94</td><td>−1.399</td><td>25.42%</td><td>仍处亏损</td></tr>
-        <tr><td>2024</td><td>19.88</td><td>0.419</td><td>36.40%</td><td>当年转正</td></tr>
-        <tr class="grp"><td>2025M9</td><td>13.83</td><td>1.193</td><td>40.08%</td><td>盈利改善，但应收周转放缓</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>以标的九个月归母净利润简单年化，对应100%股权评估值约 <strong>52.45倍</strong>；官方备考口径下，每股收益在最新历史期被摊薄 <strong>6.78%</strong>。高倍数并不必然意味着交易失败，但要求协同必须落到交割后的毛利、单屏收入和每股收益，而不是只落到点位数量。</p>
-  <div class="callout"><b>最新监管口径：</b>截至基准日，审核因财务资料过期仍处中止状态；八月十九日更新文件认定交易构成重大资产重组及关联交易，但不构成重组上市、控制权不变。八月二十七日股东会拟审议延长交易决议有效期，尚不能写成已经通过。</div>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">增长选项</div>
-  <h2>AI与海外有动作，经济性仍未单独披露</h2>
-  <div class="stacks">
-    <div class="stack">
-      <div class="cap">AI及本地生活</div>
-      <div class="stackbar"><div class="seg p" style="width:100%">效率工具与产品化选项</div></div>
-      <p class="small">众小智、分众智投、“碰一下”和钛镁时代已经落地，但没有独立收入、客户数、续费、毛利或填充率提升数据，不给予单独估值。</p>
-    </div>
-    <div class="stack">
-      <div class="cap">海外扩张</div>
-      <div class="stackbar"><div class="seg q" style="width:100%">少数市场盈利，多数仍投入</div></div>
-      <p class="small">境外电视继续扩张、海报继续收缩；韩国、新加坡和马来西亚盈利，其他多个新市场仍亏损。公司没有披露海外总收入与现金回报。</p>
-    </div>
-  </div>
-
-  <h3>最新官方问答能回答什么</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>二〇二六年四月二十九日发行人整理的电话业绩说明会问答；早于半年报，不是逐字稿或Q2电话会</caption>
-      <thead><tr><th>主题</th><th>提供的增量</th><th>仍未回答</th></tr></thead>
-      <tbody>
-        <tr><td>广告市场</td><td>公司转述行业刊例价与强弱行业</td><td>实际成交价、折扣、填充率与Q2趋势</td></tr>
-        <tr><td>客户结构</td><td>即时零售、AI应用和网络服务带动互联网投放</td><td>阿里以外互联网客户、续投与价格／量拆分</td></tr>
-        <tr><td>AI产品</td><td>线下场景与营销智能体的战略定位</td><td>收入、留存、成本节约和可验证目标</td></tr>
-        <tr><td>点位布局</td><td>继续下沉并优化密度与结构</td><td>租金、资本开支、回收期和单屏经济性</td></tr>
-        <tr><td>海外与交易</td><td>长期扩张方向及当时的正常推进表述</td><td>海外回报；交易表述已被中止审核与新公告覆盖</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>对半年报披露后至报告基准日的官方IR记录进行定向检索，没有找到更晚的H1说明会或机构调研问答。A股不在 earningscalls.dev 的逐字稿覆盖范围，因此本报告没有把二手摘要或旧问答包装成新的管理层口径。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">市场定价</div>
-  <h2>屏显倍数失真，正常化估值已接近基准上沿</h2>
-  <p>半年报在收盘后发布，八月十八日还不是事件后交易日。收盘价 <strong>4.96元</strong>对应总市值 <strong>716.33亿元</strong>；年初至今下跌 <strong>29.99%</strong>，同期沪深300上涨 <strong>2.07%</strong>，过去一年最大回撤为 <strong>44.18%</strong>。这些数据说明市场已经下修长期预期，却不能证明本次业绩已经完成定价。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">报告TTM P/E</div><div class="v">21.01<span class="u">×</span></div><div class="d"><span class="down">Wind屏显 19.89×仍停留Q1口径</span><span>报告口径跨越减值</span></div></div>
-    <div class="cell"><div class="k">经济正常化P/E</div><div class="v">14.12<span class="u">×</span></div><div class="d"><span>正常化利润约 50.734亿元</span><span>分析调整</span></div></div>
-    <div class="cell"><div class="k">现价隐含正常利润</div><div class="v">45—48<span class="u">亿元</span></div><div class="d"><span>按十五至十六倍</span><span>接近半年扣非年化</span></div></div>
-  </div>
-
-  <h3>经营质量横向参照</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2025完整年度；同业用于经营边界，不机械采用行业中位估值</caption>
-      <thead><tr><th>公司</th><th>收入／同比</th><th>毛利率</th><th>净利率</th><th>经营现金流</th><th>可比边界</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>分众传媒</td><td>见财务底图</td><td>见财务底图</td><td>受数禾减值扰动</td><td>见财务底图</td><td>电梯楼宇与影院网络</td></tr>
-        <tr><td>兆讯传媒</td><td>约5.5亿元／−17.48%</td><td>26.71%</td><td>2.20%</td><td>4.35亿元</td><td>高铁站与商圈屏幕</td></tr>
-        <tr><td>三人行</td><td>36.65亿元／−12.92%</td><td>16.78%</td><td>5.18%</td><td>5.43亿元</td><td>品牌整合营销</td></tr>
-        <tr><td>蓝色光标</td><td>686.93亿元／+12.99%</td><td>2.63%</td><td>0.32%</td><td>6.32亿元</td><td>数字营销与媒体采购</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>三年经营情景</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>分析员情景，非公司指引；金额为亿元；交易中性，不预先计入新潮协同</caption>
-      <thead><tr><th>情景</th><th>2026E 收入／FCF</th><th>2027E 收入／FCF</th><th>2028E 收入／净利／FCF</th><th>核心驱动</th></tr></thead>
-      <tbody>
-        <tr><td>悲观</td><td>116／34.0</td><td>113.1／33.0</td><td>110.3／36.4／与上年持平</td><td>客户集中未缓解，净利率回落至约三成三</td></tr>
-        <tr class="grp"><td>基准</td><td>121／46.0</td><td>125.8／47.8</td><td>130.9／52.3／49.8</td><td>收入低个位数增长，净利率约四成</td></tr>
-        <tr><td>乐观</td><td>127／50.0</td><td>137.2／54.0</td><td>148.1／62.2／57.8</td><td>客户多元化、租金效率与媒资经营杠杆共同兑现</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>三种方法交叉估值</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>每股价值为元；P/E、所有者FCF DCF与股息／现金收益率法独立估值</caption>
-      <thead><tr><th>方法</th><th>悲观</th><th>基准</th><th>乐观</th><th>关键假设</th></tr></thead>
-      <tbody>
-        <tr><td>正常化P/E</td><td>2.45</td><td>4.84</td><td>6.95</td><td>2028净利×十二／十六／十九倍，折现两年</td></tr>
-        <tr><td>所有者FCF DCF</td><td>2.64</td><td>4.98</td><td>7.79</td><td>折现率11%／9.5%／8.5%，永续增速1%／2%／3%</td></tr>
-        <tr><td>股息／现金收益率</td><td>2.54</td><td>4.59</td><td>6.54</td><td>FCF派现七至八成半，要求收益率6.5%／5.2%／4.5%</td></tr>
-        <tr class="grp"><td>协调区间</td><td>2.5—2.6</td><td>4.6—5.0</td><td>6.5—7.8</td><td>不机械平均，按共同区间判断</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>基准三种方法落在现价附近，意味着市场并未要求明显增长，却已经要求核心利润止跌、现金转化维持，并购不继续毁损每股价值。最强正方是楼宇媒资效率与客户池仍能跨行业迁移；最强反方是单一关联客户承担增长、新潮高倍数且先摊薄。当前估值适合等待经营兑现，不属于无需验证的深度折价。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">最终判断</div>
-  <h2>广告主业仍有韧性，安全边际要由集中度下降来创造</h2>
-  <p>核心论点不是“分众失去媒体网络价值”，而是本期利润标题无法回答增长质量。若互联网投放扩散到阿里以外客户、电视屏资源优化继续转化为现金利润，且新潮交割后迅速改善单屏经济性，当前价格仍可能进入乐观路径；在这些反证兑现前，基准上沿不值得为一次性利润支付额外溢价。</p>
-  <div class="finds">
-    <div class="find good"><div class="t">核心需求恢复</div><p>二〇二六年下半年楼宇收入需达到 <strong>64.1亿元以上</strong>，才高于上年同期；同时剔除阿里体系后的客户收入应转正。</p></div>
-    <div class="find warn"><div class="t">集中度下降</div><p>未来两个定期报告的第一大客户占比应降到 <strong>20%以下</strong>；否则互联网增长继续按单客户依赖估值。</p></div>
-    <div class="find good"><div class="t">现金并非透支</div><p>下半年营运资金调整后的经营现金流应达到 <strong>35亿元以上</strong>，以覆盖租赁、资本开支与股息。</p></div>
-    <div class="find warn"><div class="t">新潮兑现协同</div><p>若完成交割，未来 <strong>12—18个月</strong>标的毛利率应超过四成五，且实际每股收益不再稀释。</p></div>
-    <div class="find good"><div class="t">AI形成经济KPI</div><p>未来 <strong>2次</strong>定期报告至少披露收入、付费客户、续费或填充率提升中的一项，否则只计内部效率工具。</p></div>
-    <div class="find warn"><div class="t">失败边界</div><p>上述五项中若有 <strong>3项以上</strong>在年报及后续更新中落空，基准逻辑失效，估值应向悲观情景收敛。</p></div>
-  </div>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">方法来源</div>
-  <h2>以中文监管文件控制事实，以推算分离口径噪音</h2>
-  <p>控制源为分众传媒中文半年度、季度和年度报告，以及深交所／巨潮资讯披露的新潮重大资产重组文件、审核状态与交易性质说明。Wind用于同一时点行情、市场风险和可比公司数据；公司官网用于核验业务与投资者关系入口。</p>
-  <p>单二季度、LTM、广告主业扣非代理、营运资金调整现金流、所有者FCF、净现金、情景预测与估值均由未四舍五入原值重算。推算只用于分析，不替代公司会计指标；第一大客户身份为多表金额勾稽推断。四月问答是发行人整理纪要而非逐字稿，半年报后没有发现更新交流记录。</p>
-  <p class="small">主要文件：<a href="https://pdf.dfcfw.com/pdf/H2_AN202608181828113472_1.pdf">《2026年半年度报告》</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202604291821715310_1.pdf">《2026年第一季度报告》</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-04-29/1225251512.PDF">《2025年年度报告》</a>、<a href="https://static.cninfo.com.cn/finalpage/2025-08-30/1224625197.PDF">《2025年半年度报告》</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-03-31/1225057551.PDF">新潮传媒重大资产重组报告书</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202608181828113476_1.pdf">交易性质说明</a>及<a href="https://www.focusmedia.cn/investorinfo/financial">公司财务信息入口</a>。当期新文件通过东方财富正式公告镜像取得并回核正文身份；市场数据来源于万得 Wind 金融数据服务。</p>
-</section>
-
-<footer>
-  <p>财务数据截至二〇二六年六月三十日，半年报披露日为八月十九日且未经审计；行情截至八月十八日中国市场收盘。交易期后状态采用同日最新公告，后续股东会尚未发生。</p>
-  <p>推算族包括单二季度、LTM、客户收入桥、权益法收益调整、营运资金调整现金流、所有者FCF、净现金、交易稀释、三年情景及估值；情景不是公司指引。本文不构成投资建议。</p>
-</footer>
-
-</main>
-
-<script>
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
+</style></head><body><header class="hero"><div class="wrap"><div class="eyebrow">分众传媒 002027.SZ ｜ 2026Q2 全景尽调 ｜ 财务截止2026.06.30 · 更新2026.09.05</div>
+<h1>现金回报有底子，<br>并购还缺每股增益</h1>
+<p class="lede">楼宇广告的高毛利仍在，分红也有明确规划，分众并没有失去赚钱能力。<b>但回款改善掩盖了需求分化，新潮的历史盈利又不足以抵销拟发行股份。</b>本次重估先扣清真实租赁付款，再问现价是否足够补偿客户和资本配置风险。</p>
+<div class="dual"><div><div class="tag">H1租赁付款后自由现金流 · 推算</div><div class="big a">27.43亿元</div><div class="cap">仍有现金盈余；增长含应收回收的时点影响，不是全部可永久分配的利润。</div></div><div><div class="tag">新潮历史备考每股收益 · 更新拟发行股数后</div><div class="big b">−8.17%</div><div class="cap">备考是假设交易于2025年初完成的模拟口径；非实际交割结果，未来协同待验证。</div></div></div></div></header><main class="wrap"><div class="callout"><b>修订 2026-09-05：</b>统一租赁付款后现金口径；更新新潮全年审计利润、审核与发行条款；补入最新问答、股息时点和完整情景估值。原文对现金覆盖和并购盈利基础的判断据此调整。</div><section class="reveal on" id="tldr" ><div class="slabel">三十秒版本 · 先看结论</div><h2>先看赚钱能力，再看每股代价</h2><div class="tldr"><ul>
+<li><b>它是谁：</b>分众向品牌客户出售楼宇电梯和影院广告，向物业等支付媒体经营权费用；高毛利不代表不用交租。</li>
+<li><b>本期成绩：</b>推算单二季度收入30.76亿元、同比−5.48%；归母净利13.39亿元、同比−12.49%。</li>
+<li><b>核心矛盾：</b>网络降本支持利润，但关联客户以外需求偏弱；新潮扩大覆盖的同时，原股东需要更大盈利增量才能保住每股收益。</li>
+<li><b>容易踩的坑：</b>半年利润增长不等于第二季增长，经营现金流也不是交完全部租金后可分的钱；已除息股息不应再算未来回报。</li>
+<li data-verdict="neutral-cautious"><b>结论：</b>中性偏谨慎。现价4.88元，基准5.24元、熊市3.24元。改善判断需看到客户回暖和并购后每股盈利兑现。</li>
+</ul></div></section><section class="reveal on" id="primer" ><div class="slabel">入门</div><h2>分众卖的是覆盖人群的广告位置</h2><p>广告主把宣传预算交给分众，在通勤、办公、居住和观影场景中反复展示品牌。分众通常以<span class="g">主要责任人</span>身份提供广告发布服务，确认收入并承担履约责任；广告代理采购媒体后再转售的收入和成本口径可能不同。全国客户关系和媒体位置组织能力，是这门生意的重要资源。</p><div class="steps"><div class="step"><div class="n">环节 1</div><b>广告主或代理付款</b><p>购买媒介组合、展示时段和覆盖区域，不是购买公司屏幕。</p></div><div class="step"><div class="n">环节 2</div><b>媒体网络交付</b><p>取得<span class="g">广告经营权</span>并维护设备，将合同约定的广告展示给人群。</p></div><div class="step"><div class="n">环节 3</div><b>先付运营成本</b><p>物业租金、人员、销售、设备及坏账消耗收入；空置时仍可能要付固定费用。</p></div><div class="step"><div class="n">环节 4</div><b>剩余现金再分配</b><p>偿付租赁、更新设备后，才讨论分红、投资及收购。</p></div></div><p>归母是归属于上市公司股东的净利润；扣非再剔除规则认定的非经常性损益。除息是这笔分红权与股票分离，除息日买入者不再享有该股息。公司在深圳上市，采用中国企业会计准则（CAS），除另注明标的外均为分众合并集团。半年及一季报未经审计，单二季度由同口径累计流量相减；点位、客户占比和资产余额不可这样推算。</p><p>广告需求随品牌投放预算变化，媒体供给则受位置、经营权和租约约束。<span class="g">上刊率</span>是售出广告资源的比例；第三方<span class="g">刊例价</span>统计按广告报价计量，与含折扣的实际收入有别。本报告不借行业报价统计推断分众实际提价，也不把网络规模当销售增长。</p></section><section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="advertising-media"><div class="slabel">财务 · 业务地图</div><h2>单季收入回落，毛利率改善不足以托住归母</h2><p>楼宇是收入主体，影院是较小且波动更大的媒介。五年收入尚未回到早期高点，近年的毛利改善与归母利润并不同步；投资减值和退出损益必须另行识别。最新季度领先呈现，半年累计和最近十二个月（TTM）分别保留，避免以半年复苏替代单季判断。</p><div class="grid" data-financials="consolidated"><div class="cell" ><div class="k">营业收入</div><div class="v">30.76亿元</div><div class="d"><span>单二季度推算 · 同比−5.48% / 环比+5.52%</span></div></div><div class="cell" ><div class="k">毛利 / 毛利率</div><div class="v">22.22亿元</div><div class="d"><span>72.24% · 同比−4.41%</span></div></div><div class="cell" ><div class="k">营业利润 / 利润率</div><div class="v">16.46亿元</div><div class="d"><span>53.51% · CAS含投资等损益</span></div></div><div class="cell" ><div class="k">归母净利润 / 净利率</div><div class="v">13.39亿元</div><div class="d"><span>43.51% · 同比−12.49%</span></div></div><div class="cell" ><div class="k">经营现金流量净额</div><div class="v">23.15亿元</div><div class="d"><span>同比+23.61% · 不等于全部租赁付款后现金</span></div></div><div class="cell" ><div class="k">租赁付款后自由现金流</div><div class="v">未披露</div><div class="d"><span>单季缺租赁现金减数；不可用其他筹资现金流替代</span></div></div></div><div class="tblscroll"><table class="tbl" data-financials="history"><caption>五年完整年度 · CAS本集团 · 年报已审计；本期半年及季度未经审计 · 金额亿元、每股元、比率% · 各年原年报，重叠主要比较数一致；股息按归属财年合计，不是当年实付。</caption><thead><tr><th>项目</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead><tbody><tr><td>营业收入</td><td>148.36</td><td>94.25</td><td>119.04</td><td>122.62</td><td>127.59</td></tr><tr><td>毛利（推算）</td><td>100.20</td><td>56.28</td><td>77.94</td><td>81.25</td><td>89.93</td></tr><tr><td>毛利率（推算，%）</td><td>67.53</td><td>59.71</td><td>65.48</td><td>66.26</td><td>70.48</td></tr><tr><td>CAS营业利润</td><td>77.45</td><td>35.07</td><td>57.92</td><td>60.41</td><td>38.92</td></tr><tr><td>营业利润率（推算，%）</td><td>52.20</td><td>37.21</td><td>48.65</td><td>49.27</td><td>30.51</td></tr><tr><td>归母净利润</td><td>60.63</td><td>27.90</td><td>48.27</td><td>51.55</td><td>29.46</td></tr><tr><td>归母净利率（推算，%）</td><td>40.87</td><td>29.60</td><td>40.55</td><td>42.04</td><td>23.09</td></tr><tr><td>公司扣非归母</td><td>54.14</td><td>23.94</td><td>43.74</td><td>46.68</td><td>27.19</td></tr><tr><td>基本每股收益（EPS，元/股）</td><td>0.4198</td><td>0.1932</td><td>0.3342</td><td>0.3570</td><td>0.2040</td></tr><tr><td>加权净资产收益率（ROE，%）</td><td>33.13</td><td>14.82</td><td>28.42</td><td>29.91</td><td>18.28</td></tr><tr><td>每股归母净资产（推算）</td><td>1.273</td><td>1.174</td><td>1.225</td><td>1.179</td><td>0.987</td></tr><tr><td>经营现金流量净额</td><td>95.90</td><td>66.99</td><td>76.78</td><td>66.42</td><td>72.09</td></tr><tr><td>现金资本开支</td><td>2.50</td><td>0.95</td><td>2.73</td><td>3.18</td><td>1.57</td></tr><tr><td>筹资列租赁本息现金</td><td>29.24</td><td>27.98</td><td>31.82</td><td>30.60</td><td>25.81</td></tr><tr><td>租赁付款后FCF（推算）</td><td>64.16</td><td>38.06</td><td>42.22</td><td>32.63</td><td>44.70</td></tr><tr><td>归属财年股息（元/股）</td><td>0.338</td><td>0.420</td><td>0.330</td><td>0.330</td><td>0.340</td></tr></tbody></table></div><div class="cols" role="img" aria-label="五年收入与归母净利润同尺度趋势"><div class="col"><div class="bars"><div class="bar rev" style="height:100.0000%"></div><div class="bar np" style="height:40.8667%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:63.5258%"></div><div class="bar np" style="height:18.8048%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:80.2331%"></div><div class="bar np" style="height:32.5355%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:82.6486%"></div><div class="bar np" style="height:34.7482%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:85.9958%"></div><div class="bar np" style="height:19.8588%"></div></div></div></div><div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div><div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div><p class="small">收入修复而归母再下台阶，显示报表利润有额外扰动。两系列共用五年最大收入为柱高分母；FY2021–2025四年CAGR：收入−3.70%、归母−16.51%、扣租赁现金−8.64%。</p><div class="tblscroll"><table class="tbl" ><caption>季度与累计边界 · Q2为H1减Q1；TTM为FY2025加本期H1减上期H1；2025Q2主要指标与年报季度表勾稽。</caption><thead><tr><th>亿元</th><th>2025Q2推算</th><th>2026Q1</th><th>2026Q2推算</th><th>单季同比</th><th>环比</th><th>2025H1</th><th>2026H1</th><th>TTM推算</th></tr></thead><tbody><tr><td>收入</td><td>32.55</td><td>29.15</td><td>30.76</td><td>−5.48%</td><td>+5.52%</td><td>61.12</td><td>59.91</td><td>126.38</td></tr><tr><td>毛利</td><td>23.25</td><td>20.04</td><td>22.22</td><td>−4.41%</td><td>+10.90%</td><td>41.74</td><td>42.26</td><td>90.45</td></tr><tr><td>CAS营业利润</td><td>18.00</td><td>18.72</td><td>16.46</td><td>−8.54%</td><td>−12.05%</td><td>31.68</td><td>35.18</td><td>42.42</td></tr><tr><td>归母净利</td><td>15.30</td><td>17.90</td><td>13.39</td><td>−12.49%</td><td>−25.20%</td><td>26.65</td><td>31.28</td><td>34.10</td></tr><tr><td>公司扣非归母</td><td>14.76</td><td>10.66</td><td>12.24</td><td>−17.06%</td><td>+14.85%</td><td>24.65</td><td>22.91</td><td>25.45</td></tr><tr><td>经营现金流</td><td>18.73</td><td>21.39</td><td>23.15</td><td>+23.61%</td><td>+8.23%</td><td>34.02</td><td>44.53</td><td>82.60</td></tr><tr><td>现金资本开支</td><td>0.53</td><td>2.14</td><td>2.78</td><td>+426.97%</td><td>+29.81%</td><td>0.97</td><td>4.92</td><td>5.53</td></tr><tr><td>租赁付款后FCF</td><td>未披露</td><td>未披露</td><td>未披露</td><td>不适用</td><td>不适用</td><td>19.72</td><td>27.43</td><td>52.42</td></tr></tbody></table></div><div data-financials="segments"><div class="tblscroll"><table class="tbl" ><caption>媒体收入构成 · 亿元 · 公司法定分部附注列不适用，此处是产品分类；成本边界匹配。CAGR使用FY2021和FY2025。</caption><thead><tr><th>媒介/产品</th><th>2025H1收入</th><th>2026H1收入</th><th>占比</th><th>同比</th><th>毛利推算</th><th>毛利率推算</th><th>四年收入CAGR</th></tr></thead><tbody><tr><td>楼宇媒体</td><td>56.32</td><td>56.29</td><td>93.95%</td><td>−0.05%</td><td>39.27</td><td>69.77%</td><td>−3.04%</td></tr><tr><td>影院媒体</td><td>4.69</td><td>3.45</td><td>5.76%</td><td>−26.29%</td><td>2.85</td><td>82.64%</td><td>−14.08%</td></tr><tr><td>其他媒体</td><td>0.12</td><td>0.17</td><td>0.29%</td><td>+42.57%</td><td>0.13</td><td>78.41%</td><td>+16.75%</td></tr></tbody></table></div><div class="stacks" role="img" aria-label="半年媒体收入结构比较"><div class="stack"><div class="cap">2025H1 · 楼宇 / 影院 / 其他</div><div class="stackbar"><div class="seg p" style="width:92.13747%">楼宇</div><div class="seg q" style="width:7.66509%"></div><div class="seg r" style="width:0.19744%"></div></div></div><div class="stack"><div class="cap">2026H1 · 楼宇 / 影院 / 其他</div><div class="stackbar"><div class="seg p" style="width:93.94863%">楼宇</div><div class="seg q" style="width:5.76420%"></div><div class="seg r" style="width:0.28718%"></div></div></div></div><div class="legend"><span><i class="p"></i>楼宇</span><span><i class="q"></i>影院</span><span><i class="r"></i>其他</span></div><p class="small">楼宇占比上升也包含影院缩小的影响，并不等于楼宇收入增长。色块按各期收入占比等比绘制。</p></div><div class="tblscroll"><table class="tbl txt" ><caption>经营权模式所需参照 · 资本开支均采用总额；维持性与扩张性未分拆。</caption><thead><tr><th>经营指标</th><th>已披露 / 推算</th><th>边界</th></tr></thead><tbody><tr><td>媒体点位（2026-07-31）</td><td>自营电视125.8万台；海报99.2万个</td><td>期后快照；不同媒介不是同质产能</td></tr><tr><td>上刊率 / 广告单价 / 单点收入</td><td>未披露</td><td>没有同口径平均有效点位，不反推价格</td></tr><tr><td>客户行业（2026H1）</td><td>日消28.99亿元；互联网16.55亿元</td><td>同比−14.74% / +68.04%</td></tr><tr><td>客户集中度（2026H1）</td><td>匿名第一大客户21.09%；前五41.70%</td><td>保留匿名；实名关联交易另核验</td></tr><tr><td>租赁现金 / 租赁负债</td><td>H1本息12.18亿元；期末负债25.20亿元</td><td>本息现金在筹资列；负债为未来义务</td></tr><tr><td>回款 / 应收账款</td><td>H1销售收现69.72亿元；期末净应收26.94亿元</td><td>现金来源质量见现金节</td></tr><tr><td>扣非归母 / 投资收益</td><td>H1扣非22.91亿元；投资收益6.35亿元</td><td>净利润与税前投资项不能直接当同类相减</td></tr><tr><td>股东口径（2026H1）</td><td>EPS 0.2166元；ROE 20.44%；每股归母净资产（BVPS） 0.969元</td><td>ROE为半年加权数，非年化；单季EPS代理0.0927元</td></tr></tbody></table></div><div class="plain"><span class="pl">白话解读</span><p>五年表说明公司仍能赚钱，却不是收入持续快增的企业。第二季收入同比回落，毛利率改善只缓冲了部分压力；半年归母增长与单季归母下降可以同时成立。楼宇收入几乎持平，影院收缩使楼宇的比重更高。现金要等交完租赁款再看，单季这一项缺少完整减数，下一步先辨认利润和回款里的特殊因素。</p></div><p>TTM含数禾减值及退出损益，非稳态；媒介利润仅到毛利，无单季媒介净利。</p></section><section class="reveal on" id="profit" ><div class="slabel">利润质量</div><h2>税前经营代理降幅较小，仍不足以确认复苏</h2><p>第二季归母下降受广告收入、投资收益及税费共同影响。按两期完整利润表逐项相减，变化桥与归母差额闭合；这是会计归因，非公司未公布的量价拆分。</p><div class="wfall" role="img" aria-label="单二季度归母净利润同比变化桥"><div class="wrow"><div class="nm">毛利变化<span>收入减营业成本</span></div><div class="wtrack"><div class="wbar down" style="left:46.30841%;width:53.69159%"></div></div><div class="fig">−1.0261亿元</div></div><div class="wrow"><div class="nm">期间费用及税金<span>含销管研、财务及税金附加</span></div><div class="wtrack"><div class="wbar up" style="left:46.30841%;width:26.37225%"></div></div><div class="fig">+0.5040亿元</div></div><div class="wrow"><div class="nm">投资与其他损益<span>投资、补助、估值、减值及营业外</span></div><div class="wtrack"><div class="wbar down" style="left:17.20998%;width:55.47067%"></div></div><div class="fig">−1.0601亿元</div></div><div class="wrow"><div class="nm">所得税<span>税费用增加</span></div><div class="wtrack"><div class="wbar down" style="left:3.03490%;width:14.17508%"></div></div><div class="fig">−0.2709亿元</div></div><div class="wrow"><div class="nm">少数股东归属<span>其亏损减少，归母份额随之变化</span></div><div class="wtrack"><div class="wbar down" style="left:0.00000%;width:3.03490%"></div></div><div class="fig">−0.0580亿元</div></div><div class="wrow"><div class="nm">归母净利差额<span>2026Q2减2025Q2</span></div><div class="wtrack"><div class="wbar tot" style="left:0.00000%;width:100.00000%"></div></div><div class="fig">−1.9111亿元</div></div></div><p class="small">费用节省只能抵销部分毛利与投资损益拖累。单位亿元，条形从零累计至归母同比差额，共用最低累计值至零的刻度；底行为合计，不是新的变化。</p><p>非经常性项目的作用要分年看。FY2025对数禾的长期股权投资减值为21.52亿元，也进入公司扣非口径，因而去年扣非并不等于广告业务常态。退出后采用<span class="g">权益法</span>计量的历史投资不再贡献同样收益；今年H1又有<span class="g">资本公积转回</span>带来的5.65亿元投资收益。转回增加报表归母，但它不是同额新增广告回款。</p><p>H1非经常损益8.38亿元，占归母26.77%。处置、补助、金融资产及税影响方向不同。“净利润减所有投资收益”会混淆税前集团和税后归母；正常化须对齐税负及归属，保留持续金融收益。</p><p>更靠近广告经营的观察值，是毛利扣税金附加和销管研后的合并税前代理：Q2为14.71亿元，同比−1.95%。它尚未承担财务费用、减值、所得税及少数股东归属，只回答经营费用吸收后的方向。公司扣非减全部权益法收益的混合代理，则为12.21亿元、同比−3.07%；它既非精确广告归母，也非仅扣数禾的净利。</p><p>这些代理未显示与表观扣非同样剧烈的降幅，却仍不足以确认复苏。<span class="g">正常化归母利润</span>只用于税后全年估值情景，不能把上述税前代理直接乘上市盈率。</p><div class="plain"><span class="pl">白话解读</span><p>归母少赚的钱并不全是广告经营少赚。变化桥表明费用节省有帮助，毛利和投资等损益却仍在拖累；因此，“利润下降就是主业崩塌”和“扣掉特殊项目就恢复增长”都过强。下一次先看同口径广告收入和经营费用能否一起改善。</p></div></section><section class="reveal on" id="engine" ><div class="slabel">客户 · 资源</div><h2>大客户补位有用，广泛复苏尚缺证据</h2><p>本期增长来源更集中，不能把行业结构变化自动解释成客户多元化。关联方附注明确披露阿里巴巴集团及附属企业广告收入12.64亿元，上年同期为4.91亿元；它与匿名客户表属于不同披露维度，保留原名及原边界，不将匿名第一名直接指认为阿里。两套客户数据可能重合，也不能相加。</p><p>从全集团收入扣除这笔实名关联广告，余下客户收入由56.21亿元降至47.28亿元，同比−15.90%。这是客户依赖的算术压力检验，不是“互联网剔除阿里”指标，更不证明每笔关联交易都是阿里自身品牌投放。集团横盘仍需要大客户增量抵销其他需求；问题在于这种替换能否持续。</p><p>楼宇媒体成本同比−8.24%，降幅快于收入；七月底较上年末电视增加3.5%、海报减少12.1%。资源组合虽在变，却没有同点位净价或平均可售时长，不能证明提价或上刊率改善。物业租约能否随需求调整，比单纯新增点位更重要。</p><p>跨城市覆盖、跨行业客户组织和媒体位置组合，可能支持分众的回报，但并非法律排他性。广告主仍可转向短视频、效果广告及其他线下位置；历史高ROE不能保证预算不流失。同行差异集中在估值表比较。</p><p>最新管理层交流来自8月19日正式电话业绩说明会记录，而非此前的四月材料。对互联网增量，公司给出的解释是头部电商和AI相关广告需求；对产品则表示下半年数智化成果进入加速释放期。众小智、分众智投和“碰一下”是产品进展；钛镁的<span class="g">生成式引擎优化</span>业务面向品牌在AI推荐中的可见度。回答描述了方向，却没有可独立估值的收入、续费、毛利或现金贡献。</p><p>问答中，客户需求回答是部分直接解释，数字产品回答更接近战略目标。化妆品的双位数增长支持“结构性需求能够补位”的反方，但没有给出对集团贡献的量化桥。海外回答也以培育和扩点为主：韩国、新加坡等早期市场已盈利，其他市场仍有投入；财务表“其他地区”不是海外的同义词，不能替代单独海外回报。估值不额外附加AI或海外期权金额。</p><div class="plain"><span class="pl">白话解读</span><p>网络仍能承接新预算，降本也确有证据；但剔除实名关联广告后的集团收入仍下降，说明需求并未普遍回暖。要推翻这一担忧，应在下一份年报看到更多客户贡献收入、而非只看到覆盖位置或新产品名称增加。</p></div></section><section class="reveal on" id="cash" ><div class="slabel">现金 · 资产</div><h2>回收旧款改善现金，却不能永久支撑派息</h2><p><span class="g">租赁付款后自由现金流</span>须扣除筹资列的租赁本金和现金利息；经营活动中的短租、低值及可变租金不再扣第二次。本次统一修正旧报告开篇和五年表遗漏融资列租赁现金的问题。</p><div class="tblscroll"><table class="tbl txt" ><caption>现金质量与期末资产 · 除特别标明外比较列为2025H1，本期为2026H1；余额为2025-12-31与2026-06-30。</caption><thead><tr><th>亿元</th><th>比较值</th><th>本期 / 推算</th><th>解释</th></tr></thead><tbody><tr><td>去应收应付时点的OCF代理</td><td>38.03</td><td>37.07</td><td>同比−2.53%；只剔除两项，非全部营运资本</td></tr><tr><td>同口径再扣资本开支及租赁</td><td>23.73</td><td>19.97</td><td>同比−15.85%</td></tr><tr><td>净应收及合同资产</td><td>36.37</td><td>28.31</td><td>前值为年末；含<span class="g">合同资产</span>，不是全部已到收款条件款项</td></tr><tr><td>一年以上毛应收</td><td>15.61</td><td>15.73</td><td>老账龄仍增0.81%</td></tr><tr><td>期末货币 / 交易性金融资产</td><td>不作时点混比</td><td>40.28 / 67.82</td><td>理财非银行现金；不承诺全部即时按账面变现</td></tr><tr><td>非租赁借款 / 全部租赁负债</td><td>不作时点混比</td><td>2.55 / 25.20</td><td>借款按到期和类型合计，租赁另列</td></tr><tr><td>静态分红后流动性桥</td><td>不是9月实时余额</td><td>70.74</td><td>六月货币与交易资产扣借款、受限货币及两笔股利义务</td></tr><tr><td>再留全部租赁负债</td><td>压力观察</td><td>45.54</td><td>没有再加入估值模型扣款；只检验流动性</td></tr></tbody></table></div><p>经营性应收项目对现金同比改善贡献12.28亿元。去除应收、应付收付时间影响，结论便与表面增速不同。维持性和扩张性开支未拆分，本报告扣除实际总开支。</p><p>应收质量要同时看毛额和准备。本期毛应收44.35亿元、损失准备17.40亿元，准备比例39.24%；风险客户组准备覆盖95.23%。较高准备使净额较低，但老账龄没有随净额同步消失。按期初期末平均余额计算，净应收及合同资产周转代理为97.7天，毛额为151.8天；不宜只展示更漂亮的净额。</p><p>本期<span class="g">信用减值转回</span>支持了利润，并非新增营业收入。<span class="g">合同负债</span>较年末下降−38.77%，既可能来自履约也可能来自预收减少，须用后续合同和回款验证。净应收下降是正面信号，不能单独宣布客户信用风险已结束。</p><p>流动性桥只从六月余额扣明确可识别项目，没有混入未知的七八月经营现金。期末应付股利27.50亿元已作为一次性扣项，后续实际支付不再重复扣；货币内冻结款0.09亿元与其他资产保证金分开。数禾交易截至半年收到5.98亿元，剩余1.94亿元尚未取得更晚回款证据。金融资产和回收款构成缓冲，但不是可以重复加在含利息盈利上的免费资产。</p><div class="plain"><span class="pl">白话解读</span><p>公司有现金缓冲，主要问题不是眼前借款过多，而是分红和投资能否靠持续现金支持。去掉应收应付收付时间的影响后，扣租赁现金从23.73亿元降到19.97亿元。下次看老应收是否继续回收、资本开支后是否仍留得下现金。</p></div></section><section class="reveal on" id="capital" ><div class="slabel">资本 · 并购</div><h2>高分红之外，新潮仍需证明股东拿得更多</h2><p>分红纪律和并购纪律要分开评价。五年归属财年的现金分红合计253.89亿元，同窗租赁付款后现金为221.77亿元，比例114.48%。公司是历史净资本返还者，但归属股利高于同窗经营剩余现金；差额并不等于缺口融资，既有金融资产、投资回收和支付时差都要考虑。它也不能证明高分红可以无限外推。</p><p>FY2025归属股息合计0.34元，按本次股价计算的历史股息率为6.97%，不是未来收益保证。2025末期0.19元在七月实施；本年H1 0.05元已于9月4日除息，实施公告安排同日代派。最新问答重申2024–2026年度不少于公司扣非归母80%的现金分红规划，解释中期较少与经营节奏及资金安排有关；这一解释不等于永久每股下限，2027年需新规划。</p><div class="tblscroll"><table class="tbl txt" ><caption>待审批交易，非已并表经营 · <span class="g">备考财务</span>假设自2025年初拥有100%；费用、现金与股数调整边界见表。</caption><thead><tr><th>新潮更新</th><th>事实</th><th>投资含义</th></tr></thead><tbody><tr><td>审核状态</td><td>8月29日收到恢复审核通知，9月1日公告；临时股东会授权已通过</td><td>仍需深交所审核、证监会注册和经营者集中审查</td></tr><tr><td>交易范围</td><td>90.02%主协议77.94亿元；另9.98%现金协议</td><td>最终100%为83.00亿元，总现金5.35亿元</td></tr><tr><td>拟发行及控制</td><td>除息后发行价5.06元；新增15.35亿股</td><td>较当前股数增加10.63%；原股东份额摊薄9.60%，控制权不变</td></tr><tr><td>标的经审计FY2025</td><td>收入17.27亿元；归母0.54亿元</td><td>总价/历史归母153.52倍；不再年化旧九个月利润</td></tr><tr><td>分众历史备考</td><td>FY2025归母增量0.47亿元；新分母EPS 0.1873元</td><td>历史稀释见页首；不是管理层未来盈利指引</td></tr><tr><td>并购代价约束</td><td>备考合并商誉46.70亿元；没有业绩承诺及补偿</td><td>现金对价在备考列应付款、未计交易税费；非实际购买日结果</td></tr></tbody></table></div><p>新增网络能否提高每股价值，关键不是收入增长而是归母增量能否超过股数扩张。按本报告独立经营基准，抵销拟发股数所需年归母增量为5.48亿元，显著高于历史备考增量；这是规模检验而非管理层承诺，实际还须计现金付款后的利息变化及交易费用。主情景因此保留独立经营，交易完成后必须重做，而不是先白送协同。</p><p>治理的制约来自控制与资本配置。江南春控制方持股23.72%，杭州灏月等一致行动合计8.88%；<span class="g">关联交易</span>声明采用市场定价，但没有可核验的同资源折扣区间。员工计划余股属于早年市场买入、已在当前股数中，不是待增发的奖励股份；回购不预设抵销本次并购稀释。</p><p>本期以外的资本承诺也要留意：云锋关联基金认缴2.00亿元，不等于当期已全部支付，也不带投资否决权。泰国业务获增授信并有抵押和反担保，但子公司亏损、一般保证和现金抵押不是同一保障。已用集团担保3.80亿元与批准额度分开，合并内借款不在股权估值中重复扣。</p><div class="plain"><span class="pl">白话解读</span><p>分红给投资者实实在在的回报，但收购会增加分享利润的股数。新潮总价83亿元，而最新全年归母只有0.54亿元；这要求未来协同远超过已有利润。审批恢复只是程序推进，下一步要看交割后每股利润而非总网络扩大。</p></div></section><section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="正常化归母利润PE"><div class="slabel">估值 · 隐含预期</div><h2>恢复可支撑现价，却尚未形成对称的赔率</h2><div class="grid" ><div class="cell" ><div class="k">现价</div><div class="v">4.88元</div><div class="d"><span>2026-09-04 15:30 +08:00</span></div></div><div class="cell" ><div class="k">熊市</div><div class="v">3.24元</div><div class="d"><span>较现价−33.6%</span></div></div><div class="cell" ><div class="k">基准</div><div class="v">5.24元</div><div class="d"><span>较现价+7.3%</span></div></div><div class="cell" ><div class="k">牛市</div><div class="v">7.25元</div><div class="d"><span>较现价+48.5%</span></div></div><div class="cell" ><div class="k">隐含预期</div><div class="v">47.91亿元</div><div class="d"><span>2027须归属于分众股东的利润；其余假设固定</span></div></div><div class="cell" data-verdict="neutral-cautious"><div class="k">判断</div><div class="v">中性偏谨慎</div><div class="d"><span>观察：下行大于基准上行</span></div></div></div><div class="steps"><div class="step"><div class="n">方法 A</div><b>正常化归母利润PE：持续盈利值多少钱？</b><p>保留租赁成本，折现全年税后盈利价值及未来股息。</p></div><div class="step"><div class="n">方法 B</div><b>扣租赁现金资本化</b><p>同一股权折现率下，以现金转化和长期增速交叉检查。</p></div><div class="step"><div class="n">怎么读</div><b>主方法决定判断档位</b><p>不取两法平均；隐含预期每次只改变一个变量。</p></div></div><h3>第一步 · 市场并未处在所有历史估值的低点</h3><p>收市价对应精确股数市值704.78亿元。Wind滚动市盈率（PE，股价相对每股利润）为20.67倍，与自算TTM值一致；Wind所列市净率（PB，股价相对每股账面净资产）为5.31倍，六月归母净资产自算5.04倍。供应商最新值与中期基期不同，不强行统一。</p><p>Wind五年PE区间11.86–38.91倍、中位19.78倍，当前处于61.7%<span class="g">历史分位</span>；PB区间3.46–8.84倍、中位5.97倍，当前25.2%分位。两组均有1,211个有效观察，窗口2021-09-04至2026-09-04。利润减值与股利分配使两种分母不同，便宜与否不能只选较低那一项。</p><h3>第二步 · 邻近同行支持质量比较，不能提供纯可比均价</h3><div class="tblscroll"><table class="tbl" ><caption>Wind 9月4日收盘；轨迹为FY2023→FY2024→FY2025完整年度。ROE为供应商标准化值，非发行人加权ROE；缺同地区同楼宇模式一级纯可比。</caption><thead><tr><th>公司</th><th>可比边界</th><th>PE/TTM</th><th>PB</th><th>毛利率轨迹%</th><th>Wind ROE轨迹%</th></tr></thead><tbody><tr><td>分众 002027.SZ</td><td>主体：楼宇/影院</td><td>20.67倍</td><td>5.31倍</td><td>65.5→66.3→70.5</td><td>27.9→29.7→18.8</td></tr><tr><td>兆讯 301102.SZ</td><td>二级：铁路/户外运营</td><td>亏损 / 不适用</td><td>1.35倍</td><td>42.0→33.7→26.7</td><td>4.5→2.5→0.4</td></tr><tr><td>华媒 000607.SZ</td><td>三级：混合媒体/教育</td><td>亏损 / 不适用</td><td>3.24倍</td><td>20.8→22.0→17.1</td><td>5.5→−0.5→−25.3</td></tr><tr><td>三人行 605168.SH</td><td>三级：代理占主导</td><td>80.75倍</td><td>3.80倍</td><td>17.7→18.2→16.8</td><td>19.2→4.4→7.0</td></tr></tbody></table></div><p>分众毛利率改善而兆讯持续下降，说明媒体场景、保底成本和执行效果不能互换。华媒业务混合、三人行代理收入的经济边界也不同；两家当前亏损不计算有意义PE。表内不取简单中位数，也不借代理商高估值替分众背书。同行只证明需要分层，不证明盈利质量永远不变。</p><h3>第三步 · 基准需要需求恢复，并保留持续租赁成本</h3><div class="tblscroll"><table class="tbl txt" ><caption>独立经营情景 · 金额亿元（每股另注） · 估值日2026-09-04，观察至2027-12-31；E为分析估计，不含新潮完成或独立AI期权。</caption><thead><tr><th>驱动 / 结果</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据</th></tr></thead><tbody><tr><td>H2收入 / 同比（亿元）</td><td>60 / −9.7%</td><td>64 / −3.7%</td><td>67 / +0.8%</td><td>基于去年H2及Q2下降；熊续弱、基准温和下滑、牛恢复</td></tr><tr><td>2026E / 2027E / 2028E收入</td><td>119.91 / 116.32 / 116.32亿元</td><td>123.91 / 128.87 / 134.03亿元</td><td>126.91 / 137.07 / 148.03亿元</td><td>增速参照成熟期低个位数增长；三档2027为−3% / +4% / +8%</td></tr><tr><td>2026E / 2027E净利率</td><td>36% / 36%</td><td>39% / 40%</td><td>41% / 42%</td><td>基于半年扣非与历史正常盈利年份；保留财务、信用、租赁、税及归属</td></tr><tr><td>2026E / 2027E / 2028E正常化归母</td><td>43.17 / 41.87 / 41.87</td><td>48.33 / 51.55 / 53.61</td><td>52.03 / 57.57 / 62.17</td><td>收入与税后归母利润率推算，非管理层指引</td></tr><tr><td>2027E扣租赁现金 / 盈利转换</td><td>31.41 / 75%</td><td>43.82 / 85%</td><td>54.69 / 95%</td><td>参照实际现金历史及应收时点压力；维持与扩张开支均保留</td></tr><tr><td>PE / 对应长期增长</td><td>12倍 / 3.53%</td><td>16倍 / 4.45%</td><td>20倍 / 5.01%</td><td>倍数参照自身五年最低至中位；增长为现金转换关系诊断，非前三年路径</td></tr><tr><td>股权要求回报 / 观察期</td><td>10% / 1.323年</td><td>10% / 1.323年</td><td>10% / 1.323年</td><td>基于子公司固定借款3.5%之上另计股权风险；非融资成本或加权资本成本</td></tr><tr><td>同窗未来股息 / 现值（元）</td><td>0.189 / 0.175</td><td>0.218 / 0.201</td><td>0.238 / 0.220</td><td>基于2026扣非派息下限的情景；扣已除息部分，2027分红取零</td></tr><tr><td>主方法现值（元/股）</td><td>3.24</td><td>5.24</td><td>7.25</td><td>2027年末PE价值折现加股息现值；无重复现金加值</td></tr></tbody></table></div><p>最关键的假设是基准盈利恢复而非季度年化：收入温和修复，税后利润率回到历史可见区间，但不使用处置收益。基准PE低于历史披露口径中位，仍隐含持续增长；其现金转换关系所要求的长期增长，高于交叉检查的审慎区间。熊市先经历收入收缩、后续需恢复，不能把该档理解为永久衰退却永享高倍数。</p><div class="steps chain"><div class="step"><div class="n">驱动</div><b>H2 64亿元，次年+4%</b><p>围绕既有客户需求恢复</p></div><div class="step"><div class="n">收入 / 利润率</div><b>128.87亿元 / 40%</b><p>2027正常化税后归母口径</p></div><div class="step"><div class="n">盈利</div><b>51.55亿元</b><p>不是广告税前利润代理</p></div><div class="step"><div class="n">资本化 / 折现</div><b>16倍 / 10%</b><p>参照历史估值范围及借款成本上方风险补偿</p></div><div class="step"><div class="n">每股现值</div><b>5.24元</b><p>含0.201元预测股息现值</p></div></div><p class="small">需求、利润率和所付倍数共同决定价值，最后一格与价格阶梯基准相同。所有计算使用未舍入值。</p><div class="tblscroll"><table class="tbl sgrid"><caption>行：2027正常化归母净利率%；列：PE倍数；格内元/股。固定基准收入、股息、股数及折现；粗框为基准，底色为现价反解，隐藏精度参与计算。</caption><thead><tr><th>净利率 ＼ PE</th><th>12倍</th><th>16倍</th><th>20倍</th></tr></thead><tbody><tr><td>36.00%</td><td>3.60</td><td>4.73</td><td>5.86</td></tr><tr><td>37.18%（现价隐含）</td><td>3.71</td><td class="implied">4.88</td><td>6.05</td></tr><tr><td>40.00%</td><td>3.98</td><td class="base">5.24</td><td>6.49</td></tr><tr><td>44.00%</td><td>4.35</td><td>5.74</td><td>7.12</td></tr></tbody></table></div><p class="small">利润率下降或所付倍数收缩，都会侵蚀价格空间。双变量只改2027盈利及资本化，不跟着重算2026分红。</p><h3>第四步 · 现价已有恢复要求，现金检验更谨慎</h3><div class="tblscroll"><table class="tbl txt" data-fullscan-role="implied"><caption>每行单独反解同一主方法，不能同时把各行替换进去。</caption><thead><tr><th>假设</th><th>基准假设</th><th>现价隐含</th><th>差距</th></tr></thead><tbody><tr><td>2027正常化归母</td><td>51.55亿元</td><td>47.91亿元</td><td>−7.1%</td></tr><tr><td>2027归母净利率</td><td>40.00%</td><td>37.18%</td><td>对应上行或利润率余量</td></tr><tr><td>盈利资本化PE</td><td>16.00倍</td><td>14.87倍</td><td>盈利与分红固定后反解</td></tr><tr><td>长期增长诊断</td><td>4.45%</td><td>4.05%</td><td>固定基准扣租现金转换；非一致预期</td></tr></tbody></table></div><p>现金资本化交叉检查基于相同股权回报、基准现金转换及观察期；成熟业务长期增速假设1%–3%，得到3.20–4.14元。高端仍较主方法基准低21.0%：主方法为更久的盈利增长付价，现金法压低远期增长。这一分歧增强谨慎判断，不取两法平均。</p><div class="rows" aria-label="主方法现值与现价"><div class="row"><div class="nm">熊市<span>含同窗股息现值</span></div><div class="track"><div class="fill alt" style="width:44.68966%"></div></div><div class="fig">3.24元<span>较现价−33.6%</span></div></div><div class="row"><div class="nm">现价<span>9月4日已除息收盘</span></div><div class="track"><div class="fill soft" style="width:67.31034%"></div></div><div class="fig">4.88元<span>市场价</span></div></div><div class="row"><div class="nm">基准<span>含同窗股息现值</span></div><div class="track"><div class="fill " style="width:72.27586%"></div></div><div class="fig">5.24元<span>较现价+7.3%</span></div></div><div class="row"><div class="nm">牛市<span>含同窗股息现值</span></div><div class="track"><div class="fill moss" style="width:100.00000%"></div></div><div class="fig">7.25元<span>较现价+48.5%</span></div></div></div><p class="small">基准上方空间小于熊市下方空间。条宽按显示现值相对牛市最大值，百分比按未舍入价值对现价计算。</p><div class="ffield" aria-label="主方法与现金资本化区间共轴比较"><div class="frow"><div class="fnm">归母PE<span>熊市</span></div><div class="ftrack"><div class="fbar alt" style="left:16.50000%;width:8.50000%"></div><div class="fmark" style="left:48.00000%"></div></div><div class="fig">2.99–3.50元</div></div><div class="frow"><div class="fnm">归母PE<span>基准</span></div><div class="ftrack"><div class="fbar " style="left:48.66667%;width:10.50000%"></div></div><div class="fig">4.92–5.55元</div></div><div class="frow"><div class="fnm">归母PE<span>牛市</span></div><div class="ftrack"><div class="fbar moss" style="left:81.66667%;width:11.66667%"></div></div><div class="fig">6.90–7.60元</div></div><div class="frow"><div class="fnm">扣租现金法<span>基准盈利，长期增速区间</span></div><div class="ftrack"><div class="fbar " style="left:20.00000%;width:15.66667%"></div></div><div class="fig">3.20–4.14元</div></div></div><p class="small">现金法落在主方法基准下方，说明终值增长是主要分歧。横轴人民币2–8元；黑线为现价。主方法各档仅对本档PE±1倍，其余固定，非概率区间。</p><div class="plain"><span class="pl">一句话总结</span><p>主方法基准5.24元只略高于现价，熊市3.24元则留下明显下行。这里的PE，是给每一元可持续归母利润付多少价格；基准依赖盈利恢复并长期增长。更谨慎的现金检查给出较低区间，下一次财报需要用客户收入和扣租现金证明，值得支付这份增长溢价。</p></div></section><section class="reveal on" id="valuation-appendix" ><div class="slabel">推导附录</div><h2>每股价值由盈利、时间和真实股息共同决定</h2><p>估值统一回到2026年9月4日。每股价值＝2027年末正常化归母×PE÷当前股数÷(1＋股权要求回报)^观察期＋尚未除息的预测股息现值。正常利润已保留租赁经济成本和持续金融收益，故不额外加全额现金、不机械再扣全部租赁负债。新潮未完成，压力诊断单列，主值不混入其历史利润或协同。</p><p>未来股息估计2026全年情景扣非分红减已除息中期款，假设2027年7月9日支付，沿用上次末期月份；2027分红取零。长期PE诊断为g＝(PE×股权回报−现金转换率)÷(PE＋现金转换率)，非管理层目标。现金法使用股权要求回报，非加权资本成本；敏感性只改变2027净利率及PE。</p><div class="tblscroll"><table class="tbl txt" data-fullscan-role="derivations"><caption>承重推算 · 亿元、元/股或比率按行列明；输入全精度计算，正文显示四舍五入。表内短值仅供读者复核，计算未使用已舍入展示值。</caption><thead><tr><th>数值</th><th>输入</th><th>公式</th><th>来源（页·附注）</th></tr></thead><tbody><tr><td>H1扣租赁现金 27.43亿元；原单位 2,743,443,104.16元</td><td>OCF44.5343；资本开支4.9226；融资列租赁本息12.1773亿元</td><td>OCF−资本开支−融资列租赁本息</td><td>半年报现金流附注，第137页</td></tr><tr><td>Q2经营代理 −1.95%</td><td>本期14.7062 / 上期14.9991亿元</td><td>(本期/上期−1)；代理为毛利减税金与销管研</td><td>半年报及一季报合并利润表</td></tr><tr><td>Q2归母差 −1.91亿元；原单位 −191,106,372.02元</td><td>本期13.3850 / 上期15.2961亿元</td><td>五组变化−1.0261＋0.5040−1.0601−0.2709−0.0580</td><td>两年半年报、一季报合并利润表</td></tr><tr><td>时点调整后现金 19.97亿元；原单位 1,997,215,110.85元</td><td>调整后OCF37.0720；开支4.9226；租赁12.1773亿元</td><td>OCF−应收现金变动−应付现金变动−开支−融资列租赁</td><td>半年报现金流补充附注</td></tr><tr><td>应收现金顺风 12.28亿元；原单位 1,227,692,376.71元</td><td>2026H1 +8.3640；2025H1 −3.9129亿元</td><td>本期经营性应收现金变动−上期</td><td>半年报现金流补充附注</td></tr><tr><td>五年股利/现金 114.48%</td><td>财年归属股利253.8939；扣租赁现金221.7749亿元</td><td>累计股利/累计扣租现金；股利不是历年实付</td><td>FY2021–2025年报分红及现金流附注</td></tr><tr><td>备考EPS 0.1873元；变化−8.17%</td><td>备考归母29.9310；原29.4633亿元；新/旧股数</td><td>(备考归母/新股数)/(原归母/旧股数)−1</td><td>8月31日申报稿第26页；发行调整公告</td></tr><tr><td>剔除实名关联广告 −15.90%</td><td>两期集团收入各减阿里集团广告：47.2764 / 56.2130亿元</td><td>(本期/上期−1)；不是互联网子类</td><td>半年报关联方交易附注及收入表</td></tr><tr><td>当前 144.42亿股</td><td>14,442,199,726股</td><td>按已发行总股数；备考另加1,534,540,509股</td><td>8月28日权益分派和发行调整公告</td></tr><tr><td>熊市现值 3.24元</td><td>2027归母41.87亿元；PE 12倍；未来股息0.18913元</td><td>归母×PE/股数/(1＋10%)^1.32329＋股息/(1＋10%)^0.84384</td><td>正常化情景；2026分红下限及付款日假设</td></tr><tr><td>基准2027归母 51.55亿元</td><td>2027收入128.87亿元；归母净利率40%</td><td>收入×净利率；收入为(H1＋64亿元)×1.04</td><td>半年报收入；分析情景</td></tr><tr><td>基准现值 5.24元</td><td>2027归母51.55亿元；PE 16倍；未来股息0.21770元</td><td>归母×PE/股数/(1＋10%)^1.32329＋股息/(1＋10%)^0.84384</td><td>正常化情景；2026分红下限及付款日假设</td></tr><tr><td>牛市现值 7.25元</td><td>2027归母57.57亿元；PE 20倍；未来股息0.23824元</td><td>归母×PE/股数/(1＋10%)^1.32329＋股息/(1＋10%)^0.84384</td><td>正常化情景；2026分红下限及付款日假设</td></tr><tr><td>平衡价 4.24元</td><td>基准5.24 / 熊市3.24元</td><td>两档含股息现值中点；额外股息=0，非操作价格</td><td>本报告同一主方法</td></tr><tr><td>上行/下行 0.22倍</td><td>现价4.88；基准5.24；熊市3.24元</td><td>(基准−现价)/(现价−熊市)，非概率</td><td>Wind收盘；本报告情景</td></tr><tr><td>现价需归母 47.91亿元</td><td>现价4.88元；基准股息现值、折现因子、股数、PE</td><td>(现价−股息现值)×折现因子×股数/16</td><td>主方法反解；其余基准固定</td></tr><tr><td>现金检验 3.20元</td><td>2027扣租现金43.82亿元；长期增长1%</td><td>现金×(1＋g)/(10%−g)/股数/折现因子＋股息现值</td><td>基准现金转换；分析长期增长区间</td></tr><tr><td>现金检验 4.14元</td><td>2027扣租现金43.82亿元；长期增长3%</td><td>现金×(1＋g)/(10%−g)/股数/折现因子＋股息现值</td><td>基准现金转换；分析长期增长区间</td></tr><tr><td>静态流动性 70.74亿元</td><td>六月金融资产净借款105.5501；受限0.0923；应付股利27.4994；H1股利7.2211</td><td>起点−三项扣除；不是估值日余额</td><td>半年报附注；8月28日分红实施公告</td></tr><tr><td>历史交易PE 153.52倍</td><td>100%总对价83亿元；标的2025归母0.540632亿元</td><td>总对价/标的历史归母，不含预测协同</td><td>8月31日申报稿第22、37页；标的审计报告</td></tr><tr><td>抵销增股需增利 5.48亿元</td><td>独立基准归母51.55亿元；股数增加10.63%</td><td>原归母×新增股数/旧股数；只测不摊薄门槛</td><td>发行调整公告；本报告情景</td></tr></tbody></table></div><div class="plain"><span class="pl">白话解读</span><p>今天的价格需要未来持续盈利和实际收到的股息来支持。比较情景时，先找变的是盈利、等待时间还是现金回报，再看公司后续经营能否兑现。</p></div></section><section class="reveal on" id="risks" ><div class="slabel">风险 · 验证</div><h2>先检验需求与现金，再检验收购后的每股回报</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="risk-register"><caption>按对核心论点的伤害与当前证据排序；概率为分析定性档，阈值和情景不是公司承诺。</caption><thead><tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr></thead><tbody><tr><td>1</td><td>客户预算与集中度</td><td>2026H1：实名关联广告外收入下降</td><td>预算收缩→资源闲置→固定租赁成本难压</td><td>熊市2027收入116.32亿元，利润率36%</td><td>中高，基于已出现的需求分化；非统计概率</td><td>2026三季报及FY2026年报：收入止跌、客户结构扩散</td></tr><tr><td>2</td><td>并购每股代价</td><td>2026-09-01恢复审核，尚未批准及交割</td><td>发行股数先增加，利润协同尚待经营形成</td><td>历史备考有稀释；基准不摊薄所需增利见资本表</td><td>中，程序和整合结果仍待核验</td><td>后续审批与交割公告；交割后两个报告期看每股贡献</td></tr><tr><td>3</td><td>现金时点及坏账</td><td>2026H1：应收回款改善，老账龄未消失</td><td>信用损失或持续投入→扣租现金减少→派息承压</td><td>2027基准现金转换85%需要保持</td><td>中，准备覆盖较高但客户旧款仍在</td><td>FY2026年报：老应收、总资本开支和融资列租赁付款</td></tr><tr><td>4</td><td>回报规划与投资纪律</td><td>2026-08-19重申现有分红规划</td><td>并购、关联基金及海外投入挤占可分现金</td><td>已除息不算未来收益；预测剩余股息仍取决于全年扣非</td><td>中，既有制度有效但跨期规则不确定</td><td>2027年分红实施与新回报规划；关联投资实际出资</td></tr><tr><td>5</td><td>终值增长达不到</td><td>2026-09-04：现金交叉值低于PE基准</td><td>长周期增长与现金转换不足→合理倍数下降</td><td>现金交叉检查低端3.20元</td><td>中高，基于方法间差距而非行业概率</td><td>FY2026年报及2027中报：广泛收入恢复和租赁后现金共同兑现</td></tr></tbody></table></div><div class="tline"><div class="tstop warn"><span class="tw">2026三季报</span><b>需求是否继续走弱</b><p>同口径收入和经营代理仍降，将下修恢复路径。</p></div><div class="tstop"><span class="tw">FY2026年报</span><b>客户和现金对表</b><p>客户集中度、老应收、总开支与租赁付款同时核验。</p></div><div class="tstop"><span class="tw">2027中报</span><b>终值假设更接近现实</b><p>检验盈利与现金恢复，并按交易实际进展更新股数。</p></div></div><p class="small">先看需求，再看全年现金，最后复核恢复是否持久。定期报告窗口不是已公告的精确发布日期，交易另随审批及交割披露更新。</p><div class="plain"><span class="pl">白话解读</span><p>最危险的组合是客户没有普遍回来，却先为扩张和并购付出现金、增加股数。风险表给出观察顺序：季度看需求，年报看钱是否留下，再看每股回报；不是等审批通过就结束验证。</p></div></section><section class="reveal on" id="decision" data-fullscan-role="decision" data-verdict="neutral-cautious"><div class="slabel">最终判断</div><h2>中性偏谨慎：等待客户与每股盈利共同验证</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="decision-block"><caption>同一主方法、同一观察窗口；情景价值含预测股息现值。</caption><tbody><tr><td>论点</td><td>公司仍有广告盈利和现金缓冲，但客户分化、租赁后现金和并购稀释使恢复预期不足以形成宽裕折价。</td></tr><tr><td>基准对一致预期</td><td>无一致预期可比：Wind预测PE缺财政年度与EPS元数据。基准2027正常化归母51.55亿元，现价隐含47.91亿元，差异按隐含表理解，非卖方预期差。</td></tr><tr><td>赔率</td><td>同至2027年末，已含股息现值：基准上行7.3%，熊市下行33.6%；上行/下行0.22倍，不是概率。</td></tr><tr><td>平衡价</td><td>4.24元：同窗含股息现值的基准上行恰等于熊市下行；它只描述本报告情景，不是买卖触发价。</td></tr><tr><td>持有回报</td><td>观察期1.323年；基准未来现金股息0.218元、占现价4.46%，其现值已计入主值。假设2027年7月支付，无额外回购收益，不再加已除息款；派息仍待全年扣非及实施。</td></tr><tr><td>分项置信度</td><td>论点证据 中（季度未经审计，经营量价仍缺）；现金与资产负债表 中（分类可复核，未来回款非确定）；治理 中（分红制度与待验证并购并存）；估值输入 低（长期增长及正常化利润率敏感）。FY2026年报若同时确认客户扩散、现金和分红，才提高最弱支柱。</td></tr><tr><td>判断</td><td>中性偏谨慎（观察）：熊市下行显著大于基准上行；下一检查点为2026三季报，随后以全年现金验证。</td></tr></tbody></table></div><div class="callout"><b>最强反方观点：</b>全国广告网络可能持续承接新客户预算，新潮整合也可能提高位置和客户组合效率；若收入扩散、扣租赁现金改善且新股发行后每股盈利不降，谨慎判断应上调。<b>失败边界：</b>若需求继续收缩而投资与派息只能更多依赖存量资产，恢复情景要下修；现金回报有底子，并购还缺每股增益。</div></section><section class="reveal on" id="glossary" ><div class="slabel">名词速查</div><h2>读懂这门媒体生意需要的口径</h2><div class="tblscroll"><table class="tbl gloss" ><thead><tr><th>术语</th><th>白话解释</th></tr></thead><tbody><tr><td>主要责任人</td><td>自行负责履约的广告服务提供者，不只是代客户撮合购买；收入和成本口径决定能否与代理公司比较。</td></tr><tr><td>广告经营权</td><td>在物业、楼宇或场所经营广告位置的合同权利；通常伴随租金、期限和续约条件，不等于拥有物业。</td></tr><tr><td>上刊率</td><td>可出售的广告时段或资源中实际售出的比例；媒介及统计窗口不同，定义也可能不同。</td></tr><tr><td>刊例价</td><td>对外报价或价目表，不是最终含折扣成交价；行业刊例金额不能直接视为公司营业收入。</td></tr><tr><td>权益法</td><td>按所持联营公司经营结果确认投资收益的会计方法；不代表同期收到同额现金。</td></tr><tr><td>资本公积转回</td><td>退出投资时把过去记在权益中的相关金额转入损益；可能抬高当期利润而没有同额新增广告现金。</td></tr><tr><td>正常化归母利润</td><td>按可持续经营、税负和归属重建的分析情景；既非公司扣非的同义词，也不能用税前利润直接替代。</td></tr><tr><td>租赁付款后自由现金流（FCF）</td><td>经营现金减资本开支，再减尚未进入经营现金流的租赁本息；每笔租赁现金只扣一次。</td></tr><tr><td>合同资产</td><td>已履行服务但收款权仍取决于其他条件的款项；不一定已形成通常意义上的应收账款。</td></tr><tr><td>信用减值转回</td><td>原先预计的信用损失减少后恢复利润；不是新的广告销售，也不等于全部老账已收回。</td></tr><tr><td>合同负债</td><td>已经收款而尚需提供服务的义务；下降可能是履约，也可能是预收减少。</td></tr><tr><td>关联交易</td><td>与控股、重大影响或其他关联方之间的交易；需检验商业实质和定价，不因关联就自动判不公允。</td></tr><tr><td>备考财务</td><td>按假定交易在过去已经完成编制的模拟报表；其现金、费用、股数假设与未来实际报表可能不同。</td></tr><tr><td>生成式引擎优化（GEO）</td><td>帮助品牌内容更容易在生成式AI回答和推荐中被呈现的服务；业务存在不等于经济贡献已经披露。</td></tr><tr><td>历史分位</td><td>当前指标在给定历史样本中所处的位置；低分位不保证低估，盈利和净资产分母可能已经改变。</td></tr></tbody></table></div></section><footer><p>数据截止：财务至2026-06-30，公告检索至2026-09-05；行情为2026-09-04 15:30:03 +08:00。A股人民币计价，当前股数采用最近权益分派公告。</p>
+<p>来源：分众传媒<a href="https://pdf.dfcfw.com/pdf/H2_AN202608181828113472_1.pdf">2026年半年度报告</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202604291821715310_1.pdf">2026年第一季度报告</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-04-29/1225251512.PDF">2025年度报告</a>及FY2021–2024年报、2025半年及一季报；发行人<a href="https://www.focusmedia.cn/uploads/files/20260828,11,26,222.pdf">8月19日官方问答</a>、<a href="https://www.focusmedia.cn/uploads/files/20260828,10,05,223.pdf">中期股息实施</a>、<a href="https://www.focusmedia.cn/uploads/files/20260828,10,05,461.pdf">发行调整</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202608311828824575_1.pdf">恢复审核公告</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202608311828812748_1.pdf">8月31日重组申报稿</a>与标的审计、集团备考审阅报告。部分完整公司原公告由披露聚合站承载，并非交易所网页。市场及标准化同行数据来源于万得Wind金融数据服务。</p>
+<p>审计状态：五年年度财务已审计，2025年报为标准无保留意见；2026半年及一季未经审计。新潮历史财务已审计、集团备考已审阅；官方问答为发行人整理记录，非逐字稿。推算与情景的边界见推导附录。</p>
+<p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p></footer></main><script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els = document.querySelectorAll('.reveal');
@@ -550,6 +306,4 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
   els.forEach(function(e){ io.observe(e); });
 })();
-</script>
-</body>
-</html>
+</script></body></html>

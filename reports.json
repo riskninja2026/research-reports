@@ -493,15 +493,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "穿透数禾退出、客户向阿里体系集中、楼宇媒资效率、现金回款、新潮并购稀释与正常化估值。",
-      "verdict": null,
-      "verdict_code": null,
+      "hook": "租赁付款后仍有现金盈余，但客户分化与新潮拟增股要求更强的每股盈利兑现。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
       "published": "2026-08-18",
       "published_at": "2026-08-18T09:54:34-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "classic",
-      "style_hash": "e65895ac71853b897ef3203361e0c8c2",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "统一租赁付款后现金口径；更新新潮全年审计利润、审核与发行条款；补入最新问答、股息时点和完整情景估值。原文对现金覆盖和并购盈利基础的判断据此调整。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
