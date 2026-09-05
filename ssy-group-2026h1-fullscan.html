@@ -253,486 +253,370 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
 .tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
 .tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
 </style>
 </head>
 <body>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">石四药集团 02005.HK ｜ 2026H1 全景尽调 ｜ 数据截至 2026.08.31</div>
-    <h1>输液放量是真的，<br>“低估值”还需要证明</h1>
-    <p class="lede">2026年上半年输液销量恢复双位数增长，港元收入与归母利润同比回升。<b>但人民币口径明显慢于港元口径，毛利率仍下降，经营利润率改善主要来自销售费用和损益表研发费用收缩。</b>在现金流尚未披露、现价已落入基准价值带时，这是一场需要全年数据继续验收的早期修复。</p>
-
-    <div class="dual">
-      <div>
-        <div class="tag">恢复的硬证据｜2026H1 输液出货量</div>
-        <div class="big a">8.68亿</div>
-        <div class="cap">瓶（袋）；较上年同期增长逾两成，高端软袋是主要增量来源。</div>
-      </div>
-      <div>
-        <div class="tag">估值的反证｜LTM P/E / 五年中位</div>
-        <div class="big b">1.32×</div>
-        <div class="cap">当前市盈率相对五年中位数；市净率却靠近同期底部，反映利润与账面资本错位。</div>
-      </div>
-    </div>
-  </div>
-</header>
-
+<header class="hero"><div class="wrap">
+<div class="eyebrow">石四药集团 02005.HK ｜ 全景尽调 ｜ 数据截止 2026.09.05</div>
+<h1>输液修复成立，<br>估值已预付兑现</h1>
+<p class="lede">上半年输液销量与港元平均售价同步上升，费用收缩又放大了经营利润。<b>利润质量仍待现金转换与产品毛利验证</b>：现价贴近正常化盈利的基准价值，进一步回报取决于口服制剂止跌、集采落地和新增产品商业化。</p>
+<div class="dual"><div><div class="tag">经营修复 · 2026年上半年</div><div class="big a">+21.4%</div><div class="cap">公司披露输液销量同比增长；量增已经发生，持续性取决于采购兑现与需求。</div></div><div><div class="tag">预期门槛 · 十二个月基准情景</div><div class="big b">2.73元</div><div class="cap">正常化PE基准每股价值，港元；与最新收市价接近，盈利增长并非免费获得。</div></div></div>
+</div></header>
 <main class="wrap">
+<div class="callout"><b>修订 2026-09-05：</b>按新版Fullscan补齐医药经营底图、统一估值与决策结构；更正港元平均售价的披露属性，更新期后产品及奖励信托事件，并以最新行情重算预期和回报。</div>
 
 <section class="reveal on" id="tldr">
-  <div class="slabel">三十秒版本 · 先看结论</div>
-  <h2>如果只读一屏，先抓住这五件事</h2>
-  <div class="tldr">
-    <ul>
-      <li><b>它是谁：</b>一家以大容量静脉输液为核心、同时经营安瓿注射液、原料药、口服制剂及医用材料的制药集团；“静脉输液及其他”占本期外部收入95%。</li>
-      <li><b>本期成绩：</b>港元收入23.61亿、归母净利润3.20亿，同比分别增长9.9%和13.0%；输液放量是最扎实的经营证据，非PVC软袋及直立袋贡献超过全部收入增量。</li>
-      <li><b>核心矛盾：</b>毛利率下降0.27个百分点，但经营利润率提高1.59个百分点。利润弹性主要由销售费用节省和损益表研发费用下降形成，而总研发投入也下降20.4%、资本化率上升6.81个百分点。</li>
-      <li><b>最容易踩的坑：</b>公司披露的是累计2026H1，不是独立Q2；港元收入增长9.9%也不等于本币经营增长，管理层披露的人民币收入只增长约5%。当前公告没有现金流量表。</li>
-      <li><b>结论：</b>中性。HK$2.705位于本报告HK$2.50—2.95的基准价值带，12倍P/E下已隐含约6.65亿港元归母利润，接近2027年基准情景；安全边际有限。</li>
-    </ul>
-  </div>
+<div class="slabel">三十秒版本 · 先看结论</div><h2>经营在恢复，买价仍需要约束</h2>
+<div class="tldr"><ul>
+<li><b>它是谁：</b>一家以输液、注射剂为基础，延伸原料药、口服制剂和医用材料的港股药企；注册获批后，还要经过招标、医院准入与回款。</li>
+<li><b>本期成绩：</b>上半年收入23.61亿港元，归母净利润3.20亿港元；同比推算分别增长9.94%和12.99%，属于低谷后的恢复。</li>
+<li><b>核心矛盾：</b>输液修复可见，口服制剂仍下降；经营利润改善还依赖销售费用和费用化研发减少，产品经济性需要进一步验证。</li>
+<li><b>容易踩的坑：</b>把低市净率当作便宜，把新增批件当作新增利润，或把奖励信托买股当作管理层已经获授股份，都会高估当前证据。</li>
+<li data-verdict="neutral-cautious"><b>结论：</b>中性偏谨慎（等待验证）。现价2.73港元接近基准2.73港元，熊市1.71港元；完整现金流、口服恢复和集采毛利兑现，才会改变判断。</li>
+</ul></div>
 </section>
 
 <section class="reveal on" id="primer">
-  <div class="slabel">入门 · 三分钟看懂这门生意</div>
-  <h2>石四药把注册、制造与医院准入串成一条产业链</h2>
-  <p>公司的主要利润池仍是输液与其他制剂。原料药既可对外销售，也为部分制剂提供一体化供应；药品获批后还要经历挂网、集采、医院准入和实际采购，监管进度不等于已经形成收入。</p>
-  <div class="steps">
-    <div class="step"><div class="n">环节 1</div><b>研发与注册</b><p>仿制药、复杂制剂和早期创新项目产生研发支出；部分符合条件的开发成本被资本化。</p></div>
-    <div class="step"><div class="n">环节 2</div><b>规模化生产</b><p>输液包装结构、产能利用、原料自给和质量控制决定制造成本与毛利。</p></div>
-    <div class="step"><div class="n">环节 3</div><b>招采与销售</b><p>集采以价格换采购量，基药目录提升准入机会；真正变现仍取决于执行价、约定量和终端采购。</p></div>
-    <div class="step"><div class="n">环节 4</div><b>现金与分配</b><p>应收、库存、资本开支和借款决定利润能留下多少现金，再由股息、回购与奖励计划分配。</p></div>
-  </div>
-  <p>新读者要先记住三条边界。第一，集团有“静脉输液及其他”和“医用材料及相关产品”两个<span class="g">可报告分部</span>，但没有披露每个具体药品的利润。第二，2022年收购友谊化工造成原料药和合并范围断点。第三，主席曲继广兼任行政总裁；四川科伦既是约23%的重要股东和同业公司，也有董事席位并与集团发生材料、制造和研发交易。</p>
+<div class="slabel">入门</div><h2>卖出药品之后，还要完成准入与收款</h2>
+<p>石四药集团有限公司在香港上市，经营主体主要在中国。它的主业是规模化生产药品及相关材料：基础输液提供医院用药需求，较复杂注射剂和口服制剂扩展产品组合，原料药既对外销售，也可配套内部制剂。注册能力决定产品能否上市，制造能力决定成本，准入和渠道决定产品能卖到哪里。</p>
+<div class="steps">
+<div class="step"><div class="n">环节 1</div><b>研发与注册</b><p>完成处方、工艺及质量研究，取得生产注册或一致性评价资格。</p></div>
+<div class="step"><div class="n">环节 2</div><b>采购与准入</b><p>参与集采、招标和挂网，进入医疗机构或经销渠道。</p></div>
+<div class="step"><div class="n">环节 3</div><b>制造与交付</b><p>采购原料、生产、质控与物流；产品组合和产量影响单位成本。</p></div>
+<div class="step"><div class="n">环节 4</div><b>回款与再投入</b><p>应收变成现金后，支付研发、设备、债务和股东分配。</p></div>
+</div>
+<p>仿制药市场同时受到医院需求、采购价格和竞争供给影响。<span class="g">带量采购</span>把价格与采购安排连接起来；企业可能以较低价格换取更大的覆盖面，利润结果取决于增量销量、制造成本和推广费用的合计变化。获批、拟中选、执行和商业销售是不同阶段，阅读产品公告时应保持这些边界。</p>
+<p>本报告控制期间为截至2026年6月30日止六个月，使用本集团合并财务资料；公司没有提供可支持相减的独立首季报表，因此按上半年分析。财务表统一为港元，管理层的人民币经营叙述另行标明。中期资料未经审计，公告称已由毕马威审阅；“推算”表示从披露值计算，“分析假设”表示用于情景的判断输入。</p>
 </section>
 
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">基础财务</div>
-  <h2>五年利润平台已经断裂，半年增长只是从低位修复</h2>
-  <p>2021—2023年收入、利润率和资本回报同步上行，随后两年快速回落；到2025年，收入已比2023年低35.6%，归母净利润低64.3%。2026H1同比重新增长，但滚动十二个月经营利润和归母净利润仍分别比2024年低47.6%和52.2%。</p>
-  <p class="small">以下合并数字以港交所港元报表为主控。<span class="g">毛利率</span>是毛利占收入的比例；<span class="g">经营利润率</span>是经营利润占收入的比例；<span class="g">ROIC</span>是税后经营利润相对平均投入资本的分析代理。</p>
-
-  <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">2026H1 收入</div><div class="v">23.61<span class="u">亿港元</span></div><div class="d"><span class="up">同比 +9.9%</span><span>人民币口径约 +5.0%</span></div></div>
-    <div class="cell"><div class="k">2026H1 毛利</div><div class="v">9.72<span class="u">亿港元</span></div><div class="d"><span class="up">同比 +9.2%</span><span>毛利率 41.19% / −0.27个百分点</span></div></div>
-    <div class="cell"><div class="k">2026H1 经营利润</div><div class="v">4.45<span class="u">亿港元</span></div><div class="d"><span class="up">同比 +20.1%</span><span>利润率 18.86% / +1.59个百分点</span></div></div>
-    <div class="cell"><div class="k">2026H1 归母净利润</div><div class="v">3.20<span class="u">亿港元</span></div><div class="d"><span class="up">同比 +13.0%</span><span><span class="g">EPS</span> HK$0.1107</span><span>半年ROE 4.24%</span></div></div>
-    <div class="cell"><div class="k">2026H1 经营现金流</div><div class="v">未披露</div><div class="d"><span>33页业绩公告无现金流量表</span></div></div>
-    <div class="cell"><div class="k">2026H1 自由现金流代理</div><div class="v">不可计算</div><div class="d"><span>OCF与现金资本开支均缺失</span><span>期末BVPS约HK$2.709（扣库存股）</span></div></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl" data-financials="history">
-      <caption>五年合并财务轨迹｜亿港元；利润项依次列金额 / 利润率，EPS为港元</caption>
-      <thead><tr><th>年度</th><th>收入</th><th>毛利 / 率</th><th>经营利润 / 率</th><th>归母净利 / 率</th><th>EPS</th><th>ROE</th><th>ROIC</th><th>OCF</th><th>广义现金资本开支</th><th>自由现金流代理</th></tr></thead>
-      <tbody>
-        <tr><td>2021</td><td>53.57</td><td>31.70 / 59.18%</td><td>9.88 / 18.45%</td><td>7.86 / 14.66%</td><td>0.2599</td><td>13.23%</td><td>11.07%</td><td>6.96</td><td>3.88</td><td>3.07</td></tr>
-        <tr><td>2022</td><td>64.34</td><td>35.68 / 55.45%</td><td>14.24 / 22.13%</td><td>11.23 / 17.45%</td><td>0.3761</td><td>18.06%</td><td>15.11%</td><td>7.34</td><td>4.18</td><td>3.16</td></tr>
-        <tr><td>2023</td><td>64.63</td><td>36.20 / 56.01%</td><td>16.39 / 25.36%</td><td>13.19 / 20.40%</td><td>0.4441</td><td>20.06%</td><td>16.08%</td><td>9.26</td><td>7.04</td><td>2.22</td></tr>
-        <tr><td>2024</td><td>57.73</td><td>29.08 / 50.37%</td><td>13.44 / 23.27%</td><td>10.61 / 18.38%</td><td>0.3582</td><td>15.00%</td><td>11.90%</td><td>4.91</td><td>5.40</td><td>−0.49</td></tr>
-        <tr><td>2025</td><td>41.65</td><td>17.31 / 41.56%</td><td>6.29 / 15.10%</td><td>4.71 / 11.30%</td><td>0.1605</td><td>6.48%</td><td>5.43%</td><td>6.35</td><td>3.35</td><td>3.00</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="cols" role="img" aria-label="2021至2025年收入与归母净利润趋势，精确数值见上方五年合并财务轨迹表">
-    <div class="col"><div class="bars"><div class="bar rev" style="height:82.88%"></div><div class="bar np" style="height:12.15%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:99.55%"></div><div class="bar np" style="height:17.37%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:20.40%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:89.33%"></div><div class="bar np" style="height:16.42%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:64.45%"></div><div class="bar np" style="height:7.28%"></div></div></div>
-  </div>
-  <div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div>
-  <div class="legend"><span><i class="p"></i>收入</span><span><i class="m"></i>归母净利润</span></div>
-  <p class="small">2021—2025收入、经营利润、归母净利润和OCF的<span class="g">CAGR</span>分别为−6.09%、−10.68%、−12.02%和−2.25%。广义现金资本开支＝购置物业、厂房及设备＋购买使用权资产＋无形资产添置付款；自由现金流代理＝OCF−广义现金资本开支，不是公司KPI。2022年友谊化工收购使原料药与合并范围出现断点。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption><span class="g">LTM</span>参考桥｜2025全年＋2026H1−2025H1；亿港元</caption>
-      <thead><tr><th>期间</th><th>收入</th><th>毛利 / 率</th><th>经营利润 / 率</th><th>归母净利 / 率</th><th>EPS算术桥（不同报告分母）</th><th>ROIC</th><th>OCF / FCF</th></tr></thead>
-      <tbody><tr><td>LTM至2026.06</td><td>43.79</td><td>18.13 / 41.41%</td><td>7.03 / 16.06%</td><td>5.07 / 11.59%</td><td>约0.1750</td><td>5.89%</td><td>不可桥接</td></tr></tbody>
-    </table>
-  </div>
-  <p class="small">LTM EPS把不同加权股数期间的报告EPS作算术桥，只能称“约”；Wind P/E则用当前含库存股总股本重算EPS约HK$0.17195，两种分母不可混用。LTM损益绝对额可以精确勾稽。当前期缺少现金流，因此不能构造LTM OCF、资本开支或FCF。</p>
-
-  <div data-financials="segments">
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>2026H1 产品收入底图｜亿港元；产品是收入拆分，不是独立利润中心</caption>
-        <thead><tr><th>产品</th><th>收入</th><th>占比</th><th>同比</th><th>对总收入增量贡献</th></tr></thead>
-        <tbody>
-          <tr><td nowrap>非PVC软袋及直立式软袋输液</td><td>11.04</td><td>46.8%</td><td class="up">+31.4%</td><td>123.6%</td></tr>
-          <tr><td nowrap>聚丙烯塑瓶输液</td><td>2.93</td><td>12.4%</td><td class="up">+9.1%</td><td>11.4%</td></tr>
-          <tr><td nowrap>玻璃瓶输液</td><td>0.90</td><td>3.8%</td><td class="down">−0.8%</td><td>−0.4%</td></tr>
-          <tr><td nowrap>安瓿注射液</td><td>1.63</td><td>6.9%</td><td class="up">+3.5%</td><td>2.6%</td></tr>
-          <tr><td nowrap>原料药</td><td>3.95</td><td>16.7%</td><td class="up">+9.4%</td><td>15.9%</td></tr>
-          <tr><td nowrap>口服制剂</td><td>1.65</td><td>7.0%</td><td class="down">−44.3%</td><td>−61.3%</td></tr>
-          <tr><td nowrap>其他</td><td>0.33</td><td>1.4%</td><td>+1.1%</td><td>0.2%</td></tr>
-          <tr><td nowrap>医用材料及相关产品</td><td>1.18</td><td>5.0%</td><td class="up">+16.8%</td><td>8.0%</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>法定可报告分部｜亿港元；结果率为分析计算</caption>
-        <thead><tr><th>分部</th><th>2026H1外部收入</th><th>占比</th><th>同比</th><th>分部结果</th><th>结果率</th><th>上年结果率</th></tr></thead>
-        <tbody>
-          <tr><td nowrap>静脉输液及其他</td><td>22.42</td><td>95.0%</td><td class="up">+9.6%</td><td>4.42</td><td>19.69%</td><td>18.05%</td></tr>
-          <tr><td nowrap>医用材料及相关产品</td><td>1.18</td><td>5.0%</td><td class="up">+16.8%</td><td>0.13</td><td>11.14%</td><td>10.87%</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="stacks" role="img" aria-label="2025年上半年与2026年上半年可报告分部外部收入占比对比，具体数值见上表">
-      <div class="stack"><div class="cap">2025H1 外部收入结构</div><div class="stackbar"><div class="seg p" style="width:95.3%">静脉输液及其他 95.3%</div><div class="seg q" style="width:4.7%"></div></div></div>
-      <div class="stack"><div class="cap">2026H1 外部收入结构</div><div class="stackbar"><div class="seg p" style="width:95.0%">静脉输液及其他 95.0%</div><div class="seg q" style="width:5.0%"></div></div></div>
-    </div>
-    <div class="legend"><span><i class="p"></i>静脉输液及其他</span><span><i class="q"></i>医用材料及相关产品</span></div>
-  </div>
-
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>五年表讲的是利润平台被打断：2025年不是正常年份里的一点波动，而是毛利率、ROE和ROIC同时跌到五年低点。2026H1的增长说明低谷后已经回升，不能说明旧平台已经回来。</p>
-    <p>本期增长也很集中。非PVC软袋及直立袋新增收入超过集团全部增量，口服制剂下降又抵消约六成增量。<b>因此要验证的不是“收入有没有增长”，而是输液放量能否跨期、口服能否止跌，以及这些增长能否变成现金。</b></p>
-  </div>
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="pharma-biotech-devices">
+<div class="slabel">财务与业务底图</div><h2>恢复发生在低基数上，历史盈利平台尚未重建</h2>
+<p>五年轨迹显示，收入与毛利率曾同时下行，最新恢复尚不足以证明经济回报回到原有水平。经营结构仍集中在静脉输液及其他药品；医用材料贡献较小。阅读本期增长时，应先看此前的盈利收缩，再判断恢复来自产品、费用还是会计呈列。</p>
+<div class="grid" data-financials="consolidated">
+<div class="cell"><div class="k">营业收入</div><div class="v">23.61<span class="u">亿港元</span></div><div class="d"><span>同比+9.94%（推算）</span></div></div>
+<div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">9.72<span class="u">亿港元</span></div><div class="d"><span>41.19% / 同比−0.27pp（推算）</span></div></div>
+<div class="cell"><div class="k">营业利润 / 利润率</div><div class="v">4.45<span class="u">亿港元</span></div><div class="d"><span>18.86% / 同比+20.07%（推算）</span></div></div>
+<div class="cell"><div class="k">归母净利润 / 净利率</div><div class="v">3.20<span class="u">亿港元</span></div><div class="d"><span>13.57% / 同比+12.99%（推算）</span></div></div>
+<div class="cell"><div class="k">经营现金流</div><div class="v">未披露</div><div class="d"><span>当前中期业绩公告无现金流量表</span></div></div>
+<div class="cell"><div class="k">自由现金流代理</div><div class="v">不可计算</div><div class="d"><span>缺本期经营现金流与现金资本开支</span></div></div>
+</div>
+<div class="tblscroll"><table class="tbl" data-financials="history">
+<caption>本集团合并口径；年度按香港财务报告准则、经毕马威审计；中期按香港会计准则第34号，未经审计、经审阅。金额为亿港元；比率、现金再投资、FCF及回报率为推算。</caption>
+<thead><tr><th>项目</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>四年复合增速</th></tr></thead>
+<tbody>
+<tr><td>营业收入</td><td>53.57</td><td>64.34</td><td>64.63</td><td>57.73</td><td>41.65</td><td>−6.09%</td></tr>
+<tr><td>毛利 / 毛利率</td><td>31.70 / 59.18%</td><td>35.68 / 55.45%</td><td>36.20 / 56.01%</td><td>29.08 / 50.37%</td><td>17.31 / 41.56%</td><td>−14.04%</td></tr>
+<tr><td>营业利润 / 利润率</td><td>9.88 / 18.45%</td><td>14.24 / 22.13%</td><td>16.39 / 25.36%</td><td>13.44 / 23.27%</td><td>6.29 / 15.10%</td><td>−10.68%</td></tr>
+<tr><td>归母净利润</td><td>7.86</td><td>11.23</td><td>13.19</td><td>10.61</td><td>4.71</td><td>−12.02%</td></tr>
+<tr><td>归母净利率</td><td>14.66%</td><td>17.45%</td><td>20.40%</td><td>18.38%</td><td>11.30%</td><td>—</td></tr>
+<tr><td>基本每股盈利（港元）</td><td>0.2599</td><td>0.3761</td><td>0.4441</td><td>0.3582</td><td>0.1605</td><td>−11.35%</td></tr>
+<tr><td>ROE / ROIC</td><td>13.23% / 11.07%</td><td>18.06% / 15.11%</td><td>20.06% / 16.08%</td><td>15.00% / 11.90%</td><td>6.48% / 5.43%</td><td>—</td></tr>
+<tr><td>经营现金流</td><td>6.96</td><td>7.34</td><td>9.26</td><td>4.91</td><td>6.35</td><td>−2.25%</td></tr>
+<tr><td>广义资本开支（现金再投资）</td><td>3.88</td><td>4.18</td><td>7.04</td><td>5.40</td><td>3.35</td><td>—</td></tr>
+<tr><td>自由现金流代理</td><td>3.07</td><td>3.16</td><td>2.22</td><td>−0.49</td><td>3.00</td><td>—</td></tr>
+<tr><td>每股账面净资产（港元）</td><td>2.075</td><td>2.090</td><td>2.338</td><td>2.444</td><td>2.516</td><td>—</td></tr>
+</tbody></table></div>
+<div class="cols">
+<div class="col"><div class="bars"><div class="bar rev" style="height:82.88%"></div><div class="bar np" style="height:12.15%"></div></div></div>
+<div class="col"><div class="bars"><div class="bar rev" style="height:99.55%"></div><div class="bar np" style="height:17.37%"></div></div></div>
+<div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:20.40%"></div></div></div>
+<div class="col"><div class="bars"><div class="bar rev" style="height:89.33%"></div><div class="bar np" style="height:16.42%"></div></div></div>
+<div class="col"><div class="bars"><div class="bar rev" style="height:64.45%"></div><div class="bar np" style="height:7.28%"></div></div></div>
+</div><div class="collabels"><div>2021</div><div>2022</div><div>2023</div><div>2024</div><div>2025</div></div>
+<div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
+<p class="small">利润收缩比收入更深。两系列共用五年最大收入为纵轴上限，图形据历史表复算；2022年收购友谊化工使原料药增长包含并购范围变化。</p>
+<p>把最新半年替换进全年后，<span class="g">滚动十二个月</span>收入推算为43.79亿港元，营业利润7.03亿港元，归母净利润5.07亿港元，仍低于2024年。本期基本EPS为0.1107港元，上年同期0.0962港元；增速推算15.07%，快于归母，部分来自加权平均股数下降。现金流滚动值因当前中期缺项暂不计算。</p>
+<div data-financials="segments"><div class="tblscroll"><table class="tbl">
+<caption>2026H1业务分解，亿港元；同比、收入占比及分部结果率为推算。产品与地区为交叉维度，不与法定分部重复相加。</caption>
+<thead><tr><th>层级 / 项目</th><th>收入</th><th>同比</th><th>集团占比</th><th>分部结果 / 结果率</th></tr></thead><tbody>
+<tr><td>法定：静脉输液及其他</td><td>22.42</td><td>+9.6%</td><td>95.0%</td><td>4.42 / 19.69%</td></tr>
+<tr><td>法定：医用材料及相关产品</td><td>1.18</td><td>+16.8%</td><td>5.0%</td><td>0.13 / 11.14%</td></tr>
+<tr><td>产品：非PVC及直立式软袋</td><td>11.04</td><td>+31.4%</td><td>46.8%</td><td>产品利润未披露</td></tr>
+<tr><td>产品：聚丙烯塑瓶 / 玻璃瓶</td><td>2.93 / 0.90</td><td>+9.1% / −0.8%</td><td>12.4% / 3.8%</td><td>产品利润未披露</td></tr>
+<tr><td>产品：安瓿注射液 / 原料药</td><td>1.63 / 3.95</td><td>+3.5% / +9.4%</td><td>6.9% / 16.7%</td><td>产品利润未披露</td></tr>
+<tr><td>产品：口服制剂 / 其他</td><td>1.65 / 0.33</td><td>−44.3% / +1.1%</td><td>7.0% / 1.4%</td><td>产品利润未披露</td></tr>
+<tr><td>地区：中国 / 其他国家</td><td>19.47 / 4.14</td><td>+7.0% / +26.4%</td><td>82.48% / 17.52%</td><td>地区利润未披露</td></tr>
+</tbody></table></div>
+<div class="stacks"><div class="stack"><div class="cap">2025H1 法定分部收入占比（推算）</div><div class="stackbar"><div class="seg p" style="width:95.3%">95.3%</div><div class="seg q" style="width:4.7%">4.7%</div></div></div><div class="stack"><div class="cap">2026H1 法定分部收入占比（推算）</div><div class="stackbar"><div class="seg p" style="width:95%">95.0%</div><div class="seg q" style="width:5%">5.0%</div></div></div></div>
+<p class="small">蓝色药品分部占绝大多数，红色医用材料规模仍小。法定分部口径保持一致；主分部的结果率不能替代各产品的毛利率。</p></div>
+<div class="tblscroll"><table class="tbl txt"><caption>医药经营指标底图：截至2026H1，期后变化在产品准入节说明。</caption><thead><tr><th>指标</th><th>披露或推算</th><th>判断边界</th></tr></thead><tbody>
+<tr><td>集采与接续</td><td>累计带量中选269个品规；接续中标55个品规</td><td>品规数量不提供价格和采购量。</td></tr>
+<tr><td>管线与临床</td><td>SYN045完成健康受试者剂量爬坡；患者Ib期为计划</td><td>健康人安全性陈述不等于患者疗效。</td></tr>
+<tr><td>研发投入与资本化</td><td>总投入1.69亿；资本化0.72亿；费用化0.97亿港元</td><td>资本化比例推算42.77%，须与后续销售及摊销匹配。</td></tr>
+<tr><td>注册批件</td><td>本期取得56件；累计189个品种、253个品规通过或视同通过一致性评价</td><td>累计总量的时点固定在半年末。</td></tr>
+<tr><td>产品收入与分部利润</td><td>产品结构及两项法定分部结果见上表</td><td>无逐产品利润、产能利用率或单位成本分解。</td></tr>
+<tr><td>销售及分销费用率</td><td>本期14.21%，上年同期16.46%（推算）</td><td>费用下降与产品和集采结构共同阅读。</td></tr>
+<tr><td>应收及账龄</td><td>应收贸易款项及票据18.11亿港元；周转代理见现金节</td><td>票据并入，口径宽于纯应收账款。</td></tr>
+<tr><td>管线峰值销售与成功概率</td><td>未取得可验证输入；rNPV不适用本次盈利主业估值</td><td>不预先计入早期管线独立价值。</td></tr>
+</tbody></table></div>
+<div class="plain"><span class="pl">白话解读</span><p>上半年确实比低谷时好，但“好转”还不是“恢复原状”。历史表说明盈利承压的起点，业务表说明恢复主要集中在哪里；下面的利润桥解释增长有多少来自经营，有多少来自费用。</p></div>
+<p>复合增速用完整年度；ROE用平均归母权益，ROIC用税后营业利润与平均投入资本。现金再投资加总披露的设备、使用权及无形资产现金项；2021–22年未单列使用权现金行，不另加估算。每股净资产扣库存股，主估值用总发行股数。</p>
 </section>
 
 <section class="reveal on" id="profit">
-  <div class="slabel">增长质量 · 利润桥 · 币种</div>
-  <h2>输液量增可信，利润率扩张却主要来自费用端</h2>
-  <p>公司公告显示输液销量和收入均实现双位数增长，收入达到14.87亿港元。收入除以销量得到的港元单位收入代理为正，但同时混合包装、产品、地区和汇率，不能称为人民币提价。管理层披露人民币总收入约20.75亿元、只增长约5%；两种币种的收入增速相差约4.9个百分点。若用“（1＋港元增速）／（1＋人民币增速）−1”观察，隐含折算乘数代理约为+4.7%，不是公司披露的固定汇率桥。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>输液量价与结构信号｜公司路演口径与分析推算分列</caption>
-      <thead><tr><th>信号</th><th>销量同比</th><th>收入同比</th><th>单位收入代理</th><th>解释边界</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td nowrap>输液合计</td><td>+21.4%</td><td>+24.0%</td><td>+2.1%（港元）</td><td>公司公告销量与收入；单位收入为分析计算</td></tr>
-        <tr><td nowrap>双硬管软袋</td><td>+29%</td><td>+20%</td><td>−7.0%</td><td>路演增长率推算，混合规格结构</td></tr>
-        <tr><td nowrap>腹膜透析液</td><td>+121%</td><td>+79%</td><td>−19.0%</td><td>路演增长率推算，低基数与结构影响未知</td></tr>
-        <tr><td nowrap>腹膜＋血液滤过置换液</td><td>+75%</td><td>+43%</td><td>−18.3%</td><td>路演合并口径推算</td></tr>
-        <tr><td nowrap>其他≥1,000ml产品</td><td>+55%</td><td>+53%</td><td>−1.3%</td><td>路演增长率推算</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>路演材料披露输液整体毛利率46.2%，其中直立式软袋59.1%、非PVC软袋46.1%、聚丙烯塑瓶35.7%、玻璃瓶24.6%。这一截面与“高端包装结构重要”的判断一致，但还混合产品、规格、客户和地区，不能单独识别包装的因果贡献；集团也没有披露上年同期可比包装毛利或产品收入到分部利润的调节，不能把上述截面直接写成毛利率同比改善。</p>
-
-  <h3>经营利润增量如何形成</h3>
-  <div class="wfall" role="img" aria-label="2026年上半年经营利润同比增量桥，单位为百万港元，具体数值在每行右侧">
-    <div class="wrow"><div class="nm">毛利增加<span>收入放量，毛利率微降</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:45.591%"></div></div><div class="fig up">+82.064</div></div>
-    <div class="wrow"><div class="nm">其他收益减少<span>政府补助下降为主</span></div><div class="wtrack"><div class="wbar down" style="left:25.757%;width:24.243%"></div></div><div class="fig down">−43.637</div></div>
-    <div class="wrow"><div class="nm">销售及分销节省<span>费用率16.46%→14.21%</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:9.968%"></div></div><div class="fig up">+17.943</div></div>
-    <div class="wrow"><div class="nm">一般行政增加<span>费用率略升</span></div><div class="wtrack"><div class="wbar down" style="left:43.648%;width:6.352%"></div></div><div class="fig down">−11.433</div></div>
-    <div class="wrow"><div class="nm">费用化研发节省<span>费用率6.35%→4.11%</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:21.829%"></div></div><div class="fig up">+39.292</div></div>
-    <div class="wrow"><div class="nm">应收减值变化<span>由拨回转为损失</span></div><div class="wtrack"><div class="wbar down" style="left:44.561%;width:5.439%"></div></div><div class="fig down">−9.790</div></div>
-    <div class="wrow"><div class="nm">经营利润净增<span>六项与报表勾稽</span></div><div class="wtrack"><div class="wbar tot" style="left:50%;width:41.355%"></div></div><div class="fig">+74.439</div></div>
-  </div>
-  <p class="small">条形以±90百万港元为共同半轴；右侧数值与2025H1经营利润370.857百万港元至2026H1 445.296百万港元的变化勾稽。此后财务成本净额增加34.660百万港元、联营利润减少1.454百万港元，压缩了税前利润增量。</p>
-  <p>净财务成本接近翻倍，不等于借款利息翻倍：借款利息由54.776降至51.940百万港元，但存款利息减少，人民币升值又使汇兑由6.697百万港元收益转为26.052百万港元损失。公司未使用外汇对冲工具，因此港元收入折算受益与财务费用承压可以同时发生。</p>
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>输液销量确实在恢复，这是本期最强的证据。但毛利率没有跟着上升，经营利润率变好主要因为销售和损益表研发费用占收入更低。</p>
-    <p><b>量增证明工厂重新出货，不自动证明每一瓶更赚钱。</b>要把“恢复”升级成“质量改善”，还需要看到毛利率稳定、费用节省不伤害研发，以及全年经营现金流兑现。</p>
-  </div>
+<div class="slabel">利润来源</div><h2>销量恢复有证据，费用下降贡献了更多利润弹性</h2>
+<p>输液恢复不只是会计换算。公司披露销量8.68亿瓶（袋），港元平均售价同比上升2.1%，输液收入14.87亿港元、增长24.0%。这里的<span class="g">平均售价</span>是公司披露值，包含币种换算和产品组合，不能直接解释为人民币同品提价。另据管理层，本期人民币收入20.75亿元、增长5.0%；这也解释了报表呈列增速为何高于本币增长。</p>
+<p>增长的集中度高于总收入表现所暗示的程度。按产品增量推算，非PVC与直立式软袋贡献集团收入增量的123.6%，口服制剂下降抵消61.3%。非PVC指袋材不含<span class="g">聚氯乙烯</span>。管理层把口服走弱归于呼吸道感染低流行、季节性抗病毒药消化渠道库存；后续仍需终端销售与去库存结束的证据，才能区分暂时需求波动与份额流失。</p>
+<div class="wfall">
+<div class="wrow"><div class="nm">毛利增加<span>营业收入与毛利率合并影响</span></div><div class="wtrack"><div class="wbar up" style="left:0%;width:97.43%"></div></div><div class="fig">+82.064</div></div>
+<div class="wrow"><div class="nm">其他收益减少<span>补助等净收益影响</span></div><div class="wtrack"><div class="wbar down" style="left:45.62%;width:51.81%"></div></div><div class="fig">−43.637</div></div>
+<div class="wrow"><div class="nm">销售费用节省<span>费用下降增加利润</span></div><div class="wtrack"><div class="wbar up" style="left:45.62%;width:21.30%"></div></div><div class="fig">+17.943</div></div>
+<div class="wrow"><div class="nm">行政费用增加<span>费用上升减少利润</span></div><div class="wtrack"><div class="wbar down" style="left:53.35%;width:13.57%"></div></div><div class="fig">−11.433</div></div>
+<div class="wrow"><div class="nm">研发费用节省<span>费用化研发下降</span></div><div class="wtrack"><div class="wbar up" style="left:53.35%;width:46.65%"></div></div><div class="fig">+39.292</div></div>
+<div class="wrow"><div class="nm">应收减值变化<span>由拨回转为损失</span></div><div class="wtrack"><div class="wbar down" style="left:88.38%;width:11.62%"></div></div><div class="fig">−9.790</div></div>
+<div class="wrow"><div class="nm">经营利润净增<span>全部变动调节后合计</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:88.38%"></div></div><div class="fig">+74.439</div></div>
+</div>
+<p class="small">费用节省抵消其他收益减少并放大利润增量。单位百万港元，均为两期损益表差额推算，升降项严格调节至经营利润变动；图形使用累计变化的同一刻度。</p>
+<p>研发需要同时看活动总额和会计处理。总投入同比推算减少20.4%，上年同期资本化比例为35.96%；本期比例更高，所以费用化研发下降并不全部来自效率。<span class="g">研发资本化</span>先把满足条件的开发支出计入资产，未来再摊销或测试减值。只有新产品形成可持续现金收益，当前费用减少才具备长期经济意义。</p>
+<p>利润桥之后，净财务成本和联营收益使归母利润增幅弱于营业利润。财务负担上升不宜全部归于加息：公告显示借款利息下降，利息收入减少及汇兑由收益转损失才是关键差异。<span class="g">汇兑损益</span>可以扰动单期净利，但集团的浮息借款与人民币经营、港元呈列结构依然影响后续波动。</p>
+<div class="plain"><span class="pl">白话解读</span><p>这次利润改善既有药品卖得更多，也有费用花得更少。关键不是把费用削减全盘否定，而是确认较低费用是否仍能支持下一轮产品销售；研发资产的商业化和口服需求是观察重点。</p></div>
 </section>
 
 <section class="reveal on" id="pipeline">
-  <div class="slabel">研发专章 · 资本化 · 商业转化</div>
-  <h2>批件密度证明注册能力，尚未证明新品经济性</h2>
-  <p>上半年取得56个国家药品注册批件，其中48个为制剂及原料药等新品规、8个为补充申请；截至6月底，累计189个品种、253个品规通过或视同通过一致性评价。港交所公告披露的“生产上市申请”为24个品种/品规，路演材料所称向CDE申报38个采用更宽口径，两者不能混写。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>研发投入质量｜百万港元</caption>
-      <thead><tr><th>口径</th><th>2025H1</th><th>2026H1</th><th>同比 / 变化</th><th>含义</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td nowrap>总研发投入</td><td>212.757</td><td>169.418</td><td class="down">−20.4%</td><td>研发活动总额下降</td></tr>
-        <tr><td nowrap>资本化开发成本</td><td>76.500</td><td>72.453</td><td class="down">−5.3%</td><td>进入资产负债表</td></tr>
-        <tr><td nowrap>损益表研发费用</td><td>136.257</td><td>96.965</td><td class="down">−28.8%</td><td>直接帮助本期经营利润</td></tr>
-        <tr><td nowrap>资本化率</td><td>35.96%</td><td>42.77%</td><td>+6.81个百分点</td><td>阶段变化与会计确认共同影响利润</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>创新与改良项目阶段｜公司路演陈述；监管阶段不外推销售</caption>
-      <thead><tr><th>项目</th><th>适应症 / 类型</th><th>路演所述阶段</th><th>下一项硬验证</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td nowrap>SYN045</td><td>肺动脉高压</td><td>完成健康受试者单次及多次剂量爬坡；患者Ib期仅为计划</td><td>临床登记与首例患者入组</td></tr>
-        <tr><td nowrap>CX24005</td><td>抗癫痫</td><td>多系列化合物筛选后处于毒性优化</td><td>PCC确认及IND-enabling毒理</td></tr>
-        <tr><td nowrap>CX25001</td><td>镇痛</td><td>PCC确认中；管理层预计2026年9月启动IND申报相关实验</td><td>PCC确认与正式IND受理号</td></tr>
-        <tr><td nowrap>CX25004</td><td>特应性皮炎</td><td>化合物筛选与药代动力学优化</td><td>PCC确认</td></tr>
-        <tr><td nowrap>M**Q / M**M</td><td>二类改良型新药</td><td>临床前开发</td><td>受理与临床许可</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>6月末之后至8月27日，港交所有界扫描累计发现18个制剂生产批件和4个原料药登记状态更新。它们改善上市、招标或制剂配套条件，却没有披露挂网价、进院数量、销售额或利润；因此不把22个监管节点折算进预测收入。</p>
-  <div class="plain"><span class="pl">白话解读</span><p>“获批”像拿到入场券，不等于比赛已经赢了。石四药已证明能持续把产品推进到监管节点；下一步要看复杂制剂是否真正挂网、进入医院并产生可见毛利。与此同时，本期利润受益于费用化研发下降，<b>批件多不能替代对研发总额和资本化率的检查</b>。</p></div>
-</section>
-
-<section class="reveal on" id="overseas">
-  <div class="slabel">海外业务 · 地域结构 · 汇率</div>
-  <h2>海外连续快于国内，但收入增长还没有利润与现金画像</h2>
-  <p>海外收入在2021—2025年由4.81亿港元增至7.01亿港元，CAGR为9.87%；同期中国收入CAGR为−8.19%。2026H1海外收入4.14亿港元，同比增长26.4%，贡献集团收入增量的40.5%，收入占比由15.24%升至17.52%。</p>
-  <div class="rows" aria-label="石四药集团海外收入占比变化">
-    <div class="row"><div class="nm">2021全年<span>其他国家收入占比</span></div><div class="track"><div class="fill alt" style="width:51.2%"></div></div><div class="fig">4.81亿<span>9.0%</span></div></div>
-    <div class="row"><div class="nm">2025全年<span>其他国家收入占比</span></div><div class="track"><div class="fill soft" style="width:96.0%"></div></div><div class="fig">7.01亿<span>16.8%</span></div></div>
-    <div class="row"><div class="nm">2026H1<span>其他国家收入占比</span></div><div class="track"><div class="fill" style="width:100%"></div></div><div class="fig">4.14亿<span>17.5%</span></div></div>
-  </div>
-  <p class="small">条形按收入占比、以2026H1为100%；2026H1是半年度流量，不能与全年绝对额直接比较。</p>
-  <p>公司称上半年制剂出口收入1.2358亿港元、增长13%；其中输液出口9,151万瓶（袋）、增长24%，安瓿666万支、增长32%，口服制剂1,627万片、增长79%，并在11个国家取得19项注册。上述是公司经营陈述；集团没有披露海外毛利、经营利润、营运资本、资本开支、分国税负或现金回流。</p>
-  <div class="finds">
-    <div class="find good"><div class="t">已建立的证据</div><p>五年海外收入方向持续向上，本期增速再次超过国内；注册与出口数量提供了渠道扩张的前置证据。</p></div>
-    <div class="find warn"><div class="t">仍缺少的经济性</div><p>没有不变汇率收入桥，也没有海外利润和现金。汇率已同时影响港元收入与财务费用，不能把报表增长直接当作本地需求。</p></div>
-  </div>
-  <div class="plain"><span class="pl">白话解读</span><p>海外收入像新增的一条水管，流量确实越来越大；但公司没有告诉我们这条水管的成本、占用资金和最后留下的现金。<b>因此海外是增长证据，不是独立估值单元。</b></p></div>
+<div class="slabel">注册与采购</div><h2>产品准入持续扩展，商业回报仍要逐步确认</h2>
+<p>近期披露加强了产品组合的覆盖面，却还没有给出足以调高利润预测的商业参数。2026年9月2日，公司公告盐酸地尔硫䓬片30毫克通过仿制药一致性评价，称为国内第3家。公司称，结合已有注射剂注册后，可覆盖院内急救注射和院外口服续贯治疗；该协同尚无销售或利润数据验证，公告也未提供中选价和医院覆盖。</p>
+<div class="finds">
+<div class="find"><div class="t">目录资格扩大可用范围</div><p>新版基本药物目录已于2026年9月1日生效。公司95个品种、141个品规纳入，其中新增32个品种、37个品规；配备机会增加，订单仍取决于地方执行及采购。</p></div>
+<div class="find warn"><div class="t">拟中选尚缺经济条款</div><p>第十二批国采13个品种、16个品规全部拟中选。<span class="g">拟中选</span>还需最终结果与执行；公告未给价格、约定量、覆盖省份及现有销售基数。</p></div>
+<div class="find"><div class="t">早期项目保留阶段差异</div><p>CX25001仍在<span class="g">临床前候选化合物</span>确认阶段，公司预计9月启动临床申报相关实验。SYN045的患者探索仍属后续计划，尚无可用于盈利估值的疗效或销售输入。</p></div>
+</div>
+<p>路演材料预计国采在2026Q4执行，这只是管理层时间预期。真正改变盈利的顺序是最终中选、各省执行、按价供货、费用节省以及实际回款。<span class="g">一致性评价</span>解决质量与疗效一致性的监管资格，<span class="g">原料药登记</span>则解决可用于关联制剂的监管状态；把它们直接换算成终端销售，会跳过最重要的商业环节。</p>
+<p>早期产品有工艺潜力，当前估值仍只计成熟主业。复杂注射剂、吸入制剂和原料药配套可能改善产品组合，规模化生产也可能分摊固定费用，但两条路径都需要市场证据。新增竞品可能削弱先发优势，集采后的采购集中度还可能提高履约要求。当前材料缺少产品级单位成本、良率、产能利用率和新增固定资产回报，因此早期项目只作为未来验证对象。</p>
+<p>监管进度按事件时点记录。半年末累计过评数不因后续公告机械加总：一个品种可能有多个规格，生产注册、补充申请和原料药登记的分母也不同。后续跟踪重点是已获批产品的挂网、进院与销售爬坡。</p>
+<div class="plain"><span class="pl">批件怎样变成利润？</span><p>批件先带来销售资格，采购和医院准入决定能否卖出，成本和回款决定最后留下多少。下次观察应沿这条顺序前进；只有产品收入和利润贡献出现，注册进度才能支持更高估值。</p></div>
 </section>
 
 <section class="reveal on" id="cash">
-  <div class="slabel">现金流 · 资产负债 · 股东回报</div>
-  <h2>资产负债表仍可承受，现金转换必须等完整中报</h2>
-  <p>6月末现金低于银行借款，计入租赁后仍为净负债；流动比率1.87倍，资本负债比率由年末24.1%降至21.9%。借款全部须在五年内偿还且大部分为浮动利率。公司不是净现金企业，但当前资产负债表也没有触发高杠杆专章。</p>
-  <div class="grid">
-    <div class="cell"><div class="k">现金及现金等价物</div><div class="v">18.56<span class="u">亿港元</span></div><div class="d"><span>较年末 +9.8%</span></div></div>
-    <div class="cell"><div class="k">银行借款</div><div class="v">40.41<span class="u">亿港元</span></div><div class="d"><span>较年末 +0.8%</span><span>大部分浮息</span></div></div>
-    <div class="cell"><div class="k">含租赁净负债</div><div class="v">21.93<span class="u">亿港元</span></div><div class="d"><span>较年末 −5.6%</span></div></div>
-    <div class="cell"><div class="k">贸易应收及票据</div><div class="v">18.11<span class="u">亿港元</span></div><div class="d"><span>较年末 +6.5%</span></div></div>
-    <div class="cell"><div class="k">存货</div><div class="v">12.40<span class="u">亿港元</span></div><div class="d"><span>较年末 +3.2%</span></div></div>
-    <div class="cell"><div class="k">资本承诺</div><div class="v">3.18<span class="u">亿港元</span></div><div class="d"><span>较年末下降</span></div></div>
-  </div>
-  <p>路演材料给出的应收天数由144天下降至129天、存货天数由180天下降至161天、应付天数由41天升至48天；但这些是公司口径，且资产负债表点位不能替代现金流量表。用存货、应收、预付减应付、合同负债及应计项目构造的营运资本代理较年末增加0.55亿港元，只能提示占用方向。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>资本回报记录｜亿港元；股息按归属财年、回购按当年现金支出</caption>
-      <thead><tr><th>期间</th><th>每股股息（港元）</th><th>股息总额</th><th>公司回购现金</th><th>广义FCF代理</th><th>解释</th></tr></thead>
-      <tbody>
-        <tr><td>2021</td><td>0.120</td><td>3.61</td><td>1.88</td><td>3.07</td><td>分配与现金发生时点不完全一致</td></tr>
-        <tr><td>2022</td><td>0.140</td><td>4.17</td><td>0.86</td><td>3.16</td><td>同左</td></tr>
-        <tr><td>2023</td><td>0.170</td><td>5.05</td><td>0.33</td><td>2.22</td><td>同左</td></tr>
-        <tr><td>2024</td><td>0.175</td><td>5.18</td><td>0.45</td><td>−0.49</td><td>当年广义FCF代理为负</td></tr>
-        <tr><td>2025</td><td>0.080</td><td>2.34</td><td>1.54</td><td>3.00</td><td>利润与股息明显下台阶</td></tr>
-        <tr class="grp"><td>2021—2025累计</td><td>—</td><td>20.34</td><td>5.06</td><td>—</td><td>期间未见股权融资现金流入</td></tr>
-        <tr><td>2026H1</td><td>0.055</td><td>约1.59</td><td>0.35</td><td>未披露</td><td>股息9月24日计划支付；派息率49.65%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>2026H1公司直接回购1,347万股、支付3,532.6万港元；限制性股份奖励信托另支付1,991.6万港元购入898万股，后者是奖励池购股而非股东回报。6月末公司直接库存股5,967万股，信托持有1,228万股；8月31日信托再购90万股后持有1,318万股。</p>
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>资产负债表显示“水库”尚能覆盖短期波动，但只有现金流量表能说明水从经营、投资还是融资而来。现金增加、净负债下降都不是上半年自由现金流的替代品。</p>
-    <p><b>本期最重要的缺口不是利润表，而是现金表。</b>股息与回购继续发生，全年报告必须同时回答经营现金、资本开支和营运资本是否支持这种分配。</p>
-  </div>
-</section>
-
-<section class="reveal on" id="procurement">
-  <div class="slabel">集采 · 基药目录 · 竞争机制</div>
-  <h2>准入面正在扩大，价格和利润仍藏在执行细节里</h2>
-  <p>制药业务的竞争不是只比“获批多少”。一致性评价和注册批件决定能否进入部分招采，国家及地方集采用降价换约定采购量，医院配备和终端使用再决定真实销量；营销费用可能因此下降，毛利也可能被中选价格压缩。</p>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026年政策与准入事件｜披露状态、缺失数据与下一检查点</caption>
-      <thead><tr><th>事件</th><th>披露事实</th><th>不能推导</th><th>下一验证</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td nowrap>第十二批国家集采</td><td>13个品种、16个品规全部“拟中选”</td><td>不是最终合同或已经放量；价格、约定量、执行省份未披露</td><td>最终中选、各省执行、采购与毛利</td></tr>
-        <tr><td nowrap>国家基本药物目录</td><td>95个品种、141个品规纳入；2026-09-01生效</td><td>不是独家采购或销量保证</td><td>医疗机构配备与院端采购</td></tr>
-        <tr><td nowrap>既有招采基础</td><td>H1参与市级以上地方招采407次；累计带量中选269个品规</td><td>没有披露对应收入、价格与利润</td><td>同口径销售和费用率变化</td></tr>
-        <tr><td nowrap>接续与地方集采</td><td>国家集采协议期满接续55个品规；山东集采5个品规中标</td><td>中标数量不等于经济贡献</td><td>执行量、降价幅度、履约成本</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>路演材料预计第十二批国采在2026年第四季度执行，这是管理层预期，不是正式执行公告。评价集采影响要把两条可能路径同时纳入：采购量与市场份额可能向上，单位价格与毛利率可能向下，销售费用节省也只是一项潜在对冲。</p>
-  <div class="plain"><span class="pl">白话解读</span><p>“全部拟中选”说明石四药拿到了更好的准入概率，尚不能告诉我们赚多少钱。只有看到最终价格、约定采购量、各省执行和中选后的毛利，才能把政策事件放进估值。<b>数量是入口，单位经济才是结果。</b></p></div>
+<div class="slabel">现金与资本配置</div><h2>偿债缓冲有所改善，利润回款仍缺直接验证</h2>
+<p>资产负债表显示偿债缓冲改善，但当前公告缺少现金流量表，不能由现金余额推断利润回款。</p>
+<div class="grid">
+<div class="cell"><div class="k">现金及现金等价物</div><div class="v">18.56<span class="u">亿港元</span></div><div class="d"><span>2026年6月30日</span></div></div>
+<div class="cell"><div class="k">银行借款</div><div class="v">40.41<span class="u">亿港元</span></div><div class="d"><span>多数为浮动利率</span></div></div>
+<div class="cell"><div class="k">含租赁净债务</div><div class="v">21.93<span class="u">亿港元</span></div><div class="d"><span>推算：借款及租赁减现金</span></div></div>
+<div class="cell"><div class="k">期末存货</div><div class="v">12.40<span class="u">亿港元</span></div><div class="d"><span>需结合产品结构及销售核验</span></div></div>
+<div class="cell"><div class="k">未履行资本承诺</div><div class="v">3.18<span class="u">亿港元</span></div><div class="d"><span>未全额反映为当期现金支出</span></div></div>
+<div class="cell"><div class="k">流动比率</div><div class="v">1.87<span class="u">倍</span></div><div class="d"><span>期末流动资产除以流动负债（推算）</span></div></div>
+</div>
+<p>公司披露资本负债比率从2025年末24.1%降至21.9%，全部银行借款须在五年内偿还。借款和承诺仍需要经营收益覆盖，这个结构支持“有缓冲”的判断，还不支持把权益看作由净现金托底。</p>
+<p>本集团存货、应收、预付款减应付、合同负债及应计款构造的<span class="g">营运资金代理</span>，期末较年末增加0.55亿港元。余额变化可能混入汇率和非现金项目。以期末应收及票据除以滚动收入推算广义回款天数≈151天；它采用期末余额且含票据，和公司以平均余额或纯贸易应收计算的天数不可直接比较。</p>
+<p>2025年FCF代理转正部分来自<span class="g">广义现金再投资</span>缩小，因此不能单独证明经营现金创造改善；完整中报需同时核对开发支出、投产与承诺履行。现有披露仍难准确区分维持性与增长性投入。</p>
+<p>股东回报已经有实际支付安排：本次中期每股股息0.055港元，总额≈1.59亿港元，派息率推算49.65%，拟于2026年9月24日支付。公司上半年直接购回1347万股，现金代价3532.6万港元，期末作为库存股持有。过去购回是已发生的分配；新增购回没有可量化承诺，所以持有回报情景不预设未来回购收益。</p>
+<p>分配能否持续取决于现金覆盖。若新增借款或减少必要投入提供资金，每股指标改善未必带来长期价值。历史净给予或净索取股东资本的结论尚未建立；本次资本回报判断限定于已核对的分红及购回记录。</p>
+<div class="plain"><span class="pl">白话解读</span><p>账上有钱和利润变成现金，是两个需要分别检查的问题。当前负债有缓冲，但现金流缺项限制了对分红、再投资和利润质量的确认；完整中报的现金流及附注会直接提高判断可信度。</p></div>
 </section>
 
 <section class="reveal on" id="governance">
-  <div class="slabel">股本 · 激励 · 关联治理</div>
-  <h2>回购没有新增稀释，治理折价集中在角色与利益重叠</h2>
-  <p>2026年1月，1亿份未行使购股权失效；6月末没有潜在摊薄普通股，基本与稀释后EPS相同。H1加权平均股数同比下降1.83%，解释了EPS增速高于归母利润增速约2.1个百分点。估值模型为保持保守并与Wind市值一致，使用含库存股的总股本；扣除公司直接库存股与信托持股后的近似经济股数另行对账。</p>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>治理与股本检查表｜截至2026-08-31有界披露</caption>
-      <thead><tr><th>事项</th><th>已知事实</th><th>投资者仍需知道</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td nowrap>主席兼行政总裁</td><td>曲继广兼任两职，偏离企业管治守则C.2.1</td><td>董事会制衡与继任安排</td></tr>
-        <tr><td nowrap>限制性股份奖励</td><td>信托已经在市场建仓；8月31日购入90万股并非授予</td><td>受益人、授予数、归属条件与绩效门槛均未披露</td></tr>
-        <tr><td nowrap>控股方增持</td><td>曲继广控制的China Pharmaceutical于3月31日至5月5日买入2,140万股，估算均价HK$2.506</td><td>公司库存股导致的“视为权益”不能重复算作增持</td></tr>
-        <tr><td nowrap>四川科伦</td><td>持股约23.03%，同业、董事席位兼持续关联交易对手方</td><td>框架定价和监控机制已披露；H1实际额与执行层比价证据未披露</td></tr>
-        <tr><td nowrap>2026关联交易上限</td><td>采购/销售/制造/研发年度上限分别为人民币1.7458亿/0.8217亿/0.2700亿/0.0800亿</td><td>实际发生额、产品可比价格与服务质量</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>持续关联交易框架已经披露定价与监控：采购参考行业数据库和可得第三方报价，销售参考价目表及近期独立交易，制造与研发服务至少取得两份独立第三方报价，并由外聘核数师和独立董事作年度审阅。四川科伦仍同时是重要股东、同业、董事席位持有者和交易对手；2026H1没有披露实际发生额及执行层比较证据，外部股东因此还不能把框架程序验证为当期经济公允。</p>
-  <p>H1奖励计划没有授出、归属、注销或失效股份。信托累计买股上限为计划采纳日已发行股本的2%，单一参与者累计授予上限为1%；这些上限不能代替具体受益人和业绩条件。</p>
-  <div class="callout"><b>三种每股分母必须分开：</b>H1 EPS使用期间加权平均28.9386亿股；期末BVPS约HK$2.709使用扣除公司与信托库存股后的28.7916亿股；Wind市值、P/B和本报告每股估值为保持保守，使用含库存股的29.5111亿总股本。8月31日近似经济股数28.7826亿股只作后续股本参考。</div>
-  <div class="callout"><b>奖励池购股不是已经授予。</b>集团现金已经支出、总股本没有新增；未来只有在披露参与者、授予数量、归属和业绩条件后，才能判断激励是否真正与股东回报对齐。</div>
+<div class="slabel">治理与激励</div><h2>奖励池持续买股，价值取决于后续授予条件</h2>
+<p>2026年9月1日至3日，限制性股份奖励计划信托累计买入320万股，代价874.7万港元，推算均价2.7334港元；截至9月3日持有1638万股，约占已发行股数0.555%。这是本公司内部资金购买已有股份，为未来奖励储备股份。公告仍未披露获选参与者、授予数量、归属条件或业绩门槛，不能把购股数量解释为管理层已取得的奖励。</p>
+<p><span class="g">信托库存股</span>与发行人直接库存股披露范围不同；主估值统一采用总发行股数，经济股数仅作交叉检查，详见机制附录。</p>
+<div class="finds">
+<div class="find warn"><div class="t">角色集中需要有效制衡</div><p>主席曲继广兼任行政总裁，公司将其列为企业管治守则偏离并解释经营理由。执行效率与权力制衡应同时评价，独董监督和关键交易披露决定少数股东的保护。</p></div>
+<div class="find warn"><div class="t">同业股东也是交易对手</div><p>四川科伦持有23.03%权益；本公司一名非执行董事同时任四川科伦新都基地总经理。科伦与集团存在材料、制造及研发交易，形成竞争业务、股东身份和商业往来的重叠。</p></div>
+</div>
+<p>2025年报是最近完整实际交易基准；中期公告未披露半年发生额和关联余额，不能据此认定无交易。年度上限只表示权限，需核对实际规模、定价、毛利和账期。</p>
+<p>下一次授予公告应核对对象、费用、归属与失效条件及每股权益影响；在此之前不判断动机。</p>
+<div class="plain"><span class="pl">白话解读</span><p>信托买入是在准备奖励用的股份。谁能拿到、要达到什么目标、何时归属，才决定激励是否帮助普通股东；购入均价本身不能证明股票便宜。</p></div>
+</section>
+
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="正常化PE">
+<div class="slabel">估值与预期</div><h2>现价接近基准兑现，回报分布偏向等待验证</h2>
+<div class="grid">
+<div class="cell"><div class="k">现价</div><div class="v">HK$2.730</div><div class="d"><span>2026-09-04 16:08 香港时间</span></div></div>
+<div class="cell"><div class="k">熊市</div><div class="v">HK$1.713</div><div class="d"><span class="down">较现价−37.2%</span></div></div>
+<div class="cell"><div class="k">基准</div><div class="v">HK$2.727</div><div class="d"><span>较现价−0.1%</span></div></div>
+<div class="cell"><div class="k">牛市</div><div class="v">HK$3.691</div><div class="d"><span class="up">较现价+35.2%</span></div></div>
+<div class="cell"><div class="k">隐含预期</div><div class="v">6.71<span class="u">亿港元</span></div><div class="d"><span>12倍市盈率下所需2027财年归母利润（推算）</span></div></div>
+<div class="cell" data-verdict="neutral-cautious"><div class="k">判断</div><div class="v">中性偏谨慎</div><div class="d"><span>等待验证；基准价值接近市场价</span></div></div>
+</div>
+<div class="steps">
+<div class="step"><div class="n">方法 A</div><b>正常化PE（市盈率）：盈利能支撑什么价格？</b><p>市盈率是股价除以每股盈利。这里先估恢复期盈利，再乘合理倍数，不把低谷利润永久化。</p></div>
+<div class="step"><div class="n">方法 B</div><b>历史净资产参照</b><p>市净率（PB）是股价除以每股净资产；历史资产定价只作交叉验证，不直接决定目标。</p></div>
+<div class="step"><div class="n">怎么读</div><b>一个主方法决定结论</b><p>三档为同一十二个月观察期的分析终点，使用2027财年正常化盈利；不同方法不机械平均。</p></div>
+</div>
+<h3>第一步 · 资产便宜与盈利便宜并不等价</h3>
+<p>Wind最新市值为80.57亿港元，TTM市盈率15.88倍处于自身五年88.17%分位，最近披露市净率1.033倍处于10.20%分位。低PB与高PE同时出现，主要提示利润相对资产的回报下降。股价年初以来−2.28%，最近250日−1.02%，不能仅因历史股价回落就推断预期已经充分保守。</p>
+<h3>第二步 · 同业只提供倍数范围，不能替代商业模式</h3>
+<div class="tblscroll"><table class="tbl"><caption>Wind，2026-09-04 16:08 香港时间；港股医药参照。前瞻PE为供应商预测字段，预测年度及更新时间未逐项确认，仅作辅助锚。</caption><thead><tr><th>公司 / 层次</th><th>TTM PE</th><th>前瞻PE</th><th>PB</th><th>差异</th></tr></thead><tbody>
+<tr><td>联邦制药 · 较近业务参照</td><td>26.52</td><td>12.53</td><td>0.83</td><td>原料药及制剂，产品结构不同</td></tr>
+<tr><td>石药集团 · 泛医药参照</td><td>13.05</td><td>11.99</td><td>2.58</td><td>创新药与成药占比不同</td></tr>
+<tr><td>中国生物制药 · 泛医药参照</td><td>37.59</td><td>19.34</td><td>2.76</td><td>创新研发及治疗领域不同</td></tr>
+<tr><td>神威药业 · 泛医药参照</td><td>7.38</td><td>—</td><td>0.72</td><td>中药体系不同</td></tr>
+<tr><td>康臣药业 · 泛医药参照</td><td>8.47</td><td>8.11</td><td>2.09</td><td>专科中成药体系不同</td></tr>
+</tbody></table></div>
+<p>这组样本没有同治疗领域、同产品组合的完全可比者，故不据横向差价认定折价，也不跨业务层次合并取中位数。主估值基准12倍来自自身五年PE中位数11.962倍；表内公司仅分别提供背景，更高倍数仍需更持续的商业化及资本回报支持。</p>
+<h3>第三步 · 将经营分歧转为同一盈利模型</h3>
+<div class="tblscroll"><table class="tbl txt"><caption>分析假设，并非公司指引。金额为百万港元；每股为港元；利润与价值为推算，观察期一年。</caption><thead><tr><th>驱动</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据</th></tr></thead><tbody>
+<tr><td>经营组合</td><td>口服仍弱</td><td>输液持续、口服趋稳</td><td>新品及口服共同恢复</td><td>来自本期产品增量分化，未假定早期创新药销售。</td></tr>
+<tr><td>2026H2<br>收入增长</td><td>0%</td><td>15%</td><td>25%</td><td>参照本期恢复及低基数；牛市需扩展增量。</td></tr>
+<tr><td>2026H2<br>归母净利率</td><td>10.5%</td><td>12%</td><td>13%</td><td>参照前期盈利；考虑费用恢复及采购价格。</td></tr>
+<tr><td>FY2026<br>归母利润</td><td>532.243</td><td>598.846</td><td>648.294</td><td>已披露半年加情景半年。</td></tr>
+<tr><td>FY2027<br>利润增长</td><td>0%</td><td>12%</td><td>20%</td><td>基准参照本期归母增速；分歧在产品放量。</td></tr>
+<tr><td>FY2027<br>归母利润</td><td>532.243</td><td>670.708</td><td>777.953</td><td>由上一行推导。</td></tr>
+<tr><td>FY2027<br>每股盈利</td><td>0.18035</td><td>0.22727</td><td>0.26361</td><td>统一总发行股数分母。</td></tr>
+<tr><td>正常化PE</td><td>9.5倍</td><td>12倍</td><td>14倍</td><td>来自自身五年下四分位9.682倍、中位数及上四分位14.144倍；反映恢复可信度差异。</td></tr>
+<tr><td>稳态增长诊断</td><td>5.24%</td><td>6.33%</td><td>6.93%</td><td>以贴近中期水平的50%派息率、分析要求回报10.5%反推；仅检验倍数所容纳的长期增长，非盈利预测。</td></tr>
+<tr><td>主方法每股价值</td><td>1.713</td><td>2.727</td><td>3.691</td><td>盈利与倍数共同决定，情景终点未作为今日折现内在价值。</td></tr>
+</tbody></table></div>
+<div class="steps chain">
+<div class="step"><div class="n">驱动</div><b>H2收入+15%</b><p>本期恢复与低基数的基准假设。</p></div>
+<div class="step"><div class="n">利润率</div><b>H2净利率12%</b><p>费用与产品组合正常化。</p></div>
+<div class="step"><div class="n">盈利</div><b>FY2027利润670.708</b><p>百万港元，按FY2026再增12%。</p></div>
+<div class="step"><div class="n">倍数</div><b>12倍PE</b><p>取自自身历史中位附近。</p></div>
+<div class="step"><div class="n">每股价值</div><b>2.727港元</b><p>总发行股数，推算。</p></div>
+</div>
+<div class="tblscroll"><table class="tbl sgrid"><caption>行：FY2027归母利润增速（%）；列：正常化PE（倍）；格内港元/股。保持基准H2输入。框线为基准，着色为现价隐含。</caption><thead><tr><th>利润增速 ＼ PE</th><th>9.5</th><th>12</th><th>14</th></tr></thead><tbody>
+<tr><td>0%</td><td>1.928</td><td>2.435</td><td>2.841</td></tr>
+<tr><td>12% 基准</td><td>2.159</td><td class="base">2.727</td><td>3.182</td></tr>
+<tr><td>12.112% 隐含</td><td>2.161</td><td class="implied">2.730</td><td>3.185</td></tr>
+<tr><td>20%</td><td>2.313</td><td>2.922</td><td>3.409</td></tr>
+</tbody></table></div>
+<div class="ffield" aria-label="不同方法与假设范围">
+<div class="frow"><div class="fnm">正常化市盈率<span>熊市利润，9–10倍</span></div><div class="ftrack"><div class="fbar alt" style="left:6.5588%;width:5.3235%"></div><div class="fmark" style="left:39.1176%"></div></div><div class="fig">1.623–1.804</div></div>
+<div class="frow"><div class="fnm">正常化市盈率<span>基准利润，11–13倍</span></div><div class="ftrack"><div class="fbar" style="left:32.3529%;width:13.3824%"></div></div><div class="fig">2.500–2.955</div></div>
+<div class="frow"><div class="fnm">正常化市盈率<span>牛市利润，13–15倍</span></div><div class="ftrack"><div class="fbar moss" style="left:59.6176%;width:15.5000%"></div></div><div class="fig">3.427–3.954</div></div>
+<div class="frow"><div class="fnm">五年市净率参照<span>下四分位至中位</span></div><div class="ftrack"><div class="fbar alt" style="left:56.1471%;width:39.7059%"></div></div><div class="fig">3.309–4.659</div></div>
+</div><p class="small">历史市净率参照明显高于主方法。横轴为港元1.400–4.800，黑线为最新市场价；区间用于检验假设宽度，不替代三档单点。</p>
+<p>历史PB参照高出主方法超过15%，原因是将过去资产定价直接套到当前净资产，忽略了资本回报下降；该差异支持继续检验ROE恢复，而不支持简单上调目标。没有取得同口径企业价值倍数，故不把市盈率挪用于营业利润估值。</p>
+<h3>第四步 · 市场已经要求接近基准的增长</h3>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="implied"><caption>推算：每行只反推一个输入，其余保持基准；这是一组替代解释，不是同时需要全部实现。</caption><thead><tr><th>假设</th><th>基准假设</th><th>现价隐含</th><th>差距</th></tr></thead><tbody>
+<tr><td>2026H2收入增长</td><td>15.00%</td><td>15.247%</td><td>+0.247pp</td></tr>
+<tr><td>2026H2净利率</td><td>12.00%</td><td>12.026%</td><td>+0.026pp</td></tr>
+<tr><td>FY2027利润增长</td><td>12.00%</td><td>12.112%</td><td>+0.112pp</td></tr>
+<tr><td>正常化PE</td><td>12.000倍</td><td>12.012倍</td><td>+0.012倍</td></tr>
+</tbody></table></div>
+<div class="rows" aria-label="主方法情景与现价">
+<div class="row"><div class="nm">熊市<span>修复停顿</span></div><div class="track"><div class="fill alt" style="width:46.4102%"></div></div><div class="fig">1.713<span class="down">−37.2%</span></div></div>
+<div class="row"><div class="nm">现价<span>2026-09-04收市</span></div><div class="track"><div class="fill soft" style="width:73.9637%"></div></div><div class="fig">2.730<span>市场价</span></div></div>
+<div class="row"><div class="nm">基准<span>逐步正常化</span></div><div class="track"><div class="fill" style="width:73.8824%"></div></div><div class="fig">2.727<span>−0.1%</span></div></div>
+<div class="row"><div class="nm">牛市<span>多产品兑现</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">3.691<span class="up">+35.2%</span></div></div>
+</div><p class="small">市场价与基准几乎重合，熊市下行需要由更好的兑现证据补偿。条长按展示价格除以最高一档；差距由未舍入价值计算，尚未包含持有期股息。</p>
+<div class="plain"><span class="pl">一句话总结</span><p>现价2.73港元已接近基准价值；关键假设是2027财年归母利润约6.71亿港元，并获市场给予12倍市盈率。更高回报需要经营超出基准，或市场愿意给更高倍数；现金和产品验证会决定哪种解释更可信。</p></div>
+</section>
+
+<section class="reveal on" id="valuation-appendix">
+<div class="slabel">估值机制附录</div><h2>股数、盈利与持有期使用一致口径</h2>
+<p>以下使用未舍入输入，展示值按需要四舍五入。主方法是从2026年9月4日起观察一年的情景价格终点，市场在该终点对FY2027正常化盈利定价。股息按同一一年跨度计算，未来额外回购收益设为零，因为过去购回已发生且没有可量化的新承诺；库存股份仅在经济股数调节中扣除，不改变主模型的总发行股数分母。</p>
+<p class="small">总发行股数2,951,113,385股，发行人直接库存59,670,000股，信托持有16,380,000股；相减的经济股数2,875,063,385股。主估值仍用总发行股数；经济股数法的每股值会高≈2.65%，属于主动保守处理，不等同于会计摊薄股数。</p>
+<p>正常化PE的稳态检验采用派息率50%，参照中期实际派息；股权回报要求10.5%为分析门槛，用于补偿仿制药采购价格、产品兑现及现金透明度风险。作为融资成本核对，H1借款利息51.940百万港元，除以期初4010.800与期末4041.477百万港元借款的均值再乘2，年化代理约2.58%。这是平均借款成本，不是边际担保融资成本；股权承担剩余风险，10.5%仍是分析要求，并非公司融资报价。</p>
+<p>稳态诊断式为增长率＝要求回报−派息率÷PE；它假定稳定分配和增长，不能替代多阶段业务预测。历史PB参照采用当前总股本口径每股净资产2.6434港元，乘自身五年PB下四分位1.2519倍至中位数1.7626倍。该辅助范围只揭示历史定价与当前盈利能力的分歧，不与主方法平均。</p>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="derivations"><caption>承重推算；金额百万港元，每股为港元。公式末端为结果；来源页码为文件印刷页。</caption><thead><tr><th>数值</th><th>输入</th><th>公式</th><th>来源（页·附注）</th></tr></thead><tbody>
+<tr><td>归母利润复合增速<br>-12.02%</td><td>785.533；470.637</td><td>(FY2025÷FY2021)^(1/4)−1 ＝ -12.02%</td><td>2021年报第67页；2025年报第95页</td></tr>
+<tr><td>收入复合增速<br>-6.09%</td><td>5,356.763；4,165.465</td><td>(FY2025÷FY2021)^(1/4)−1 ＝ -6.09%</td><td>2021年报第66页；2025年报第94页</td></tr>
+<tr><td>H1归母利润同比<br>12.99%</td><td>320.324；283.508</td><td>2026H1÷2025H1−1 ＝ 12.99%</td><td>中期公告第11页 · 两期比较</td></tr>
+<tr><td>H1营业利润同比<br>20.07%</td><td>445.296；370.857</td><td>2026H1÷2025H1−1 ＝ 20.07%</td><td>中期公告第10页 · 两期比较</td></tr>
+<tr><td>H1收入同比<br>9.94%</td><td>2,360.580；2,147.188</td><td>2026H1÷2025H1−1 ＝ 9.94%</td><td>中期公告第10页 · 两期比较</td></tr>
+<tr><td>H1营业利润率<br>18.86%</td><td>445.296；2,360.580</td><td>经营利润÷营业收入 ＝ 18.86%</td><td>中期公告第10页 · 两期比较</td></tr>
+<tr><td>营业利润桥合计<br>74.439</td><td>82.064；-43.637；17.943；-11.433；39.292；-9.790</td><td>毛利及各费用桥合计；与经营利润同比差额勾稽 ＝ 74.439</td><td>中期公告第10页 · 两期比较</td></tr>
+<tr><td>LTM收入<br>4,378.857</td><td>4,165.465；2,360.580；2,147.188</td><td>FY2025＋2026H1−2025H1 ＝ 4,378.857</td><td>2025年报第94页；中期公告第10页</td></tr>
+<tr><td>LTM营业利润<br>703.351</td><td>628.912；445.296；370.857</td><td>FY2025＋2026H1−2025H1 ＝ 703.351</td><td>2025年报第94页；中期公告第10页</td></tr>
+<tr><td>LTM归母利润<br>507.453</td><td>470.637；320.324；283.508</td><td>FY2025＋2026H1−2025H1 ＝ 507.453</td><td>2025年报第95页；中期公告第11页</td></tr>
+<tr><td>含租赁净债务<br>2,193.265</td><td>4,041.477；7.490；1,855.702</td><td>借款＋租赁负债−现金及现金等价物 ＝ 2,193.265</td><td>中期公告第12–13页</td></tr>
+<tr><td>熊市FY2027利润<br>532.243</td><td>532.243；0.00%</td><td>FY2026E归母利润×(1＋FY2027E增长率) ＝ 532.243</td><td>上文情景表；8月股份月报；Wind行情</td></tr>
+<tr><td>熊市每股价值<br>1.713港元/股</td><td>0.180港元/股；9.500倍</td><td>FY2027E每股盈利×正常化PE ＝ 1.713港元/股</td><td>上文情景表；8月股份月报；Wind行情</td></tr>
+<tr><td>熊市一年总回报<br>-34.13%</td><td>1.713港元/股；2.730港元；3.11%</td><td>情景价值÷现价−1＋一年股息及回购收益率 ＝ -34.13%</td><td>上文情景表；8月股份月报；Wind行情</td></tr>
+<tr><td>基准FY2027利润<br>670.708</td><td>598.846；12.00%</td><td>FY2026E归母利润×(1＋FY2027E增长率) ＝ 670.708</td><td>上文情景表；8月股份月报；Wind行情</td></tr>
+<tr><td>基准每股价值<br>2.727港元/股</td><td>0.227港元/股；12.000倍</td><td>FY2027E每股盈利×正常化PE ＝ 2.727港元/股</td><td>上文情景表；8月股份月报；Wind行情</td></tr>
+<tr><td>基准一年总回报<br>3.01%</td><td>2.727港元/股；2.730港元；3.11%</td><td>情景价值÷现价−1＋一年股息及回购收益率 ＝ 3.01%</td><td>上文情景表；8月股份月报；Wind行情</td></tr>
+<tr><td>牛市FY2027利润<br>777.953</td><td>648.294；20.00%</td><td>FY2026E归母利润×(1＋FY2027E增长率) ＝ 777.953</td><td>上文情景表；8月股份月报；Wind行情</td></tr>
+<tr><td>牛市每股价值<br>3.691港元/股</td><td>0.264港元/股；14.000倍</td><td>FY2027E每股盈利×正常化PE ＝ 3.691港元/股</td><td>上文情景表；8月股份月报；Wind行情</td></tr>
+<tr><td>现价隐含利润<br>671.378</td><td>2.730港元；29.5111亿股；12.000倍</td><td>现价×总发行股数÷基准正常化PE÷1,000,000 ＝ 671.378</td><td>上文情景表；8月股份月报；Wind行情</td></tr>
+<tr><td>一年期平衡价<br>2.292港元/股</td><td>2.727港元/股；1.713港元/股；3.11%</td><td>(基准价值＋熊市价值)÷[2×(1−一年股息及回购收益率)]；使基准正回报与熊市负回报绝对值相等 ＝ 2.292港元/股</td><td>上文情景表；8月股份月报；Wind行情</td></tr>
+</tbody></table></div>
+<p>一年期持有回报以Wind截至行情日的历史股息率3.1136%作代理，并无前瞻派息保证。平衡价将该比例在价格情景中保持不变，因此仅是本报告情景的对称回报点；真实派息若是固定每股金额，或股息下降，平衡价也需重新计算。归母净利、分红与回购不重复相加。</p>
 </section>
 
 <section class="reveal on" id="risks">
-  <div class="slabel">风险与证伪</div>
-  <h2>四个暴露决定修复能否穿过下一个报告期</h2>
-  <div class="finds">
-    <div class="find warn"><div class="t">一 · 量增但毛利不增</div><p>输液放量已经成立，但综合毛利率仍下降；集采执行、包装结构和汇率都可能让销量与单位经济继续分叉。</p></div>
-    <div class="find warn"><div class="t">二 · 费用支撑利润</div><p>经营利润率提升依赖销售费用率下降和费用化研发减少；若费用回升或资本化项目减值，利润弹性可能回吐。</p></div>
-    <div class="find"><div class="t">三 · 现金与浮息负债</div><p>当前公告没有现金流量表，集团仍处于净负债且借款大部分浮息；应收与库存继续占用资金。</p></div>
-    <div class="find"><div class="t">四 · 批件与治理转化</div><p>产品获批、拟中选和奖励池购股都缺少经济结果；四川科伦的多重角色又提高对关联定价透明度的要求。</p></div>
-  </div>
-  <div class="plain"><span class="pl">白话解读</span><p>这四类风险不是互相独立：集采可能推动销量、压低价格、减少销售费用并增加应收，最后同时进入毛利、费用和现金。只看其中一个指标容易得出过早结论，必须用同一期间的量、毛利和现金一起裁决。</p></div>
+<div class="slabel">风险与验证</div><h2>最有破坏力的风险是恢复停留在利润表</h2>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="risk-register"><caption>截至2026-09-05，按对主论点的破坏力排序；概率是定性分析判断。</caption><thead><tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr></thead><tbody>
+<tr><td>1</td><td>费用改善难以转为现金</td><td>2026H1现金流待完整中报；研发资本化占比上升</td><td>回款或开发资产回报落后，盈利质量折价扩大</td><td>主模型利润率与估值倍数同时受压；现阶段缺现金流，无法可靠量化转换率</td><td>中</td><td>2026年9月完整中报如发布：OCF、现金添置、开发资产及关联余额</td></tr>
+<tr><td>2</td><td>口服需求持续低迷</td><td>2026H1下滑，管理层归于季节及去库存</td><td>输液增量被抵消，费用率难持续下降</td><td>熊市设H2收入零增长、净利率10.5%</td><td>中</td><td>FY2026业绩：口服收入、库存与毛利能否同向改善</td></tr>
+<tr><td>3</td><td>集采量不足以补价</td><td>2026-08-03仍为拟中选；路演预计Q4执行</td><td>准入扩大却压低单位利润，回款周期延长</td><td>价格、量及原销售额均缺，不能按品规数估利润</td><td>中</td><td>2026Q4最终中选及各省执标：价格、约定量和首批销售</td></tr>
+<tr><td>4</td><td>奖励与关联交易缺少经济约束</td><td>2026-09-03信托继续购股；2026H1关联交易实际额待补</td><td>奖励条款影响激励效果；关联定价影响普通股东所得利润</td><td>奖励涉及现金支出、未来费用和经济股数；关联交易涉及利润与往来款，两者分别核验</td><td>中</td><td>下一次授予公告及完整中期附注：归属门槛、对象、定价与账期</td></tr>
+<tr><td>5</td><td>研发里程碑推迟</td><td>2026H1创新项目以早期临床和临床前为主</td><td>开发支出先行，商业回报延后，可能增加摊销减值</td><td>主模型未计独立早期管线价值，仍有投入与资产回收风险</td><td>中</td><td>2026年9月及后续登记：患者入组、候选物确认和申报受理</td></tr>
+</tbody></table></div>
+<div class="tline">
+<div class="tstop"><span class="tw">2026年9月</span><b>补齐现金与项目阶段</b><p>等待完整中期附注与正式研发进展，核对实际发生状态。</p></div>
+<div class="tstop"><span class="tw">2026-09-24</span><b>中期股息支付</b><p>验证既定分配执行，区别已宣派与未来持续能力。</p></div>
+<div class="tstop warn"><span class="tw">2026Q4</span><b>采购执行的经济性</b><p>用价、量和毛利检验管理层预计的商业兑现。</p></div>
+<div class="tstop warn"><span class="tw">FY2026</span><b>现金与口服共同检验</b><p>恢复若持续依赖费用压缩，应重估盈利质量。</p></div>
+</div>
+<p class="small">验证顺序先补齐现金，再观察商业销售与利润。时间窗来自已披露安排或管理层预期；完整中报及年度业绩的具体发布日期尚未确定。</p>
 </section>
 
-<section class="reveal on" id="valuation">
-  <div class="slabel">估值 · 三年情景 · 现价反推</div>
-  <h2>1倍P/B不是无条件便宜，现价已经落在基准区间内</h2>
-  <p>估值先锁定港交所股数和LTM利润，再用独立2025H2基数构造2026—2028经营情景；主方法是2027年前瞻P/E，P/B与ROE检查利润恢复要求，EV/经营利润只作二级交叉。由于2026H1现金流缺失，本报告不伪装成精确DCF。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">8月31日收盘价</div><div class="v">HK$2.705</div><div class="d"><span>市值79.83亿港元</span><span>业绩批准日收盘至今 +2.27%</span></div></div>
-    <div class="cell"><div class="k">当前估值</div><div class="v">15.73<span class="u">× P/E</span></div><div class="d"><span>P/B 1.02×</span><span>股息率3.14%</span></div></div>
-    <div class="cell"><div class="k">五年历史位置</div><div class="v">高位<span class="u">P/E</span></div><div class="d"><span>P/E高于75%分位</span><span>P/B低于25%分位</span><span>样本1,226个交易日</span></div></div>
-    <div class="cell"><div class="k">基准路径</div><div class="v">已计入</div><div class="d"><span>现价位于2027E主价值区间内</span><span>完整区间见情景表</span></div></div>
-    <div class="cell"><div class="k">现价反推</div><div class="v">6.65<span class="u">亿港元</span></div><div class="d"><span>按12×所需归母利润</span><span>较LTM +31.1%</span></div></div>
-    <div class="cell"><div class="k">投资判断</div><div class="v">中性</div><div class="d"><span>修复成立，安全边际有限</span></div></div>
-  </div>
-
-  <div class="steps">
-    <div class="step"><div class="n">第一步</div><b>锁定口径</b><p>HK$2.705、29.5111亿总股本、LTM归母5.0745亿港元；库存股口径单独披露。</p></div>
-    <div class="step"><div class="n">第二步</div><b>确定倍数边界</b><p>基准11—13倍围绕五年P/E中位11.96倍与可得同业预测P/E中位11.98倍。</p></div>
-    <div class="step"><div class="n">第三步</div><b>写经营驱动</b><p>H2收入和净利率、2027利润增长、现金转换由熊/基准/牛三组独立假设控制。</p></div>
-    <div class="step"><div class="n">第四步</div><b>反推现价</b><p>现价在12倍下要求约6.65亿归母利润，几乎等于2027基准6.71亿。</p></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>五年历史估值分布｜2021-09-01至2026-08-31，1,226个交易日</caption>
-      <thead><tr><th>倍数</th><th>最低</th><th>25%</th><th>中位</th><th>75%</th><th>最高</th><th>当前分位</th></tr></thead>
-      <tbody>
-        <tr><td nowrap>P/E TTM</td><td>6.78</td><td>9.68</td><td>11.96</td><td>14.14</td><td>23.19</td><td>87.18%</td></tr>
-        <tr><td nowrap>P/B LF</td><td>0.82</td><td>1.26</td><td>1.76</td><td>2.05</td><td>2.66</td><td>9.71%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>高P/E与低P/B并不矛盾：2025年利润台阶式下降，账面资本仍在，资本回报却显著降低。按10.5%股权成本与2%长期增长的<span class="g">Gordon P/B关系</span>，现价反推可持续ROE约10.70%，比H1年化8.48%高约2.2个百分点；P/B低位本身不是安全垫。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>港股制药估值截面｜2026-08-31 Wind收盘；只作市场参照</caption>
-      <thead><tr><th>公司</th><th>P/E TTM</th><th>预测P/E</th><th>P/B</th><th>股息率</th><th>业务可比性提醒</th></tr></thead>
-      <tbody>
-        <tr><td nowrap>联邦制药</td><td>7.03</td><td>12.27</td><td>0.84</td><td>5.75%</td><td>胰岛素与抗生素敞口不同</td></tr>
-        <tr><td nowrap>石药集团</td><td>12.45</td><td>11.69</td><td>2.46</td><td>3.57%</td><td>规模更大、创新药权重更高</td></tr>
-        <tr><td nowrap>中国生物制药</td><td>37.01</td><td>18.92</td><td>2.72</td><td>2.20%</td><td>规模与创新管线差异大</td></tr>
-        <tr><td nowrap>神威药业</td><td>7.41</td><td>未返回</td><td>0.73</td><td>17.12%</td><td>中药结构不同</td></tr>
-        <tr><td nowrap>康臣药业</td><td>8.42</td><td>8.07</td><td>2.08</td><td>5.77%</td><td>专科药结构不同</td></tr>
-        <tr class="grp"><td nowrap>同业中位</td><td>8.42</td><td>11.98</td><td>2.08</td><td>5.75%</td><td>不直接套用为目标倍数</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>三年经营路径｜非公司指引；收入、归母与FCF代理为亿港元</caption>
-      <thead><tr><th>情景</th><th>2026E 收入 / 归母</th><th>2027E 收入 / 归母</th><th>2028E 收入 / 归母</th><th>FCF转换率路径</th><th>2026 / 27 / 28 FCF代理</th><th>三年累计FCF代理</th></tr></thead>
-      <tbody>
-        <tr><td nowrap>熊市</td><td>43.79 / 5.32</td><td>43.79 / 5.32</td><td>45.10 / 5.48</td><td>40% / 45% / 50%</td><td>2.13 / 2.40 / 2.74</td><td>7.27</td></tr>
-        <tr class="grp"><td nowrap>基准</td><td>46.82 / 5.99</td><td>51.50 / 6.71</td><td>56.13 / 7.51</td><td>55% / 60% / 65%</td><td>3.29 / 4.02 / 4.88</td><td>12.20</td></tr>
-        <tr><td nowrap>牛市</td><td>48.83 / 6.48</td><td>56.16 / 7.78</td><td>63.46 / 9.18</td><td>65% / 70% / 75%</td><td>4.21 / 5.45 / 6.88</td><td>16.54</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">熊/基准/牛的2026H2收入同比假设分别为0%/15%/25%，H2净利率为10.5%/12.0%/13.0%；2027归母增长为0%/12%/20%。FCF代理＝归母净利润×假设现金转换率，因H1现金流未披露，仅用于压力测试，不是公司现金流或精确DCF。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2027E前瞻P/E主估值与企业价值交叉｜每股港元</caption>
-      <thead><tr><th>情景</th><th>2027E EPS</th><th>P/E区间</th><th>主价值区间</th><th>较现价</th><th>EV/经营利润交叉</th></tr></thead>
-      <tbody>
-        <tr><td nowrap>熊市</td><td>0.180</td><td>9–10×</td><td>1.62–1.80</td><td class="down">−40.0%至−33.3%</td><td>1.52</td></tr>
-        <tr class="grp"><td nowrap>基准</td><td>0.227</td><td>11–13×</td><td>2.50–2.95</td><td>−7.6%至+9.2%</td><td>2.78</td></tr>
-        <tr><td nowrap>牛市</td><td>0.264</td><td>13–15×</td><td>3.43–3.95</td><td class="up">+26.7%至+46.2%</td><td>4.20</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>EV/经营利润交叉分别使用2027经营利润6.8/8.5/10.0亿港元、10/12/14倍和净负债23/20/16亿港元，仅用于检验主框架方向。市场对业绩的交易反应以8月26日收盘为基准；由于官方发布时点未被控制，不把8月26日本身的涨幅归因于业绩。</p>
-
-  <h3>价值梯尺：基准上限只比现价高约9%</h3>
-  <div class="rows" aria-label="石四药集团2027前瞻P/E情景上限与市场收盘价对比">
-    <div class="row"><div class="nm">熊市价值上限<span>9–10倍情景</span></div><div class="track"><div class="fill alt" style="width:45.61%"></div></div><div class="fig">HK$1.80<span class="down">较现价 −33.3%</span></div></div>
-    <div class="row"><div class="nm">市场收盘价<span>2026-08-31</span></div><div class="track"><div class="fill soft" style="width:68.41%"></div></div><div class="fig">HK$2.705<span>Wind收盘</span></div></div>
-    <div class="row"><div class="nm">基准价值上限<span>11–13倍情景</span></div><div class="track"><div class="fill" style="width:74.72%"></div></div><div class="fig">HK$2.95<span class="up">较现价 +9.2%</span></div></div>
-    <div class="row"><div class="nm">牛市价值上限<span>13–15倍情景</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$3.95<span class="up">较现价 +46.2%</span></div></div>
-  </div>
-  <p class="small">条形以牛市上限HK$3.954为100%；宽度由可执行模型计算。完整区间为熊市HK$1.62—1.80、基准HK$2.50—2.95、牛市HK$3.43—3.95。</p>
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>“1倍市净率”看起来便宜，是因为账面净资产还在；“15.7倍市盈率”不低，是因为利润已经大幅下台阶。两者合在一起，市场实际在押注ROE恢复。</p>
-    <p>现价已在基准价值带中，按12倍还要求利润比LTM增长约31%。<b>买入的回报不再主要来自均值回归，而来自输液、口服、集采和现金转换同时走向牛市路径。</b></p>
-  </div>
-</section>
-
-<section class="reveal on" id="decision">
-  <div class="slabel">最终判断</div>
-  <h2>值得跟踪的低谷修复，还不是有充分安全垫的价值股</h2>
-  <p><strong>投资判断：中性。</strong>控制性论点是“输液放量是真的，低估值还需要证明”。本期提供了销量和利润同比修复，但毛利、研发投入、现金流与现价隐含预期尚未形成同方向证据。主估值总区间HK$1.62—3.95，现价处于基准区间内；数据置信度为中等。</p>
-  <div class="finds">
-    <div class="find good"><div class="t">最强牛方</div><p>高端输液包装占比提升、海外增长、密集批件与集采准入可能共同恢复产能利用和ROE；若复杂制剂商业化快于预期，当前P/E会被快速增长的利润分母压低。</p></div>
-    <div class="find warn"><div class="t">最强熊方</div><p>量增没有带来毛利率上升，口服制剂大跌，利润扩张又依赖费用收缩；在现金流缺失和净负债存在时，恢复可能只停留在低基数同比。</p></div>
-    <div class="find"><div class="t">如何裁决</div><p>把输液销量、集团毛利率、口服收入、完整现金转换和净负债放在同一期间检查；批件和拟中选只作领先指标。</p></div>
-    <div class="find warn"><div class="t">明确失效线</div><p>若2026H2收入同比不增长、输液销量增速降至个位数且集团毛利率不高于41%，或FY2026 FCF代理/归母净利润低于55%、含租赁净负债不降，任一项都要求下修基准情景。55%是模型阈值，不是公司指引。</p></div>
-  </div>
-
-  <h3>把下一轮验证排在时间线上</h3>
-  <div class="tline">
-    <div class="tstop"><span class="tw">2026.09.01</span><b>基药目录生效</b><p>跟踪95个品种的医疗机构配备与实际采购，不把目录资格当订单。</p></div>
-    <div class="tstop"><span class="tw">2026.09</span><b>CX25001计划节点</b><p>管理层预计启动IND申报相关实验；检查PCC确认与正式受理号。</p></div>
-    <div class="tstop warn"><span class="tw">2026Q4</span><b>第十二批国采执行</b><p>管理层预期时点；核对最终中选、价格、约定量与各省执行。</p></div>
-    <div class="tstop warn"><span class="tw">FY2026业绩</span><b>现金与利润总验收</b><p>取得完整现金流，复核毛利、研发资本化、口服、净负债与55%基准转换线。</p></div>
-    <div class="tstop"><span class="tw">下一临床里程碑</span><b>SYN045患者Ib期</b><p>等待临床登记与首例患者入组，不把健康受试者结果当疗效证明。</p></div>
-  </div>
+<section class="reveal on" id="decision" data-fullscan-role="decision">
+<div class="slabel">最终判断</div><h2 data-verdict="neutral-cautious">中性偏谨慎：等现金与商业化提高确定性</h2>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="decision-block"><tbody>
+<tr><td>论点</td><td>销量与费用带来的恢复已经进入价格，新增回报需要现金转换和产品盈利的进一步兑现。</td></tr>
+<tr><td>基准对一致预期</td><td>无一致预期：没有取得可核验的本公司同口径利润预测；采用现价隐含表。基准FY2027归母利润670.708百万港元，略低于市场在12倍下隐含的671.378百万港元。</td></tr>
+<tr><td>赔率</td><td>同一一年期、含股息代理：基准总回报+3.0%，熊市总回报−34.1%。上行与下行明显不对称，牛市并非默认结果。</td></tr>
+<tr><td>平衡价</td><td>推算2.292港元：本报告熊市与基准、保持股息率代理的条件下，两侧一年总回报绝对值均≈22.1%；是情景性质而非买卖指示。</td></tr>
+<tr><td>持有回报</td><td>2026-09-04历史股息率3.1136%，一年股息及回购收益率代理≈3.1%；未来新增回购收益取0%，既往购回是已发生分配，不能再算未来回报。未来派息可能改变。</td></tr>
+<tr><td>分项置信度</td><td>论点证据：中；估值输入：中；现金与负债：低；治理：中。完整中报的经营现金流、开发支出及净债务调节，会直接改变最低一项。</td></tr>
+<tr><td>判断</td><td>中性偏谨慎（等待验证）。优先等待完整现金披露，再用国采执行与口服销售检验盈利假设。</td></tr>
+</tbody></table></div>
+<div class="callout"><b>最强反方观点：</b>输液规模、复杂制剂注册及原料药配套可能让本次修复比历史更持久，现有盈利模型或低估经营弹性。若现金转换与口服需求同步改善，这一反方将胜出；若利润持续依靠费用压低而现金和产品回报落后，则应降低正常化盈利与给予的倍数。</div>
 </section>
 
 <section class="reveal on" id="glossary">
-  <div class="slabel">名词速查 · 快速检索</div>
-  <h2>读懂这份制药报告需要的词</h2>
-  <div class="tblscroll">
-    <table class="tbl gloss">
-      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
-      <tbody>
-        <tr><td>H1 / H2 / FY / 独立Q2</td><td>上半年 / 下半年 / 全年 / 只含4月至6月的第二季度。石四药本次只披露2026H1。</td></tr>
-        <tr><td>可报告分部</td><td>管理层用来分配资源并单独披露结果的会计业务单元；具体产品收入不等于分部利润。</td></tr>
-        <tr><td>毛利率 / 经营利润率</td><td>毛利 / 经营利润各自占收入的比例；前者更接近产品单位经济，后者还受费用与其他收益影响。</td></tr>
-        <tr><td>归母净利润</td><td>扣除非控股股东应占部分后，归属于上市公司股东的净利润。</td></tr>
-        <tr><td>EPS / BVPS</td><td>每股盈利 / 每股净资产；EPS使用期间加权股数，BVPS和估值还要明确是否扣除库存股。</td></tr>
-        <tr><td>ROE / ROIC</td><td>净利润相对平均归母权益的回报 / 税后经营利润相对平均投入资本的分析回报。</td></tr>
-        <tr><td>CAGR</td><td>复合年均增速，把起点到终点的累计变化折成每年的复合速度。</td></tr>
-        <tr><td>LTM</td><td>最近十二个月。本报告用2025全年加2026H1、再减2025H1。</td></tr>
-        <tr><td>OCF / CAPEX / FCF代理</td><td>经营现金流 / 资本开支 / OCF减广义现金再投资的分析近似值。</td></tr>
-        <tr><td>ASP / 单位收入代理</td><td>平均售价 / 用收入除以销量的近似数；都可能混合规格、产品、地区和汇率。</td></tr>
-        <tr><td>资本化研发</td><td>符合会计条件后暂列为资产的开发支出，不立即进入损益；未来可能摊销或减值。</td></tr>
-        <tr><td>一致性评价</td><td>证明仿制药质量和疗效与参比制剂相符的监管评价，常是招采准入条件之一。</td></tr>
-        <tr><td>CDE / IND / PCC</td><td>国家药监局药品审评中心 / 临床试验申请 / 临床前候选化合物；三者代表不同研发阶段。</td></tr>
-        <tr><td>拟中选 / 集采</td><td>拟进入集中采购结果 / 以集中采购换取约定量；拟中选不等于最终合同和已实现收入。</td></tr>
-        <tr><td>基药目录</td><td>国家基本药物范围，是医疗机构配备和优先使用的重要依据，不是独家采购承诺。</td></tr>
-        <tr><td>库存股 / 信托持股</td><td>公司回购后持有的股份 / 奖励计划受托人持有并在会计上冲减权益的股份，披露口径并不完全相同。</td></tr>
-        <tr><td>P/E TTM / 前瞻P/E</td><td>股价相对最近十二个月盈利 / 未来情景盈利的倍数。</td></tr>
-        <tr><td>P/B LF / Gordon P/B</td><td>股价相对最新账面净资产的倍数 / 用可持续ROE、股权成本与长期增长解释P/B的关系。</td></tr>
-        <tr><td>FCF转换率</td><td>利润有多少变成自由现金流代理；估值情景中的比例是分析假设，不是公司披露。</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="reveal on" id="methods">
-  <div class="slabel">方法来源</div>
-  <h2>港交所控制会计数字，路演陈述与市场数据分层使用</h2>
-  <p>本期会计控制源为港交所<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600192_c.pdf">截至2026年6月30日止六个月中期业绩</a>及<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600206_c.pdf">中期股息公告</a>。五年历史逐年回查<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0421/2026042100427_c.pdf">2025年报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0416/2025041600446_c.pdf">2024年报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0418/2024041800463_c.pdf">2023年报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0418/2023041800356_c.pdf">2022年报</a>及<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0419/2022041900554_c.pdf">2021年报</a>。当前中期财务未经审计，但公告称毕马威按香港审阅工作准则第2410号审阅并获无保留审阅结论。</p>
-  <p>管理层经营陈述来自公司制作、经Quartr分发的<a href="https://files.quartr.com/conference-calls/46afa7c13df29291bf23a7deb8a5dee3-2026-08-26-13-44-47.pdf?ref=U0E=">82页2026H1业绩路演材料</a>；发现链为<a href="https://stockanalysis.com/filings/HKG-2005/3596436/">StockAnalysis文件页</a>、Quartr原始PDF及<a href="https://www.tradingview.com/news/urn:summary_document_slides:quartr.com:4077603:0-ssy-group-strong-h1-2026-profit-and-margin-growth-led-by-high-end-infusions-and-export-expansion/">TradingView/Quartr文档记录</a>。它不是逐字稿且没有Q&amp;A，也未在港交所或可访问的公司IR页面找到同一PDF，因此证据等级低于港交所公告。截至2026年8月31日20:28香港时间，使用主上市代码<code>2005:HK</code>检索earningscalls.dev没有匹配记录，对港交所期后公告、公司/irasia IR页面及公开网页的有界检索也未找到公开电话会逐字稿或Q&amp;A。本文只引用路演材料中的管理层陈述，不据此断言公司没有召开电话会。</p>
-  <p>期后政策与公司事件使用港交所<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0803/2026080303023_c.pdf">第十二批国采拟中选公告</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0710/2026071000138_c.pdf">基本药物目录公告</a>、逐项产品进展公告、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100783_c.pdf">8月31日奖励计划购股公告</a>与<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2025/1223/2025122300427_c.pdf">2026持续关联交易公告</a>。行情、历史估值分位和可比公司截面来自Wind完整收盘；会计数字仍由港交所控制。</p>
-  <div class="callout"><b>模型与披露边界：</b>LTM、ROE、ROIC、BVPS、港元单位收入、利润桥、净负债、营运资本余额代理、FCF代理、三年情景、反推利润和每股价值均为分析计算。Wind一次一致预期查询把同一组数据机械复制到158个机构且缺少研究员、更新日期和机构预测字段，已全部剔除。所有缺口继续标为“未披露”，不制造独立Q2或当前期现金流。</div>
+<div class="slabel">名词速查</div><h2>从注册资格读到现金收益</h2>
+<div class="tblscroll"><table class="tbl gloss"><thead><tr><th>术语</th><th>白话解释</th></tr></thead><tbody>
+<tr><td>带量采购（VBP）</td><td>把采购安排与价格竞争结合的机制。中选后销量、价格、成本和费用共同决定利润。</td></tr>
+<tr><td>一致性评价（GQCE）</td><td>对仿制药与参比药的质量和疗效一致性进行评价；是监管资格，不是医院订单。</td></tr>
+<tr><td>拟中选（Proposed selection）</td><td>采购流程中的预选状态；仍要核对最终结果、执行地区和经济条款。</td></tr>
+<tr><td>原料药登记<br>（API registration）</td><td>药用活性成分可在关联上市制剂中使用的监管状态，与制剂的生产注册有区别。</td></tr>
+<tr><td>平均售价（ASP）</td><td>销售收入对应单位产品的平均价格。本文为公司披露的港元口径，受组合和汇率影响。</td></tr>
+<tr><td>聚氯乙烯（PVC）</td><td>一种塑料材料。“非PVC”输液袋表示袋材不含聚氯乙烯；材料类别本身不能直接代表产品利润。</td></tr>
+<tr><td>研发资本化<br>（开发支出）</td><td>满足确认条件的开发支出先形成资产，后续通过摊销或减值影响利润。</td></tr>
+<tr><td>临床前候选化合物（PCC）</td><td>从研究化合物中选择进一步开发的候选物；距离患者临床试验仍有准备工作。</td></tr>
+<tr><td>临床申报（IND）</td><td>向监管机构提交开展临床研究的申请；申报相关实验、正式申报和获准临床是不同状态。</td></tr>
+<tr><td>滚动十二个月（LTM）</td><td>用完整年度加本期半年、减上年同期半年，形成最近完整年度长度的经营数据。</td></tr>
+<tr><td>营运资金代理<br>（余额变动）</td><td>从资产负债表若干经营科目构造的余额。变动能提示资金占用，但并非经营现金流。</td></tr>
+<tr><td>广义现金再投资<br>（现金资本投入）</td><td>现金支付的设备、使用权和无形资产添置，供计算自由现金流代理使用。</td></tr>
+<tr><td>信托库存股<br>（奖励计划持股）</td><td>奖励信托持有、在合并会计中冲减权益的股份；与发行人月报中的直接库存股范围不同。</td></tr>
+<tr><td>汇兑损益（FX gain/loss）</td><td>货币汇率变化造成的损益，需与药品经营利润和借款利息分别分析。</td></tr>
+</tbody></table></div>
 </section>
 
 <footer>
-  <p>数据截止：公司文件、期后事项与电话会检索截至2026年8月31日20:28香港时间；行情截至2026年8月31日16:08:51完整收盘。财务主控文件日期为2026年8月26日。</p>
-  <p>本报告包含分析推算与情景假设，不构成投资建议。港交所本次只披露累计2026H1，未披露独立第二季度，也尚未在33页业绩公告中提供现金流量表；因此H1及现金流口径LTM的OCF、CAPEX和FCF均保留为未披露/不可计算。</p>
+<p>数据截止：财务及期后公告检索至2026-09-05；控制期间2026H1；行情2026-09-04 16:08 香港时间。金额按港元呈列。</p>
+<p>来源：<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600192_c.pdf">港交所2026年中期业绩公告</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0421/2026042100427_c.pdf">2025年报</a>及2021—2024年报；2026年8月月报、产品及奖励计划公告；公司制作、Quartr分发的2026年中期路演材料。数据来源于万得 Wind 金融数据服务。</p>
+<p>审计状态：年度合并财务报表经毕马威审计；本期财务资料未经审计，业绩公告称毕马威已按香港审阅工作准则第2410号审阅。完整中期报告尚待刊发，当前未直接检查独立审阅报告全文。</p>
+<p>披露值、推算与分析假设分别标注。市场数据及同业前瞻字段只用于定价参照；主财务口径由港交所文件控制。未取得公开业绩问答逐字稿。</p>
+<p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p>
 </footer>
-
 </main>
 
 <script>
