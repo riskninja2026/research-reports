@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:,">
-<title>智谱 2026年中期 Fullscan 全景尽调</title>
-<style>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="data:,"><title>智谱 2026H1 Fullscan 全景尽调</title><style>
 :root{
   --paper:#EDEFF2;
   --card:#F8F9FB;
@@ -253,549 +247,206 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
 .tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
 .tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
-</style>
-</head>
-<body>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">智谱 Z.AI 02513.HK ｜ 全景尽调 ｜ 财务截止 2026.06.30 · 行情 2026.08.31</div>
-    <h1>商业化拐点已出现，<br>估值却预支了胜利</h1>
-    <p class="lede">开放平台与API收入半年暴增至8.25亿元，云端毛利率也从负数升到24.6%，这不是纯粹的模型榜单故事。<b>但集团经营亏损和经调整亏损仍在扩大，研发支出是毛利的8.5倍；5,564亿港元市值又把极激进的增长提前写进了股价。</b>智谱已经证明“有人愿意付费”，还没证明“每股资本回报成立”。</p>
-    <div class="dual">
-      <div>
-        <div class="tag">商业化 · 2026H1云端部署收入同比</div>
-        <div class="big a">+2,736%</div>
-        <div class="cap">云端/API收入8.252亿元、占比86.5%；对应毛利率从−0.4%升至24.6%，结构转折是真实可见的。</div>
-      </div>
-      <div>
-        <div class="tag">市场定价 · 备考配售后EV / LTM销售额</div>
-        <div class="big b">301×</div>
-        <div class="cap">使用港交所LTM收入与配售后股数重算。这个价格要求商业化从“爆发”迅速跨到“巨大且高毛利”。</div>
-      </div>
-    </div>
-  </div>
-</header>
-
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
+</style></head><body><header class="hero"><div class="wrap">
+<div class="eyebrow">智谱 02513.HK ｜ Fullscan 全景尽调 ｜ 财务截至2026.06.30 · 行情截至2026.09.04收盘</div>
+<h1>调用增长已兑现，<br>股价仍在预支盈利规模</h1>
+<p class="lede">智谱的云端业务已成为主要收入来源，融资也增加了研发与商业化资源。<b>真正的分歧是增长最终能留下多少利润</b>：新增毛利尚未覆盖新增经营费用。即使假设未来转入盈利，当前价格仍需要远超本文基准的经营规模。</p>
+<div class="dual"><div><div class="tag">2026年上半年 · 云端部署收入</div><div class="big a">8.25亿元</div><div class="cap">本集团披露值，正式分部口径；管理层所称API收入不是额外一份收入。</div></div><div><div class="tag">2026年上半年 · 经营亏损</div><div class="big b">21.47亿元</div><div class="cap">本集团披露值；归属于母公司股东的亏损（归母亏损）收窄，与经营亏损扩大同时发生。</div></div></div>
+</div></header>
 <main class="wrap">
-
-<section class="reveal on" id="tldr">
-  <div class="slabel">三十秒版本 · 先看结论</div>
-  <h2>如果只读一屏，读这里</h2>
-  <div class="tldr">
-    <ul>
-      <li><b>先校正口径：</b>港交所只披露截至2026年6月30日止六个月的累计业绩，没有独立Q2损益、现金流或资本开支。本报告因此按<b>2026H1</b>分析，不制造单季数字。</li>
-      <li><b>它是谁：</b>智谱是一家基础大模型与MaaS公司，既通过云端API/订阅按调用收费，也向企业交付本地化模型与智能体。2026H1云端部署已占收入86.5%，商业模式从项目制明显转向高频调用。</li>
-      <li><b>本期拐点：</b>收入9.54亿元（+399.7%），开放平台/API收入8.25亿元（+2,735.7%），云端毛利率由−0.4%升到24.6%。销售营销费用反而下降14.8%，支持“产品拉动”而非单纯买量。</li>
-      <li><b>但不是盈利拐点：</b>经营亏损扩大13.0%至21.47亿元，经调整亏损扩大12.1%至19.64亿元。IFRS净亏损收窄12.1%，主要来自投资者金融工具损失减少和联营公司利润增加，而非主营经营转正。</li>
-      <li><b>资金不再是短期问题：</b>7月配售净募资313.75亿港元，备考净现金类资产约291.7亿元人民币；但这是研发与亏损的燃料，不是可分红“闲钱”。同时仍有10%股份奖励授权和待审批A股计划。</li>
-      <li><b>结论：</b><b>中性偏谨慎／观望</b>。商业化证据足以提高基本面评价，却不足以支撑HK$1,195的容错率。即使2028年收入做到220亿元、仍给30倍EV/Sales，最大规划摊薄口径的现值约HK$1,039，仍低于现价。</li>
-    </ul>
-  </div>
+<div class="callout"><b>修订 2026-09-05：</b>按新版Fullscan补足模型服务、现金消耗与每股摊薄分析，校正利润归属和历史每股口径，更新已发行股数与行情；保留上半年边界，不将其写作单二季度。</div>
+<section class="reveal on" id="tldr"><div class="slabel">三十秒版本 · 先看结论</div><h2>业务进展值得承认，价格需要另算</h2><div class="tldr"><ul>
+<li><b>它是谁：</b>训练通用AI模型，再通过云端调用、产品订阅和企业本地部署收费；模型更新是持续投入，不是一次研发后永久收租。</li>
+<li><b>本期成绩：</b>上半年收入9.54亿元，云端已占86.5%；但研发费用21.31亿元，规模增长尚未带来经营盈亏平衡。</li>
+<li><b>核心矛盾：</b>更多调用与更高毛利能否持续快于训练投入，决定收入增长最后属于客户、算力供应商，还是股东。</li>
+<li><b>容易踩的坑：</b>净亏损收窄不等于主营减亏，融资到账也不等于经营产生现金；授权发行更不等于已授予股份。</li>
+<li data-verdict="negative"><b>结论：</b>负面。现价1,075港元，基准≈40、熊市≈12港元；改变判断需要付费收入、毛利和现金效率同时兑现。</li>
+</ul></div></section>
+<section class="reveal on" id="primer"><div class="slabel">入门 · 生意与口径</div><h2>客户购买模型能力，公司承担持续迭代成本</h2>
+<p>智谱出售的是语言、代码及多模态模型的使用能力。开发者可通过<span class="g">应用接口（API）</span>调用模型，企业也可把模型部署在自己的环境。<span class="g">模型服务（MaaS）</span>是交付方式，不代表所有客户都按月订阅。公司还提供编码和智能体产品，但产品名称并不是财务报表中的独立分部。</p>
+<div class="steps"><div class="step"><div class="n">环节 1</div><b>客户付费</b><p>开发者、企业与产品用户购买调用、服务或部署交付。</p></div><div class="step"><div class="n">环节 2</div><b>算力执行</b><p>云端请求消耗推理资源；本地项目可能伴随硬件、适配与验收。</p></div><div class="step"><div class="n">环节 3</div><b>形成毛利</b><p>收入扣除交付和推理等销售成本，才剩下可承担期间费用的部分。</p></div><div class="step"><div class="n">环节 4</div><b>继续研发</b><p>毛利还需支付训练研发、销售、管理与资金成本，余额才属于股东。</p></div></div>
+<p>每股估值采用全部已发行普通股，包括H股及未上市股。财务默认<span class="g">本集团</span>，即公司与受控制子公司；股本及融资授权采用本公司口径。最新财务为2026年上半年，缺同口径一季报，单二季度损益、分部与现金流不能拆分。</p>
+<p>中期财务按国际财务报告准则（IFRS）编制，经审阅但未经审计；具体核验状态见页尾。管理层关于调用量、单价和模型表现的说法另行标注，与财务审阅不具有同等核验强度。行业竞争还涉及算力、开发工具与交付可靠性，技术进展和股东回报应分开判断。</p>
 </section>
-
-<section class="reveal on" id="primer">
-  <div class="slabel">入门 · 三分钟看懂这门生意</div>
-  <h2>把“模型能力”变成“可重复调用”，钱才开始流进来</h2>
-  <p>智谱的核心资产不是一套固定软件，而是一条持续烧钱、持续迭代的基础模型生产线。研发团队训练和强化模型，算力既是研发投入，也是云端服务的直接成本；客户则通过<span class="g">API</span>、订阅、<span class="g">本地化部署</span>和智能体付费。整个商业链条可以拆成四步：</p>
-  <div class="steps">
-    <div class="step"><div class="n">环节 1</div><b>训练基础模型</b><p>研发费用承担模型、数据、人才和训练基础设施；2026H1研发支出21.31亿元，是收入的223%。</p></div>
-    <div class="step"><div class="n">环节 2</div><b>云端按使用收费</b><p>开放平台按token使用量或订阅期收费，企业和开发者无需自建整套模型系统；这是本期86.5%的收入来源。</p></div>
-    <div class="step"><div class="n">环节 3</div><b>企业本地交付</b><p>模型部署在客户基础设施，按模型规模、算力和实施成本定价；验收确认收入，通常更重交付、波动更大。</p></div>
-    <div class="step"><div class="n">环节 4</div><b>调用反哺迭代</b><p>真实编码与Agent任务能提供反馈轨迹；若调用量扩大、单位推理成本下降，云端毛利才可能继续爬升。</p></div>
-  </div>
-  <p>财务报表的正式分部只有<b>云端部署</b>和<b>本地化部署</b>。公告另给出开放平台/API、企业级<span class="g">智能体（Agent）</span>、企业级通用大模型、技术服务四条产品线，它们是管理层拆分，不能冒充IFRS分部。公司2026年1月在香港上市，7月又完成巨额H股配售；今天的投资问题已从“能不能融资”转向“这些资本能不能形成每股价值”。</p>
-  <p>还要避免一个词义陷阱：API调用可以反复发生，但不等于合同锁定的<span class="g">ARR</span>。2026H1收入中89.6%在某一时点确认，只有10.4%随时间确认；公司没有披露续费率、净收入留存率、付费用户绝对数或合同承诺期。文中带<span class="g">虚线下划线</span>的词可在文末「名词速查」查阅。</p>
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="ai-model-services"><div class="slabel">基础财务 · 业务地图</div><h2>收入结构转向云端，合并盈利仍处投入期</h2>
+<p>正式分部为<span class="g">云端部署</span>与本地化部署。前者贡献增量，后者收入收缩；合并增速同时包含业务放量与低基数效应。</p>
+<div class="grid" data-financials="consolidated"><div class="cell" ><div class="k">本期收入</div><div class="v">9.54亿元</div><div class="d"><span>同比+399.7%（推算）</span></div></div><div class="cell" ><div class="k">毛利 / 毛利率</div><div class="v">2.52亿元</div><div class="d"><span>26.4%（推算）</span></div></div><div class="cell" ><div class="k">经营利润 / 亏损</div><div class="v">−21.47亿元</div><div class="d"><span>亏损同比扩大13.0%（推算）</span></div></div><div class="cell" ><div class="k">归母净利润 / 亏损</div><div class="v">−20.71亿元</div><div class="d"><span>亏损同比收窄11.9%（推算）</span></div></div><div class="cell" ><div class="k">经营现金流</div><div class="v">未披露</div><div class="d"><span>中期公告缺完整现金流量表</span></div></div><div class="cell" ><div class="k">自由现金流代理</div><div class="v">未披露</div><div class="d"><span>缺经营现金流与现金资本开支</span></div></div></div>
+<div class="tblscroll"><table class="tbl" data-financials="history"><caption>五年历史窗口 · 本集团 · IFRS · 2022—2025已审计 · 人民币亿元，每股为元。2021未取得可比数据，故列四年。现金资本开支为固定及无形资产现金付款，不含收购；自由现金流代理扣该项。早期每股收益（EPS）按拆股推算，后两年取年报重列，权益分配差异仍存在。</caption><thead><tr><th>项目</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead><tbody><tr><td>营业收入</td><td>0.57</td><td>1.25</td><td>3.12</td><td>7.24</td></tr><tr><td>毛利</td><td>0.31</td><td>0.80</td><td>1.76</td><td>2.97</td></tr><tr><td>经营利润（亏损）</td><td>−0.99</td><td>−6.26</td><td>−25.38</td><td>−37.87</td></tr><tr><td>归母净利润（亏损）</td><td>−1.43</td><td>−7.88</td><td>−29.56</td><td>−46.98</td></tr><tr><td>权益结算薪酬费用</td><td>0.01</td><td>0.06</td><td>0.24</td><td>5.58</td></tr><tr><td>基本每股收益（元）</td><td>−0.78（推算）</td><td>−2.95（推算）</td><td>−8.72</td><td>−12.03</td></tr><tr><td>经营现金流</td><td>−0.68</td><td>−6.48</td><td>−22.45</td><td>−22.46</td></tr><tr><td>现金资本开支（推算）</td><td>0.32</td><td>5.09</td><td>1.33</td><td>0.23</td></tr><tr><td>自由现金流代理（推算）</td><td>−1.00</td><td>−11.57</td><td>−23.78</td><td>−22.69</td></tr><tr><td>净资产收益率 / 投入资本回报率（ROE / ROIC）</td><td>亏损及资本结构断点</td><td>亏损及资本结构断点</td><td>亏损及资本结构断点</td><td>亏损及资本结构断点</td></tr></tbody></table></div>
+<div class="cols" role="img" aria-label="四年收入与归母亏损，五年窗口缺首年可比值"><div class="col"><div class="bars"><div class="bar rev" style="height:7.8729%"></div><div class="bar np" style="height:0%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:17.2652%"></div><div class="bar np" style="height:0%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:43.0939%"></div><div class="bar np" style="height:0%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:100.0000%"></div><div class="bar np" style="height:0%"></div></div></div></div><div class="collabels"><div><b>2022</b><span>亏损</span></div><div><b>2023</b><span>亏损</span></div><div><b>2024</b><span>亏损</span></div><div><b>2025</b><span>亏损</span></div></div><div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
+<p class="small">2022—2025收入三年复合增速≈132.8%（推算）。各年归母净利润仍为负，绿色利润柱保留零高度并标注亏损；蓝柱按最高收入等比绘制。未取得2021年可比数据，图形仅呈现有审计依据的四年。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>中期对照与模型服务指标 · 本集团 · 人民币亿元，比率及每股另示；费用正数、利润带符号。2026H1已审阅；2025H1损益比较数取中期公告未经审计，现金流取招股书已审计历史资料。非IFRS与管理层指标另标。</caption><thead><tr><th>项目</th><th>2025H1</th><th>2026H1</th><th>解释</th></tr></thead><tbody><tr><td>收入</td><td>1.91</td><td>9.54</td><td></td></tr><tr><td>毛利</td><td>0.95</td><td>2.52</td><td></td></tr><tr><td>经营利润（亏损）</td><td>−18.99</td><td>−21.47</td><td></td></tr><tr><td>归母净利润（亏损）</td><td>−23.51</td><td>−20.71</td><td></td></tr><tr><td>经调整利润（亏损）</td><td>−17.52</td><td>−19.64</td><td>非IFRS补充指标</td></tr><tr><td>研发费用</td><td>15.95</td><td>21.31</td><td>训练及研发投入</td></tr><tr><td>股份支付（非IFRS调整项）</td><td>1.59</td><td>0.86</td><td>非IFRS补充指标</td></tr><tr><td>普通股每股收益（EPS）分子（亏损）</td><td>−9.93</td><td>−20.21</td><td></td></tr><tr><td>基本及摊薄每股收益（元）</td><td>−6.23</td><td>−4.67</td><td></td></tr><tr><td>毛利率 / 推理单位经济</td><td>49.99%</td><td>26.38%（推算）</td><td>毛利率是上层观察；同口径Token贡献利润未披露</td></tr><tr><td>订阅收入 / 付费Token绝对量</td><td>未披露</td><td>未披露</td><td>管理层倍数和时段确认收入不补作绝对值</td></tr><tr><td>经营现金流</td><td>−13.2715</td><td>未披露</td><td>2025H1取招股书现金流量表</td></tr><tr><td>现金资本开支（推算）</td><td>0.23908</td><td>未披露</td><td>固定及无形资产现金付款</td></tr><tr><td>自由现金流代理（推算）</td><td>−13.5106</td><td>未披露</td><td>经营现金流减现金资本开支；不含收购</td></tr><tr><td>单二季度损益与现金流</td><td>未披露</td><td>未披露</td><td>缺同口径Q1，不拆H1</td></tr></tbody></table></div>
+<p>推算最近十二个月收入14.87亿元，覆盖上年下半年与本年上半年，不是当前季度收入速度；缺本期现金流，不能构造滚动现金流。持续亏损不算复合增速，每股收益另处理拆股断点。</p>
+<div class="tblscroll"><table class="tbl" data-financials="segments"><caption>本集团两期上半年正式部署分部 · 人民币亿元；分部为收入和毛利口径，未披露独立经营利润；云端贡献收入净增量104.3%（推算），超过合计因本地化收入减少。</caption><thead><tr><th>正式分部</th><th>上年收入</th><th>本期收入</th><th>同比（推算）</th><th>本期毛利</th><th>毛利率（推算）</th><th>收入占比（推算）</th></tr></thead><tbody><tr><td>云端部署</td><td>0.29</td><td>8.25</td><td>+2,735.7%</td><td>2.03</td><td>−0.4% → 24.6%</td><td>15.2% → 86.5%</td></tr><tr><td>本地化部署</td><td>1.62</td><td>1.29</td><td>−20.4%</td><td>0.49</td><td>59.1% → 37.9%</td><td>84.8% → 13.5%</td></tr></tbody></table></div>
+<div class="stacks"><div class="stack"><div class="cap">2025H1收入结构</div><div class="stackbar"><div class="seg p" style="width:15.2454%">云端部署</div><div class="seg q" style="width:84.7546%">本地化部署</div></div></div><div class="stack"><div class="cap">2026H1收入结构</div><div class="stackbar"><div class="seg p" style="width:86.5062%">云端部署</div><div class="seg q" style="width:13.4938%">本地化部署</div></div></div></div>
+<p class="small">蓝段的扩张体现云端收入替代本地化收入。结构条使用两期正式分部收入占比；管理层API口径与本期云端收入一致，不相加。本地部署的项目确认节奏也会影响同比，不能把全部下降归因于客户流失。</p>
+<div class="plain"><span class="pl">白话解读</span><p>收入增长的主要来源已经改变，但更多收入还没有留下经营利润。云端毛利率改善是值得保留的正面证据；接下来要看毛利增加能否覆盖持续研发，而不是只看收入增速。</p></div>
 </section>
-
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">基础财务 · 公司概况 · 主营业务结构 · 五年财务概览</div>
-  <h2>收入爆发快过毛利，经营亏损仍在继续扩大</h2>
-  <p>2026H1是智谱上市后的首份中期业绩。港交所公告的合并数字未经审计、已由毕马威按ISRE 2410审阅；比较期同样按未经审计处理。公司公开可比财务轨迹从FY2022起只有四个完整年度，因此下表不人为补一个不存在的“第五年”。</p>
-
-  <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">2026H1 营业收入</div><div class="v">9.539<span class="u">亿元</span></div><div class="d"><span class="up">同比 +399.7%</span></div></div>
-    <div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">2.516<span class="u">亿元</span></div><div class="d"><span class="up">毛利 +163.7%</span><span class="down">毛利率 −23.6pp</span></div></div>
-    <div class="cell"><div class="k">经营亏损 / 率</div><div class="v">21.466<span class="u">亿元</span></div><div class="d"><span class="down">亏损扩大 +13.0%</span><span>−225.0%</span></div></div>
-    <div class="cell"><div class="k">期内净利润（亏损）</div><div class="v">−20.720<span class="u">亿元</span></div><div class="d"><span class="up">净亏损收窄 12.1%</span></div></div>
-    <div class="cell"><div class="k">经调整净亏损</div><div class="v">19.641<span class="u">亿元</span></div><div class="d"><span class="down">亏损扩大 +12.1%</span></div></div>
-    <div class="cell"><div class="k">H1 经营现金流 / FCF</div><div class="v">未披露</div><div class="d"><span>公告无现金流量表</span></div></div>
-  </div>
-
-  <div class="tblscroll" data-financials="history">
-    <table class="tbl">
-      <caption>完整年度历史与最新中期｜仅有四个可比完整年度；人民币亿元；自由现金流代理＝CFO−购买物业设备及无形资产的现金付款</caption>
-      <thead><tr><th>项目</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>2026H1</th></tr></thead>
-      <tbody>
-        <tr><td>营业收入</td><td>0.574</td><td>1.245</td><td>3.124</td><td>7.243</td><td>9.539</td></tr>
-        <tr><td>营业收入CAGR（FY2022—FY2025）</td><td>—</td><td>—</td><td>—</td><td>132.8%</td><td>—</td></tr>
-        <tr><td>毛利 / 毛利率</td><td>0.314 / 54.6%</td><td>0.805 / 64.6%</td><td>1.759 / 56.3%</td><td>2.967 / 41.0%</td><td>2.516 / 26.4%</td></tr>
-        <tr><td>经营亏损</td><td>−0.987</td><td>−6.257</td><td>−25.384</td><td>−37.868</td><td>−21.466</td></tr>
-        <tr><td>净利润（亏损）</td><td>−1.437</td><td>−7.880</td><td>−29.580</td><td>−47.182</td><td>−20.720</td></tr>
-        <tr><td>经调整净亏损</td><td>−0.974</td><td>−6.210</td><td>−24.656</td><td>−31.820</td><td>−19.641</td></tr>
-        <tr><td>基本每股收益（亏损，元，可比口径）</td><td>−0.78*</td><td>−2.95*</td><td>−8.72</td><td>−12.03</td><td>−4.67</td></tr>
-        <tr><td>ROE / ROIC</td><td>不适用</td><td>不适用</td><td>不适用</td><td>不适用</td><td>不适用</td></tr>
-        <tr><td>研发支出</td><td>0.844</td><td>5.289</td><td>21.954</td><td>31.804</td><td>21.312</td></tr>
-        <tr><td>经营现金流（CFO）</td><td>−0.682</td><td>−6.480</td><td>−22.449</td><td>−22.461</td><td>未披露</td></tr>
-        <tr><td>现金资本开支</td><td>0.317</td><td>5.086</td><td>1.328</td><td>0.231</td><td>未披露</td></tr>
-        <tr><td>自由现金流（FCF）代理</td><td>−0.999</td><td>−11.566</td><td>−23.777</td><td>−22.692</td><td>未披露</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="callout"><b>历史与每股口径限制：</b>公开材料仅有四个可比完整年度（FY2022—FY2025）；该区间营业收入CAGR为132.8%，四年累计自由现金流（FCF）代理约−59.03亿元。FY2022—23每股亏损按1拆10股份拆细做分析调整，标“*”；FY2024起采用公司可比口径。2026H1 EPS分子是普通股股东应占亏损20.208亿元，不等于集团净亏损20.720亿元，差异来自投资者金融工具持有人的亏损分配。ROE/ROIC：不适用，因为公司持续亏损且历史股东权益为负；BVPS也不用于价值判断。</div>
-
-  <div class="cols" role="img" aria-label="FY2022至FY2025收入与毛利趋势，精确数值见上表">
-    <div class="col"><div class="bars"><div class="bar rev" style="height:7.9%"></div><div class="bar np" style="height:4.3%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:17.2%"></div><div class="bar np" style="height:11.1%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:43.1%"></div><div class="bar np" style="height:24.3%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:41.0%"></div></div></div>
-  </div>
-  <div class="collabels"><div><b>FY2022</b></div><div><b>FY2023</b></div><div><b>FY2024</b></div><div><b>FY2025</b></div></div>
-  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>毛利</span></div>
-  <p class="small">柱高统一按FY2025收入7.243亿元缩放；收入长得很快，但毛利柱相对收入柱越来越矮，对应集团毛利率从FY2023的64.6%降至2026H1的26.4%。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>LTM损益桥｜FY2025 + 2026H1 − 2025H1；人民币亿元；LTM＝最近十二个月</caption>
-      <thead><tr><th>营业收入</th><th>毛利 / 率</th><th>经营亏损 / 率</th><th>净亏损</th><th>经调整亏损</th><th>CFO / FCF</th></tr></thead>
-      <tbody><tr><td>14.873</td><td>4.528 / 30.4%</td><td>−40.341 / −271.2%</td><td>−44.323</td><td>−33.941</td><td>不可构造</td></tr></tbody>
-    </table>
-  </div>
-
-  <div data-financials="segments">
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>正式报告分部｜人民币亿元；云端部署与本地化部署为IFRS分部</caption>
-        <thead><tr><th>部署方式</th><th>2026H1收入</th><th>同比</th><th>收入占比</th><th>毛利率</th><th>2025H1毛利率</th></tr></thead>
-        <tbody>
-          <tr><td>云端部署</td><td>8.252</td><td class="up">+2,735.7%</td><td>86.5%</td><td>24.6%</td><td>−0.4%</td></tr>
-          <tr><td>本地化部署</td><td>1.287</td><td class="down">−20.4%</td><td>13.5%</td><td>37.9%</td><td>59.1%</td></tr>
-          <tr class="grp"><td>集团</td><td>9.539</td><td>+399.7%</td><td>100.0%</td><td>26.4%</td><td>50.0%</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="stacks">
-      <div class="stack"><div class="cap">2025H1收入结构</div><div class="stackbar"><div class="seg p" style="width:15.2%">15.2%</div><div class="seg q" style="width:84.8%">84.8%</div></div></div>
-      <div class="stack"><div class="cap">2026H1收入结构</div><div class="stackbar"><div class="seg p" style="width:86.5%">86.5%</div><div class="seg q" style="width:13.5%">13.5%</div></div></div>
-    </div>
-    <div class="legend"><span><i class="p"></i>云端部署</span><span><i class="q"></i>本地化部署</span></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>管理层产品线拆分｜2026H1；人民币亿元；不是额外的IFRS分部</caption>
-      <thead><tr><th>产品线</th><th>收入</th><th>占比</th><th>同比</th><th>毛利率</th><th>2025H1毛利率</th></tr></thead>
-      <tbody>
-        <tr><td>开放平台及API</td><td>8.252</td><td>86.5%</td><td class="up">+2,735.7%</td><td>24.6%</td><td>−0.4%</td></tr>
-        <tr><td>企业级智能体</td><td>0.556</td><td>5.8%</td><td class="up">+304.4%</td><td>35.6%</td><td>64.6%</td></tr>
-        <tr><td>企业级通用大模型</td><td>0.670</td><td>7.0%</td><td class="down">−54.6%</td><td>42.3%</td><td>58.5%</td></tr>
-        <tr><td>技术服务及其他</td><td>0.061</td><td>0.7%</td><td>+1,166.7%</td><td>9.4%</td><td>65.8%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>这不是“老业务多卖一点”，而是<b>交易方式换了</b>：去年同期约85%的收入来自本地化部署，今年约87%来自云端/API。好消息是云端从亏毛利变成24.6%毛利；坏消息是它仍低于本地化业务，且旧业务毛利率也在下滑，所以集团毛利率被结构性拉低。</p>
-    <p>收入放大让经营亏损率从−995%看起来改善到−225%，但绝对经营亏损仍扩大。对一家模型公司，真正的下一道门槛不是“收入继续翻倍”，而是<b>新增毛利增长能否快过研发和算力投入</b>。</p>
-  </div>
+<section class="reveal on" id="engine"><div class="slabel">商业化 · 竞争</div><h2>调用热度之外，还缺同批客户的回款与留存</h2>
+<p>云端更适合重复调用和较快交付，但请求数不是订阅合同。是否形成经常性收入，要看付费客户持续使用与实际结算；编码产品、智能体和开发者平台的效果需要分层验证。</p>
+<div class="tblscroll"><table class="tbl txt"><caption>管理层经营指标 · 2026-08-31中期公告业务回顾；为公司说法，非独立核验的单位经济数据</caption><thead><tr><th>观察层次</th><th>已披露信息</th><th>能证明什么 / 还缺什么</th></tr></thead><tbody>
+<tr><td>平台用户</td><td>截至期末MaaS用户超过580万；公告时超过740万</td><td>平台覆盖扩大；注册与付费不是同一用户口径</td></tr>
+<tr><td>调用与价格</td><td>公告时较年初：Token消耗超过40倍，API平均单价增长101%</td><td>管理层报告量价方向向上；缺同模型、同计费定义的量价交叉表</td></tr>
+<tr><td>产品采用</td><td>截至公告时，Coding Plan调用量较年初增长超过23倍</td><td>使用量扩大，不是付费人数增幅；付费人数、独立订阅收入与同批续费率仍缺</td></tr>
+<tr><td>推理成本</td><td>管理层称较年初单位推理成本下降80%</td><td>可能支持云端毛利；缺逐模型成本、缓存命中和免费调用影响的对应关系</td></tr>
+<tr><td>收入确认</td><td>本期时点确认8.54亿元，时段确认1.00亿元</td><td>会计确认时点与商业收费方式不同；时段收入不等于订阅收入</td></tr>
+</tbody></table></div>
+<p>上述指标多截至公告时，包含期后发展。<span class="g">词元（Token）</span>会受输入输出、缓存和模型组合影响；平均单价变化也未分拆组合与真实提价。不能把不同基础的调用倍数与价格增幅相乘预测收入。</p>
+<p>模型能力吸引试用，可靠性、工作流程适配和使用成本决定客户是否留下。自主训练既提供迭代空间，也带来持续投入。开源模型与大型平台可能扩大需求，也可能降低切换成本；净效果应由付费客户留存与毛利证明，而非排行榜。</p>
+<p>编码订阅、智能体与企业系统只作产品驱动，未披露的收入不单独估值。期后新模型是下一期需求线索，不回填本期利润。</p>
+<div class="plain"><span class="pl">白话解读</span><p>试用的人变多，不代表留下来付费的人同样多。云端收入已提供商业化证据；要判断能持续多久，下一步需要把同一批客户的使用、付费和回款连起来看。</p></div>
 </section>
-
-<section class="reveal on" id="engine">
-  <div class="slabel">投资逻辑与核心增长驱动 · 互联网用户与变现 · 新业务转型</div>
-  <h2>API飞轮开始转动，但关键读数仍只有相对增幅</h2>
-  <p>本期最强的多头证据不是GLM在某一张榜单上的排名，而是三个财务结果同时发生：云端/API收入大幅扩张、云端毛利转正、销售营销费用下降。它们共同说明模型能力已开始通过真实调用变现，而不是完全靠定制项目或买量。</p>
-
-  <div class="flowbox" role="img" aria-label="智谱从模型研发到API收入再反哺研发的商业化飞轮">
-    <svg viewBox="0 0 920 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1E4B8F"/></marker></defs>
-      <rect x="18" y="62" width="155" height="92" rx="4" fill="#E4E8EE" stroke="#C9D0D8"/><text x="95" y="94" text-anchor="middle" font-size="14" fill="#0F1A22" font-weight="600">模型与强化学习</text><text x="95" y="120" text-anchor="middle" font-size="12" fill="#6D7B88">研发、训练、Infra</text>
-      <rect x="205" y="62" width="155" height="92" rx="4" fill="#E4E8EE" stroke="#C9D0D8"/><text x="282" y="94" text-anchor="middle" font-size="14" fill="#0F1A22" font-weight="600">Coding / Agent</text><text x="282" y="120" text-anchor="middle" font-size="12" fill="#6D7B88">真实长程任务</text>
-      <rect x="392" y="62" width="155" height="92" rx="4" fill="#E4E8EE" stroke="#C9D0D8"/><text x="469" y="94" text-anchor="middle" font-size="14" fill="#0F1A22" font-weight="600">API与订阅调用</text><text x="469" y="120" text-anchor="middle" font-size="12" fill="#6D7B88">量 × 价</text>
-      <rect x="579" y="62" width="155" height="92" rx="4" fill="#E7F0EB" stroke="#2C6A57"/><text x="656" y="94" text-anchor="middle" font-size="14" fill="#0F1A22" font-weight="600">收入与毛利</text><text x="656" y="120" text-anchor="middle" font-size="12" fill="#2C6A57">本期已验证</text>
-      <rect x="766" y="62" width="136" height="92" rx="4" fill="#F3E5EA" stroke="#A32B57"/><text x="834" y="94" text-anchor="middle" font-size="14" fill="#0F1A22" font-weight="600">回投研发</text><text x="834" y="120" text-anchor="middle" font-size="12" fill="#A32B57">资本回报待验证</text>
-      <line x1="173" y1="108" x2="202" y2="108" stroke="#1E4B8F" stroke-width="2" marker-end="url(#arrow)"/><line x1="360" y1="108" x2="389" y2="108" stroke="#1E4B8F" stroke-width="2" marker-end="url(#arrow)"/><line x1="547" y1="108" x2="576" y2="108" stroke="#1E4B8F" stroke-width="2" marker-end="url(#arrow)"/><line x1="734" y1="108" x2="763" y2="108" stroke="#1E4B8F" stroke-width="2" marker-end="url(#arrow)"/>
-      <path d="M834 160 C834 207,95 207,95 160" fill="none" stroke="#8FA8CC" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
-    </svg>
-    <div class="flow-note"><span class="badge">24.6%</span><span>云端毛利率已经证明“调用放大后不必永久亏毛利”；但要形成真正飞轮，毛利还必须覆盖研发、销售、行政、应收风险与资本成本。</span></div>
-  </div>
-
-  <h3>管理层给出的高频信号</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>经营指标均为管理层陈述，非独立核验；“公告日”晚于2026H1期末</caption>
-      <thead><tr><th>指标</th><th>管理层披露</th><th>能说明什么</th><th>还缺什么</th></tr></thead>
-      <tbody>
-        <tr><td>单位token推理成本</td><td>较年初下降80%</td><td>工程优化与规模效应方向正确</td><td>绝对成本、口径与第三方验证</td></tr>
-        <tr><td>MaaS用户</td><td>期末&gt;580万；公告日&gt;740万</td><td>开发者与企业触达扩大</td><td>付费用户绝对数、留存、ARPU</td></tr>
-        <tr><td>token调用</td><td>公告日较年初&gt;40×</td><td>需求强度快速提升</td><td>绝对token量与客户分布</td></tr>
-        <tr><td>Coding Plan调用</td><td>公告日较年初&gt;23×</td><td>编码场景成为切入口</td><td>收入占比、退款与续费</td></tr>
-        <tr><td>API平均售价</td><td>提高约101%</td><td>量价可能同步改善</td><td>同模型同客户提价还是结构变化</td></tr>
-        <tr><td>付费日活</td><td>较年初+603%</td><td>付费使用加速</td><td>绝对DAU和付费转化率</td></tr>
-        <tr><td>前十大用户日均调用</td><td>增长98×</td><td>进入生产环境的可能性上升</td><td>也可能意味着增长集中</td></tr>
-        <tr><td>算力投入乘数</td><td>每1元算力对应API收入同比+14×</td><td>单位经济方向改善</td><td>算力支出绝对值与计算方法</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>客户质量：历史在分散，本期却停止披露</h3>
-  <p>前五大客户收入占比从2023年的61.5%降到2024年的45.5%、2025H1的40.0%，FY2025进一步降至26.51%，最大客户7.90%。这是积极轨迹；但2026H1没有更新集中度。供应侧并未同样轻松：FY2025前五大供应商采购占52.34%，最大供应商20.92%，而本期算力预付款与应付款都显著上升。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">最强多头证据</div><p>API收入、毛利率和销售费用同时改善，比用户数或榜单更接近可验证商业化。它说明智谱至少已跨过“模型有没有人付费”的门槛。</p></div>
-    <div class="find warn"><div class="t">最强证据缺口</div><p>没有绝对token量、付费用户、留存、NRR、Coding收入占比和H1客户集中度。高增长能否重复，仍无法从合同质量和客户队列上验证。</p></div>
-  </div>
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>把管理层指标看成一张“仪表盘”：几乎所有指针都朝上，但多数只写“比年初多几倍”，没有写底数。低基数可以制造很大的倍数，客户集中也能制造很大的调用增长。财务报表给出的硬确认只有两项：<b>API收入真的来了，API毛利真的转正了</b>；飞轮是否稳定，还要等绝对用户、留存和现金消耗。</p>
-  </div>
+<section class="reveal on" id="profit"><div class="slabel">利润 · 费用桥</div><h2>经营费用增加快于毛利，净亏损改善来自另一层</h2>
+<p>新增毛利未覆盖经营项目净增支出。下图按两期差额拆解经营利润：正值改善，负值恶化；投资、融资和金融工具变动另列。</p>
+<div class="wfall" role="img" aria-label="经营利润同比桥"><div class="wrow"><div class="nm">毛利<span>2026H1减2025H1 · 推算</span></div><div class="wtrack"><div class="wbar up" style="left:70.9497%;width:29.0503%"></div></div><div class="fig">+1.56亿元</div></div><div class="wrow"><div class="nm">研发开支<span>2026H1减2025H1 · 推算</span></div><div class="wtrack"><div class="wbar down" style="left:0.0000%;width:100.0000%"></div></div><div class="fig">−5.37亿元</div></div><div class="wrow"><div class="nm">销售及营销开支<span>2026H1减2025H1 · 推算</span></div><div class="wtrack"><div class="wbar up" style="left:0.0000%;width:5.7728%"></div></div><div class="fig">+0.31亿元</div></div><div class="wrow"><div class="nm">一般及行政开支<span>2026H1减2025H1 · 推算</span></div><div class="wtrack"><div class="wbar up" style="left:5.7728%;width:15.2700%"></div></div><div class="fig">+0.82亿元</div></div><div class="wrow"><div class="nm">金融资产减值亏损<span>2026H1减2025H1 · 推算</span></div><div class="wtrack"><div class="wbar down" style="left:17.8771%;width:3.1657%"></div></div><div class="fig">−0.17亿元</div></div><div class="wrow"><div class="nm">其他收入<span>2026H1减2025H1 · 推算</span></div><div class="wtrack"><div class="wbar up" style="left:17.8771%;width:6.8901%"></div></div><div class="fig">+0.37亿元</div></div><div class="wrow"><div class="nm">经营利润同比变化<span>2026H1减2025H1 · 推算</span></div><div class="wtrack"><div class="wbar tot" style="left:24.9534%;width:45.9963%"></div></div><div class="fig">−2.47亿元</div></div></div>
+<p class="small">经营利润的同比变化为负：绿色改善项被紫色增支项抵消。各项以本集团2026H1减2025H1推算，未舍入输入勾稽至经营亏损增量；显示分项加总与合计的微小差异来自舍入。</p>
+<p>总净亏损由23.58亿元收窄至20.72亿元，归属于本公司权益股东的亏损由23.51亿元收窄至20.71亿元。与经营亏损方向不同，主要来自向投资者发行金融工具的账面值变动、联营损益等非经营项目。上市前金融工具转股也影响可比性，不代表每次调用更赚钱。</p>
+<p><span class="g">经调整亏损</span>由上年同期17.52亿元扩大至本期19.64亿元，是公司非国际财务报告准则补充指标。调整项不都永久消失；<span class="g">股份支付（SBC）</span>即使当期不付现，仍有股东经济成本。</p>
+<p>本期归母亏损20.71亿元，扣除分配予投资者金融工具的亏损后，普通股每股收益分子为20.21亿元，每股基本及摊薄亏损4.67元。亏损时潜在新增股数反会缩小每股亏损，故不计入摊薄计算；两者相同不代表未来没有经济摊薄。</p>
+<p>云端毛利率上升而合并毛利率下降，首先反映较低毛利率的云端占比提高。研发包含训练和人才，销售成本含交付和推理；以后若资本化、分类或利用率改变，需保持同口径，不能只看毛利率。</p>
+<p>固定本期费用与毛利率，静态推算半年经营盈亏平衡收入≈90.9亿元。这是当前差距，不是盈利时间表：扩张会改变算力和获客需求，削减训练又可能损害能力，不能机械外推固定费用。</p>
+<div class="plain"><span class="pl">白话解读</span><p>主营业务留下的毛利还付不起研发等费用，净亏损缩小也没有改变这一点。真正的改善应表现为：不依赖非经营项目，经营亏损本身开始收窄。</p></div>
 </section>
-
-<section class="reveal on" id="economics">
-  <div class="slabel">盈利能力深度分析</div>
-  <h2>净亏损收窄是会计桥，不是经营杠杆已经转正</h2>
-  <p>报表最容易误读的地方是“期内亏损收窄12.1%”。主营经营层面的经营亏损反而扩大13.0%，经调整亏损也扩大12.1%；IFRS净亏损之所以改善，主要是投资者金融工具账面值损失大幅减少，以及联营公司利润增加。</p>
-
-  <div class="wfall" aria-label="2026H1相对2025H1的亏损变化归因">
-    <div class="wrow"><div class="nm">毛利增加<span>收入扩张带来的正贡献</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:18%"></div></div><div class="fig up">+1.562亿元</div></div>
-    <div class="wrow"><div class="nm">研发费用增加<span>前沿模型与Infra投入</span></div><div class="wtrack"><div class="wbar down" style="left:0;width:50%"></div></div><div class="fig down">−5.365亿元</div></div>
-    <div class="wrow"><div class="nm">投资者工具损失减少<span>融资会计负担下降</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:38%"></div></div><div class="fig up">+4.072亿元</div></div>
-    <div class="wrow"><div class="nm">联营利润增加<span>非主营经营贡献</span></div><div class="wtrack"><div class="wbar up" style="left:50%;width:12%"></div></div><div class="fig up">+1.300亿元</div></div>
-    <div class="wrow"><div class="nm">净亏损变化<span>多项合并后的报告结果</span></div><div class="wtrack"><div class="wbar tot" style="left:50%;width:27%"></div></div><div class="fig up">收窄2.859亿元</div></div>
-  </div>
-  <p class="small">条宽仅表达相对方向和量级，精确数值见右侧；不是从毛利到净亏损的完整法定瀑布，未逐项展示销售、行政、减值、财务成本、公允价值及税项。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>利润质量核对｜人民币亿元</caption>
-      <thead><tr><th>指标</th><th>2026H1</th><th>2025H1</th><th>同比</th><th>判断</th></tr></thead>
-      <tbody>
-        <tr><td>经营亏损</td><td>−21.466</td><td>−18.992</td><td class="down">扩大13.0%</td><td>主营仍未出现绝对经营杠杆</td></tr>
-        <tr><td>期内净亏损</td><td>−20.720</td><td>−23.579</td><td class="up">收窄12.1%</td><td>受融资会计和联营利润改善影响</td></tr>
-        <tr><td>经调整净亏损</td><td>−19.641</td><td>−17.520</td><td class="down">扩大12.1%</td><td>核心调整口径没有改善</td></tr>
-        <tr><td>股份支付</td><td>0.858</td><td>1.589</td><td class="up">下降46.0%</td><td>仍是实际人才成本，不能从经济成本中消失</td></tr>
-        <tr><td>研发 / 收入</td><td>223.4%</td><td>835.4%</td><td class="up">比率改善</td><td>收入放大快，但研发仍是毛利8.47倍</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>当前毛利率下，静态盈亏平衡需要多大规模</h3>
-  <p>把本期研发、销售、行政和减值合计，扣除其他收入，再除以26.4%毛利率，可得到一个约<b>90.9亿元半年收入</b>的静态盈亏平衡门槛，约为本期收入的9.5倍。这不是预测：它假设费用绝对额不再增加、毛利率也不变，只是把当前成本结构翻译成“还差多远”。若云端毛利率向35%—40%提升，门槛会明显下降；若模型竞赛继续抬高研发，门槛则会上升。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>收入质量边界｜2026H1</caption>
-      <thead><tr><th>收入确认</th><th>金额</th><th>占比</th><th>可以说</th><th>不能说</th></tr></thead>
-      <tbody>
-        <tr><td>某一时点</td><td>8.543亿元</td><td>89.6%</td><td>调用或交付发生后确认</td><td>不能把全部收入称为合同锁定ARR</td></tr>
-        <tr><td>随时间</td><td>0.996亿元</td><td>10.4%</td><td>部分订阅/服务随合同期确认</td><td>未披露NRR、续费率和剩余履约义务</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>收入增长像一台突然加速的发动机，但研发是一座更大的山。会计净亏损变小，不等于发动机已推动车子上坡；真正要看的是<b>毛利增加一元时，经营亏损能不能减少一元以上</b>。本期答案仍是否定的。</p>
-  </div>
+<section class="reveal on" id="balance"><div class="slabel">现金 · 算力义务</div><h2>配售增加资源，但尚不能测出真实现金消耗速度</h2>
+<p>融资增加资源，却不证明增长能自我供血。中期公告缺完整现金流量表，不能用亏损、现金余额变化或融资额倒推半年经营现金流；历史现金流只提供参照。</p>
+<div class="tblscroll"><table class="tbl txt"><caption>2026-06-30本集团资产负债表及附注 · 人民币亿元；备考列为推算，不是9月实际余额</caption><thead><tr><th>项目</th><th>期末值</th><th>资金质量与约束</th></tr></thead><tbody>
+<tr><td>银行及现金 / 短期投资</td><td>39.94 / 5.06</td><td>先保留披露分类；短期投资不与现金等价物混称</td></tr>
+<tr><td>银行贷款 / 租赁负债</td><td>22.25 / 3.79</td><td>备考净现金同时扣除，避免把租赁融资当免费算力</td></tr>
+<tr><td>贸易应收款</td><td>7.83；年初3.03</td><td>收入扩大也占用客户信用；期末存量与半年流量不能直接当现金转化率</td></tr>
+<tr><td>预付款项及其他应收</td><td>16.21</td><td>其中预付计算资源服务及其他12.44；不是可随时拿回的现金，也非纯算力余额</td></tr>
+<tr><td>贸易及其他应付</td><td>21.36</td><td>其中计算资源服务应付14.27；供应商信用可推迟付现，并不创造利润</td></tr>
+<tr><td>合同负债</td><td>3.02</td><td>代表尚待履约的预收等义务，不是已实现毛利</td></tr>
+<tr><td>资产及企业收购应付代价</td><td>2.30</td><td>与已确认资产、交易付款另核对，不能遗漏也不重复扣减</td></tr>
+<tr><td>含租赁的备考净现金</td><td>≈290.22</td><td>半年末项目加7月已完成配售净额；未扣7月至估值日实际净支出和后续投资</td></tr>
+</tbody></table></div>
+<p>预付与应付同时较大，现金与利润仍受采购、结算和履约节奏影响。<span class="g">合同负债</span>提前收钱也带来服务成本，应收确认收入仍待收回；账面现金除以亏损不能代替这些分析。</p>
+<p>公司披露半年末资产无抵押、无未履行资本承担；这不等于未来算力采购或资金调拨没有约束。备考现金按9月4日汇率折算，投资变现、后续收购付款和营运占用仍影响可支配资源，故估值先扣情景累计净消耗。</p>
+<p>融资公告预计配售净款于2027年底前悉数动用，但投资、设备和偿债并不都形成费用。核心是投入后的回报：预付、设备或收购若低效，账面资产与股东可分配价值仍会分离。</p>
+<p>目前不报告“现金跑道几个月”。下一份完整年报将帮助核对融资后的资金消耗速度，重点是现金流、受限资金和算力义务。若营收扩大同时应收和预付持续加快，现金效率可能弱于利润表给出的改善。</p>
+<div class="plain"><span class="pl">白话解读</span><p>配售让公司更有能力继续研发，但钱会按采购、交付和收款节奏流动。下一份完整现金流量表，才能判断新增收入是否减少了对外部资金的依赖。</p></div>
 </section>
-
-<section class="reveal on" id="balance">
-  <div class="slabel">现金流与资本开支 · 资产负债表与财务稳健性</div>
-  <h2>配售消除了短期融资焦虑，也把考题改成资本配置</h2>
-  <p>6月末账面银行存款及现金39.94亿元、短期投资5.06亿元，银行借款22.25亿元；7月配售又带来313.75亿港元净款。按2026年8月28日Wind汇率做备考桥，现金与短投减银行借款、再加配售净款，得到约291.72亿元人民币的“备考净现金类资产”。它不是8月末实际现金，也没有扣未来研发、并购和经营消耗。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">6月末银行存款及现金</div><div class="v">39.94<span class="u">亿元</span></div><div class="d"><span>受限金额未拆分</span></div></div>
-    <div class="cell"><div class="k">银行借款 / 租赁负债</div><div class="v">22.25<span class="u">亿元</span></div><div class="d"><span>另有租赁3.79亿元</span></div></div>
-    <div class="cell"><div class="k">7月配售净款</div><div class="v">313.75<span class="u">亿港元</span></div><div class="d"><span>期后事项</span></div></div>
-    <div class="cell"><div class="k">备考净现金类资产</div><div class="v">291.72<span class="u">亿元</span></div><div class="d"><span>分析口径，不是可分红现金</span></div></div>
-    <div class="cell"><div class="k">流动比率</div><div class="v">2.06<span class="u">×</span></div><div class="d"><span>2025年末0.29×</span></div></div>
-    <div class="cell"><div class="k">H1 CFO / 现金FCF</div><div class="v">未披露</div><div class="d"><span>不能从现金变动倒推</span></div></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>营运资本与算力占用｜人民币亿元；2026-06-30对2025-12-31</caption>
-      <thead><tr><th>项目</th><th>2026H1末</th><th>FY2025末</th><th>变化</th><th>投资含义</th></tr></thead>
-      <tbody>
-        <tr><td>贸易应收净额</td><td>7.829</td><td>3.032</td><td class="down">+158.2%</td><td>相当于H1收入82.1%；粗略DSO约103天</td></tr>
-        <tr><td>预付款及其他应收</td><td>16.213</td><td>3.957</td><td class="down">+309.7%</td><td>其中预付计算服务及其他12.437亿元</td></tr>
-        <tr><td>贸易及其他应付款</td><td>21.358</td><td>13.286</td><td>+60.8%</td><td>其中计算服务应付款14.274亿元</td></tr>
-        <tr><td>合约负债</td><td>3.023</td><td>1.486</td><td class="up">+103.4%</td><td>客户预收增加，但小于应收与算力预付</td></tr>
-        <tr><td>银行借款</td><td>22.248</td><td>6.895</td><td class="down">+222.7%</td><td>配售后短期偿债风险显著下降</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>应收净额相当于半年收入的82%，用期初期末平均应收做的粗略DSO约103天；这不是纯API账期，因为应收还可能混合大型企业客户与存量本地项目。计算服务预付占预付款及其他应收的76.7%，计算服务应付占贸易及其他应付的66.8%，说明All-in-Infra不仅是技术口号，也已大幅进入营运资本。</p>
-  <div class="callout"><b>资本开支口径红线：</b>公告提到约3.906亿元“资本开支”，主要来自收购北京红钻后确认物业资产；最终对价直到8月21日才付清。它不是可以直接从CFO扣除的H1现金资本开支。公告又没有现金流量表，因此H1经营现金流、现金资本开支和自由现金流一律标记为“未披露”。</div>
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>大额配售让公司短期“不缺钱”，但没有让商业模式自动赚钱。现金越多，市场越容易把亏损看成可承受；对股东真正重要的是，这笔钱投入模型和算力后，能否让<b>每股毛利、每股现金流和每股价值</b>增长，而不是只让公司规模增长。</p>
-  </div>
+<section class="reveal on" id="governance"><div class="slabel">治理 · 每股权益</div><h2>已完成融资与授权上限，必须分别进入估值</h2>
+<p>每股价值既取决于业务增长，也取决于股东最终分享它的分母。公司董事长刘德兵、首席执行官张鹏负责经营领导，单一最大股东集团在配售后合计持有≈28.57%（推算）。未上市股份仍占≈48.22%，H股市价因此不能说明全部股份拥有相同的即时流动性。</p>
+<div class="tblscroll"><table class="tbl txt"><caption>本公司资本行动 · 截至2026-09-05已取得公告；授权、完成与支付状态分别列示</caption><thead><tr><th>事项</th><th>规模 / 状态</th><th>普通股东应如何理解</th></tr></thead><tbody>
+<tr><td>7月配售</td><td>7月13日完成；新增1,978万股，每股1,588港元，净筹313.75亿港元</td><td>股数与净现金一并纳入；发行价是历史成交条件，不是估值底线</td></tr>
+<tr><td>8月底月报</td><td>9月2日披露：总股数4.6562亿股，库存股为零</td><td>与7月完成后口径一致；主估值采用已发行股份，不只用H股</td></tr>
+<tr><td>新股份激励</td><td>6月22日获批；新股授权上限4,458.43万股</td><td>授权不等于授予；二级市场买入的现有股不计入该新股上限，参与者购买价待定</td></tr>
+<tr><td>A股发行方案</td><td>基本发行占发行后2%—8%，超额配售不超过15%；拟募人民币150亿元</td><td>已获股东批准，定价和最终发行尚未落实；不能只增加股数而忽略募集现金</td></tr>
+<tr><td>资本分配</td><td>配售拟55%用于研发、15%用于业务拓展投资并购、30%用于营运及一般用途</td><td>用途是计划，不保证全部形成盈利资产；普通股股息及回购回报在模型中取零</td></tr>
+<tr><td>收购付款</td><td>红钻总价3.60亿元，8月21日付清；中科加禾60%股权，总价2.92亿元</td><td>前者是资产收购而非经营并购；后者有商誉和后续支付，不预设协同收益</td></tr>
+</tbody></table></div>
+<p>7月配售改变了A股方案旧绝对股数的前提，现以发行后比例重算：若当前股本不再变化，最大新增股数含超额配售推算≈4,656.23万股。奖励、A股发行和一般授权剩余额不机械叠加成确定稀释。</p>
+<p>奖励购旧股耗现金，新发股加分母，参与者出资则补现金；全部授权新发、零认购款仅作压力。已发行员工平台股不再重复计入潜在新股。</p>
+<p>激励计划允许董事会决定是否设业绩条件，正常最低归属期12个月；还需看授予价格、条件和受益人，不能从计划获批推断利益一致。并购同样需追踪实付成本与减值，不预设协同收益。</p>
+<div class="plain"><span class="pl">白话解读</span><p>融资会同时带来钱和新股份，激励也可能花现金而不是发新股。判断每股价值，要把两边一起算；下一步看实际发行与授予条件，而非只看授权上限。</p></div>
 </section>
-
-<section class="reveal on" id="competition">
-  <div class="slabel">行业与宏观环境 · 竞争对手 · 贝塔与阿尔法</div>
-  <h2>榜单领先很短，成本曲线与真实调用才可能留下来</h2>
-  <p>智谱把技术路线描述为“Chat → Coding → Agent → Co-work → Autonomous AI”。Coding的优势是任务结果容易验证，可为长程规划、工具调用和错误恢复提供反馈；公司希望再把这些能力迁移到网络安全、数据分析和复杂自动化。但2026H1的规模收入主要仍来自开放平台/API，Co-work在法律、金融、教育等行业尚未形成可审计的收入分拆。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">pure-play的可能优势</div><p>相较拥有云、广告或企业软件业务的科技巨头，独立模型公司与企业客户核心业务冲突更少；云端、本地、端侧和多芯片适配也提高交付灵活性。</p></div>
-    <div class="find"><div class="t">真实任务反馈</div><p>编码和Agent任务产生可验证轨迹，调用越多，越有机会缩短模型迭代周期。这个机制比一次静态榜单更接近可持续竞争力。</p></div>
-    <div class="find warn"><div class="t">平台对手可以交叉补贴</div><p>科技巨头拥有云资源、分发入口和其他业务现金流，可以压低API价格；智谱则同时承担前沿训练和推理服务的资本强度。</p></div>
-    <div class="find warn"><div class="t">开源压低切换成本</div><p>模型能力差距可能只维持数月，开源权重和兼容API又让客户迁移更容易。ASP能否穿越下一轮价格战，比本期上调101%更重要。</p></div>
-  </div>
-
-  <h3>国产算力：供应安全与成本优势的同一枚硬币</h3>
-  <p>管理层称公司年初实施“All-in-Infra”，已用10万级国产芯片承担推理；GLM-5.3-Flash首次在超大规模真实流量中全面使用国产芯片集群，同硬件基线端到端性能提升3倍，单位token性价比可比主流进口卡。这些都是发行人陈述，尚无第三方生产SLA和单位成本验证。公司也坦承国产芯片内存容量与带宽不足，特别是1M上下文场景仍受限。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>竞争位置的可核验边界</caption>
-      <thead><tr><th>维度</th><th>已有证据</th><th>尚未验证</th><th>下一观察</th></tr></thead>
-      <tbody>
-        <tr><td>模型能力</td><td>GLM-5.3/Flash期后发布，发行人自测长程任务改善</td><td>独立复现、稳定性和故障率</td><td>第三方真实工程任务测试</td></tr>
-        <tr><td>开发者生态</td><td>用户与调用量快速上升</td><td>付费留存、ARPU、迁移率</td><td>绝对付费用户与NRR</td></tr>
-        <tr><td>成本曲线</td><td>云端毛利转正；管理层称token成本−80%</td><td>训练/推理拆分、国产芯片总拥有成本</td><td>云端毛利率持续向30%—40%移动</td></tr>
-        <tr><td>市场位置</td><td>招股书委托研究称2024年中国市场份额6.6%、排名第二</td><td>该估计是否仍适用于2026竞争格局</td><td>以收入、客户和调用绝对值更新</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">2024年市场份额来自招股书中的发行人委托Frost &amp; Sullivan研究，仅作历史背景，不视为独立核验的当前事实。</p>
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>大模型行业没有一条永久护城河。榜单可以被下一次发布刷新，价格可以被大平台补贴，开源可以缩短追赶。智谱真正能建立的优势只有一条：<b>真实任务更多 → 迭代更快 → 成本更低 → 调用更多</b>。本期只验证了这条链的中间两环，尚未验证长期回报。</p>
-  </div>
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="远期EV/收入情景折现"><div class="slabel">估值 · 隐含要求</div><h2>转入盈利的条件基准，仍不足以支持现价</h2>
+<p>因为持续亏损，主方法将2028年末经营价值与净现金共同折现，给出有条件的每股现值，而非届时成交价承诺。</p>
+<div class="grid" ><div class="cell" ><div class="k">现价</div><div class="v">1,075港元</div><div class="d"><span>2026-09-04 16:08香港时间 · Wind</span></div></div><div class="cell" ><div class="k">熊市</div><div class="v">11.7港元</div><div class="d"><span>较现价−98.9% · 推算</span></div></div><div class="cell" ><div class="k">基准</div><div class="v">40.1港元</div><div class="d"><span>较现价−96.3% · 推算</span></div></div><div class="cell" ><div class="k">牛市</div><div class="v">204.9港元</div><div class="d"><span>较现价−80.9% · 推算</span></div></div><div class="cell" ><div class="k">隐含预期</div><div class="v">3,984亿元</div><div class="d"><span>2028年收入 · 固定基准其余条件</span></div></div><div class="cell" data-verdict="negative"><div class="k">判断</div><div class="v">负面</div><div class="d"><span>估值输入置信度低</span></div></div></div>
+<div class="steps"><div class="step"><div class="n">方法 A</div><b>远期EV/收入情景折现：未来规模能否支撑今天的价格？</b><p>用增长、利润和再投资推导收入倍数，再与剩余现金共同折现。</p></div><div class="step"><div class="n">方法 B</div><b>零增长盈利交叉检验</b><p>取消后续增长及扩张再投资，检验主方法有多少价值来自持续成长。</p></div><div class="step"><div class="n">怎么读</div><b>主方法定档，不平均两法</b><p>六格和阶梯使用同一组值；交叉检验是结构压力，不是另一份独立预测。</p></div></div>
+<h3>第一步 · 先把总权益与经营价值分开</h3>
+<p>9月4日收盘1,075港元，按月报全股本推算市值≈5,005.4亿港元；按<span class="g">备考净现金</span>推算企业价值与滚动收入之比≈271.4倍，仅作尺度校验。上市历史不足五年，无可比五年分位。</p>
+<h3>第二步 · 同类模型企业也贵，不能互相证明便宜</h3>
+<div class="tblscroll"><table class="tbl" ><caption>2026-09-04收盘：Wind总市值含限售股；财务以HKEX半年公告为准。MiniMax原币美元，倍数统一按当日汇率折算；年化为H1乘二，不是TTM或预测；不计算未勾稽现金的同业EV。</caption><thead><tr><th>公司 / 层次</th><th>市值（亿港元）</th><th>H1收入</th><th>H1毛利率</th><th>市值/半年收入年化</th></tr></thead><tbody><tr><td>智谱 · 主体</td><td>5,005.4</td><td>9.54亿元人民币</td><td>26.4%（推算）</td><td>226.8倍（推算）</td></tr><tr><td>MiniMax · 一级</td><td>1,262.1</td><td>1.166亿美元</td><td>17.9%</td><td>69.0倍（推算）</td></tr></tbody></table></div>
+<p>只保留承担相近训练责任的MiniMax，不拼凑同级中位数；其海外应用与产品组合仍不同。双方高倍数可能共同包含高增长预期，不能互相证明估值合理。</p>
+<h3>第三步 · 把增长价值与再投资成本一起算</h3>
+<div class="tblscroll"><table class="tbl txt" ><caption>2028年末情景 · 分析假设，不是公司指引或一致预期；折现期≈2.32年，汇率固定，主模型不纳入未定价A股发行。</caption><thead><tr><th>驱动</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据</th></tr></thead><tbody><tr><td>2028收入</td><td>50.0亿元</td><td>120.0亿元</td><td>220.0亿元</td><td>基于H1商业化基础设三条增长路径，非指引</td></tr><tr><td>收入倍数（推算）</td><td>0.5857倍</td><td>1.6471倍</td><td>4.9564倍</td><td>由后续有限增长、盈利及再投资折现求得；参数见附录</td></tr><tr><td>累计净资源消耗（推算）</td><td>240.4亿元</td><td>241.0亿元</td><td>238.9亿元</td><td>按预计收入回款和投放计划向前推演；非实测现金流</td></tr><tr><td>2028年末净现金（推算）</td><td>49.8亿元</td><td>49.2亿元</td><td>51.3亿元</td><td>期初备考资源加回款减各项现金投放，详见现金桥</td></tr><tr><td>股权要求回报</td><td>25.0%</td><td>20.0%</td><td>15.0%</td><td>参照公司借款成本下界，另加技术与执行风险补偿，见下文</td></tr><tr><td>成熟经营税后利润率</td><td>15.0%</td><td>20.0%</td><td>25.0%</td><td>需毛利提升与训练费用率大幅下降；不是当前已验证利润率</td></tr><tr><td>主方法每股现值（推算）</td><td>11.7港元</td><td>40.1港元</td><td>204.9港元</td><td>已发行股数；经营价值与终点现金共同折现</td></tr><tr><td>零增长盈利检验（推算）</td><td>11.8港元</td><td>27.5港元</td><td>75.0港元</td><td>同收入、股数、现金和期限；删除后续增长及扩张投资</td></tr></tbody></table></div>
+<p>三档收入以本期规模为起点，要求商业化持续扩大；未来利润率则要求毛利提升和训练费用率下降，不能从当前毛利率直接得到。收入倍数由盈利增长、再投资与终值计算产生，不取现价或另选盈利倍数来反证合理。</p>
+<p><span class="g">股权要求回报</span>取25%／20%／15%，来自亏损、模型更替和执行风险的分层补偿。2025年银行贷款利率2.11%—2.80%、租赁利率3.50%—4.75%，仅作资金成本下界校验；股权承担剩余风险，不直接套用借款利率。</p>
+<div class="ffield" aria-label="主方法情景与交叉检验"><div class="frow"><div class="fnm">远期收入折现<span>熊市</span></div><div class="ftrack"><div class="fbar alt" style="left:0.2500%;width:0.8%"></div><div class="fmark" style="left:59.7222%"></div></div><div class="fig">11.7港元</div></div><div class="frow"><div class="fnm">远期收入折现<span>基准</span></div><div class="ftrack"><div class="fbar " style="left:1.8278%;width:0.8%"></div></div><div class="fig">40.1港元</div></div><div class="frow"><div class="fnm">远期收入折现<span>牛市</span></div><div class="ftrack"><div class="fbar moss" style="left:10.9833%;width:0.8%"></div></div><div class="fig">204.9港元</div></div><div class="frow"><div class="fnm">零增长盈利检验<span>低至高情景</span></div><div class="ftrack"><div class="fbar" style="left:0.6556%;width:3.5111%"></div></div><div class="fig">11.8—75.0港元</div></div><div class="frow"><div class="fnm">市场交易锚<span>7月配售价</span></div><div class="ftrack"><div class="fbar alt" style="left:87.8222%;width:0.8%"></div></div><div class="fig">1,588港元</div></div></div>
+<p class="small">主方法把2028年收入对应的经营价值与净现金折回今天；基准收入120亿元、收入倍数≈1.647倍，收入规模是主要检验变量。三档为点值，交叉检验为区间；历史配售价不作价值底线。横轴：港元0—1,800元／股，黑线为9月4日现价。</p>
+<p>零增长交叉检验基准≈28港元，低于主方法≈31.5%，差异来自后续增长及再投资，不是少算现金。它同样假设成熟利润率已实现，两法不取平均。</p>
+<div class="tblscroll"><table class="tbl sgrid"><caption>行：2028年收入（亿元人民币）；列：企业价值/收入倍数（倍）；单元格：每股港元现值（推算）。</caption><thead><tr><th>收入 ＼ 倍数</th><th>1.2353倍</th><th>1.6471倍</th><th>2.0589倍</th></tr></thead><tbody><tr><td>80.00</td><td>24.1</td><td>29.4</td><td>34.8</td></tr><tr><td>120.00</td><td>32.1</td><td class="base">40.1</td><td>48.2</td></tr><tr><td>3,984.14</td><td>808.2</td><td class="implied">1,075.0</td><td>1,341.8</td></tr></tbody></table></div>
+<p class="small">纵向改变2028年收入，横向改变收入倍数，两项共同决定经营价值；基准格描边，<span class="g">现价隐含</span>格着色。其他条件固定为基准，计算使用未舍入收入，显示格值四舍五入。</p>
+<div class="steps chain"><div class="step"><div class="n">驱动</div><b>持续付费商业化</b><p>基于已有云端业务设扩张情景</p></div><div class="step"><div class="n">收入</div><b>2028年120亿元</b><p>同年盈利和现金投影起点</p></div><div class="step"><div class="n">经营价值</div><b>197.7亿元</b><p>1.647倍来自有限增长及再投资模型</p></div><div class="step"><div class="n">折现</div><b>20%要求回报</b><p>风险补偿；<span class="g">终点净现金</span>49.2亿元</p></div><div class="step"><div class="n">每股现值</div><b>40.1港元</b><p>同一已发行股数口径</p></div></div>
+<h3>第四步 · 现价需要更大的远期生意</h3>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="implied"><caption>现价反推主方法 · 除所求变量外均保持基准；原始股数在附录，非一致预期。</caption><thead><tr><th>假设</th><th>基准假设</th><th>现价隐含</th><th>差距</th></tr></thead><tbody><tr><td>2028年收入</td><td>120亿元</td><td>3,984.14亿元（推算）</td><td>高于基准+3,220.1%</td></tr><tr><td>企业价值/收入倍数</td><td>1.6471倍</td><td>固定基准倍数</td><td>本行固定，单独反推收入</td></tr><tr><td>股权要求回报</td><td>20%</td><td>固定20%</td><td>同一折现期</td></tr><tr><td>终点净现金</td><td>49.20亿元</td><td>固定基准现金</td><td>不自动增加融资资源</td></tr><tr><td>股本与汇率</td><td>4.6562亿股；0.86458人民币/港元</td><td>固定基准</td><td>不偷偷改变分母或汇率</td></tr><tr><td>若只改变倍数</td><td>收入固定120亿元</td><td>54.7倍（推算）</td><td>与收入反推互为替代，不同时采用</td></tr></tbody></table></div>
+<p>反推只改变收入；巨大隐含规模不是一份完整、可融资的经营预测，更乐观结论需同时说明资本与客户需求如何满足。</p>
+<div class="rows" aria-label="情景现值与现价"><div class="row"><div class="nm">熊市<span>主方法 · 推算现值</span></div><div class="track"><div class="fill alt" style="width:1.0884%"></div></div><div class="fig">11.7港元<span>−98.9%</span></div></div><div class="row"><div class="nm">基准<span>主方法 · 推算现值</span></div><div class="track"><div class="fill " style="width:3.7302%"></div></div><div class="fig">40.1港元<span>−96.3%</span></div></div><div class="row"><div class="nm">现价<span>9月4日收盘</span></div><div class="track"><div class="fill soft" style="width:100.0000%"></div></div><div class="fig">1,075.0港元<span>市场价</span></div></div><div class="row"><div class="nm">牛市<span>主方法 · 推算现值</span></div><div class="track"><div class="fill moss" style="width:19.0605%"></div></div><div class="fig">204.9港元<span>−80.9%</span></div></div></div>
+<p class="small">每条宽度与所示每股现值成比例，差距相对1,075港元计算。百分比是折现价值与现价之差，不是2028年底可实现的持有回报。</p>
+<div class="plain"><span class="pl">一句话总结</span><p>基准现值≈40港元，现价反推的2028年收入≈3,984亿元。判断的关键不是公司是否增长，而是能否长成价格已经要求的规模，并真正留下利润。</p></div>
 </section>
-
-<section class="reveal on" id="governance">
-  <div class="slabel">公司治理专项 · 管理团队与股权结构 · 股东回报</div>
-  <h2>融资能力很强，少数股东要盯的是每股价值而非公司规模</h2>
-  <p>7月配售后，单一最大股东一致行动集团合计持股约28.58%（未上市股26.43%加H股2.15%），未上市股份占总股本48.22%。董事长刘德兵与CEO张鹏分设，董事会由3名执行、3名非执行和3名独立董事组成；审计委员会形式上多数独立，但联合创始人李涓子作为非执行董事仍在其中。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>资本、激励与潜在摊薄｜股份为百万股</caption>
-      <thead><tr><th>事项</th><th>股份 / 资金</th><th>状态</th><th>正确解读</th></tr></thead>
-      <tbody>
-        <tr><td>当前已发行股份</td><td>465.623m</td><td>7月配售后</td><td>估值基础股数</td></tr>
-        <tr><td>H股配售</td><td>19.780m；净款HK$31.375bn</td><td>2026-07-13完成</td><td>股数增加4.44%，短期融资风险下降</td></tr>
-        <tr><td>2026股份奖励计划</td><td>最多44.584m</td><td>股东已批准</td><td>10%授权上限；可市场购股，不等于必然新发</td></tr>
-        <tr><td>拟发行A股</td><td>发行后2%—8%；另最多15%绿鞋</td><td>股东批准，待监管</td><td>会摊薄但也带来新资金，旧数可能因配售调整</td></tr>
-        <tr class="grp"><td>最大规划股数</td><td>554.792m</td><td>分析上限</td><td>比当前+19.2%；不是官方fully diluted股数</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>公司未派中期股息，也没有建立稳定分红政策。上市后半年内，IPO净募资48.96亿港元截至6月末已使用逾93%，随后又配售313.75亿港元，并推进拟募资150亿元人民币的A股计划。公司显然是<b>资本净吸收者</b>；这对前沿模型公司并不意外，但要求投资者把“融资成功”与“股东回报成功”分开。</p>
-
-  <h3>两个收购，两个完全不同的资本配置问题</h3>
-  <div class="finds">
-    <div class="find warn"><div class="t">北京红钻：实质是买物业</div><p>总成本约3.602亿元，标的无实质业务，核心资产是自用物业，并按资产收购入账。这不是AI技术并购；在高现金消耗期，需单独检验物业使用率与替代租赁成本。</p></div>
-    <div class="find warn"><div class="t">中科加禾：战略相关、商誉很高</div><p>2.919亿元收购60% AI基础设施研发公司，可识别净资产0.791亿元，却确认2.444亿元商誉，占对价约84%。收入、利润、核心IP、人员留任和业绩承诺均未披露。</p></div>
-    <div class="find good"><div class="t">短期财务韧性</div><p>配售规模远高于现有债务，研发与基础设施55%、业务扩张及并购15%、营运资金与资本结构30%的用途也已披露。</p></div>
-    <div class="find"><div class="t">长期治理检验</div><p>奖励计划的购买价、绩效目标和部分归属条件可由董事会决定或豁免；每次授予规模、对象、价格和绩效门槛都要逐笔跟踪。</p></div>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>公司会不会成功，和现有每一股能拿到多少成功，并不是同一件事。配售、A股、激励和并购都可能让公司更强；但如果新资本的回报低于摊薄幅度，<b>企业价值增加也可能伴随每股价值下降</b>。这正是当前估值最容易忽略的治理问题。</p>
-  </div>
+<section class="reveal on" id="valuation-appendix"><div class="slabel">估值机制附录</div><h2>股数、现金和时间必须使用同一套边界</h2>
+<p>每股现值＝（2028收入乘推导倍数＋同年末净现金）÷（1＋要求回报）^t÷全部股数÷人民币每港元；t取2026-09-04至2028-12-31实际天数除以365.25。</p>
+<h3>收入倍数的经济来源</h3><p>因模型迭代快，假设高增长持续五年后转低增长，不是业务消失。税后经营利润减新增投资才形成自由现金流；新增投资等于同年利润增量除以增量回报率，维持性投入已包含在稳定期利润中。下表均为分析假设：增速从早期高增长降档，资本回报随商业化提高，长期回报受竞争压低；成熟利润率须毛利提高及训练、获客费用率下降。</p><div class="tblscroll"><table class="tbl txt" ><caption>2029—2033及其后终值 · 非公司指引或已实现盈利；收入倍数为自由现金流折现之和。</caption><thead><tr><th>参数</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead><tbody><tr><td>2028成熟税后经营利润率</td><td>15%</td><td>20%</td><td>25%</td></tr><tr><td>后续五年盈利增长</td><td>15%</td><td>25%</td><td>35%</td></tr><tr><td>新增投资回报率</td><td>20%</td><td>30%</td><td>40%</td></tr><tr><td>长期增长</td><td>2%</td><td>3%</td><td>3%</td></tr><tr><td>长期新增投资回报率</td><td>15%</td><td>20%</td><td>25%</td></tr><tr><td>收入倍数（推算）</td><td>0.5857倍</td><td>1.6471倍</td><td>4.9564倍</td></tr></tbody></table></div><p>以2028收入为一，第t年利润＝成熟利润率乘（1＋增长率）^t；扣当年新增投资后逐年折现。终值按末年利润、长期增长及再投资推到下一年现金流，除以要求回报减长期增长。统一采用股权回报门槛作分析折现率，不声称测得加权资本成本。高增长延长至十年，基准现值为≈54.8港元（推算）。</p>
+<h3>从回款和支出推到期末资源</h3><p>投影始于半年余额加7月融资，包含已过去但现金流未知的7—8月。下半年收入假设与本期持平，下一全年取机械年化收入和2028情景的几何中值。期末应收占年化收入假设30%／20%／10%，回款代理＝收入＋期初应收−期末应收；合同资产负债、税差与坏账变动均暂定不变。</p><p>假设配售预算三分之一在下半年、其余在下一年付现；涵盖交付、研发、利息、投资等全部支付，营运用途排除已由回款扣除的应收占用。这不是披露的总支出上限。公告允许还债或延后动用，本模型另假设全部付向非现金用途且本金不变；若偿债，现金和债务同时减少，净现金不变。</p><div class="tblscroll"><table class="tbl txt" ><caption>全部推算。2028改按成熟利润与新增投资建模，不沿用前两期预算。</caption><thead><tr><th>前瞻现金桥 · 人民币亿元</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead><tbody><tr><td>2026H2 · 收入</td><td>9.54</td><td>9.54</td><td>9.54</td></tr><tr><td>2026H2 · 回款</td><td>11.65</td><td>13.55</td><td>15.46</td></tr><tr><td>2026H2 · 预算现金付款</td><td>90.42</td><td>90.42</td><td>90.42</td></tr><tr><td>2026H2 · 期末净资源</td><td>211.44</td><td>213.35</td><td>215.26</td></tr><tr><td>2027全年 · 收入</td><td>30.89</td><td>47.85</td><td>64.79</td></tr><tr><td>2027全年 · 回款</td><td>27.34</td><td>42.09</td><td>60.21</td></tr><tr><td>2027全年 · 预算现金付款</td><td>180.84</td><td>180.84</td><td>180.84</td></tr><tr><td>2027全年 · 期末净资源</td><td>57.94</td><td>74.60</td><td>94.63</td></tr><tr><td>2028全年 · 收入</td><td>50.00</td><td>120.00</td><td>220.00</td></tr><tr><td>2028全年 · 回款</td><td>44.27</td><td>105.57</td><td>204.48</td></tr><tr><td>2028全年 · 税后经营利润</td><td>7.50</td><td>24.00</td><td>55.00</td></tr><tr><td>2028全年 · 新增资本投入</td><td>14.34</td><td>48.10</td><td>97.01</td></tr><tr><td>2028全年 · 融资现金成本</td><td>1.30</td><td>1.30</td><td>1.30</td></tr><tr><td>2028全年 · 期末净资源</td><td>49.81</td><td>49.20</td><td>51.32</td></tr></tbody></table></div><p>2028必须实现毛利提高及训练费用率下降。新增投资已含净资本开支和营运资金，不再另扣应收；取得经营资产已支撑收入与经营价值，不加回购买成本。现有银行及租赁债务按5%作全年毛利息压力，参照借款成本并留缓冲，不计利息抵税；不加入待定融资。期末净资源为正不保证期内无资金缺口。</p>
+<p>零增长检验用成熟税后经营利润除以要求回报，无新增扩张资本。利润不含净现金利息，加回同一净现金不重复计值；它不是清算或价值下限。</p>
+<p>全额授权新股、零认购款的压力使基准现值降至≈37港元。A股发行须同时加入净募集款、扣后续使用并增加股数；价格及时点未定，不能精确合成完全摊薄价值。</p>
+<p>整个期间假设零股息、零回购。现值平衡价取熊市与基准算术中点，不是安全保证；未折现终点价值才用于计算持有期回报。</p>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="derivations"><caption>关键推算 · 计算保留未舍入值，正文按显示精度舍入；t≈2.324435年，原始金额单位按各公式说明。</caption><thead><tr><th>数值</th><th>输入</th><th>公式</th><th>来源（页·附注）</th></tr></thead><tbody><tr><td>收入同比（推算）</td><td>953.892、190.877百万元</td><td>(953.892÷190.877−1)乘100 ＝ 399.74%</td><td>中期公告p35</td></tr><tr><td>静态半年盈亏平衡收入（推算）</td><td>毛利率26.3773%；经营净费用</td><td>(研发＋销售＋管理＋减值−其他收入)÷毛利率 ＝ 90.92亿元</td><td>中期公告p35；固定费用假设</td></tr><tr><td>云端占收入净增量（推算）</td><td>云端825.176、29.100；总收入953.892、190.877百万元</td><td>(825.176−29.100)÷(953.892−190.877)乘100 ＝ 104.33%</td><td>中期公告附注3(b)，p41—42</td></tr><tr><td>滚动收入（推算）</td><td>FY2025收入724.334；两期H1收入百万元</td><td>(724.334＋953.892−190.877)÷100 ＝ 14.87亿元</td><td>2025年报；中期公告p35</td></tr><tr><td>经营利润同比变化（推算）</td><td>毛利及五项经营项目的带符号差额</td><td>1.56187−5.36510＋0.30904＋0.81819−0.16549＋0.36822 ＝ −2.47亿元</td><td>中期公告p35</td></tr><tr><td>归母亏损减少（推算）</td><td>经营变化；融资、联营、金融工具、税、非控股分配</td><td>−2.47327−0.42655＋1.30005＋0.40594＋4.07205−0.01962−0.06013 ＝ 2.80亿元</td><td>中期公告p35—36</td></tr><tr><td>备考净现金（推算）</td><td>半年现金、短投、贷款、租赁；配售净款百万元</td><td>(3993.722＋506.139−2224.789−379.410)÷100＋31374.95乘0.86458÷100 ＝ 290.22亿元</td><td>中期公告p37—38；7月配售完成</td></tr><tr><td>备考企业价值/滚动收入（推算）</td><td>市值、汇率、备考净现金及TTM收入</td><td>(市值乘0.86458−备考净现金)÷14.87349 ＝ 271.45倍</td><td>Wind9月4日；月报股数；上述现金桥</td></tr><tr><td>熊市每股现值（推算）</td><td>收入50亿元、倍数0.585672、现金49.806336亿元</td><td>(收入乘倍数＋终点现金)亿元÷汇率÷股数÷1.25^t ＝ 11.70港元/股</td><td>分析假设；9月2日月报</td></tr><tr><td>基准终点净现金（推算）</td><td>三期现金桥全部输入</td><td>上一年净资源＋当年经营自由现金流（扣新增资本投入后）−融资现金成本 ＝ 49.20亿元</td><td>上述现金桥；分析假设</td></tr><tr><td>基准收入倍数（推算）</td><td>成熟利润率、增长、再投资和要求回报取参数表</td><td>五年经营自由现金流现值＋长期经营自由现金流终值现值 ＝ 1.65倍</td><td>上述经济关系；分析假设</td></tr><tr><td>基准每股现值（推算）</td><td>收入120亿元、倍数1.647107、现金49.198563亿元</td><td>(收入乘倍数＋终点现金)亿元÷汇率÷股数÷1.20^t ＝ 40.14港元/股</td><td>分析假设；同一股数与时间</td></tr><tr><td>牛市每股现值（推算）</td><td>收入220亿元、倍数4.956420、现金51.320342亿元</td><td>(收入乘倍数＋终点现金)亿元÷汇率÷股数÷1.15^t ＝ 204.94港元/股</td><td>分析假设；同一现金桥</td></tr><tr><td>现价隐含收入（推算）</td><td>现价1075、基准折现率20%、现金与倍数取上表</td><td>(现价乘股数乘汇率乘1.20^t÷1亿−终点现金)÷收入倍数 ＝ 3,984.14亿元</td><td>基准模型逆推</td></tr><tr><td>现值平衡价（推算）</td><td>熊市11.695546、基准40.136942港元；分配零</td><td>(熊市现值＋基准现值)÷2 ＝ 25.92港元/股</td><td>同一主模型与期间</td></tr></tbody></table></div>
+<p class="small">精确股数：2026-08-31本公司H股241,094,605股，未上市224,528,485股，合计465,623,090股；新激励发行授权44,584,309股。汇率1港元＝0.86458元人民币，美元兑人民币6.7787，取2026-09-04中间价，非会计折算汇率。</p>
 </section>
-
-<section class="reveal on" id="valuation">
-  <div class="slabel">估值分析与市场定价 · 盈利预测 · 同业估值</div>
-  <h2>现在不是在给收入付钱，而是在给一条极端成功路径付钱</h2>
-  <p>亏损公司不能用P/E或传统DCF制造精确感。下面按四步走：先重建当前EV，再用同一口径做同业边界，然后给出有明确假设的2028情景，最后反推现价要求的收入规模。所有情景都是分析假设，不是公司指引。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">现价 / 时间</div><div class="v">HK$1,195</div><div class="d"><span>2026-08-31 16:08:51 HKT收市</span></div></div>
-    <div class="cell"><div class="k">总市值</div><div class="v">HK$556.4<span class="u">bn</span></div><div class="d"><span>含全部465.623m股份</span></div></div>
-    <div class="cell"><div class="k">备考企业价值</div><div class="v">HK$522.4<span class="u">bn</span></div><div class="d"><span>扣配售后净现金类资产</span></div></div>
-    <div class="cell"><div class="k">LTM P/S</div><div class="v">320.7<span class="u">×</span></div><div class="d"><span>官方LTM收入重算</span></div></div>
-    <div class="cell"><div class="k">LTM EV/Sales</div><div class="v">301.1<span class="u">×</span></div><div class="d"><span>Wind 667×不采用</span></div></div>
-    <div class="cell"><div class="k">年化H1 EV/Sales</div><div class="v">234.7<span class="u">×</span></div><div class="d"><span>2×H1仅作run-rate</span></div></div>
-  </div>
-
-  <h3>第一步 · 把市场价格换成可审计的企业价值</h3>
-  <p>6月末现金及银行存款39.94亿元人民币，加短期投资5.06亿元，减银行借款22.25亿元，得到配售前净现金类资产22.75亿元；再加7月配售净款按0.85726人民币/港元折算的268.96亿元，备考合计291.72亿元人民币、约340.29亿港元。总市值5,564.20亿港元减去它，得到企业价值5,223.91亿港元。</p>
-  <p class="small">这个桥没有扣租赁负债（影响约4.4亿港元）、未来现金消耗和后续收购，也不把配售款视为可分红资产。官方LTM收入＝FY2025 7.243亿元 + 2026H1 9.539亿元 − 2025H1 1.909亿元＝14.873亿元。Wind显示的667.2倍PS无法与该分母对上，故排除。</p>
-
-  <h3>第二步 · 同业只提供边界，不提供答案</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>统一口径同业交叉检查｜总市值 ÷（2×2026H1收入，换算港元）；Wind 2026-08-31</caption>
-      <thead><tr><th>公司</th><th>业务相关性</th><th>2026H1收入</th><th>总市值</th><th>年化H1 P/S</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>智谱</td><td>基础模型 + MaaS/API</td><td>RMB0.954bn</td><td>HK$556.4bn</td><td>250.0×</td></tr>
-        <tr><td>MiniMax</td><td>最接近的纯基础模型同业</td><td>US$0.117bn</td><td>HK$121.9bn</td><td>66.7×</td></tr>
-        <tr><td>商汤</td><td>规模化AI模型/软件组合</td><td>RMB2.911bn</td><td>HK$60.8bn</td><td>9.0×</td></tr>
-        <tr><td>云知声</td><td>语音AI与大模型平台</td><td>RMB0.562bn</td><td>HK$5.7bn</td><td>4.4×</td></tr>
-        <tr><td>出门问问</td><td>AIGC、语音及消费AI</td><td>RMB0.079bn</td><td>HK$0.5bn</td><td>2.5×</td></tr>
-        <tr><td>范式智能</td><td>企业AI平台/软件</td><td>RMB3.765bn</td><td>HK$15.6bn</td><td>1.8×</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>MiniMax是唯一接近的模型层pure-play；智谱年化H1收入约为其1.22倍，市值却是4.57倍，收入倍数溢价约3.75倍。机械套用MiniMax倍数只得到约HK$319/股（当前股数）或HK$268/股（最大规划股数），只能说明估值距离，不是目标价。其他公司业务结构、毛利和资本强度差异更大。</p>
-
-  <h3>第三步 · 2028三情景：先写假设，再看价格</h3>
-  <div class="steps">
-    <div class="step"><div class="n">方法</div><b>退出EV/Sales情景</b><p>用2028收入×终值倍数，加2028净现金，再按风险折现到现在；亏损阶段不硬算P/E。</p></div>
-    <div class="step"><div class="n">股数</div><b>两套分母</b><p>基础值用当前465.623m股；审慎值用554.792m最大规划股数，但不给未来A股募资现金加回。</p></div>
-    <div class="step"><div class="n">边界</div><b>有意不是目标价</b><p>倍数、现金与收入均是假设；场景只检验现价需要多激进，不声称能精确预测模型行业。</p></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2028情景估值｜run-rate基数为2×2026H1收入19.08亿元；折现期限28个月；价值为2026-08-31现值</caption>
-      <thead><tr><th>情景</th><th>2028收入</th><th>两年CAGR</th><th>EV/Sales</th><th>2028净现金</th><th>折现率</th><th>当前股数价值</th><th>最大规划股数价值</th></tr></thead>
-      <tbody>
-        <tr><td>熊市</td><td>50亿元</td><td>62%</td><td>10×</td><td>150亿元</td><td>25%</td><td>HK$97</td><td>HK$81</td></tr>
-        <tr><td>基准</td><td>120亿元</td><td>151%</td><td>20×</td><td>200亿元</td><td>20%</td><td>HK$426</td><td>HK$357</td></tr>
-        <tr class="grp"><td>牛市</td><td>220亿元</td><td>240%</td><td>30×</td><td>250亿元</td><td>15%</td><td>HK$1,239</td><td>HK$1,039</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">“最大规划股数”把奖励计划授权上限和拟A股连同绿鞋都加到当前股数，故是保守压力测试：奖励股份可能由市场购买，A股也会带来现金，且旧A股数量可能因7月配售调整。它不是官方fully diluted股数。</p>
-
-  <h3>把三档价值和现价放在一把尺上</h3>
-  <div class="rows" aria-label="2028情景估值与当前股价的比较">
-    <div class="row"><div class="nm">熊市<span>收入50亿 / 10×</span></div><div class="track"><div class="fill alt" style="width:8.1%"></div></div><div class="fig">HK$81–97<span class="down">较现价−93%~−92%</span></div></div>
-    <div class="row"><div class="nm">基准<span>收入120亿 / 20×</span></div><div class="track"><div class="fill soft" style="width:35.6%"></div></div><div class="fig">HK$357–426<span class="down">较现价−70%~−64%</span></div></div>
-    <div class="row"><div class="nm">牛市<span>收入220亿 / 30×</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">HK$1,039–1,239<span>最大规划股数至当前股数</span></div></div>
-    <div class="row"><div class="nm">现价<span>2026-08-31收市</span></div><div class="track"><div class="fill" style="width:96.4%"></div></div><div class="fig">HK$1,195<span>已落在牛市区间</span></div></div>
-  </div>
-  <p class="small">条形以牛市当前股数价值HK$1,239为100%；区间左端采用最大规划股数，右端采用当前股数。现价较7月HK$1,588配售价低24.7%、较HK$2,980高点低59.9%，但仍较HK$116.20 IPO价高928%。高波动不等于低估。</p>
-
-  <h3>第四步 · 现价反向要求什么</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>现价隐含2028收入｜假设15%要求回报、2028净现金250亿元人民币；当前基本市值</caption>
-      <thead><tr><th>2028终值EV/Sales</th><th>现价要求的2028收入</th><th>从2026H1年化基数的两年CAGR</th><th>读法</th></tr></thead>
-      <tbody>
-        <tr><td>20×</td><td>318亿元</td><td>308%</td><td>四年化规模仍给软件高倍数</td></tr>
-        <tr><td>30×</td><td>212亿元</td><td>233%</td><td>接近本报告牛市收入路径</td></tr>
-        <tr><td>40×</td><td>159亿元</td><td>189%</td><td>仍需保持极高终值倍数</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="plain">
-    <span class="pl">一句话总结</span>
-    <p>市场不是只在赌“API收入继续增长”，而是在赌它以极高速度增长、毛利继续改善、竞争者没有把倍数压下来、配售资金没有被亏损过快消耗。<b>现价已经进入本报告的牛市路径</b>，基本面只要“很好”还不够，必须“极好且兑现很快”。</p>
-  </div>
+<section class="reveal on" id="risks"><div class="slabel">风险 · 验证窗口</div><h2>先验证商业质量，再验证现金与每股回报</h2>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="risk-register"><caption>按对估值论点的伤害排序；概率为分析定性判断，不是统计预测；观察窗口不是预定披露日</caption><thead><tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr></thead><tbody>
+<tr><td>1</td><td>增长不足以覆盖价格要求</td><td>2026H1云端已放量，但缺同批客户续费</td><td>收入路径下移且倍数收缩</td><td>压力推算：收入80亿元、倍数降25%，现值较基准−40.0%；现金固定</td><td>中高：远期要求高，持续性证据尚短</td><td>2026H2经营更新：付费量、实现单价、续费与客户分布</td></tr>
+<tr><td>2</td><td>训练与推理成本抵消规模收益</td><td>2026H1经营亏损扩大</td><td>毛利留存不足，终点盈利假设下调</td><td>成熟利润率低5个百分点，现值较基准−20.0%（推算）；其余固定</td><td>中高：费用扩张已发生</td><td>FY2026年报：同口径分部毛利、研发及经营损益</td></tr>
+<tr><td>3</td><td>现金消耗或承诺超出假设</td><td>2026-06-30预付、应付与应收均有重要占用</td><td>终点净现金减少，再融资需求提前</td><td>终点额外消耗10亿元，每股现值减少1.63港元（推算）</td><td>中：有融资缓冲，缺当前消耗验证</td><td>FY2026年报：完整现金流、受限资金、算力承诺与收购付款</td></tr>
+<tr><td>4</td><td>技术竞争和客户切换</td><td>2026-08-31公司强调模型及工具迭代</td><td>降价、持续训练和获客投入侵蚀回报</td><td>无同口径留存与单位贡献利润，暂不量化</td><td>中：机制成立，影响幅度未证实</td><td>2027H1结果：付费客户持续消费、毛利与模型组合</td></tr>
+<tr><td>5</td><td>融资与激励降低每股分配</td><td>2026-09-05已配售，奖励与A股仍需执行条款</td><td>新股分母和现金用途影响每股价值</td><td>全额新股奖励、零认购款使每股现值降8.7%（推算）；A股缺价格及时点，不量化</td><td>中：授权存在，最终执行不确定</td><td>2026H2资本公告：授予、发行价格、完成与使用安排</td></tr>
+</tbody></table></div>
+<p>若付费消费放缓与训练支出上升同时出现，应联动下调收入及倍数，不能只做单变量微调。国际交付、数据合规与供应链也可能影响成本及获客；缺地域和合同敞口拆分，不虚构损失金额。</p>
+<div class="tline"><div class="tstop"><span class="tw">2026H2</span><b>商业质量和资本条款</b><p>把公告中的使用增长与付费结算、实际发行分开核对。</p></div><div class="tstop warn"><span class="tw">FY2026年报</span><b>利润与现金共同验证</b><p>收入增长若继续伴随经营恶化和现金占用，需下修情景。</p></div><div class="tstop"><span class="tw">2027H1</span><b>持续性检验</b><p>观察跨期客户消费、毛利和资源使用，而不只看累计用户。</p></div></div>
+<div class="plain"><span class="pl">白话解读</span><p>判断会随证据改变。最有说服力的上修信号，是付费业务持续增长的同时，经营亏损和现金压力都减轻；下一窗口从半年经营更新到完整年报逐步验证。</p></div>
 </section>
-
-<section class="reveal on" id="debate">
-  <div class="slabel">风险因素与预警 · 投资验证 · 多空辩论</div>
-  <h2>争论的核心不是增长真假，而是增长能否跑赢资本消耗</h2>
-  <div class="quote">“智谱已跨过模型有没有人付费的门槛，但还没跨过每股资本回报能不能成立的门槛。”</div>
-
-  <div class="finds">
-    <div class="find good"><div class="t">多头最强论点</div><p>模型能力已经转成真实调用、提价和API毛利转正；国产算力适配与全栈推理优化可能形成“能力—成本—调用”的正反馈。巨额现金又给了公司充分迭代时间。</p></div>
-    <div class="find warn"><div class="t">空头最强论点</div><p>市场可能把一次API爆发误当成稳定SaaS。研发是收入223%、应收是半年收入82%，绝对付费用户、留存、H1集中度和现金流都没披露，估值却已资本化极端成功。</p></div>
-    <div class="find"><div class="t">最可能的中间情形</div><p>收入继续高速增长、云端毛利逐步改善，但研发和算力也持续抬升；公司获得行业地位，股东回报却因估值压缩与新增资本被摊薄。</p></div>
-    <div class="find"><div class="t">什么能解决争论</div><p>连续两期看到云端毛利向30%—40%移动、调整亏损率下降、应收和算力预付不再快过收入，并开始披露绝对付费和留存。</p></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>五个可观察证伪点｜阈值为分析检验，不是公司指引</caption>
-      <thead><tr><th>命题</th><th>支持证据</th><th>削弱或证伪</th><th>主要窗口</th></tr></thead>
-      <tbody>
-        <tr><td>API单位经济成立</td><td>云端毛利稳定&gt;25%，并向30%—40%移动</td><td>毛利回落至20%以下或价格战吞掉成本改善</td><td>FY2026 / H1 2027</td></tr>
-        <tr><td>需求质量分散</td><td>披露绝对付费、留存、NRR；应收增速低于收入</td><td>最大客户重回&gt;20%，应收继续快于收入</td><td>下一份年报</td></tr>
-        <tr><td>经营杠杆出现</td><td>毛利增量高于研发与运营费用增量</td><td>调整亏损仍高于收入，亏损绝对额继续扩大</td><td>未来12—18个月</td></tr>
-        <tr><td>国产算力有经济优势</td><td>第三方验证SLA、长上下文与单位推理成本</td><td>仅局限部分模型，或token成本重新上升</td><td>持续</td></tr>
-        <tr><td>资本配置创造每股价值</td><td>配售资金对应模型、毛利、现金流里程碑</td><td>继续融资/并购/发股，却没有相称毛利和现金流</td><td>A股推进及每期业绩</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="plain">
-    <span class="pl">风险排序</span>
-    <p><b>第一是估值风险</b>：即使公司经营很好，倍数压缩也能让股价受损。<b>第二是单位经济</b>：云端毛利还不够覆盖研发。<b>第三是资本配置与摊薄</b>：资金多但回报未验证。竞争、国产算力、客户集中和并购商誉都通过这三条主线传导，不再另列一串通用风险。</p>
-  </div>
+<section class="reveal on" id="decision" data-fullscan-role="decision"><div class="slabel">最终判断</div><h2 data-verdict="negative">负面：基准情景不足以支持当前价格</h2>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="decision-block"><tbody><tr><td>论点</td><td>商业化有进展，但当前价格要求的盈利规模高于本文条件基准；必须由持续付费、毛利与现金效率共同验证。</td></tr><tr><td>基准对一致预期</td><td>截至2026-09-04无可用一致预期；Wind仅有负的预测市盈率，不足以形成可比盈利预测。基准2028收入120亿元，对应现价隐含3,984.1亿元，差距见反推表。</td></tr><tr><td>赔率</td><td>同一2028年末终点、零现金分配：熊市现值较现价−98.9%，基准−96.3%，基准不存在正向上行；不能把跌幅取绝对值充作上行。另按未折现终点价格计算，同期总回报情景为熊市−98.2%、基准−94.3%，不是现值折让，也不保证实现。</td></tr><tr><td>平衡价</td><td>≈25.9港元：熊市与基准现值距离对称、持有期分配为零时的分析平衡价；不是价格支撑或交易指令。</td></tr><tr><td>持有回报</td><td>估值日起至2028-12-31，共849天（≈2.32年）；截至2026-09-05模型股息率和回购收益率均假设0%，同期间累计现金分配0港元／股。</td></tr><tr><td>分项置信度</td><td>论点证据 高：两期正式分部及损益支持；现金与资产负债表 中：已完成融资明确，当前净消耗未知；治理 中：授权清楚、最终发行和授予待落实；估值输入 低：远期规模和成熟利润率未经验证。提高最低支柱所需证据：FY2026年报付费业务增长、经营损益与完整现金流共同改善。</td></tr><tr><td>判断</td><td>负面。基准本身低于现价，不因模型技术前景而上调分档。下一检验点为2026H2经营更新与FY2026年报；商业质量、经营效率及资金使用共同优于假设时重新估值。</td></tr></tbody></table></div>
+<div class="callout"><b>最强反方观点：</b>云端毛利改善和配售资源可能让智谱在模型迭代与商业化上形成更强的持续增长，实际规模有可能超过本文基准。<b>改判边界：</b>若付费消费、毛利与现金效率跨期共同兑现，应重估收入路径和盈利能力；若只有调用增长而没有经营改善，仍维持“调用增长已兑现，股价仍在预支盈利规模”的判断。</div>
 </section>
-
-<section class="reveal on" id="decision">
-  <div class="slabel">最终投资建议与操作方案</div>
-  <h2>中性偏谨慎：认可商业化拐点，不为极端成功预付款</h2>
-  <p>智谱2026H1是基本面意义上的重要转折：API收入、调用、提价和云端毛利共同证明商业化不再停留在概念。但经营与调整亏损仍扩大，现金流缺失，收入质量和客户分散度没有足够绝对数据。按HK$1,195，市场已把接近本报告牛市的路径写进股价，风险收益不对称。</p>
-  <p><strong>结论：观望，置信度中等。</strong>不是因为公司没有增长，而是当前价格没有为增长不及极端预期、终值倍数压缩或规划摊薄留出足够缓冲。未提供组合约束，故不建议仓位、止损或交易区间。</p>
-
-  <div class="tline">
-    <div class="tstop"><span class="tw">FY2026</span><b>云端毛利与绝对亏损</b><p>毛利率能否稳定高于25%，调整亏损率和绝对额是否下降。</p></div>
-    <div class="tstop"><span class="tw">下一份年报</span><b>付费与留存透明度</b><p>绝对付费用户、NRR、客户集中度和应收来源是否恢复披露。</p></div>
-    <div class="tstop warn"><span class="tw">A股推进</span><b>摊薄与资金用途</b><p>监管进度、最终股数、价格和募资现金必须重新进估值桥。</p></div>
-    <div class="tstop"><span class="tw">H1 2027</span><b>经营杠杆复验</b><p>新增毛利是否连续快过新增研发与算力成本。</p></div>
-  </div>
-
-  <div class="callout"><b>最强反方观点：</b>本报告可能低估了前沿模型商业化的非线性。如果Coding成为企业软件的新入口，调用量、ASP与毛利同时复利，而国产算力显著降低成本，那么220亿元的2028牛市收入也可能显得保守。能推翻本报告谨慎结论的，不是下一次模型发布，而是连续财务期里“云端毛利上升、调整亏损下降、应收正常、绝对付费留存披露”四项同时出现。</div>
-</section>
-
-<section class="reveal on" id="glossary">
-  <div class="slabel">名词速查 · 快速检索</div>
-  <h2>读懂一家基础模型公司的词</h2>
-  <div class="tblscroll">
-    <table class="tbl gloss">
-      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
-      <tbody>
-        <tr><td>基础大模型</td><td>用海量数据训练、可适配多种任务的通用模型；需要持续研发、训练和推理算力。</td></tr>
-        <tr><td>MaaS</td><td>Model as a Service，把模型能力通过云端API、订阅或工具提供给客户，而非让客户从头训练。</td></tr>
-        <tr><td>API</td><td>应用程序接口；开发者按规则调用模型。收入可以按token使用量或订阅收费。</td></tr>
-        <tr><td>token</td><td>模型处理文本的基本计量单位。调用量不是收入，必须同时看价格与单位推理成本。</td></tr>
-        <tr><td>Coding Plan</td><td>智谱面向编码场景的订阅/调用产品；公告只披露相对调用增长，没有单列收入。</td></tr>
-        <tr><td>Agent / 智能体</td><td>能规划步骤、调用工具并执行任务的模型应用；比单轮问答更接近业务流程。</td></tr>
-        <tr><td>Co-work</td><td>智谱对多智能体协作完成复杂任务的产品路线称呼；当前仍在早期商业化。</td></tr>
-        <tr><td>云端部署</td><td>模型运行在服务方云端，客户按调用或订阅付费；本期占收入86.5%。</td></tr>
-        <tr><td>本地化部署</td><td>模型安装在客户自己的基础设施，通常涉及实施与验收，收入波动和交付成本更明显。</td></tr>
-        <tr><td>ARR / NRR</td><td>年度经常性收入 / 净收入留存率。智谱没有披露，不能用API收入自行替代。</td></tr>
-        <tr><td>毛利率</td><td>收入扣直接销售成本后的比例；云端毛利转正说明调用收入已超过直接推理和服务成本。</td></tr>
-        <tr><td>经营亏损</td><td>毛利扣研发、销售、行政和减值等经营费用后的损失，比受融资会计影响的净亏损更接近主营。</td></tr>
-        <tr><td>经调整亏损</td><td>公司剔除股份支付、投资者工具变化等项目后的非IFRS口径；不是审计准则利润。</td></tr>
-        <tr><td>CFO / FCF</td><td>经营现金流 / 自由现金流。本期公告没有现金流量表，所以两者均未披露。</td></tr>
-        <tr><td>备考净现金类资产</td><td>本报告把6月末现金和短投减银行借款，再加7月配售净款的分析桥；不等于8月末实际或可分红现金。</td></tr>
-        <tr><td>EV / Sales</td><td>企业价值 ÷ 销售额；适合尚未盈利公司做情景比较，但不能替代对毛利与现金消耗的判断。</td></tr>
-        <tr><td>LTM / run-rate</td><td>LTM是最近十二个月滚动合计；run-rate用2×半年收入近似年度速度，均不是公司预测。</td></tr>
-        <tr><td>fully diluted</td><td>把所有潜在股份计入的股数。智谱未来授予和A股仍不确定，故本报告只给“最大规划股数”，不冒充官方完全摊薄数。</td></tr>
-        <tr><td>商誉</td><td>收购价超过可识别净资产的部分；若协同不兑现，未来可能减值。</td></tr>
-        <tr><td>绿鞋</td><td>超额配售权，可在基础发行之外增加一定比例股份；会带来资金，也会增加股数。</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="reveal on" id="methods">
-  <div class="slabel">方法与来源</div>
-  <h2>港交所控制财务，Wind只控制带时间戳的市场快照</h2>
-  <p>会计数字、分部定义、股份、配售、激励、A股方案与并购均以港交所中文文件为控制源；Wind用于发行人核验、2026-08-31收市行情、2026-08-28汇率和同业市场值。管理层关于token、用户、ASP、国产芯片和性能的陈述均显式保留为管理层口径。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>主要直接来源与证据边界</caption>
-      <thead><tr><th>文件</th><th>用途</th><th>状态 / 边界</th></tr></thead>
-      <tbody>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083101540_c.pdf">2026H1中期业绩公告</a></td><td>当期损益、资产负债、分部、管理层经营陈述、收购及期后事项</td><td>未经审计；毕马威ISRE 2410审阅，无独立Q2或现金流量表</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0419/2026041900086_c.pdf">2025年度报告</a></td><td>审计财务、现金流、治理、客户与供应商集中度</td><td>经审计；现金流口径控制FY2025 FCF</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000018_c.pdf">招股章程</a></td><td>FY2022—24、收入模式、客户历史、竞争与行业估计</td><td>行业数据为发行人委托研究；2025H1未经审计</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0713/2026071300663_c.pdf">H股配售完成公告</a></td><td>配售价、股数、净募资、用途及配售后股本</td><td>期后事项；EV采用备考桥</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0602/2026060200006_c.pdf">2025年度股东会通函</a></td><td>股份奖励计划与A股议案资料</td><td>授权不等于实际授予或发行</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0601/2026060104111_c.pdf">A股方案公告</a></td><td>发行百分比、绿鞋与募资用途</td><td>股东已批准但仍待监管完成</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0414/2026041401145_c.pdf">北京红钻收购公告</a></td><td>物业资产收购的对价与实质</td><td>不是AI技术并购</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p class="small">本报告财务及事件证据截止2026-08-31，行情截止2026-08-31 16:08:51 HKT。LTM、粗略DSO、静态盈亏平衡、备考净现金类资产、同业统一口径、最大规划股数、情景价值与反向隐含收入均为本地计算账本推算，不是公司披露或指引。2026H1公告内个别管理层分部表把2025H1误标为“经审计”，但首页与招股书均明确为未经审计；本报告统一采用未经审计比较期。</p>
-</section>
-
-<footer>
-  <p>财务、治理与事件来源：香港交易所官方中文文件；行情、汇率与同业快照：Wind金融终端。报告完成日：2026-08-31。</p>
-  <p>用户所称“Q2”在官方披露中仅有H1累计口径，故本报告不生成单二季度损益、现金流、资本开支或FCF。估值情景用于检验市场隐含预期，不构成投资建议、交易要约或收益保证。</p>
-</footer>
-
+<section class="reveal on" id="glossary"><div class="slabel">名词速查</div><h2>把模型业务与每股价值分开读</h2>
+<div class="tblscroll"><table class="tbl gloss"><thead><tr><th>术语</th><th>本报告中的意思</th></tr></thead><tbody>
+<tr><td>应用接口（API）</td><td>软件向模型发送请求并取得结果的入口；调用发生不等于每次均已付费。</td></tr>
+<tr><td>模型服务（MaaS）</td><td>把模型能力作为服务交付；可能按调用、套餐或合同收费，不天然等于订阅。</td></tr>
+<tr><td>词元（Token）</td><td>模型处理文本等内容的计量单位；不同输入输出、缓存和模型可能使用不同计费定义。</td></tr>
+<tr><td>本集团（Group）</td><td>公司与受控制子公司的合并范围；与本公司法律主体和发行股数口径区分。</td></tr>
+<tr><td>云端部署（Cloud）</td><td>客户通过服务调用模型；是正式收入分部，不与管理层API收入重复相加。</td></tr>
+<tr><td>本地化部署（On-premise）</td><td>在客户控制的环境交付模型及相关服务，收入可能受项目验收节奏影响。</td></tr>
+<tr><td>经调整亏损（Non-IFRS）</td><td>公司剔除特定项目后的补充指标；不替代报告亏损，也不等于现金消耗。</td></tr>
+<tr><td>股份支付（SBC）</td><td>以权益等形式支付报酬；可能不当期付现，但仍有股东经济成本。</td></tr>
+<tr><td>合同负债（Contract liability）</td><td>已收取或已到期应收、但仍需履约的对价；将来仍要提供服务并承担成本。</td></tr>
+<tr><td>企业价值（EV）</td><td>经营业务对应的价值；从权益价值调整净现金等项目，和总市值不是同一概念。</td></tr>
+<tr><td>备考净现金（Pro forma）</td><td>在已披露时点余额上模拟已完成融资的影响；不代表估值日的真实银行余额。</td></tr>
+<tr><td>终点净现金（Terminal cash）</td><td>模型期末扣除累计净消耗后的情景余额，与经营价值一起折现。</td></tr>
+<tr><td>滚动收入（TTM）</td><td>最近连续十二个月收入，用全年加本期半年再减上年同期半年构造。</td></tr>
+<tr><td>股权要求回报（Ke）</td><td>分析者为不确定股东收益设置的回报要求；不是公司的实际借款利率。</td></tr>
+<tr><td>现价隐含（Implied）</td><td>固定其他假设，倒推支撑市场价所需的经营条件；不是公司预测。</td></tr>
+</tbody></table></div></section>
 </main>
+<footer class="wrap"><p><b>数据截止：</b>财务2026-06-30；资本公告检索至2026-09-05；行情2026-09-04香港收盘。金额默认人民币，股价为港元，正文≈与推算表示舍入或计算，估值参数为分析假设。</p>
+<p><b>来源：</b><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083101540_c.pdf">智谱2026年中期业绩公告</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0419/2026041900086_c.pdf">2025年报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000018_c.pdf">上市文件及会计师报告</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090200991_c.pdf">8月底证券变动月报</a>；融资、激励、A股方案与收购以对应HKEX公告为准。市场字段取Wind；<a href="https://hzf.mofcom.gov.cn/article/zyfw/jrfw/jrfwywzn/jrfwwh/hlfxglzy/202609/7872.html">9月4日汇率公告（商务部转中国外汇交易中心）</a>核验汇率日期与单位。<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600681_c.pdf">MiniMax2026年中期业绩</a>仅作同业校验。</p>
+<p><b>资本与模型参考：</b><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0713/2026071300663_c.pdf">7月配售完成及用途</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0602/2026060200006_c.pdf">股东周年大会通函与激励</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0601/2026060104111_c.pdf">A股发行方案</a>；增长与再投资关系参考<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/growth.htm">Damodaran增长基本面框架</a>，数值参数及同年投资时点均为本文假设。</p><p><b>审计状态：</b>智谱2022—2025全年合并财务已审计；2026H1财务未经审计、毕马威按香港审阅工作准则第2410号审阅，无修改结论。2025H1损益比较数取本期公告未经审计列；2025H1现金流取招股书已审计往绩记录期，二者来源版本分开。经营说法属管理层披露，估值和衍生数属个人分析。未取得可用的独立业绩电话会逐字稿，不把业务回顾写成电话会问答。</p>
+<p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p></footer>
 <script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -811,6 +462,4 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
   els.forEach(function(e){ io.observe(e); });
 })();
-</script>
-</body>
-</html>
+</script></body></html>

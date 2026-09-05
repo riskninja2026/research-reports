@@ -1503,15 +1503,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "API商业化拐点已出现，但经营亏损仍扩大；穿透云端单位经济、算力占用、配售与规划摊薄，并反推极高估值隐含的2028增长路径。",
-      "verdict": "中性偏谨慎",
-      "verdict_code": "neutral-cautious",
+      "hook": "云端商业化提速，经营亏损仍扩大；以现金投放与再投资约束检验当前价格所需的盈利规模。",
+      "verdict": "负面",
+      "verdict_code": "negative",
       "published": "2026-08-31",
       "published_at": "2026-08-31T08:58:03-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-05",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "按新版Fullscan补足模型服务、现金消耗与每股摊薄分析，校正利润归属和历史每股口径，更新已发行股数与行情；保留上半年边界，不将其写作单二季度。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     }
   ]
