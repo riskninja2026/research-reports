@@ -525,27 +525,30 @@
       "name": "长城汽车",
       "name_en": "Great Wall Motor",
       "tickers": [
-        "02333.HK",
-        "601633.SH"
+        "601633.SH",
+        "02333.HK"
       ],
       "ticker_label": null,
       "venue": "HKEX",
       "sector_zh": "可选消费",
       "chip": "汽车",
-      "period_label": "2026中期",
+      "period_label": "2026中期及推算Q2",
       "cutoff": "2026-06-30",
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "其他国家来源收入已过半，但完整利润与现金仍不可见；用补贴汇率桥、产销库存、期后回购与资产折价检验每股回报。",
-      "verdict": "中性偏多",
-      "verdict_code": null,
+      "hook": "出口稳住规模，利润兑现仍要等：产品组合、单车盈利与资本支出后的现金，决定低账面估值能否转成回报。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
       "published": "2026-08-25",
       "published_at": "2026-08-25T22:49:43-04:00",
-      "revised": "2026-08-29",
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-06",
+      "revision": {
+        "date": "2026-09-06",
+        "note": "按新版Fullscan重做主估值与单一持有期，刷新行情、八月销量及经修订股份报表；补充历史产能、地域毛利和早年现金流口径，更正披露缺口的范围。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
