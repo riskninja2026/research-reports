@@ -742,8 +742,8 @@
       "name": "海天味业",
       "name_en": "Haitian Flavouring",
       "tickers": [
-        "03288.HK",
-        "603288.SH"
+        "603288.SH",
+        "03288.HK"
       ],
       "ticker_label": null,
       "venue": "HKEX",
@@ -754,15 +754,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "Q2收入增2.9%，核心三品仅增0.9%；扣非归母同比转负、现金转换变弱，以P/E与FCF双方法检验H股股息托底和估值边界。",
-      "verdict": "中性偏积极",
-      "verdict_code": "neutral-positive",
+      "hook": "核心品类增长缓慢，扣非与现金转换走弱；H股价格接近基准，分红不足以平衡熊市损失。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
       "published": "2026-09-01",
       "published_at": "2026-09-01T13:50:46-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-06",
+      "revision": {
+        "date": "2026-09-06",
+        "note": "纳入正式香港中报与最新回购，校正同业归母口径、票据融资及历史现金返还，重建同一期间的估值、股息与风险判断。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
