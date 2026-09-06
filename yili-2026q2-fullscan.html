@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="referrer" content="no-referrer">
-<link rel="icon" href="data:,">
-<title>伊利股份 2026Q2 Fullscan：利润塌了，经营没有塌，但澳优代价不能一笔勾销</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="referrer" content="no-referrer"><link rel="icon" href="data:,"><title>伊利股份 2026Q2 Fullscan 全景尽调</title>
 <style>
 :root{
   --paper:#EDEFF2;
@@ -254,500 +248,59 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
 .tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
 .tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
 </style>
-</head>
-<body>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">伊利股份 600887.SH ｜ 2026Q2及中期全景尽调 ｜ 数据截止 2026.08.31</div>
-    <h1>利润塌了，经营没有塌<br>但澳优的代价不能一笔勾销</h1>
-    <p class="lede">推算二季度收入仍增2.6%，减值前营业利润也有改善，归母净利润却因澳优商誉与库存清理下滑84%。现金流大幅回升，同时伴随付款节奏改善与营运资本账面变动。<b>合并收入、毛利与减值前营业利润未同步坍塌，收购回报已经受损；26.50元更接近合理价，而不是带足安全边际的便宜价。</b></p>
-
-    <div class="dual">
-      <div>
-        <div class="tag">Q2减值前营业利润 · 研究者分析值</div>
-        <div class="big a">+7.9%</div>
-        <div class="cap">35.04亿元，对比上年同期32.48亿元；只用于观察减值发生前的经营轨迹，不是公司调整后利润。</div>
-      </div>
-      <div>
-        <div class="tag">Q2归母净利润 · H1减Q1推算</div>
-        <div class="big b">−84.4%</div>
-        <div class="cap">3.64亿元，对比上年同期23.26亿元；经济损失不能因为减值“非现金”就被忽略。</div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main class="wrap">
-
-<section class="reveal on" id="tldr">
-  <div class="slabel">三十秒版本 · 先看结论</div>
-  <h2>如果只读一屏，读这里</h2>
-  <div class="tldr">
-    <ul>
-      <li><b>它是谁：</b>中国规模最大的综合乳企之一，靠液体乳、奶粉及奶制品、冷饮等品牌产品赚钱；上游采购原奶和辅料，下游约九成五主营收入仍经经销商完成。</li>
-      <li><b>本期成绩：</b>由半年报减一季报推算，Q2营业收入295.90亿元（+2.6%），归母净利润3.64亿元（−84.4%），经营现金流60.24亿元（+198.8%）。</li>
-      <li><b>核心矛盾：</b>若把两类减值加回，Q2合并营业利润同比约增7.9%；但澳优渠道清理和商誉减值说明此前并购预期落空，不能把这24亿元级影响当作“完全无关经营”的一次性噪音。</li>
-      <li><b>容易踩的坑：</b>Q2自由现金流代理约52.75亿元看起来极强，背后却有应付票据、存货账面变化和付款时点影响；同时，Q2产品收入可以由配套经营公告推算，产品毛利率却不能。</li>
-      <li><b>结论：</b><b>中性、等待验证。</b>现价26.50元位于25–30元基准价值带内，距中值只有约4%；真正的上行要等液奶恢复广度、澳优扭亏、现金转换常态化，而不是再做一次会计加回。</li>
-    </ul>
-  </div>
-</section>
-
-<section class="reveal on" id="primer">
-  <div class="slabel">入门 · 三分钟看懂这门生意</div>
-  <h2>一头连接奶源，一头连接货架：品牌与周转共同决定利润</h2>
-  <p>伊利不是单一牛奶公司。它把原奶、乳清粉、包材等原料加工成常温奶、低温奶、婴幼儿和成人奶粉、奶酪、冷饮及其他食品，再通过经销、电商、商超、会员店、即时零售和餐饮客户卖给消费者。澳优是伊利控股的奶粉子公司，也是本期商誉与库存调整的主要载体。生意可以拆成四步：</p>
-  <div class="steps">
-    <div class="step"><div class="n">环节 1</div><b>锁定奶源与原料</b><p>原奶多用长期合作与定价机制采购，其他原辅料集中招标；原奶、乳清和物流价格决定成本起点。</p></div>
-    <div class="step"><div class="n">环节 2</div><b>用品牌做产品组合</b><p>液体乳提供规模，奶粉提供较高毛利，冷饮贡献季节增量，新产品承担结构升级。</p></div>
-    <div class="step"><div class="n">环节 3</div><b>经销为主、直营提速</b><p>经销覆盖最广；直营、电商和新渠道增长更快，却会改变应收、预收款和渠道利润结构。</p></div>
-    <div class="step"><div class="n">环节 4</div><b>利润变成现金与回报</b><p>库存、票据和经销商预付款会让<span class="g">经营现金流</span>偏离利润；股息和注销式回购决定每股兑现。</p></div>
-  </div>
-  <p>先记住三个边界。第一，这是一家上交所A股公司，2026年半年报和一季报都<b>未经审计</b>；本文的单季Q2损益与现金流来自“半年累计减一季累计”。第二，产品和渠道收入可用单独披露的Q1、H1经营数据相减，但Q1没有分产品成本，所以不能制造Q2产品<span class="g">毛利率</span>。第三，公司无控股股东或实际控制人，董事长、地方国资股东、员工计划、关联奶源和回购共同构成治理约束。带<span class="g">虚线下划线</span>的术语可在文末「名词速查」查看。</p>
-</section>
-
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">公司概况与基本信息 · 主营业务结构分析 · 五年财务概览</div>
-  <h2>五年收入几乎原地踏步，毛利与组合曾修复；Q2报表利润被减值切断</h2>
-  <p>公司以液体乳、奶粉及奶制品、冷饮为主，按事业群组织采购、生产、品牌和销售。2021—2025年收入复合增速只有低个位数，毛利率却逐步抬升；最新Q2的合并收入、毛利与减值前营业利润没有随归母利润同步坍塌，本期三者出现分叉。产品分解与正式报告分部的奶粉、其他分类不完全一致，以下结构分析统一使用更直观的产品收入成本表。</p>
-
-  <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">2026Q2营业收入（推算）</div><div class="v">295.897<span class="u">亿元</span></div><div class="d"><span class="up">同比 +2.61%</span></div></div>
-    <div class="cell"><div class="k">毛利 / 毛利率（推算）</div><div class="v">101.050<span class="u">亿元</span></div><div class="d"><span class="up">同比 +2.48%</span><span>34.15%</span></div></div>
-    <div class="cell"><div class="k">营业利润 / 利润率（推算）</div><div class="v">10.862<span class="u">亿元</span></div><div class="d"><span class="down">同比 −61.85%</span><span>3.67%</span></div></div>
-    <div class="cell"><div class="k">归母净利润（推算）</div><div class="v">3.640<span class="u">亿元</span></div><div class="d"><span class="down">同比 −84.35%</span></div></div>
-    <div class="cell"><div class="k">经营现金流（推算）</div><div class="v">60.245<span class="u">亿元</span></div><div class="d"><span class="up">同比 +198.81%</span></div></div>
-    <div class="cell"><div class="k">自由现金流代理（推算）</div><div class="v">52.754<span class="u">亿元</span></div><div class="d"><span class="up">同比 +349.12%</span><span>现金资本开支7.491亿元</span></div></div>
-    <div class="cell"><div class="k">每股净资产 / PB</div><div class="v">8.49<span class="u">元</span></div><div class="d"><span>2026-06-30归母权益口径</span><span>现价对应3.12x</span></div></div>
-  </div>
-
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>把五年放在一起看，伊利不是靠销售额高速增长的公司：收入从2021年的1,101亿元走到2025年的1,156亿元，四年复合增速约1.2%。股东回报更多来自毛利改善、费用效率和现金分配。</p>
-    <p>本季最容易误读的是“收入、利润、现金各说各话”。收入与毛利仍小幅增长；利润被澳优减值压低；现金又因为供应商付款、票据与存货账面变化而格外好看。三者都是真数字，但都不能单独代表长期赚钱能力。</p>
-  </div>
-
-  <div class="tblscroll" data-financials="history">
-    <table class="tbl" data-financials="history">
-      <caption>五年合并财务历史｜FY2021—FY2025；人民币亿元，另有标注</caption>
-      <thead><tr><th>项目</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>四年变化</th></tr></thead>
-      <tbody>
-        <tr><td>营业收入</td><td>1,101.44</td><td>1,226.98</td><td>1,257.58</td><td>1,153.93</td><td>1,156.36</td><td>CAGR +1.22%</td></tr>
-        <tr><td>毛利 / 毛利率</td><td>337.27 / 30.62%</td><td>395.79 / 32.26%</td><td>409.70 / 32.58%</td><td>390.94 / 33.88%</td><td>399.82 / 34.58%</td><td>+3.95pct</td></tr>
-        <tr><td>营业利润 / 利润率</td><td>102.30 / 9.29%</td><td>108.60 / 8.85%</td><td>118.73 / 9.44%</td><td>101.82 / 8.82%</td><td>135.28 / 11.70%</td><td>—</td></tr>
-        <tr><td>归母 / 扣非归母</td><td>87.05 / 79.44</td><td>94.31 / 85.86</td><td>104.29 / 100.26</td><td>84.53 / 60.11</td><td>115.65 / 110.68</td><td>扣非CAGR +8.65%</td></tr>
-        <tr><td>EPS（元） / ROE</td><td>1.43 / 25.59%</td><td>1.48 / 19.23%</td><td>1.64 / 20.20%</td><td>1.33 / 15.81%</td><td>1.83 / 20.87%</td><td>—</td></tr>
-        <tr><td>ROIC（Wind口径）</td><td>15.08%</td><td>10.84%</td><td>9.55%</td><td>6.82%</td><td>9.16%</td><td>−5.92pct</td></tr>
-        <tr><td>CFO / 现金资本开支</td><td>155.28 / 66.83</td><td>134.20 / 66.46</td><td>182.90 / 69.56</td><td>217.40 / 39.78</td><td>143.44 / 30.37</td><td>—</td></tr>
-        <tr><td>自由现金流代理</td><td>88.45</td><td>67.74</td><td>113.35</td><td>177.61</td><td>113.07</td><td>五年中值113.07</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="cols" role="img" aria-label="2021至2025年营业收入和归母净利润趋势，具体数值见五年财务历史表">
-    <div class="col"><div class="bars"><div class="bar rev" style="height:87.6%"></div><div class="bar np" style="height:6.9%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:97.6%"></div><div class="bar np" style="height:7.5%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:8.3%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:91.8%"></div><div class="bar np" style="height:6.7%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:92%"></div><div class="bar np" style="height:9.2%"></div></div></div>
-  </div>
-  <div class="collabels">
-    <div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div>
-  </div>
-  <div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
-  <p class="small">两组柱均以FY2023收入1,257.58亿元为共同100%刻度，避免利润与收入各自缩放造成视觉误导；精确数值见上表。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>最新期间与LTM桥｜人民币亿元；Q2＝H1−Q1；LTM＝FY2025−2025H1+2026H1</caption>
-      <thead><tr><th>项目</th><th>2026H1</th><th>同比</th><th>2026Q2推算</th><th>同比</th><th>LTM</th></tr></thead>
-      <tbody>
-        <tr><td>营业收入</td><td>643.309</td><td>+4.13%</td><td>295.897</td><td>+2.61%</td><td>1,181.904</td></tr>
-        <tr><td>毛利 / 毛利率</td><td>234.369 / 36.43%</td><td>+5.25%</td><td>101.050 / 34.15%</td><td>+2.48%</td><td>411.52 / 34.82%</td></tr>
-        <tr><td>营业利润 / 利润率</td><td>75.124 / 11.68%</td><td>−12.51%</td><td>10.862 / 3.67%</td><td>−61.85%</td><td>124.539 / 10.54%</td></tr>
-        <tr><td>归母 / 扣非归母</td><td>57.586 / 55.958</td><td>−20.02% / −20.25%</td><td>3.640 / 2.669</td><td>−84.35% / −88.82%</td><td>101.233 / 96.477</td></tr>
-        <tr><td>EPS（元）</td><td>0.91</td><td>−20.18%</td><td>不可可靠推算</td><td>—</td><td>1.600 / 扣非1.525</td></tr>
-        <tr><td>CFO / 资本开支 / FCF代理</td><td>97.591 / 13.043 / 84.549</td><td>+229% / −10% / +459%</td><td>60.245 / 7.491 / 52.754</td><td>+199% / −11% / +349%</td><td>211.389 / 28.882 / 182.507</td></tr>
-        <tr><td>ROE / ROIC</td><td>10.09% / 未披露</td><td>−2.51pct / —</td><td>不可相减</td><td>—</td><td>不机械年化</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div data-financials="segments">
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>2026H1主营产品经济性｜人民币亿元；产品分解口径</caption>
-        <thead><tr><th>产品</th><th>收入</th><th>收入占比</th><th>同比</th><th>毛利率</th><th>同比变化</th></tr></thead>
-        <tbody>
-          <tr><td>液体乳</td><td>365.90</td><td>57.4%</td><td>+1.29%</td><td>34.15%</td><td class="up">+2.41pct</td></tr>
-          <tr><td>奶粉及奶制品</td><td>168.45</td><td>26.4%</td><td>+1.61%</td><td>41.25%</td><td class="down">−2.85pct</td></tr>
-          <tr><td>冷饮产品</td><td>90.73</td><td>14.2%</td><td>+10.25%</td><td>39.06%</td><td>−0.16pct</td></tr>
-          <tr><td>其他产品</td><td>12.66</td><td>2.0%</td><td>+228.18%</td><td>12.72%</td><td class="down">−13.74pct</td></tr>
-          <tr class="grp"><td>主营合计</td><td>637.75</td><td>100%</td><td>+4.01%</td><td>36.30%</td><td class="up">+0.25pct</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="stacks">
-      <div class="stack"><div class="cap">2025H1主营收入结构</div><div class="stackbar"><div class="seg p" style="width:58.9%">58.9%</div><div class="seg q" style="width:27%">27.0%</div><div class="seg r" style="width:14.1%">14.1%</div></div></div>
-      <div class="stack"><div class="cap">2026H1主营收入结构</div><div class="stackbar"><div class="seg p" style="width:57.4%">57.4%</div><div class="seg q" style="width:26.4%">26.4%</div><div class="seg r" style="width:16.2%">16.2%</div></div></div>
-    </div>
-    <div class="legend"><span><i class="p"></i>液体乳</span><span><i class="q"></i>奶粉及奶制品</span><span><i class="r"></i>冷饮＋其他</span></div>
-  </div>
-  <p class="small">FY2021—24历史序列采用Wind标准化年度口径，FY2025由经审计年报控制并与Wind交叉核对；ROIC只作Wind二级口径对照。Q2、LTM和自由现金流代理均为研究者计算。公司正式报告分部把部分奶粉/其他收入重新归集，且明确提示与产品分解不完全一致；本表不冒充分部利润。</p>
-</section>
-
-<section class="reveal on" id="profit">
-  <div class="slabel">盈利能力深度分析 · 澳优减值与并购后检验</div>
-  <h2>利润桥的主因很清楚：合并经营指标未同步坍塌，澳优价值被集中重估</h2>
-  <p>Q2营业利润同比少17.61亿元，其中资产减值一项多损失21.39亿元，足以解释全部降幅。收入、销售费用、财务费用和其他收益合计提供缓冲；但这不是把减值“加回就结束”的理由。库存跌价对应真实产品和渠道价值下降，商誉减值则承认收购时预期的未来现金流没有实现。</p>
-
-  <h3>Q2营业利润同比桥</h3>
-  <div class="wfall" role="img" aria-label="Q2营业利润同比桥，公共横轴为负25亿元至正35亿元">
-    <div class="wrow"><div class="nm">2025Q2营业利润<span>推算起点</span></div><div class="wtrack"><div class="wbar tot" style="left:41.67%;width:47.46%"></div></div><div class="fig">28.474</div></div>
-    <div class="wrow"><div class="nm">营业总收入<span>同比增量</span></div><div class="wtrack"><div class="wbar up" style="left:41.67%;width:12.50%"></div></div><div class="fig up">+7.502</div></div>
-    <div class="wrow"><div class="nm">营业成本<span>同比增量</span></div><div class="wtrack"><div class="wbar down" style="left:33.22%;width:8.44%"></div></div><div class="fig down">−5.067</div></div>
-    <div class="wrow"><div class="nm">税金及附加<span>同比增量</span></div><div class="wtrack"><div class="wbar down" style="left:41.41%;width:.26%"></div></div><div class="fig down">−0.155</div></div>
-    <div class="wrow"><div class="nm">销售费用<span>下降形成贡献</span></div><div class="wtrack"><div class="wbar up" style="left:41.67%;width:2.24%"></div></div><div class="fig up">+1.341</div></div>
-    <div class="wrow"><div class="nm">管理费用<span>同比增量</span></div><div class="wtrack"><div class="wbar down" style="left:39.95%;width:1.72%"></div></div><div class="fig down">−1.031</div></div>
-    <div class="wrow"><div class="nm">研发费用<span>同比增量</span></div><div class="wtrack"><div class="wbar down" style="left:41.03%;width:.64%"></div></div><div class="fig down">−0.383</div></div>
-    <div class="wrow"><div class="nm">财务费用<span>净利息改善</span></div><div class="wtrack"><div class="wbar up" style="left:41.67%;width:.52%"></div></div><div class="fig up">+0.311</div></div>
-    <div class="wrow"><div class="nm">其他收益<span>同比增量</span></div><div class="wtrack"><div class="wbar up" style="left:41.67%;width:1.37%"></div></div><div class="fig up">+0.822</div></div>
-    <div class="wrow"><div class="nm">投资收益<span>同比减少</span></div><div class="wtrack"><div class="wbar down" style="left:41.43%;width:.24%"></div></div><div class="fig down">−0.143</div></div>
-    <div class="wrow"><div class="nm">公允价值变动<span>同比恶化</span></div><div class="wtrack"><div class="wbar down" style="left:40.44%;width:1.22%"></div></div><div class="fig down">−0.734</div></div>
-    <div class="wrow"><div class="nm">信用减值<span>损失减少</span></div><div class="wtrack"><div class="wbar up" style="left:41.67%;width:2.04%"></div></div><div class="fig up">+1.226</div></div>
-    <div class="wrow"><div class="nm">资产减值<span>主要为澳优</span></div><div class="wtrack"><div class="wbar down" style="left:6.02%;width:35.65%"></div></div><div class="fig down">−21.391</div></div>
-    <div class="wrow"><div class="nm">资产处置<span>同比改善</span></div><div class="wtrack"><div class="wbar up" style="left:41.67%;width:.15%"></div></div><div class="fig up">+0.092</div></div>
-    <div class="wrow"><div class="nm">2026Q2营业利润<span>推算终点</span></div><div class="wtrack"><div class="wbar tot" style="left:41.67%;width:18.10%"></div></div><div class="fig">10.862</div></div>
-  </div>
-  <p class="small">单位：亿元；所有条形共用−25至+35亿元横轴，零点位于41.67%。桥接项按未四舍五入数值复核，图中展示三位小数。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>减值拆解与经营敏感性｜人民币亿元</caption>
-      <thead><tr><th>项目</th><th>2026H1</th><th>Q2推算</th><th>含义</th></tr></thead>
-      <tbody>
-        <tr><td>存货跌价</td><td>9.075</td><td>未单独披露</td><td>澳优渠道库存清理为主，也含其他存货</td></tr>
-        <tr><td>澳优商誉减值</td><td>15.465</td><td>集中于Q2</td><td>下调未来奶粉业务预期增速</td></tr>
-        <tr><td>固定资产等减值</td><td>0.018</td><td>未单独披露</td><td>闲置或技术落后设备</td></tr>
-        <tr><td>信用减值</td><td>0.049</td><td>0.122损失</td><td>应收增长对应预期信用损失</td></tr>
-        <tr class="grp"><td>总减值准备</td><td>24.608</td><td>两类损失合计24.175</td><td>非现金，但减少H1税前利润</td></tr>
-        <tr><td>报告营业利润</td><td>75.124</td><td>10.862</td><td>法定报表口径</td></tr>
-        <tr><td>减值前营业利润（分析值）</td><td>99.732</td><td>35.037</td><td>Q2同比+7.86%；不是公司调整口径</td></tr>
-        <tr><td>扣非归母净利润</td><td>55.958</td><td>2.669</td><td>官方扣非没有剔除上述减值</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>澳优相关商誉原值约51.34亿元，累计减值约45.38亿元，累计减记比例约88%。资产组测试仍使用2026年下半年至2031年约5.1%—7.2%的收入增长、约37.5%—43.4%的毛利率、10.27%折现率与2%永续增速。剩余商誉风险变小，不代表澳优的库存、运营资产和扭亏执行风险消失。</p>
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>把减值加回来，是为了回答“合并经营指标有没有同步坍塌”；不把减值忘掉，是为了回答“过去花出去的钱有没有创造价值”。前一个答案偏正面，后一个答案明显偏负面。真正的拐点必须同时满足：合并收入和毛利继续改善，澳优不再反复清库存，而且能恢复真实盈利。</p>
-  </div>
-</section>
-
-<section class="reveal on" id="brand">
-  <div class="slabel">投资逻辑与核心增长驱动 · 区域市场与地理分布 · 行业与宏观环境分析 · 品牌与渠道专项</div>
-  <h2>Q2增长变窄：液奶几乎零增长，冷饮、直营和其他产品托住收入</h2>
-  <p>半年口径看，液体乳的毛利修复是亮点；单季宽度却不足。用H1经营数据减Q1经营数据，液奶收入几乎持平，粉类转为负增长，冷饮继续两位数增长。“其他产品”与直营增速很高但体量小；“新品占H1收入15.8%”是跨品类新品口径，不等同于“其他产品”分类，公司也没有把水、鲜茶、牛肉等业务逐项拆开。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Q2主营产品收入｜H1经营数据减Q1经营数据；人民币亿元；不含产品成本</caption>
-      <thead><tr><th>产品</th><th>2026Q2</th><th>2025Q2</th><th>同比</th><th>2026Q2占比</th></tr></thead>
-      <tbody>
-        <tr><td>液体乳</td><td>164.94</td><td>164.85</td><td>+0.05%</td><td>56.29%</td></tr>
-        <tr><td>奶粉及奶制品</td><td>74.93</td><td>77.65</td><td class="down">−3.51%</td><td>25.57%</td></tr>
-        <tr><td>冷饮产品</td><td>46.76</td><td>41.24</td><td class="up">+13.39%</td><td>15.96%</td></tr>
-        <tr><td>其他产品</td><td>6.39</td><td>2.02</td><td class="up">+216.47%</td><td>2.18%</td></tr>
-        <tr class="grp"><td>主营合计</td><td>293.02</td><td>285.76</td><td>+2.54%</td><td>100%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">Q1经营公告只给收入、不提供产品成本，故本报告不生成Q2产品毛利率。主营收入与合并营业收入之间的差额来自其他业务。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>渠道增量｜人民币亿元；收入为经营数据口径</caption>
-      <thead><tr><th>渠道</th><th>2026H1收入</th><th>H1同比</th><th>2026Q2推算</th><th>Q2同比</th><th>观察</th></tr></thead>
-      <tbody>
-        <tr><td>经销</td><td>607.83</td><td>+2.40%</td><td>277.24</td><td>+0.57%</td><td>仍占Q2主营收入94.62%</td></tr>
-        <tr><td>直营</td><td>29.92</td><td>+52.54%</td><td>15.78</td><td>+56.45%</td><td>贡献约四成H1主营净增收</td></tr>
-        <tr><td>期末经销商</td><td>18,038家</td><td>同比−61家</td><td>较Q1仅+6家</td><td>—</td><td>区域增减分化，非简单扩店</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="finds">
-    <div class="find good"><div class="t">品牌与份额仍有底</div><p>公司援引第三方监测称婴配粉零售份额18.6%、同比提升0.6个百分点，成人奶粉份额26.8%；冷饮收入继续两位数增长。它们支持品类覆盖优势，但监测口径不是独立审计。</p></div>
-    <div class="find"><div class="t">新品有量，质量待拆</div><p>新品占H1收入15.8%，这是跨液奶、粉类、冷饮等品类的管理层统计；“其他产品”则是另一套报表分类，H1毛利率为12.72%，两者不能混用。水、鲜茶和其他非乳业务没有收入、单位经济或现金消耗拆分，不能把组合桶直接叫作第二增长曲线。</p></div>
-    <div class="find"><div class="t">奶源红利开始换挡</div><p>管理层称合同奶价筑底、现货上涨，并判断供给收缩更有利于龙头；正式报告同时提示乳清、进口辅料与物流上涨。缺少采购单价、成本权重和对冲数据，无法精确做原奶价格桥。</p></div>
-    <div class="find warn"><div class="t">渠道健康仍缺终端证据</div><p>公司称传统液奶库存处于较优水平，但经销商库存额、库存天数、终端动销、折扣与退货均未披露。合并报表存货不是经销商库存，且净额受澳优存货减值影响，不能替代渠道健康证据。</p></div>
-  </div>
-
-  <p>地区上，H1主营收入华北增长最快，其余区域为低个位数；海外资产约占总资产13%，但公司没有披露海外收入和利润的可加总绝对值。印尼约两成增长、菲律宾翻倍、新西兰盈利等均来自发行人经营回顾或管理层问答，适合作为验证线索，不足以支撑独立海外估值。</p>
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>伊利没有失速，但增长不是“所有发动机一起开”。液奶守住规模，冷饮和直营在拉车，新业务还没有证明毛利与回报；奶粉则同时承受澳优清库和毛利下行。下一步不只看总收入，而要看增长有没有重新变宽。</p>
-  </div>
-</section>
-
-<section class="reveal on" id="cash">
-  <div class="slabel">现金流与资本开支分析 · 资产负债表与财务稳健性</div>
-  <h2>现金改善是真的，主要故事写在付款节奏而非利润里</h2>
-  <p>Q2销售回款略好于收入，购买商品支付的现金却同比下降近12%，两者合计形成约41.5亿元的直接现金流同比改善，几乎解释CFO同比增量。同期简化净经营营运资本账面值减少33.7亿元，上年同期增加16.1亿元；但2026H1存货减值9.08亿元且Q2分量未披露，账面减少不能等同于现金释放。这约49.7亿元的账面同比摆幅仍说明付款节奏是主要变量，表观自由现金流不能按当前季度永久化。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Q2现金转换桥｜人民币亿元</caption>
-      <thead><tr><th>项目</th><th>2026Q2</th><th>2025Q2</th><th>同比/变动</th><th>判断</th></tr></thead>
-      <tbody>
-        <tr><td>销售商品、提供劳务收到现金</td><td>321.62</td><td>307.62</td><td>+4.55%</td><td>略快于收入增速</td></tr>
-        <tr><td>购买商品、接受劳务支付现金</td><td>203.01</td><td>230.52</td><td>−11.94%</td><td>主要现金释放来源</td></tr>
-        <tr><td>经营现金流</td><td>60.24</td><td>20.16</td><td>+40.08</td><td>改善属实</td></tr>
-        <tr><td>现金资本开支</td><td>7.49</td><td>8.42</td><td>−0.92</td><td>未见扩张性跳升</td></tr>
-        <tr><td>FCF代理</td><td>52.75</td><td>11.75</td><td>+41.01</td><td>不可机械年化</td></tr>
-        <tr><td>简化净经营营运资本账面变动</td><td>减少33.67</td><td>增加16.07</td><td>差额49.74</td><td>含非现金减值，不是CFO桥</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">简化净经营营运资本＝应收账款＋存货−应付票据−应付账款−合同负债；只用于资产负债表方向分析，不含全部经营资产负债，也不调整存货减值等非现金因素。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026-06-30资产负债与现金边界｜人民币亿元</caption>
-      <thead><tr><th>项目</th><th>金额/比率</th><th>口径与风险</th></tr></thead>
-      <tbody>
-        <tr><td>总资产 / 总负债</td><td>1,571.65 / 998.89</td><td>资产负债率63.56%，流动比率0.623倍</td></tr>
-        <tr><td>货币资金</td><td>166.17</td><td>含不能直接视作股东可分配资源的项目</td></tr>
-        <tr><td>应收账款</td><td>40.78</td><td>同比+31.0%，显著快于H1收入+4.1%；公司称主要因电商、商超应收增加</td></tr>
-        <tr><td>大额存单及定期存款</td><td>632.65</td><td>分布于流动与非流动资产，期限与用途各异</td></tr>
-        <tr><td>近似借款</td><td>650.73</td><td>短期借款为主，其中票据贴现约481.41</td></tr>
-        <tr><td>名义存款减借款</td><td>约148.08</td><td>未扣法定准备、租赁、成员存款及金融业务周转需求</td></tr>
-        <tr><td>产业链担保余额 / 逾期</td><td>21.80 / 0.48</td><td>经销商融资用于购货，需防止sell-in质量虚高</td></tr>
-        <tr><td>全部担保</td><td>90.76</td><td>约为归母净资产16.9%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>H1后至报告批准日，公司披露发行5期超短期融资券、合计450亿元。结合高额短借、存单、票据贴现和财务公司业务，伊利更像在主动管理一个庞大的流动性池，而不是简单的“净现金消费股”。估值可以给现金边界，却不应把所有长期存单一次性加到股权价值上。</p>
-  <div class="plain"><span class="pl">白话解读</span>
-    <p><span class="g">CFO</span>回答“这段时间账户里净流进多少钱”，<span class="g">自由现金流代理</span>再扣掉买厂房设备等现金支出；它们都受付款日期影响。若一季少付供应商、下一季补付，全年并不会凭空多赚钱。稳健做法是看五年中值和全年转换，而不是把这一季52.75亿元乘四。</p>
-  </div>
-</section>
-
-<section class="reveal on" id="governance">
-  <div class="slabel">股息政策与股东回报 · 管理团队与股权结构分析 · 公司治理专项分析</div>
-  <h2>高股息提供底盘，回购增厚有限；内部人去杠杆与关联奶源都要继续审视</h2>
-  <p>公司没有控股股东或实际控制人。地方国资、境外托管账户、董事长与机构共同持股，使控制结构分散；但董事长的减持与质押、员工计划、关联奶源采购及产业链担保，都会影响少数股东对“渠道健康”和资本配置的信任。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>股东回报与对齐｜截至2026-08-31已披露状态</caption>
-      <thead><tr><th>事项</th><th>直接披露</th><th>每股含义</th><th>边界</th></tr></thead>
-      <tbody>
-        <tr><td>FY2025现金股息</td><td>1.38元/股，派息率75.48%</td><td>按现价股息率约5.21%</td><td>2026H1不派息；未来金额仍取决于利润</td></tr>
-        <tr><td>2026回购预案</td><td>10–20亿元，价格上限39.53元</td><td>公告测算注销0.40%–0.80%股本</td><td>仍待股东会批准，批准后6个月内执行</td></tr>
-        <tr><td>董事长减持</td><td>H1卖出6,199万股，占期初持股21.62%</td><td>公司解释为偿还到期质押融资</td><td>剩余持股质押率51.76%</td></tr>
-        <tr><td>员工长期计划</td><td>第三期持股计划及第六期长期服务计划获批</td><td>期内总股本未变化</td><td>当前源包不足以重建完整潜在稀释</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>拟回购全部注销是正确方向，但按39.53元价格上限作公告测算，注销0.4%—0.8%股本只会机械增厚EPS约0.4%—0.8%，远小于本季利润波动；实际执行价更低时，同一资金预算可以买入更多股份。董事长本年卖出约0.98%公司股份，数量高于价格上限口径的公告测算份额，但后者不是方案的法律股份上限。两件事各有披露理由，不能据此推断违法或利益输送；治理观感与资本配置一致性仍需用后续实际执行来修复。</p>
-
-  <div class="finds">
-    <div class="find"><div class="t">关联奶源规模不小</div><p>H1向联营企业优然牧业采购原料约78.45亿元，约相当于主营成本19.3%；另认购优然新股10.20亿元。公司未披露采购量、单位价和第三方可比价，商业公允性无法由外部完整审计。</p></div>
-    <div class="find warn"><div class="t">渠道金融不是零风险</div><p>供应商和经销商担保存在逾期，且经销商融资明确用于购买公司产品。担保既帮助渠道周转，也可能把卖货、融资与信用风险绑在一起，不能只看公司表内库存下降。</p></div>
-    <div class="find good"><div class="t">分红方向较明确，但仍属前瞻口径</div><p>管理层在投资者沟通中重申2025—2027年派息率不低于75%、年度分红金额不低于2024年水平；它是资本分配方向，不是无条件保底。</p></div>
-    <div class="find"><div class="t">财务负责人完成交接</div><p>原财务负责人到龄退休，新负责人获聘；截至H1未见非经营性资金占用、违规担保或重大诉讼处罚，但换届后的执行仍要从后续报表验证。</p></div>
-  </div>
-
-  <div class="plain"><span class="pl">白话解读</span>
-    <p>FY2025股息是已经实施的历史分配，回购仍是待批准方案；按价格上限公告测算的0.4%—0.8%注销比例不会自动抵消一次利润下滑。更重要的是，管理层是否用合理价格回购、董事长质押是否下降、关联采购与渠道担保是否保持透明——这些才决定高股息能不能换来更高估值。</p>
-  </div>
-</section>
-
-<section class="reveal on" id="valuation">
-  <div class="slabel">估值分析与市场定价 · 竞争对手与同业估值对比 · 股价走势与技术分析 · 盈利预测</div>
-  <h2>26.50元不贵，也不够便宜：市场已经预付一次利润正常化</h2>
-  <p>本文不做分部加总估值（SOTP）：四个产品池没有独立的营业利润、现金流和资本投入，采购、生产与分销又高度共享；强行拆分会制造不可审计的精确感。估值因此以合并归一化盈利、股息与所有者收益三法交叉。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">现价</div><div class="v">26.50<span class="u">元</span></div><div class="d"><span>2026-08-31收盘</span></div></div>
-    <div class="cell"><div class="k">熊市价值</div><div class="v">19–21<span class="u">元</span></div><div class="d"><span class="down">中值下行约−25%</span></div></div>
-    <div class="cell"><div class="k">基准价值</div><div class="v">25–30<span class="u">元</span></div><div class="d"><span>中值上行约+4%</span></div></div>
-    <div class="cell"><div class="k">牛市价值</div><div class="v">35–39<span class="u">元</span></div><div class="d"><span class="up">中值上行约+40%</span></div></div>
-    <div class="cell"><div class="k">现价隐含预期</div><div class="v">5.3%<span class="u">CAGR</span></div><div class="d"><span>扣非EPS五年增速</span></div></div>
-    <div class="cell"><div class="k">判断</div><div class="v">中性</div><div class="d"><span>合理区间内，缺安全边际</span></div></div>
-  </div>
-
-  <h3>第一步 · 先选对盈利分母</h3>
-  <p>成熟乳企适合用<span class="g">市盈率</span>、股息率与中周期所有者收益交叉。当前LTM报表利润包含澳优损失；全部加回会过度乐观，只加回商誉减值、保留存货跌价，可作为一条更谨慎的归一化敏感性。</p>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>当前盈利与估值分母｜人民币亿元/元/股；价格26.50元</caption>
-      <thead><tr><th>口径</th><th>利润</th><th>EPS</th><th>对应P/E</th><th>解释</th></tr></thead>
-      <tbody>
-        <tr><td>LTM归母</td><td>101.23</td><td>1.600</td><td>16.56x</td><td>法定报表滚动口径</td></tr>
-        <tr><td>LTM扣非归母</td><td>96.48</td><td>1.525</td><td>17.37x</td><td>公司扣非仍含减值</td></tr>
-        <tr><td>LTM扣非归母＋澳优商誉减值</td><td>111.94</td><td>1.770</td><td>14.97x</td><td>96.48＋15.465；不加回存货跌价</td></tr>
-        <tr><td>FY2025股息</td><td>—</td><td>1.380 DPS</td><td>5.21%股息率</td><td>历史分配，不是未来保证</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>第二步 · 看同业与历史位置</h3>
-  <p>当前16.56倍TTM市盈率大致等于可比公司正PE中值，不是明显折价；PB与PE在过去十年都处于较低分位，反映成熟低增长与高股息特征。股价距52周高点约7%、距低点约11.5%，五年前复权价格至今略跌，长期总回报更依赖股息。</p>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>乳业同业横截面｜Wind 2026-08-31；H1增长按各公司披露，口径不完全统一</caption>
-      <thead><tr><th>公司</th><th>PE(TTM)</th><th>PB</th><th>股息率</th><th>H1收入增速</th><th>H1归母增速</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>伊利股份</td><td>16.56x</td><td>3.12x</td><td>5.21%</td><td>+4.13%</td><td>−20.02%</td></tr>
-        <tr><td>蒙牛乳业</td><td>32.52x</td><td>1.50x</td><td>3.31%</td><td>+7.77%</td><td>+15.94%</td></tr>
-        <tr><td>中国飞鹤</td><td>12.44x</td><td>0.91x</td><td>7.55%</td><td>+2.32%</td><td>−16.30%</td></tr>
-        <tr><td>新乳业</td><td>16.33x</td><td>3.69x</td><td>3.04%</td><td>+5.20%</td><td>+17.24%</td></tr>
-        <tr><td>光明乳业</td><td>亏损</td><td>0.99x</td><td>—</td><td>—</td><td>—</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>第三步 · 三种方法不取平均，寻找共同区间</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>三情景驱动总表｜每股人民币元，倍数与收益率除外</caption>
-      <thead><tr><th>驱动</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
-      <tbody>
-        <tr><td>归一化EPS</td><td>1.50–1.55</td><td>1.68–1.77</td><td>1.90–2.00</td></tr>
-        <tr><td>目标P/E</td><td>13–14x</td><td>15–17x</td><td>18–20x</td></tr>
-        <tr><td>DPS</td><td>1.05–1.15</td><td>1.20–1.33</td><td>1.38–1.55</td></tr>
-        <tr><td>目标股息率</td><td>5.75%–6.25%</td><td>4.50%–5.00%</td><td>4.00%–4.50%</td></tr>
-        <tr><td>归一化所有者收益/股</td><td>1.55–1.65</td><td>1.75–1.90</td><td>2.05–2.20</td></tr>
-        <tr><td>要求的所有者收益率</td><td>7.50%–8.00%</td><td>6.00%–6.75%</td><td>5.25%–5.75%</td></tr>
-        <tr><td>经营对应</td><td>粉类继续承压，现金回吐</td><td>液奶温和恢复，澳优止损</td><td>品类广泛增长，估值重升</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>每股价值交叉检查｜人民币元；不作机械平均</caption>
-      <thead><tr><th>方法</th><th>熊市</th><th>基准</th><th>牛市</th><th>为什么用</th></tr></thead>
-      <tbody>
-        <tr><td>归一化P/E</td><td>19.5–21.7</td><td>25.2–30.1</td><td>34.2–40.0</td><td>成熟品牌盈利的主方法</td></tr>
-        <tr><td>股息收益率</td><td>16.8–20.0</td><td>24.0–29.6</td><td>30.7–38.8</td><td>约束现金回报与派息下修</td></tr>
-        <tr><td>归一化所有者收益</td><td>19.4–22.0</td><td>25.9–31.7</td><td>35.7–41.9</td><td>避免把单季现金改善资本化</td></tr>
-        <tr class="grp"><td>综合可辩护区间</td><td>19–21</td><td>25–30</td><td>35–39</td><td>取三法重叠与风险折价</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">归一化EPS与所有者收益代表未来12—24个月恢复至常态的可持续每股水平，不是公司指引或某一指定财年的点预测。综合区间取三种方法的密集区域并作保守外扩、取整；它不是机械平均，也不是严格数学交集。</p>
-
-  <h3>第四步 · 反推市场在等什么</h3>
-  <p>若要求未来五年年化回报8%、第五年仍按16倍市盈率、每股股息从1.20元起每年增长2%，现价要求扣非EPS从1.525元增至约1.98元，年复合约5.3%。公司2026年非承诺经营计划为营业总收入1,215亿元、利润总额136亿元；扣除H1营业总收入后，H2要实现同比约+5.6%，利润总额约+33.2%。Wind一致预期对应H2归母约+27.5%，意味着“澳优清理后利润正常化”已经进入市场基准。</p>
-
-  <div class="rows" aria-label="伊利估值价格梯">
-    <div class="row"><div class="nm">熊市<span>粉类继续承压、现金回吐</span></div><div class="track"><div class="fill alt" style="width:54.1%"></div></div><div class="fig">19–21元<span class="down">中值较现价约−25%</span></div></div>
-    <div class="row"><div class="nm">现价<span>2026-08-31收盘</span></div><div class="track"><div class="fill soft" style="width:71.6%"></div></div><div class="fig">26.50元<span>市场价</span></div></div>
-    <div class="row"><div class="nm">基准<span>核心温和恢复、澳优止损</span></div><div class="track"><div class="fill" style="width:74.3%"></div></div><div class="fig">25–30元<span>现价位于区间内</span></div></div>
-    <div class="row"><div class="nm">牛市<span>增长变宽、资本回报重估</span></div><div class="track"><div class="fill moss" style="width:100%"></div></div><div class="fig">35–39元<span class="up">中值较现价约+40%</span></div></div>
-  </div>
-  <p class="small">条形按熊市、基准、牛市区间中值及现价，相对牛市中值37元绘制。≤21元开始提供更充分风险补偿；25–30元为合理；≥35元需要盈利恢复和估值溢价同时成立。</p>
-
-  <div class="plain"><span class="pl">一句话总结</span>
-    <p>26.50元不是在押“零增长”，而是在押澳优的减值大部分已经过去、H2利润能明显恢复。这个赔率不差，却缺少明显错价：基准中值只比现价高约4%，而熊市仍有约四分之一下行。等待下一张经营证据，比把14.97倍“加回后PE”当成便宜更重要。</p>
-  </div>
-</section>
-
-<section class="reveal on" id="decision">
-  <div class="slabel">风险因素与预警信号 · 投资验证与筹码分析 · 多空辩论 · 最终投资建议与操作方案</div>
-  <h2>中性：把Q2当成清障证据，不当成经营拐点确认</h2>
-  <p>伊利本期的合并收入、毛利与减值前营业利润没有随归母利润一起坍塌，经营现金流和FY2025已实施分红也提供底盘；它尚未证明液奶恢复已变宽、澳优真正扭亏、单季现金转换可以持续。现价位于基准价值带内，结论置信度中等。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">最强多方观点</div><p>液奶毛利修复、冷饮和直营增长、头部份额、新品占比与高派息共同说明品牌、规模和供应链仍能把行业供需改善转成每股现金回报；减值后澳优包袱更轻。</p></div>
-    <div class="find warn"><div class="t">最强反方观点</div><p>单季液奶近零增长、粉类收缩、澳优累计减值大部分原始商誉，说明恢复广度和并购执行仍弱；原奶红利消退、乳清与物流上涨，可能让合并利润正常化不如预期。</p></div>
-    <div class="find"><div class="t">什么会确认</div><p>后续液奶回到中个位数增长，粉类毛利企稳、澳优不再计大额库存损失并实现真实盈利，全年现金转换回到中周期范围，回购完成注销。</p></div>
-    <div class="find warn"><div class="t">什么会证伪</div><p>应收在本期已同比增长31%、显著快于收入的基数上继续扩张，经销商预收和终端动销恶化，粉类再次清库，产业链担保逾期扩大，或在高价回购同时内部人继续去杠杆减持。</p></div>
-  </div>
-
-  <div class="callout"><b>最终判断：</b>这不是“利润暴跌所以便宜”，也不是“减值非现金所以无事发生”。更准确的说法是：合并收入、毛利与减值前营业利润未同步坍塌，澳优收购回报显著受损，市场价格已给一次正常化。以25–30元作为基准价值带，在下一期验证出现前不预付牛市估值。</div>
-
-  <h3>把验证点排在时间线上</h3>
-  <div class="tline">
-    <div class="tstop warn"><span class="tw">2026Q3</span><b>增长宽度与澳优</b><p>液奶和粉类收入宽度、合并毛利率是否改善；澳优是否停止清库并接近盈亏平衡。</p></div>
-    <div class="tstop"><span class="tw">股东会通过后6个月内</span><b>回购与质押</b><p>方案是否获批、公司实际注销多少股份，董事长质押率是否下降且无新增减持。</p></div>
-    <div class="tstop"><span class="tw">FY2026</span><b>利润、品类毛利与现金验收</b><p>全年披露的液奶和粉类毛利企稳，H2利润正常化、全年FCF回归中周期范围，产业链担保逾期不扩大。</p></div>
-    <div class="tstop"><span class="tw">FY2027</span><b>第二曲线与资本回报</b><p>水与其他新品披露可验证收入、毛利和单位经济，股息政策继续由真实利润覆盖。</p></div>
-  </div>
-</section>
-
-<section class="reveal on" id="glossary">
-  <div class="slabel">名词速查 · 快速检索</div>
-  <h2>读懂伊利这份财报需要的词</h2>
-  <div class="tblscroll">
-    <table class="tbl gloss">
-      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
-      <tbody>
-        <tr><td>H1 / Q1 / Q2</td><td>上半年累计 / 第一季度累计 / 第二季度单季；本报告Q2多由H1减Q1推算。</td></tr>
-        <tr><td>主营业务收入</td><td>乳制品等核心产品销售收入；与合并营业收入之间还差其他业务收入。</td></tr>
-        <tr><td>毛利率</td><td>收入减营业成本后的毛利占收入比例，反映产品价格、原料成本和组合的共同结果。</td></tr>
-        <tr><td>归母净利润</td><td>合并净利润中归属于上市公司股东的部分；澳优少数股东亏损会令归母高于合并净利润。</td></tr>
-        <tr><td>澳优</td><td>伊利控股的奶粉子公司澳优乳业；本期渠道库存调整、存货跌价与商誉减值主要与其相关。</td></tr>
-        <tr><td>扣非归母</td><td>扣除监管定义的非经常性项目后的归母利润；本期资产减值没有被全部剔除。</td></tr>
-        <tr><td>商誉</td><td>收购价格超过可辨认净资产的部分，代表对未来盈利和协同的预期；预期落空时计提减值。</td></tr>
-        <tr><td>存货跌价</td><td>当库存预计售价扣除后续成本低于账面成本时确认损失，通常对应真实产品价值下降。</td></tr>
-        <tr><td>减值前营业利润</td><td>本报告把资产和信用减值加回营业利润的分析值，只用于看经营轨迹，不是公司调整后指标。</td></tr>
-        <tr><td>CFO</td><td>经营活动产生的现金流量净额，会受应收、库存、应付、票据和经销商预付款时点影响。</td></tr>
-        <tr><td>现金资本开支</td><td>现金流量表中购建固定资产、无形资产和其他长期资产支付的现金。</td></tr>
-        <tr><td>自由现金流代理</td><td>CFO减现金资本开支；“代理”表示未区分维持性与增长性投资，也不是公司官方定义。</td></tr>
-        <tr><td>合同负债</td><td>客户先付款、公司尚未交货的金额；对经销模式而言常与预收货款相关。</td></tr>
-        <tr><td>票据贴现</td><td>将银行承兑汇票提前向银行换成现金并形成借款，可能同时放大现金和短期债务。</td></tr>
-        <tr><td>sell-in / sell-through</td><td>公司卖给渠道 / 渠道真正卖给消费者；前者增长不一定等于终端需求增长。</td></tr>
-        <tr><td>LTM / TTM</td><td>最近十二个月滚动口径，本报告用FY2025减2025H1再加2026H1计算。</td></tr>
-        <tr><td>EPS / DPS</td><td>每股盈利 / 每股股息；股息率等于DPS除以股价。</td></tr>
-        <tr><td>P/E / PB</td><td>股价相对每股盈利 / 每股净资产的倍数；分母口径不同会得出不同估值。</td></tr>
-        <tr><td>ROE / ROIC</td><td>股东权益回报率 / 投入资本回报率；伊利的金融业务、存单和票据贴现会让自制ROIC口径敏感。</td></tr>
-        <tr><td>所有者收益</td><td>对可持续自由现金的归一化近似；本报告以五年现金转换而非单季峰值建立情景。</td></tr>
-        <tr><td>安全边际</td><td>价格低于保守价值的缓冲；现价在基准区间内，缓冲有限。</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="reveal on" id="methods">
-  <div class="slabel">方法与来源</div>
-  <h2>上交所文件控制财务，Wind控制行情；推算都保留边界</h2>
-  <p>最新财务、产品、渠道、地区、减值、担保、股东、关联方与回购状态，以公司提交上交所并在发行人网站归档的文件为控制源；2025年年报为经审计年度基数，2026H1与Q1均未经审计。Wind用于2026-08-31收盘行情、历史估值、同业截面、一致预期、FY2021—24标准化历史及FY2025交叉核验。投资者活动记录中的判断均标为管理层口径，不替代财务披露。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>主要直接来源与证据边界</caption>
-      <thead><tr><th>来源</th><th>用途</th><th>证据边界</th></tr></thead>
-      <tbody>
-        <tr><td><a href="https://www.yili.com/uploads/2026-08-26/8db5348e-cff5-4d47-b2e5-ede9428915a41787739158906.pdf">2026年半年度报告</a></td><td>H1财务、产品成本、分部、现金、治理</td><td>未经审计；是Q2累计减法的H1端</td></tr>
-        <tr><td><a href="https://www.yili.com/uploads/2026-04-30/f55be7d8-cac0-4540-9bb8-0dce0e7f8fe51777526693097.pdf">2026年第一季度报告</a></td><td>Q1损益、资产负债与现金流</td><td>未经审计；Q2不单独给EPS或ROE</td></tr>
-        <tr><td><a href="https://www.yili.com/uploads/2025-08-28/501a4412-a5b8-47fa-ae5f-3ce48eadb2911756372681806.pdf">2025年半年度报告</a></td><td>同比累计基数与产品成本</td><td>未经审计比较期</td></tr>
-        <tr><td><a href="https://www.yili.com/uploads/2025-04-29/7ad346a3-539f-4672-b12a-17639f60a1e81745927158093.pdf">2025年第一季度报告</a></td><td>上年Q2累计减法基数</td><td>未经审计</td></tr>
-        <tr><td><a href="https://www.yili.com/uploads/2026-04-30/85ed8e5f-8d6f-49b4-9f10-c5d217f83ff31777526591734.pdf">2025年年度报告</a></td><td>LTM、年度股息、经营计划、历史财务</td><td>经审计；经营计划不构成承诺</td></tr>
-        <tr><td><a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-30/600887_20260430_NK8Z.pdf">2026Q1经营数据公告</a> / <a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-30/600887_20250430_PUU5.pdf">2025Q1经营数据公告</a></td><td>单季产品、渠道和地区收入推算</td><td>只披露收入，不披露对应成本</td></tr>
-        <tr><td><a href="https://www.yili.com/investors">发行人投资者关系档案</a></td><td>减值、回购、经营数据及问答文件索引</td><td>管理层前瞻判断需后续验证</td></tr>
-        <tr><td>Wind金融数据服务</td><td>行情、估值、历史分位、同业与一致预期</td><td>二级标准化数据；主财务由申报文件覆盖</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p class="small">核心公式：Q2＝H1累计−Q1累计；LTM＝FY2025−2025H1＋2026H1；FCF代理＝CFO−购建固定资产、无形资产和其他长期资产支付的现金；减值前营业利润＝营业利润−资产减值损失−信用减值损失；估值情景均为研究者假设，不是公司目标。数据来源于万得 Wind 金融数据服务。</p>
-</section>
-
-<footer>
-  <p>财务与公告资料截止2026-08-31；行情取2026-08-31收盘。主要来源：上海证券交易所申报文件、伊利投资者关系档案与Wind金融数据服务。</p>
-  <p>2026H1和Q1未经审计。Q2、LTM、减值前利润、自由现金流代理、归一化盈利、同业截面与价值区间均为分析推算；上述核心公式及展示值已通过可执行计算账本复核。本报告不构成投资建议或交易要约。</p>
-</footer>
-
-</main>
-
-<script>
+</head><body><header class="hero"><div class="wrap"><div class="eyebrow">伊利股份 600887.SH ｜ 2026Q2 全景尽调 ｜ 财务截至2026.06.30 · 行情2026.09.04</div><h1>减值能出清，<br>回报不能预支</h1><p class="lede">利润骤降与现金骤升，让这份财报看起来互相矛盾。<b>真正该拆开的是当期经营、并购损失和分配能力</b>：主业没有同步坍塌，但奶粉和渠道仍需修复，付款节奏也不能永远贡献增量。下一轮回报取决于增长与现金兑现，不是账面包袱又轻了多少。</p><div class="dual"><div><div class="tag">单二季度经营现金流 · 同比推算</div><div class="big a">+198.8%</div><div class="cap">合并现金净流入跃升，销售回款和采购付款的变化是主要线索。</div></div><div><div class="tag">单二季度归母净利润 · 同比推算</div><div class="big b">−84.4%</div><div class="cap">归母即伊利股东所得；澳优损失进入利润表，非现金确认仍有经济代价。</div></div></div></div></header><main class="wrap"><div class="callout"><b>修订 2026-09-06：</b>更新分部估值、未来股息与员工计划。</div>
+<section class="reveal on" id="tldr" ><div class="slabel">三十秒版本 · 先看结论</div><h2>先分清损失，再判断价格</h2><div class="tldr"><ul>
+<li><b>它是谁：</b>全国综合乳企，靠液奶、奶粉、冷饮等品牌产品和经销网络赚钱；澳优是并表奶粉子公司，不是独立于伊利的另一份利润。</li>
+<li><b>本期成绩：</b>推算单二季度收入295.9亿元、同比+2.6%，归母净利润3.6亿元、同比−84.4%；收入与利润分化。</li>
+<li><b>核心矛盾：</b>液奶近乎零增长、粉类收缩，冷饮与直营托住增量；减值可以不再发生，终端需求和收购回报却不会自动恢复。</li>
+<li><b>容易踩的坑：</b>高现金流不等于高常态盈利；历史股息已派发，不能再次算作买入后的回报，待审批回购也不是到手现金。</li>
+<li data-verdict="neutral-cautious"><b>结论：</b>中性偏谨慎。现价26.86元，基准现值26.5元、熊市现值18.2元；液奶和粉类增长同时改善、现金转换稳定，才会改变判断。</li>
+</ul></div></section>
+<section class="reveal on" id="primer" ><div class="slabel">入门</div><h2>品牌产品把奶源变成现金，渠道决定兑现速度</h2><p>伊利采购原奶、乳清和包材，生产常温及低温液奶、婴幼儿与成人奶粉、奶酪和冷饮。消费者选择品牌，经销商、商超、电商和餐饮客户向公司采购；公司收到的货款与消费者实际喝掉多少奶，并不是同一时点。</p><div class="steps"><div class="step"><div class="n">环节 1</div><b>采购与生产</b><p>原奶价格、辅料和产能利用影响单位成本；库存过期或卖价下降会产生损失。</p></div><div class="step"><div class="n">环节 2</div><b>品牌与品类</b><p>液奶提供规模，粉类与冷饮提供不同的利润结构；广告和促销也是获得收入的成本。</p></div><div class="step"><div class="n">环节 3</div><b>渠道与回款</b><p>卖给经销商是进货，消费者购买才是终端动销；赊销、预收和票据会改变现金日期。</p></div><div class="step"><div class="n">环节 4</div><b>留存与分配</b><p>利润还要覆盖厂房设备、库存和金融业务周转；股东得到的是经批准派发的股息与注销后的权益。</p></div></div><p>公司仅有上交所A股，本集团包含财务公司及澳优等子公司；无控股股东、无实际控制人。报表采用中国企业会计准则。FY指完整财年，H1指上半年，TTM指最近十二个月。2026年半年报和一季报均未经审计，本文的<span class="g">推算单二季度</span>是半年累计减一季累计，比较期同法；每股收益（EPS）和净资产收益率（ROE）不作累计相减。<span class="g">营业总收入</span>包含金融业务利息收入，主营分析与毛利分母使用营业收入。正式经营分部与分产品分类存在重归集，不能混为一张表。</p><p>乳制品的行业背景是需求、渠道结构与上游供给同时调整：原奶成本下降可能帮助毛利，也可能被促销让利抵消；奶粉还受到人口结构和不同营养品需求影响，冷饮则具有明显季节性。以下把管理层判断与已经申报的财务结果分开。</p></section>
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="consumer-staples"><div class="slabel">财务与分部</div><h2>销售温和修复，利润与现金却向两边走</h2><p>五年销售温和增长，本期利润下降、现金增加。毛利是收入减营业成本，尚未扣销售等费用；本期分化需结合利润与现金两道桥。</p><div class="grid" data-financials="consolidated"><div class="cell"><div class="k">营业收入</div><div class="v">295.90<span class="u">亿元</span></div><div class="d"><span>同比+2.6%</span><span>H1−Q1 · 推算</span></div></div><div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">101.05<span class="u">亿元</span></div><div class="d"><span>同比+2.5%</span><span>34.15% · 推算</span></div></div><div class="cell"><div class="k">营业利润 / 利润率</div><div class="v">10.86<span class="u">亿元</span></div><div class="d"><span>同比−61.9%</span><span>3.67% · 推算</span></div></div><div class="cell"><div class="k">归母净利润 / 净利率</div><div class="v">3.64<span class="u">亿元</span></div><div class="d"><span>同比−84.4%</span><span>1.23% · 推算</span></div></div><div class="cell"><div class="k">经营现金流量净额</div><div class="v">60.24<span class="u">亿元</span></div><div class="d"><span>同比+198.8%</span><span>H1−Q1 · 推算</span></div></div><div class="cell"><div class="k">自由现金流代理</div><div class="v">52.75<span class="u">亿元</span></div><div class="d"><span>同比+349.1%</span><span>H1−Q1 · 推算</span></div></div></div><div class="tblscroll"><table class="tbl" data-financials="history"><caption>五年完整财年｜本集团；原始年度申报口径，均经审计；亿元，比例和每股另标；pp为百分点</caption><thead><tr><th>项目</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>四年复合增速（CAGR）</th></tr></thead><tbody><tr><td>营业收入</td><td>1,101.44</td><td>1,226.98</td><td>1,257.58</td><td>1,153.93</td><td>1,156.36</td><td>+1.2%</td></tr><tr><td>毛利（推算）</td><td>337.27</td><td>395.79</td><td>409.70</td><td>390.94</td><td>399.82</td><td>+4.3%</td></tr><tr><td>毛利率（推算）</td><td>30.62%</td><td>32.26%</td><td>32.58%</td><td>33.88%</td><td>34.58%</td><td>水平变化</td></tr><tr><td>营业利润</td><td>102.30</td><td>108.60</td><td>118.73</td><td>101.82</td><td>135.28</td><td>+7.2%</td></tr><tr><td>营业利润率（推算）</td><td>9.29%</td><td>8.85%</td><td>9.44%</td><td>8.82%</td><td>11.70%</td><td>水平变化</td></tr><tr><td>归母净利润</td><td>87.05</td><td>94.31</td><td>104.29</td><td>84.53</td><td>115.65</td><td>+7.4%</td></tr><tr><td>归母净利率（推算）</td><td>7.90%</td><td>7.69%</td><td>8.29%</td><td>7.33%</td><td>10.00%</td><td>水平变化</td></tr><tr><td>扣非归母</td><td>79.44</td><td>85.86</td><td>100.26</td><td>60.11</td><td>110.68</td><td>+8.6%</td></tr><tr><td>经营现金流</td><td>155.28</td><td>134.20</td><td>182.90</td><td>217.40</td><td>143.44</td><td>−2.0%</td></tr><tr><td>现金资本开支</td><td>66.83</td><td>66.46</td><td>69.56</td><td>39.78</td><td>30.37</td><td>−17.9%</td></tr><tr><td>自由现金流代理（推算）</td><td>88.45</td><td>67.74</td><td>113.35</td><td>177.61</td><td>113.07</td><td>+6.3%</td></tr><tr><td>基本EPS（元） / ROE</td><td>1.43 / 25.59%</td><td>1.48 / 19.23%</td><td>1.64 / 20.20%</td><td>1.33 / 15.81%</td><td>1.83 / 20.87%</td><td>+6.4% EPS</td></tr></tbody></table></div><div class="cols" role="img" aria-label="五年收入及归母净利润，同一刻度"><div class="col"><div class="bars"><div class="bar rev" style="height:87.5840%"></div><div class="bar np" style="height:6.9219%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:97.5666%"></div><div class="bar np" style="height:7.4994%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:100.0000%"></div><div class="bar np" style="height:8.2925%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:91.7581%"></div><div class="bar np" style="height:6.7215%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:91.9513%"></div><div class="bar np" style="height:9.1964%"></div></div></div></div><div class="collabels"><div><b>2021</b></div><div><b>2022</b></div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div><div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div><p>收入在高点后回落，利润波动更大。两条系列均除以五年最高收入绘制，不把净利单独放大；四年CAGR为首尾比值开四次方根减一。</p><div class="tblscroll"><table class="tbl" ><caption>部分期间｜亿元；Q2与比率均推算，TTM＝FY2025−2025H1＋2026H1；冷饮季节性使环比不等于趋势</caption><thead><tr><th>项目</th><th>2025Q2</th><th>2026Q2</th><th>同比</th><th>环比Q1</th><th>2026H1</th><th>H1同比</th><th>TTM</th></tr></thead><tbody><tr><td>营业收入</td><td>288.38</td><td>295.90</td><td>+2.6%</td><td>−14.8%</td><td>643.31</td><td>+4.1%</td><td>1,181.90</td></tr><tr><td>毛利</td><td>98.60</td><td>101.05</td><td>+2.5%</td><td>−24.2%</td><td>234.37</td><td>+5.3%</td><td>411.52</td></tr><tr><td>营业利润</td><td>28.47</td><td>10.86</td><td>−61.9%</td><td>−83.1%</td><td>75.12</td><td>−12.5%</td><td>124.54</td></tr><tr><td>归母净利润</td><td>23.26</td><td>3.64</td><td>−84.4%</td><td>−93.3%</td><td>57.59</td><td>−20.0%</td><td>101.23</td></tr><tr><td>扣非归母</td><td>23.87</td><td>2.67</td><td>−88.8%</td><td>−95.0%</td><td>55.96</td><td>−20.2%</td><td>96.48</td></tr><tr><td>经营现金流</td><td>20.16</td><td>60.24</td><td>+198.8%</td><td>+61.3%</td><td>97.59</td><td>+229.2%</td><td>211.39</td></tr><tr><td>现金资本开支</td><td>8.42</td><td>7.49</td><td>−11.0%</td><td>+34.9%</td><td>13.04</td><td>−10.2%</td><td>28.88</td></tr><tr><td>FCF代理</td><td>11.75</td><td>52.75</td><td>+349.1%</td><td>+65.9%</td><td>84.55</td><td>+459.4%</td><td>182.51</td></tr><tr><td>毛利率</td><td>34.19%</td><td>34.15%</td><td>−0.04pp</td><td>见Q1基数</td><td>36.43%</td><td>0.39pp</td><td>34.82%</td></tr><tr><td>销售费用率</td><td>19.92%</td><td>18.97%</td><td>水平比较</td><td>未经季调</td><td>17.77%</td><td>水平比较</td><td>18.31%</td></tr></tbody></table></div><p>H1基本每股收益0.91元、加权ROE10.09%均为披露值；Q1毛利率38.37%（推算）。TTM归母按期末股数折算1.600元/股，不是报表加权EPS；Q2每股收益、ROE与产品毛利率未披露。</p><div data-financials="segments"><div class="tblscroll"><table class="tbl" ><caption>正式报告分部｜亿元；主营＋其他业务，毛利率/同比/CAGR推算；2022年并购澳优扩大粉类边界，粉类CAGR不是有机增速</caption><thead><tr><th>正式分部</th><th>FY2021收入</th><th>FY2025收入</th><th>四年CAGR</th><th>2025H1收入</th><th>2026H1收入</th><th>H1同比</th><th>H1毛利率</th></tr></thead><tbody><tr><td>液体乳</td><td>863.86</td><td>712.17</td><td>−4.7%</td><td>364.68</td><td>368.19</td><td>+1.0%</td><td>34.38%</td></tr><tr><td>奶粉及奶制品</td><td>163.12</td><td>332.15</td><td>+19.5%</td><td>167.99</td><td>173.24</td><td>+3.1%</td><td>41.27%</td></tr><tr><td>冷饮</td><td>72.28</td><td>99.22</td><td>+8.2%</td><td>82.64</td><td>91.06</td><td>+10.2%</td><td>39.11%</td></tr><tr><td>其他</td><td>2.18</td><td>12.82</td><td>+55.7%</td><td>2.44</td><td>10.82</td><td>+342.8%</td><td>6.44%</td></tr></tbody></table></div><div class="stacks"><div class="stack"><div class="cap">2025H1正式分部收入占比</div><div class="stackbar"><div class="seg p" style="width:59.0326%">59.0%</div><div class="seg q" style="width:27.1938%">27.2%</div><div class="seg r" style="width:13.7736%">13.8%</div></div></div><div class="stack"><div class="cap">2026H1正式分部收入占比</div><div class="stackbar"><div class="seg p" style="width:57.2335%">57.2%</div><div class="seg q" style="width:26.9289%">26.9%</div><div class="seg r" style="width:15.8375%">15.8%</div></div></div></div><div class="legend"><span><i class="p"></i>液体乳</span><span><i class="q"></i>粉类</span><span><i class="r"></i>冷饮及其他</span></div><p class="small">冷饮及其他占比上升，粉类份额下降。条形各自归一至本期营业收入；正式分部没有披露营业利润，毛利也不等于归母收益。</p></div><div class="tblscroll"><table class="tbl" ><caption>产品及渠道子分解｜亿元，均为主营口径；Q2收入由两份经营公告相减；H1毛利率按收入成本推算，粉类/其他不等于上表正式分部</caption><thead><tr><th>产品/渠道</th><th>Q2收入</th><th>Q2同比</th><th>Q2占主营</th><th>H1收入</th><th>H1毛利率</th></tr></thead><tbody><tr><td>液体乳产品</td><td>164.94</td><td>+0.1%</td><td>56.3%</td><td>365.90</td><td>34.15%</td></tr><tr><td>奶粉及奶制品产品</td><td>74.93</td><td>−3.5%</td><td>25.6%</td><td>168.45</td><td>41.25%</td></tr><tr><td>冷饮产品</td><td>46.76</td><td>+13.4%</td><td>16.0%</td><td>90.73</td><td>39.06%</td></tr><tr><td>其他产品</td><td>6.39</td><td>+216.5%</td><td>2.2%</td><td>12.66</td><td>12.72%</td></tr><tr><td>经销</td><td>277.24</td><td>+0.6%</td><td>94.6%</td><td>607.83</td><td>36.49%</td></tr><tr><td>直营</td><td>15.78</td><td>+56.5%</td><td>5.4%</td><td>29.92</td><td>32.51%</td></tr><tr><td>合同负债</td><td>49.49亿元</td><td>+7.5%同比</td><td>环比−8.3%</td><td>H1期末</td><td>不当作收入</td></tr><tr><td>经销商总数</td><td>18,038家</td><td>同比净减61家</td><td>不还原新增/退出</td><td>H1期末</td><td>渠道数量非动销</td></tr><tr><td>终端售价 / 渠道库存</td><td>未披露</td><td>未披露</td><td>不由毛利率替代</td><td>公司存货95.05亿元</td><td>45.0天期末周转代理</td></tr><tr><td>产品混合吨价（万元/吨）</td><td>Q2未披露</td><td>H1未披露</td><td>FY2025推算</td><td>液奶0.80 / 粉类6.92</td><td>冷饮1.55</td></tr><tr><td>每股股息 / 归属年派息率</td><td>FY2025：1.38元</td><td>75.48%</td><td>H1未宣派</td><td>已付历史分配</td><td>未来分配见治理</td></tr></tbody></table></div><p>存货周转代理按期末余额除TTM成本乘全年天数，不是渠道库存。产品吨价为同口径年收入除年销量，混合了品类与价格，不替代本季量价桥；毛利改善不直接证明提价。</p><div class="plain"><span class="pl">白话解读</span><p>五年收入复合增速1.2%，说明这门生意更依靠每笔销售留下多少钱。本季收入只温和增加，粉类与冷饮方向不同；下一步要看产品增长是否变宽，而不能从单个现金数字判断整体复苏。</p></div></section>
+<section class="reveal on" id="profit" ><div class="slabel">利润与并购</div><h2>减值解释了降幅，却不能替代经营修复</h2><p>资产减值的同比增加超过营业利润的全部降幅，费用与其他项目提供了部分缓冲。这只能说明报表下降的会计来源，不等于损失与经营无关：库存跌价意味着产品预计变现价值下降，商誉减值意味着收购时支付的溢价没有兑现。</p><div class="tblscroll"><table class="tbl txt" ><caption>利润桥与减值｜Q2桥均推算；H1减值为披露值换算；营业利润不是一般工业企业息税前利润</caption><thead><tr><th>项目</th><th>亿元（推算另标）</th><th>口径</th></tr></thead><tbody><tr><td>毛利增量</td><td>2.45</td><td>同比影响；费用增加记负数</td></tr><tr><td>销售费用变化</td><td>1.34</td><td>同比影响；费用增加记负数</td></tr><tr><td>管理费用变化</td><td>−1.03</td><td>同比影响；费用增加记负数</td></tr><tr><td>研发费用变化</td><td>−0.38</td><td>同比影响；费用增加记负数</td></tr><tr><td>资产减值变化</td><td>−21.39</td><td>同比影响；费用增加记负数</td></tr><tr><td>信用减值变化</td><td>1.23</td><td>同比影响；费用增加记负数</td></tr><tr><td>其余营业项目净额</td><td>0.18</td><td>同比影响；费用增加记负数</td></tr><tr><td>营业利润同比差额</td><td>−17.61</td><td>两期法定营业利润相减</td></tr><tr><td>H1存货跌价</td><td>9.08</td><td>集团口径；澳优清库不是全部</td></tr><tr><td>H1澳优商誉减值</td><td>15.47</td><td>合并确认额，不再乘持股比例</td></tr><tr><td>资产及信用减值前营业利润（Q2分析值）</td><td>35.04</td><td>同比+7.9%；仍含其他及金融收益</td></tr></tbody></table></div><div class="wfall" role="img" aria-label="Q2营业利润同比连续桥"><div class="wrow"><div class="nm">上年营业利润<span>2025Q2</span></div><div class="wtrack"><div class="wbar tot" style="left:0.0000%;width:88.2635%"></div></div><div class="fig">28.47</div></div><div class="wrow"><div class="nm">毛利增量<span>同比影响 · 推算</span></div><div class="wtrack"><div class="wbar up" style="left:88.2635%;width:7.5798%"></div></div><div class="fig">+2.45</div></div><div class="wrow"><div class="nm">销售费用变化<span>同比影响 · 推算</span></div><div class="wtrack"><div class="wbar up" style="left:95.8433%;width:4.1567%"></div></div><div class="fig">+1.34</div></div><div class="wrow"><div class="nm">管理费用变化<span>同比影响 · 推算</span></div><div class="wtrack"><div class="wbar down" style="left:96.8043%;width:3.1957%"></div></div><div class="fig">−1.03</div></div><div class="wrow"><div class="nm">研发费用变化<span>同比影响 · 推算</span></div><div class="wtrack"><div class="wbar down" style="left:95.6155%;width:1.1888%"></div></div><div class="fig">−0.38</div></div><div class="wrow"><div class="nm">资产减值变化<span>同比影响 · 推算</span></div><div class="wtrack"><div class="wbar down" style="left:29.3069%;width:66.3086%"></div></div><div class="fig">−21.39</div></div><div class="wrow"><div class="nm">信用减值变化<span>同比影响 · 推算</span></div><div class="wtrack"><div class="wbar up" style="left:29.3069%;width:3.7996%"></div></div><div class="fig">+1.23</div></div><div class="wrow"><div class="nm">其余营业项目净额<span>同比影响 · 推算</span></div><div class="wtrack"><div class="wbar up" style="left:33.1066%;width:0.5639%"></div></div><div class="fig">+0.18</div></div><div class="wrow"><div class="nm">本年营业利润<span>2026Q2</span></div><div class="wtrack"><div class="wbar tot" style="left:0.0000%;width:33.6704%"></div></div><div class="fig">10.86</div></div></div><p class="small">资产减值把累计利润向下拉，其他项目只抵消一部分。条形按上表连续相接，起点和终点是两期营业利润；收入未拆成销量、单价效应，因为同口径季度销量缺失。</p><p>澳优<span class="g">商誉</span>原值51.34亿元，累计减记88.4%，尚余5.97亿元。<span class="g">资产组</span>测试的未来收入增速假设取5.05%–7.16%，毛利率37.53%–43.36%；公司减值测试折现率10.27%、永续增长率2%，属于管理层估计而非实现结果。账面商誉变少，并未消除库存、工厂和未来投入的风险。</p><p>澳优自身港股半年报显示归属其股东亏损7.05亿元、存货减值6.16亿元；这是上市子公司的口径，既不是伊利的全部粉类利润，也不等于乘一次持股比例就能重建伊利归母。伊利确认的商誉减值已处于母集团账面口径；公告只明确税前影响，不能未经税和少数股东核对便把全额加到扣非归母。<span class="g">扣非归母</span>仍包含不少资产减值，并非“排除所有一次性项目后的盈利”。</p><div class="plain"><span class="pl">白话解读</span><p>暂时剔除资产与信用减值两行影响，单季营业利润分析值为35.0亿元；但这不是已经赚回的并购款。下一次应验证澳优真实盈利与库存，而不是仅检查下一张利润表少了一笔减值。</p></div></section>
+<section class="reveal on" id="engine" ><div class="slabel">品牌与渠道</div><h2>增长还不够宽，成本红利也并非永久</h2><p>单季增长依赖少数品类和渠道。液奶接近持平、粉类下降，与冷饮和直营扩张形成对照；这足以维持总收入，尚不足以证明各产线和渠道均能摊薄固定成本。</p><p>价格能力取决于成交价、产品结构及促销支出。液奶毛利改善与原奶成本环境相容，粉类还受澳优库存处理影响；缺少采购单价和成本权重，无法量化各因素贡献。奶价回升可能稳定奶源，也可能抬高成本，要看能否转嫁给消费者。</p><p>2026年8月27日官方记录中，管理层称合同奶价触底、散奶回升，新兴渠道增长较快；4月30日记录另称新渠道整体盈利。答复没有分渠道利润、获客成本或现金转换，故不能证明达到公司平均回报率；直营增收亦不是终端净增需求的直接证据。</p><p><span class="g">进货与动销</span>区分销售停在哪一层。延长账期、融资或促销均可能推动渠道进货；复购要看终端购买。公司称传统液奶渠道库存较优，但没有库存天数、折扣、退货或同店动销，尚难独立验证需求拐点。</p><p>新品横跨原有品类，不等于财务表的“其他产品”。非乳品缺少逐项收入与利润，基准不给独立成长溢价。增加品项却不提高周转，还可能增加库存和推广成本。</p><p>经营表的“其他地区”不是海外分部，合并海外收入与利润未单列。管理层表示东南亚部分市场仍在投入、整体未盈利，新西兰已盈利。澳优海外业务已在并表粉类内，不另加一份海外价值。</p><p>原料供需是可能逆转的行业因素，品类与渠道规模才是公司特有优势；后者需在不放松信用条件下保住销售，才能支持超额回报。</p><div class="plain"><span class="pl">白话解读</span><p>这不是所有品类同时恢复：液奶守住规模，冷饮与直营提供增量，粉类仍有压力。下一份经营数据若显示核心品类一起改善，而且不是靠赊销换收入，才支持把恢复判断扩大到全公司。</p></div></section>
+<section class="reveal on" id="cash" ><div class="slabel">现金与流动性</div><h2>现金增量可信，可分配现金却不能直接相加</h2><p>单季销售回款增加14.01亿元、采购付款减少27.52亿元，合计41.53亿元，接近经营现金同比增量40.08亿元。这个现金事实支持付款与回款节奏的重要性，却不能单凭两行现金流证明供应商账期永久延长；采购数量、库存和结算结构也会影响它。</p><div class="tblscroll"><table class="tbl txt" ><caption>现金与资产负债｜余额截至2026-06-30；现金桥为单二季度，净额与比率均推算</caption><thead><tr><th>项目</th><th>亿元，另有标注</th><th>含义</th></tr></thead><tbody><tr><td>销售回款（Q2推算）</td><td>321.62</td><td>同比+4.6%</td></tr><tr><td>采购付款（Q2推算）</td><td>203.01</td><td>同比−11.9%</td></tr><tr><td>简化营运资本账面变动（Q2）</td><td>−33.67</td><td>上年同期16.07；不是现金桥</td></tr><tr><td>总资产 / 总负债</td><td>1,571.65 / 998.89</td><td>资产负债率63.56%</td></tr><tr><td>货币资金 / 存单及定存</td><td>166.17 / 632.65</td><td>三个存款科目，不只看银行活期</td></tr><tr><td>借款近似 / 非流动租赁</td><td>650.73 / 2.69</td><td>大部分为短借；含集团内票据贴现</td></tr><tr><td>名义存款减借款</td><td>148.08</td><td>尚未扣受限资金、成员存款与周转</td></tr><tr><td><span class="g">静态审慎余量代理</span></td><td>105.00</td><td>再扣受限资金、成员存款和非流动租赁，仍非可分红现金</td></tr><tr><td>应收账款</td><td>40.78</td><td>同比+31.0%；电商、商超回款需跟踪</td></tr><tr><td>五年合计FCF / 归母</td><td>115.3%</td><td>FCF为经营现金流减现金资本开支，未区分维持与扩张</td></tr></tbody></table></div><p>TTM折旧摊销45.96亿元，现金资本开支仅为其62.8%；维持性开支未单列，当前自由现金流可能受投资低谷支撑。借款近似除以营业利润、利息与折摊合计的分析代理为3.54倍；该分母含金融业务、投资收益与减值，不是公司披露的息税折摊前利润。短债占比高，即使存款可抵减，续借和资产到期错配仍需逐期核验。</p><p><span class="g">自由现金流代理</span>不区分维持与扩张投资。简化<span class="g">营运资本</span>变化还含非现金存货跌价，不等于现金释放；五年转换也受并购和金融业务归类影响。</p><p>财务公司带入存款、贷款与<span class="g">票据贴现</span>周转。存单有到期日，受限资金含法定准备金，成员存款是偿还义务；既把利息计入常态盈利，就不再给全部存款加一遍股权价值。</p><p>H1后至报表批准日发行5期超短融、累计450亿元，是滚动融资而非新增财富。短债市场、票据结算与资产回收决定续借能力；周转需求增加可能收紧分红资金条件。</p><div class="plain"><span class="pl">白话解读</span><p>存款扣借款和已知限制后，余钱仍要支持日常经营和到期付款。接下来应看全年收款能否覆盖这些义务，不能把余额都看作待分红款。</p></div></section>
+<section class="reveal on" id="governance" ><div class="slabel">分配与治理</div><h2>回报纪律存在，兑现条件与激励成本也存在</h2><p>分红政策约束资本配置，但董事长减持、员工奖励、关联交易与渠道融资仍需分别检验。股权分散本身并不保证股东利益一致。</p><div class="tblscroll"><table class="tbl txt" ><caption>资本配置与治理｜公告检索截至2026-09-06；金额取披露精度，股份比例不可相互抵销</caption><thead><tr><th>事项</th><th>已披露状态</th><th>对股东的意义</th></tr></thead><tbody><tr><td>FY2025股息</td><td>全年1.38元，末期0.90元于2026-06-05除息派发</td><td>均为历史分配；H1没有中期分红</td></tr><tr><td>FY2025–2027政策</td><td>每年分红≥归母75%，且每股≥1.22元</td><td>已获股东会批准；须满足资金需求和章程，可按程序调整</td></tr><tr><td>新回购方案</td><td>10–20亿元，价格上限39.53元，全部注销</td><td>2026-09-16待表决；通过后6个月内；截至资料日不是执行结果</td></tr><tr><td>普通股与潜在稀释</td><td>期末63.25亿股；两项员工计划为二级市场买股</td><td>无新发普通股假设；回购不先减股数，澳优股份亦不混入</td></tr><tr><td>董事长及地方国资</td><td>8月26日持股3.55% / 8.51%</td><td>H1董事长减持0.98%公司股本，6月末剩余股份质押率51.8%（推算）</td></tr><tr><td>员工第三期 / 长服第六期</td><td>资金2.25 / 2.857亿元；396 / 394人</td><td>各计划所列董事及高管份额29.90%；锁定12个月</td></tr><tr><td>关联奶源与增资</td><td>H1采购优然原料78.45亿元；认购新股10.20亿元</td><td>采购单价及第三方可比价格没有完整披露</td></tr><tr><td>产业链担保</td><td>对外余额21.80亿元，逾期0.48亿元</td><td>经销商融资用于购买伊利产品，销售与信用敞口相关</td></tr></tbody></table></div><p>FY2021–2025归属年度已实施股息依次为61.44、66.21、76.39、77.17、87.29亿元，合计368.50亿元；减已核实2021年定增净融资120.41亿元，差额248.10亿元。此差额不含回购及未核实其他发行，并非完整五年净资本回报。另据年报，FY2023–2025股息与注销回购合计260.92亿元，其中注销回购20.07亿元；不与前组重复相加。</p><p>回购金额按现价可对应0.59%–1.18%股本，但执行与注销尚待发生，不计基础回报；高价回购还可能损害留存股东的每股价值。</p><p>计划资金不是本期股份支付费用，H1相关附注为不适用。2023年计划按前两年经审计扣非利润的正增量提取30%奖励，非正则不提取；低基数反弹也会触发，未直接考核资本回报。9月5日公告只批准日常管理规则，不是授股或购股完成。</p><p>公司解释董事长减持用于偿还质押融资；后续减持与质押变化仍需核验，不与公司回购简单抵销。优然采购缺少数量及可比单价，尚不足以认定关联交易不公允。担保则让经销商进货与信用敞口相连，应验证回收而非只看融资促成的销售。</p><p>澳优于7月20日完成出售Amalthea的35%权益，仍控股并表，权益交易不确认处置损益；附带长期供应与有条件回售安排，保留潜在现金义务，不能当作下半年利润增量。澳优上市市值不另加进母集团价值。</p><div class="plain"><span class="pl">白话解读</span><p>股息政策给出了分配方向，回购还只是待投票的方案；员工买入现有股不产生新股稀释，但奖励会消耗经济资源。后续要看分红批准、注销结果及激励成本，不能只把所有“买股”都读作同一种利好。</p></div></section>
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="分部加总估值"><div class="slabel">估值与预期</div><h2>价格接近基准，长期增长尚需证明</h2><p>主方法为<span class="g">分部加总估值</span>（SOTP）。四类业务风险不同，未披露分部营业利润，故采用归母分摊假设而非子公司出售价格。终点2027-09-04，现值折回2026-09-04，含一次假设股息。</p><div class="grid"><div class="cell"><div class="k">现价</div><div class="v">26.86元</div><div class="d"><span>2026-09-04 15:30:55 北京时间</span></div></div><div class="cell"><div class="k">熊市</div><div class="v">18.2元</div><div class="d"><span>−32.3% · 主方法</span></div></div><div class="cell"><div class="k">基准</div><div class="v">26.5元</div><div class="d"><span>−1.2% · 业务倍数接近同业，是最敏感输入</span></div></div><div class="cell"><div class="k">牛市</div><div class="v">34.6元</div><div class="d"><span>+28.8% · 主方法</span></div></div><div class="cell"><div class="k">隐含预期</div><div class="v">9.21%</div><div class="d"><span>常态利润占收入比例；扣除费用等后归伊利股东</span></div></div><div class="cell" data-verdict="neutral-cautious"><div class="k">判断</div><div class="v">中性偏谨慎</div><div class="d"><span>等待验证 · 估值输入低置信度</span></div></div></div><div class="steps"><div class="step"><div class="n">方法 A</div><b>分部加总估值：不同业务值多少？</b><p>先分配集团盈利，再按各业务的风险估值并加总。</p></div><div class="step"><div class="n">方法 B</div><b><span class="g">股息折现</span>：分配本身够不够？</b><p>只检验成熟增长下的分红价值，不替代主方法，也不把低端结果说成保证底价。</p></div><div class="step"><div class="n">怎么读</div><b>估值与持有回报分开</b><p>现值已经包含假设股息；决策表改用终点股价加实际持有期股息，不重复加息。</p></div></div><h3>第一步 · 报表倍数不等于正常化倍数</h3><p>Wind收盘价对应TTM市盈率（PE）16.783倍、最近期市净率（PB）约3.163倍；PE比较股价与每股盈利，PB比较股价与每股净资产。用本期归母权益和股数核算PB为3.163倍，口径基本相符。五年（2021-09-06至2026-09-04）PE区间11.12–30.14倍，中位20.37倍，Wind区间分位35.62%；PB区间2.57–7.70倍，中位3.41倍，分位20.83%。历史估值较低可以是质量或增长下修，不自动意味着回归历史中位。</p><p>现价相对既有每股股息的历史收益率为5.14%（推算），但那些股息已经派发。Wind仅提供预测PE15.696倍，没有说明对应财年、机构数与更新时间；本文不把倒推EPS称为一致预期，不填入来源不明的市场预测。</p><h3>第二步 · 同业是分层参照，不是统一目标倍数</h3><div class="tblscroll"><table class="tbl txt" ><caption>来源：Wind，2026-09-04；A股15:30、港股16:08 北京时间/香港时间；倍数无币种；H1为各公司累计标准化口径，未作会计准则及减值统一调整</caption><thead><tr><th>公司与层次</th><th>TTM PE</th><th>PB</th><th>H1收入同比</th><th>H1归母同比</th><th>可比边界</th></tr></thead><tbody><tr><td>伊利股份</td><td>16.78</td><td>3.16</td><td>+4.1%</td><td>−20.0%</td><td>本集团中国会计准则，包含澳优损失</td></tr><tr><td>蒙牛乳业 · 综合乳业</td><td>32.77</td><td>1.51</td><td>+7.77%</td><td>+15.94%</td><td>最接近业务；TTM与预测倍数差距大</td></tr><tr><td>新乳业 · 液奶参照</td><td>16.77</td><td>3.79</td><td>+5.20%</td><td>+17.24%</td><td>低温与区域结构，不直接等同全国常温乳</td></tr><tr><td>中国飞鹤 · 婴配参照</td><td>12.57</td><td>0.92</td><td>+2.32%</td><td>−16.30%</td><td>奶粉集中度更高，跨市场折价因素不同</td></tr></tbody></table></div><p>三个正PE参照的中值为16.77倍（推算）。液奶接近中值、粉类接近飞鹤、冷饮享有限溢价，不把蒙牛高倍数推广到全部业务。</p><h3>第三步 · 先约束合并利润，再拆业务价值</h3><div class="tblscroll"><table class="tbl txt" ><caption>分析假设｜一年终点2027-09-04；情景股数不变，回购收益为零；不是获批预测</caption><thead><tr><th>驱动 / 输出</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据</th></tr></thead><tbody><tr><td>营业收入增长假设</td><td>1%</td><td>4%</td><td>7%</td><td>参照H1温和增长，分别代表增长收窄、延续及扩大；基期TTM</td></tr><tr><td><span class="g">正常化归母净利率</span></td><td>7.5%</td><td>9.1%</td><td>10.0%</td><td>取五年利润率低端至FY2025附近；不机械加回税前商誉损失</td></tr><tr><td>推算收入 / 归母（亿元）</td><td>1,193.7 / 89.5</td><td>1,229.2 / 111.9</td><td>1,264.6 / 126.5</td><td>未来持续年化水平，不是公司指引或单季乘四</td></tr><tr><td><span class="g">毛利以下净负担</span>（亿元）</td><td>326.1</td><td>316.1</td><td>313.9</td><td>正常化毛利减归母；将费用、金融/其他收益、税与少数股东合并为净负担，按收入分摊</td></tr><tr><td>液奶 / 粉类 / 冷饮倍数</td><td>14.45 / 11.05 / 15.30</td><td>17.00 / 13.00 / 18.00</td><td>19.55 / 14.95 / 20.70</td><td>基准17/13/18倍分别锚液奶同业、婴配风险、冷饮成长；熊牛统一±15%</td></tr><tr><td>其他成本资本化因子</td><td>8.5</td><td>10.0</td><td>11.5</td><td>负分摊盈利视作持续成本扣减，不赋予新业务成长价值</td></tr><tr><td>综合倍数 / 隐含持续增长</td><td>13.30 / 4.86%</td><td>15.68 / 4.72%</td><td>18.05 / 4.34%</td><td>按75%稳态派息关系反推；各分部对应增长见附录，非已实现增速</td></tr><tr><td><span class="g">股权成本</span>（Ke）</td><td>10.5%</td><td>9.5%</td><td>8.5%</td><td>一年贷款市场报价利率3%与披露短融票息仅作债务成本参照；股权需更高风险补偿，非统计资本定价模型</td></tr><tr><td>FY2026归母 / 假设每股股息</td><td>96亿元 / 1.220元</td><td>110亿元 / 1.304元</td><td>120亿元 / 1.423元</td><td>归母低于/接近FY2025；政策维持且资金条件满足，取1.22元与75%派息孰高</td></tr><tr><td>SOTP现值（元/股）</td><td>18.2</td><td>26.5</td><td>34.6</td><td>一年终值折现＋2027年6月假设股息现值</td></tr><tr><td>股息折现交叉值（元/股）</td><td>12.9</td><td>17.7</td><td>23.0</td><td>同一短期股息；成熟增长2%取低个位数收入背景，不将恢复期永久化</td></tr></tbody></table></div><p>按收入分配共同费用参考公司原则；税和少数股东同样分配则是分析假设。股息折现较低，说明主方法依赖更高的长期增长，不能把两法平均。</p><div class="steps chain"><div class="step"><div class="n">经营驱动</div><b>增长扩大但不激进</b><p>基准收入延续温和修复，粉类不再反复清库。</p></div><div class="step"><div class="n">收入 / 净利率</div><b>1,229.2亿元 / 9.1%</b><p>参照TTM与历史利润率，均为分析假设。</p></div><div class="step"><div class="n">归母盈利</div><b>111.9亿元</b><p>毛利以下净负担按收入分摊；不是披露分部利润。</p></div><div class="step"><div class="n">业务倍数</div><b>15.68倍</b><p>由三项业务倍数及其他成本加总；参照同业。</p></div><div class="step"><div class="n">每股现值</div><b>26.5元</b><p>一年折现，含一次假设股息，与价格阶梯相同。</p></div></div><div class="tblscroll"><table class="tbl sgrid"><caption>行：正常化归母净利率（%）；列：分部倍数整体系数（倍）；格内为元/股。固定基准收入、毛利结构、折现与股息；蓝框基准、粉底现价隐含</caption><thead><tr><th>净利率＼倍数系数</th><th>0.85</th><th>1.00</th><th>1.15</th></tr></thead><tbody><tr><td>7.50%</td><td>18.9</td><td>22.1</td><td>25.2</td></tr><tr><td>9.10%</td><td>22.7</td><td class="base">26.5</td><td>30.3</td></tr><tr><td>9.21%</td><td>23.0</td><td class="implied">26.9</td><td>30.7</td></tr><tr><td>10.00%</td><td>24.9</td><td>29.1</td><td>33.2</td></tr></tbody></table></div><p class="small">利润率与倍数主导价值，颜色不代表概率；现价格按未舍入净利率计算，单变量比较见附录。</p><div class="ffield" aria-label="SOTP与股息折现比较"><div class="frow"><div class="fnm">分部加总估值<span>熊市</span></div><div class="ftrack"><div class="fbar alt" style="left:26.9333%;width:0.8000%"></div><div class="fmark" style="left:56.2000%"></div></div><div class="fig">18.2元</div></div><div class="frow"><div class="fnm">分部加总估值<span>基准</span></div><div class="ftrack"><div class="fbar " style="left:54.6000%;width:0.8000%"></div></div><div class="fig">26.5元</div></div><div class="frow"><div class="fnm">分部加总估值<span>牛市</span></div><div class="ftrack"><div class="fbar moss" style="left:81.6000%;width:0.8000%"></div></div><div class="fig">34.6元</div></div><div class="frow"><div class="fnm">股息折现<span>熊市至牛市</span></div><div class="ftrack"><div class="fbar " style="left:9.6667%;width:33.6667%"></div></div><div class="fig">12.9–23.0元</div></div><div class="frow"><div class="fnm">历史PE参照<span>低点至中位×当前TTM盈利</span></div><div class="ftrack"><div class="fbar alt" style="left:26.0000%;width:49.3333%"></div></div><div class="fig">17.8–32.6元</div></div></div><p class="small">成熟股息增长给出的估值低于业务恢复假设，分歧不能当作底部保证。横轴：人民币10–40元/股；黑线为现价。历史PE参照只是当前盈利在旧倍数下的映射，不是主方法或价值下限。</p><h3>第四步 · 现价要求持续利润率略高于基准</h3><div class="tblscroll"><table class="tbl txt" data-fullscan-role="implied"><caption>每行只改变所列输入，其余保持基准；股息已纳入现价反推，不再额外加息</caption><thead><tr><th>主方法假设</th><th>基准假设</th><th>现价隐含</th><th>差距</th></tr></thead><tbody><tr><td>归母净利率</td><td>9.10%</td><td>9.21%</td><td>0.11pp</td></tr><tr><td>分部倍数整体系数</td><td>1.000倍</td><td>1.012倍</td><td>+1.2%</td></tr><tr><td>综合持续增长</td><td>4.72%</td><td>4.78%</td><td>0.06pp</td></tr></tbody></table></div><div class="rows" aria-label="主方法每股现值与现价"><div class="row"><div class="nm">熊市<span>修复延后</span></div><div class="track"><div class="fill alt" style="width:52.6012%"></div></div><div class="fig">18.2元<span>−32.3%</span></div></div><div class="row"><div class="nm">现价<span>2026-09-04收盘</span></div><div class="track"><div class="fill soft" style="width:77.6301%"></div></div><div class="fig">26.86元<span>0.0% · 市场价</span></div></div><div class="row"><div class="nm">基准<span>温和恢复</span></div><div class="track"><div class="fill " style="width:76.5896%"></div></div><div class="fig">26.5元<span>−1.2%</span></div></div><div class="row"><div class="nm">牛市<span>增长变宽</span></div><div class="track"><div class="fill moss" style="width:100.0000%"></div></div><div class="fig">34.6元<span>+28.8%</span></div></div></div><p class="small">基准接近现价，向下距离较大。条宽按显示值归一，百分比按未舍入估值对现价；含息持有回报见决策表。</p><div class="plain"><span class="pl">一句话总结</span><p>现价26.86元已接近26.5元的基准值。要获得更高估值，不只是少提减值，还要保持正常化利润率并兑现持续增长；下一份品类与现金数据将决定是否值得相信这个假设。</p></div></section>
+<section class="reveal on" id="valuation-appendix" ><div class="slabel">估值机制附录</div><h2>每股价值只加一次股息，分摊不冒充披露</h2><p>主方法的终点是未来持续盈利能力，不是季度年化：情景收入＝TTM收入×(1＋增长率)；归母＝情景收入×净利率。各分部毛利按同一增收比例外推，毛利以下净负担＝毛利合计−归母；各分部分摊收益＝分部毛利−净负担×分部收入占比。净负担已包括税、少数股东、金融收益与总部成本的合并净结果，不再单独叠加资产、减一次债或乘一次澳优持股比例。</p><p>这是一种可复算的分摊代理：财报虽说共同费用按收入分配，却没有披露分部归母、税和少数股东。基准液奶、粉类、冷饮、其他分摊收益分别为53.49 / 50.64 / 13.65 / −5.92亿元；其和为111.86亿元。其他负值只是该分摊下的成本抵减，不是公司披露的其他分部亏损。若将归母利润池10个百分点从液奶移到粉类、合并利润不变，现值变化−0.65元，反映分摊可信度对结果的影响。</p><p>按各参数熊牛端点一次只改变一项，倍数、净利率、收入增长及股权成本的价值跨度依次为7.60 / 7.02 / 1.46 / 0.48元，故敏感度网格取前两项。历史PE映射为五年低点或中位倍数乘TTM每股归母，结果为17.8–32.6元。缺少可用的国债收益率及统计贝塔；历史短融票息1.48%与1.50%所属债券均已在H1偿还，只作债务成本参照，不当作当前边际融资成本。</p><p>SOTP现值＝Σ(分摊归母×各分部倍数)÷股数÷(1＋Ke)^1年＋每股假设股息÷(1＋Ke)^0.75年。股息假设于2027年6月支付，日期尚待宣派；政策维持且资金条件满足时，取1.22元与FY2026情景归母×75%÷股数的较大值。股息现值已进入六格，不可再次加到现值收益；终值为支付该股息后的权益价值；持有回报用“未折现终值＋期间股息”相对买价，股息不再投资。平衡价＝(熊市<span class="g">终点财富</span>＋基准终点财富)÷2，是本情景组的性质。</p><p>股息折现另计FY2027：假设该年归母达到情景常态水平、政策与资金条件维持，股息取每股常态盈利×75%与1.22元孰高，于2028年6月支付。2029年6月起改为成熟期：首笔＝常态每股盈利×75%×(1＋2%)，其后每年增长2%；政策届满后延续75%是分析假设，不永久承诺每股下限。各支付日期尚未宣布。现值＝FY2026股息现值＋[FY2027股息＋首笔成熟股息÷(Ke−g)]÷(1＋Ke)^1.75；基准结果＝17.74元。</p><p>稳态关系PE＝派息率÷(Ke−g)，用于检验倍数所需增长而不是额外加一层成长。液奶、粉类、冷饮在熊市隐含增长为5.31 / 3.71 / 5.60%，基准为5.09 / 3.73 / 5.33%，牛市为4.66 / 3.48 / 4.88%；其他是成本资本化，增长关系不适用。基准综合隐含增长4.72%，在25%留存下要求持续ROE约18.9%。股息折现改用2%成熟增长，并让长期派息维持75%，因此基准低于SOTP33.2%；差异要求经营增长验证，不能用“高股息”自动抹平。</p><div class="tblscroll"><table class="tbl txt" data-fullscan-role="derivations"><caption>承重推导｜计算使用原始精度，表中舍入显示；金额亿元、股数亿股，每股元</caption><thead><tr><th>数值</th><th>输入</th><th>公式</th><th>来源（页·附注）</th></tr></thead><tbody><tr><td>回款与采购付款增量合计 41.53亿元</td><td>销售回款增14.01亿元＋采购付款降27.52亿元</td><td>销售回款增加＋采购付款减少 ＝ 41.53</td><td>2026H1合并现金流pp52–53；2026Q1及2025Q1 pp9–10</td></tr><tr><td>SOTP熊市现值 18.17元/股</td><td>终值1,191.10亿元；股息现值1.132元；Ke10.5%</td><td>熊市终值/股÷1.105＋股息现值 ＝ 18.17</td><td>本节及情景表假设；分部FY2025p238、2026H1p199、2025H1p196；股数H1p156附注53；股息政策见治理；Wind现价</td></tr><tr><td>熊市一年持有回报 −25.35%</td><td>终点财富20.051元，含股息1.220元</td><td>(熊市终值/股＋期间股息)÷26.86−1 ＝ −25.35</td><td>本节及情景表假设；分部FY2025p238、2026H1p199、2025H1p196；股数H1p156附注53；股息政策见治理；Wind现价</td></tr><tr><td>SOTP基准现值 26.54元/股</td><td>终值1,754.12亿元；股息现值1.218元；Ke9.5%</td><td>基准终值/股÷1.095＋股息现值 ＝ 26.54</td><td>本节及情景表假设；分部FY2025p238、2026H1p199、2025H1p196；股数H1p156附注53；股息政策见治理；Wind现价</td></tr><tr><td>基准一年持有回报 8.10%</td><td>终点财富29.036元，含股息1.304元</td><td>(基准终值/股＋期间股息)÷26.86−1 ＝ 8.10</td><td>本节及情景表假设；分部FY2025p238、2026H1p199、2025H1p196；股数H1p156附注53；股息政策见治理；Wind现价</td></tr><tr><td>SOTP牛市现值 34.60元/股</td><td>终值2,282.55亿元；股息现值1.338元；Ke8.5%</td><td>牛市终值/股÷1.085＋股息现值 ＝ 34.60</td><td>本节及情景表假设；分部FY2025p238、2026H1p199、2025H1p196；股数H1p156附注53；股息政策见治理；Wind现价</td></tr><tr><td>一年平衡价 24.54元/股</td><td>熊市20.051元；基准29.036元</td><td>(熊市终点财富＋基准终点财富)÷2 ＝ 24.54</td><td>本节及情景表假设；分部FY2025p238、2026H1p199、2025H1p196；股数H1p156附注53；股息政策见治理；Wind现价</td></tr><tr><td>现价隐含倍数系数 1.012倍</td><td>现价26.86；基准股息现值1.218元；基准终值1,754.12亿元</td><td>(现价−基准股息现值)×折现还原因子÷基准终值/股 ＝ 1.012</td><td>本节及情景表假设；分部FY2025p238、2026H1p199、2025H1p196；股数H1p156附注53；股息政策见治理；Wind现价</td></tr><tr><td>现价隐含净利率 9.21%</td><td>净利率9.1%；终值每1pp影响194.50亿元</td><td>基准净利率＋所需终值增量÷每百分点利润率的终值影响 ＝ 9.21</td><td>本节及情景表假设；分部FY2025p238、2026H1p199、2025H1p196；股数H1p156附注53；股息政策见治理；Wind现价</td></tr><tr><td>Q2营业利润差额 −17.61亿元</td><td>两期Q2营业利润10.86 / 28.47亿元</td><td>毛利与各费用、减值和其他项目影响加总 ＝ −17.61</td><td>2026H1合并利润表pp49–50；2026Q1及2025Q1 pp7–8</td></tr></tbody></table></div><p class="small">精确分母6,325,360,667股（2026-06-30），两项员工计划二级市场买股不增加此数；回购计划不提前扣减。资产/负债分部表存在内部抵销，不按分部资产相加增厚SOTP。收入成本分部行可合计到营业收入，金融业务利息收入在毛利以下合并净负担中处理。</p><div class="plain"><span class="pl">白话解读</span><p>各业务先共同承受费用、税和融资，剩余才归伊利股东。利润更多来自低倍数的粉类时，同样的集团利润会对应更低价值；后续分部盈利与澳优表现将检验这一分配。</p></div></section>
+<section class="reveal on" id="risks" ><div class="slabel">风险与验证</div><h2>增长、回款和分配必须同时经得起核验</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="risk-register"><caption>按论点受损程度排序；概率为分析师定性等级，非统计发生率；数值阈值均为情景或核验指标</caption><thead><tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr></thead><tbody><tr><td>1</td><td>核心增长不恢复</td><td>2026Q2液奶近乎持平、粉类下降</td><td>促销或成本回升挤压正常化净利率</td><td>熊市假设净利率7.5%，对应主方法18.2元</td><td>中高：已有结构性压力，不是概率测算</td><td>2026Q3：液奶、粉类收入同比能否同时转强</td></tr><tr><td>2</td><td>澳优继续清库或亏损</td><td>2026H1有库存及商誉损失；公司称H2有望扭亏</td><td>毛利与后续投入低于模型，收购资本继续受损</td><td>剩余商誉不是全部风险；库存、运营资产和未来支出无法由母集团分部披露精确拆分</td><td>中：扭亏是管理层预期</td><td>FY2026：澳优盈利、存货减值及经营现金能否改善</td></tr><tr><td>3</td><td>回款变慢与金融周转收紧</td><td>2026-06-30应收增长快于收入，存在担保逾期</td><td>利润不变但现金回吐，融资与分红资金约束上升</td><td>对外担保21.80亿元，逾期0.48亿元；未将静态存款余量计入估值</td><td>中：高周转融资使现金时点重要</td><td>2026Q3及FY2026：应收、票据、现金与融资到期结构</td></tr><tr><td>4</td><td>分配承诺与激励不匹配</td><td>2026-09-06回购仍待审批；员工计划存在</td><td>现金在分红、奖励与投资间竞争，注销未兑现</td><td>一年股息为情景假设，未计任何回购收益；政策可依法调整</td><td>中低：政策已批准但有资金条件</td><td>2026-09-16表决、FY2026分红提案及后续注销公告</td></tr><tr><td>5</td><td>SOTP分摊与持续增长估错</td><td>2026H1没有披露分部归母；主方法与股息折现不同</td><td>业务盈利归属或持续增长较低，倍数溢价不能成立</td><td>将利润池10pp从液奶移至粉类，基准现值变化−0.65元（假设）</td><td>中：估值输入是最弱支柱</td><td>FY2026分部成本与澳优单体资料；等待更细利润披露</td></tr></tbody></table></div><div class="plain"><span class="pl">白话解读</span><p>核心增长与回款若同时走弱，会一起压低盈利、分红能力和估值。下个季度先看品类增长与信用条件；若不放松账期仍能扩大增长，应上修谨慎判断。</p></div><div class="tline"><div class="tstop"><span class="tw">2026-09-16</span><b>回购从方案走向授权</b><p>批准不是完成；之后继续核验实际价格与注销。</p></div><div class="tstop warn"><span class="tw">2026Q3</span><b>检验增长是否变宽</b><p>核心品类与回款同向改善；若只靠赊销增收，下修判断。</p></div><div class="tstop warn"><span class="tw">FY2026</span><b>验收盈利、现金与分红</b><p>澳优恢复、全年现金转换与分红资金条件必须同时经得起检验。</p></div></div></section>
+<section class="reveal on" id="decision" data-fullscan-role="decision"><div class="slabel">最终判断</div><h2 data-verdict="neutral-cautious">中性偏谨慎：等待经营证据，少预付一轮恢复</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="decision-block"><tbody><tr><td>论点</td><td>主业没有随减值同步坍塌，但增长广度与现金持续性尚未证明，价格没有留下充分的下行情景补偿。</td></tr><tr><td>基准对一致预期</td><td>无一致预期：不把期限不明的预测PE当完整市场预测。基准正常化归母111.9亿元；现价反推净利率9.21%略高于基准，见隐含预期表。</td></tr><tr><td>赔率</td><td>一年主方法终点财富（不是现值再加息）：熊市−25.4%，基准+8.1%；均含各自期间股息，基准上行小于熊市下行。</td></tr><tr><td>平衡价</td><td>24.54元：熊市与基准在同一持有期、含股息后上行与下行相等的价格，只是本报告情景性质。</td></tr><tr><td>持有回报</td><td>2026-09-04至2027-09-04：假设FY2026每股股息熊市1.22 / 基准1.30 / 牛市1.42元，分别为现价的4.54% / 4.86% / 5.30%；假设2027年6月支付，回购收益计零，政策需维持且满足资金条件。</td></tr><tr><td>分项置信度</td><td>论点证据 中（会计来源清晰，终端动销不足）；估值输入 低（分部收益分摊、持续增长）；现金与资产负债表 中（金融业务周转边界）；治理 中（政策与激励并存）。改善最低项的观察点：FY2026更细分部盈利及澳优利润、现金兑现。</td></tr><tr><td>判断</td><td>中性偏谨慎（等待验证）。基准现值仅略低于现价、差距小于模型不确定性，不据此机械定负面；但含股息赔率明显偏向下行，下一核验点为2026Q3。</td></tr></tbody></table></div><div class="callout"><b>最强反方观点：</b>原奶供需改善、液奶渠道调整与澳优清库可能同步完成，较高ROE和派息纪律足以支持持续增长；分部费用若并非按本模型分摊，恢复价值还可能更高。<b>失败边界：</b>如果核心品类与回款同时改善，当前谨慎判断需要上修；若利润只因少提减值上升、终端需求和现金仍弱，“减值能出清，回报不能预支”依然成立。</div></section>
+<section class="reveal on" id="glossary" ><div class="slabel">名词速查</div><h2>先认清口径，再读每股价值</h2><div class="tblscroll"><table class="tbl gloss" ><thead><tr><th>术语</th><th>本报告中的含义</th></tr></thead><tbody><tr><td>推算单二季度</td><td>半年累计减一季累计，两端采用同一范围；只适用于期间流量，不相减每股收益、ROE或余额。</td></tr><tr><td>营业总收入</td><td>营业收入之外还含金融业务利息收入，不能用它替代乳品毛利的分母。</td></tr><tr><td>扣非归母</td><td>按监管定义扣除非经常性项目的归母利润；本期很多减值仍留在其中。</td></tr><tr><td>商誉</td><td>收购价高于可辨认净资产的差额；减值承认原先的未来收益预期受损。</td></tr><tr><td>资产组</td><td>减值测试中共同产生现金流的业务资产集合，采用的增长和折现率属于估计。</td></tr><tr><td>进货与动销</td><td>公司卖给渠道，与消费者真正购买；前者可以由库存或信用条件暂时推动。</td></tr><tr><td>自由现金流代理（FCF）</td><td>经营现金流减购建长期资产的现金，未区分维持性与扩张性开支，不是全额可分配现金。</td></tr><tr><td>营运资本</td><td>经营周转中的应收、库存、应付和预收款等；账面变化还会受非现金减值影响。</td></tr><tr><td>票据贴现</td><td>把未到期票据提前换成现金；仍需看有无追索义务及借款，不能只计现金不看债务。</td></tr><tr><td>分部加总估值（SOTP）</td><td>分业务估计归母收益并按不同倍数计算，再合计到每股；这里的收益分配是分析假设。</td></tr><tr><td>毛利以下净负担</td><td>毛利到归母之间所有费用、金融及其他收益、税和少数股东的净影响，不是独立披露的总部费用。</td></tr><tr><td>股权成本（Ke）</td><td>长期股东要求的回报，用于把未来价值折回今天；短期借款利率不是股权成本。</td></tr><tr><td>股息折现（DDM）</td><td>以股东未来获得的股息计算现值；长期增长较低时，结果也会低于恢复情景。</td></tr><tr><td>正常化归母净利率</td><td>跨过特定损失和周期后的持续归母盈利占收入比例，是模型假设而不是公司调整指标。</td></tr><tr><td>终点财富</td><td>同一持有期末的股票价值加期间股息；与已包含股息的现值是不同口径。</td></tr><tr><td>静态审慎余量代理</td><td>存款减已识别借款、受限资金、成员存款及租赁后的分析余额，仍未解决全部周转与或有义务。</td></tr></tbody></table></div></section><footer><p>数据截止：财务2026-06-30；公司公告2026-09-06；行情2026-09-04收盘（伊利15:30:55北京时间，港股同业16:08香港时间）。</p><p>来源：<a href="https://pdf.dfcfw.com/pdf/H2_AN202204271561966385_1.pdf">FY2021原始报告</a>；<a href="https://pdf.dfcfw.com/pdf/H2_AN202304271585981444_1.pdf">FY2022原始报告</a>；<a href="https://pdf.dfcfw.com/pdf/H2_AN202404291631616906_1.pdf">FY2023原始报告</a>；<a href="https://pdf.dfcfw.com/pdf/H2_AN202504291664547593_1.pdf">FY2024原始报告</a>；<a href="https://www.yili.com/uploads/2026-04-30/85ed8e5f-8d6f-49b4-9f10-c5d217f83ff31777526591734.pdf">FY2025原始报告</a>；<a href="https://www.yili.com/uploads/2026-08-26/8db5348e-cff5-4d47-b2e5-ede9428915a41787739158906.pdf">2026H1原始报告</a>；<a href="https://www.yili.com/uploads/2026-04-30/f55be7d8-cac0-4540-9bb8-0dce0e7f8fe51777526693097.pdf">2026Q1原始报告</a>；<a href="https://www.yili.com/uploads/2025-08-28/501a4412-a5b8-47fa-ae5f-3ce48eadb2911756372681806.pdf">2025H1原始报告</a>；<a href="https://www.yili.com/uploads/2025-04-29/7ad346a3-539f-4672-b12a-17639f60a1e81745927158093.pdf">2025Q1原始报告</a>；<a href="https://pdf.dfcfw.com/pdf/H2_AN202511171783063144_1.pdf">股东回报规划</a>；<a href="https://pdf.dfcfw.com/pdf/H2_AN202605201822500519_1.pdf">股东会批准</a>；<a href="https://pdf.dfcfw.com/pdf/H2_AN202605281822947781_1.pdf">分红实施</a>；<a href="https://pdf.dfcfw.com/pdf/H2_AN202608261828487282_1.pdf">回购方案</a>；<a href="https://pdf.dfcfw.com/pdf/H2_AN202608311828816560_1.pdf">8月27日官方问答</a>；<a href="https://pdf.dfcfw.com/pdf/H2_AN202604291821755621_1.pdf">员工计划</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600669_c.pdf">澳优中期业绩</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0714/2026071400655_c.pdf">Amalthea交易</a>。其他经营及持有人公告见<a href="https://www.yili.com/investors">伊利投资者关系档案</a>。数据来源于万得 Wind 金融数据服务；仅市场及同业对照采用其标准化口径。</p><p>审计状态：五个完整财年均经审计，2026H1与Q1及同比中期基数未经审计；Q2/TTM推算、管理层判断及估值假设分别标示，股息以实施记录为准。</p><p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p></footer></main><script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els = document.querySelectorAll('.reveal');
@@ -762,6 +315,4 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
   els.forEach(function(e){ io.observe(e); });
 })();
-</script>
-</body>
-</html>
+</script></body></html>
