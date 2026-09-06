@@ -417,15 +417,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "现金流仍强，但利润回落、中期分配中断与算力回报未披露，使低估值必须靠末期股息和费用回落验证。",
-      "verdict": "中性",
-      "verdict_code": "neutral",
+      "hook": "利润修复不等于恢复分红；实际资产付款与末期分配，决定低估值能否转成股东回报。",
+      "verdict": "负面",
+      "verdict_code": "negative",
       "published": "2026-08-21",
       "published_at": "2026-08-21T04:26:14-04:00",
-      "revised": "2026-08-29",
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-06",
+      "revision": {
+        "date": "2026-09-06",
+        "note": "补充实际资产付款与公司资本开支的差异，统一股息估值及持有期口径，刷新市场数据，并重核季度、分部和管理层承诺的边界。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
