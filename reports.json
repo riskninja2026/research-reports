@@ -928,15 +928,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "公司端减产与成品库存下降尚未证明渠道出清；拆解单二季度利润和现金断层、分红约束，以及除息后价格对应的三情景估值边界。",
+      "hook": "发货收缩与扫码稳定形成分歧，现价取决于复苏后的盈利和留存资金回报，而非永久保底股息。",
       "verdict": "中性偏谨慎",
       "verdict_code": "neutral-cautious",
       "published": "2026-08-26",
       "published_at": "2026-08-26T01:46:57-04:00",
-      "revised": "2026-08-29",
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-06",
+      "revision": {
+        "date": "2026-09-06",
+        "note": "按最新版Fullscan重建五年财务与产品地图，纳入8月官方交流及最新市场数据，统一主估值、股利时点和含息赔率。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
