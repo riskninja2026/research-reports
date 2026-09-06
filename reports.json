@@ -1508,15 +1508,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "先用三十秒结论与生意入门定位矛盾，再拆解第三方毛利、量价结构、直营迁移、海外增量、关联交易、现金缺口与估值梯尺。",
-      "verdict": "中性",
-      "verdict_code": "neutral",
+      "hook": "第三方毛利修复有依据，费用与现金仍约束高派息，低倍数尚未完全抵消熊市损失。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
       "published": "2026-08-25",
       "published_at": "2026-08-25T22:22:13-04:00",
-      "revised": "2026-08-29",
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-06",
+      "revision": {
+        "date": "2026-09-06",
+        "note": "更新行情、同行与治理资料，重建五年现金和股份核对，采用唯一正常化市盈率法及同期限分红情景；保留半年口径和当前现金流缺口。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
