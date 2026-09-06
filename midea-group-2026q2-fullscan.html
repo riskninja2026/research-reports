@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:,">
-<title>美的集团 2026年中期及单二季度 Fullscan 全景尽调</title>
-<style>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="data:,"><title>美的集团 2026H1及推算Q2 Fullscan 全景尽调</title><style>
 :root{
   --paper:#EDEFF2;
   --card:#F8F9FB;
@@ -253,482 +246,102 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
 .tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
 .tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
-</style>
-</head>
-<body>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">美的集团 000333.SZ · 0300.HK ｜ 全景尽调 ｜ 财务截至 2026.06.30 · 行情截至 2026.08.28 收盘</div>
-    <h1>利润表被汇率撕成两半，<br>现金回报机器还在运转</h1>
-    <p class="lede">收入创同期新高、归母利润微增、中期照常分红——表面是一份平稳的中报。<b>但扣除非经常性损益后的利润大幅下滑，其中大部分来自"汇兑损失计入经常、对冲收益计入非经常"的会计错位，另有一笔商誉减值；而归母的微增里，还托着一块与汇率无关的投资浮盈。</b>经营引擎没有失速；真正的问题是，估值已站上自身五年高位，向上要靠B端与海外兑现，向下的底则由分红加注销式回购托住。</p>
-
-    <div class="dual">
-      <div>
-        <div class="tag">FY2025 股息+回购 / 市值 · 推算</div>
-        <div class="big a">6.7%</div>
-        <div class="cap">按2026-08-28市值计，去年全年现金分红加股份回购合计接近当年归母净利润的全部。</div>
-      </div>
-      <div>
-        <div class="tag">单二季度扣非归母同比 · 推算</div>
-        <div class="big b">−36%</div>
-        <div class="cap">汇率错位与减值集中砸在二季度扣非口径上——读懂这个数，才读懂这份中报。</div>
-      </div>
-    </div>
-  </div>
-</header>
-
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
+</style></head><body><header class="hero"><div class="wrap">
+<div class="eyebrow">美的集团 000333.SZ · 0300.HK ｜ 全景尽调 ｜ 财务截至 2026.06.30 · 行情截至 2026.09.04 收盘</div>
+<h1>经营有韧性，<br>利润与回购都不能照单全收</h1>
+<p class="lede">收入继续增长，归属于母公司股东的利润微增，美的仍有制造规模与全球渠道优势。<b>但投资浮盈帮助了利润，回购也尚未全部转化为股本减少。</b>持续经营所得、金融项目和实际资本返还，应分开判断。</p>
+<div class="dual"><div><div class="tag">上半年经营现金 / 归母利润 · 推算</div><div class="big a">1.42倍</div><div class="cap">现金对盈利有覆盖，但合并现金流还包含财务业务，不能等同纯工业可分配现金。</div></div><div><div class="tag">归母与扣非同比增速差 · 推算</div><div class="big b">27.0pp</div><div class="cap">pp即百分点。两类利润同比读数分化；需要回到各项损益的性质，而不是挑选更好看的口径。</div></div></div></div></header>
 <main class="wrap">
-
-<section class="reveal on" id="tldr">
-  <div class="slabel">三十秒版本 · 先看结论</div>
-  <h2>如果只读一屏，读这里</h2>
-  <div class="tldr">
-    <ul>
-      <li><b>它是谁：</b>全球最大的家电制造商之一：对内是美的、小天鹅、COLMO、华凌，对外是东芝、Comfee，再加上楼宇暖通（含数据中心温控）、库卡机器人和工业部件三条面向企业客户（ToB）的业务线。A股为主、2024年起加挂H股；创始人何享健家族通过美的控股控制。</li>
-      <li><b>本期成绩：</b>上半年营业总收入2610.5亿元（+3.5%），归母净利润264.5亿元（+1.7%），经营现金流375.5亿元。推算单二季度收入约1294.7亿元（+4.5%）。</li>
-      <li><b>最大的坑：</b>扣非归母只有196.0亿元，同比降25.3%。主因不是生意变差：人民币升值让外币敞口的汇兑损失进了"经常"科目，而对冲这些敞口的衍生品收益按规则进了"非经常"——一边扣掉、一边留下。另有<span class="g">商誉减值</span>11.0亿元（并购溢价的一次性核销）。归母与扣非要合在一起读——归母那边的微增，也有权益投资浮盈帮忙。</li>
-      <li><b>结构在换挡：</b>国内零售大盘同比降9.9%的背景下，智能家居收入仍增4.3%；楼宇科技+10.8%、机器人+10.3%接棒增长，工业技术−12.7%拖后腿；海外增速（+5.5%）快于国内（+2.1%），自有品牌（<span class="g">OBM</span>）已占智能家居海外收入一半以上。</li>
-      <li><b>估值结论：</b><b>中性。</b>现价86.23元对应TTM（最近十二个月）市盈率14.9倍，处于自身五年84%分位——不再便宜。基准情景两法区间77.7–105.6元，现价居中；托底是6.7%的股东现金回报率，向上要看B端与海外的持续兑现。</li>
-    </ul>
-  </div>
-</section>
-
-<section class="reveal on" id="primer">
-  <div class="slabel">入门 · 三分钟看懂这门生意</div>
-  <h2>一台"现金返还机"，正在给自己装第二台发动机</h2>
-  <p>美的的主业一句话：把空调、冰箱、洗衣机和小家电卖到全世界，用规模和供应链效率赚制造业里偏高的利润。围绕它还有三条面向企业客户（ToB）的业务线。钱的流向可以这样看：</p>
-  <div class="steps">
-    <div class="step"><div class="n">引擎 1</div><b>家电卖全球</b><p>智能家居业务占收入约三分之二；国内打"数一"战略，海外靠自有品牌（OBM）替代贴牌代工。</p></div>
-    <div class="step"><div class="n">引擎 2</div><b>ToB第二曲线</b><p>楼宇科技（中央空调、数据中心温控）、库卡机器人、工业部件——增速快于家电，但体量仍小。</p></div>
-    <div class="step"><div class="n">底盘</div><b>全球制造网络</b><p>68个主要生产基地中45个在海外，是应对关税与本地化竞争的缓冲垫。</p></div>
-    <div class="step"><div class="n">出口</div><b>现金返还</b><p>赚到的钱以"分红+注销式回购"双通道返还股东——回购后注销股份，每股价值被动增厚。</p></div>
-  </div>
-  <p>读它的报表，先记两件事。第一，<b>会计口径</b>：美的大量使用外汇衍生品对冲全球业务的汇率敞口。人民币波动时，敞口本身的汇兑损益进"经常性"科目，而对冲工具的损益多进"非经常性"——两边本是一对，报表却把它们拆开，<span class="g">扣非归母净利润</span>因此会被汇率单边行情放大或压缩。第二，<b>股权结构</b>：创始人何享健家族通过美的控股持股28.49%（2026-06-30），管理层由方洪波带队；2024年在港交所加挂H股，2026年5月又发行两笔以H股为标的的零息<span class="g">可转债</span>。带<span class="g">虚线下划线</span>的术语见文末名词速查。</p>
-  <p>行业背景：2026上半年国内家电零售市场约4,250亿元、同比下滑9.9%（奥维云网推总口径），而中国家电出口3,609.6亿元、同比增长2.4%——内冷外温。美的在这样的大盘里保持正增长，本身是份额证据；代价是行业性的价格与补贴竞争压在毛利率上。</p>
-</section>
-
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">基础财务 · 合并与分部地图</div>
-  <h2>收入五连增，利润质量却要拆开两个口径看</h2>
-  <p>美的集团是A+H两地上市的制造业集团，报表按中国企业会计准则编制，2026年半年度报告未经审计。业务按智能家居、楼宇科技、机器人与自动化、工业技术及其他业务五个板块披露；收入构成另按行业、产品、地区拆分。以下先给本期总量，再给五年轨迹与分部地图。</p>
-
-  <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">2026H1 营业总收入</div><div class="v">2610.52<span class="u">亿元</span></div><div class="d"><span class="up">同比 +3.5%</span></div></div>
-    <div class="cell"><div class="k">毛利 / 毛利率（推算）</div><div class="v">656.76<span class="u">亿元</span></div><div class="d"><span>同比 +2.1% · 25.26%</span></div></div>
-    <div class="cell"><div class="k">归母净利润</div><div class="v">264.46<span class="u">亿元</span></div><div class="d"><span class="up">同比 +1.7%</span></div></div>
-    <div class="cell"><div class="k">扣非归母净利润</div><div class="v">195.95<span class="u">亿元</span></div><div class="d"><span class="down">同比 −25.3%</span></div></div>
-    <div class="cell"><div class="k">经营活动现金流量净额</div><div class="v">375.52<span class="u">亿元</span></div><div class="d"><span class="up">同比 +0.7%</span></div></div>
-    <div class="cell"><div class="k">自由现金流代理（推算）</div><div class="v">349.18<span class="u">亿元</span></div><div class="d"><span>资本开支26.34亿元</span></div></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026H1每股与回报指标 · EPS＝每股盈利；ROE＝净资产收益率；BVPS＝每股净资产（推算，按期末归母权益÷期末股本）</caption>
-      <thead><tr><th>基本EPS</th><th>稀释EPS</th><th>加权平均ROE（半年未年化）</th><th>扣非加权ROE</th><th>期末BVPS</th></tr></thead>
-      <tbody><tr><td>3.52元</td><td>3.50元</td><td>11.33%</td><td>8.40%</td><td>约27.96元</td></tr></tbody>
-    </table>
-  </div>
-
-  <h3>推算单二季度：收入加速，扣非承压</h3>
-  <p>A股按季披露，单二季度＝上半年累计减一季度累计，两端均为披露值，推算标注如下。</p>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>推算单二季度（2026Q2） · 人民币亿元；由2026H1与2026Q1披露值相减推算</caption>
-      <thead><tr><th>指标</th><th>2026Q2（推算）</th><th>2025Q2（推算）</th><th>同比</th></tr></thead>
-      <tbody>
-        <tr><td>营业总收入</td><td>1,294.72</td><td>1,239.03</td><td>+4.49%</td></tr>
-        <tr><td>归母净利润</td><td>137.71</td><td>135.91</td><td>+1.32%</td></tr>
-        <tr><td>扣非归母净利润</td><td>86.33</td><td>134.86</td><td>−35.98%</td></tr>
-        <tr><td>经营活动现金流量净额</td><td>230.23</td><td>229.60</td><td>+0.27%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>五年合并轨迹</h3>
-  <div class="tblscroll" data-financials="history">
-    <table class="tbl" data-financials="history">
-      <caption>五年合并财务 · FY2021–FY2025；人民币亿元，另有标注除外。FY2021收入/归母/ROE/现金流及五年毛利率序列来源：Wind（标准化口径）；其余取自年报，FY2022收入为Wind营业总收入口径。资本开支为购建固定资产等支付的现金，FY2021–22未在本次证据集；自由现金流代理＝经营现金流−资本开支。Wind毛利率为各年原披露口径：FY2023（26.49%）与2024年报追溯重述后比较数的推算值（25.70%）存在口径差异</caption>
-      <thead><tr><th>项目</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>四年CAGR</th></tr></thead>
-      <tbody>
-        <tr><td>营业总收入</td><td>3,433.61</td><td>3,457.09</td><td>3,737.10</td><td>4,090.84</td><td>4,585.02</td><td>7.5%（推算）</td></tr>
-        <tr><td>销售毛利率（Wind）</td><td>22.48%</td><td>24.24%</td><td>26.49%</td><td>26.42%</td><td>26.39%</td><td>—</td></tr>
-        <tr><td>归母净利润</td><td>285.74</td><td>295.54</td><td>337.20</td><td>385.37</td><td>439.45</td><td>11.4%（推算）</td></tr>
-        <tr><td>扣非归母净利润</td><td>未在证据集</td><td>286.08</td><td>329.75</td><td>357.41</td><td>412.67</td><td>—</td></tr>
-        <tr><td>加权平均ROE</td><td>24.09%</td><td>22.21%</td><td>22.23%</td><td>21.29%</td><td>19.70%</td><td>—</td></tr>
-        <tr><td>基本每股收益（元）</td><td>未在证据集</td><td>4.34</td><td>4.93</td><td>5.44</td><td>5.80</td><td>—</td></tr>
-        <tr><td>经营活动现金流量净额</td><td>350.92</td><td>346.58</td><td>579.03</td><td>605.12</td><td>533.46</td><td>—</td></tr>
-        <tr><td>资本开支（约）</td><td>未在证据集</td><td>未在证据集</td><td>63.14</td><td>78.40</td><td>111.42</td><td>—</td></tr>
-        <tr><td>自由现金流代理（约，推算）</td><td>未在证据集</td><td>未在证据集</td><td>515.89</td><td>526.72</td><td>422.04</td><td>—</td></tr>
-        <tr><td>每股股息（含税，元）</td><td>1.7</td><td>2.5</td><td>3.0</td><td>3.5</td><td>4.3</td><td>—</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="cols" role="img" aria-label="五年营业总收入与归母净利润趋势，数值见上方五年合并财务表">
-    <div class="col"><div class="bars"><div class="bar rev" style="height:74.9%"></div><div class="bar np" style="height:6.2%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:75.4%"></div><div class="bar np" style="height:6.4%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:81.5%"></div><div class="bar np" style="height:7.4%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:89.2%"></div><div class="bar np" style="height:8.4%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:100.0%"></div><div class="bar np" style="height:9.6%"></div></div></div>
-  </div>
-  <div class="collabels">
-    <div><b>2021</b></div>
-    <div><b>2022</b></div>
-    <div><b>2023</b></div>
-    <div><b>2024</b></div>
-    <div><b>2025</b></div>
-  </div>
-  <div class="legend"><span><i class="p"></i>营业总收入</span><span><i class="m"></i>归母净利润</span></div>
-  <p class="small">柱高按各年数值相对2025年收入4,585.02亿元等比绘制；具体数字见上表。两组柱子五年同步抬升、间距缓慢收窄——收入与利润一起长，利润率在缓慢改善，这与利润忽上忽下的周期股形状完全不同。</p>
-
-  <h3>五板块地图：家电压舱，B端两位数，工业技术拖累</h3>
-  <div class="tblscroll" data-financials="segments">
-    <table class="tbl">
-      <caption>2026H1分板块收入与毛利率 · 人民币亿元；收入按板块披露口径（页26），毛利率按产品构成口径（页51–52），两口径均为公司披露</caption>
-      <thead><tr><th>板块</th><th>营业收入</th><th>同比</th><th>毛利率</th><th>毛利率同比</th></tr></thead>
-      <tbody>
-        <tr><td>智能家居</td><td>1,743.41</td><td>+4.27%</td><td>27.95%</td><td>−0.57pp</td></tr>
-        <tr><td>楼宇科技</td><td>216.25</td><td>+10.84%</td><td>29.61%</td><td>+0.28pp</td></tr>
-        <tr><td>机器人与自动化</td><td>166.21</td><td>+10.27%</td><td>20.90%</td><td>−1.86pp</td></tr>
-        <tr><td>工业技术</td><td>131.38</td><td>−12.72%</td><td>14.75%</td><td>−2.13pp</td></tr>
-        <tr><td>其他业务（板块）</td><td>152.82</td><td>+2.55%</td><td>13.58%</td><td>+0.03pp</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026H1分地区 · 人民币亿元；公司披露</caption>
-      <thead><tr><th>地区</th><th>营业收入</th><th>占比</th><th>同比</th><th>毛利率</th><th>毛利率同比</th></tr></thead>
-      <tbody>
-        <tr><td>国内</td><td>1,469.15</td><td>56.50%</td><td>+2.07%</td><td>24.46%</td><td>−0.27pp</td></tr>
-        <tr><td>海外</td><td>1,131.27</td><td>43.50%</td><td>+5.54%</td><td>26.28%</td><td>−0.53pp</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>最新滚动口径</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>截至2026年6月的最近十二个月（TTM，推算）· 人民币亿元；TTM＝FY2025＋2026H1−2025H1</caption>
-      <thead><tr><th>营业总收入</th><th>归母净利润</th><th>扣非归母</th><th>经营现金流</th><th>资本开支</th><th>FCF代理</th></tr></thead>
-      <tbody><tr><td>4,672.23</td><td>443.78</td><td>346.27</td><td>536.17</td><td>106.31</td><td>429.86</td></tr></tbody>
-    </table>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>五年故事非常整齐：收入从3,434亿爬到4,585亿，归母利润从286亿爬到439亿，毛利率从22.5%抬到26.4%，每股分红五年从1.7元提到4.3元——一台没熄过火的复利机器。唯一缓慢向下的是ROE（24.1%→19.7%），钱多到股东权益涨得比利润快——而注销式回购恰好在对冲这件事。</p>
-    <p>本期的关键在两个口径的裂缝：归母+1.7%（含对冲收益、减值等一次性项目），扣非−25.3%（把对冲收益扣掉、把汇兑损失留下）。谁对？都不完整——下一节把利润拆成一座桥，你会看到经营改善、汇率噪声和投资浮盈各占多少。另外提醒：板块结构两期几乎没动（智能家居占五板块合计约72%），所以本报告不画结构变化图，改用这句话说明。</p>
-  </div>
-  <p class="small">毛利按营业收入减营业成本推算（不含利息及手续费收入）；自由现金流代理＝经营现金流−购建固定资产无形资产和其他长期资产支付的现金，非公司KPI。收入CAGR按首尾年四次方根推算。板块收入合计不等于营业总收入（另有利息收入及抵销项）。</p>
-</section>
-
-<section class="reveal on" id="quality">
-  <div class="slabel">盈利质量 · 汇率与减值</div>
-  <h2>一座利润桥：经营改善是真的，汇率噪声也是真的</h2>
-  <p>把2026H1利润总额相对上年同期的变化（+5.0亿元）拆成一座加法桥：左边是把利润推上去的力量，右边是拉下来的。桥面数字全部来自合并利润表两期之差，加总与披露值一致（尾差为四舍五入）。最大的一块"公允价值变动"——金融资产与衍生品按市价重估的账面盈亏——按半年报附注拆成两根柱子，因为两者性质完全不同：一根是对冲汇率敞口的衍生工具，另一根是与汇率无关的权益投资浮盈。</p>
-
-  <div class="wfall" role="img" aria-label="2026H1对2025H1利润总额变化的加法桥，数值与下方拆解表一致">
-    <div class="wrow"><div class="nm">公允价值变动·权益工具等<span>与汇率无关的投资浮盈</span></div><div class="wtrack"><div class="wbar up" style="left:0.0%;width:31.0%"></div></div><div class="fig">+36.01</div></div>
-    <div class="wrow"><div class="nm">公允价值变动·衍生工具<span>对冲汇率敞口</span></div><div class="wtrack"><div class="wbar up" style="left:31.0%;width:23.8%"></div></div><div class="fig">+27.65</div></div>
-    <div class="wrow"><div class="nm">投资收益<span>含处置衍生+17.71</span></div><div class="wtrack"><div class="wbar up" style="left:54.9%;width:20.6%"></div></div><div class="fig">+23.94</div></div>
-    <div class="wrow"><div class="nm">销售费用下降</div><div class="wtrack"><div class="wbar up" style="left:75.5%;width:13.0%"></div></div><div class="fig">+15.07</div></div>
-    <div class="wrow"><div class="nm">毛利增量</div><div class="wtrack"><div class="wbar up" style="left:88.5%;width:11.5%"></div></div><div class="fig">+13.38</div></div>
-    <div class="wrow"><div class="nm">其余各项净额</div><div class="wtrack"><div class="wbar down" style="left:95.2%;width:4.8%"></div></div><div class="fig">−5.58</div></div>
-    <div class="wrow"><div class="nm">资产减值<span>商誉为主</span></div><div class="wtrack"><div class="wbar down" style="left:84.1%;width:11.1%"></div></div><div class="fig">−12.87</div></div>
-    <div class="wrow"><div class="nm">财务费用<span>汇兑损失主导</span></div><div class="wtrack"><div class="wbar down" style="left:4.3%;width:79.8%"></div></div><div class="fig">−92.61</div></div>
-    <div class="wrow"><div class="nm">Δ利润总额<span>桥的合计</span></div><div class="wtrack"><div class="wbar tot" style="left:0.0%;width:4.3%"></div></div><div class="fig">+5.01</div></div>
-  </div>
-  <p class="small">单位：人民币亿元；每根柱按同一标尺画出累计值的行走（绿加红减）。"其余各项净额"含税金及附加、管理与研发费用、利息及手续费收入、其他收益、信用减值、资产处置与营业外收支之和。财务费用由上年同期收益59.88亿元转为本期费用32.73亿元，公司归因于汇兑损失增加。公允价值变动按附注四(56)拆分：衍生金融工具+27.65亿、权益工具投资及其他+36.01亿；投资收益增量+23.94亿中，处置衍生金融资产及负债贡献+17.71亿（附注四(57)）。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>汇率错位与一次性项目 · 人民币亿元；前三行为同比增量口径，后两行为本期发生额；正负号为对利润的方向</caption>
-      <thead><tr><th>项目</th><th>金额</th><th>进哪个口径</th><th>阅读方式</th></tr></thead>
-      <tbody>
-        <tr><td>财务费用变动（汇兑损失主导）</td><td>约−92.6</td><td>经常性（拉低扣非）</td><td>人民币升值下外币敞口的损失，另含少量利息净收入变化</td></tr>
-        <tr><td>对冲相关收益（衍生公允价值+处置）</td><td>约+45.4</td><td>非经常性（不进扣非）</td><td>与汇兑损失同源的对冲收益，被扣非剔除——约补回损失增量的一半</td></tr>
-        <tr><td>权益工具投资等公允价值变动</td><td>约+36.0</td><td>非经常性（不进扣非）</td><td>与汇率无关的投资浮盈，是归母微增的重要支撑</td></tr>
-        <tr><td>商誉减值损失</td><td>−10.96</td><td>经常性科目中的一次性</td><td>公告未披露具体减值资产组</td></tr>
-        <tr><td>非流动资产处置损益</td><td>+5.64</td><td>非经常性</td><td>一次性</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>公司在中报里自己点破了这层错位，原文是："本公司外币货币性项目产生的汇率损失归属于经常性损益，而用于管理上述外汇风险所持有的衍生金融工具产生的收益归属于非经常性损益"。换句话说，<b>损失和对冲收益本是一对，扣非口径只扣了收益那一半</b>。但边界要说清：与汇兑损失同源的对冲收益增量约+45.4亿，只补回−92.6亿损失增量的一半左右；另一块约+36.0亿是权益工具投资的浮盈，与汇率无关——没有它，归母难以维持正增长。把这些都还原后，经营层面的真实变化是：毛利多赚13.4亿、销售费用省出15.1亿——引擎确实在改善，只是改善是十亿级的，别把浮盈错读成经营。</p>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>先看汇率这一对：财务费用恶化的−92.6亿（汇兑损失主导）是"经常"的，对冲它的衍生品收益（公允价值+27.7亿、处置+17.7亿）是"非经常"的——这就是"利润表被汇率撕成两半"的样子，但两半并不等重：对冲只补回了损失增量的一半左右。再看另一根大柱：+36.0亿是权益投资按市价重估的浮盈，跟汇率、跟卖家电都没关系。真正值得记住的一次性坏消息是<b>商誉减值11.0亿元</b>：美的账上还有315.8亿元商誉（其中库卡221.0亿元），公告没有说这次减的是哪一块，年度减值测试是每年必过的关口。</p>
-  </div>
-</section>
-
-<section class="reveal on" id="balance">
-  <div class="slabel">现金 · 资产负债 · 营运资金</div>
-  <h2>现金流没有失速，但应收账款单边跳升值得盯住</h2>
-  <p>上半年经营现金流与利润同量级、自由现金流代理近350亿元，资产负债表整体是"钱多"的形状。两处变化需要单独解释：应收账款半年内大幅上升，以及5月发行的两笔以H股为标的的零息可转债。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">货币资金</div><div class="v">906.43<span class="u">亿元</span></div><div class="d"><span>期初852.47亿元</span></div></div>
-    <div class="cell"><div class="k">应收账款</div><div class="v">619.55<span class="u">亿元</span></div><div class="d"><span class="down">期初404.50亿元 · +53%</span></div></div>
-    <div class="cell"><div class="k">存货</div><div class="v">554.41<span class="u">亿元</span></div><div class="d"><span class="up">期初646.29亿元 · −14%</span></div></div>
-    <div class="cell"><div class="k">合同负债</div><div class="v">454.58<span class="u">亿元</span></div><div class="d"><span>期初469.93亿元</span></div></div>
-    <div class="cell"><div class="k">预提销售返利（其他流动负债内）</div><div class="v">569.73<span class="u">亿元</span></div><div class="d"><span>期初529.53亿元</span></div></div>
-    <div class="cell"><div class="k">有息负债合计（推算）</div><div class="v">744.51<span class="u">亿元</span></div><div class="d"><span>短借+长借+应付债券+一年内到期</span></div></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>需要单独解释的资产负债表变化 · 人民币亿元；期末2026-06-30对期初2025-12-31</caption>
-      <thead><tr><th>项目</th><th>变化</th><th>已知信息</th><th>判断边界</th></tr></thead>
-      <tbody>
-        <tr><td>应收账款 +215.0亿</td><td>404.50→619.55</td><td>占总资产比重由6.64%升至9.63%；公告未单独解释成因</td><td>季节性、B端与海外账期都可能推高，但半年+53%超过收入增速一个量级，需三季报验证回落</td></tr>
-        <tr><td>零息可转债 面值合计149.81亿</td><td>2027年到期与2033年到期各86.24亿港元</td><td>2026-05-13发行，标的为H股；悉数转换约对应1.72亿股H股</td><td>零票息融资便宜，代价是潜在H股稀释约2.3%（按现总股本推算）</td></tr>
-        <tr><td>库存股 +69.7亿</td><td>81.51→151.18</td><td>对应上半年回购；回购专户期末持股1.96%</td><td>回购用途已变更为注销，注销落地前先体现为库存股</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>三句话读懂这张资产负债表：<b>钱很多</b>——货币资金900多亿，覆盖有息负债还有富余；<b>渠道健康</b>——存货降了14%，先收款、后交货的合同负债还有450多亿，预提的销售返利（欠经销商的"暗股息"）还在增厚，说明没有向渠道压货换收入；<b>一处要盯</b>——应收账款半年涨了五成多，公告没解释。它更可能是B端与海外业务账期的自然结果，但"更可能"不是证据，三季报如果继续涨，就要当成风险处理。</p>
-  </div>
-  <p class="small">有息负债推算＝短期借款473.05+长期借款154.17+应付债券66.66+一年内到期的非流动负债50.63（内含一年内到期债券30.95），不含列入其他流动负债的一年期可转债72.69亿元。可转债发行现金流入152.93亿元列于筹资活动。</p>
-</section>
-
-<section class="reveal on" id="engine">
-  <div class="slabel">业务引擎 · B端与海外</div>
-  <h2>把管理层的话放到报表上检验：兑现了多少？</h2>
-  <p>6月与7月两场路演里，管理层给出一串进展叙事。对照中报，可以分成"报表已兑现""方向吻合""无法验证"三档。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>管理层叙事 对照 中报证据 · 路演记录为公司披露的投资者关系活动记录表</caption>
-      <thead><tr><th>管理层的话（路演）</th><th>中报能看到什么</th><th>判定</th></tr></thead>
-      <tbody>
-        <tr><td>OBM"在制造、渠道方面都有突破"</td><td>OBM收入已占智能家居海外收入50%以上；美国市场OBM收入同比+24%；东芝白电日本收入同比+10%以上</td><td>报表已兑现</td></tr>
-        <tr><td>数据中心温控：中标中国移动新一轮集采70%份额（6月）</td><td>楼宇科技收入+10.84%；国内暖通后市场业务规模+35%</td><td>方向吻合，订单金额未披露</td></tr>
-        <tr><td>库卡与英科签约超3亿元（7月）、威灵机器人新基地（意向）</td><td>库卡集团收入同比+10%以上，库卡中国贡献占比超30%；工业机器人国内出货超1.8万台、份额升至行业第二</td><td>方向吻合；7月事项晚于报告期</td></tr>
-        <tr><td>顺德液冷基地总投资超10亿元、2027年8月投产</td><td>中报确认"在佛山顺德正式启动液冷智造基地建设，项目总投资超过10亿元"；合并资本开支未单列该项目</td><td>启动与投资额已印证；投产时点待验</td></tr>
-        <tr><td>618"美的系全网总销售额行业第一"、COLMO套购金额增长超50%</td><td>智能家居板块保持正增长（见分部地图）；单品牌/大促口径不进财报</td><td>方向吻合，口径不可核对</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="finds">
-    <div class="find good"><div class="t">B端有真增长</div><p>楼宇科技与机器人同为两位数增长，新能源车部件收入同比+90%以上并首次实现半年度盈利；数据中心温控踩在AIDC建设的风口上。</p></div>
-    <div class="find warn"><div class="t">工业技术在收缩</div><p>工业技术收入−12.72%、毛利率再降2.13pp，是五板块唯一负增长——B端不是齐涨，接棒故事目前靠楼宇与机器人两条腿。</p></div>
-    <div class="find"><div class="t">海外快于国内</div><p>海外收入+5.54%对国内+2.07%，且海外毛利率（26.28%）高于国内（24.46%）；关税风险的对冲主要是45个海外基地的本地化产能，公告未给量化敞口。</p></div>
-    <div class="find warn"><div class="t">路演不谈的话题</div><p>两场路演对关税、毛利率方向、以旧换新退坡只字未提——逆风话题的缺席本身就是信息，这些答案只能从报表里自己找。</p></div>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>把引擎拆开看：<b>家电主业在一个下滑9.9%的国内大盘里做出+4.3%</b>，靠的是份额与海外OBM——这是本期最扎实的经营证据。<b>B端接棒故事兑现了一半</b>：楼宇科技和机器人是真的两位数，但工业技术在拖后腿，三条腿只站稳两条。液冷、机器人新基地这些叙事都指向2027年之后，现在还在"讲"的阶段，不在"赚"的阶段。</p>
-  </div>
-</section>
-
-<section class="reveal on" id="governance">
-  <div class="slabel">治理 · 股东回报</div>
-  <h2>创始人控制、职业经理人经营，回报纪律是这家公司的招牌</h2>
-  <p>美的控股（何享健家族）为控股股东，持股28.49%（2026-06-30，上年末为28.55%），方洪波任董事长兼总裁；公司治理的重心不在控制权，而在资本分配纪律——这恰是它与多数A股制造业公司的区别。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>股东现金回报记录 · 金额为人民币；含税口径，公司披露</caption>
-      <thead><tr><th>项目</th><th>披露值</th><th>阅读方式</th></tr></thead>
-      <tbody>
-        <tr><td>FY2025 现金分红</td><td>323.61亿元（每10股43元＝中期5元+末期38元）</td><td>占归母净利润73.6%（推算）</td></tr>
-        <tr><td>FY2025 股份回购</td><td>约116.05亿元</td><td>年报口径"全年回购总金额超116亿元"</td></tr>
-        <tr><td>上市以来累计派现</td><td>超1,660亿元（含2025年度预案）</td><td>另累计回购超450亿元（截至2026年6月）</td></tr>
-        <tr><td>2026中期分红</td><td>每10股派5元，合计37.24亿元</td><td>占H1归母14.06%；基数已剔除回购专户股份</td></tr>
-        <tr><td>2026年回购</td><td>65–130亿元方案；截至7月17日年内累计82.06亿元</td><td>用途已变更为注销减资，2026-06-05股东会通过</td></tr>
-        <tr><td>H股可转债潜在稀释</td><td>悉数转换约1.72亿股H股</td><td>与注销式回购方向相反，需并表观察净效果</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>这家公司把"还钱"做成了制度：去年分红加回购合计约440亿元，几乎等于全年利润；今年把最高130亿元的回购用途改成<span class="g">注销</span>——买回来的股票直接销毁，每股含金量被动上升；据广发证券研究报告（公司中报转引），美的已是A股累计回购金额最高的公司。两个平衡项要知道：一是激励盘子大（历史上九期股票期权、七期限制性股票、十七期持股计划，2026年持股计划又授了1,631万股），二是新发可转债未来可能新增约1.7亿股H股——回报是净给钱，但两条稀释暗流在对冲它的力度。</p>
-  </div>
-  <p class="small">FY2025分红比例按323.61÷439.45推算；公司披露口径的"现金分红总额（含回购）"为439.66亿元。2026年持股计划分二、三、四年行权，按公司业绩与个人考核分批授予，公告未披露与ROE或每股价值挂钩的量化门槛。重大关联交易规模较小（与会通新材料采购等合计约8.1亿元，占比0.44%）。</p>
-</section>
-
-<section class="reveal on" id="valuation">
-  <div class="slabel">市场定价 · 同业 · 估值</div>
-  <h2>不再便宜的白马：定价已在自身五年高位</h2>
-  <p>先给结论牌，再给推导。估值要回答三件事：市场现在给什么价、和同行比贵不贵、三年情景下值多少钱——最后倒读现价隐含了什么。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">现价（A股）</div><div class="v">86.23<span class="u">元</span></div><div class="d"><span>2026-08-28收盘 · 市值6,573亿元</span></div></div>
-    <div class="cell"><div class="k">熊市价值（两法）</div><div class="v">52.3<span class="u">–70.1元</span></div><div class="d"><span class="down">较现价 −39%~−19%</span></div></div>
-    <div class="cell"><div class="k">基准价值（两法）</div><div class="v">77.7<span class="u">–105.6元</span></div><div class="d"><span>较现价 −10%~+22%</span></div></div>
-    <div class="cell"><div class="k">牛市价值（两法）</div><div class="v">100.9<span class="u">–152.4元</span></div><div class="d"><span class="up">较现价 +17%~+77%</span></div></div>
-    <div class="cell"><div class="k">现价隐含</div><div class="v">五年84%分位</div><div class="d"><span>市场已按"白马溢价"定价</span></div></div>
-    <div class="cell"><div class="k">一句话判断</div><div class="v">中性</div><div class="d"><span>回报靠现金返还，重估看B端</span></div></div>
-  </div>
-
-  <h3>第一步 · 市场现在给什么价</h3>
-  <p>2026-08-28收盘86.23元，对应TTM<span class="g">市盈率</span>14.88倍、市净率（LF）3.21倍、股息率4.89%（来源：Wind）。关键不是绝对数，而是位置：市盈率与市净率分别处于自身五年84%与84%分位——过去五年里，只有约六分之一的时间比现在更贵。扣非TTM口径的市盈率约19.0倍（推算），比表面值高出四分之一强。H股98.75港元，按当日人民银行港元兑人民币中间价0.86498折合约85.42元人民币，较A股折价约0.9%——A/H几乎平价，两个市场对它的分歧很小。</p>
-
-  <h3>第二步 · 和同行比：贵有贵的理由，但理由已计价</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>可比家电公司市场快照 · 2026-08-28收盘，来源：Wind；市净率为LF口径</caption>
-      <thead><tr><th>公司</th><th>市盈率TTM</th><th>市净率</th><th>股息率</th><th>年初至今涨跌幅</th><th>总市值</th></tr></thead>
-      <tbody>
-        <tr><td>美的集团</td><td>14.88倍</td><td>3.21倍</td><td>4.89%</td><td>+15.82%</td><td>6,573亿元</td></tr>
-        <tr><td>格力电器</td><td>7.84倍</td><td>1.47倍</td><td>7.68%</td><td>+4.42%</td><td>2,185亿元</td></tr>
-        <tr><td>海尔智家</td><td>11.10倍</td><td>1.69倍</td><td>4.17%</td><td>−15.68%</td><td>1,896亿元</td></tr>
-        <tr><td>海信家电</td><td>13.26倍</td><td>2.10倍</td><td>4.77%</td><td>+12.01%</td><td>332亿元</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>美的是这张表里最贵的：市盈率比格力贵近一倍、比海尔贵三分之一。市场给溢价的理由清楚——B端第二曲线、全球OBM、教科书级的回报纪律；但溢价本身意味着这些理由<b>已经在价格里</b>。买美的赚的不是"估值修复"的钱，而是"兑现继续"的钱；一旦B端或海外增速证伪，溢价部分就是回撤空间。</p>
-  </div>
-
-  <h3>第三步 · 三年情景与两种方法</h3>
-  <div class="steps">
-    <div class="step"><div class="n">方法 A</div><b>情景市盈率法</b><p>对FY2027E归母净利润施以情景市盈率（悲观按格力化的11倍、基准维持14倍、乐观向B端故事的17倍），再按各情景股权成本折现1.34年回到估值日——给"生意"定价。</p></div>
-    <div class="step"><div class="n">方法 B</div><b>股东回报率法</b><p>用FY2026E"分红+注销回购"现金除以要求的现金回报率（5.5%/4.75%/4.0%），得到隐含市值——给"现金返还"定价，是这只股票的底仓逻辑。</p></div>
-    <div class="step"><div class="n">怎么读</div><b>两法互证，不取平均</b><p>A法对倍数收缩敏感，构成下界；B法假设回报纪律延续，构成上界。现价落在两法之间的哪个位置，就是市场此刻的态度。</p></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>FY2026E–FY2028E三情景总表 · 金额为人民币亿元；均为分析假设，非公司指引</caption>
-      <thead><tr><th>驱动 / 结果</th><th>熊市</th><th>基准</th><th>牛市</th></tr></thead>
-      <tbody>
-        <tr><td>情景内核</td><td>国内零售继续两位数下滑、关税落地、B端放缓、汇兑续损</td><td>国内企稳、海外+6~8%、B端保持两位数</td><td>B端加速、海外OBM双位数、汇率企稳</td></tr>
-        <tr><td>营业总收入 26/27/28E</td><td>4,630 / 4,630 / 4,630</td><td>4,720 / 4,980 / 5,300</td><td>4,770 / 5,150 / 5,600</td></tr>
-        <tr><td>归母净利润 26/27/28E</td><td>420 / 415 / 415</td><td>450 / 478 / 510</td><td>465 / 505 / 555</td></tr>
-        <tr><td>股息+注销回购 / 归母</td><td>70%</td><td>85%</td><td>100%</td></tr>
-        <tr><td>情景市盈率（A法）</td><td>11倍</td><td>14倍</td><td>17倍</td></tr>
-        <tr><td>股权成本 / 要求回报率</td><td>10.5% / 5.5%</td><td>9.5% / 4.75%</td><td>8.5% / 4.0%</td></tr>
-        <tr class="grp"><td>A法价值（元/股）</td><td>52.3</td><td>77.7</td><td>100.9</td></tr>
-        <tr><td>B法价值（元/股）</td><td>70.1</td><td>105.6</td><td>152.4</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">A法＝FY2027E归母÷总股本76.29亿股×情景市盈率÷(1+股权成本)^1.34；B法＝FY2026E回报现金÷要求回报率÷总股本。总股本按披露日7,628,798,092股；注销落地将缩小分母、抬高每股值，可转债悉数转换则反向，两者均未计入。派息与回购比例为模型参数，参考FY2025实际（合计约100%）与中期节奏设定。</p>
-
-  <h3>把三档价值放在一把尺上</h3>
-  <div class="rows" aria-label="情景价值与现价对比">
-    <div class="row"><div class="nm">熊市<span>白马溢价证伪</span></div><div class="track"><div class="fill alt" style="width:51.9%"></div></div><div class="fig">52.3元<span class="down">两法52.3–70.1 · −39%~−19%</span></div></div>
-    <div class="row"><div class="nm">基准（A法）<span>兑现延续、倍数不变</span></div><div class="track"><div class="fill" style="width:77.0%"></div></div><div class="fig">77.7元<span>两法77.7–105.6 · −10%~+22%</span></div></div>
-    <div class="row"><div class="nm">现价<span>2026-08-28收盘</span></div><div class="track"><div class="fill soft" style="width:85.5%"></div></div><div class="fig">86.23元<span>市场价</span></div></div>
-    <div class="row"><div class="nm">牛市<span>B端重估</span></div><div class="track"><div class="fill moss" style="width:100.0%"></div></div><div class="fig">100.9元<span class="up">两法100.9–152.4 · +17%~+77%</span></div></div>
-  </div>
-  <p class="small">条形按A法数值（现价行为市场价）相对牛市A法100.9元的比例绘制；区间与涨跌幅按两法端点对现价86.23元推算。</p>
-
-  <h3>第四步 · 现价隐含了什么</h3>
-  <div class="plain">
-    <span class="pl">一句话总结</span>
-    <p>现价86.23元高于基准A法（77.7元）、低于基准B法（105.6元）——<b>市场信"还钱"多过信"生意重估"</b>：只要分红加注销回购的纪律延续，6.7%左右的现金回报率就是底；但按盈利给估值，五年84%分位意味着基准情景下的生意价值已经给满。往上走需要B端与海外连续兑现（届时看牛市区间），往下最大的坑是"扣非崩了"被误读成经营崩了——本报告的桥拆过了：扣非下滑主要由汇率错位与减值构成，经营端的毛利和费用其实都在改善。在证据换边之前：<b>中性</b>。</p>
-  </div>
-</section>
-
-<section class="reveal on" id="risks">
-  <div class="slabel">风险与验证</div>
-  <h2>判断挂在四个可观察的钩子上</h2>
-  <div class="finds">
-    <div class="find good"><div class="t">最强多方证据</div><p>下滑大盘里的正增长与份额、B端两条腿的两位数、海外OBM占比过半、近100%的股东回报纪律。</p></div>
-    <div class="find warn"><div class="t">最强反方证据</div><p>估值五年84%分位、应收半年+53%未解释、商誉315.8亿元（库卡221.0亿元）年年要过减值测试、工业技术负增长、扣非口径对汇率高度敏感。</p></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>验证地图 · 阈值为分析检验点，非公司指引</caption>
-      <thead><tr><th>变量</th><th>确认信号</th><th>证伪信号</th></tr></thead>
-      <tbody>
-        <tr><td>应收账款</td><td>三季报回落或公司给出账期解释</td><td>继续快于收入增长且无解释</td></tr>
-        <tr><td>B端接棒</td><td>楼宇+机器人保持两位数、工业技术降幅收窄</td><td>楼宇或机器人增速跌破个位数</td></tr>
-        <tr><td>汇率噪声</td><td>归母与扣非增速在汇率平稳期重新收敛</td><td>汇率平稳但扣非仍显著弱于归母</td></tr>
-        <tr><td>回报纪律</td><td>130亿回购执行并完成注销、末期分红延续</td><td>回购放缓或注销延宕、分红比例下调</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>把验证点排在时间线上</h3>
-  <div class="tline">
-    <div class="tstop"><span class="tw">2026三季报</span><b>应收与扣非的复检</b><p>应收账款是否回落；汇率平稳期扣非与归母是否收敛。</p></div>
-    <div class="tstop"><span class="tw">2026年内</span><b>回购执行与注销</b><p>65–130亿元方案的执行进度（截至7月17日该方案下已67.16亿元，年内累计82.06亿元）与注销落地。</p></div>
-    <div class="tstop warn"><span class="tw">FY2026年报</span><b>商誉年度减值测试</b><p>库卡221.0亿元商誉的年度测试结果；再减值即触发反方情景。</p></div>
-    <div class="tstop"><span class="tw">2027年8月</span><b>顺德液冷基地投产</b><p>B端叙事从"讲"到"赚"的第一个可核对节点（管理层路演口径）。</p></div>
-  </div>
-</section>
-
-<section class="reveal on" id="decision">
-  <div class="slabel">最终判断</div>
-  <h2>中性：溢价合理但已给满，赚兑现的钱而不是重估的钱</h2>
-  <p>这份中报证明了两件事：经营引擎在一个恶劣的国内大盘里仍在改善；利润表的剧烈波动主要是汇率错位与投资浮盈的会计效应，而非经营恶化。但市场早已相信这些——定价停在自身五年高位，基准情景的生意价值与现价大体咬合。持有它的回报结构是清晰的：现金回报率托底，B端与海外的每一次兑现抬一点上限；做多它的超额收益，需要等一次"扣非恐慌"式的错杀，或者B端从两条腿变成三条腿。结论置信度为中等：单二季度为推算口径，应收跳升未获解释，商誉减值对象未披露。</p>
-  <div class="callout"><b>最强反方观点：</b>如果国内以旧换新退坡与关税同时落地，家电主业的量价与海外毛利率会一起承压；届时84%分位的估值没有安全垫，熊市区间（52.3–70.1元）并不遥远。反方证伪需要看到收入增速转负或回报纪律松动——目前两者都未发生。</div>
-</section>
-
-<section class="reveal on" id="glossary">
-  <div class="slabel">名词速查 · 快速检索</div>
-  <h2>读懂一份制造业白马财报需要的词</h2>
-  <div class="tblscroll">
-    <table class="tbl gloss">
-      <thead><tr><th>术语</th><th>白话解释</th></tr></thead>
-      <tbody>
-        <tr><td>归母净利润</td><td>归属于上市公司股东的净利润，扣掉了子公司少数股东应占部分。</td></tr>
-        <tr><td>扣非归母净利润</td><td>再扣掉"非经常性损益"（一次性项目）后的利润，本意是看经营的真实成色。</td></tr>
-        <tr><td>非经常性损益</td><td>监管定义的一次性项目清单：处置资产、政府补助、非套保衍生品损益等。规则是死的，会计错位由此而来。</td></tr>
-        <tr><td>汇兑损益</td><td>持有外币资产负债时，汇率变动带来的账面盈亏，计入财务费用（经常性）。</td></tr>
-        <tr><td>套期/对冲与衍生工具</td><td>用远期、期权等金融合约锁定汇率风险；未按套保会计处理的部分，其损益进"非经常"。</td></tr>
-        <tr><td>公允价值变动损益</td><td>持有的金融资产、衍生品按市价重估产生的账面盈亏；没有现金进出也会影响当期利润。</td></tr>
-        <tr><td>商誉与减值测试</td><td>并购溢价挂在账上的部分（美的主要来自收购库卡），每年必须测试，一旦"资不抵值"就要一次性减利润。</td></tr>
-        <tr><td>OBM</td><td>自有品牌出海（Original Brand Manufacturing），与贴牌代工（OEM）相对，毛利与定价权更高。</td></tr>
-        <tr><td>ToB / ToC</td><td>面向企业客户 / 面向消费者。美的的楼宇科技、机器人、工业技术是ToB。</td></tr>
-        <tr><td>库卡（KUKA）</td><td>2017年收购的德国工业机器人公司，美的机器人板块的主体，也是最大一块商誉的来源。</td></tr>
-        <tr><td>销售返利</td><td>承诺给经销商的折让，先挂在负债里；余额增厚通常意味着没有靠压货冲收入。</td></tr>
-        <tr><td>合同负债</td><td>先收了客户的钱、还没交货的部分；是未来收入的蓄水池。</td></tr>
-        <tr><td>注销式回购</td><td>公司买回自家股票后直接销毁：股本变小，每股盈利与分红被动增厚，是比分红更彻底的返还。</td></tr>
-        <tr><td>可转债</td><td>可以按约定价格换成股票的债券。美的2026年发的两笔零息可转债以H股为标的，转股会新增H股。</td></tr>
-        <tr><td>A/H比价</td><td>同一家公司A股与H股的价格比较，需按汇率折算同币种后再比。</td></tr>
-        <tr><td>市盈率（PE）与五年分位</td><td>股价÷每股盈利；分位指当前估值在自己过去五年里的排位，84%分位＝比五年里84%的时间都贵。</td></tr>
-        <tr><td>市净率（PB）</td><td>股价÷每股净资产。</td></tr>
-        <tr><td>股息率</td><td>每股分红÷股价，现金回报的直观口径；加上注销式回购即"股东回报率"。</td></tr>
-        <tr><td>加权平均ROE</td><td>净利润÷加权平均净资产，股东资金的回报率；半年报披露的是未年化值。</td></tr>
-        <tr><td>TTM</td><td>最近十二个月滚动口径，用于消除季节性。</td></tr>
-        <tr><td>FCF代理</td><td>经营现金流减资本开支的近似自由现金流，由披露值推算，非公司KPI。</td></tr>
-        <tr><td>推算单二季度</td><td>A股只披露累计数与一季数，二季度＝上半年减一季度，两端皆披露值。</td></tr>
-        <tr><td>股权成本（Ke）</td><td>股东承担该股风险要求的最低年回报率，估值折现用。</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="reveal on" id="methods">
-  <div class="slabel">方法与来源</div>
-  <h2>交易所披露控制财务数字，Wind只回答定价问题</h2>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>主要来源与证据边界 · 业绩证据截止2026-08-29，行情截止2026-08-28收盘</caption>
-      <thead><tr><th>来源</th><th>用途</th><th>证据边界</th></tr></thead>
-      <tbody>
-        <tr><td>2026年半年度报告（2026-08-29披露）</td><td>当期财务、分部、资产负债、分红回购、商誉</td><td>未经审计</td></tr>
-        <tr><td>2026年一季度报告</td><td>推算单二季度的减数</td><td>未经审计</td></tr>
-        <tr><td>2025年、2024年年度报告</td><td>五年历史、分红记录、治理与股东结构</td><td>经审计；FY2021收入利润未在其主要会计数据表内</td></tr>
-        <tr><td>投资者关系活动记录表（6月25日、7月29日）</td><td>管理层叙事与检验清单</td><td>公司整理的路演纪要，非逐字稿</td></tr>
-        <tr><td>Wind金融终端</td><td>行情快照、估值分位、同业倍数、五年毛利率与FY2021标准化数据、港元兑人民币中间价（人民银行口径）</td><td>标准化口径；与年报冲突时以交易所披露为准</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">所有推算值（单二季度、毛利、FCF代理、TTM、利润桥、情景与估值）均由本地计算台账按披露值复算；利润桥各项加总与利润总额变化一致（尾差为四舍五入）。三情景与两法估值为分析假设，不是盈利预测承诺。本报告不构成投资建议。</p>
-</section>
-
+<div class="callout"><b>修订 2026-09-06：</b>补齐可比季度与历史口径，重做利润、债务及回购核对；撤回渠道健康与现金回报托底的过强判断，改用法定分部加总估值，更新行情与股本。</div>
+<section class="reveal on" id="tldr"><div class="slabel">三十秒版本 · 先看结论</div><h2>如果只读一屏，读这里</h2>
+<div class="tldr"><ul>
+<li><b>它是谁：</b>以家电和全球渠道为主体，并经营楼宇暖通、工业部件及机器人；品牌销售与企业订单共同贡献收入。</li>
+<li><b>本期成绩：</b>上半年营业收入约2600亿元，归母约264亿元；推算二季度收入增长约5%，但两类利润口径分化。</li>
+<li><b>核心矛盾：</b>制造经营有改善，汇兑与对冲并不完全抵消；股东最终所得还取决于浮盈持续性和净稀释。</li>
+<li><b>容易踩的坑：</b>扣非下降不是经营崩溃的同义词；归母微增也不等于核心盈利稳定，回购金额更不等于已完成注销。</li>
+<li data-verdict="neutral-cautious"><b>结论：</b>中性偏谨慎。现价87.57元，一年分部加总估值基准87.1元、熊市42.0元；需要盈利兑现和净稀释改善，现有赔率才会改变。</li></ul></div></section>
+<section class="reveal on" id="primer"><div class="slabel">入门</div><h2>家电提供规模，企业业务提供不同的增长来源</h2>
+<p>美的销售家电、暖通、压缩机、机器人和自动化方案，产品交付、确认收入和回款可能分属不同期间。“归母”指归属于母公司股东的净利润；“扣非”再剔除监管定义的非经常性损益，不等于剔除全部经济风险。</p>
+<div class="steps"><div class="step"><div class="n">环节 1</div><b>客户与渠道下单</b><p>家电零售、出口客户及企业工程形成需求；不是所有订单都立即变成收入。</p></div><div class="step"><div class="n">环节 2</div><b>全球采购与制造</b><p>原料、零部件、工资、售后质保和运输消耗收入，形成产品毛利。</p></div><div class="step"><div class="n">环节 3</div><b>回款与再投资</b><p>研发、销售网络和设备需要资金，应收与库存影响现金何时回笼。</p></div><div class="step"><div class="n">环节 4</div><b>分配与融资</b><p>分红是现金到账，回购要连同注销、员工授股和转股一起看净效果。</p></div></div>
+<p>A股与H股属于同一集团，两地总市值不能相加；本文沿用更活跃的A股。主表采用中国企业会计准则（CAS），港交所文件交叉核对，两套准则净利润与净资产无差异，但不混用收入格式。A股半年报未经审计，港股中期财务资料另经审阅；<span class="g">推算单二季度</span>是半年累计减一季累计，每股收益（EPS）不作简单相减。</p>
+<p>行业受耐用品更新、地产、以旧换新和海外周期影响。国内零售统计与集团全球出货口径不同，增速差不能直接证明份额增加。<span class="g">自有品牌（OBM）</span>意味着承担品牌、渠道和服务责任，并不保证利润率更高。</p></section>
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="durables-appliances"><div class="slabel">财务地图</div><h2>收入延续增长，利润率与回报率并非同步向上</h2>
+<p>主业营业收入不含财务业务利息和手续费，<span class="g">营业总收入</span>包含这些项目。毛利与毛利率使用前者；CAS营业利润则含财务费用、投资收益、<span class="g">公允价值</span>和减值，不能直接当成纯制造经营利润。</p>
+<div class="grid" data-financials="consolidated"><div class="cell" ><div class="k">营业收入</div><div class="v">2,600.42<span class="u">亿元</span></div><div class="d"><span>2026H1 · 同比+3.6%</span></div></div><div class="cell" ><div class="k">毛利 / 毛利率（推算）</div><div class="v">656.76<span class="u">亿元</span></div><div class="d"><span>25.26% · 同比−0.36pp</span></div></div><div class="cell" ><div class="k">营业利润</div><div class="v">316.84<span class="u">亿元</span></div><div class="d"><span>CAS口径 · 利润率12.18%</span></div></div><div class="cell" ><div class="k">归母净利润</div><div class="v">264.46<span class="u">亿元</span></div><div class="d"><span>同比+1.7% · 净利率10.17%</span></div></div><div class="cell" ><div class="k">经营现金流</div><div class="v">375.52<span class="u">亿元</span></div><div class="d"><span>同比+0.7%</span></div></div><div class="cell" ><div class="k"><span class="g">FCF</span>代理（推算）</div><div class="v">349.18<span class="u">亿元</span></div><div class="d"><span>扣资本开支现金26.34亿元</span></div></div></div><div class="tblscroll"><table class="tbl" data-financials="history"><caption>A股申报为主、H股交叉核对；CAS本集团，五个完整年度已审计。人民币亿元，另注除外。FY2023毛利使用2024年报重列数；FY2021—2022质保费重分类前，相关毛利与费用不可直接同比。</caption><thead><tr><th>项目</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead><tbody><tr><td>营业收入</td><td>3,412.33</td><td>3,439.18</td><td>3,720.37</td><td>4,071.50</td><td>4,564.52</td></tr><tr><td>毛利（推算）</td><td>767.07</td><td>833.79</td><td>956.28</td><td>1,075.65</td><td>1,204.62</td></tr><tr><td>毛利率（推算，%）</td><td>22.48</td><td>24.24</td><td>25.70</td><td>26.42</td><td>26.39</td></tr><tr><td>营业利润</td><td>332.81</td><td>347.63</td><td>403.17</td><td>463.94</td><td>529.79</td></tr><tr><td>营业利润率（推算，%）</td><td>9.75</td><td>10.11</td><td>10.84</td><td>11.39</td><td>11.61</td></tr><tr><td>归母净利润</td><td>285.74</td><td>295.54</td><td>337.20</td><td>385.37</td><td>439.45</td></tr><tr><td>归母净利率（推算，%）</td><td>8.37</td><td>8.59</td><td>9.06</td><td>9.47</td><td>9.63</td></tr><tr><td>扣非归母</td><td>259.29</td><td>286.08</td><td>329.75</td><td>357.41</td><td>412.67</td></tr><tr><td>基本EPS（元）</td><td>4.17</td><td>4.34</td><td>4.93</td><td>5.44</td><td>5.80</td></tr><tr><td>加权净资产收益率（ROE）（%）</td><td>24.09</td><td>22.21</td><td>22.23</td><td>21.29</td><td>19.70</td></tr><tr><td>经营现金流</td><td>350.92</td><td>346.58</td><td>579.03</td><td>605.12</td><td>533.46</td></tr><tr><td>资本开支现金</td><td>68.25</td><td>73.52</td><td>63.14</td><td>78.40</td><td>111.42</td></tr><tr><td>FCF代理（推算）</td><td>282.66</td><td>273.06</td><td>515.89</td><td>526.72</td><td>422.04</td></tr></tbody></table></div><p>四年年均复合增速（CAGR）（推算）：营业收入7.54%、归母11.36%、经营现金11.04%。2024年报依解释18号，将2023年<span class="g">保证类质保费</span>29.28亿元由销售费用移入营业成本；当年毛利率从原列报26.49%改为25.70%，不改变净利润。</p><div class="cols" role="img" aria-label="五年营业收入和归母利润趋势"><div class="col"><div class="bars"><div class="bar rev" style="height:74.7578%"></div><div class="bar np" style="height:6.2599%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:75.3459%"></div><div class="bar np" style="height:6.4746%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:81.5064%"></div><div class="bar np" style="height:7.3874%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:89.1988%"></div><div class="bar np" style="height:8.4428%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:100.0000%"></div><div class="bar np" style="height:9.6276%"></div></div></div></div><div class="collabels"><div>2021</div><div>2022</div><div>2023</div><div>2024</div><div>2025</div></div><div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
+<p class="small">五年收入与归母利润均上升，利润增长快于收入；两系列柱高共用五年最大营业收入，具体金额以上表为准。</p>
+<div class="tblscroll"><table class="tbl" ><caption>人民币亿元，另注除外；H1为CAS累计，Q2＝同口径H1−Q1，<span class="g">TTM</span>＝FY2025＋本H1−上年H1。比率重新用相应季度分子分母计算，不相减。</caption><thead><tr><th>项目</th><th>2025H1</th><th>2026H1</th><th>2025Q2推算</th><th>2026Q2推算</th><th>TTM推算</th></tr></thead><tbody><tr><td>营业收入</td><td>2,511.24</td><td>2,600.42</td><td>1,232.85</td><td>1,289.44</td><td>4,653.71</td></tr><tr><td>毛利</td><td>643.38</td><td>656.76</td><td>318.06</td><td>321.52</td><td>1,218.00</td></tr><tr><td>毛利率（%）</td><td>25.62</td><td>25.26</td><td>25.80</td><td>24.94</td><td>26.17</td></tr><tr><td>营业利润</td><td>312.49</td><td>316.84</td><td>161.30</td><td>166.33</td><td>534.14</td></tr><tr><td>营业利润率（%）</td><td>12.44</td><td>12.18</td><td>13.08</td><td>12.90</td><td>11.48</td></tr><tr><td>归母净利润</td><td>260.14</td><td>264.46</td><td>135.91</td><td>137.71</td><td>443.78</td></tr><tr><td>扣非归母</td><td>262.35</td><td>195.95</td><td>134.86</td><td>86.33</td><td>346.27</td></tr><tr><td>经营现金流</td><td>372.81</td><td>375.52</td><td>229.60</td><td>230.23</td><td>536.17</td></tr><tr><td>资本开支现金</td><td>31.45</td><td>26.34</td><td>12.82</td><td>4.91</td><td>106.31</td></tr><tr><td>FCF代理</td><td>341.36</td><td>349.18</td><td>216.78</td><td>225.32</td><td>429.86</td></tr></tbody></table></div><p>本期基本／稀释EPS为3.52／3.50元，加权ROE为11.33%（半年，未年化），期末每股净资产27.96元（推算）。Q2营业收入、归母与扣非同比依次+4.59%、+1.32%、−35.98%；这组比较不由全年盈利直接年化。</p><div data-financials="segments"><h3>法定分部与产品毛利回答不同问题</h3><div class="tblscroll"><table class="tbl"><caption>人民币亿元，另注除外；上H1＝2025H1，本H1＝2026H1。首组为法定分部对外收入（含财务业务）与<span class="g">分部税前利润</span>（含内部交易、财务收支及费用分摊），非产品毛利或归母。其他分部含机器人、物流、新能源、金融及医疗。TTM、产品毛利率、占比及CAGR为推算。</caption><thead><tr><th>法定分部</th><th>上H1收入</th><th>本H1收入</th><th>TTM收入</th><th>上H1利润</th><th>本H1利润</th><th>TTM利润</th></tr></thead><tbody><tr><td>智能家居</td><td>1,833.35</td><td>1,908.58</td><td>3,336.08</td><td>228.50</td><td>187.77</td><td>330.57</td></tr><tr><td>楼宇科技</td><td>191.12</td><td>208.28</td><td>384.72</td><td>28.48</td><td>31.63</td><td>48.19</td></tr><tr><td>工业技术</td><td>186.28</td><td>162.66</td><td>310.59</td><td>22.50</td><td>19.82</td><td>48.21</td></tr><tr><td>其他分部</td><td>312.56</td><td>331.00</td><td>640.85</td><td>33.52</td><td>7.44</td><td>−0.04</td></tr><tr><td>分部间抵销</td><td>—</td><td>—</td><td>—</td><td>0.10</td><td>−0.65</td><td>0.25</td></tr><tr><td>其他损益</td><td>—</td><td>—</td><td>—</td><td>0.32</td><td>72.43</td><td>108.70</td></tr><tr><td>利润总额</td><td>—</td><td>—</td><td>—</td><td>313.43</td><td>318.45</td><td>535.87</td></tr><tr class="grp"><td colspan="7">产品：六行合计至营业收入，不含财务业务收入；不是上方法定分部的子项</td></tr><tr><th scope="col">产品</th><th scope="col">上H1收入</th><th scope="col">本H1收入</th><th scope="col">同比推算</th><th scope="col">上H1毛利率</th><th scope="col">本H1毛利率</th><th scope="col">本期占比</th></tr><tr><td>智能家居</td><td>1,672.01</td><td>1,743.41</td><td>+4.27%</td><td>28.52%</td><td>27.95%</td><td>67.04%</td></tr><tr><td>楼宇科技</td><td>195.11</td><td>216.25</td><td>+10.84%</td><td>29.33%</td><td>29.61%</td><td>8.32%</td></tr><tr><td>机器人自动化</td><td>150.73</td><td>166.21</td><td>+10.27%</td><td>22.76%</td><td>20.90%</td><td>6.39%</td></tr><tr><td>工业技术</td><td>150.53</td><td>131.38</td><td>−12.72%</td><td>16.88%</td><td>14.75%</td><td>5.05%</td></tr><tr><td>商业工业其他</td><td>149.03</td><td>152.82</td><td>+2.55%</td><td>13.55%</td><td>13.58%</td><td>5.88%</td></tr><tr><td>其他业务</td><td>193.84</td><td>190.36</td><td>−1.80%</td><td>15.19%</td><td>16.07%</td><td>7.32%</td></tr><tr class="grp"><td colspan="7">地区：同一营业收入的地区视角，不与产品收入相加</td></tr><tr><th scope="col">地区</th><th scope="col">上H1收入</th><th scope="col">本H1收入</th><th scope="col">同比推算</th><th scope="col">本期毛利率</th><th scope="col">占比上期→本期</th><th scope="col">四年CAGR</th></tr><tr><td>国内</td><td>1,439.31</td><td>1,469.15</td><td>+2.07%</td><td>24.46%</td><td>57.31→56.50%</td><td>+6.36%</td></tr><tr><td>海外</td><td>1,071.93</td><td>1,131.27</td><td>+5.54%</td><td>26.28%</td><td>42.69→43.50%</td><td>+9.23%</td></tr></tbody></table></div><p class="small">产品FY2023—FY2025两年CAGR：智能家居+10.34%、楼宇科技+17.52%、机器人自动化−0.07%。法定分部FY2025重组，仅FY2024重列，不拼接更早利润；地区CAGR区间为FY2021—FY2025。</p></div><div class="stacks" role="img" aria-label="两期国内与海外收入占比"><div class="stack"><div class="cap">2025H1 收入结构</div><div class="stackbar"><div class="seg p" style="width:57.3100%">国内</div><div class="seg q" style="width:42.6900%">海外</div></div></div><div class="stack"><div class="cap">2026H1 收入结构</div><div class="stackbar"><div class="seg p" style="width:56.5000%">国内</div><div class="seg q" style="width:43.5000%">海外</div></div></div></div><p class="small">海外占比上升，国内仍较大。两条各归一为全部营业收入，只比较结构，不代表金额相等。</p><p>管理层称，本H1 OBM超过智能家居海外收入的50%，不是集团总收入占比。半年末<span class="g">销售返利</span>预提较上年末+7.59%，应收账款+53.16%、存货−14.22%（均推算）；这些是年末至半年末的余额变化，不证明终端动销。以旧换新对公司收入及利润的贡献额未披露；管理层称铜、塑料涨价，分原料净利润弹性未披露。产品毛利率见上表；汇兑与衍生工具按利润性质分解，股息及注销状态另列资本表。</p>
+<div class="plain"><span class="pl">白话解读</span><p>利润增加不一定赶得上股东资本增加；收入增长也不保证每百元收入留下更多产品利润。季度和分部表显示增长并不平均，下一步要看费用和金融项目如何影响股东所得。</p></div>
+<p>资本开支为长期资产现金付款，自由现金流代理（FCF）是经营现金减该付款。滚动十二个月（TTM）止于2026-06-30，不把半年直接乘倍数。</p></section>
+<section class="reveal on" id="quality"><div class="slabel">盈利质量</div><h2>销售费用缓冲了压力，金融收益又改变了归母的读法</h2>
+<p>产品毛利与销售费用改善共同提供正贡献，尚不足以认定经营全面改善。研发、管理、税金和减值仍要支付；完整税前增量还须区分相关对冲与独立投资收益。</p>
+<div class="wfall" role="img" aria-label="完整税前利润同比增量桥"><div class="wrow"><div class="nm">毛利增加<span>产品收入减成本</span></div><div class="wtrack"><div class="wbar up" style="left:69.2788%;width:14.4498%"></div></div><div class="fig">+13.38</div></div><div class="wrow"><div class="nm">销售费用下降<span>费用减少为正</span></div><div class="wtrack"><div class="wbar up" style="left:83.7286%;width:16.2714%"></div></div><div class="fig">+15.07</div></div><div class="wrow"><div class="nm">财务收支变化<span>并非全为汇兑</span></div><div class="wtrack"><div class="wbar down" style="left:0.0000%;width:100.0000%"></div></div><div class="fig">−92.61</div></div><div class="wrow"><div class="nm">衍生工具公允价值<span>不能全认作外汇套保</span></div><div class="wtrack"><div class="wbar up" style="left:0.0000%;width:29.8615%"></div></div><div class="fig">+27.65</div></div><div class="wrow"><div class="nm">权益工具公允价值<span>非对冲类投资</span></div><div class="wtrack"><div class="wbar up" style="left:29.8615%;width:38.5533%"></div></div><div class="fig">+35.70</div></div><div class="wrow"><div class="nm">投资收益变化<span>含衍生处置及其他</span></div><div class="wtrack"><div class="wbar up" style="left:68.4148%;width:25.8536%"></div></div><div class="fig">+23.94</div></div><div class="wrow"><div class="nm">信用及资产减值<span>损失增多</span></div><div class="wtrack"><div class="wbar down" style="left:77.5683%;width:16.7001%"></div></div><div class="fig">−15.47</div></div><div class="wrow"><div class="nm">其余项目净额<span>税金、费用及其他</span></div><div class="wtrack"><div class="wbar down" style="left:74.6916%;width:2.8767%"></div></div><div class="fig">−2.66</div></div><div class="wrow"><div class="nm">利润总额变化<span>合计</span></div><div class="wtrack"><div class="wbar tot" style="left:69.2788%;width:5.4128%"></div></div><div class="fig">+5.01</div></div></div>
+<p class="small">正负贡献使用同一累计刻度；绿柱增加税前利润，红柱减少税前利润，合计与两期利润总额之差核对。桥中残项逐项列入计算附录，不把无法解释的差额叫作经营改善。</p>
+<p>公司说明，外币货币性项目的<span class="g">汇兑损益</span>列入经常性损益，而相关衍生工具的收益列入非经常性损益；因此<span class="g">扣非归母净利润</span>会留下汇兑影响、剔除部分管理外汇风险的收益。不过，对冲工具还可能服务于商品或其他风险，时间和敞口也不完全匹配，不能把全部衍生工具变化叫作有效汇率对冲。</p>
+<div class="tblscroll"><table class="tbl" ><caption>人民币亿元；上半部分为期间金额，商誉减值正数为损失。下半部分为税前同比桥。工业代理为毛利减销售、管理、研发与税金，不含金融和其他项目，非公司披露税息前利润。</caption><thead><tr><th>项目</th><th>2025H1</th><th>2026H1</th><th>同比贡献</th></tr></thead><tbody><tr><td>汇兑损益</td><td>27.63</td><td>−59.76</td><td>—</td></tr><tr><td>衍生工具公允价值</td><td>−4.54</td><td>23.12</td><td>—</td></tr><tr><td>衍生工具处置</td><td>−3.50</td><td>14.21</td><td>—</td></tr><tr><td>权益工具公允价值</td><td>−8.92</td><td>26.78</td><td>—</td></tr><tr><td>商誉减值损失</td><td>0.00</td><td>10.96</td><td>—</td></tr><tr><td>工业经营利润代理</td><td>241.16</td><td>268.66</td><td>—</td></tr><tr><td>毛利增加</td><td>—</td><td>—</td><td>+13.38</td></tr><tr><td>销售费用下降</td><td>—</td><td>—</td><td>+15.07</td></tr><tr><td>财务收支变化</td><td>—</td><td>—</td><td>−92.61</td></tr><tr><td>衍生工具公允价值</td><td>—</td><td>—</td><td>+27.65</td></tr><tr><td>权益工具公允价值</td><td>—</td><td>—</td><td>+35.70</td></tr><tr><td>投资收益变化</td><td>—</td><td>—</td><td>+23.94</td></tr><tr><td>信用及资产减值</td><td>—</td><td>—</td><td>−15.47</td></tr><tr><td>其余项目净额</td><td>—</td><td>—</td><td>−2.66</td></tr><tr><td>利润总额变化</td><td>—</td><td>—</td><td>+5.01</td></tr></tbody></table></div>
+<p>费用效率和权益工具重估都支持利润，但后者不是制造经营改善。商誉减值虽然非现金，仍提示过去收购的价格可能无法收回，不能据此无条件加回所有者收益。</p>
+<div class="plain"><span class="pl">白话解读</span><p>销售费用下降抵消了部分压力，但汇兑损失与衍生收益不等额。归母和扣非都不能独自证明持续盈利；下一份报表要同时检查产品利润、费用与投资浮盈。</p></div></section>
+<section class="reveal on" id="balance"><div class="slabel">现金与负债</div><h2>集团有金融资源，却不能把账面现金全部视作分红余粮</h2>
+<p>经营现金对利润的覆盖较好，但余额必须按用途拆开。财务公司存放同业、法定准备金、担保受限资金和固定收益投资，不是同一种可自由调用的工业现金；短期<span class="g">可转债</span>列在其他流动负债，漏掉它会低估有息债务。</p>
+<div class="tblscroll"><table class="tbl" ><caption>人民币亿元；“其中”为子集。固收品含流动及非流动部分，取得期限不等于剩余期限；天数为期末余额÷TTM流量×365。末三行为两期半年现金流调节项，不是上述余额之差。</caption><thead><tr><th>项目</th><th>2025年末</th><th>2026年6月末</th></tr></thead><tbody><tr><td>货币资金</td><td>852.47</td><td>906.43</td></tr><tr><td>其中存放同业</td><td>425.65</td><td>499.43</td></tr><tr><td>法定准备金</td><td>7.51</td><td>21.73</td></tr><tr><td>受限货币资金</td><td>166.58</td><td>159.26</td></tr><tr><td>一年以上取得期限固收品</td><td>2,096.51</td><td>2,273.17</td></tr><tr><td>其中受限固收品</td><td>236.90</td><td>197.40</td></tr><tr><td>应收账款</td><td>404.50</td><td>619.55</td></tr><tr><td>应收票据</td><td>52.47</td><td>62.34</td></tr><tr><td>应收款项融资</td><td>149.35</td><td>76.60</td></tr><tr><td>存货</td><td>646.29</td><td>554.41</td></tr><tr><td><span class="g">合同负债</span></td><td>469.93</td><td>454.58</td></tr><tr><td>预提销售返利</td><td>529.53</td><td>569.73</td></tr><tr><td>本期现金等价物</td><td>—</td><td>746.14</td></tr><tr><td>其中存放同业</td><td>—</td><td>452.53</td></tr><tr><td>本期完整有息债务</td><td>—</td><td>803.27</td></tr><tr><td>再含租赁负债</td><td>—</td><td>836.40</td></tr><tr><td>其中短期可转债</td><td>—</td><td>72.69</td></tr><tr><td>应收/存货天数代理</td><td>—</td><td>48.6 / 58.9天</td></tr><tr><td>现金流调节项目</td><td>2025H1</td><td>2026H1</td></tr><tr><td>库存释放</td><td>136.81</td><td>90.63</td></tr><tr><td>经营性应收占用（减项）</td><td>169.27</td><td>240.89</td></tr><tr><td>经营性应付释放</td><td>115.75</td><td>254.84</td></tr></tbody></table></div>
+<p>应收上升快于收入，需要账龄、期后回款和相同季节的比较才能判断。企业项目和海外渠道可能影响账期，但公司没有提供足够归因，不替它选择一个乐观解释。存货下降与预提销售返利增加也不能证明经销商已经卖出商品；返利是未来结算义务，不是欠经销商的“股息”。</p>
+<p>合同负债是先收取、尚未履约的款项，仍有交付义务。保修费改变会计位置，也不改变公司需要承担售后成本。</p>
+<div class="plain"><span class="pl">白话解读</span><p>资金充裕不等于每一笔都能派走。现金表还要同时看金融业务的存款约束、可转债到期和渠道结算义务；应收是否按时回来，比期末库存少了多少更能回答现金质量问题。三季报的回款与完整债务口径是下一次检查重点。</p></div></section>
+<section class="reveal on" id="engine"><div class="slabel">增长与交付</div><h2>海外与楼宇提供增量，机器人收入不等于机器人利润</h2>
+<p>增长证据来自已实现的业务收入与毛利，而不是把新基地总投资或中标份额当成盈利。管理层披露的品牌进展与项目里程碑值得跟踪，但须与分部表的结果对照；合并增长尚缺少完整的有机、并购及固定汇率桥。</p>
+<div class="finds"><div class="find warn"><div class="t">液冷进展：部分回答</div><p>2026-06-25称基地总投资超过10亿元、预计2027年8月投产，已有商业化场景；未量化液冷独立收入与利润。</p></div><div class="find good"><div class="t">楼宇拓展：已答进展</div><p>2026-07-29称取得中国移动2026—2028年低压冷水机组集采70%份额；这是该次采购，不是行业份额或已确认收入。</p></div><div class="find "><div class="t">机器人产能：已答规划</div><p>2026-07-29称分期新增30万台减速机产能、一期计划2027年投产；尚需订单与利用率兑现。</p></div><div class="find "><div class="t">回购进度：已答执行</div><p>2026-07-29分别说明各计划执行额，资本表按后续公告更新；不沿用路演时点金额。</p></div></div><p class="small">以上为两次半年报披露前正式投资者关系记录的原问题；答复状态只评估其回答，不把分析者追问冒充管理层回避。</p>
+<p>品牌扩张可能增加营销、售后和本地库存投入；关税、原产地规则及利润汇回也影响收益。原材料成本则经采购、库存、套保和售价传导。公司披露风险管理安排，并不足以量化各项利润弹性。</p>
+<div class="plain"><span class="pl">白话解读</span><p>分部表告诉我们哪里在增长，问答表检验承诺有没有落到结果。楼宇和机器人都有增量，但毛利表现不同，工业技术还有压力；新项目要从订单走到利润，再走到回款。能够提高估值的不是更多项目名称，而是连续可比的利润和现金证据。</p></div></section>
+<section class="reveal on" id="capital"><div class="slabel">回报与治理</div><h2>派息记录可核对，回购必须扣住用途、时间和净稀释</h2>
+<p>分红、股票回购和股本注销是不同事件，日期也不同。美的有持续现金分配记录，但把“分红加所有回购”直接命名为股东回报并据此推导股价底部，会忽略员工计划转让、尚待注销股份和潜在转股。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>人民币，另注除外；历史所属年度股息、日历年现金流、期后计划及股本变化分开列示。回购合计含非注销用途，不全部计入持有期现金回报。</caption><thead><tr><th>项目</th><th>金额与状态</th></tr></thead><tbody><tr><td>五年派息</td><td>所属FY2021—FY2025每股股息依次1.70／2.50／3.00／3.50／4.30元；所属年度不同于现金派付年度。</td></tr><tr><td>末期与中期</td><td>FY2025末期每股3.80元：A股2026-06-29、H股2026-07-10派付。2026H1拟派每股0.50元，总额37.24亿元；待股东批准及公布登记、除净、派息日。</td></tr><tr><td>已完成注销</td><td>FY2025公开市场回购股份注销106.091百万股、限制性股票2.821百万股，合计108.912百万股；2026H1为零。注销账面成本不等于当日现金支出。</td></tr><tr><td>注销用途回购</td><td>2026计划截至8月末已付80.20亿元、买回99.798百万股；最新股本披露仍列库存，不按已完成注销计算。</td></tr><tr><td>员工持股转让</td><td>2026-09-02完成15.772百万股过户，9月3日公告；锁定期2026-09-03至2028-09-02。属<span class="g">库存股</span>转让，非新增发行或注销。</td></tr><tr><td>激励门槛</td><td>员工计划ROE考核：2026—2027年不低于18.0%，2028—2029年不低于17.5%；考核剔除当年新增并购及资本运作影响。H1集团股份支付费用4.85亿元，不全归于本次计划。</td></tr><tr><td>当前股本</td><td>2026-09-04已发行76.2908亿股、扣库存后74.6435亿股；剩余期权13.209百万股。精确分母见附录。</td></tr><tr><td>转债融资</td><td>2026-05-13发行两只各86.24亿港元零息转债；全额转换潜在增加172.480百万股。面额不是净募集现金，未转换也不计作已发行股份。</td></tr><tr><td>同期资本收支</td><td>2024H股IPO净募资321.46亿元；2024—2025实际普通股分红512.42亿元，另有2025各用途回购116.05亿元。2025无H股增发；未含普通借款收还，并非完整净融资额。</td></tr><tr><td>控制与关联方</td><td>截至半年末，实际控制人何享健，美的控股直接持股28.49%；半年报披露无非经营性资金占用，控股财务公司与关联方无存贷款、授信或其他金融业务。</td></tr></tbody></table></div>
+<p>库存股可能注销或按员工计划转让，不能把已买回永久等同于已注销。零息可转债转换后偿债压力下降、股份增加；模型不同时重复扣债和惩罚稀释。激励的ROE门槛约束资本效率，但不是每股价值承诺；关联交易程序也不保证资本分配必然有效。</p>
+<div class="plain"><span class="pl">白话解读</span><p>拿到的股息最直接；公司买回股份后，原股东是否真正分到更大一份，还要看股份最终去向。回购进度与激励转让同时存在，判断需要净额。注销公告、实际派息日和未来转股是资本回报从意图变为结果的核对点。</p></div></section>
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="SOTP盈利分部加总"><div class="slabel">估值与情景</div><h2>当前价格需要修复兑现，熊市压力却来自两个方向</h2><div class="grid"><div class="cell" ><div class="k">现价</div><div class="v">87.57<span class="u">元</span></div><div class="d"><span>2026-09-04 15:00 北京时间</span></div></div><div class="cell" ><div class="k">熊市</div><div class="v">42.0<span class="u">元</span></div><div class="d"><span>分部加总估值 · −52.0%</span></div></div><div class="cell" ><div class="k">基准</div><div class="v">87.1<span class="u">元</span></div><div class="d"><span>一年<span class="g">SOTP</span> · −0.5%</span></div></div><div class="cell" ><div class="k">牛市</div><div class="v">120.4<span class="u">元</span></div><div class="d"><span>一年SOTP · +37.4%</span></div></div><div class="cell" ><div class="k">隐含预期</div><div class="v">11.07<span class="u">%</span></div><div class="d"><span>家居税前率；一年价格持平、不含息</span></div></div><div class="cell" data-verdict="neutral-cautious"><div class="k">判断</div><div class="v">中性偏谨慎</div><div class="d"><span>一年含息赔率；估值置信度中</span></div></div></div><div class="steps"><div class="step"><div class="n">方法 A</div><b>SOTP盈利分部加总：不同业务的盈利各值多少？</b><p>以法定四分部的完整利润假设定价，智能家居是承重项；产品毛利不冒充归母利润。</p></div><div class="step"><div class="n">方法 B</div><b>股息率法：现金分配能否支持同一价格？</b><p>使用同一期的假设派息，只是交叉检验，不与SOTP平均。</p></div><div class="step"><div class="n">怎么读</div><b>一年情景价格，而非今日折现净值</b><p>观察日为2027-09-04，以未来四季盈利估计为基础；股息只在决策表加一次，不另加回购收益。</p></div></div><h3>第一步 · 溢价已经存在，历史坐标保留溢价边界</h3><p>现价市盈率（PE）为15.05倍、市净率（PB）为3.15倍（Wind）。PB自算口径见附录；60个月末PE中位13.29倍、四分位区间12.75—14.44倍、最高17.99倍，现价位于81.7%分位；PB分位80.0%。样本为2021年9月至2026年8月回溯月末值，非每日分位或投资回测。</p><p>6月5日至9月4日，A/H股分别65/64日，日均同币成交27.87/4.95亿元，A股活跃约5.63倍。H股100.80港元按当日中间价折87.15元，价差−0.48%。</p><h3>第二步 · 白电同业说明溢价，不能替代分部估值</h3><div class="tblscroll"><table class="tbl" ><caption>Wind标准化交叉核对；2026-09-04收盘倍数，H1为2026上半年，ROE为2025全年。国内白电同层，不混入全球工业自动化公司；美的核心财务以主表CAS为准。</caption><thead><tr><th>公司</th><th>PE</th><th>PB</th><th>H1收入同比</th><th>H1归母同比</th><th>H1毛利率</th><th>FY25 ROE</th></tr></thead><tbody><tr><td>美的</td><td>15.05</td><td>3.15</td><td>+3.6%</td><td>+1.7%</td><td>25.3%</td><td>19.7%</td></tr><tr><td>格力</td><td>7.84</td><td>1.47</td><td>−8.1%</td><td>−7.9%</td><td>28.8%</td><td>20.3%</td></tr><tr><td>海尔</td><td>11.48</td><td>1.71</td><td>−2.8%</td><td>−14.3%</td><td>27.2%</td><td>17.0%</td></tr></tbody></table></div><p>除美的外两家PE中位9.66倍，美的溢价55.9%。本报告推断增长韧性支持部分溢价，非市场定价归因。楼宇溢价仍需增长兑现，不能给集团统一加“机器人倍数”。</p><h3>第三步 · 一个分部模型，把可持续利润与估值要求分开</h3><p>四个法定分部按完整利润定义估值；集团残项包括补贴、投资、衍生、减值及营业外，与分部财务收支联合设定，不单边加回汇兑。</p><div class="tblscroll"><table class="tbl txt" ><caption>截至2027年6月的未来四季利润估计，观察日2027-09-04；金额人民币亿元，均为假设；税前率以外部收入为分母，是代理口径。楼/工/其指楼宇/工业/其他；长期增长依次家居/楼宇/工业/其他。</caption><thead><tr><th>驱动／结果</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据</th></tr></thead><tbody><tr><td>家居收入增长</td><td>−3%</td><td>+8%</td><td>+12%</td><td>未来四季对TTM：熊市补贴/出口逆风；基准8%高于H1、低于前一全年；牛市依赖品牌及海外扩张</td></tr><tr><td>其他收入增长</td><td>楼+2%／工−5%／其+0%</td><td>楼+12%／工+3%／其+5%</td><td>楼+20%／工+10%／其+12%</td><td>楼宇围绕H1约9%增长；工业修复；其他需收入转成利润</td></tr><tr><td>家居税前率</td><td>9%</td><td>11%</td><td>12%</td><td>家居参照FY25分部利润率11.39%和TTM9.91%；基准11%假设汇兑压力缓和，未机械加回原损失</td></tr><tr><td>其他税前率</td><td>楼11%／工10%／其0%</td><td>楼14%／工13%／其3%</td><td>楼15%／工15%／其5%</td><td>楼宇14%参照FY25约12.25%与本H1约15.19%；工业13%参照本H1约12.19%；其他3%低于FY25约4.18%</td></tr><tr><td>家居PE</td><td>11倍</td><td>15倍</td><td>17倍</td><td>家居基准15倍参照自身历史PE上四分位14.44倍附近并保留品牌溢价；熊11倍靠近海尔，牛17倍接近历史上沿</td></tr><tr><td>其他PE</td><td>楼14／工9／其7倍</td><td>楼18／工12／其10倍</td><td>楼22／工15／其12倍</td><td>楼宇增长溢价，工业折价，其他靠近同业中位；未借用机器人可比倍数</td></tr><tr><td>长期增速诊断</td><td>3.6／5.0／2.2／0.0%</td><td>5.3／6.1／4.2／3.0%</td><td>5.9／6.8／5.3／4.2%</td><td>独立前瞻PE诊断，固定70%分配率与10%要求回报；不是SOTP历史盈利口径的增长率</td></tr><tr><td>集团净残项</td><td>−5亿元</td><td>20亿元</td><td>35亿元</td><td>基准据FY25其他收益减两项减值加半数投资收益；熊牛为压力预算。残项均用10倍，参照同业9.655倍取整，反映较弱持续性</td></tr><tr><td>归母折算</td><td>78%</td><td>82%</td><td>84%</td><td>基准参照FY25及本H1归母/税前约83%；熊牛为税与少数股东差异</td></tr><tr><td>派息率</td><td>60%</td><td>70%</td><td>75%</td><td>60%/70%/75%围绕FY25约74%所属年度分配比例，均非公司承诺；当前股数见附录</td></tr><tr><td>预测总收入</td><td>4,564.3亿元</td><td>5,026.6亿元</td><td>5,257.5亿元</td><td>分部收入、税前率、倍数及归母折算推算；非一致预期</td></tr><tr><td>预测归母利润</td><td>280.0亿元</td><td>441.5亿元</td><td>537.4亿元</td><td>四分部加残项扣税与少数股东；非披露分部净利</td></tr><tr><td>SOTP每股价值</td><td>42.0元</td><td>87.1元</td><td>120.4元</td><td>一年情景价格；采用当前发行在外股数，不另加资产或回购价值</td></tr><tr><td>一年假设每股股息（DPS）</td><td>2.25元</td><td>4.14元</td><td>5.40元</td><td>整段观察期股息预算，已付2025年度股息不重复加回</td></tr></tbody></table></div><p><span class="g">股权要求回报</span>10%是分析假设，基于历史约5%分配收益与约5%长期增长的检查锚。半年度工业利息费用推算的粗息费率约2.39%，含财务业务的债务分母使它只能作量级参照；股东要求回报不等于融资成本。股息率交叉检验要求6%／5%／4.5%，基准贴近历史派息收益量级，熊市要求更厚补偿。</p><div class="steps chain"><div class="step"><div class="n">驱动</div><b>家居收入+8%</b><p>基准情景，其他业务分别预测</p></div><div class="step"><div class="n">收入与利润率</div><b>3,603.0亿元／11%</b><p>家居收入与税前率</p></div><div class="step"><div class="n">归母利润</div><b>441.5亿元</b><p>四分部加集团残项，折算82%</p></div><div class="step"><div class="n">分部倍数</div><b>15／18／12／10倍</b><p>对应前表四分部顺序</p></div><div class="step"><div class="n">每股价值</div><b>87.1元</b><p>SOTP合计除当前发行在外股数</p></div></div><div class="ffield" role="img" aria-label="四分部SOTP和股息率估值同轴比较"><div class="frow"><div class="fnm">SOTP<span>熊市</span></div><div class="ftrack"><div class="fbar alt" style="left:11.6000%;width:0.8000%"></div><div class="fmark" style="left:57.5700%"></div></div><div class="fig">42.0元</div></div><div class="frow"><div class="fnm">SOTP<span>基准</span></div><div class="ftrack"><div class="fbar " style="left:56.7000%;width:0.8000%"></div></div><div class="fig">87.1元</div></div><div class="frow"><div class="fnm">SOTP<span>牛市</span></div><div class="ftrack"><div class="fbar moss" style="left:90.0000%;width:0.8000%"></div></div><div class="fig">120.4元</div></div><div class="frow"><div class="fnm">熊市至牛市<span>股息率法</span></div><div class="ftrack"><div class="fbar " style="left:7.5000%;width:82.5000%"></div></div><div class="fig">37.5–120.0元</div></div></div><p class="small">两种方法都对利润与分配是否持续敏感，交叉检验不能证明股价有底。横轴：人民币30—130元／股；SOTP点值以居中细标表示，不是估值范围，黑线为现价。股息率法为同一期现金预算，不加到SOTP上。</p><div class="tblscroll"><table class="tbl sgrid"><caption>行：家居PE；列：家居税前利润率。其他业务、归母折算和股数固定基准；每格人民币元，边界用于敏感性而非额外情景。隐含行是一年价格持平条件，不含息；用未舍入值计算。</caption><thead><tr><th>家居PE＼税前率</th><th>9%</th><th>11%</th><th>13%</th></tr></thead><tbody><tr><td>12.00倍</td><td class="">64.6</td><td class="">74.1</td><td class="">83.6</td></tr><tr><td>15.00倍</td><td class="">75.3</td><td class="base">87.1</td><td class="">99.0</td></tr><tr><td>15.10倍（隐含）</td><td class="">75.6</td><td class="implied">87.6</td><td class="">99.5</td></tr><tr><td>18.00倍</td><td class="">85.9</td><td class="">100.2</td><td class="">114.4</td></tr></tbody></table></div><h3>第四步 · 反解一年价格持平条件，不含股息</h3><div class="tblscroll"><table class="tbl txt" data-fullscan-role="implied"><caption>现价隐含指一年后价格持平，不含股息，非总回报盈亏平衡；每行只变一项，其余固定基准。长期增长沿用独立前瞻PE诊断，非已观测市场预期。</caption><thead><tr><th>假设</th><th>基准假设</th><th>现价隐含</th><th>差距</th></tr></thead><tbody><tr><td>家居税前率</td><td>11.00%</td><td>11.07%</td><td>+0.07pp</td></tr><tr><td>家居PE</td><td>15.00倍</td><td>15.10倍</td><td>+0.10倍</td></tr><tr><td>长期增长诊断</td><td>5.33%</td><td>5.36%</td><td>+0.03pp</td></tr></tbody></table></div><div class="rows" aria-label="一年SOTP价格阶梯"><div class="row"><div class="nm">熊市<span>利润与倍数双压</span></div><div class="track"><div class="fill alt" style="width:34.9329%"></div></div><div class="fig">42.0元<span>较现价 −52.0%</span></div></div><div class="row"><div class="nm">基准<span>维持利润需修复</span></div><div class="track"><div class="fill " style="width:72.3956%"></div></div><div class="fig">87.1元<span>较现价 −0.5%</span></div></div><div class="row"><div class="nm">现价<span>2026-09-04</span></div><div class="track"><div class="fill soft" style="width:72.7584%"></div></div><div class="fig">87.57元<span>市场价</span></div></div><div class="row"><div class="nm">牛市<span>品牌与楼宇兑现</span></div><div class="track"><div class="fill moss" style="width:100.0000%"></div></div><div class="fig">120.4元<span>较现价 +37.4%</span></div></div></div><p class="small">价格阶梯显示基准接近现价，但熊市损失幅度大于牛市价格上行；宽度共用牛市值为最大值，百分比不含股息。</p><div class="plain"><span class="pl">一句话总结</span><p>各业务盈利分别定价后相加，基准87.1元接近现价87.57元。本模型推算：其他项不变，家居税前率约11.1%可使一年后价格持平，不含息；盈利不兑现，情景价会下移。股息率法82.8元不是保底价。</p></div></section>
+<section class="reveal on" id="valuation-appendix" ><div class="slabel">估值机制附录</div><h2>每一个结果都能回到输入、口径和假设</h2><p>SOTP采用股权PE而非企业价值倍数，分部利润已包含分配的财务收支。集团残项与分部抵销合为单一预算；统一归母折算覆盖税和少数股东，不将各产品线当作全资公司。金融资产收益可能已在利润中，故不再全额加账面现金、金融投资或商誉，也不再扣一次工业净债务。没有另设控股折价，因为管理费用已进入分部，重复折价须有独立证据。</p><p>每档价值＝［Σ(分部收入×税前利润率×该分部PE)＋集团净残项×10］×归母折算÷当前发行在外股数；观察日为一年后，不作今日现值表述。持有期假设股息＝情景归母÷股数×派息率；价格变化与股息相加一次，回购收益另加值为零。股息率法只用同一股息预算。独立前瞻PE诊断长期增速＝10%−70%÷PE，采用前瞻Gordon约定，不等于一年后以历史盈利定价的SOTP增长率。</p><p>股息预算是一年总额，不将拟议中期0.50元与全年预算叠加。<span class="g">机械全稀释</span>测试采用全部转股及期权行权上界，即使某笔转债尚未价内；它不是会计稀释每股收益。发行在外分母下，当前库存股已被扣除，注销这些股份不再创造第二次分母收益。</p><div class="tblscroll"><table class="tbl txt" data-fullscan-role="derivations"><caption>原始金额为千元；输出人民币亿元、元/股或%；模型保留内部精度，显示四舍五入。</caption><thead><tr><th>数值</th><th>输入</th><th>公式</th><th>来源（页·附注）</th></tr></thead><tbody><tr><td>现金覆盖1.42倍；<br>增速差27.0pp</td><td>H1现金37552090／归母26446037千元；归母与扣非两期值</td><td>现金÷归母；两项同比增速相减</td><td>半年报p8、p98–99</td></tr><tr><td>Q2收入／归母／扣<br>非／现金／资本开<br>支：1,289.44／<br>137.71／86.33／<br>230.23／4.91亿元</td><td>H1与Q1同名流量；2025Q2同法</td><td>H1−Q1；毛利率=(收入−成本)÷收入</td><td>半年报利润及现金流表；一季报p8–11；FY2025季度表交叉核对</td></tr><tr><td>TTM收入／归母／<br>现金／FCF：<br>4,653.71／443.78<br>／536.17／<br>429.86亿元</td><td>FY2025、2026H1、2025H1同名项目</td><td>FY2025＋本H1−上年H1；FCF=现金−长期资产付款</td><td>FY2025合并报表；半年报比较表</td></tr><tr><td>四年收入／归母／<br>现金CAGR：7.54／<br>11.36／11.04%</td><td>五年表首尾年；FY2023重列质保费2928031千元</td><td>CAGR=(末年÷首年)^0.25−1；重列仅移动成本费用</td><td>FY2022–FY2025年报；FY2024附注2(32)</td></tr><tr><td>税前增量5.01亿元<br>；桥中各项见正文</td><td>毛利、销售、财务收支、衍生/权益公允价值、投资、信用与资产减值两期值</td><td>逐项相加；残项含管理研发、税金、金融收入成本、其他收益、其他公允价值、处置及营业外净额</td><td>半年报利润表及附注四(51)–(60)</td></tr><tr><td>工业经营代理<br>268.66亿元</td><td>收入260042490、成本194366771、销售21545703、管理7615111、研发8467401、税金1181450千元</td><td>收入−成本−销售−管理−研发−税金；不是归母</td><td>半年报合并利润表</td></tr><tr><td>有息债务<br>803.27亿元；含租<br>赁836.40亿元</td><td>短借47305038、长借15417300、当前长借574675、长债6665757、当前债券3095389、短转债7269104、租赁3312246千元</td><td>前六项加总；再加租赁。当前租赁不在前六项，避免重复</td><td>半年报附注四(27)、(33)、(34)、(36)–(38)</td></tr><tr><td>应收／存货天数 <br>48.6／58.9天</td><td>期末应收61954826、存货55440969千元；TTM收入/成本</td><td>期末余额÷TTM流量×365，非平均余额周转</td><td>半年报资产负债表；TTM收入成本桥</td></tr><tr><td>法定分部TTM利润<br>：330.57／48.19<br>／48.21／<br>−0.04亿元</td><td>FY2025＋2026H1−2025H1各分部利润；其他损益另列</td><td>三期同口径相加减；利润总额另含抵销与其他损益</td><td>FY2025年报p248–250；半年报p186–188</td></tr><tr><td>产品两年CAGR：智<br>能家居+10.34%；<br>楼宇科技+17.52%<br>；机器人自动化<br>−0.07%</td><td>同分类FY2023与FY2025收入，单位千元</td><td>(FY2025/FY2023)^0.5−1</td><td>FY2024年报产品表；FY2025年报产品表</td></tr><tr><td>国内／海外四年<br>CAGR：6.36%／<br>9.23%</td><td>FY2021国内203579380、海外137653828；FY2025国内260504038、海外195947693千元</td><td>(FY2025/FY2021)^0.25−1；地区占比=地区收入/两地合计</td><td>FY2022年报比较列；FY2025年报地区表；半年报p51–52</td></tr><tr><td>资本分母：已发行<br>7,629,079,168股<br>；扣库存<br>7,464,348,045股</td><td>A股已发行6978230668、库存164731123；H股650848500</td><td>A+H；再扣A库存。期权和转债另测，不把库存永久注销假设化</td><td>2026-09-04翌日披露p2；8月月报p2–5</td></tr><tr><td>2024—2025普通股<br>现金分红<br>512.42亿元</td><td>2024实际派息20764776千元；2025实际派息30476852000元</td><td>统一单位后相加；不使用2025年度分红提案额替代现金发生额</td><td>FY2025年报未分配利润附注及分红说明</td></tr><tr><td>H1权益/股本自算<br>PB3.13倍</td><td>现价87.57元、H1归母权益212861055千元、股本7613439千股</td><td>现价÷每股归母权益；SOTP分母另扣当前库存股</td><td>H1资产负债表及Wind；两种分母各有用途</td></tr><tr><td>当前发行在外<br>74.64348045亿股<br>；发行股本<br>76.29079168亿股</td><td>A发行在外6813499545＋H650848500；库存股164731123股</td><td>当前分母已扣库存股，未来注销不再额外减一次；后续转让会增分母</td><td>HKEX 2026-09-04翌日披露；8月月报</td></tr><tr><td>熊市：归母<br>280.0亿元、SOTP<br>42.0元、DPS<br>2.25元</td><td>四分部收入：3,236.0／392.4／295.1／640.9；税前率9／11／10／0%；PE11／14／9／7；残项-5亿元</td><td>收入×分部税前率；各利润×0.78×相应PE＋集团残项×同折算×10；除当前股数；DPS=归母/股数×派息率</td><td>FY25及H1附注分部资料；情景假设</td></tr><tr><td>熊市一年含息<br>−49.4%；股息率<br>法37.5元</td><td>价格情景42.0443元，DPS2.2503元；现价87.57元</td><td>(情景价格+DPS)÷现价−1；交叉价值=DPS÷要求股息率</td><td>同一模型观察期2026-09-04至2027-09-04</td></tr><tr><td>基准：归母<br>441.5亿元、SOTP<br>87.1元、DPS<br>4.14元</td><td>四分部收入：3,603.0／430.9／319.9／672.9；税前率11／14／13／3%；PE15／18／12／10；残项20亿元</td><td>收入×分部税前率；各利润×0.82×相应PE＋集团残项×同折算×10；除当前股数；DPS=归母/股数×派息率</td><td>FY25及H1附注分部资料；情景假设</td></tr><tr><td>基准一年含息<br>+4.2%；股息率法<br>82.8元</td><td>价格情景87.1334元，DPS4.1404元；现价87.57元</td><td>(情景价格+DPS)÷现价−1；交叉价值=DPS÷要求股息率</td><td>同一模型观察期2026-09-04至2027-09-04</td></tr><tr><td>牛市：归母<br>537.4亿元、SOTP<br>120.4元、DPS<br>5.40元</td><td>四分部收入：3,736.4／461.7／341.6／717.8；税前率12／15／15／5%；PE17／22／15／12；残项35亿元</td><td>收入×分部税前率；各利润×0.84×相应PE＋集团残项×同折算×10；除当前股数；DPS=归母/股数×派息率</td><td>FY25及H1附注分部资料；情景假设</td></tr><tr><td>牛市一年含息<br>+43.6%；股息率法<br>120.0元</td><td>价格情景120.3573元，DPS5.3996元；现价87.57元</td><td>(情景价格+DPS)÷现价−1；交叉价值=DPS÷要求股息率</td><td>同一模型观察期2026-09-04至2027-09-04</td></tr><tr><td>价格持平PE<br>15.1003倍、税前<br>率11.0735%；平衡<br>价67.78元</td><td>家居基准收入3,602.9627亿元，归母折算82%；其他估值1,629.1323亿元</td><td>令一年后价格=现价，不含息，一次反解家居PE或利润率；<span class="g">平衡价</span>=(熊价+熊DPS+基价+基DPS)/2</td><td>同一SOTP模型；价格持平不同于含息回报盈亏平衡</td></tr><tr><td>机械全稀释分母<br>76.50037021亿股<br>、基准85.02元</td><td>当前发行在外＋期权及两笔转股潜在股份；集团股权值保持基准</td><td>只增加分母，不把转股后的债务再次扣掉；未计行权所得和利息节省，非会计EPS</td><td>HKEX月报/翌日表；半年报可转债及股份支付附注</td></tr><tr><td>集团净残项预算<br>19.99亿元，基准<br>取20</td><td>FY25其他收益26.64313−资产减值11.56469−信用减值3.55860＋投资收益16.94661亿元乘50%</td><td>50%为研究折扣；公允价值/净处置/营业外假设为零；与分部财务收支联合判断</td><td>FY25合并利润表；没有把该预算标为披露经常利润</td></tr></tbody></table></div></section>
+<section class="reveal on" id="risks" ><div class="slabel">风险与验证</div><h2>最重的风险不是看错一个利润口径，而是高估修复的持续性</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="risk-register"><caption>按对论点的伤害排序；概率均为定性研究判断，阈值和情景不是公司指引。</caption><thead><tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr></thead><tbody><tr><td>1</td><td>家居盈利和倍数同降</td><td>2026H1产品毛利率下降，费用提供缓冲</td><td>补贴/海外价格竞争压利润，溢价收缩</td><td>主模型熊市价格42.0元；家居收入与税前率同时下调</td><td>中：作为压力情景，不给统计概率</td><td>2026三季报：毛利、费用、应收变化；FY2026年报核对全年</td></tr><tr><td>2</td><td>金融损益持续扰动</td><td>2026H1汇兑、衍生及权益浮盈方向不同</td><td>对冲时点和敞口不同，归母不能重复本期组合</td><td>集团残项熊／基准−5／20亿元为模型暴露，非净外汇敞口</td><td>中：业务风险持续存在</td><td>FY2026年报：完整汇兑/衍生和投资损益桥</td></tr><tr><td>3</td><td>回款与渠道义务</td><td>2026-06-30应收增长、返利义务仍在</td><td>利润确认早于回款，现金被营运资金占用</td><td>应收及存货天数代理见现金表；尚无纯工业FCF</td><td>中：账龄和期后回款证据不足</td><td>2026三季报：同季应收、现金回款与返利结算</td></tr><tr><td>4</td><td>其他业务修复落空</td><td>2026H1机器人毛利率承压；其他法定分部TTM近盈亏平衡</td><td>收入增长不能覆盖费用与资本成本</td><td>模型其他分部税前率0%／3%／5%；无独立机器人归母利润</td><td>中：不能从订单金额判断</td><td>FY2026年报及2027年8月液冷基地计划节点</td></tr><tr><td>5</td><td>净稀释与分配变化</td><td>2026-09-04仍有库存股、员工计划和可转债</td><td>员工转让或转股增加发行在外股数，派息或低于预算</td><td>固定盈利机械全稀释基准85.0元；尚未计融资变化</td><td>中：工具已存在，行使时点不确定</td><td>2026年内注销/激励披露；2027年内转债到期与实际派息</td></tr></tbody></table></div><div class="tline"><div class="tstop warn"><span class="tw">2026三季报</span><b>利润先回到经营</b><p>检查费用改善是否抵得住产品毛利和回款压力。</p></div><div class="tstop "><span class="tw">FY2026年报</span><b>现金与金融损益对表</b><p>核对完整对冲桥、年度分配和其他业务利润。</p></div><div class="tstop "><span class="tw">2027年8月</span><b>液冷计划兑现</b><p>管理层投产时点，延期不能自动视为收入损失。</p></div><div class="tstop "><span class="tw">2027年内</span><b>融资变股本的时点</b><p>到期或转股，与实际注销及员工股份转让同时核对。</p></div></div></section>
+<section class="reveal on" id="decision" data-fullscan-role="decision"><div class="slabel">最终判断</div><h2 data-verdict="neutral-cautious">中性偏谨慎：利润可修复，但当前价格留下的容错空间有限</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="decision-block"><caption></caption><tbody><tr><td>论点</td><td>制造经营有韧性，但投资损益与净稀释使账面利润和回购金额不能直接成为安全垫。</td></tr><tr><td>基准对一致预期</td><td>无可比一致预期。2026-09-04供应商只给未标预测财年的前瞻PE；基准未来四季归母441.5亿元，用现价隐含表检验，不冒充市场预测。</td></tr><tr><td>赔率</td><td>一年SOTP对87.57元现价：基准含息+4.2%，熊市含息−49.4%。基准价格接近现价、计息后微正，但下行情景远重于基准收益，故取中性偏谨慎。</td></tr><tr><td>平衡价</td><td>67.8元：固定本报告两档情景和各自现金股息后，基准上行与熊市下行等额的价格，是模型性质而非买入指令。</td></tr><tr><td>持有回报</td><td>2026-09-04至2027-09-04：基准假设DPS4.14元、毛股息收益4.73%；熊市2.57%，回购收益另加0%。派息未承诺，金额未扣个人税费。</td></tr><tr><td>分项置信度</td><td>论点证据 高；现金与资产负债表 中；治理 中；估值输入 中。估值与现金并列薄弱：FY2026年报若提供可核对分部金融损益和纯工业现金转换，将提升判断可靠性。</td></tr><tr><td>判断</td><td>中性偏谨慎（等待验证）：公司质量不等于当前赔率，下一检查点为2026三季报；利润率、回款或净稀释证据改善后再更新情景。</td></tr></tbody></table></div><div class="callout"><b>最强反方观点：</b>对谨慎判断最有力的反驳是，汇兑逆风消退、楼宇高增长和海外品牌扩张可能同时兑现，费用效率继续释放，当前溢价因此合理。<b>失败边界：</b>若这些改善已经连续转成分部盈利与现金，并且净股本减少，本报告偏谨慎的情景权衡应上修；反过来，只有收入或回购金额增长不足以改变判断。</div></section>
+<section class="reveal on" id="glossary" ><div class="slabel">名词速查</div><h2>先分清利润的归属，再分清现金和股本的归属</h2><div class="tblscroll"><table class="tbl gloss" ><caption></caption><thead><tr><th>术语</th><th>白话解释</th></tr></thead><tbody><tr><td>推算单二季度</td><td>同口径半年累计减一季累计的流量，不能相减期末存量或加权EPS。</td></tr><tr><td>营业总收入</td><td>CAS中还包括财务业务利息及手续费；营业收入只用于相应主营成本的毛利计算。</td></tr><tr><td>保证类质保费</td><td>为产品质量保证承担的成本，重分类可以改变毛利而不改变净利润。</td></tr><tr><td>自由现金流代理（FCF）</td><td>经营现金减长期资产现金付款；含集团财务业务且未扣全部其他投资义务，不等于可分红余额。</td></tr><tr><td>滚动十二个月（TTM）</td><td>上个完整年度加本年已过期间、减上年同期，避免直接把半年乘倍数。</td></tr><tr><td>扣非归母净利润</td><td>按监管规则排除非经常性损益后的归母利润，不保证它完整表示经济上的持续盈利。</td></tr><tr><td>汇兑损益</td><td>外币货币性资产负债随汇率变化产生的盈亏；与对冲工具可能分列不同会计项目。</td></tr><tr><td>公允价值变动</td><td>持有资产或工具重估产生的账面盈亏，与现金收入不同。</td></tr><tr><td>销售返利</td><td>对经销商承诺的结算折让，是负债和收入确认条件的一部分，不是股东股息。</td></tr><tr><td>合同负债</td><td>已收取但尚未完成履约的款项，不能直接视为闲置现金。</td></tr><tr><td>自有品牌（OBM）</td><td>以自己品牌销售并承担渠道、营销和服务，不等于无条件获得更高利润。</td></tr><tr><td>库存股</td><td>已购回而未注销或仍待转让的股份；与发行在外股数区分。</td></tr><tr><td>可转债</td><td>债券可按条款换成股份，转股改变债务和股数；零票息不等于没有稀释成本。</td></tr><tr><td>分部加总（SOTP）</td><td>按不同法定业务的盈利和相应倍数分别估值，再处理集团残项；不是把产品毛利乘同一PE。</td></tr><tr><td>分部税前利润</td><td>包含公司分摊和财务收支的管理评价口径；不是产品毛利，也非各分部披露归母。</td></tr><tr><td>机械全稀释</td><td>把剩余期权与转债全部变成股份的分母上界；不计现金及利息变化，不是会计稀释EPS。</td></tr><tr><td>股权要求回报</td><td>研究者对股东承担剩余风险的回报假设，不等于公司借款成本。</td></tr><tr><td>平衡价</td><td>固定模型基准及熊市价格和同期现金股息，使两边损益等额的价格，不是投资指令。</td></tr></tbody></table></div></section>
 <footer>
-  <p>财务数据截至2026年6月30日；公司公告检索截至2026年8月29日；行情为2026年8月28日收盘（来源：Wind）。主要财务文件经由交易所指定披露渠道取得。</p>
-  <p>本报告区分公司披露、管理层叙事、Wind标准化数据与分析推算。情景与估值不构成投资建议；投资有风险，决策需独立判断。</p>
+<p>数据截止：财务至2026-06-30；公告核对至2026-09-06；市场数据为2026-09-04收盘，来源：Wind金融数据服务。</p>
+<p>财务来源：美的集团<a href="https://pdf.dfcfw.com/pdf/H2_AN202608280006758469_1.pdf">2026年半年度报告</a>（财务p8、产品地区p51—52及171—172、分部p186—188）、<a href="https://pdf.dfcfw.com/pdf/H2_AN202604291821767635_1.pdf">2026年一季报</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202603311820893096_1.pdf">2025年报</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202503281648793874_1.pdf">2024年报</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202403271628325618_1.pdf">2023年报</a>及<a href="https://pdf.dfcfw.com/pdf/H2_AN202304281586090602_1.pdf">2022年报</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082802075_c.pdf">港交所中期业绩公告</a>作准则、审阅及期后事项核对。</p>
+<p>业务与资本来源：<a href="https://pdf.dfcfw.com/pdf/H2_AN202606251823853059_1.pdf">6月25日</a>及<a href="https://pdf.dfcfw.com/pdf/H2_AN202607291827460366_1.pdf">7月29日正式投资者关系记录</a>；<a href="https://pdf.dfcfw.com/pdf/H2_AN202609021828930348_1.pdf">8月回购进度</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202609021828930836_1.pdf">员工持股过户公告</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090402242_c.pdf">8月证券月报</a>与<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090402262_c.pdf">9月4日翌日披露</a>及<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090402254_c.pdf">修订翌日披露</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082802113_c.pdf">拟派中期股息公告</a>。汇率采用Wind人民银行中间价，并以<a href="https://hzf.mofcom.gov.cn/article/zyfw/jrfw/jrfwywzn/jrfwwh/hlfxglzy/202609/7872.html">同日官方公告</a>复核港元单位。</p>
+<p>审计状态：历史年度财务报表已审计；A股半年报及一季报未经审计，港股IAS34中期财务资料经普华永道审阅而非审计。管理层陈述不因刊于年报自动获得审计保证。单季、TTM、复合增速、利润桥、现金代理及估值均按附录所述推算或假设，与公司披露指标区分。</p>
+<p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p>
 </footer>
-
 </main>
-
 <script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -744,6 +357,4 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
   els.forEach(function(e){ io.observe(e); });
 })();
-</script>
-</body>
-</html>
+</script></body></html>
