@@ -1205,15 +1205,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "拆解交易服务增长、Temu本地化与一方品牌投入、监管成本、现金可得性、股权激励、电话会信息边界及估值折价。",
-      "verdict": "Watchlist",
-      "verdict_code": null,
+      "hook": "Cash funds the transition; shareholder returns still need proof.",
+      "verdict": "Neutral",
+      "verdict_code": "neutral",
       "published": "2026-08-24",
       "published_at": "2026-08-24T23:59:24-04:00",
-      "revised": "2026-08-29",
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "47c6e17527d733f6130c7c0c82c51d32",
+      "revised": "2026-09-06",
+      "revision": {
+        "date": "2026-09-06",
+        "note": "Updated the SEC source, accounting comparability, disclosure boundaries, market inputs and primary valuation; cash recognition and one-year scenario outcomes are now separated explicitly."
+      },
+      "generation": "v2.7",
+      "style_hash": "98547e9cd052402be43c4ff92d55d442",
       "lang": "en"
     },
     {
