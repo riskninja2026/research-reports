@@ -954,15 +954,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "单季利润已经回来，正常利润率仍待验证；穿透总额法商品销售、KPI披露退坡、新业务、叮咚收购、激励稀释与现价隐含预期。",
-      "verdict": "中性",
-      "verdict_code": "neutral",
+      "hook": "单季修复之后，扣足股权成本后的正常利润与全年现金仍决定每股回报。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
       "published": "2026-08-31",
       "published_at": "2026-08-31T04:30:03-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-06",
+      "revision": {
+        "date": "2026-09-06",
+        "note": "按新版Fullscan重做扣股份支付后正常化市盈率（PE，即股价相当于多少年度每股利润）、同期限回报与验证结构，刷新行情和八月股数；更正LTM收入的重述基数，删除无法复现的一致预期，并区分归母利润与集团总利润。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {

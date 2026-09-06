@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:,">
-<title>美团 2026Q2 Fullscan 全景尽调 · Meituan 2026Q2 Results Analysis</title>
-<style>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="data:,"><title>美团 2026Q2及H1 Fullscan 全景尽调</title><style>
 :root{
   --paper:#EDEFF2;
   --card:#F8F9FB;
@@ -253,526 +246,271 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
 .tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
 .tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
 .tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
-</style>
-</head>
-<body>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">美团 03690.HK / 83690.HK ｜ 全景尽调 ｜ 2026Q2及中期业绩 · 财务截止 2026.06.30</div>
-    <h1>盈利回来了，<br>正常利润率还没回来</h1>
-    <p class="lede">美团在连续多个季度激烈竞争后恢复单季盈利，证明补贴强度下降时平台可以快速收回利润。<b>但商品销售放大了收入，LTM利润与现金仍在深度亏损，订单和单位经济又没有重新披露。</b>这更像盈利正常化的第一张证据，而不是竞争终局。</p>
-
-    <div class="dual">
-      <div>
-        <div class="tag">单季修复 · 2026Q2经调整净利润</div>
-        <div class="big a">25.24亿</div>
-        <div class="cap">人民币；同比增长69.0%。这是公司直接披露的非IFRS指标，不等同于全年盈利能力。</div>
-      </div>
-      <div>
-        <div class="tag">周期未愈 · LTM经调整净亏损</div>
-        <div class="big b">335.34亿</div>
-        <div class="cap">人民币；按FY2025＋2026H1−2025H1推算。一个好季度尚未覆盖此前竞争消耗。</div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main class="wrap">
-
-<section class="reveal on" id="tldr">
-  <div class="slabel">三十秒版本 · 先看结论</div>
-  <h2>如果只读一屏，读这里</h2>
-  <div class="tldr">
-    <ul>
-      <li><b>它是谁：</b>美团把外卖、即时零售、到店酒旅和食杂零售装进同一流量与履约网络；核心本地商业赚平台与广告的钱，新业务仍以自营商品销售和扩张投入为主。</li>
-      <li><b>本期成绩：</b>2026Q2收入1,046.43亿元、同比增长14.4%，经营利润26.91亿元，经调整净利润25.24亿元，经营现金流97.33亿元；单季恢复盈利与现金流为正。</li>
-      <li><b>核心矛盾：</b>核心本地商业利润率回到7.9%，却仍远低于竞争前；截至六月的LTM经调整净亏损335.34亿元，现金流净流出260.00亿元。</li>
-      <li><b>容易踩的坑：</b>商品销售贡献了集团同比收入增量的66.5%，而且按主要责任人总额确认；把14.4%的收入增速直接读成平台交易或变现率增长，会高估增长质量。</li>
-      <li><b>结论：</b><b>中性观察</b>。2026年8月31日HK$76.50接近本报告基准值HK$78，市场已经要求核心利润率从本季7.9%继续修复至约10%–12%；在订单、单位经济和连续现金转换重新得到证据前，安全边际不厚。</li>
-    </ul>
-  </div>
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
+</style></head><body><header class="hero"><div class="wrap"><div class="eyebrow">美团 03690.HK ｜ 全景尽调 ｜ 更新 2026.09.06</div><h1>利润转正之后，<br>每股回报还要过关</h1><p class="lede">管理层将核心单季修复归于激励减少与季节性，集团收入增量则更多来自自营商品。<b>真正决定价值的是扣足股权成本后，正常利润能否持续留下现金。</b>本次用重述报表拆开经营、投资收益与稀释，再检验现价要求的恢复幅度。</p>
+<div class="dual"><div><div class="tag">2026Q2 经调整净利润 · 人民币</div><div class="big a">25.24亿元</div><div class="cap">公司调整指标；股份支付是以股票等权利支付员工报酬，此处加回。</div></div><div><div class="tag">机械扣回股份支付后 · 分析敏感性</div><div class="big b">6.05亿元</div><div class="cap">税前费用全额扣回，不重算税效，也不是公司定义的净利润。</div></div></div></div></header><main class="wrap"><div class="callout"><b>修订 2026-09-06：</b>按新版Fullscan重做扣股份支付后正常化市盈率（PE，即股价相当于多少年度每股利润）、同期限回报与验证结构，刷新行情和八月股数；更正LTM收入的重述基数，删除无法复现的一致预期，并区分归母利润与集团总利润。</div><section class="reveal on" id="tldr" ><div class="slabel">三十秒版本 · 先看结论</div><h2>恢复值得承认，价格仍要求它继续</h2><div class="tldr"><ul>
+<li><b>它是谁：</b>美团用外卖、闪购和到店酒旅连接消费者与商家，也经营自营食杂和海外配送。平台收服务费，自营商品还承担库存与履约成本。</li>
+<li><b>本期成绩：</b>Q2收入1,046亿元、推算归母利润22亿元，经营现金97亿元；单季盈利与现金流都转正。</li>
+<li><b>核心矛盾：</b>经营修复是真实的，但其他收益影响大，股份支付也是真实股东成本。滚动全年仍亏损，不能仅靠单季正数证明长期回报。</li>
+<li><b>容易踩的坑：</b>总额法商品销售贡献约67%的收入增量。把它读成平台订单或抽佣率增长，会混淆两种赚钱方式。</li>
+<li data-verdict="neutral-cautious"><b>结论：</b>中性偏谨慎。现价HK$81.75，一年后基准HK$89.2、熊市HK$29.7；判断改善要靠非旺季盈利和全年现金兑现。</li>
+</ul></div></section>
+<section class="reveal on" id="primer" ><div class="slabel">入门</div><h2>同一个入口，平台与自营的利润算法不同</h2><p>消费者购买便利，商家购买交易与曝光。平台收配送、佣金及广告服务费；自营食杂先采购备货，再交付商品。两者共享流量和履约资源，却承担不同库存、货损和资金风险。</p>
+<div class="steps"><div class="step"><div class="n">环节 1</div><b>需求进入平台</b><p>外卖、零售、酒店和到店消费带来不同频率的访问。</p>
+</div><div class="step"><div class="n">环节 2</div><b>商家购买服务</b><p>平台提供订单、曝光和配送，服务费还受激励及退款影响。</p>
+</div><div class="step"><div class="n">环节 3</div><b>自营交付商品</b><p>公司承担主要销售责任时，把售价计为收入，也承担采购成本。</p>
+</div><div class="step"><div class="n">环节 4</div><b>利润再分配</b><p>剩余资源投入海外、食杂和技术，或用于回购及偿债。</p>
+</div></div><p>公司只披露核心本地商业和新业务两个<span class="g">经营分部</span>，不等于外卖、到店、Keeta各有利润表。双柜台是同一批B类股以港币和人民币交易，另有A类及<span class="g">不同投票权（WVR）</span>；本页按集团研究，以港元每股计价。</p>
+<p>本地服务靠订单密度与供给覆盖，竞争涉及体验、补贴和商家资源。食杂及海外还需仓配或新建网络，骑手、食品和数据合规构成经营约束。</p>
+<p>财务按国际财务报告准则列示。H1为六个月，Q2为单二季度；本次季度损益、分部与经营现金由公告直接给出，归母季度数另外推算。年度审计、半年审阅与管理层季度账目的保证程度不同，后文各表保留这条边界。</p>
 </section>
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="internet-platform"><div class="slabel">财务与分部</div><h2>收入增长穿过了周期，利润没有</h2><p>五年历史包含疫情、盈利扩张和补贴竞争，不能只选峰谷外推。最新季度转正而半年及滚动仍受此前损失影响；下表作为归因的共同基础。</p>
+<div class="grid" data-financials="consolidated"><div class="cell" ><div class="k">单季收入</div><div class="v">1,046.43亿元</div><div class="d"><span>Q2同比+14.38%</span></div></div><div class="cell" ><div class="k">毛利 / 毛利率</div><div class="v">350.95亿元</div><div class="d"><span>33.54%</span></div></div><div class="cell" ><div class="k">经营利润 / 利润率</div><div class="v">26.91亿元</div><div class="d"><span>2.57%</span></div></div><div class="cell" ><div class="k">归母净利润（GAAP）</div><div class="v">21.55亿元</div><div class="d"><span>H1减Q1推算；不是集团总利润</span></div></div><div class="cell" ><div class="k">经营现金流</div><div class="v">97.33亿元</div><div class="d"><span>Q2直接披露</span></div></div><div class="cell" ><div class="k">自由现金流代理</div><div class="v">未披露</div><div class="d"><span>Q2现金资本开支缺失</span></div></div></div><div class="tblscroll"><table class="tbl" data-financials="history"><caption>本集团IFRS，经审计年度；人民币亿元，EPS为元/股，比率为推算。双柜台同一合并范围；FCF为经营现金减现金资本开支，下一行另扣租赁负债现金付款。</caption><thead><tr><th>项目</th><th>FY2021</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th></tr>
+</thead><tbody><tr><td>营业收入</td><td>1,791.28</td><td>2,199.55</td><td>2,767.45</td><td>3,375.92</td><td>3,648.55</td></tr>
+<tr><td>毛利 / 毛利率</td><td>424.74 / 23.71%</td><td>617.53 / 28.08%</td><td>971.91 / 35.12%</td><td>1,297.85 / 38.44%</td><td>1,110.09 / 30.43%</td></tr>
+<tr><td>经营利润 / 利润率</td><td>−231.27 / −12.91%</td><td>−58.20 / −2.65%</td><td>134.15 / 4.85%</td><td>368.45 / 10.91%</td><td>−250.41 / −6.86%</td></tr>
+<tr><td>归母净利润 / 净利率</td><td>−235.38 / −13.14%</td><td>−66.86 / −3.04%</td><td>138.56 / 5.01%</td><td>358.07 / 10.61%</td><td>−233.55 / −6.40%</td></tr>
+<tr><td>每股收益EPS（基本 / 摊薄）</td><td>−3.90 / −3.90</td><td>−1.09 / −1.09</td><td>2.23 / 2.11</td><td>5.85 / 5.66</td><td>−3.84 / −3.92</td></tr>
+<tr><td>权益回报率ROE（利润÷平均股东权益）</td><td>−21.08%</td><td>−5.26%</td><td>9.87%</td><td>22.06%</td><td>−14.43%</td></tr>
+<tr><td>经营现金流</td><td>−40.11</td><td>114.11</td><td>405.22</td><td>571.47</td><td>−138.15</td></tr>
+<tr><td>现金资本开支</td><td>90.10</td><td>57.31</td><td>68.80</td><td>109.99</td><td>132.71</td></tr>
+<tr><td>自由现金流代理</td><td>−130.22</td><td>56.80</td><td>336.42</td><td>461.47</td><td>−270.86</td></tr>
+<tr><td>租赁付款后现金代理</td><td>−152.13</td><td>30.61</td><td>306.73</td><td>430.49</td><td>−304.20</td></tr>
+<tr><td>以股份支付的报酬</td><td>51.94</td><td>87.43</td><td>83.83</td><td>75.83</td><td>60.02</td></tr>
+<tr><td>核心收入 / 经营利润率</td><td>1,366.45 / 13.77%</td><td>1,607.59 / 18.35%</td><td>2,069.07 / 18.70%</td><td>2,502.47 / 20.95%</td><td>2,608.26 / −2.65%</td></tr>
+<tr><td>新业务收入 / 经营利润率</td><td>424.83 / −84.55%</td><td>591.96 / −47.94%</td><td>698.38 / −28.88%</td><td>873.44 / −8.33%</td><td>1,040.29 / −9.69%</td></tr>
+</tbody></table></div><div class="cols" role="img" aria-label="五年收入与归母利润，共用最大收入尺度；亏损年利润柱为零"><div class="col"><div class="bars"><div class="bar rev" style="height:49.09570%"></div><div class="bar np" style="height:0.00000%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:60.28562%"></div><div class="bar np" style="height:0.00000%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:75.85072%"></div><div class="bar np" style="height:3.79763%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:92.52766%"></div><div class="bar np" style="height:9.81409%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:100.00000%"></div><div class="bar np" style="height:0.00000%"></div></div></div></div><div class="collabels"><div><b>2021</b>亏损</div><div><b>2022</b>亏损</div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b>亏损</div></div><div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div><p class="small">收入扩张较平顺，利润却跨越正负区间。两系列共用五年最大收入尺度；亏损值保留在表中，柱归零并标明亏损。</p>
+<p>收入四年复合年均增长率（CAGR）推算19.46%；核心与新业务分别为17.54%和25.09%。FY2021分部使用公司在FY2022重列的两分部比较数；2025收入及营销净额抵销又改变列报，故这些是披露口径规模轨迹，不是严格同店或原有业务增速。</p>
+<p class="small">ROE按年初年末平均归母权益计算，非公司加权指标；历史利润跨零，不计算利润CAGR。现金资本开支含购买或预付设备及无形资产，不含并购；租赁行是现金支付总额，不冒充本金拆项。</p>
+<div class="tblscroll"><table class="tbl" ><caption>人民币亿元，EPS为元；H1核心财务已审阅，Q2管理账目未经审计或独立审阅；归母Q2按各年H1减Q1，其他季度行直接披露；2025H1现金资本开支取当年完整中报，FCF为推算且未扣租赁付款。</caption><thead><tr><th>项目</th><th>2025Q2重述</th><th>2026Q2</th><th>2025H1重述</th><th>2026H1</th><th>截至六月LTM推算</th></tr>
+</thead><tbody><tr><td>营业收入</td><td>914.90</td><td>1,046.43</td><td>1,776.96</td><td>1,956.82</td><td>3,828.40</td></tr>
+<tr><td>毛利 / 毛利率</td><td>300.64 / 32.86%</td><td>350.95 / 33.54%</td><td>621.26 / 34.96%</td><td>610.65 / 31.21%</td><td>1,099.47</td></tr>
+<tr><td>经营利润</td><td>2.26</td><td>26.91</td><td>107.92</td><td>−37.79</td><td>−396.12</td></tr>
+<tr><td>归母净利润</td><td>3.65</td><td>21.55</td><td>104.22</td><td>−46.72</td><td>−384.49</td></tr>
+<tr><td>经营现金流</td><td>47.73</td><td>97.33</td><td>149.05</td><td>27.19</td><td>−260.00</td></tr>
+<tr><td>现金资本开支 / FCF</td><td>未披露</td><td>未披露</td><td>55.54 / 93.50</td><td>未披露</td><td>未披露</td></tr>
+<tr><td>每股收益EPS（基本 / 摊薄）</td><td>未披露</td><td>未披露</td><td>1.72 / 1.61</td><td>−0.76 / −0.82</td><td>不拼接EPS</td></tr>
+</tbody></table></div><p><span class="g">滚动十二个月（LTM）</span>采用FY2025加本期半年、减最新重述上年半年。旧Q2收入与营销费用各抵销约3.50亿元，不影响经营利润；本次不再以旧H1收入从已更新FY2025扣减。半年平均权益ROE为−2.92%，六月末按法定股数的<span class="g">每股净资产（BVPS）</span>为人民币27.40元。</p>
+<p>季度归母利润与总利润的尾差来自少数股东。H1摊薄EPS比基本EPS更负，源于联营公司奖励的分子调整，并非美团自身潜在股全部进入亏损期分母。经营投入资本回报率（ROIC，税后经营利润÷经营投入资本）缺少可可靠分离的运营投资资本与分部资产，不以总资产收益率替代。</p>
+<div class="tblscroll"><table class="tbl" data-financials="segments"><caption>人民币亿元；先列分部、再按收入性质另拆一组，不交叉相加。分部利润不含全部未分配费用；商品销售横跨两个分部。</caption><thead><tr><th>分部 / 收入类型</th><th>上年Q2收入</th><th>本季收入</th><th>同比推算</th><th>本季占比</th><th>本季经营利润 / 率</th></tr>
+</thead><tbody><tr><td>核心本地商业</td><td>649.97</td><td>715.31</td><td>+10.05%</td><td>68.36%</td><td>56.68 / 7.92%</td></tr>
+<tr><td>新业务</td><td>264.93</td><td>331.12</td><td>+24.98%</td><td>31.64%</td><td>−17.39 / −5.25%</td></tr>
+<tr><td>未分配项目</td><td>—</td><td>—</td><td>—</td><td>—</td><td>−12.38</td></tr>
+<tr><td>配送服务</td><td>236.83</td><td>278.30</td><td>+17.51%</td><td>26.60%</td><td>收入类型不配分部率</td></tr>
+<tr><td>商家服务：佣金＋广告</td><td>397.44</td><td>423.83</td><td>+6.64%</td><td>40.50%</td><td>收入类型不配分部率</td></tr>
+<tr><td>商品销售</td><td>179.16</td><td>266.67</td><td>+48.85%</td><td>25.48%</td><td>收入类型不配分部率</td></tr>
+<tr><td>其他收入</td><td>101.48</td><td>77.62</td><td>−23.51%</td><td>7.42%</td><td>收入类型不配分部率</td></tr>
+</tbody></table></div><div class="stacks" role="img" aria-label="上年与本期核心及新业务收入占比"><div class="stack"><div class="cap">2025Q2 分部收入结构</div><div class="stackbar"><div class="seg p" style="width:71.04259%">核心 71.0%</div><div class="seg q" style="width:28.95741%">新业务 29.0%</div></div></div><div class="stack"><div class="cap">2026Q2 分部收入结构</div><div class="stackbar"><div class="seg p" style="width:68.35672%">核心 68.4%</div><div class="seg q" style="width:31.64328%">新业务 31.6%</div></div></div></div><p class="small">新业务比重上升，集团收入更受自营销售影响。占比按当期分部收入计算，不代表利润占比。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>披露缺口只在这里登记；日期不同的管理层运营信息另在增长部分标明。</caption><thead><tr><th>平台指标</th><th>最近披露 / 当前空白</th><th>理解边界</th></tr>
+</thead><tbody><tr><td>递延收入</td><td>67.54亿元</td><td>六月末履约义务，不能用来给本地服务造流水</td></tr>
+<tr><td>交易用户 / 活跃商家</td><td>Q2绝对数量未披露</td><td>用户结构改善为管理层陈述</td></tr>
+<tr><td>交易总额 / 抽佣率 / 每用户收入</td><td>Q2未披露</td><td>缺少匹配交易额、用户数，不推量价</td></tr>
+<tr><td>每单贡献利润 / 获客成本</td><td>Q2未披露</td><td>配送与到店混合，分部率不是外卖单单利润</td></tr>
+<tr><td>新品及AI回报</td><td>专项收入与回收期未披露</td><td>不适用游戏版号；研发支出不等于已盈利产品</td></tr>
+</tbody></table></div><div class="plain"><span class="pl">白话解读</span><p>规模扩大未让利润平顺累积。单季好转要结合全年损失和业务结构看；扣足成本后持续留下现金，才能增加每股回报。</p>
+</div></section>
+<section class="reveal on" id="growth" ><div class="slabel">增长与竞争</div><h2>撤补贴能修复利润，网络优势仍需非旺季检验</h2><p>集团收入增量约66.54%来自商品销售，新业务内部商品占比为69.68%。<span class="g">总额法</span>销售会扩大收入，也带来采购成本；商家服务则是佣金与广告的净服务收入。这样的组合变化有商业价值，但它对平台变现能力的证明弱于同口径订单和每单收益增长。</p>
+<p>管理层将核心环比修复归于激励减少和季节性单均配送成本下降。部分激励直接冲减配送收入，撤补贴因此可能同时提高收入和利润，不要求订单同幅增长。这不代表全部增量来自撤补贴；商家服务也未拆佣金与广告的增量。</p>
+<p>竞争前2024Q2核心经营利润为152.34亿元，说明网络在不同投入状态下具有很大的利润弹性。但密度优势并不消灭消费者和商家的多平台选择；分析上的检验是，同类需求和供给留存能否在激励减少后维持，而非只看利润率从谷底回升。</p>
+<h3>上一季承诺怎样对照本期结果</h3><p>六月初Q1业绩会二级转录称，若竞争更理性，Q2单位经济会改善且有季节性支持。本期分部转正验证方向，独立外卖单位利润仍无法核对。这里只引用该次会完整句子，不冒充Q2文字稿。</p>
+<p>同一份Q1转录还提醒，下半年表现取决于竞争，三、四季度配送单均成本季节性高于第二季，高基数下订单同比可能为负。这里的“可能”不是确定预警。市场若只接受Q2正利润而忽略这些前提，便把管理层的条件判断升级成了全年保证。下一次报表应同时观察收入结构、激励和费用效率。</p>
+<h3>新业务要用不同的经营尺子验收</h3><p>小象的关键是成熟仓复购、损耗、毛利与仓配成本；Keeta的关键是当地密度、获客成本和持续补贴。Q1会上小象覆盖城市数属于有日期的经营补充，其长期低个位数利润率只是目标，缺少统一利润定义和达到期限，不能作为本季已实现收益。Q2文件称小象扩城、自有品牌交易贡献提升，仍没有成熟仓现金回收的成套数据。</p>
+<p>Keeta香港“稳定盈利”、中东效率改善和巴西探索均为管理层说法。香港此前是单位经济转正，措辞变化不证明口径一致。集团新业务亏损收窄提供方向支持，却分不出食杂、海外和其他项目的贡献，因此不给海外独立估值。</p>
+<p>AI可能改善商家工具、搜索与调度，也先增加研发成本。缺少收入、付费客户、推理成本或节约金额，本文将其放进企业支出而非独立科技溢价。职业伤害保障扩大同属经营义务，效率与保障费用最终要在单位利润里共同承担。</p>
+<div class="plain"><span class="pl">白话解读</span><p>收入长得快，可能是卖出了更多自营商品，也可能是少补贴后确认了更多服务费，二者都不同于用户自然多下单。接下来的非旺季最有解释力：客户留下、费用不反弹，才更支持网络优势转成持续盈利。</p>
+</div></section>
+<section class="reveal on" id="quality" ><div class="slabel">利润质量</div><h2>毛利修复存在，报表转正也受投资等收益推动</h2><p>新增毛利与投资等收益共同支撑利润恢复，但费用也在增加。合并经营利润不能全当可重复服务利润；把回升全部归为会计项目，也忽略真实毛利改善。</p>
+<div class="wfall" role="img" aria-label="Q2归母净利润同比变动桥，共用累积尺度"><div class="wrow"><div class="nm">毛利<span>规模与成本</span></div><div class="wtrack"><div class="wbar up" style="left:4.21063%;width:95.78937%"></div></div><div class="fig">+50.31</div></div><div class="wrow"><div class="nm">销售营销<span>费用增加</span></div><div class="wtrack"><div class="wbar down" style="left:51.35960%;width:48.64040%"></div></div><div class="fig">−25.55</div></div><div class="wrow"><div class="nm">研发<span>含技术投入</span></div><div class="wtrack"><div class="wbar down" style="left:24.51455%;width:26.84505%"></div></div><div class="fig">−14.10</div></div><div class="wrow"><div class="nm">行政<span>费用增加</span></div><div class="wtrack"><div class="wbar down" style="left:13.86912%;width:10.64543%"></div></div><div class="fig">−5.59</div></div><div class="wrow"><div class="nm">信贷减值<span>费用增加</span></div><div class="wtrack"><div class="wbar down" style="left:8.12464%;width:5.74448%"></div></div><div class="fig">−3.02</div></div><div class="wrow"><div class="nm">投资公允价值<span>收益变化</span></div><div class="wtrack"><div class="wbar down" style="left:0.00000%;width:8.12464%"></div></div><div class="fig">−4.27</div></div><div class="wrow"><div class="nm">其他收益<span>投资等混合项</span></div><div class="wtrack"><div class="wbar up" style="left:0.00000%;width:51.13977%"></div></div><div class="fig">+26.86</div></div><div class="wrow"><div class="nm">经营利润以下<span>财务、联营、税与少数</span></div><div class="wtrack"><div class="wbar down" style="left:38.29363%;width:12.84614%"></div></div><div class="fig">−6.75</div></div><div class="wrow"><div class="nm">归母利润变化<span>全部桥项合计</span></div><div class="wtrack"><div class="wbar tot" style="left:4.21063%;width:34.08300%"></div></div><div class="fig">+17.90</div></div></div><p class="small">新增毛利大部分被费用吸收，其他收益是利润回升的重要来源。单位亿元；桥项按未舍入原值衔接两期推算归母利润，条段共用累积尺度。</p>
+<p>本季其他收益34.94亿元；机械从经营利润扣除整行后为−8.03亿元。这个税前敏感性不能称为“真实亏损”：其他收益含理财、汇兑、处置及其他项目，并非全部一次性，也不等同公司非IFRS调整清单。公司还解释了投资收益和上年优选转型支出的比较影响。</p>
+<p>公司非IFRS调整以集团总利润21.55亿元为起点，加回股份支付19.19亿元；汇兑和投资损益分别按负调整扣4.20亿元、16.04亿元，另计减值、收购摊销及税调整。被剔除的项目并非天然没有代价，持续激励就是服务报酬。</p>
+<p>页首将公司调整净利机械扣回税前股份支付，未重算税效，也保留其余公司调整，故不称GAAP利润。估值另从分部重建正常盈利、扣持续股份支付并去投资重估，不把本季敏感性年化。</p>
+<p>半年通过<span class="g">其他综合收益（OCI）</span>确认的投资重估为224.74亿元，属于损益表之外。它使净资产和全面收益上升，却不代表现金到账。部分投资受锁定期影响，账面公允价值已经考虑流动性折扣；进一步估值处理必须说明用途，不能把重估收益、持股价值和现金重复相加。</p>
+<div class="plain"><span class="pl">白话解读</span><p>利润表还含投资等收益，被加回的股权报酬也有股东成本。先识别重复发生的费用，再用全年现金验证剩下的利润。</p>
+</div></section>
+<section class="reveal on" id="cash" ><div class="slabel">现金与负债</div><h2>流动性缓冲不薄，但持续烧钱会迅速缩短余量</h2><div class="tblscroll"><table class="tbl txt" ><caption>本集团已审阅财务；汇总项为分析推算。受限现金未进入净金融资产分子，不能再扣一次。</caption><thead><tr><th>资金及义务</th><th>2026-06-30：亿元</th><th>性质与边界</th></tr>
+</thead><tbody><tr><td>现金等价物 / 短期理财</td><td>1,047.17 / 635.97</td><td>六月末；后者仍有投资及到期安排</td></tr>
+<tr><td>借款及票据 / 租赁负债</td><td>887.01 / 71.16</td><td>均按账面负债，无到期重复扣减</td></tr>
+<tr><td>净金融资产代理</td><td>724.97</td><td>现金及短期理财扣上述债务；不是可分配余额</td></tr>
+<tr><td>受限现金 / 应付商家</td><td>219.47 / 271.76</td><td>受限现金另列，商家款需结算</td></tr>
+<tr><td>用户预付款 / 贸易应付</td><td>103.00 / 390.13</td><td>运营义务，不是永久免费资本</td></tr>
+<tr><td>存货 / 贸易应收净额</td><td>41.55 / 39.09</td><td>存货较年末+37.93%，不能据此认定渠道压货</td></tr>
+<tr><td>投资资产：公允价值损益 / 其他综合 / 权益法</td><td>258.64 / 363.87 / 150.30</td><td>与现金、理财分开；可变现性各异</td></tr>
+</tbody></table></div><p>公告只给经营、投资及融资现金汇总，没有现金资本开支、租赁付款和营运资本明细。理财投资不等于资本开支，资产新增也不等于付款。因此当前FCF保持空白，不能从余额表补齐。</p>
+<p>用截至六月滚动经营现金流出，搭配FY2025资本支出及租赁现金付款，得到约426.06亿元的年度现金消耗压力。净金融资产再预留经营资金200亿元及叮咚初始对价折算48.60亿元，余量约476.37亿元，可覆盖约1.1年该压力。它是混期情景测试，不是预测公司还能生存多久。</p>
+<p>压力先扣全部债务，所以不再重复扣到期本金。经营预留非公司最低需求，理财也未保证即时兑现；交易调整、集中结算或补贴反复可缩小缓冲，新业务自我融资则会减轻压力。</p>
+<p>已完成的四月可转债赎回必须从未来义务清单移除。最新月报两期剩余本金分别为2030万及1860万美元，转换价仍为HK$431.24；相关账面债务已在票据中。公司为到期偿还留资是合理问题，继续按原整笔发行规模扣钱则会人为夸大风险。</p>
+<div class="plain"><span class="pl">白话解读</span><p>现金提供缓冲，却还需投资、结算和保留运营资金。真正改善判断的证据是完整年度资本支出后的正现金，不只是单季现金增加。</p>
+</div></section>
+<section class="reveal on" id="capital" ><div class="slabel">资本与治理</div><h2>回购要扣着发行看，收购要等交割和现金验证</h2><div class="tblscroll"><table class="tbl txt" ><caption>八月股份按9月4日月报；五年现金来自年度现金流。部分年度没有单独普通股现金发行行，按完整融资现金流清单识别，不用权益账户变化造现金。</caption><thead><tr><th>项目</th><th>披露或推算</th><th>经济含义</th></tr>
+</thead><tbody><tr><td>八月法定A＋B / 扣待注销后</td><td>61.7548 / 61.7256亿股</td><td>后者仍未扣精确信托持股，保守作为主估值分母</td></tr>
+<tr><td>当前权利池 / 全加上界</td><td>1.8386 / 63.5642亿股</td><td>潜在增幅2.98%；非IFRS摊薄EPS</td></tr>
+<tr><td>本年四月＋七月授予 / H1回购</td><td>9,282.69 / 292.48万股</td><td>授予是回购股数31.7倍，不等于已发行</td></tr>
+<tr><td>FY2021–25年度股息</td><td>各年0元/股</td><td>年报明确没有派付或宣派，非缺值填零</td></tr>
+<tr><td>五年回购 / 股权现金流入</td><td>264.54 / 461.33亿元</td><td>流入含FY2021普通股融资及历年行权现金</td></tr>
+<tr><td>五年净现金回馈</td><td>−196.78亿元</td><td>回购减股权现金流入；该窗口为净融资方</td></tr>
+</tbody></table></div><p>八月HKEX库存股为零与股份待注销可同时成立。奖励信托缺精确股数，不能用舍入面值反推；“发行减待注销”不是精确经济在外股，也不是EPS加权股数。当前分母以最新月报为准。</p>
+<p>权利池含期权、未来可发行RSU及剩余可转债股份，不含计划未授额度；四月、七月授予已计入八月，不再加一次。全加上界忽略归属、行权所得和转债利息，仅用于股数压力，不是必然发行。</p>
+<p>两次<span class="g">受限制股份单位（RSU）</span>授予均为零购买价、按服务时间归属而无绩效目标，并设违约追索。它们更偏向人才留任，不等于奖励已经实现的每股价值增长。股份支付损益费用与实际发行时点不同，简单拿当期回购现金减当期费用，既算不出净股数，也不能证明激励没有成本。</p>
+<h3>叮咚：买的是经营资产，尚未证明买到了回报</h3><p>收购对象为Dingdong Fresh Holding Limited，而非纽交所上市母公司全部股权。初价7.17亿美元可调整；卖方提取上限2.80亿美元及标的最低净现金1.50亿美元不直接叠加成美团付款，须核交割账户。</p>
+<p>年报批准日交易仍在监管流程，本次检索缺少交割完成证据，不等于确定尚未完成。反垄断、发改申报及海外剥离是条件；长停期可延，监管失败与违约费用条件不同。标的收益、仓数和用户均不提前并入美团。</p>
+<p>主情景不给协同额外价值，现金压力先预留初价。交割后须同时更新付款、合并利润、摊销及整合投入；验收看成熟仓效率、商誉和每股现金，而非只看买入规模。</p>
+<h3>投票权集中，提高了资本配置的监督要求</h3><p>A类普通事项每股十票、B类一票，保留事项另定。年报时王兴与穆荣均A股投票权合计过半，经济权益并非同等比例。王兴兼任董事长及行政总裁属明确治理偏离；董事会所称效率不是独立保证，合同控制与关联利益仍须监督。</p>
+<div class="plain"><span class="pl">白话解读</span><p>回购要与新发奖励、行权和注销一起看。收购则要核对付款、交割后经营及每股现金；授予和并购公告本身不是已兑现的回报。</p>
+</div></section>
+<section class="reveal on" id="valuation" data-primary-method="扣股份支付后正常化PE" data-fullscan-role="valuation"><div class="slabel">估值</div><h2>现价已要求持续修复，基准上行不足以抵消失望风险</h2><div class="grid"><div class="cell" ><div class="k">现价</div><div class="v">HK$81.75</div><div class="d"><span>2026-09-04 16:08:06 香港时间</span></div></div><div class="cell" ><div class="k">熊市</div><div class="v">HK$29.68</div><div class="d"><span>一年后价格；−63.7%</span></div></div><div class="cell" ><div class="k">基准</div><div class="v">HK$89.22</div><div class="d"><span>一年后价格；+9.1%</span></div></div><div class="cell" ><div class="k">牛市</div><div class="v">HK$199.68</div><div class="d"><span>一年后价格；+144.3%</span></div></div><div class="cell" ><div class="k">隐含预期</div><div class="v">11.35%</div><div class="d"><span>固定其余基准项的核心利润率</span></div></div><div class="cell" data-verdict="neutral-cautious"><div class="k">判断</div><div class="v">中性偏谨慎</div><div class="d"><span>等待验证；不是交易指令</span></div></div></div><div class="steps"><div class="step"><div class="n">方法 A</div><b>扣股份支付后正常化PE</b><p>业务恢复后，股东每年留下的利润值多少？</p>
+</div><div class="step"><div class="n">方法 B</div><b>账面压力交叉检验</b><p>只看资产折价范围，不当作清算底价。</p>
+</div><div class="step"><div class="n">怎么读</div><b>只按主方法作判断</b><p>价格、赔率和回报同一期限，不平均互相冲突的模型。</p>
+</div></div><h3>第一步 · 历史低市净率PB，不等于已恢复正常盈利</h3><p>市净率PB是市值÷股东账面权益，市销率PS是市值÷年收入。Wind滚动全年PE为−11.40倍，负数表示亏损；PB为2.591倍，按本页六月归母权益及最新扣待注销股数复算为2.578倍。两者日期和分母定义不同。五年PB、PS分位分别为2.3%、2.0%，接近样本底部，但利润恶化与投资重估改变了资本回报。</p>
+<p>年初至今股价−20.86%，当日成交额HK$45.40亿元。行情是收市后时间戳的最新成交快照；全部股份按B股同价是每股比较约定，不是A类控制权报价。</p>
+<h3>第二步 · 同业只界定范围，不制造同层中位数</h3><div class="tblscroll"><table class="tbl txt" ><caption>Wind按同一9月4日交易日、各市场不同时间快照。美国公司US GAAP与美团IFRS调整不同；净利含投资及税项，均不等于正常利润。</caption><thead><tr><th>主体及可比边界</th><th>滚动全年 / 预测市盈率</th><th>PB</th><th>2023→25收入</th><th>2023→25净利率推算</th></tr>
+</thead><tbody><tr><td>Uber；跨市场平台：出行＋配送</td><td>16.16 / 23.65</td><td>5.67</td><td>372.8→439.8→520.2 亿美元</td><td>5.1%→22.4%→19.3%</td></tr>
+<tr><td>DoorDash；跨市场平台：即时配送</td><td>109.09 / 82.55</td><td>9.25</td><td>86.4→107.2→137.2 亿美元</td><td>−6.5%→1.1%→6.8%</td></tr>
+<tr><td>携程；三级：到店酒旅局部参照</td><td>6.53 / 16.17</td><td>1.25</td><td>445.1→532.9→624.1 亿元人民币</td><td>22.3%→32.0%→53.3%</td></tr>
+</tbody></table></div><p>本次未找到完整匹配美团变现结构的港股镜像。Uber与DoorDash分属跨市场第二层，携程只作旅行局部参照，不混合平均。美国两家H1收入同比13.3%、34.4%，净利却均下降。携程H1未取得可比字段，保留年度轨迹。</p>
+<h3>第三步 · 用完整成本重建全年，而不是给季度乘四</h3><p>主方法从两分部起算，另扣企业费、持续股份支付及正常税负，去投资重估与处置。新业务亏损直接进入集团盈利，不另加销售倍数；现金、战略投资与未经完成证实的叮咚协同均不另叠加价值。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>全部FY2027正常化假设，非公司指引；定价时点2027-09-04。未给概率，不把Q2利润机械年化。</caption><thead><tr><th>驱动 / 结果</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据</th></tr>
+</thead><tbody><tr><td>FY2027核心收入</td><td>3,000亿元</td><td>3,200亿元</td><td>3,400亿元</td><td>取自FY2025规模与本期增长，分别较慢、延续、加快；无额外并购增量。</td></tr>
+<tr><td>核心经营利润率</td><td>10%</td><td>12%</td><td>16%</td><td>基于竞争后修复；均低于2024全年高点，熊市也含部分恢复，不是极端清算。</td></tr>
+<tr><td>新业务收入 / 经营率</td><td>1,400亿元 / −5%</td><td>1,550亿元 / −2%</td><td>1,750亿元 / 0%</td><td>参照本期扩张与亏损，牛市仅集团新业务整体盈亏平衡；不单估海外。</td></tr>
+<tr><td>非SBC企业费 / 股份支付</td><td>40 / 70亿元</td><td>30 / 70亿元</td><td>25 / 75亿元</td><td>企业费独立预留；股权成本参照五年费用区间，二者不重扣历史完整未分配行。</td></tr>
+<tr><td>净财务项 / 正常税率</td><td>−10亿元 / 20%</td><td>−5亿元 / 20%</td><td>0亿元 / 20%</td><td>基于H1净财务负差；税率是保守正常盈利压力，不延续递延税利益。</td></tr>
+<tr><td>正常归母利润 / 资本回报代理</td><td>88.00亿元 / 5.20%</td><td>198.40亿元 / 11.73%</td><td>355.20亿元 / 20.99%</td><td>扣足股份支付，税后近似归母；ROE按当前归母资本，非预测加权ROE。</td></tr>
+<tr><td>期末市盈率（退出PE） / 后续正常利润增长</td><td>18倍 / 0%</td><td>24倍 / 8%</td><td>30倍 / 12%</td><td>参照自身2024年末约26倍及Uber较低定价；三档对应停滞、较温和及低双位数增长，非套用同业均值。</td></tr>
+<tr><td>现金资本支出 / 留存率</td><td>160亿元 / 40%</td><td>150亿元 / 65%</td><td>170亿元 / 80%</td><td>资本开支参照FY2025并预留扩张；资本及租赁后现金占利润的比例为压力假设。</td></tr>
+<tr><td>留存现金 / 所需经营现金</td><td>35.20 / 228.55亿元</td><td>128.96 / 312.31亿元</td><td>284.16 / 487.51亿元</td><td>从现金目标加回上述投入及FY2025租赁付款反推要求，不冒充独立现金预测。</td></tr>
+<tr><td>一年后每股价值</td><td>29.68港元</td><td>89.22港元</td><td>199.68港元</td><td>同一基准股数与固定汇率，权益估值不再叠加现金或战略投资。</td></tr>
+</tbody></table></div><div class="steps chain"><div class="step"><div class="n">收入</div><b>核心3200亿元</b><p>基准正常化规模，另含新业务。</p>
+</div><div class="step"><div class="n">利润率</div><b>核心12%</b><p>不是当前季度率；新业务仍有亏损。</p>
+</div><div class="step"><div class="n">股东利润</div><b>198.40亿元</b><p>扣足企业费用、股份支付及税负。</p>
+</div><div class="step"><div class="n">定价</div><b>24倍PE</b><p>对应较温和持续利润增长的假设。</p>
+</div><div class="step"><div class="n">每股价值</div><b>HK$89.22</b><p>固定基准股数与汇率，价款在一年后。</p>
+</div></div><div class="tblscroll"><table class="tbl sgrid"><caption>固定基准其他输入；行：核心经营利润率（%），列：退出PE（倍）；格内港元/股。边框为基准，底色为现价隐含。</caption><thead><tr><th>核心率 ＼ PE</th><th>18倍</th><th>24倍</th><th>30倍</th></tr>
+</thead><tbody><tr><td>10.00%</td><td>49.65</td><td>66.20</td><td>82.75</td></tr>
+<tr><td>11.35%</td><td>61.31</td><td class="implied">81.75</td><td>102.19</td></tr>
+<tr><td>12.00%</td><td>66.92</td><td class="base">89.22</td><td>111.53</td></tr>
+<tr><td>16.00%</td><td>101.46</td><td>135.28</td><td>169.09</td></tr>
+</tbody></table></div><p class="small">核心利润率和市场愿付的倍数共同决定价格。隐含行按未舍入率计算，其他条件固定；它不是独立的第四套经营情景。</p>
+<div class="ffield" role="img" aria-label="主方法局部区间与不同口径资产参照"><div class="frow"><div class="fnm">正常化PE<span>熊市 · PE上下2倍</span></div><div class="ftrack"><div class="fbar alt" style="left:10.99312%;width:2.74828%"></div><div class="fmark" style="left:34.06250%"></div></div><div class="fig">26.38–32.98</div></div><div class="frow"><div class="fnm">正常化PE<span>基准 · PE上下2倍</span></div><div class="ftrack"><div class="fbar " style="left:34.07867%;width:6.19612%"></div></div><div class="fig">81.79–96.66</div></div><div class="frow"><div class="fnm">正常化PE<span>牛市 · PE上下2倍</span></div><div class="ftrack"><div class="fbar moss" style="left:77.65139%;width:11.09306%"></div></div><div class="fig">186.36–212.99</div></div><div class="frow"><div class="fnm">账面压力<span>当前权益0.5–1倍</span></div><div class="ftrack"><div class="fbar " style="left:6.60549%;width:6.60549%"></div></div><div class="fig">15.85–31.71</div></div><div class="frow"><div class="fnm">历史市场锚<span>正盈利年末PB范围</span></div><div class="ftrack"><div class="fbar " style="left:41.92506%;width:26.23041%"></div></div><div class="fig">100.62–163.57</div></div></div><p class="small">正常利润假设拉开了情景距离，账面参考不能消除下行。共同横轴HK$0–240，黑线为现价；前三行是主情景PE局部变化，后两行为今天账面参考，并非同期限目标价。</p>
+<p>账面压力采用0.5–1倍，因为资产未必按账面变现；得HK$15.85–31.71，并非清算保证。历史锚把2023、2024正盈利年末PB应用当前账面，携带较好资本回报时期的定价，不据此上调主判断。</p>
+<h3>第四步 · 现价要求的不是奇迹，但仍需跨过季节</h3><div class="tblscroll"><table class="tbl txt" data-fullscan-role="implied"><caption>每行只反解一个变量；是模型的价格翻译，不代表市场参与者共同使用这些假设。</caption><thead><tr><th>主方法输入</th><th>基准假设</th><th>现价隐含</th><th>差距 / 固定条件</th></tr>
+</thead><tbody><tr><td>核心经营利润率</td><td>12.00%</td><td>11.35%</td><td>固定核心收入、其他成本与24倍PE</td></tr>
+<tr><td>核心收入</td><td>3,200亿元</td><td>3,027亿元</td><td>固定核心率和基准其他项</td></tr>
+<tr><td>正常归母利润</td><td>198.40亿元</td><td>181.78亿元</td><td>基准高9.14%；固定24倍PE</td></tr>
+<tr><td>退出PE</td><td>24倍</td><td>21.99倍</td><td>固定基准正常利润</td></tr>
+</tbody></table></div><div class="rows" role="img" aria-label="一年后的三种价格与当前市场价"><div class="row"><div class="nm">熊市<span>较弱恢复和低倍数</span></div><div class="track"><div class="fill alt" style="width:14.86486%"></div></div><div class="fig">29.68<span>−63.7%</span></div></div><div class="row"><div class="nm">现价<span>2026-09-04快照</span></div><div class="track"><div class="fill soft" style="width:40.94153%"></div></div><div class="fig">81.75<span>市场价</span></div></div><div class="row"><div class="nm">基准<span>经营继续改善</span></div><div class="track"><div class="fill " style="width:44.68468%"></div></div><div class="fig">89.22<span>+9.1%</span></div></div><div class="row"><div class="nm">牛市<span>核心修复与新业务止亏</span></div><div class="track"><div class="fill moss" style="width:100.00000%"></div></div><div class="fig">199.68<span>+144.3%</span></div></div></div><p class="small">基准上行小于熊市下行，结果对恢复幅度高度敏感。条长相对最高情景等比；百分比只比较价格，零现金回报假设另见决策表。</p>
+<div class="plain"><span class="pl">一句话总结</span><p>正常化PE比较股价与可持续年度每股利润；核心经营率是分部经营利润占收入比，未扣集团费用。现价在固定基准条件下要求核心经营率约11.4%，基准为12%；基准只留下有限上行，而恢复不及预期可能损失更多。下一步要用非旺季盈利和完整现金报表检验这段恢复。</p>
+</div></section>
+<section class="reveal on" id="valuation-appendix" ><div class="slabel">推算附录</div><h2>同一组输入连接经营、价格与持有期</h2><p>定价日为2027-09-04，持有期一年；FY2027使用正常化全年利润，不是今天的折现价值。期内股息及新增回购回报均假设零，固定1港元兑人民币0.86458元；换算单位已核验，固定前瞻汇率不是预测。</p>
+<p>主分母扣待注销、不扣精确信托股，且持续SBC已扣。再无条件加入全部权利的上界为63.5642亿股，基准值约HK$86.64；未调回行权所得、转债利息和已扣费用，因此只作双重保守股数压力，不冒充库藏股法EPS。</p>
+<p>每股价值由正常归母利润、退出PE、股数和汇率连接；核心率敏感性固定其他损益。现金检验从留存目标反推所需经营现金，不是季度FCF。少数损益暂假定不重大，变化时需重算。</p>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="derivations"><caption>关键承重推算与情景值；现金、股数和来源范围保持分开。表内结果用原始精度计算，公式中的输入仅展示舍入值。</caption><thead><tr><th>数值</th><th>输入</th><th>公式</th><th>来源（页·附注）</th></tr>
+</thead><tbody><tr><td>单季归母利润：21.55亿元</td><td>源值全精度</td><td>H1归母−46.72−Q1归母−68.27（亿元） ＝ 21.55亿元</td><td>Q2公告 第25页；Q1公告 第20页</td></tr>
+<tr><td>商品销售增量占比：66.54%</td><td>源值全精度</td><td>两期商品收入差额÷两期集团收入差额，再乘100% ＝ 66.54%</td><td>Q2公告 第3页；Q2公告 第9页</td></tr>
+<tr><td>滚动归母利润：−384.49亿元</td><td>源值全精度</td><td>FY2025 −233.55＋H1 −46.72−上年H1 104.22（亿元） ＝ −384.49亿元</td><td>年报 文件第212页；Q2公告 第25页</td></tr>
+<tr><td>滚动经营现金：−260.00亿元</td><td>源值全精度</td><td>FY2025 −138.15＋H1 27.19−上年H1 149.05（亿元） ＝ −260.00亿元</td><td>年报 文件第220页；Q2公告 第23页；年报 第23页</td></tr>
+<tr><td>归母利润同比变化：17.90亿元</td><td>源值全精度</td><td>毛利＋费用＋投资＋其他收益＋财务＋联营＋税＋少数股东同比差额之和 ＝ 17.90亿元</td><td>Q2公告 第9页；Q2公告 第25页；Q1公告 第20页</td></tr>
+<tr><td>调整数扣回股份支付：6.05亿元</td><td>源值全精度</td><td>公司调整净利25.24−税前股份支付19.19（亿元，不重算税） ＝ 6.05亿元</td><td>Q2公告 第21页</td></tr>
+<tr><td>现金压力覆盖：1.12年</td><td>源值全精度</td><td>预留后资金476.37÷年度压力消耗426.06（亿元） ＝ 1.12年</td><td>Q2公告 第27页；Q2公告 第28页；分析假设，见情景表；年报 文件第1页；公开汇价 对应附注；年报 文件第220页；Q2公告 第23页；年报 第23页；年报 文件第221页</td></tr>
+<tr><td>发行减待注销股数：61.7256亿股</td><td>源值全精度</td><td>法定A＋B 61.7548亿股−待注销0.029248亿股 ＝ <p class="small">6,172,560,000股</p>
+</td><td>八月月报 文件第2页；八月月报 文件第7页</td></tr>
+<tr><td>五年净回馈：−196.78亿元</td><td>源值全精度</td><td>五年回购264.54−股权现金流入461.33（亿元） ＝ −196.78亿元</td><td>年报 文件第74页；年报 文件第75页；年报 文件第77页；年报 文件第221页；年报 文件第200页；年报 文件第214页；年报 文件第212页</td></tr>
+<tr><td>熊市正常利润：88.00亿元</td><td>源值全精度</td><td>（3,000乘10%＋1,400乘−5%−40−70＋−10）乘（1−20%） ＝ 88.00亿元</td><td>分析假设，见情景表</td></tr>
+<tr><td>熊市每股价值：29.68港元/股</td><td>源值全精度</td><td>正常净利88.00亿元乘18÷61.7256亿股÷0.86458 ＝ 29.68港元/股</td><td>分析假设，见情景表；八月月报 文件第2页；八月月报 文件第7页；Wind，2026-09-04</td></tr>
+<tr><td>基准正常利润：198.40亿元</td><td>源值全精度</td><td>（3,200乘12%＋1,550乘−2%−30−70＋−5）乘（1−20%） ＝ 198.40亿元</td><td>分析假设，见情景表</td></tr>
+<tr><td>基准每股价值：89.22港元/股</td><td>源值全精度</td><td>正常净利198.40亿元乘24÷61.7256亿股÷0.86458 ＝ 89.22港元/股</td><td>分析假设，见情景表；八月月报 文件第2页；八月月报 文件第7页；Wind，2026-09-04</td></tr>
+<tr><td>牛市正常利润：355.20亿元</td><td>源值全精度</td><td>（3,400乘16%＋1,750乘0%−25−75＋0）乘（1−20%） ＝ 355.20亿元</td><td>分析假设，见情景表</td></tr>
+<tr><td>牛市每股价值：199.68港元/股</td><td>源值全精度</td><td>正常净利355.20亿元乘30÷61.7256亿股÷0.86458 ＝ 199.68港元/股</td><td>分析假设，见情景表；八月月报 文件第2页；八月月报 文件第7页；Wind，2026-09-04</td></tr>
+<tr><td>现价隐含正常利润：181.78亿元</td><td>源值全精度</td><td>现价81.75乘股数61.7256亿股乘汇率0.86458÷24 ＝ 181.78亿元</td><td>Wind，2026-09-04；八月月报 文件第2页；八月月报 文件第7页；分析假设，见情景表</td></tr>
+<tr><td>现价隐含核心率：11.35%</td><td>源值全精度</td><td>隐含净利还原税前，扣新业务利润，加回企业费及SBC、扣净财务项，再除核心收入 ＝ 11.35%</td><td>Wind，2026-09-04；八月月报 文件第2页；八月月报 文件第7页；分析假设，见情景表</td></tr>
+<tr><td>同期限赔率：0.14倍</td><td>源值全精度</td><td>基准价格涨幅9.14%÷熊市价格跌幅63.69%（现金回报均0） ＝ 0.14倍</td><td>分析假设，见情景表；八月月报 文件第2页；八月月报 文件第7页；Wind，2026-09-04</td></tr>
+<tr><td>同期限平衡价：59.45港元/股</td><td>源值全精度</td><td>（一年后基准89.22＋熊市29.68）÷2 ＝ 59.45港元/股</td><td>分析假设，见情景表；八月月报 文件第2页；八月月报 文件第7页；Wind，2026-09-04</td></tr>
+</tbody></table></div><div class="plain"><span class="pl">白话解读</span><p>这些价格依赖同一组利润、股数和汇率假设，不是已实现回报。后续若实际发行或现金投入改变，要连同利润一起更新，才能知道每股结果是否仍成立。</p>
+</div></section>
+<section class="reveal on" id="risks" ><div class="slabel">风险验证</div><h2>先找可能推翻恢复的证据</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="risk-register"><caption>按论点损害排序；概率为定性层级，阈值为分析条件而非公司指引。</caption><thead><tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr>
+</thead><tbody><tr><td>1</td><td>补贴及季节性逆转</td><td>2026Q2核心修复含激励减少和有利季节性</td><td>收入恢复与成本下降可能同时回撤</td><td>核心率低于5%为分析警戒，基准12%要求继续恢复</td><td>中高</td><td>2026Q3：核心率、收入和营销费率；低于警戒且激励加速，偏向更弱情景</td></tr>
+<tr><td>2</td><td>新业务现金消耗超预期</td><td>2026Q2香港盈利仅管理层表述，集团新业务仍亏</td><td>食杂与海外扩张吃掉核心现金</td><td>独立现金预算未给；亏损率回到7%以上为警戒</td><td>中高</td><td>2026H2：新业务率与完整投入，海外改善是否转成少用现金</td></tr>
+<tr><td>3</td><td>现金及偿债安排挤压余量</td><td>2026H1只给现金汇总，当前资本支出缺口未闭合</td><td>支付义务及投入削弱可分配资源</td><td>预留后资金及年度压力见现金表述；不是清算值</td><td>中</td><td>FY2026年报：资本及租赁后现金能否转正，商家结算与受限资金附注</td></tr>
+<tr><td>4</td><td>奖励稀释和治理约束</td><td>2026-08-31权利池远大于待注销回购</td><td>利润恢复未必同幅增加每股权益</td><td>当前权利池全加压力约3%；信托精确股数不明</td><td>中高</td><td>2026年9–12月月报：实际新发、归属、回购与注销同步核对</td></tr>
+<tr><td>5</td><td>叮咚交割及整合</td><td>2026-09-06检索仍缺完成正面证据</td><td>对价调整、资金占用及仓网整合</td><td>初价7.17亿美元；特定监管失败0.75亿、买方违约1.50亿美元，条件不叠加</td><td>中</td><td>2027-02-05附近长停窗口及此前公告：条件、最终对价和并表边界</td></tr>
+<tr><td>6</td><td>骑手与食品合规成本</td><td>2026Q2披露保障扩大及食品安全整改</td><td>单位成本或处罚影响经营率与用户信任</td><td>单单新增保障费用、整改关闭率均未量化</td><td>中</td><td>2026H2：费用归属、重复处罚与整改落实，不能只看覆盖口号</td></tr>
+</tbody></table></div><div class="tline"><div class="tstop warn"><div class="tw">2026Q3</div><b>利润条件复验</b><p>观察补贴和季节性是否使修复逆转。</p>
+</div><div class="tstop "><div class="tw">2026年9–12月</div><b>股数连续观察</b><p>把授予与实际净发行分开。</p>
+</div><div class="tstop "><div class="tw">FY2026</div><b>现金闭合</b><p>完整现金资本支出与租赁付款后再谈分配。</p>
+</div><div class="tstop "><div class="tw">2027-02-05</div><b>交易条件窗口</b><p>长停日可延，需以新公告确认。</p>
+</div></div><p class="small">先看经营，再核年度现金及交易。窗口不是已公告的业绩发布日期。</p>
+<div class="plain"><span class="pl">白话解读</span><p>最大风险是补贴再起，同时新业务继续花钱，把本季修复抵消。下一季先核利润和激励，年报再核投入后的现金；股数和收购则用后续公告确认。</p>
+</div></section>
+<section class="reveal on" id="decision" data-fullscan-role="decision" data-verdict="neutral-cautious"><div class="slabel">最终判断</div><h2>中性偏谨慎：等待修复转成连续每股现金</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="decision-block"><caption>以下只表述报告模型的性质，不构成交易或仓位安排。</caption><tbody><tr><td>论点</td><td>平台恢复盈利的能力已显现，是否持续并覆盖股权报酬与扩张现金仍未充分验证。</td></tr>
+<tr><td>基准对一致预期</td><td>无可匹配期间及定义的一致预期；Wind仅给预测PE −61.64倍，不据此编造FY2027利润。改用现价隐含：基准198.40亿元，相对同模型隐含181.78亿元高9.14%。</td></tr>
+<tr><td>赔率</td><td>2026-09-04至2027-09-04，股息及新增回购回报均0；基准上行9.14%，熊市下行63.69%，上行∶下行为0.14∶1。只是固定情景性质，非概率加权收益。</td></tr>
+<tr><td>平衡价</td><td>HK$59.45；同期限、零现金回报下，让基准上行金额等于熊市下行金额的价格，不是买入指令或保本价。</td></tr>
+<tr><td>持有回报</td><td>一年期股息贡献0%、新增回购贡献0%，过去回购已进入股数；基准总回报等于价格变动9.14%。盈利恢复已进入期末定价，不把利润增长和重估再重复相加；未计交易税费或汇率变化。</td></tr>
+<tr><td>分项置信度</td><td>论点证据：中；估值输入：低；现金及资产负债：中；治理执行：中；单位经济：低。FY2026现金资本支出明细，以及非旺季订单/单均成本与利润共同披露，才提升最低项。</td></tr>
+<tr><td>判断</td><td>中性偏谨慎（等待验证）。基准上行小于弱恢复情景下行；下一季度先看经营条件，完整年度再确认现金。</td></tr>
+</tbody></table></div><div class="callout"><b>最强反方观点：</b>竞争理性化可能更持久，新业务也可能同步提效。若非旺季收入及核心利润持续改善、费用不再加速且全年留下现金，应上调正常盈利；仅总额法销售增长则不支持改变判断。</div><div class="plain"><span class="pl">白话解读</span><p>当前基准收益不足以补偿弱恢复情景的损失，故保持谨慎。若非旺季利润持续改善、全年投入后仍留下现金，就应提高正常盈利判断；只见销售规模增长还不够。</p>
+</div></section>
+<section class="reveal on" id="glossary" ><div class="slabel">名词速查</div><h2>把业务规模、会计利润和股东回报分开</h2><div class="tblscroll"><table class="tbl gloss" ><thead><tr><th>术语</th><th>本页含义</th></tr>
+</thead><tbody><tr><td>经营分部</td><td>管理层用来分配资源的业务边界。美团的核心、新业务都包含多项服务，不能当作外卖或Keeta单体。</td></tr>
+<tr><td>不同投票权（WVR）</td><td>不同类别股份的普通事项票数不同，控制权与投入资本比例不一致。</td></tr>
+<tr><td>总额法</td><td>公司承担商品交易主要责任时，按整笔售价记收入，采购成本也进入费用；不同于只确认佣金。</td></tr>
+<tr><td>商家服务</td><td>当前列报把佣金和在线营销合并，旧广告收入栏目不宜直接拼接比较。</td></tr>
+<tr><td>滚动十二个月（LTM）</td><td>完整财年加本期半年、减上年同期半年；减少只看某一季的误读，但仍含周期亏损。</td></tr>
+<tr><td>每股净资产（BVPS）</td><td>归母账面权益按时点股数分摊；包括投资重估，不等于每股可拿到的现金。</td></tr>
+<tr><td>其他综合收益（OCI）</td><td>部分投资及汇兑变动在当期净利润之外确认，也会改变权益，不自动产生可分现金。</td></tr>
+<tr><td>公允价值</td><td>按会计计量规则估计的资产价值，受市场和流动性影响，不等于已经卖出的价款。</td></tr>
+<tr><td>股份支付（SBC）</td><td>用股票、期权或类似权利来补偿服务的经济成本；非现金不等于免费。</td></tr>
+<tr><td>受限制股份单位（RSU）</td><td>达到服务及归属条件后取得股份等回报的奖励，授予日并不等于发行日。</td></tr>
+<tr><td>归母利润</td><td>集团总利润中归普通股东的部分，已扣少数股东损益；季度总利润不能直接换名称。</td></tr>
+<tr><td>单位经济</td><td>每笔交易扣相应成本后的收益。分部混合不同业务且订单缺失时，不从集团收入强算。</td></tr>
+<tr><td>净金融资产代理</td><td>本页现金加短期理财，扣借款、票据和租赁；没有自动扣清经营资金需求。</td></tr>
+<tr><td>现金留存率</td><td>模型中资本支出和租赁现金付款后可留现金占正常利润的比例，是压力假设。</td></tr>
+<tr><td>正常化PE</td><td>股价除以可持续全年每股利润；本页保留股份支付成本，退出PE指期末采用的倍数。</td></tr>
+<tr><td>每股收益（EPS）</td><td>利润按加权股数分摊。摊薄数还考虑适用的潜在股份及利润调整。</td></tr>
+<tr><td>经营投入资本回报率（ROIC）</td><td>税后经营利润与经营投入资本之比；本页缺少可靠分母，保留空白。</td></tr>
+<tr><td>平衡价</td><td>固定基准与熊市结果，使潜在收益和损失金额相等的情景价格，不保证本金安全。</td></tr>
+</tbody></table></div></section>
+<footer><p>数据截止：财务2026-06-30；公告检索至2026-09-06，最新证券月报截至8月31日。行情2026-09-04，美团与携程16:08:06 香港时间，Uber20:04与DoorDash20:01美东，属于同交易日不同时间快照。</p>
 
-<section class="reveal on" id="primer">
-  <div class="slabel">入门 · 三分钟看懂这门生意</div>
-  <h2>一张流量入口，四种收入，两个经济模型</h2>
-  <p>消费者在美团寻找餐饮、零售、酒店和本地服务；商家购买订单、配送、佣金和广告；平台再用骑手、仓配、算法与补贴完成交易。看起来都是“即时零售”，经济实质却分成两类：撮合交易按净额确认佣金或服务费，自营商品则按总额确认销售收入、同时承担库存和履约成本。</p>
-  <div class="steps">
-    <div class="step"><div class="n">环节 1</div><b>消费者提出即时需求</b><p>外卖、闪购、酒店与到店消费共同形成高频入口，网络效应来自需求密度和供给覆盖。</p></div>
-    <div class="step"><div class="n">环节 2</div><b>平台撮合并变现</b><p>配送费、技术服务佣金和在线营销构成平台收入，关键变量是订单密度、履约成本与商家ROI。</p></div>
-    <div class="step"><div class="n">环节 3</div><b>自营商品扩大规模</b><p>小象超市、快驴及部分药品酒类按<span class="g">总额法</span>确认收入，销售额大但毛利率天然低于平台业务。</p></div>
-    <div class="step"><div class="n">环节 4</div><b>利润再投向新网络</b><p>Keeta、食杂和AI需要前置投入；只有其单位经济转正，核心利润才不再长期补贴扩张。</p></div>
-  </div>
-  <p>三个结构性事实必须先记住。第一，港股03690与人民币柜台83690是同一批B类股份的两个交易柜台，不是两套股权。第二，公司法定分部只有“核心本地商业”和“新业务”，并不披露外卖、闪购、到店酒旅、Keeta或小象的独立利润。第三，美团采用<span class="g">不同投票权架构</span>：A类股每股十票、B类股每股一票；王兴兼任董事长和首席执行官。行业壁垒来自流量、供给和履约密度，但消费者与商家都能多平台使用，补贴仍可迅速改写利润率。</p>
-</section>
+<p>来源：港交所<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800436_c.pdf">2026Q2/H1公告</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0601/2026060101347_c.pdf">2026Q1公告</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042400180_c.pdf">2025年报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0926/2025092600044_c.pdf">2025中报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0428/2025042800236_c.pdf">2024年报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0429/2024042900116_c.pdf">2023年报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0424/2023042400043_c.pdf">2022年报</a>与<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0419/2022041900542_c.pdf">2021年报</a>。</p>
 
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">基础财务 · 分部地图 · 口径控制</div>
-  <h2>Q2从亏损谷底反弹，五年报表却显示利润仍高度周期化</h2>
-  <p>本期Q2损益、分部和经营现金流均由公司直接披露，不需要用H1减Q1拼接；Q2归母利润是唯一需要由H1与Q1推导的行项，因此正文以直接披露的期内利润为主。H1财务资料经ISRE 2410审阅，单独Q2比较并非一套独立审阅报表。所有金额均按港交所文件的人民币口径。</p>
+<p>来源：<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400587_c.pdf">八月证券月报</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0205/2026020501303_c.pdf">叮咚交易公告</a>、<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0413/2026041301393_c.pdf">四月RSU授予</a>与<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0715/2026071501404_c.pdf">七月RSU授予</a>；June 1 Q1业绩会二级转录来自earningscalls.dev，仅引用完整语义，非Q2稿。数据来源于万得 Wind 金融数据服务；<a href="https://www.news.cn/20260904/4c1ce1cbf39d416997cb9c237d6f5024/c.html">当日公开汇价</a>核验换算单位。</p>
 
-  <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">2026Q2收入</div><div class="v">1,046.43<span class="u">亿元</span></div><div class="d"><span class="up">同比 +14.4%</span></div></div>
-    <div class="cell"><div class="k">毛利 / 毛利率</div><div class="v">350.95<span class="u">亿元</span></div><div class="d"><span class="up">同比 +16.7%</span><span>33.5%</span></div></div>
-    <div class="cell"><div class="k">经营利润 / 利润率</div><div class="v">26.91<span class="u">亿元</span></div><div class="d"><span class="up">上年同期2.26亿元</span><span>2.6%</span></div></div>
-    <div class="cell"><div class="k">期内利润</div><div class="v">21.55<span class="u">亿元</span></div><div class="d"><span class="up">同比 +490.0%</span></div></div>
-    <div class="cell"><div class="k">经营现金流</div><div class="v">97.33<span class="u">亿元</span></div><div class="d"><span class="up">同比 +103.9%</span></div></div>
-    <div class="cell"><div class="k">Q2/H1自由现金流</div><div class="v">未披露</div><div class="d"><span>现金资本开支基数缺失</span></div></div>
-  </div>
+<p>审计状态：五年核心年度财务经审计；H1简明财务按ISRE2410审阅，Q2管理账目未经审计或独立审阅。公告有通用未审阅管理账目提示，本文仅按具体核数师声明确认H1审阅范围。分部经营陈述、月报与公司非IFRS调整均不等同独立审计保证。</p>
 
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>直接披露的最新期结果｜人民币十亿元；利润率与同比为分析复算</caption>
-      <thead><tr><th>指标</th><th>2025Q2重述</th><th>2026Q2</th><th>同比 / 变化</th><th>2025H1重述</th><th>2026H1</th></tr></thead>
-      <tbody>
-        <tr><td>收入</td><td>91.490</td><td>104.643</td><td>+14.38%</td><td>177.696</td><td>195.682</td></tr>
-        <tr><td>毛利 / 毛利率</td><td>30.064 / 32.86%</td><td>35.095 / 33.54%</td><td>+16.73% / +0.69个百分点</td><td>62.126 / 34.96%</td><td>61.065 / 31.21%</td></tr>
-        <tr><td>经营利润 / 利润率</td><td>0.226 / 0.25%</td><td>2.691 / 2.57%</td><td>+2.465 / +2.32个百分点</td><td>10.792 / 6.07%</td><td>−3.779 / −1.93%</td></tr>
-        <tr><td>经调整EBITDA</td><td>2.782</td><td>4.098</td><td>+47.31%</td><td>15.084</td><td>1.049</td></tr>
-        <tr><td>经调整净利润 /（亏损）</td><td>1.493</td><td>2.524</td><td>+69.03%</td><td>12.442</td><td>−2.444</td></tr>
-        <tr><td>经营现金流</td><td>4.773</td><td>9.733</td><td>+103.91%</td><td>14.905</td><td>2.719</td></tr>
-        <tr><td>归母EPS（人民币元）</td><td>未披露</td><td>未披露</td><td>不推导单季EPS</td><td>1.72 / 1.61</td><td>−0.76 / −0.82</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="callout"><b>比较期并非原样搬运。</b>2026Q1起，公司把商品销售单列，并将佣金与在线营销合并为商家服务；2025Q2收入、毛利和销售营销费用各下调3.50亿元，经营利润不变。该等额变化与“收入冲减改列营销费用”一致，但这是分析推断，公司没有给出完整量化解释。本报告所有Q2/H1同比均使用最新公告的重述比较数。</div>
-
-  <div class="tblscroll">
-    <table class="tbl" data-financials="history">
-      <caption>五年合并财务历史｜FY2021—FY2025；人民币十亿元，每股与比率除外；IFRS指标来自经审计年报</caption>
-      <thead><tr><th>指标</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>四年CAGR</th></tr></thead>
-      <tbody>
-        <tr><td>收入</td><td>179.128</td><td>219.955</td><td>276.745</td><td>337.592</td><td>364.855</td><td>19.46%</td></tr>
-        <tr><td>毛利 / 毛利率</td><td>42.474 / 23.71%</td><td>61.753 / 28.08%</td><td>97.191 / 35.12%</td><td>129.785 / 38.44%</td><td>111.009 / 30.43%</td><td>—</td></tr>
-        <tr><td>经营利润 / 利润率</td><td>−23.127 / −12.91%</td><td>−5.820 / −2.65%</td><td>13.415 / 4.85%</td><td>36.845 / 10.91%</td><td>−25.041 / −6.86%</td><td>—</td></tr>
-        <tr><td>归母利润 / 净利率</td><td>−23.538 / −13.14%</td><td>−6.686 / −3.04%</td><td>13.856 / 5.01%</td><td>35.807 / 10.61%</td><td>−23.355 / −6.40%</td><td>—</td></tr>
-        <tr><td>基本每股收益 / ROE</td><td>−3.90 / −21.08%</td><td>−1.09 / −5.26%</td><td>2.23 / 9.87%</td><td>5.85 / 22.06%</td><td>−3.84 / −14.43%</td><td>—</td></tr>
-        <tr><td>期末BVPS（推算）</td><td>20.47</td><td>20.79</td><td>24.34</td><td>28.56</td><td>24.71</td><td>—</td></tr>
-        <tr><td>经营现金流</td><td>−4.011</td><td>11.411</td><td>40.522</td><td>57.147</td><td>−13.815</td><td>—</td></tr>
-        <tr><td>现金资本开支</td><td>9.010</td><td>5.731</td><td>6.880</td><td>10.999</td><td>13.271</td><td>—</td></tr>
-        <tr><td>自由现金流代理：CFO−现金Capex</td><td>−13.022</td><td>5.680</td><td>33.642</td><td>46.147</td><td>−27.086</td><td>—</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="cols" role="img" aria-label="FY2021至FY2025收入与归母利润趋势；收入逐年增长，归母利润在2021、2022和2025为亏损">
-    <div class="col"><div class="bars"><div class="bar rev" style="height:49.1%"></div><div class="bar np" style="height:65.7%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:60.3%"></div><div class="bar np" style="height:18.7%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:75.9%"></div><div class="bar np" style="height:38.7%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:92.5%"></div><div class="bar np" style="height:100%"></div></div></div>
-    <div class="col"><div class="bars"><div class="bar rev" style="height:100%"></div><div class="bar np" style="height:65.2%"></div></div></div>
-  </div>
-  <div class="collabels">
-    <div><b>2021</b>亏损</div><div><b>2022</b>亏损</div><div><b>2023</b>盈利</div><div><b>2024</b>盈利</div><div><b>2025</b>亏损</div>
-  </div>
-  <div class="legend"><span><i class="p"></i>收入（按收入峰值归一）</span><span><i class="m"></i>归母利润绝对值（按利润峰值归一）</span></div>
-  <p class="small">两组柱分别按各自峰值归一，只用于看方向，不可比较柱高大小；亏损年份已在年签标明。精确数值见上表。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>LTM桥｜截至2026年6月；人民币十亿元；LTM＝FY2025＋2026H1−2025H1</caption>
-      <thead><tr><th>指标</th><th>LTM</th><th>口径与可比性</th></tr></thead>
-      <tbody>
-        <tr><td>收入 / 毛利</td><td>382.139 / 109.246</td><td>使用原披露H1’25从原口径FY2025扣除；H2尚未重述，跨期可比受限</td></tr>
-        <tr><td>经营利润 / 归母利润</td><td>−39.612 / −38.449</td><td>分析推算；利润行不受收入重分类影响</td></tr>
-        <tr><td>经调整EBITDA / 经调整净利润</td><td>−27.818 / −33.534</td><td>公司定义非IFRS指标的滚动桥</td></tr>
-        <tr><td>经营现金流</td><td>−26.000</td><td>直接年度与半年度现金流滚动</td></tr>
-        <tr><td>现金Capex / FCF</td><td>未披露</td><td>2026H1现金资本开支缺失，不以投资现金流代替</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div data-financials="segments">
-    <div class="stacks" role="img" aria-label="Q2报告分部收入结构：2025年核心本地商业71.0%、新业务29.0%；2026年核心68.4%、新业务31.6%">
-      <div class="stack"><div class="cap">2025Q2 · 重述后收入结构</div><div class="stackbar"><div class="seg p" style="width:71.0%">核心 71.0%</div><div class="seg q" style="width:29.0%">新业务 29.0%</div></div></div>
-      <div class="stack"><div class="cap">2026Q2 · 收入结构</div><div class="stackbar"><div class="seg p" style="width:68.4%">核心 68.4%</div><div class="seg q" style="width:31.6%">新业务 31.6%</div></div></div>
-    </div>
-    <div class="legend"><span><i class="p"></i>核心本地商业</span><span><i class="q"></i>新业务</span></div>
-    <p class="small">新业务占比上升不等于其经济贡献同步上升：新业务近七成收入来自总额法商品销售。</p>
-
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>Q2分部与收入类型｜人民币十亿元；利润率为分部经营利润÷分部收入</caption>
-        <thead><tr><th>项目</th><th>2025Q2</th><th>2026Q2</th><th>同比</th><th>2026Q2利润 / 利润率</th></tr></thead>
-        <tbody>
-          <tr><td>核心本地商业</td><td>64.997</td><td>71.531</td><td>+10.05%</td><td>5.668 / 7.92%</td></tr>
-          <tr><td>新业务</td><td>26.493</td><td>33.112</td><td>+24.98%</td><td>−1.739 / −5.25%</td></tr>
-          <tr><td>未分配项目</td><td>—</td><td>—</td><td>—</td><td>−1.238</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="rows">
-      <div class="row"><div class="nm">商家服务<span>佣金＋在线营销</span></div><div class="track"><div class="fill" style="width:100%"></div></div><div class="fig">42.383<span>40.5%</span></div></div>
-      <div class="row"><div class="nm">配送服务<span>外卖与闪购混合</span></div><div class="track"><div class="fill soft" style="width:65.7%"></div></div><div class="fig">27.830<span>26.6%</span></div></div>
-      <div class="row"><div class="nm">商品销售<span>主要责任人总额法</span></div><div class="track"><div class="fill alt" style="width:62.9%"></div></div><div class="fig">26.667<span>25.5%</span></div></div>
-      <div class="row"><div class="nm">其他<span>含利息收入</span></div><div class="track"><div class="fill moss" style="width:18.3%"></div></div><div class="fig">7.762<span>7.4%</span></div></div>
-    </div>
-
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>竞争周期中的核心本地商业利润率｜公司直接披露</caption>
-        <thead><tr><th>2024Q2</th><th>2025Q2</th><th>2025Q3</th><th>2025Q4</th><th>2026Q1</th><th>2026Q2</th></tr></thead>
-        <tbody><tr><td>25.1%</td><td>5.7%</td><td>−20.9%</td><td>−15.5%</td><td>−3.2%</td><td>7.9%</td></tr></tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>五年收入从1,791亿元增至3,649亿元，但利润走过“亏损—盈利—再亏损”，说明规模增长并没有自动变成稳定回报。2024年曾是利润高点，2025年的补贴竞争又把经营现金和利润同时拉回负值。</p>
-    <p>Q2确实转好了：收入、毛利、经营利润和现金流都改善。可是半年毛利仍下降，LTM仍亏损。<b>一季修复证明利润可以回来；滚动亏损提醒我们，它还没有回来够久。</b></p>
-  </div>
-  <p class="small">现金资本开支定义为现金支付或预付的物管设备与无形资产；FCF为分析代理，不是公司披露指标。H1期末BVPS约人民币27.40元/法定已发行股，六个月ROE约−2.92%；清洁ROIC因大量金融投资、受限现金、商户资金与分部资产缺失而无法可靠计算。非IFRS指标未经审计且定义可能不同于同业。</p>
-</section>
-
-<section class="reveal on" id="platform">
-  <div class="slabel">平台经济 · 竞争 · 用户与变现</div>
-  <h2>护城河仍在，验证护城河的KPI却不在</h2>
-  <p>美团的优势是本地供给密度、消费者心智、骑手网络与商家工具形成的闭环：更密的订单可以摊薄每单履约成本，更广的供给又能提高复购和广告价值。弱点也来自同一结构——消费者切换成本低、商家可以<span class="g">多平台经营</span>，竞争者只要用补贴买频次，利润就能比收入更快变化。最新利润率轨迹已经证明这种敏感度。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">管理层命题</div><p>行业从非理性竞争转向效率，订单及用户结构改善，核心用户黏性增强；减少用户激励后，配送收入恢复增长。</p></div>
-    <div class="find warn"><div class="t">可证边界</div><p>公告同时把利润恢复归因于激励减少和有利季节性，却没有给订单、用户或单位成本绝对值。</p></div>
-    <div class="find"><div class="t">真正的护城河测试</div><p>非旺季、没有营销费率反弹时，核心收入仍能保持增长并守住正利润，才说明网络密度而非补贴在驱动。</p></div>
-    <div class="find warn"><div class="t">估值折价来源</div><p>没有量、价、频次和变现率，投资者无法把收入增长拆成用户扩张、每单收入、广告渗透或价格变化。</p></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>互联网平台KPI披露审计｜2026Q2</caption>
-      <thead><tr><th>指标</th><th>当前是否披露</th><th>能回答什么</th><th>投资判断</th></tr></thead>
-      <tbody>
-        <tr><td>核心/新业务收入与分部经营利润</td><td>披露</td><td>大类收入和盈利边界</td><td>可审计，但无法下钻至子业务</td></tr>
-        <tr><td>订单、即时配送交易、GTV/GMV</td><td>未披露</td><td>交易量与价格</td><td>无法计算每单收入或平台增速</td></tr>
-        <tr><td>交易用户、商家、频次、ARPU</td><td>未披露</td><td>网络扩张与黏性</td><td>“改善”“创新高”只有方向</td></tr>
-        <tr><td>抽佣率、广告渗透、商户ROI</td><td>未披露</td><td>变现能力</td><td>商家服务增长无法拆量价</td></tr>
-        <tr><td>补贴/单、配送成本/单、贡献利润/单</td><td>未披露</td><td>单位经济</td><td>不能验证利润修复是否结构性</td></tr>
-        <tr><td>外卖、闪购、到店酒旅独立利润</td><td>未披露</td><td>利润来源与交叉补贴</td><td>核心分部率不是“外卖利润率”</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>披露退坡具有时间序列证据：2022年报仍给出6.779亿交易用户、930万活跃商家与人均年交易频次；2023年只保留即时配送交易量；到2025年和本期，用户、频次、ARPU与GTV只剩定性表述。公司仍在文件中定义这些KPI，却没有公布实际数值。缺失本身就是信息：管理层要求市场相信<span class="g">单位经济</span>改善，却减少了检验改善的尺子。</p>
-
-  <div class="callout"><b>骑手保障属于单位成本，不只是ESG。</b>职业伤害保障现已全国覆盖每位骑手和每笔订单，养老保险补贴继续推进；公司没有披露当期费用、每单成本或会计科目。食品安全也进入经营约束：Q1因商家资质审查缺陷被罚7.46亿元，本期公布整改方向但未给缺陷关闭率。</div>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>平台生意最重要的不是“总共有多少钱进来”，而是每个用户多下多少单、每单赚多少、为了抢这一单花多少补贴。本期这些数字都没有。<b>利润回来了是事实；为什么能回来、能不能留下，仍主要依赖管理层叙述。</b></p>
-  </div>
-</section>
-
-<section class="reveal on" id="newbusiness">
-  <div class="slabel">新业务 · 即时零售 · 海外与AI</div>
-  <h2>增长最快的一桶收入，也最容易被总额法误读</h2>
-  <p>“即时零售”不是一种同质经济。美团闪购主要是核心分部的平台撮合；自营药品和酒类也在核心分部但按商品销售；小象超市、快驴属于新业务并承担库存；Keeta则是海外配送网络。把它们合在一起谈增长，会把佣金、广告、自营零售和海外扩张的<span class="g">毛利池</span>与现金需求混为一谈。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">新业务Q2收入</div><div class="v">331.12<span class="u">亿元</span></div><div class="d"><span class="up">同比 +25.0%</span></div></div>
-    <div class="cell"><div class="k">新业务商品销售占比</div><div class="v">69.7%</div><div class="d"><span>按主要责任人总额确认</span></div></div>
-    <div class="cell"><div class="k">新业务经营亏损率</div><div class="v">−5.3%</div><div class="d"><span class="up">上年同期 −7.1%</span></div></div>
-    <div class="cell"><div class="k">Keeta分部收入 / 现金消耗</div><div class="v">未披露</div><div class="d"><span>香港、中东、巴西未拆分</span></div></div>
-    <div class="cell"><div class="k">小象同店 / 单仓盈利</div><div class="v">未披露</div><div class="d"><span>扩城与自有品牌仅定性</span></div></div>
-    <div class="cell"><div class="k">AI收入 / 回报率</div><div class="v">未披露</div><div class="d"><span>只确认研发投入增加</span></div></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>增长引擎证据分层</caption>
-      <thead><tr><th>业务</th><th>官方披露</th><th>仍缺什么</th><th>估值处理</th></tr></thead>
-      <tbody>
-        <tr><td>平台即时零售</td><td>核心配送和商品销售增长</td><td>外卖/闪购订单、单均利润</td><td>只在核心分部整体利润率中体现</td></tr>
-        <tr><td>小象超市与食杂</td><td>扩城、自有品牌GTV占比提高</td><td>城市、仓数、复购、损耗、单仓盈亏</td><td>按新业务毛利池折价，不按收入同倍数</td></tr>
-        <tr><td>Keeta</td><td>香港“稳定盈利”；中东效率环比改善；巴西探索</td><td>收入、订单、CAC、贡献利润和现金消耗</td><td>不做独立海外估值</td></tr>
-        <tr><td>AI</td><td>研发费用增加，智能商家工具扩大覆盖</td><td>付费客户、收入、推理成本、转化和回收期</td><td>作为需验证的经营投入，不给独立溢价</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>新业务亏损收窄是正面信号，但不能据此断言Keeta已经自我造血，因为同一分部还包含食杂、单车、充电宝和小额信贷。Q2研发费用同比增加22.5%，管理层指向AI投入；目前却没有AI专项费用、算力资本开支或可验证效率收益。最诚实的读法是：公司在扩大可选项，股东仍无法单独给这些可选项定价。</p>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>一件100元的自营商品，可能把100元都记作收入；一笔100元的平台订单，平台可能只把佣金和服务费记作收入。所以新业务“收入长得快”不一定比平台业务创造更多价值。<b>要看毛利、亏损和现金，而不是只看销售额。</b></p>
-  </div>
-</section>
-
-<section class="reveal on" id="quality">
-  <div class="slabel">利润质量 · 现金 · 资产负债表</div>
-  <h2>经常性修复存在，投资收益和资产重估也在放大报表</h2>
-  <p>Q2经营利润改善并非“全靠投资收益”：分部利润上升、经营现金转正都是真实支持。但合并经营利润也包含其他收益，H1全面收益更受到战略投资公允价值重估推动。利润、现金与权益必须分开看。</p>
-
-  <div class="wfall" role="img" aria-label="Q2经营利润从2025年的0.226十亿元变为2026年的2.691十亿元；毛利增加5.031，销售营销费用增加2.555，研发增加1.410，一般行政增加0.559，减值增加0.302，公允价值收益减少0.427，其他收益增加2.686">
-    <div class="wrow"><div class="nm">2025Q2经营利润<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:4.5%"></div></div><div class="fig">0.226</div></div>
-    <div class="wrow"><div class="nm">毛利增加<span>核心经营贡献</span></div><div class="wtrack"><div class="wbar up" style="left:0%;width:100%"></div></div><div class="fig">+5.031</div></div>
-    <div class="wrow"><div class="nm">销售营销增加<span>费用拖累</span></div><div class="wtrack"><div class="wbar down" style="left:0%;width:50.8%"></div></div><div class="fig">−2.555</div></div>
-    <div class="wrow"><div class="nm">研发增加<span>含AI投入</span></div><div class="wtrack"><div class="wbar down" style="left:0%;width:28.0%"></div></div><div class="fig">−1.410</div></div>
-    <div class="wrow"><div class="nm">行政与减值<span>合计</span></div><div class="wtrack"><div class="wbar down" style="left:0%;width:17.1%"></div></div><div class="fig">−0.861</div></div>
-    <div class="wrow"><div class="nm">FVTPL变化<span>收益减少</span></div><div class="wtrack"><div class="wbar down" style="left:0%;width:8.5%"></div></div><div class="fig">−0.427</div></div>
-    <div class="wrow"><div class="nm">其他收益增加<span>投资等</span></div><div class="wtrack"><div class="wbar up" style="left:0%;width:53.4%"></div></div><div class="fig">+2.686</div></div>
-    <div class="wrow"><div class="nm">2026Q2经营利润<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0%;width:53.5%"></div></div><div class="fig">2.691</div></div>
-  </div>
-  <p class="small">单位为人民币十亿元；条长按最大单项5.031等比显示，七项变化合计2.465，精确衔接两期经营利润。该桥回答报表行项变化，不把费用机械归因于单一业务。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">现金＋短期理财</div><div class="v">1,683.14<span class="u">亿元</span></div><div class="d"><span>不含受限现金</span></div></div>
-    <div class="cell"><div class="k">借款＋票据</div><div class="v">887.01<span class="u">亿元</span></div><div class="d"><span>另有租赁负债71.16亿元</span></div></div>
-    <div class="cell"><div class="k">净金融资产</div><div class="v">724.97<span class="u">亿元</span></div><div class="d"><span>现金＋短期理财−借款−票据−租赁</span></div></div>
-    <div class="cell"><div class="k">战略金融与权益投资</div><div class="v">772.81<span class="u">亿元</span></div><div class="d"><span>非现金、非全部可分配</span></div></div>
-    <div class="cell"><div class="k">H1 FVOCI其他投资重估</div><div class="v">224.74<span class="u">亿元</span></div><div class="d"><span>计入其他综合收益，不进经营利润</span></div></div>
-    <div class="cell"><div class="k">H1全面收益</div><div class="v">148.18<span class="u">亿元</span></div><div class="d"><span>同期净亏损46.72亿元</span></div></div>
-  </div>
-
-  <p>短期偿债不是主矛盾，但“净现金”必须讲清周界。本报告不把受限现金、FVTPL、FVOCI或权益法投资叫作现金；净金融资产也不是可全部分配的余额，因为平台需要运营流动性，叮咚交易若完成还要支付现金。H1对智谱等投资的账面重估抬高了权益和<span class="g">其他综合收益</span>，不能视为经营盈利或可立即分红的资金。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">支持盈利质量</div><p>Q2经营现金流与经调整利润同向为正；毛利增加足以覆盖大部分费用增量，分部经营修复不是纯会计幻觉。</p></div>
-    <div class="find warn"><div class="t">削弱盈利质量</div><p>其他收益对经营利润贡献明显；半年和LTM现金转换仍弱，且缺少现金资本开支，不能验证自由现金流。</p></div>
-    <div class="find warn"><div class="t">资产重估噪音</div><p>战略投资公允价值可以大幅改变全面收益和净资产，却不改变订单、履约或商家变现。</p></div>
-    <div class="find"><div class="t">下一步证据</div><p>FY2026完整现金流、资本开支和营运资金附注，才足以判断Q2现金修复能否滚成全年。</p></div>
-  </div>
-</section>
-
-<section class="reveal on" id="capital">
-  <div class="slabel">资本配置 · 叮咚收购 · 治理</div>
-  <h2>现金不紧，问题是每股价值有没有被持续稀释</h2>
-  <p>美团没有固定派息政策，2025年和2026H1均未派息；股东回报依赖未来盈利、回购和资本配置。当前回购规模远小于股权激励授予，不能把“有回购”自动等同于“每股数下降”。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>股份与激励周界｜最新港交所文件；十亿股，倍数除外</caption>
-      <thead><tr><th>项目</th><th>数量 / 金额</th><th>比较</th><th>解读</th></tr></thead>
-      <tbody>
-        <tr><td>2026年7月末A＋B法定已发行</td><td>6.1755</td><td>—</td><td>03690与83690共享同一B类股份</td></tr>
-        <tr><td>待注销回购</td><td>0.002925 / HK$1.998亿</td><td>约占法定股本0.047%</td><td>尚未抵消整体激励池</td></tr>
-        <tr><td>未行权期权＋未归属RSU＋可转债潜在股</td><td>0.1861</td><td>毛摊薄约3.0%</td><td>期权是否最终行权取决于价格与归属</td></tr>
-        <tr><td>保守毛摊薄股数</td><td>6.3586</td><td>估值分母</td><td>不等同IFRS亏损期摊薄EPS分母</td></tr>
-        <tr><td>4月RSU授予</td><td>0.07932</td><td>回购股数的27.1倍</td><td>零购买价、无绩效目标、时间归属</td></tr>
-        <tr><td>7月RSU授予</td><td>0.01351</td><td>回购股数的4.6倍</td><td>零购买价、无绩效目标、时间归属</td></tr>
-        <tr><td>2026H1股份支付</td><td>人民币33.02亿元</td><td>加权平均股数同比+0.95%</td><td>会计费用与潜在稀释都要监测</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">7月月报已包含当月授予、归属与失效，估值分母不再重复加上4月或7月授予。毛摊薄周界是保守上限；本报告估值使用该分母，并从正常化未分配成本中剔除同批现有奖励的费用，避免同一授予同时按费用和股份重复扣减。未来新增授予仍是独立风险。</p>
-
-  <h3>叮咚买菜：战略方向合理，财务闭环尚未完成</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>交易条款与验证清单｜2026-02-05公告</caption>
-      <thead><tr><th>条款</th><th>官方披露</th><th>投资含义</th></tr></thead>
-      <tbody>
-        <tr><td>初始对价</td><td>7.17亿美元，可调整；内部现金支付</td><td>本报告现金桥只扣一次，不预付协同</td></tr>
-        <tr><td>交割现金</td><td>卖方可提取不超过2.80亿美元；须留至少1.50亿美元净现金</td><td>最终购买价与交割资产负债表仍待核验</td></tr>
-        <tr><td>先决条件</td><td>反垄断、发改委申报、海外业务剥离</td><td>截至资料日未见完成交割公告，不并表</td></tr>
-        <tr><td>长停与费用</td><td>签约后12个月；特定监管失败或触发7,500万美元终止费</td><td>2027-02-05前是关键事件窗口</td></tr>
-        <tr><td>标的经营</td><td>1,000多个前置仓、700多万月购买用户；历史利润未经审核</td><td>交易方向强化食杂，但不能替代交割后单位经济</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>估值情景假定交易完成，并把收购后的食杂经营包含在2027年新业务总量中；若不完成，应同时加回对价并移除对应经营贡献，不能只做其中一边。真正的验收标准不是仓数，而是购买价分配、商誉、重叠仓整合、同店增长和现金贡献。</p>
-
-  <h3>控制权与少数股东边界</h3>
-  <p>A类股十票、B类股一票使创始人投票权显著高于经济权益；年报显示王兴与穆荣均在非保留事项的合计投票权约过半。王兴兼任董事长和CEO，公司明确偏离企业管治守则C.2.1。VIE并非整个集团——2025年综合联属实体收入约占集团5.1%——但合同执行、牌照和利益冲突风险仍存在。良好资本配置要靠可验证的每股结果，而不是只靠董事会意图。</p>
-
-  <div class="plain">
-    <span class="pl">白话解读</span>
-    <p>公司账上有钱，也确实回购了一点股票；但4月和7月两次无业绩条件RSU授予的股数远高于回购。<b>对股东真正重要的是“回购减去新发奖励”后的净股数，而不是回购公告本身。</b></p>
-  </div>
-</section>
-
-<section class="reveal on" id="valuation">
-  <div class="slabel">市场定价 · 情景估值 · 隐含预期</div>
-  <h2>现价不是贵在当季利润，而是已经预付了下一段利润率修复</h2>
-
-  <div class="grid">
-    <div class="cell"><div class="k">现价 / 基本市值</div><div class="v">76.50<span class="u">HKD</span></div><div class="d"><span>Wind 2026-08-31 16:02 HKT</span><span>HK$4,724亿</span></div></div>
-    <div class="cell"><div class="k">悲观价值</div><div class="v">15<span class="u">–25 HKD</span></div><div class="d"><span class="down">竞争重燃，新业务持续烧钱</span></div></div>
-    <div class="cell"><div class="k">基准价值</div><div class="v">70<span class="u">–90 HKD</span></div><div class="d"><span>模型点值约HK$78</span></div></div>
-    <div class="cell"><div class="k">乐观价值</div><div class="v">125<span class="u">–150 HKD</span></div><div class="d"><span class="up">核心双位数利润率稳定</span></div></div>
-    <div class="cell"><div class="k">现价隐含核心利润率</div><div class="v">10.3%<span class="u">–11.7%</span></div><div class="d"><span>取决于是否认可新业务与战略投资价值</span></div></div>
-    <div class="cell"><div class="k">估值判断</div><div class="v">中性</div><div class="d"><span>价格位于基准带内，安全边际有限</span></div></div>
-  </div>
-
-  <h3>为什么不用Q2年化P/E或集团EV/Sales</h3>
-  <p>Q2利润是竞争与季节性共同作用下的一季快照，直接乘四会忽略此前亏损；集团销售额又被总额法商品放大。现金流DCF也会被缺失的H1现金资本开支和未披露的新业务现金消耗制造伪精确。因此主方法是“两引擎”情景：核心按<span class="g">正常化</span>分部EBIT，新业务按毛利池并扣资本化亏损，未分配成本只扣一次；再用现价反推核心利润率。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2027正常化情景输入｜人民币十亿元；全部为分析假设，不是公司指引</caption>
-      <thead><tr><th>驱动</th><th>悲观</th><th>基准</th><th>乐观</th><th>为什么重要</th></tr></thead>
-      <tbody>
-        <tr><td>核心收入 / 分部利润率</td><td>290 / 6.0%</td><td>310 / 10.5%</td><td>330 / 14.0%</td><td>利润率是最大价值变量</td></tr>
-        <tr><td>核心EV/EBIT</td><td>10x</td><td>15x</td><td>17x</td><td>反映增长、竞争与持续性</td></tr>
-        <tr><td>新业务收入 / 毛利率</td><td>155 / 18%</td><td>170 / 20%</td><td>190 / 22%</td><td>情景总量含交割后的叮咚经营</td></tr>
-        <tr><td>新业务毛利倍数 / 利润率</td><td>0.5x / −7%</td><td>1.5x / −2%</td><td>2.0x / +1%</td><td>避免把总额法销售当平台收入</td></tr>
-        <tr><td>正常化未分配成本</td><td>11.0</td><td>8.0</td><td>6.5</td><td>保留企业、AI与并购摊销；同批SBC不重复扣</td></tr>
-        <tr><td>战略投资认可 / 折现率</td><td>0% / 12%</td><td>30% / 11%</td><td>50% / 10%</td><td>对流动性、税和估值波动打折</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="rows" role="img" aria-label="美团估值价格阶梯：悲观点18.8港元，基准点78.3港元，现价76.5港元，乐观点138.4港元">
-    <div class="row"><div class="nm">悲观点<span>区间15–25</span></div><div class="track"><div class="fill alt" style="width:13.0%"></div></div><div class="fig">18.8<span>HKD</span></div></div>
-    <div class="row"><div class="nm">现价<span>2026-08-31</span></div><div class="track"><div class="fill soft" style="width:52.8%"></div></div><div class="fig">76.5<span>HKD</span></div></div>
-    <div class="row"><div class="nm">基准点<span>区间70–90</span></div><div class="track"><div class="fill" style="width:54.0%"></div></div><div class="fig">78.3<span>HKD</span></div></div>
-    <div class="row"><div class="nm">乐观点<span>区间125–150</span></div><div class="track"><div class="fill moss" style="width:95.4%"></div></div><div class="fig">138.4<span>HKD</span></div></div>
-  </div>
-
-  <div class="plain">
-    <span class="pl">估值怎么从企业价值走到每股价值</span>
-    <p>基准情景先得到核心经营价值3,682亿元、新业务408亿元；把2027经营价值按11%折回16个月，再加477亿元可归属的超额金融资产和232亿元折价后的战略投资，得到当前股权价值约4,268亿元人民币。最后按人民币1元＝1.1665港元换算，并除以63.59亿股保守毛摊薄股数，约为每股HK$78.3。</p>
-    <p><b>最敏感的不是现金或叮咚对价，而是核心利润率。</b>基准其他条件不变，核心利润率每变化1个百分点，每股价值约变化HK$7.4。</p>
-  </div>
-
-  <h3>现价反推：市场已经要求什么</h3>
-  <p>用现价乘毛摊薄股数，而不是用基本股本市值，得到一致的股权分母。若认可基准情景中的新业务毛利池与战略投资折价价值，现价要求的核心分部率位于上方区间下端；若两者一概不给价值，则落在区间上端。两者都高于本季分部率，但没有把竞争前峰值当作基准。换句话说，现价没有押注回到旧峰，却已经押注Q2不是昙花一现。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Wind一致预期交叉检查｜人民币十亿元，P/E除外；非本报告预测</caption>
-      <thead><tr><th>年度</th><th>收入</th><th>归母净利润</th><th>现价远期P/E</th><th>含义</th></tr></thead>
-      <tbody>
-        <tr><td>2026E</td><td>406.524</td><td>−8.627</td><td>亏损</td><td>市场仍预期全年亏损</td></tr>
-        <tr><td>2027E</td><td>461.957</td><td>19.832</td><td>20.88x</td><td>要求从亏损恢复显著盈利</td></tr>
-        <tr><td>2028E</td><td>518.943</td><td>35.207</td><td>11.76x</td><td>盈利需再近乎翻倍</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">Wind返回的贡献机构数与更新时间分布不足，因此一致预期只作市场期待温度计。Wind标准化P/B、P/S字段与本报告的股本及重述口径不一致，未采用。数据来源于万得 Wind 金融数据服务。</p>
-
-  <h3>同业只回答局部问题，不给目标价中位数</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>可比公司边界</caption>
-      <thead><tr><th>公司</th><th>最有用的比较</th><th>为什么集团倍数不可直接搬用</th></tr></thead>
-      <tbody>
-        <tr><td>DoorDash</td><td>按需配送平台单位经济</td><td>美国监管、地理与SBC不同，缺少美团规模的到店酒旅和自营食杂</td></tr>
-        <tr><td>京东</td><td>自营零售与履约强度</td><td>零售和物流占比更高，集团销售与利润率不可比</td></tr>
-        <tr><td>阿里巴巴</td><td>即时零售竞争投入</td><td>云与电商主导，饿了么没有独立上市倍数</td></tr>
-        <tr><td>携程</td><td>酒店旅游变现与利润率</td><td>没有即时配送和食杂经济</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="reveal on" id="risks">
-  <div class="slabel">风险 · 反方论证 · 证伪条件</div>
-  <h2>最强反方不是“竞争会更坏”，而是Q2已经标志理性化拐点</h2>
-  <p>谨慎判断也可能错。支持乐观方的证据并不弱：核心收入保持增长，分部利润改善，新业务亏损收窄，销售营销费率下降，经营现金转正。如果这些变化在非旺季重复且激励不再加速，2025年的竞争谷底可能已经过去，当前估值会低估利润弹性。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">乐观方最强论据</div><p>平台只需降低激励就迅速恢复盈利，说明核心网络仍有定价和成本杠杆；新业务也在同时提高效率。</p></div>
-    <div class="find warn"><div class="t">谨慎方最强反驳</div><p>恢复来自激励减少和季节性，绝对订单、用户、补贴和单位成本均缺失；一次竞争再起就可能逆转利润。</p></div>
-    <div class="find"><div class="t">哪个更可检验</div><p>下一两个季度的核心利润率、营销费率、新业务亏损率和经营现金最先给答案。</p></div>
-    <div class="find warn"><div class="t">不能拿来证伪的东西</div><p>股价上涨、管理层形容词或单一收入增速，都不能替代经营阈值。</p></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>风险矩阵与可观察阈值</caption>
-      <thead><tr><th>风险</th><th>概率 / 影响</th><th>领先指标</th><th>谨慎情景确认线</th></tr></thead>
-      <tbody>
-        <tr><td>补贴竞争重燃</td><td>中高 / 高</td><td>核心利润率、销售营销费率</td><td>核心利润率跌破5%或重新亏损</td></tr>
-        <tr><td>增长质量继续下沉</td><td>中 / 中高</td><td>商品销售占增量、商家服务增速</td><td>总额法销售继续主导且毛利率下降</td></tr>
-        <tr><td>新业务扩张吞噬现金</td><td>中高 / 高</td><td>新业务亏损率、Keeta/食杂现金披露</td><td>亏损率重回7%以上</td></tr>
-        <tr><td>现金修复不可持续</td><td>中 / 高</td><td>LTM CFO、FY Capex与营运资金</td><td>完整年度FCF仍为负</td></tr>
-        <tr><td>激励稀释每股价值</td><td>高 / 中</td><td>月报净股数、RSU授予与回购</td><td>摊薄股数持续上升且回购不足</td></tr>
-        <tr><td>叮咚交割与整合</td><td>中 / 中</td><td>批准、最终对价、商誉、同店</td><td>条款恶化、终止费或重大整合亏损</td></tr>
-        <tr><td>骑手、食品和数据监管</td><td>中 / 中高</td><td>每单保障成本、重复处罚</td><td>再处罚或结构性成本上升未被定价吸收</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="callout"><b>本报告主线的证伪条件：</b>未来两个报告季度，核心本地商业收入仍保持至少高个位数增长，分部利润率在销售营销费率不重新加速的情况下维持7%以上；新业务亏损率继续向5%以内收窄，合并现金转换保持为正。若四项同时成立，Q2应被重新定义为正常化拐点，而不只是季节性撤补贴。</div>
-</section>
-
-<section class="reveal on" id="decision">
-  <div class="slabel">决策框架 · 催化剂 · 监测</div>
-  <h2>现在买的是“修复继续”，不是“便宜到不用等”</h2>
-  <p>当前价格位于基准区间，最合理的姿态是中性观察：承认Q2的真实改善，也不把尚未披露的单位经济、海外盈利和自由现金流提前资本化。已有持仓应把核心利润率和净股数当作硬约束；新资金需要更低价格或更多连续证据，才能形成清楚的安全边际。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>行动规则｜结论只使用前文证据</caption>
-      <thead><tr><th>情形</th><th>价格 / 经营组合</th><th>行动倾向</th><th>为什么</th></tr></thead>
-      <tbody>
-        <tr><td>赔率优先</td><td>进入HK$60以下且核心仍盈利</td><td>开始研究性建仓</td><td>价格不再要求明显双位数核心利润率</td></tr>
-        <tr><td>证据优先</td><td>连续两季满足证伪条件</td><td>即使价格略高也可提高确信度</td><td>把单季修复升级为结构性恢复</td></tr>
-        <tr><td>当前状态</td><td>现价处于基准区，单季好转、滚动仍亏</td><td>中性观察</td><td>证据与价格相互抵消</td></tr>
-        <tr><td>应降低风险</td><td>跌破风险阈值、营销反弹或净股数持续升</td><td>下调情景与仓位</td><td>主线被经营数据直接否定</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="tline" role="img" aria-label="美团投资验证时间线：每月证券月报、2026Q3、2026全年、2027年2月叮咚长停、2027Q2同季比较">
-    <div class="tstop"><div class="tw">每月 · 2026H2</div><b>证券变动月报</b><p>看A+B净股数、RSU归属、新授予与回购注销。</p></div>
-    <div class="tstop warn"><div class="tw">2026Q3</div><b>第一道非旺季测试</b><p>核心利润率、营销费率、商家服务和新业务亏损。</p></div>
-    <div class="tstop"><div class="tw">FY2026</div><b>现金闭环</b><p>全年CFO、现金Capex、FCF代理与营运资金。</p></div>
-    <div class="tstop warn"><div class="tw">至 2027.02.05</div><b>叮咚长停窗口</b><p>监管批准、最终对价、交割或终止费用。</p></div>
-    <div class="tstop"><div class="tw">2027Q2</div><b>同季复验</b><p>与本期核心及新业务分部利润率做同季比较。</p></div>
-  </div>
-
-  <div class="quote">美团已经证明“补贴少一点就能赚钱”，尚未证明“竞争回来仍能赚钱”。</div>
-  <p class="small">这是可证伪的阶段性判断，不是永久评级。价格触发必须与经营条件同时使用；单纯跌到某一价格不自动构成买入理由。</p>
-</section>
-
-<section class="reveal on" id="methods">
-  <div class="slabel">名词速查 · 方法 · 来源</div>
-  <h2>先分清披露、管理层表述、分析推算与情景假设</h2>
-
-  <div class="tblscroll">
-    <table class="tbl gloss">
-      <caption>名词速查</caption>
-      <thead><tr><th>术语</th><th>在本报告中的含义</th></tr></thead>
-      <tbody>
-        <tr><td>核心本地商业</td><td>公司法定分部，包含外卖、闪购、到店酒旅及相关自营商品；不是单独的外卖分部。</td></tr>
-        <tr><td>新业务</td><td>公司法定分部，包含小象、快驴、Keeta、单车、充电宝、小额信贷等，不披露子业务利润。</td></tr>
-        <tr><td>商家服务</td><td>2026年新列报口径，把技术服务佣金与在线营销收入合并。</td></tr>
-        <tr><td>总额法</td><td>公司是商品交易主要责任人时，按商品总售价确认收入，而非只确认佣金。</td></tr>
-        <tr><td>GTV / GMV</td><td>平台交易总额；公司本期给出定义但没有公布实际值。</td></tr>
-        <tr><td>经调整净利润</td><td>公司定义的非IFRS指标，剔除股份支付、投资公允价值等项目；不可自动与同业比较。</td></tr>
-        <tr><td>SBC</td><td>股份支付费用；既影响会计利润，也可能通过期权或RSU增加股数。</td></tr>
-        <tr><td>WVR</td><td>不同投票权架构；A类股十票、B类股一票，保留事项除外。</td></tr>
-        <tr><td>净金融资产</td><td>现金＋短期理财−借款−票据−租赁负债；不含受限现金和战略投资。</td></tr>
-        <tr><td>FCF代理</td><td>经营现金流减现金支付或预付的物管设备与无形资产；非公司定义自由现金流。</td></tr>
-        <tr><td>EV/EBIT</td><td>企业经营价值除以正常化息税前利润；本报告仅用于情景翻译。</td></tr>
-        <tr><td>毛摊薄股数</td><td>经济已发行股加全部未行权期权、未归属RSU和可转债潜在股份的保守上限。</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>证据层级与计算规则</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <tbody>
-        <tr><td><b>法定披露</b></td><td>港交所业绩、年报、月报、交易及授予公告控制期间、会计数、分部、股数和条款。</td></tr>
-        <tr><td><b>管理层陈述</b></td><td>“用户结构改善”“香港稳定盈利”等只按管理层表述呈现，不转换为未披露的KPI。</td></tr>
-        <tr><td><b>分析推算</b></td><td>同比、利润率、LTM、FCF代理、净金融资产、毛摊薄股数与估值均有本地可执行计算账本。</td></tr>
-        <tr><td><b>情景假设</b></td><td>2027收入、利润率、倍数、资产折价和折现率不是公司指引，只用于把运营结果映射为价格区间。</td></tr>
-        <tr><td><b>未披露</b></td><td>用户、订单、GTV、单位经济、子业务利润、Keeta现金、AI回报及H1现金Capex保持空白，不用估计补齐。</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>主要来源</h3>
-  <p class="small">[1] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800436_c.pdf">港交所：2026Q2及H1业绩公告，2026-08-28</a>；[2] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0601/2026060101347_c.pdf">港交所：2026Q1业绩公告，2026-06-01</a>；[3] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042400180_c.pdf">港交所：2025年年报，2026-04-24</a>；[4] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0428/2025042800236_c.pdf">港交所：2024年年报</a>；[5] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0429/2024042900116_c.pdf">港交所：2023年年报</a>；[6] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0424/2023042400043_c.pdf">港交所：2022年年报</a>；[7] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0419/2022041900542_c.pdf">港交所：2021年年报</a>。</p>
-  <p class="small">[8] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0827/2025082700398_c.pdf">港交所：2025Q2及H1原公告</a>；[9] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0828/2024082800346_c.pdf">港交所：2024Q2及H1业绩公告</a>；[10] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0205/2026020501303_c.pdf">港交所：收购Dingdong Fresh公告</a>；[11] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0413/2026041301393_c.pdf">港交所：2026-04-13 RSU授予</a>；[12] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0715/2026071501404_c.pdf">港交所：2026-07-15 RSU授予</a>；[13] <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0806/2026080600667_c.pdf">港交所：2026年7月证券变动月报</a>。</p>
-  <p class="small">市场价、基本市值、HKD/CNY与一致预期来自Wind，查询截止2026-08-31 16:02:56 HKT。发行人IR确认Q2电话会于2026-08-28举行并提供官方录音，但未发现官方文字稿；本报告未引用电话会Q&amp;A。所有工作底稿位于本地源包，含来源清单、覆盖账本、财务计算与估值脚本。</p>
-
-  <div class="callout"><b>口径边界。</b>财务截止2026-06-30；结果公告截止2026-08-28；市场数据截止2026-08-31。2026H1为未经审计但经审阅的中期财务资料；Standalone Q2管理层比较并非独立审阅报表。估值结果是情景范围，不是目标价承诺。</div>
-</section>
-
-<footer>
-  <p>研究对象：美团（03690.HK / 83690.HK）。主要会计来源为公司港交所中文文件；Wind仅用于行情、汇率、一致预期与市场交叉检查。财务数据以人民币计，估值以港元计。</p>
-  <p>LTM、比率、FCF代理、股数与估值均为分析推算，舍入可能导致尾差。本报告不构成投资建议；投资者应独立核验公告、税务、交易条款与市场价格。</p>
-</footer>
-
-</main>
-
-<script>
+<p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p>
+</footer></main><script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els = document.querySelectorAll('.reveal');
@@ -787,6 +525,4 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
   els.forEach(function(e){ io.observe(e); });
 })();
-</script>
-</body>
-</html>
+</script></body></html>
