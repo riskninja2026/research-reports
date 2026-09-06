@@ -593,15 +593,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "拆解销售回款、旧库存去化、结转毛利、拿地与交付，穿透受限现金、关联项目资金往来、非控股权益及低ROE下的估值边界。",
+      "hook": "股价折让加深与再融资改善降低了修复门槛，普通股回报仍取决于交付毛利和项目资金回流。",
       "verdict": "中性",
       "verdict_code": "neutral",
       "published": "2026-08-25",
       "published_at": "2026-08-25T22:43:32-04:00",
-      "revised": "2026-08-29",
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-06",
+      "revision": {
+        "date": "2026-09-06",
+        "note": "补入当前业绩演示、八月经营与同业中期结果，纠正历史普通股回报和月度销售口径，改用统一分部加总估值。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
