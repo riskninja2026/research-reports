@@ -1383,15 +1383,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "拆解核心平台量价、机场数字化项目验收、现金回收、客户备付金、持续关联交易、股息与资金效率折价下的估值边界。",
-      "verdict": "中性",
-      "verdict_code": "neutral",
+      "hook": "项目与智能服务支撑增长，但客户资金、承诺和分配约束令保守兑现价值低于现价。",
+      "verdict": "负面",
+      "verdict_code": "negative",
       "published": "2026-08-24",
       "published_at": "2026-08-24T22:52:07-04:00",
-      "revised": "2026-08-29",
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-06",
+      "revision": {
+        "date": "2026-09-06",
+        "note": "依新版Fullscan加入航空信息技术框架，纠正现金开支、分红归属及收益重复计价，并补入最新关联机架租赁公告。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
