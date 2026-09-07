@@ -1064,15 +1064,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "跨周期审视业务结构、渠道变化、现金质量、资本配置、估值约束与证伪条件。",
-      "verdict": null,
-      "verdict_code": null,
+      "hook": "直销扩张与金融现金流掩盖了利润压力，长期回报仍要靠真实需求和每股现金兑现。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
       "published": "2026-08-17",
       "published_at": "2026-08-17T00:40:25-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "classic",
-      "style_hash": "e65895ac71853b897ef3203361e0c8c2",
+      "revised": "2026-09-07",
+      "revision": {
+        "date": "2026-09-07",
+        "note": "升级Fullscan v2.7；补齐原始历史口径、渠道与金融现金边界，更新行情、资本状态及单一主估值，保留原中报期间。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {

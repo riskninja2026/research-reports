@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:,">
-<title>贵州茅台 2026年中报｜Fullscan 全景尽调</title>
-<style>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="data:,"><title>贵州茅台 2026中报 Fullscan 全景尽调</title><style>
 :root{
   --paper:#EDEFF2;
   --card:#F8F9FB;
@@ -202,474 +196,114 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   .reveal{opacity:1;transform:none;transition:none}
 }
 :focus-visible{outline:2px solid var(--plum);outline-offset:3px}
-</style>
-</head>
-<body>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">贵州茅台 600519.SH ｜ 2026年中报 Fullscan 全景尽调 ｜ 数据截止 2026.08.14</div>
-    <h1>护城河仍在，<br>渠道逻辑已变</h1>
-    <p class="lede">上半年营业收入仍有小幅增长，茅台酒也守住了高毛利率；表面看，核心资产并未失速。<b>真正需要解释的是渠道扩张与总量增长的脱节</b>：i茅台单二季度收入接近四倍，合并营业收入和归母净利润却同时下滑，渠道控制权尚未转化为更好的当期经济回报。</p>
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
 
-    <div class="dual">
-      <div>
-        <div class="tag">数字渠道 · i茅台单二季度收入同比（推算）</div>
-        <div class="big a">接近四倍</div>
-        <div class="cap">i茅台已成为当季直销的绝对主体；按半年累计减一季度累计推算。</div>
-      </div>
-      <div>
-        <div class="tag">合并报表 · 单二季度营业收入同比（推算）</div>
-        <div class="big b">由增转降</div>
-        <div class="cap">营业收入与归母净利润同时收缩，毛利率也同步走弱。</div>
-      </div>
-    </div>
-  </div>
-</header>
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
 
-<main class="wrap">
-
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">基础</div>
-  <h2>规模增长已经停顿，利润池仍高度集中于茅台酒</h2>
-  <p>公司以茅台酒及系列酒的生产销售为主，收入通过直销和批发代理实现；i茅台是直销的子渠道，财务公司利息收入则进入营业总收入而不进入酒类分部。2022—2025年营业收入和归母净利润复合增速仍有10.8%和9.5%，但<strong>2025年打断了收入与利润增长，并放大利润率已出现的下行</strong>，2026年上半年尚未扭转。</p>
-
-  <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">营业收入</div><div class="v">907.03<span class="u">亿</span></div><div class="d"><span class="up">同比 +1.47%</span></div></div>
-    <div class="cell"><div class="k">毛利 · 推算</div><div class="v">812.29<span class="u">亿</span></div><div class="d"><span class="down">同比 −0.47%</span></div></div>
-    <div class="cell"><div class="k">毛利率 · 推算</div><div class="v">89.56<span class="u">%</span></div><div class="d"><span class="down">同比 −1.74pt</span></div></div>
-    <div class="cell"><div class="k">营业利润</div><div class="v">614.11<span class="u">亿</span></div><div class="d"><span class="down">同比 −2.16%</span></div></div>
-    <div class="cell"><div class="k">归母净利润</div><div class="v">445.17<span class="u">亿</span></div><div class="d"><span class="down">同比 −1.95%</span></div></div>
-    <div class="cell"><div class="k">经营活动现金流量净额</div><div class="v">706.91<span class="u">亿</span></div><div class="d"><span class="down">报表同比 +438.84%</span></div></div>
-  </div>
-  <p class="small">2026年上半年，未经审计。毛利按营业收入减营业成本推算；经营活动现金流量净额的同比高增主要来自财务公司流动性科目，不能直接解读为酒业现金转化改善。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>最新期现金生成补充，单位：亿元；均为分析口径。</caption>
-      <thead><tr><th>指标</th><th>2026年上半年</th><th>2025年上半年</th><th>同比</th></tr></thead>
-      <tbody>
-        <tr><td><nobr>标准化经营现金流 · 推算</nobr></td><td>393.42</td><td>386.92</td><td class="up">+1.68%</td></tr>
-        <tr><td><nobr>现金资本开支</nobr></td><td>8.32</td><td>15.96</td><td class="up">−47.86%</td></tr>
-        <tr class="grp"><td><nobr>实业所有者收益代理</nobr></td><td>371.38</td><td>356.66</td><td class="up">+4.13%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">实业所有者收益代理＝剔除财务公司利息及手续费收支后的经营现金流−全部已披露现金资本开支；因公司未区分维持性与增长性资本开支，该指标不是公司定义的自由现金流。</p>
-
-  <h3>五年合并轨迹：2025年是明确断点</h3>
-  <div class="tblscroll">
-    <table class="tbl" data-financials="history">
-      <caption>金额单位：亿元；利润率均以营业收入为分母。</caption>
-      <thead><tr><th>指标</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>可比CAGR / 变化</th></tr></thead>
-      <tbody>
-        <tr><td><nobr>营业收入</nobr></td><td>1,061.90</td><td>1,241.00</td><td>1,476.94</td><td>1,708.99</td><td>1,688.38</td><td class="up">2021—25 +12.29%</td></tr>
-        <tr><td><nobr>毛利 · 推算</nobr></td><td>972.07</td><td>1,140.06</td><td>1,358.26</td><td>1,571.10</td><td>1,539.46</td><td class="up">2021—25 +12.18%</td></tr>
-        <tr><td><nobr>毛利率 · 推算</nobr></td><td>91.54%</td><td>91.87%</td><td>91.96%</td><td>91.93%</td><td>91.18%</td><td class="down">2021—25 −0.36pt</td></tr>
-        <tr><td><nobr>营业利润</nobr></td><td>747.51</td><td>878.80</td><td>1,037.09</td><td>1,196.89</td><td>1,148.09</td><td class="up">2021—25 +11.32%</td></tr>
-        <tr><td><nobr>营业利润率</nobr></td><td>70.39%</td><td>70.81%</td><td>70.22%</td><td>70.03%</td><td>68.00%</td><td class="down">2021—25 −2.39pt</td></tr>
-        <tr><td><nobr>归母净利润</nobr></td><td>524.36</td><td>627.17</td><td>747.34</td><td>862.28</td><td>823.20</td><td class="up">2021—25 +11.94%</td></tr>
-        <tr><td><nobr>归母净利率</nobr></td><td>49.38%</td><td>50.54%</td><td>50.60%</td><td>50.46%</td><td>48.76%</td><td class="down">2021—25 −0.62pt</td></tr>
-        <tr><td><nobr>基本每股收益（EPS）</nobr></td><td>41.74</td><td>49.93</td><td>59.49</td><td>68.64</td><td>65.66</td><td class="up">2021—25 +11.99%</td></tr>
-        <tr><td><nobr>加权平均净资产收益率（ROE）</nobr></td><td>29.89%</td><td>30.26%</td><td>34.19%</td><td>36.02%</td><td>32.53%</td><td class="up">2021—25 +2.64pt</td></tr>
-        <tr><td><nobr>归母每股净资产 · 推算</nobr></td><td>150.86</td><td>157.20</td><td>171.68</td><td>185.56</td><td>195.36</td><td class="up">2021—25 +6.68%</td></tr>
-        <tr><td><nobr>经营活动现金流量净额</nobr></td><td>640.29</td><td>366.99</td><td>665.93</td><td>924.64</td><td>615.22</td><td class="down">2021—25 −0.99%</td></tr>
-        <tr><td><nobr>现金资本开支</nobr></td><td>34.09</td><td>53.07</td><td>26.20</td><td>46.79</td><td>31.28</td><td class="down">2021—25 −2.13%</td></tr>
-        <tr class="grp"><td><nobr>合并自由现金流代理</nobr></td><td>≈606.20</td><td>≈313.92</td><td>≈639.73</td><td>≈877.85</td><td>≈583.95</td><td class="down">2021—25 −0.93%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>收入、毛利、营业利润和归母净利润均在2024年见到这一组数据的高点。经营现金流的年际摆动更大，却混入财务公司吸收存款、拆出资金与同业存放变化；这组历史说明贵州茅台仍是高利润率生意，但不能仅凭合并现金流判断主业质量。</p>
-
-  <div data-financials="segments">
-    <h3>产品分部：主品牌守住规模，系列酒拖累加深</h3>
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>收入单位：亿元；2023年产品值按2024年报确值及披露同比反推，受百分比四舍五入影响。</caption>
-        <thead><tr><th>产品</th><th>2023A</th><th>2024A</th><th>2025A</th><th>2023—25 CAGR</th><th>2025收入占比</th><th>2026H1 / 同比</th><th>2026H1毛利率</th></tr></thead>
-        <tbody>
-          <tr><td><nobr>茅台酒</nobr></td><td>≈1,265.86</td><td>1,459.28</td><td>1,465.00</td><td class="up">≈+7.58%</td><td>86.80%</td><td>777.24 / <span class="up">+2.82%</span></td><td>92.28%</td></tr>
-          <tr><td><nobr>系列酒</nobr></td><td>≈206.30</td><td>246.84</td><td>222.75</td><td>≈+3.91%</td><td>13.20%</td><td>129.34 / <span class="down">−6.02%</span></td><td class="down">73.59%</td></tr>
-          <tr class="grp"><td><nobr>酒类主营业务</nobr></td><td>1,472.19</td><td>1,706.12</td><td>1,687.75</td><td>+7.07%</td><td>100.00%</td><td>906.59 / <span class="up">+1.46%</span></td><td>89.61%</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>渠道与子渠道：直销增长，i茅台之下的结构却在重排</h3>
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>收入单位：亿元；占比以酒类主营业务收入为分母。i茅台为直销子渠道，不与直销相加。</caption>
-        <thead><tr><th>渠道</th><th>2023A</th><th>2024A</th><th>2025A</th><th>2023—25 CAGR</th><th>2025收入占比</th><th>2026H1 / 同比</th><th>2026H1毛利率</th></tr></thead>
-        <tbody>
-          <tr><td><nobr>直销</nobr></td><td>672.33</td><td>748.43</td><td>845.43</td><td class="up">+12.14%</td><td>50.09%</td><td>519.62 / <span class="up">+29.87%</span></td><td>92.93%</td></tr>
-          <tr><td><nobr>批发代理</nobr></td><td>799.86</td><td>957.69</td><td>842.32</td><td>+2.62%</td><td>49.91%</td><td>386.97 / <span class="down">−21.58%</span></td><td class="down">85.02%</td></tr>
-          <tr><td><nobr>其中：i茅台</nobr></td><td>223.74</td><td>200.24</td><td>130.31</td><td class="down">−23.68%</td><td>7.72%</td><td>402.64 / <span class="up">+274.18%</span></td><td>未披露</td></tr>
-          <tr><td><nobr>其中：其他直销 · 推算</nobr></td><td>448.59</td><td>548.19</td><td>715.12</td><td class="up">+26.26%</td><td>42.37%</td><td>116.98 / <span class="down">−60.00%</span></td><td>未披露</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <p class="small">CAGR＝（期末值÷期初值）^(1÷年数)−1，均以完整年度计算，未将2026年上半年年化。五年合并轨迹取自2021—2025年年度报告；毛利、每股净资产与自由现金流代理为本报告推算，其中自由现金流代理＝经营活动现金流量净额−现金资本开支。2026年直销定义新增线下自营门店、代售等，i茅台披露也由「中、高档酒线上销售」改为「酒类不含税收入」，因此2026H1只作当期结构观察，不接入历史CAGR。</p>
-</section>
-
-<section class="reveal on" id="quarter">
-  <div class="slabel">单季</div>
-  <h2>一季度撑住了半年报，单二季度已经转弱</h2>
-  <p>上半年营业收入仍是正增长，但这一增量全部来自一季度。按「上半年累计减一季度累计」推算，单二季度收入下滑、营业成本反增，营业利润和归母净利润的降幅均大于收入降幅。<strong>这是一组经营层面的收缩，而不是非经常性项目制造的表象。</strong></p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>单二季度推算，金额单位：亿元；同比亦按相同方法推算。</caption>
-      <thead><tr><th>指标</th><th>2026年单二季度</th><th>2025年单二季度</th><th>同比 / 变化</th></tr></thead>
-      <tbody>
-        <tr><td>营业收入</td><td>367.94</td><td>387.88</td><td class="down">−5.14%</td></tr>
-        <tr><td>营业总收入</td><td>375.75</td><td>396.50</td><td class="down">−5.23%</td></tr>
-        <tr><td>营业成本</td><td>39.53</td><td>37.16</td><td class="down">+6.38%</td></tr>
-        <tr><td>毛利 · 推算</td><td>328.41</td><td>350.72</td><td class="down">−6.36%</td></tr>
-        <tr><td>毛利率 · 推算</td><td>89.26%</td><td>90.42%</td><td class="down">−1.16pt</td></tr>
-        <tr><td>营业利润</td><td>238.74</td><td>257.32</td><td class="down">−7.22%</td></tr>
-        <tr><td>营业利润率 · 推算</td><td>64.89%</td><td>66.34%</td><td class="down">−1.45pt</td></tr>
-        <tr><td>归母净利润</td><td>172.74</td><td>185.55</td><td class="down">−6.90%</td></tr>
-        <tr><td>归母净利率 · 推算</td><td>46.95%</td><td>47.84%</td><td class="down">−0.89pt</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>单二季度扣非归母净利润约172.24亿元，只比归母净利润少0.50亿元，非经常性损益不足以解释利润下滑。销售费用同比下降约9.3%，仍未抵消收入与成本的反向变化；营业利润率和归母净利率同步下降，说明压力落在主业经营结构。</p>
-  <p class="small">推算方法：2026年单二季度＝2026年上半年累计−2026年一季度累计；2025年单二季度采用同一方法，并以2025年报分季度数据交叉复核。展示数按亿元四舍五入，比例按未四舍五入的原始值重算。</p>
-</section>
-
-<section class="reveal on" id="channel">
-  <div class="slabel">渠道</div>
-  <h2>i茅台拿走了增量，却没有创造同量级的总需求</h2>
-  <p>2026年上半年酒类主营业务收入只增加约13.1亿元，i茅台却增加约295.0亿元。算术上，其他直销减少175.5亿元、批发代理减少106.5亿元，几乎抵消了i茅台的全部增量。<strong>这证明渠道归集正在发生，不证明终端消费等量扩张。</strong></p>
-
-  <div class="flowbox">
-    <svg viewBox="0 0 720 390" role="img" aria-label="2025年上半年至2026年上半年酒类主营业务收入渠道迁移瀑布图">
-      <line x1="20" y1="280" x2="700" y2="280" stroke="#0F1A22" stroke-width="1"/>
-      <text x="20" y="274" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#6D7B88">0</text>
-      <g stroke="#9AA6B2" stroke-width="1" stroke-dasharray="3 3">
-        <line x1="120" y1="101.3" x2="170" y2="101.3"/>
-        <line x1="250" y1="42.3" x2="300" y2="42.3"/>
-        <line x1="380" y1="77.4" x2="430" y2="77.4"/>
-        <line x1="510" y1="98.7" x2="560" y2="98.7"/>
-      </g>
-      <rect x="40" y="101.3" width="80" height="178.7" fill="#9AA6B2"/>
-      <rect x="170" y="42.3" width="80" height="59.0" fill="#2C6A57"/>
-      <rect x="300" y="42.3" width="80" height="35.1" fill="#A32B57"/>
-      <rect x="430" y="77.4" width="80" height="21.3" fill="#A32B57"/>
-      <rect x="560" y="98.7" width="80" height="181.3" fill="#122A4B"/>
-      <g font-family="ui-monospace,Menlo,monospace" font-size="17" font-weight="600" text-anchor="middle">
-        <text x="80" y="91.3" fill="#3C4A56">893.5</text>
-        <text x="210" y="32.3" fill="#2C6A57">+295.0</text>
-        <text x="340" y="32.3" fill="#A32B57">−175.5</text>
-        <text x="470" y="67.4" fill="#A32B57">−106.5</text>
-        <text x="600" y="88.7" fill="#122A4B">906.6</text>
-      </g>
-      <g font-family="-apple-system,PingFang SC,sans-serif" font-size="13" fill="#3C4A56" text-anchor="middle">
-        <text x="80" y="314">2025H1</text><text x="80" y="333">主营收入</text>
-        <text x="210" y="314">i茅台</text><text x="210" y="333">增量</text>
-        <text x="340" y="314">其他直销</text><text x="340" y="333">减量</text>
-        <text x="470" y="314">批发代理</text><text x="470" y="333">减量</text>
-        <text x="600" y="314">2026H1</text><text x="600" y="333">主营收入</text>
-      </g>
-      <text x="700" y="372" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#6D7B88" text-anchor="end">单位：亿元；0.2px / 亿元</text>
-    </svg>
-    <div class="flow-note">
-      <div class="badge">95.6%</div>
-      <div>i茅台收入增量约295.03亿元；其他直销与批发代理合计减少约281.97亿元，几乎抵消前者的全部增量。其他直销＝直销收入−i茅台收入；图形使用未四舍五入值计算。</div>
-    </div>
-  </div>
-
-  <h3>单二季度的渠道迁移更陡</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>单二季度产品与渠道收入，单位：亿元；均按半年累计减一季度累计推算。</caption>
-      <thead><tr><th>收入项目</th><th>2026年单二季度</th><th>2025年单二季度</th><th>同比</th></tr></thead>
-      <tbody>
-        <tr><td>茅台酒</td><td>317.20</td><td>320.32</td><td class="down">−0.98%</td></tr>
-        <tr><td>系列酒</td><td>50.53</td><td>67.40</td><td class="down">−25.03%</td></tr>
-        <tr><td>直销渠道</td><td>224.58</td><td>167.89</td><td class="up">+33.77%</td></tr>
-        <tr><td>批发代理</td><td>143.15</td><td>219.83</td><td class="down">−34.88%</td></tr>
-        <tr class="grp"><td>其中：i茅台</td><td>187.11</td><td>48.90</td><td class="up">+282.61%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="callout">
-    <b>直销同比存在口径断点。</b>2026年中报首次明确把线下自营门店、i茅台平台和代售等归入直销；2025年披露没有「代售」表述。直销占比上升可能同时包含真实迁移、分类变化和新模式，不能全部解释为消费者需求增长。
-  </div>
-
-  <h3>经销商网络完成一次重置，终端动销仍无可核验台账</h3>
-  <div class="grid">
-    <div class="cell"><div class="k">国内经销商 · H1末</div><div class="v">2,307<span class="u">家</span></div><div class="d"><span>新增220 / 减少266</span></div></div>
-    <div class="cell"><div class="k">单二季度进退 · 推算</div><div class="v">+214<span class="u">/ −5</span></div><div class="d"><span class="up">单季净增209家</span></div></div>
-    <div class="cell"><div class="k">合同负债 · H1末</div><div class="v">31.8<span class="u">亿</span></div><div class="d"><span class="down">较2025年末 −60.3%</span></div></div>
-  </div>
-  <p>一季度国内经销商仅新增6家、减少261家；推算单二季度新增214家、减少5家，公司称变动主要发生在系列酒网络。合同负债从2024年末95.9亿元降至2025年末80.1亿元，2026年一季度末降到30.3亿元，上半年末略有回升。公司将今年的下降归因于销售模式与预收货款政策调整，因此预收款也不再是可直接外推的需求先行指标。</p>
-  <p>上半年末存货613.2亿元，较年初基本持平、同比增长11.5%；其中库存商品46.2亿元，同比增长48.8%。公司存货主体仍是陈酿周期中的在产品与半成品酒，库存商品需要跟踪，却不能替代经销商库存、终端动销、返利退货、渠道利润与复购数据。<strong>现有披露能证明渠道在变，不能证明消费已经修复。</strong></p>
-</section>
-
-<section class="reveal on" id="product">
-  <div class="slabel">产品</div>
-  <h2>护城河集中在茅台酒，直销扩张没有托住整体毛利率</h2>
-  <p>茅台酒仍具备92%以上的上半年毛利率和至少五年的生产至销售周期；系列酒的收入、吨收入与毛利率则同时承压。与此同时，直销占比从2025年全年的50.1%升至2026年上半年的57.3%，综合毛利率却下降1.74个百分点。<strong>渠道结构红利已经被产品与渠道自身毛利率下行吞没。</strong></p>
-
-  <div class="rows">
-    <div class="row"><div class="nm">茅台酒<span>2025H1 → 2026H1</span></div><div class="track"><div class="fill" style="width:99.3%"></div></div><div class="fig"><span class="down">−1.57pt</span></div></div>
-    <div class="row"><div class="nm">直销渠道<span>2025H1 → 2026H1</span></div><div class="track"><div class="fill" style="width:100%"></div></div><div class="fig"><span class="down">小幅下降</span></div></div>
-    <div class="row"><div class="nm">批发代理<span>2025H1 → 2026H1</span></div><div class="track"><div class="fill alt" style="width:91.5%"></div></div><div class="fig"><span class="down">−4.45pt</span></div></div>
-    <div class="row"><div class="nm">系列酒<span>2025H1 → 2026H1</span></div><div class="track"><div class="fill alt" style="width:79.2%"></div></div><div class="fig"><span class="down">−4.00pt</span></div></div>
-  </div>
-  <p class="small">条形长度按2026H1最高披露毛利率归一化；右侧变化为同比百分点。渠道毛利率采用附注全部营业收入按渠道分解口径，产品毛利率采用产品分解口径。</p>
-
-  <p>若假设各渠道毛利率维持2025年同期水平，直销占比提升原本应贡献约0.51个百分点的综合毛利率；实际直销与批发代理毛利率同步下降，令综合毛利率不升反降。2025年系列酒销量增长3.9%，收入却下降9.8%，推算吨收入下降13.1%；2026年单二季度系列酒收入再降约四分之一。茅台酒同季收入仅下降约1%，产品分化非常清楚。</p>
-
-  <h3>供给壁垒仍强，新增供给的产品去向需要区分</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>基酒产量来自管理层讨论，披露为约数。</caption>
-      <thead><tr><th>指标</th><th>2025年上半年</th><th>2026年上半年</th><th>变化 / 含义</th></tr></thead>
-      <tbody>
-        <tr><td>茅台酒基酒产量</td><td>≈4.37万吨</td><td>≈4.1万吨</td><td class="down">≈−6.2%</td></tr>
-        <tr><td>系列酒基酒产量</td><td>≈2.96万吨</td><td>≈3.1万吨</td><td class="up">≈+4.7%</td></tr>
-        <tr><td>茅台酒生产至销售周期</td><td colspan="2">至少五年</td><td>供给难以短期复制</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>受保护产区、基酒储备与长期陈酿共同支撑茅台酒的稀缺性。问题不在主品牌壁垒是否消失，而在资本与产能能否持续流向具有同等回报的产品：系列酒基酒产量仍增，报表收入与价格结构却在走弱，主品牌的护城河不能无差别外推到整个矩阵。</p>
-
-  <h3>官方价格控制增强，经济定价权仍需利润率验证</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>报告期后53度500ml飞天茅台价格参照；除注明外，核查日期为2026年8月8日。</caption>
-      <thead><tr><th>价格参照</th><th>元 / 瓶</th><th>解释边界</th></tr></thead>
-      <tbody>
-        <tr><td>i茅台零售价 · 7月18日起</td><td>1,639</td><td>公司数字渠道价格锚</td></tr>
-        <tr><td>「今日酒价」原箱参考 · 8月8日</td><td>1,710</td><td>较i茅台约高4%</td></tr>
-        <tr><td>42家自营门店反馈 · 8月8日</td><td>1,753</td><td>较i茅台高个位数</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>公司将新价格机制概括为「随行就市、相对平稳、供需适配、量价平衡」。更紧凑的价格梯度与主动管理相符，但门店供货观察并不一致：8月8日报道显示部分门店缺货，8月12日北京门店走访又发现热门产品有货。单点库存不能证明全国供需。</p>
-  <p><strong>调价能力还不是已经兑现的经济定价权。</strong>后者要求价格上调后，报表收入、产品结构与毛利率能够同时维持；单二季度茅台酒收入近乎持平而综合毛利率下行，证据仍不闭合。</p>
-  <p class="small">1,639元来自公司7月17日价格通知；1,710元为《澎湃新闻》援引的8月8日「今日酒价」原箱参考；1,753元由报道汇总的自营门店反馈。三者不是同一成交口径，也不属于经审计财务披露。</p>
-</section>
-
-<section class="reveal on" id="cash">
-  <div class="slabel">现金</div>
-  <h2>报表经营现金流猛增，主因是财务公司科目摆动</h2>
-  <p>合并经营活动现金流量净额同比增幅很大。把客户及成员单位存款、客户贷款、央行及同业存放、拆出资金四类财务公司资产负债表现金流剔除后，只剩低个位数增长。<strong>报表现金流高增主要是流动性时点，不是酒业盈利质量突然跃升。</strong></p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026年上半年现金流增量拆解，单位：亿元；调整项均为自定义分析口径。</caption>
-      <thead><tr><th>现金流口径</th><th>2026H1</th><th>2025H1</th><th>同比增量 / 变动</th></tr></thead>
-      <tbody>
-        <tr><td>报表经营现金流同比增量</td><td colspan="2">—</td><td>+575.72</td></tr>
-        <tr><td>财务公司四项科目影响变动</td><td colspan="2">—</td><td>+569.22</td></tr>
-        <tr class="grp"><td>剔除时点因素后的同比增量 · 推算</td><td colspan="2">—</td><td class="up">+6.50</td></tr>
-        <tr><td>实业经营现金流 · 分析口径</td><td>379.71</td><td>372.62</td><td class="up">+1.90%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>四项财务公司现金流解释了合并经营现金流增量的绝大部分。公司也把大幅增长归因于集团成员单位存款增加，以及不可随时支取的同业存款减少。反向证据是：收入下降时，单二季度销售商品、提供劳务收到的现金仍同比增长7.9%，推算实业经营现金流增长32%，回款暂未随利润同步恶化；但结算、税款与预收时点仍可能影响单季值。</p>
-
-  <h3>合并现金充足，不等于全部可以由上市公司自由分配</h3>
-  <div class="grid">
-    <div class="cell"><div class="k">现金及现金等价物</div><div class="v">1,848.1<span class="u">亿</span></div><div class="d"><span>2026H1末</span></div></div>
-    <div class="cell"><div class="k">其中：存放同业款项</div><div class="v">1,398.6<span class="u">亿</span></div><div class="d"><span>占合并现金75.7%</span></div></div>
-    <div class="cell"><div class="k">母公司现金及等价物</div><div class="v">612.6<span class="u">亿</span></div><div class="d"><span class="down">年初847.3亿</span></div></div>
-  </div>
-  <p>财务公司同时对集团关联成员负有254.3亿元债务；母公司现金及现金等价物上半年下降。现金规模足以覆盖分红与已知承诺，但评估资本配置时必须区分母公司、酒业经营实体和财务公司的资金归属与限制。</p>
-  <p class="small">标准化方法：剔除时点因素后的经营现金流＝报表经营现金流−财务公司四项资产负债表现金影响；实业经营现金流再剔除财务公司利息及手续费现金收支；所有者收益代理值再扣除全部已披露现金资本开支。公司未单独披露维持性资本开支，因此最后一项不是公司定义的自由现金流。</p>
-</section>
-
-<section class="reveal on" id="capital">
-  <div class="slabel">资本</div>
-  <h2>现金回报执行力强，回购对每股价值的机械增厚仍有限</h2>
-  <p>2025年现金分红占归母净利润接近八成；把纳入现金分红口径的回购计入后，合计回报比例为86.43%。两次回购均已注销，结构上有利于股东，但对每股价值的机械增厚有限。<strong>回购的主要作用是返还现金，不足以对冲主业利润压力。</strong></p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">2025年现金分红</div><div class="v">650.3<span class="u">亿</span></div><div class="d"><span class="up">归母净利润的79.0%</span></div></div>
-    <div class="cell"><div class="k">两次回购投入</div><div class="v">≈90<span class="u">亿</span></div><div class="d"><span class="up">回购股份全部注销</span></div></div>
-    <div class="cell"><div class="k">累计股本减少</div><div class="v">0.487<span class="u">%</span></div><div class="d"><span>注销直接抬升每股口径</span></div></div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>资本配置与未来索取权，金额单位：亿元。</caption>
-      <thead><tr><th>项目</th><th>2024</th><th>2025</th><th>2026H1 / 未执行</th><th>判断</th></tr></thead>
-      <tbody>
-        <tr><td>已披露重大项目总预算</td><td colspan="2">—</td><td>≈428</td><td class="down">后续支出可能回升</td></tr>
-        <tr><td>两只产业基金未缴承诺</td><td colspan="2">—</td><td>60</td><td class="down">未来自由现金流索取权</td></tr>
-        <tr><td>产业基金可见价值比较</td><td colspan="2">累计出资40</td><td>高约1.3%</td><td>不含分配与费用，非完整IRR</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>核心业务营运资金需求低，常规现金分红仍应是资本回报的第一顺位。重大项目、产业基金及集团关联投资的回报率未必接近茅台酒主业；判断资金是否「富余」，应先扣除已承诺项目与基金出资，而不是直接引用合并现金余额。</p>
-  <p class="small">回购每股增厚按注销股份占回购前股本的比例机械推算，不考虑盈利、时间加权与其他股本变动。项目总预算不是报告期已发生资本开支，未缴基金承诺也不是当期费用。</p>
-</section>
-
-<section class="reveal on" id="governance">
-  <div class="slabel">治理</div>
-  <h2>内控未见失效，关联安排仍要求持续折价审视</h2>
-  <p>2024年与2025年内部控制审计均为标准无保留意见，2026年上半年也未披露控股股东非经营性资金占用或违规担保；这构成明确反证，不能把关联交易规模直接等同于内控缺陷。与此同时，集团费用、销售子公司少数股权、财务公司余额与管理层更替仍影响中小股东对现金归属和决策连续性的判断。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>治理证据与解释边界，金额为2026年上半年。</caption>
-      <thead><tr><th>证据</th><th>披露值 / 状态</th><th>研究判断</th></tr></thead>
-      <tbody>
-        <tr><td>内部控制审计</td><td>2024、2025年标准无保留意见</td><td class="up">未见重大缺陷证据</td></tr>
-        <tr><td>商标使用费</td><td>12.7亿元，约占收入1.4%</td><td class="down">关联费用持续发生</td></tr>
-        <tr><td>向集团营销公司销售</td><td>25.2亿元</td><td>需跟踪定价与渠道归属</td></tr>
-        <tr><td>销售子公司少数股权</td><td>公司持股95%；少数股东损益12.4亿元</td><td class="down">约相当于归母净利润2.8%</td></tr>
-        <tr><td>高管变动</td><td>财务总监兼董秘被留置后免职，新任人员已到位</td><td class="down">管理连续性弱于产品连续性</td></tr>
-        <tr><td>股权激励承诺</td><td>控股股东原定2017年底前推进，至2025年末未履行</td><td class="down">长期承诺执行记录偏弱</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>关联方数量、交易类型与金额较大，被审计师列为关键审计事项；这代表审计关注度，不代表已经发生利益输送。销售子公司5%少数股权对应的损益真实减少归母利润，而财报相关表格未披露该少数股权最终持有人。中小股东需要持续核验商标使用定价、集团销售、共同投资、财务公司余额及少数股权安排。</p>
-  <p class="small">治理折价是估值假设的一部分，而不是对不当行为的事实认定。现有正面证据是标准无保留的内控审计意见与实际现金回报；负面证据集中在透明度、关联安排和承诺执行。</p>
-</section>
-
-<section class="reveal on" id="valuation">
-  <div class="slabel">估值</div>
-  <h2>财报前价格已经要求下半年利润重新增长</h2>
-  <p>2026年8月14日收盘价为1,341.99元，中报在收盘后发布；因此这一价格只能作为财报前的预期基线。若机械地把Wind前瞻市盈率视为2026全年口径，当前价格隐含归母净利润约862亿元，较2025年需实现中个位数增长，意味着下半年同比需增长接近13%。<strong>市场价格所要求的盈利路径，比上半年已实现的路径更陡。</strong></p>
-
-  <h3>盈利情景：当前价格位于基准与乐观之间</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026年归母净利润情景；利润单位：亿元，每股单位：元，总股本12.50亿股。</caption>
-      <thead><tr><th>情景</th><th>2026归母净利润</th><th>隐含H2同比</th><th>EPS</th><th>市盈率假设</th><th>每股价值</th><th>较收盘价</th></tr></thead>
-      <tbody>
-        <tr><td>悲观</td><td>795</td><td class="down">−5.2%</td><td>63.60</td><td>18×</td><td>1,145</td><td class="down">−14.7%</td></tr>
-        <tr class="grp"><td>基准</td><td>815</td><td>+0.2%</td><td>65.20</td><td>20×</td><td>1,304</td><td class="down">−2.8%</td></tr>
-        <tr><td>乐观</td><td>840</td><td class="up">+7.0%</td><td>67.20</td><td>22×</td><td>1,478</td><td class="up">+10.2%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>情景不是目标价预测；每一行都要求经营证据与倍数同时成立。</caption>
-      <thead><tr><th>情景</th><th>收入与利润率路径</th><th>现金与渠道路径</th><th>倍数含义</th></tr></thead>
-      <tbody>
-        <tr><td>悲观</td><td>单三季度未较单二季度改善，毛利率继续走弱</td><td>库存商品增速高于销售，仅报表经营现金流强</td><td>仍保留折价后的质量溢价</td></tr>
-        <tr class="grp"><td>基准</td><td>H2收入与归母净利润大体企稳</td><td>实业所有者收益转化率维持H1附近</td><td>当前估值中枢不重估</td></tr>
-        <tr><td>乐观</td><td>单三季度收入恢复正增长，下半年归母净利润恢复增长</td><td>批发与系列酒降幅收窄，预收款趋稳</td><td>要求盈利与治理证据共同改善</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>股息率与同业只提供边界，不替代盈利判断</h3>
-  <p>2025年中期股息与拟派年度股息合计约51.95元/股。按3.5%—4.25%的要求股息率资本化，对应每股1,222—1,484元；该方法假设股息可持续，且未对超额现金单独赋值。它与盈利情景重叠，却不能解释渠道改革是否成功。</p>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Wind市场快照，2026年8月14日收盘；同业盈利处于低位时，时点估值可能失真。</caption>
-      <thead><tr><th>公司</th><th>TTM市盈率</th><th>预测市盈率</th><th>股息率</th><th>年初至今</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>贵州茅台</td><td>20.28×</td><td>19.46×</td><td>3.88%</td><td>−0.25%</td></tr>
-        <tr><td>五粮液</td><td>22.72×</td><td>17.04×</td><td>6.99%</td><td class="down">−27.95%</td></tr>
-        <tr><td>泸州老窖</td><td>13.23×</td><td>13.51×</td><td>6.46%</td><td class="down">−22.21%</td></tr>
-        <tr><td>山西汾酒</td><td>13.72×</td><td>12.81×</td><td>5.31%</td><td class="down">−24.41%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>贵州茅台TTM市盈率较三家可比公司中位数高约48%，市场确实给予质量溢价；但三家公司盈利周期、产品结构和财报口径并未在本报告中统一调整，因此该表只呈现定价背景。盈利情景给出每股1,145—1,484元，基准略低于财报前收盘价；以下行情景的幅度大于乐观情景的上行空间。</p>
-  <p class="small">三档市盈率围绕财报前TTM倍数设定，是分析假设而非一致目标价。Wind「预测市盈率」可能采用不同前瞻期间，机械反推只展示盈利门槛，不代表一致预期。股息率锚未计税、分红变化或超额现金单独价值。</p>
-</section>
-
-<section class="reveal on" id="risks">
-  <div class="slabel">验证</div>
-  <h2>下一季度要看指标联动，单项转好不足以确认拐点</h2>
-  <p>渠道改革能否成立，需要收入、毛利率、渠道资金状态与现金质量同时改善。单看i茅台、经销商净增、合同负债或合并经营现金流，都会受到迁移、口径或时点影响。真正的验证应落在单三季度，而不是九个月累计数字。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>三季度及下半年监测框架；阈值为本报告情景假设，不是公司指引。</caption>
-      <thead><tr><th>变量</th><th>验证改善</th><th>维持基准</th><th>触发下修</th></tr></thead>
-      <tbody>
-        <tr><td>收入 / 归母净利润</td><td class="up">单三季度收入恢复正增长；下半年归母达到乐观情景门槛</td><td>下半年大体持平</td><td class="down">单三季度未较单二季度改善；下半年归母接近−5%</td></tr>
-        <tr><td>毛利率</td><td class="up">高于单二季度且同比降幅收窄</td><td>维持单二季度附近</td><td class="down">低于单二季度且同比降幅扩大</td></tr>
-        <tr><td>产品 / 渠道</td><td class="up">系列酒、批发降幅收窄；预收趋稳</td><td>部分改善且无新恶化</td><td class="down">补库未带来收入，预收再降</td></tr>
-        <tr><td>库存商品</td><td class="up">增速低于销售增速</td><td>规模大体稳定</td><td class="down">销售停滞而库存继续上升</td></tr>
-        <tr><td>现金转化</td><td class="up">实业所有者收益 / 归母维持或高于H1的83.4%</td><td>维持H1附近</td><td class="down">转化率下降，仅报表现金流改善</td></tr>
-        <tr><td>价格联动</td><td class="up">调价与收入正增长、利润率修复同现</td><td>价格稳定且利润率未再受损</td><td class="down">调价后收入与利润率继续下降</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>需求风险来自高端商务与礼赠消费的周期性；渠道风险来自代售模式和直销定义改变；利润率风险来自生产成本、系列酒结构与批发渠道经济性。消费税改革仍应作为敏感性变量，但现有财报没有显示新制度已形成当期损失。治理方面，即使内控未见失效，关联安排与管理层变化仍可能扩大估值折价。</p>
-  <p class="small">失败边界不是单一股价或单一销量：若单三季度营业收入仍不改善、毛利率同比降幅继续扩大，且库存商品或渠道预收再次恶化，则「核心韧性能够消化渠道迁移成本」这一判断应被否定。</p>
-</section>
-
-<section class="reveal on" id="decision">
-  <div class="slabel">判断</div>
-  <h2>质量仍高于行业，财报前价格却没有留下足够容错</h2>
-  <p>茅台酒的稀缺性、品牌、长期供给约束和现金回报仍是高置信度资产；争议集中在渠道迁移是否创造了新增需求，以及利润率能否在新模式下稳定。基准情景低于8月14日收盘价，乐观情景则要求下半年利润重新加速并获得估值上修。当前证据支持「优质」，尚不足以同时支持「增长恢复」与「估值上修」。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">主品牌仍稳</div><p>2026H1茅台酒收入保持正增长，毛利率仍超过90%；核心利润池没有出现与系列酒同量级的恶化。</p></div>
-    <div class="find warn"><div class="t">产品矩阵分化</div><p>上半年系列酒收入下滑，而茅台酒仍保持正增长；两类产品没有共享同等护城河。</p></div>
-    <div class="find warn"><div class="t">迁移不是增量</div><p>直销占比明显提升，总收入却近乎停滞；下一步必须用终端动销而非渠道归类验证需求。</p></div>
-    <div class="find warn"><div class="t">现金标题失真</div><p>财务公司四项现金流解释了合并经营现金流增量的绝大部分；标准化后只剩低个位数增长。</p></div>
-    <div class="find good"><div class="t">回报真实发生</div><p>2025年现金分红覆盖了大部分归母净利润，两次回购股份全部注销；资本回报执行力仍然可靠。</p></div>
-    <div class="find warn"><div class="t">价格要求加速</div><p>若前瞻市盈率机械对应2026年，隐含下半年利润需恢复两位数增长，明显高于上半年路径。</p></div>
-  </div>
-
-  <div class="quote">茅台没有失去稀缺性；市场正在要求这份稀缺性替渠道改革支付学费。</div>
-
-  <p>中报发布后的首个完整交易日尚未发生，因此无法评价市场对这份财报的即时定价是否充分。未来数周的漂移窗口要看盈利预期是否下修，以及价格、批发渠道与毛利率是否出现联动。下一份季报若同时出现收入恢复、毛利率降幅收窄和新预收政策下合同负债稳定，本报告的谨慎基准需要上修；反之，前述失败边界将把估值讨论从质量溢价转向增长折价。</p>
-</section>
-
-<section class="reveal on" id="appendix">
-  <div class="slabel">附表</div>
-  <h2>方法、口径与来源速查</h2>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>本报告主要推算公式。</caption>
-      <thead><tr><th>项目</th><th>公式</th><th>性质 / 限制</th></tr></thead>
-      <tbody>
-        <tr><td>单二季度</td><td>H1累计值−Q1累计值</td><td>推算；受展示精度影响</td></tr>
-        <tr><td>毛利</td><td>营业收入−营业成本</td><td>推算；同一合并或分部口径</td></tr>
-        <tr><td>CAGR</td><td>（期末值÷期初值）^(1÷年数)−1</td><td>仅完整年度、同口径区间</td></tr>
-        <tr><td>其他直销</td><td>直销收入−i茅台收入</td><td>推算；2026年存在定义断点</td></tr>
-        <tr><td>现金流标准化</td><td>报表经营现金流−财务公司四项资产负债表现金影响</td><td>自定义分析口径</td></tr>
-        <tr><td>实业所有者收益代理</td><td>实业经营现金流−全部现金资本开支</td><td>未区分维持性与增长性资本开支</td></tr>
-        <tr><td>回购每股增厚</td><td>注销股份÷回购前股本</td><td>机械值，不考虑时间加权</td></tr>
-        <tr><td>情景价值</td><td>归母净利润÷当前股本×市盈率假设</td><td>模型，不是目标价或公司指引</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>主要文件</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>本地官方披露均位于「贵州茅台-2026Q2」资料夹。</caption>
-      <thead><tr><th>文件</th><th>用途</th><th>状态</th></tr></thead>
-      <tbody>
-        <tr><td>贵州茅台2026年半年度报告</td><td>H1财务、产品、渠道、经销商、现金流、关联方、承诺</td><td>未经审计</td></tr>
-        <tr><td>贵州茅台2026年第一季度报告</td><td>单二季度扣减基数、合同负债、经销商、现金流</td><td>未经审计</td></tr>
-        <tr><td>贵州茅台2025年年度报告</td><td>年度历史、季度交叉核验、分红回购、项目与治理</td><td>经审计；标准无保留意见</td></tr>
-        <tr><td>贵州茅台2025年半年度报告及一季度报告</td><td>上年同期产品、渠道、经销商与单季推算基数</td><td>未经审计</td></tr>
-        <tr><td>贵州茅台2021—2024年年度报告</td><td>五年合并历史、分部与长期供给证据</td><td>经审计；标准无保留意见</td></tr>
-        <tr><td>Wind金融终端</td><td>2026年8月14日价格、估值、同业、公告与期后新闻</td><td>时点数据；已在正文限定口径</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">五年合并轨迹由本机归档的2021—2025年年度报告补齐；产品和渠道历史仍以报告期资料包可相互核验的口径为准。2023年产品收入按2024年报的确值及披露同比反推并以≈标注；渠道历史则来自2024年报的当期/上期销售渠道表。所有比例均用未四舍五入源数据重算。</p>
-</section>
-
-<footer>
-  <p>数据截至2026年8月14日收盘。主要来源：贵州茅台2021—2025年年度报告、2025年半年度报告与一季度报告、2026年半年度报告与一季度报告；年度报告经审计，2026年中报未经审计。市场价格、估值、同业快照与期后新闻资料来自Wind，均按文中日期截取。</p>
-  <p>本页推算包括毛利及利润率、单二季度、2023年产品收入、其他直销、渠道迁移桥、毛利率结构贡献、财务公司现金流标准化、所有者收益代理、回购每股增厚及估值情景；方法均在正文或附表注明，可能受披露口径与四舍五入影响。本页仅供财务数据整理与研究交流，不构成任何投资建议。</p>
-</footer>
-
-</main>
-
-<script>
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
+</style></head><body><header class="hero"><div class="wrap"><div class="eyebrow">贵州茅台 600519.SH ｜ 2026中报 FULLSCAN ｜ 财务截至2026.06.30 · 行情2026.09.07</div>
+<h1>直营扩张之后，<br>回报要靠真实需求</h1><p class="lede">茅台把更多销售转向自营，账面经营现金流也显著增加，单二季度利润却继续下降。<b>渠道控制力增强，不等于盈利能力已经改善</b>：财务公司资金变动放大了现金增幅，价格和产品结构重整仍需转成持续盈利；历史低估值分位只降低了预期，没有消除这一条件。</p>
+<div class="dual"><div><div class="tag">上半年合并经营现金流 · 同比</div><div class="big a">+438.8%</div><div class="cap">包含财务公司存款与同业资金变动，不等于酒业自身现金增长。</div></div><div><div class="tag">推算单二季度归母净利润 · 同比</div><div class="big b">−6.9%</div><div class="cap">同口径半年累计减一季累计，渠道重整尚未转化为单季利润回升。</div></div></div></div></header><main class="wrap"><div class="callout"><b>修订 2026-09-07：</b>升级Fullscan v2.7；补齐原始历史口径、渠道与金融现金边界，更新行情、资本状态及单一主估值，保留原中报期间。</div><section class="reveal on" id="tldr" ><div class="slabel">三十秒版本 · 先看结论</div><h2>低历史倍数，不等于回报已经足够</h2><div class="tldr"><ul>
+<li><b>它是谁：</b>以茅台酒和酱香系列酒为主的白酒生产商，通过经销、自售和代售（第三方受托销售）触达消费者；上市公司还合并一家财务公司。</li>
+<li><b>本期成绩：</b>推算单二季度收入367.9亿元、归母利润172.7亿元；收入同比−5.1%，盈利承压并非只靠非经常项目解释。</li>
+<li><b>核心矛盾：</b>直销占比提高，但管理层称综合吨价下降；金融项目调整后的现金改善也远小于合并报表表象。</li>
+<li><b>容易踩的坑：</b>平台收入增长不是等量新增消费，集团账上的现金也不全属于上市股东；授权分红不等于已经确定能收到的股息。</li>
+<li data-verdict="neutral-cautious"><b>结论：</b>中性偏谨慎。现价1,316.01元，主方法基准≈1,333.8元、熊市≈993.4元；价格重整能否提高持续利润，是下一检验点。</li>
+</ul></div></section>
+<section class="reveal on" id="primer" ><div class="slabel">入门</div><h2>消费者买品牌，公司赚生产和销售环节的利润</h2><p>公司采购高粱、小麦和包装材料，酿造、贮存、勾兑后出售酒品。经销商采购形成收入，并不代表消费者已经喝掉；自营销售更接近终端，但收入增长也可能来自原有渠道转移。</p><div class="steps"><div class="step"><div class="n">环节 1</div><b>酿造与陈放</b><p>原料、人工和存酒先占用资金；<span class="g">基酒</span>产量不等于当期可售商品量。</p></div><div class="step"><div class="n">环节 2</div><b>配置产品与价格</b><p>茅台酒与系列酒覆盖不同需求，瓶装规格、组合和价格共同决定销售收入。</p></div><div class="step"><div class="n">环节 3</div><b>选择销售路径</b><p>经销、自售、<span class="g">代售</span>决定谁持有商品、何时确认收入、何时收钱。</p></div><div class="step"><div class="n">环节 4</div><b>分配现金</b><p>留存资金用于周转、建设和投资，剩余是否分红还受母公司利润与决策程序约束。</p></div></div><p>本文以沪市A股为定价证券，按中国企业会计准则（CAS）合并报表分析。<span class="g">归母净利润</span>已扣除子公司少数股东份额；合并现金流却包含子公司全部现金。控股股东茅台集团和上市公司不是同一法律主体，二者之间的存款及交易仍要辨明权利。</p><p>FY代表完整财年，H1代表上半年。<span class="g">推算单二季度</span>只对可比累计流量作半年减一季；余额、每股收益和净资产收益率不相减。<span class="g">滚动十二个月（TTM）</span>避免把季节性较强的半年直接翻倍。年报已审计，中报和季报未经审计。</p><p>白酒同时受消费场景、经销库存和价格预期影响。厂商发货、零售成交、消费者实际消费是不同环节；行业调整中，降低不适销产品投放可能改善渠道，却会先压当期收入。</p></section>
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="consumer-staples"><div class="slabel">基础财务 · 业务地图</div><h2>收入结构换了，单季盈利尚未恢复</h2><div class="grid" data-financials="consolidated"><div class="cell" ><div class="k">营业收入</div><div class="v">367.94<span class="u">亿元</span></div><div class="d"><span>Q2推算 · 同比−5.1% · 环比−31.7%</span></div></div><div class="cell" ><div class="k">毛利 / 毛利率</div><div class="v">328.41<span class="u">亿元</span></div><div class="d"><span>Q2推算 · 同比−6.4% · 环比−32.1%<br>毛利率89.26%</span></div></div><div class="cell" ><div class="k">营业利润 / 利润率</div><div class="v">238.74<span class="u">亿元</span></div><div class="d"><span>Q2推算 · 同比−7.2% · 环比−36.4%<br>CAS营业利润率64.89%</span></div></div><div class="cell" ><div class="k">归母净利润 / 净利率</div><div class="v">172.74<span class="u">亿元</span></div><div class="d"><span>Q2推算 · 同比−6.9% · 环比−36.6%<br>归母净利率46.95%</span></div></div><div class="cell" ><div class="k">经营现金流量净额</div><div class="v">437.81<span class="u">亿元</span></div><div class="d"><span>Q2推算 · 同比+915.8% · 环比+62.7%<br>含金融业务</span></div></div><div class="cell" ><div class="k">自由现金流代理</div><div class="v">435.54<span class="u">亿元</span></div><div class="d"><span>Q2推算 · 同比+1,104.8% · 环比+65.6%<br>合并经营现金流（OCF）减资本开支</span></div></div></div><div class="tblscroll"><table class="tbl" data-financials="history"><caption>五年合并地图 · CAS、人民币亿元，除另注外。FY2021–2025年度财报均已审计、标准无保留意见。FY2021归母、EPS、ROE与归母权益用2023年报追溯数，其余损益行沿用原报；后续年度取最新比较口径。</caption><thead><tr><th>项目</th><th>FY2021</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th></tr></thead><tbody><tr><td>营业收入</td><td>1,061.90</td><td>1,241.00</td><td>1,476.94</td><td>1,708.99</td><td>1,688.38</td></tr><tr><td>毛利（推算）</td><td>972.07</td><td>1,140.06</td><td>1,358.26</td><td>1,571.10</td><td>1,539.46</td></tr><tr><td>毛利率%（推算）</td><td>91.54</td><td>91.87</td><td>91.96</td><td>91.93</td><td>91.18</td></tr><tr><td>营业利润</td><td>747.51</td><td>878.80</td><td>1,037.09</td><td>1,196.89</td><td>1,148.09</td></tr><tr><td>归母净利润</td><td>524.36</td><td>627.17</td><td>747.34</td><td>862.28</td><td>823.20</td></tr><tr><td>归母净利率%（推算）</td><td>49.38</td><td>50.54</td><td>50.60</td><td>50.46</td><td>48.76</td></tr><tr><td>基本每股收益EPS（元）</td><td>41.74</td><td>49.93</td><td>59.49</td><td>68.64</td><td>65.66</td></tr><tr><td>加权净资产收益率ROE%</td><td>29.89</td><td>30.26</td><td>34.19</td><td>36.02</td><td>32.53</td></tr><tr><td>经营现金流</td><td>640.29</td><td>366.99</td><td>665.93</td><td>924.64</td><td>615.22</td></tr><tr><td>现金资本开支</td><td>34.09</td><td>53.07</td><td>26.20</td><td>46.79</td><td>31.28</td></tr><tr><td>自由现金流代理（推算）</td><td>606.20</td><td>313.92</td><td>639.73</td><td>877.85</td><td>583.95</td></tr><tr><td>每股净资产（元，推算）</td><td>150.86</td><td>157.20</td><td>171.68</td><td>185.56</td><td>195.36</td></tr><tr><td>归属年度每股现金股息（元）</td><td>21.675</td><td>47.821</td><td>49.982</td><td>51.555</td><td>51.981</td></tr></tbody></table></div><p>收入与归母利润四年复合增速（CAGR）推算分别为12.3%、11.9%，但末年已回落；历史增长率不代表未来恢复速度。EPS为披露的加权每股数，每股净资产使用期末股数。现金资本开支只指购建长期资产付现，FCF代理不等于可派给股东的钱。</p><div class="cols" role="img" aria-label="五年营收和归母利润共用刻度"><div class="col"><div class="bars"><div class="bar rev" style="height:62.136151%"></div><div class="bar np" style="height:30.682134%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:72.615833%"></div><div class="bar np" style="height:36.698525%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:86.421497%"></div><div class="bar np" style="height:43.729925%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:100.000000%"></div><div class="bar np" style="height:50.455573%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:98.793996%"></div><div class="bar np" style="height:48.168798%"></div></div></div></div><div class="collabels"><div>FY2021</div><div>FY2022</div><div>FY2023</div><div>FY2024</div><div>FY2025</div></div><div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div><p class="small">前期增长与末年回落同时可见。两组柱共用五年最大收入刻度，不把利润另行放大。</p><div class="tblscroll"><table class="tbl" ><caption>最新与滚动口径 · 亿元；Q2及TTM为推算，其余累计为披露值。TTM＝FY2025＋2026H1−2025H1。利润率分母为营业收入，营业利润及归母含金融净贡献。</caption><thead><tr><th>项目</th><th>2025Q2</th><th>2026Q1</th><th>2026Q2</th><th>2025H1</th><th>2026H1</th><th>TTM</th></tr></thead><tbody><tr><td>营业收入</td><td>387.88</td><td>539.09</td><td>367.94</td><td>893.89</td><td>907.03</td><td>1,701.52</td></tr><tr><td>毛利 / 毛利率%</td><td>350.72 / 90.42</td><td>483.89 / 89.76</td><td>328.41 / 89.26</td><td>816.12 / 91.30</td><td>812.29 / 89.56</td><td>1,535.63 / 90.25</td></tr><tr><td>CAS营业利润</td><td>257.32</td><td>375.37</td><td>238.74</td><td>627.69</td><td>614.11</td><td>1,134.51</td></tr><tr><td>归母净利润</td><td>185.55</td><td>272.43</td><td>172.74</td><td>454.03</td><td>445.17</td><td>814.34</td></tr><tr><td>合并净利润，含少数股东</td><td>192.12</td><td>281.54</td><td>178.79</td><td>469.87</td><td>460.33</td><td>843.57</td></tr><tr><td>经营现金流</td><td>43.10</td><td>269.10</td><td>437.81</td><td>131.19</td><td>706.91</td><td>1,190.94</td></tr><tr><td>现金资本开支</td><td>6.95</td><td>6.05</td><td>2.27</td><td>15.96</td><td>8.32</td><td>23.64</td></tr><tr><td>FCF代理</td><td>36.15</td><td>263.05</td><td>435.54</td><td>115.23</td><td>698.59</td><td>1,167.30</td></tr></tbody></table></div><p>H1披露基本EPS为35.57元，加权ROE为16.75%、未年化；滚动利润按当前股数换算的每股盈利见估值，并非把中期EPS相加。营业总收入H1为922.78亿元，含另列金融营业利息；毛利不使用这一混合分母。</p><div data-financials="segments"><div class="tblscroll"><table class="tbl" ><caption>产品、渠道、地区是同一主营收入的不同切面，不相加；亿元。CAGR为FY2021–2025推算。i茅台是直销子项，2021无可比披露；平台产品组合变化见渠道节。</caption><thead><tr><th>切面</th><th>FY2021</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>四年CAGR</th></tr></thead><tbody><tr><td>茅台酒</td><td>934.65</td><td>1,078.34</td><td>1,265.89</td><td>1,459.28</td><td>1,465.00</td><td>11.9%</td></tr><tr><td>系列酒</td><td>125.95</td><td>159.39</td><td>206.30</td><td>246.84</td><td>222.75</td><td>15.3%</td></tr><tr><td>直销</td><td>240.29</td><td>493.79</td><td>672.33</td><td>748.43</td><td>845.43</td><td>37.0%</td></tr><tr><td>批发代理</td><td>820.30</td><td>743.94</td><td>799.86</td><td>957.69</td><td>842.32</td><td>0.7%</td></tr><tr><td>境内</td><td>1,034.41</td><td>1,195.33</td><td>1,428.69</td><td>1,654.23</td><td>1,639.24</td><td>12.2%</td></tr><tr><td>境外</td><td>26.18</td><td>42.40</td><td>43.50</td><td>51.89</td><td>48.50</td><td>16.7%</td></tr><tr><td>其中：i茅台</td><td>—</td><td>118.83</td><td>223.74</td><td>200.24</td><td>130.31</td><td>起始年不可比</td></tr></tbody></table></div><div class="tblscroll"><table class="tbl" ><caption>主营收入万元原表换算为亿元；同比、环比及单Q2均推算。直销在2026年纳入代售，增速不是同店或有机增速。</caption><thead><tr><th>切面</th><th>2025H1</th><th>2026H1</th><th>H1同比</th><th>2026Q2</th><th>Q2同比</th><th>Q2环比</th></tr></thead><tbody><tr><td>茅台酒</td><td>755.90</td><td>777.24</td><td>+2.8%</td><td>317.20</td><td>−1.0%</td><td>−31.1%</td></tr><tr><td>系列酒</td><td>137.63</td><td>129.34</td><td>−6.0%</td><td>50.53</td><td>−25.0%</td><td>−35.9%</td></tr><tr><td>直销</td><td>400.10</td><td>519.62</td><td>+29.9%</td><td>224.58</td><td>+33.8%</td><td>−23.9%</td></tr><tr><td>批发代理</td><td>493.43</td><td>386.97</td><td>−21.6%</td><td>143.15</td><td>−34.9%</td><td>−41.3%</td></tr><tr><td>境内</td><td>864.59</td><td>896.22</td><td>+3.7%</td><td>358.88</td><td>−3.0%</td><td>−33.2%</td></tr><tr><td>境外</td><td>28.93</td><td>10.37</td><td>−64.2%</td><td>8.85</td><td>−50.2%</td><td>+482.1%</td></tr><tr><td>其中：i茅台</td><td>107.60</td><td>402.64</td><td>+274.2%</td><td>187.11</td><td>+282.6%</td><td>−13.2%</td></tr></tbody></table></div></div><div class="stacks" role="img" aria-label="两期主营酒收入中茅台酒和系列酒占比"><div class="stack"><div class="cap">2025H1 主营酒收入占比（推算） · 茅台酒84.60% / 系列酒15.40%</div><div class="stackbar"><div class="seg p" style="width:84.597484%">茅台酒</div><div class="seg q" style="width:15.402516%">系列酒</div></div></div><div class="stack"><div class="cap">2026H1 主营酒收入占比（推算） · 茅台酒85.73% / 系列酒14.27%</div><div class="stackbar"><div class="seg p" style="width:85.733088%">茅台酒</div><div class="seg q" style="width:14.266912%">系列酒</div></div></div></div><p class="small">产品结构仍以茅台酒为主。各期合计归一至同长，表示比例而非总收入规模；与直销比例不是同一种分类。</p><div class="tblscroll"><table class="tbl txt" ><caption>消费品检查点 · 除另注外为2026H1；金额和数量为披露，带“推算”的比率及代理为分析计算。</caption><thead><tr><th>指标</th><th>读数</th><th>解释边界</th></tr></thead><tbody><tr><td><span class="g">合同负债</span></td><td>31.78亿元</td><td>期末余额；较年末−60.3%，收款模式影响见渠道</td></tr><tr><td>经销商</td><td>2,307家境内</td><td>H1新增220、退出266；不等于门店或消费者数量</td></tr><tr><td>吨价与销量</td><td>H1精确销量、吨价未披露</td><td>FY2025茅台酒/系列酒推算吨价313.4/58.1万元；混合规格与价格</td></tr><tr><td>公司存货</td><td>613.17亿元</td><td>推算1,349天，期末存货/TTM成本；长期陈酿结构使其不等于渠道库存天数</td></tr><tr><td>销售费用率</td><td>4.35%</td><td>单Q2推算，费用/营业收入；H13.53%</td></tr><tr><td>产品毛利率（推算）</td><td>茅台酒92.28%；系列酒73.59%</td><td>同比−1.57、−4.00个百分点；附注同口径收入减成本</td></tr><tr><td>零售价与批价</td><td>官方调价、第三方终端价见渠道</td><td>批价未取得同规格同时间可靠数，不用零售报价假装经销利润</td></tr><tr><td>现金分红</td><td>FY2025每股51.981元</td><td>按年度合并中期和末期实际每股额；H1未宣派具体新金额，政策和状态见资本</td></tr></tbody></table></div><div class="plain"><span class="pl">白话解读</span><p>五年累计增长仍在，但最新单季利润和销售收入同步回落。产品与渠道表回答钱从哪里来；销量、综合售价和经营现金能否同时改善，比单看直销占比更重要，后文分别检验。</p></div></section>
+<section class="reveal on" id="profit" ><div class="slabel">盈利机制</div><h2>费用节约没有抵消毛利收缩</h2><p>收入下降与单位收入成本上升共同压低毛利；费用节约只抵消一部分。归母桥区分经营压力、税项及金融净贡献。</p><div class="wfall" role="img" aria-label="归母利润同比桥，起点加各增减等于终点"><div class="wrow"><div class="nm">上年Q2归母<span>起点</span></div><div class="wtrack"><div class="wbar tot" style="left:0.000000%;width:100.000000%"></div></div><div class="fig">+185.55</div></div><div class="wrow"><div class="nm">毛利变化<span>两期利润表差额</span></div><div class="wtrack"><div class="wbar down" style="left:87.974660%;width:12.025340%"></div></div><div class="fig">−22.31</div></div><div class="wrow"><div class="nm">税金及附加<span>两期利润表差额</span></div><div class="wtrack"><div class="wbar up" style="left:87.974660%;width:1.739717%"></div></div><div class="fig">+3.23</div></div><div class="wrow"><div class="nm">销售费用<span>两期利润表差额</span></div><div class="wtrack"><div class="wbar up" style="left:89.714377%;width:0.887052%"></div></div><div class="fig">+1.65</div></div><div class="wrow"><div class="nm">管理及研发<span>两期利润表差额</span></div><div class="wtrack"><div class="wbar down" style="left:90.521072%;width:0.080357%"></div></div><div class="fig">−0.15</div></div><div class="wrow"><div class="nm">财务费用<span>两期利润表差额</span></div><div class="wtrack"><div class="wbar down" style="left:90.107929%;width:0.413143%"></div></div><div class="fig">−0.77</div></div><div class="wrow"><div class="nm">金融及其他经营净额<span>两期利润表差额</span></div><div class="wtrack"><div class="wbar down" style="left:89.986293%;width:0.121635%"></div></div><div class="fig">−0.23</div></div><div class="wrow"><div class="nm">营业外、税与少数权益<span>两期利润表差额</span></div><div class="wtrack"><div class="wbar up" style="left:89.986293%;width:3.109439%"></div></div><div class="fig">+5.77</div></div><div class="wrow"><div class="nm">本期Q2归母<span>终点</span></div><div class="wtrack"><div class="wbar tot" style="left:0.000000%;width:93.095733%"></div></div><div class="fig">+172.74</div></div></div><p class="small">毛利下降是主要负项，税费及其他项目部分抵消。单位亿元，单Q2推算；蓝柱为首尾总额，增减按同一累计刻度连接，完整输入见推导表。</p><p>推算单Q2毛利率同比变动−1.16个百分点、较一季度−0.50个百分点；扣非归母利润172.24亿元，归母与扣非仅相差0.50亿元。剔除非经常项并没有改变利润下滑方向。</p><p>管理层在8月21日说明会将成本增速高于收入解释为销量增加、综合吨价下降，并称二季度按动销减少系列酒投放；半年报还明确提到生产成本增加。这是公司归因，不是完整量价成本桥；缺少精确分产品销量，量、单品价格、规格组合与渠道迁移各贡献多少，尚不能量化。</p><p>最近完整年度已经显示结构压力：FY2025系列酒销量推算增长3.9%，<span class="g">混合吨价</span>变动−13.1%；茅台酒混合吨价变动−0.3%。吨价由收入除销量得出，包含高低规格组合，不等于同一瓶酒出厂降价。</p><p>同一附注的收入与成本推算，H1直销毛利率92.93%、批发85.02%，同比变动−0.62与−4.45个百分点。渠道附注含其他业务，不能拿它的成本除以前表主营收入；两条渠道均承压，不能假设直销每增加一个百分点必然带来固定利润。</p><p>公司披露的CAS营业利润包含金融业务净利息、财务费用及信用减值等，不能直接视为纯白酒经营利润。桥中的“金融及其他经营净额”保留这些净贡献，“营业外、税与少数权益”再走到归母，避免把集团利润全部算给普通股股东。</p><div class="plain"><span class="pl">白话解读</span><p>非经常项不是本季利润下降的主因。销量多卖一点，若每单位收入留下的利润更少，总利润仍会下降；下一份可比财报要检验产品组合与成本后的收益，而不仅是发货数量。</p></div></section>
+<section class="reveal on" id="growth" ><div class="slabel">品牌渠道</div><h2>直销份额提高，仍缺新增消费的完整证明</h2><p>渠道迁移与新增需求要分开检验：收入改经自营销售，不自动提高真实消费和盈利。</p><p>H1直销占主营酒收入推算由44.8%升至57.3%。平台收入增量295.03亿元，与其他直销和批发代理减少额合并对照，后两项抵消了平台增量的95.6%；这只是分类金额对照，不能认定逐个消费者发生了迁移。</p><div class="callout"><b>渠道范围与平台产品组合要分开看。</b>2026年直销明确包括代售。两年H1的i茅台金额均为酒类不含税收入，未证明其会计口径改变；变化包括年初主力飞天产品进入平台。平台增长仍不能直接视为同店增长或等量新增消费。</div><p>管理层说明非飞天部分产品自四月起采用代售，商品物权不转移；收入仍须在客户取得控制权并交付后确认。合同负债下降需结合付款方式和渠道结构看；备货意愿也可能影响余额，但各项贡献尚未量化。管理层称“库存总体良性”，未附数量，不能仅凭预收下降判定需求崩溃或凭该表述认定库存已清。</p><p>经销关系也在重整：H1累计减一季累计，推算单Q2境内新增214家、退出5家。新增主要涉及系列酒的披露背景，不将新增家数等同新增终端销量，也不把季内净增加解释为所有经销商盈利恢复。</p><p>7月18日起，2026年份飞天53度500ml的i茅台零售价由1,539元调至1,639元，销售合同价由1,269元调至1,369元；适用指定年份、规格与渠道，不回填H1收入或推广为全产品提价。</p><p>9月7日新浪“酒价内参”的过去一日飞天终端参考均价为1,790元，成交量加权样本含平台交易。该第三方零售代理并非固定年份的批价；它与合同价的差额不等于经销净利润，仍缺同规格成交量、采购与费用条件。</p><p>品牌、产地和传统工艺构成差异化来源，但估值需要可持续现金回报证明。茅台酒从生产到销售至少需要5年；本期披露基酒产量茅台酒4.1万吨、系列酒3.1万吨。产能扩张先形成库存和投入，既不是立即可售量，也不保证未来价格。</p><p>海外规模在上述地图中较小，短期下滑仍值得辨明。公司称海外同时面临需求、渠道适配、口味文化、关税与物流等约束，转型需循序推进；没有恒定汇率收入、海外利润和现金桥，不能仅由出口金额判断海外经济回报。年轻化、低度调饮和平台注册用户也不直接进入盈利预测。</p><p>8月21日公开实录为节选，只部分回答销量、库存及改革利润贡献，未给下半年量化指引；另有现场问题未全文公开。“达到预期”不等于确认盈利拐点。</p><div class="plain"><span class="pl">白话解读</span><p>公司可以更直接地接触消费者，但渠道转换本身不会凭空创造同等金额的新消费。要验证改革，需同时看到终端需求、产品综合售价和利润改善；上表的分类增长只完成了其中一部分观察。</p></div></section>
+<section class="reveal on" id="cash" ><div class="slabel">现金质量 · 权利边界</div><h2>现金很充足，但不是全部可以直接分给股东</h2><p>合并经营现金流（OCF）的主要变化来自金融资金收付，而非同幅度的酒款回收。公司将大幅增加归因于财务公司成员单位存款增加、不能随时支取的同业存款减少；以下仅移除可单独识别的项目。</p><div class="tblscroll"><table class="tbl" ><caption>部分金融调整<span class="g">现金代理</span> · 亿元、推算。四类为客户存款、客户贷款、存放央行和同业、拆出资金；保留流入/流出原符号。</caption><thead><tr><th>项目</th><th>2025H1</th><th>2026H1</th></tr></thead><tbody><tr><td>合并经营现金流</td><td>131.19</td><td>706.91</td></tr><tr><td>四类金融资产负债现金净贡献</td><td>−255.73</td><td>313.49</td></tr><tr><td>去除上述贡献：代理A</td><td>386.92</td><td>393.42</td></tr><tr><td>金融利息与手续费现金净额</td><td>14.30</td><td>13.71</td></tr><tr><td>再扣利息手续费：代理B</td><td>372.62</td><td>379.71</td></tr><tr><td>代理B减合并现金资本开支</td><td>356.66</td><td>371.38</td></tr></tbody></table></div><p>合并OCF同比增加575.72亿元，四类金融现金贡献变化为569.22亿元，占增量推算98.9%。代理B减资本开支同比只增4.1%；该对账说明主要现金增量不宜外推为酒业经营增量，不是经济因果的完全识别。</p><p>这个代理仍含未能单独剔除的财务公司工资、现金税、其他收付及少数权益。它不是精确的“酒业OCF”、归母所有者盈余或可分配现金；代理A到B不再重复减应计利息费用，也不把准备金权益储备当作额外现金支出。</p><p>同口径合并经营现金流对集团全部净利润的<span class="g">现金转化率</span>，H1由27.9%变为153.6%，TTM为141.2%。分母包含少数权益，仍受金融收付干扰；不能以这一高比率证明酒业的利润现金质量同步跃升。</p><p>现金及等价物H1末为1,848.11亿元，其中可随时支取同业存款占推算75.7%。合并吸收存款负债254.26亿元，与关联方存款清单相等；这些债权人包括上市合并范围外的集团成员，相关款项不自动归上市股东自由支配。</p><p>上市公司持有财务公司51%权益。其单体表含合并抵销的内部往来，单体资产乘持股比例并非归母净现金。受限资金附注列法定准备金83.59亿元，与现金定义排除金额83.55亿元略有差异，原文未解释，不擅自归因为利息。</p><p>存货主要是生产与陈酿资产：H1末半成品349.23亿元、在产品192.96亿元，产成品46.18亿元。后者较年末推算变动+2.5%；它是公司存货，不是经销渠道库存，陈酿价值也必须最终通过需求兑现。</p><div class="plain"><span class="pl">白话解读</span><p>财务公司收到集团成员的存款，会让合并现金增加，但同时负有偿还责任。调整后的现金代理显示变化温和；需要持续观察酒款回收与产品消化，不能仅凭现金总额判断分红余力。</p></div></section>
+<section class="reveal on" id="capital" ><div class="slabel">资本回报 · 治理</div><h2>回购兑现了，未来股息仍需具体方案</h2><p>资本回报按实际支付、注销和授权状态分别计算。</p><p>FY2025的中期每股23.957元与末期每股28.02423元已支付，末期于6月26日发放。按实际每股额汇总，历史股息率推算3.95%，不是未来一年保证收益；也不把已收走的上年度股息再计入现在买入后的回报。</p><p>FY2025两次实际派现金额合计650.33亿元，按各次实施股数计算，不能以全年每股额乘今日股数替代。公司官网称截至2026年6月末，上市以来累计现金分红4,011.45亿元、为IPO募资净额200.77倍。这支持长期现金回馈的历史，但仅为公司披露、分母只含IPO净额，并非独立重建全部历史融资。</p><p>现行政策要求FY2024–2026年度现金分红不低于归母净利润75%，分两次实施。六月股东会授权董事会制定2026年中期方案，但H1报告没有具体分红提案；截至分析日未取得已宣派金额及新支付日。授权并不意味着不再分红，也不等于股东已取得固定金额的应收股息。</p><p>两次回购累计支出推算90.00亿元，已注销股份占原股本0.487%；支出相当于现价总市值0.55%、FY2025合并FCF代理15.4%，后者只作规模参照而非同年覆盖率。第二项计划自有资金回购并注销，实际支出达到其上限，当前分母已吸收缩股效果。</p><p>第二次回购单独带来的静态每股收益增厚仅推算0.175%，假设利润不变；它是履约完成的资本动作，却不足以抵消经营利润的周期波动。实际均价1,370.70元不构成内在价值底线，未来未宣布回购按零增量处理。</p><p>母公司H1末未分配利润1,076.47亿元，是分红约束之一而非银行存款余额。两只产业基金尚未缴付合计60亿元；包装物流、同民坝及茅台酒技改项目都有长期预算和进度安排。项目总预算不能当作全部剩余承诺，完工比例也不能直接换算剩余现金；缺少维护与成长支出分拆，不造项目内部回报率。</p><p>控股股东持股54.5%，最终控制人为贵州省国资委。上市公司持有酒销售子公司95%权益，H1归属于该公司少数股东的利润12.43亿元；不等于已派股息。关联商标使用费本期12.66亿元，已进入成本费用，估值不重复扣减。</p><p>股东会已批准续签FY2027–2029商标许可，费率1.5%，计费基数按本部许可商标酒销售及相关销售公司差额约定，并非集团全部营业收入。现有控制结构让关联交易商业条款和少数权益分成成为持续检验点；H1重大担保栏目不适用，也不代表没有任何或有风险。</p><p>管理层现金薪酬规则强调业绩考核并允许追索，旧股权激励推进承诺仍有未完成事项；未披露正在执行的股权或员工持股方案，不凭空添加奖励股份。原财务负责人被留置并免职的公告只确认程序和职务变化，未给出指控及量化损失，不能据此推断上市公司财报造假，也不能视人员变更为风险已经结束。</p><div class="plain"><span class="pl">白话解读</span><p>回购确已缩小股数，过去股息也已到账，但这两件事不能被再算成未来收益。下一步看新分红如何实施，以及关联交易和长期投资是否继续让每股现金回报受益。</p></div></section>
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="正常化PE（周期调整利润率）"><div class="slabel">估值 · 情景条件</div><h2>现价接近温和修复情景，长期增长仍是条件</h2><div class="grid"><div class="cell" ><div class="k">现价</div><div class="v">1,316.01<span class="u">元</span></div><div class="d"><span>2026-09-07 15:30:58 +08:00 · 已收盘快照</span></div></div><div class="cell" ><div class="k">熊市价值</div><div class="v">≈993.4<span class="u">元</span></div><div class="d"><span>正常化PE（年利润倍数）<br>较现价−24.5%</span></div></div><div class="cell" ><div class="k">基准价值</div><div class="v">≈1,333.8<span class="u">元</span></div><div class="d"><span>正常化PE（年利润倍数）<br>较现价+1.4%</span></div></div><div class="cell" ><div class="k">牛市价值</div><div class="v">≈1,793.3<span class="u">元</span></div><div class="d"><span>正常化PE（年利润倍数）<br>较现价+36.3%</span></div></div><div class="cell" ><div class="k">隐含预期</div><div class="v">≈1,727<span class="u">亿元</span></div><div class="d"><span>一年后年度收入能力；利润率和倍数固定基准，区间股息另计</span></div></div><div class="cell" data-verdict="neutral-cautious"><div class="k">判断</div><div class="v">中性偏谨慎</div><div class="d"><span>折现后基准空间小于熊市下行</span></div></div></div><div class="steps"><div class="step"><div class="n">方法 A</div><b>正常化PE（周期调整利润率）：持续盈利值多少钱？</b><p>收入乘归母利润率，再按PE与要求回报折现；唯一主方法。</p></div><div class="step"><div class="n">方法 B</div><b><span class="g">股息折现（DDM）</span></b><p>五年过渡加<span class="g">永续终值</span>，检验较低长期增长支持的价值。</p></div><div class="step"><div class="n">怎么读</div><b>不把两种价值平均</b><p>主值不含区间股息；股息法含全部股息，须统一比较。</p></div></div><h3>第一步 · 相对自身历史便宜，不代表增长条件消失</h3><p>Wind TTM市盈率20.20倍，按原报滚动归母与现股数复算20.20倍；每股滚动盈利65.14元。市净率（PB，股价相对每股净资产的倍数）基于H1归母权益复算6.55倍，吻合供应商6.55倍；分母不含少数权益。</p><p>2021年9月至2026年8月共60个月末样本，PE下四分位21.35、中位28.39、上四分位36.90倍；当前<span class="g">月度</span>分位18.3%。历史中位含旧增长周期，未必是今日合理价。</p><p>6月8日至9月7日实际返回65个日观察，日均成交额≈53.78亿元；年初至今涨跌−2.2%。跨除息的未复权股价变动不是总回报。</p><h3>第二步 · 同行增长率必须先核对基数</h3><div class="tblscroll"><table class="tbl" ><caption>市场为9月7日同次已收盘快照；财务为原报CAS合并、未经审计H1。箭头2025H1→2026H1；同比、毛利率和OCF/合并净利均推算。五粮液采用调整后的2025H1比较基数。</caption><thead><tr><th>公司／层级</th><th>TTM PE倍</th><th>H1收入同比</th><th>毛利率</th><th>OCF/合并净利</th></tr></thead><tbody><tr><td>贵州茅台／研究对象</td><td>20.20</td><td>1.5%</td><td>91.3→89.6%</td><td>27.9→153.6%</td></tr><tr><td>五粮液／最近层</td><td>21.20</td><td>20.9%</td><td>77.9→80.3%</td><td>638.0→−23.9%</td></tr><tr><td>泸州老窖／最近层</td><td>15.55</td><td>−36.4%</td><td>87.1→85.3%</td><td>78.9→47.6%</td></tr><tr><td>山西汾酒／次级参照</td><td>14.74</td><td>−12.2%</td><td>76.7→75.4%</td><td>70.2→102.8%</td></tr></tbody></table></div><p>五粮液年报说明对2025年部分业务收入确认核算作调整，其季度合计与最新H1比较列一致；这不是公司已认定“以前年度重大差错”，但反弹也不能直接视为未经口径影响的需求复苏。泸州收入承压、汾酒利润下降而现金转化改善，同属白酒仍有不同经营位置；三个层级不机械平均倍数。</p><h3>第三步 · 基准只给温和修复，不给历史峰值</h3><p>主方法估值与验证期限为2026-09-07至2027-09-07。正常化收入是期末年度盈利能力尺度，不是FY2026或FY2027业绩预测；对应期末<span class="g">除区间分红</span>的股价再折现。归母利润率包含正常金融净贡献，故不另外加账面全部现金，避免收益与资产重复计价。</p><div class="tblscroll"><table class="tbl txt" ><caption>情景均为分析假设 · 人民币；不是业绩指引。PE与折现输入来源及增长含义逐项列示。</caption><thead><tr><th>驱动／结果</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据</th></tr></thead><tbody><tr><td>正常化年收入</td><td>≈1,600.00亿元</td><td>≈1,750.00亿元</td><td>≈1,900.00亿元</td><td>取自TTM与半年/单季年化作尺度锚；低档持续承压，中档温和恢复，高档需求回升，均非公司指引</td></tr><tr><td>归母利润率</td><td>≈47.00%</td><td>≈49.00%</td><td>≈50.50%</td><td>参照五年中部及近期水平；基准低于历史中位以反映综合售价重整，牛档才回到中部</td></tr><tr><td>PE倍数</td><td>≈18.00倍</td><td>≈21.00倍</td><td>≈25.00倍</td><td>熊取近期月样本最低取整；基准取五年下四分位取整；牛取下四分位与中位均值取整</td></tr><tr><td>股权要求回报Ke</td><td>≈9.00%</td><td>≈8.00%</td><td>≈7.00%</td><td>来自国债收益率加分析风险补偿：需求、治理及持股风险；熊高牛低，非统计资产定价模型</td></tr><tr><td>归母盈利</td><td>≈752.00亿元</td><td>≈857.50亿元</td><td>≈959.50亿元</td><td>年收入能力与归母利润率相乘（推算）</td></tr><tr><td>每股盈利</td><td>≈60.16元</td><td>≈68.60元</td><td>≈76.75元</td><td>当前已发行且无库存股扣减的分母（推算）</td></tr><tr><td>主方法价值</td><td>≈993.40元</td><td>≈1,333.80元</td><td>≈1,793.34元</td><td>一年后盈利能力按PE定价并折现；区间股息不在此点值内</td></tr><tr><td>PE对应持续增长</td><td>3.68%</td><td>4.28%</td><td>4.85%</td><td>统一Ke8%、分配率75%的解释性反解；隔离倍数差异，非三档实际Ke下的增长预测</td></tr><tr><td>DDM含全部股息价值</td><td>≈566.4元</td><td>≈952.0元</td><td>≈1,586.2元</td><td>从实际TTM盈利出发，五年增长后转为较低永续增长；假设见附录，不与主方法平均</td></tr></tbody></table></div><p>9月7日中债十年国债收益率1.68%是收盘后取得的人民币参照，并非公司借款利率。基准要求回报的额外补偿为6.32个百分点，属于分析选择；低国债利率不能单独证明应给更高股票倍数。</p><p>DDM基准相对主方法含同期股息现值的可比总价值，差距为−31.1%。主要差别是DDM成熟增长降至2%，而主方法基准倍数对应更长的持续增长；DDM基准终值仍占77.1%，也依赖长期假设，不是确定下限。</p><div class="steps chain"><div class="step"><div class="n">驱动</div><b>价格重整逐步转成需求</b><p>基准温和修复，不将平台迁移当新增量</p></div><div class="step"><div class="n">收入／利润率</div><b>1,750亿元／49%</b><p>年度盈利能力，不是实际年度承诺</p></div><div class="step"><div class="n">归母盈利</div><b>≈857.5亿元</b><p>金融净贡献已在整体利润率内</p></div><div class="step"><div class="n">倍数／折现</div><b>21倍／Ke8%／一年</b><p>参照历史下四分位与国债加风险补偿</p></div><div class="step"><div class="n">每股价值</div><b>≈1,333.8元</b><p>精确现股数，已反映注销</p></div></div><div class="tblscroll"><table class="tbl sgrid"><caption>两项最大敏感驱动 · 行：PE倍数；列：年收入能力（亿元）；格内元/股，其他输入固定基准。粗框基准、底色现价反推，隐含行用未舍入倍数。</caption><thead><tr><th>PE ＼ 年收入</th><th>1,600</th><th>1,750</th><th>1,900</th></tr></thead><tbody><tr><td>18.000倍</td><td>1,045.27</td><td>1,143.26</td><td>1,241.25</td></tr><tr><td>20.720倍</td><td>1,203.21</td><td class="implied">1,316.01</td><td>1,428.81</td></tr><tr><td>21.000倍</td><td>1,219.48</td><td class="base">1,333.80</td><td>1,448.13</td></tr><tr><td>25.000倍</td><td>1,451.76</td><td>1,587.86</td><td>1,723.96</td></tr></tbody></table></div><div class="rows" aria-label="正常化市盈率价值阶梯"><div class="row"><div class="nm">熊市<span>经营承压</span></div><div class="track"><div class="fill alt" style="width:55.393846%"></div></div><div class="fig">993.40元<span>较现价−24.5%</span></div></div><div class="row"><div class="nm">现价<span>9月7日已收盘</span></div><div class="track"><div class="fill soft" style="width:73.383184%"></div></div><div class="fig">1,316.01元<span>较现价0.0%</span></div></div><div class="row"><div class="nm">基准<span>温和修复</span></div><div class="track"><div class="fill " style="width:74.375188%"></div></div><div class="fig">1,333.80元<span>较现价+1.4%</span></div></div><div class="row"><div class="nm">牛市<span>需求和组合改善</span></div><div class="track"><div class="fill moss" style="width:100.000000%"></div></div><div class="fig">1,793.34元<span>较现价+36.3%</span></div></div></div><p class="small">基准价值靠近现价，熊市向下距离更大。条长按最高情景同比例计算，点值不含期间股息。</p><div class="ffield" aria-label="三档局部估值区间与独立市场和现金检验"><div class="frow"><div class="fnm">正常化PE·熊市<span>盈利倍数上下1倍</span></div><div class="ftrack"><div class="fbar alt" style="left:36.085000%;width:4.245385%"></div><div class="fmark" style="left:50.615769%"></div></div><div class="fig">938.21–1,048.59元</div></div><div class="frow"><div class="fnm">正常化PE·基准<span>盈利倍数上下1倍</span></div><div class="ftrack"><div class="fbar " style="left:48.857308%;width:4.885769%"></div></div><div class="fig">1,270.29–1,397.32元</div></div><div class="frow"><div class="fnm">正常化PE·牛市<span>盈利倍数上下1倍</span></div><div class="ftrack"><div class="fbar moss" style="left:66.215769%;width:5.517692%"></div></div><div class="fig">1,721.61–1,865.07元</div></div><div class="frow"><div class="fnm">股息折现检验<span>已含全部未来股息</span></div><div class="ftrack"><div class="fbar alt" style="left:21.783846%;width:39.225000%"></div></div><div class="fig">566.38–1,586.23元</div></div><div class="frow"><div class="fnm">历史PE分位参照<span>TTM每股利润乘历史中间一半PE区间</span></div><div class="ftrack"><div class="fbar " style="left:53.495385%;width:38.954231%"></div></div><div class="fig">1,390.88–2,403.69元</div></div></div><p class="small">不同增长期限给出明显分歧，不把区间并集当公允价值。横轴：人民币0–2600元；黑线为现价。前三行除区间股息，DDM含息；历史行仅为市场参照。</p><h3>第四步 · 现价仍要求利润恢复</h3><div class="tblscroll"><table class="tbl txt" data-fullscan-role="implied"><caption>除区间分红的价值反推，每次只改一项，其余固定基准；不是同时要求三个隐含值都成立，也不是一致预期。</caption><thead><tr><th>假设</th><th>基准假设</th><th>现价隐含</th><th>差距</th></tr></thead><tbody><tr><td>正常化年收入</td><td>1,750.00亿元</td><td>1,726.66亿元</td><td>−23.34亿元</td></tr><tr><td>归母利润率</td><td>49.00%</td><td>48.35%</td><td>−0.65个百分点</td></tr><tr><td>PE倍数</td><td>21.00倍</td><td>20.72倍</td><td>−0.28倍</td></tr><tr><td>PE对应持续增长</td><td>4.28%</td><td>4.23%</td><td>统一Ke8%、分配率75%解释；非增长保证</td></tr></tbody></table></div><div class="plain"><span class="pl">一句话总结</span><p>正常化PE基准≈1,334元，只比现价略高。最敏感的是PE：市场愿给每年利润多少倍价格，取决于增长能持续多久；成熟增长较低时，股息模型价值更弱，仍需后续盈利与实际分红验证。</p></div></section>
+<section class="reveal on" id="valuation-appendix" ><div class="slabel">估值机制附录</div><h2>把盈利、股息和计价时点分开计算</h2><p>主方法：一年后的除区间分红价格＝年收入能力×归母利润率÷现股数×PE；今日价值再除以(1＋Ke)。</p><p>估值采用注销后现股数，不使用中期加权EPS分母；精确数见注释。收入尺度参照TTM 1,701.52亿元、H1年化1,814.07亿元及Q2年化1,471.76亿元；年化未消除季节性，不当作年度预测。</p><p>稳定增长解释：PE＝分配率×(1＋g)÷(Ke−g)，所以g＝(PE×Ke−分配率)÷(PE＋分配率)。该比较统一Ke8%及分配率75%，只解释倍数需要的增长，不把它冒充三档各自要求回报下的盈利预测。</p><p>DDM由实际TTM每股利润起算，五年EPS增速熊／基准／牛为0%／4%／7%，逐年分配75%；第六年起增长0%／2%／3%、分配80%，Ke分别9%／8%／7%。低、中、高档代表停滞、温和恢复、改革较成功；成熟增速降低且提高分配率，反映较少再投资需要，均为分析假设而非公司长期承诺。</p><p>持有期现金另假设未来一年收到相当于各档正常化年度盈利75%的分红，统一放在期限末折现。该金额不是已经宣派的2026中期或末期股息，也不是实际FY2026利润预测；若金额减少或支付延后，含息价值随之下降。已付股息排除，未来新增回购为零，注销只通过股数影响盈利。</p><p>决策赔率按今日含息价值空间比较：各档价值加同一期股息现值，除现价减一；<span class="g">平衡价</span>是基准与熊市两项含息现值的平均，表示上下价值空间对称，不暗含相等发生概率。未折现的名义一年回报另列，避免把要求回报折现后的价值差当作实际股价收益。</p><div class="tblscroll"><table class="tbl txt" data-fullscan-role="derivations"><caption>承重推算 · 原始金额转换为亿元，百分比保留两位；每股价值为元。计算保留未舍入输入，正文按显示精度四舍五入。</caption><thead><tr><th>数值</th><th>输入</th><th>公式</th><th>来源（页·附注）</th></tr></thead><tbody><tr><td>单Q2收入、归母及归母同比</td><td>两年H1与Q1原值</td><td>累计相减；归母本期/同期−1 ＝ 367.94；172.74；−6.90</td><td>2026H1第5、30–31页及同期比较；两年Q1合并利润表</td></tr><tr><td>TTM归母与现股每股盈利</td><td>FY2025、H12026、H12025归母与股数</td><td>年度＋本期−同期；除现股数 ＝ 814.34；65.14</td><td>FY25第61–62页；H1第31–32页</td></tr><tr><td>收入／归母四年CAGR</td><td>FY2021与FY2025；归母采用追溯数</td><td>(末年/首年)^(1/4)−1，% ＝ 12.29；11.94</td><td>FY2023第5页；FY2025合并报表</td></tr><tr><td>归母桥合计</td><td>各经营项目同比增减及税、少数权益</td><td>首尾归母之差，亿元 ＝ −12.81</td><td>两年H1/Q1合并利润表</td></tr><tr><td>平台增量分类抵消比例</td><td>其他直销、批发与平台H1增量</td><td>负向两项/平台正增量，% ＝ 95.57</td><td>两期H1经营数据万元表；分类非因果</td></tr><tr><td>合并OCF同比</td><td>H1两期现金流</td><td>本期/同期−1，% ＝ 438.84</td><td>2026H1第33–34页及同期比较</td></tr><tr><td>OCF增量／金融四类增量／占比</td><td>客户存款；三类金融资产净流出原符号</td><td>分别差分；金融增量/合并增量 ＝ 575.72；569.22；98.87</td><td>2026H1第33–34页及同期比较；现金定义第82页</td></tr><tr><td>现金代理B及扣资本开支后／同比</td><td>OCF去四类净贡献，再去现金利息手续费</td><td>部分调整；再扣合并资本开支；同比% ＝ 379.71；371.38；4.13</td><td>2026H1第33–35页及同期比较；金融成本未完整剥离</td></tr><tr><td>PE三档每股现值</td><td>三档年收入、净利率、现股数、PE与Ke</td><td>每股盈利×PE/(1＋Ke)，元 ＝ 993.40；1,333.80；1,793.34</td><td>情景表分析假设；H1股数</td></tr><tr><td>现价隐含PE／年收入</td><td>现价，其余基准固定</td><td>代数逆解主方法 ＝ 20.72；1,726.66</td><td>Wind9月7日；情景表</td></tr><tr><td>DDM三档现值</td><td>实际TTM盈利；五年及永续假设</td><td>五年股息现值＋第六年股息/(Ke−g)折现，元 ＝ 566.38；952.04；1,586.23</td><td>TTM原报推算；上述分析假设</td></tr><tr><td>熊／基准／牛折现后含息价值差</td><td>三档主值、各档股息现值、现价</td><td>(价值＋股息现值)/现价−1，% ＝ −21.37；4.97；40.36</td><td>一年模型；期末分红是假设</td></tr><tr><td>含息价值赔率／平衡价</td><td>基准、熊市含息现值</td><td>上行/下行；两档含息现值平均 ＝ 0.23；1,208.12</td><td>同一主方法、同一持有期</td></tr></tbody></table></div><p class="small">当前已发行股数1,250,081,601股；相关最新明确库存股余额为零。H1股数与回购后变更一致，不添加未披露激励。全部股息均为投资者税前假设。</p><div class="plain"><span class="pl">白话解读</span><p>每股价值包含对持续盈利的判断，持有期现金则取决于未来分红。金额少于假设或到账更晚，今日含息价值会变低；到期应核对实际收款，而非只看方案授权。</p></div></section>
+<section class="reveal on" id="risks" ><div class="slabel">风险登记 · 验证</div><h2>最强反证是需求恢复不足以支撑持续盈利</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="risk-register"><caption>按对盈利和价值的潜在伤害排序；概率为定性分析判断。观察窗口不是公司承诺披露日。</caption><thead><tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr></thead><tbody><tr><td>1</td><td>终端需求及综合售价持续走弱</td><td>2026H1产品结构和价格体系重整</td><td>量增不足抵价格／组合拖累，净利率下移</td><td>熊档收入能力1,600亿元、净利率47%，见情景表</td><td>中高：已出现压力</td><td>2026Q3：可比单季收入与毛利；不能只看平台占比</td></tr><tr><td>2</td><td>长期增长不足以支持当前倍数</td><td>截至2026-09-07，DDM与PE价值有差距</td><td>持续增长期限缩短，市场倍数降低</td><td>敏感性表中PE为第一驱动；现金模型非价格底线</td><td>中：由未来需求决定</td><td>FY2026年报：全年组合、回款与分配；检验长期假设</td></tr><tr><td>3</td><td>改革改变预收与收入可比性</td><td>2026年四月起非飞天部分产品代售</td><td>预收与发货的对应关系改变，旧领先指标解释力减弱</td><td>渠道库存缺少数量，精确影响尚难估计</td><td>中：销售模式变化已发生</td><td>2026Q3：代售确认与退货条款、终端成交量和价格</td></tr><tr><td>4</td><td>金融及关联权益侵蚀可分配现金</td><td>2026H1财务公司存款和同业收付波动</td><td>流动性、信用及内部抵销使集团现金不等于归母现金</td><td>存款债权须偿付；子公司少数股东按其权益分享利润与净资产，非债权优先级</td><td>中低：公司称风险可控，仍须检查</td><td>FY2026年报：财务公司资产质量、关联余额与审计意见</td></tr><tr><td>5</td><td>未来分红低于模型或延后</td><td>2026年六月只有中期授权、未定金额日期</td><td>期间现金减少，含息价值空间下降</td><td>模型一年分红75%为假设，不是应收款</td><td>中：年度政策在、具体方案未出</td><td>2027-09-07前：实际收到金额与时间，政策期后安排</td></tr><tr><td>6</td><td>治理程序与长期投资回报不佳</td><td>2026年已公告原财务负责人留置及免职</td><td>问责、关联交易或资本投入影响经营与回报</td><td>指控及潜在损失未获量化，无法给可靠金额</td><td>待信息：不把未知写作低风险</td><td>FY2026年报：调查进展、内控结论及项目现金回报</td></tr></tbody></table></div><div class="tline"><div class="tstop warn"><span class="tw">2026Q3</span><b>改革是否改善利润</b><p>若可比收入及毛利继续恶化，弱需求解释增强，温和修复假设下修。</p></div><div class="tstop"><span class="tw">FY2026年报</span><b>跨季确认现金与组合</b><p>全年数据消除部分季节性；核对关联余额、分红与资本投入。</p></div><div class="tstop"><span class="tw">2027-09-07</span><b>持有期现金验算</b><p>按实际支付核对模型股息，而非把授权金额当到账。</p></div></div><div class="plain"><span class="pl">白话解读</span><p>最大的风险是消费者支付意愿长期走弱，改革只能调整销售路径，未能恢复盈利。后续先看可比收入与毛利，再用全年现金和实际分红确认，不能仅靠平台增长排除风险。</p></div></section>
+<section class="reveal on" id="decision" data-fullscan-role="decision" data-verdict="neutral-cautious"><div class="slabel">最终判断</div><h2>中性偏谨慎：等待改革兑现为每股回报</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="decision-block"><caption>所有赔率、平衡价及现金假设使用同一正常化PE主方法和一年期限；折现价值差不等于名义股价回报。</caption><thead><tr><th>项目</th><th>判断</th></tr></thead><tbody><tr><td>论点</td><td>渠道控制增强只是条件；需要真实消费、综合售价和成本后盈利共同改善，才能提高持续每股回报。</td></tr><tr><td>基准对一致预期</td><td>无一致预期可比：供应商预测PE未给预测年份与样本。以除区间股息的现价反推代替；隐含年收入≈1,726.7亿元，基准1,750亿元，其他基准输入固定。</td></tr><tr><td>赔率</td><td>按折现后含息价值差：熊市−21.37%、基准+4.97%；基准上行∶熊市下行≈0.23∶1。不是实际一年回报率或发生概率。</td></tr><tr><td>平衡价</td><td>≈1,208.12元，为基准与熊市含股息现值对称的价格；现价高8.9%。不是交易指令，亦不等于名义一年收益的对称价。</td></tr><tr><td>持有回报</td><td>2026-09-07至2027-09-07；模型假设期末收到熊/基准股息≈45.12/51.45元，现金收益率≈3.43%/3.91%，新增回购零。未折现名义总回报分别−14.29%/+13.37%；现金与期末价格均为情景，非已宣派承诺。</td></tr><tr><td>分项置信度</td><td>论点证据 高（报表及原始对账）；现金与资产负债表 中（金融成本与抵销未完整分拆）；治理 中（具体调查与关联安排仍需跟踪）；估值输入 低（增长期限、正常化利润及未来分配为假设）。提升最低项的观察点：可比产品盈利恢复、实际分红与期后现金同时兑现。</td></tr><tr><td>判断</td><td>中性偏谨慎（等待验证）：折现后熊市下行大于基准上行，且较低长期增长的现金检验更弱。下一检验点为2026Q3，不把历史分位当充分理由。</td></tr></tbody></table></div><div class="callout"><b>最强反方观点：</b>主动减少不健康发货可能改善未来渠道，指定产品提价和更直接销售也可能先于利润恢复；半年压力未必代表品牌定价权永久下降。<b>改变判断的证据：</b>若后续终端需求与综合利润同步改善、现金分配按计划实现，当前保守持续增长假设应上调；若仅平台占比上升而盈利继续下降，温和修复逻辑失效。</div></section>
+<section class="reveal on" id="glossary" ><div class="slabel">名词速查</div><h2>容易混淆的是口径，不只是名词</h2><div class="tblscroll"><table class="tbl gloss" ><caption>只收录本报告用到的经营与估值口径。</caption><thead><tr><th>术语</th><th>白话解释</th></tr></thead><tbody><tr><td>归母净利润</td><td>扣除少数股东份额后属于上市股东的利润。</td></tr><tr><td>推算单二季度</td><td>可比半年累计流量减一季；不相减EPS、收益率或期末余额。</td></tr><tr><td>滚动十二个月（TTM）</td><td>上年度加本期累计减上年同期，不是未来预测。</td></tr><tr><td>代售与控制权</td><td>受托销售不必先买下商品；收入确认与收款时点仍需辨明。</td></tr><tr><td>合同负债</td><td>预收但尚未履约的款项；销售模式改变会影响可比性。</td></tr><tr><td>混合吨价</td><td>分类收入除销售吨数，混合了规格、品种与渠道。</td></tr><tr><td>基酒与半成品</td><td>仍待陈放、勾兑或包装，不等于立即可售商品。</td></tr><tr><td>现金转化率</td><td>合并OCF除合并净利润，仍受金融收付干扰。</td></tr><tr><td>现金代理A与B</td><td>A去四类金融净收付，B再去利息手续费；均非完整酒业现金。</td></tr><tr><td>正常化盈利</td><td>假设下可持续的一年盈利能力，不是公司业绩指引。</td></tr><tr><td>除区间分红价值</td><td>不含期间另收股息的价格现值，与DDM比较须统一现金范围。</td></tr><tr><td>股息折现（DDM）</td><td>按要求回报把未来股息换成今日价值。</td></tr><tr><td>永续终值</td><td>预测期后持续分配的估值，对增长与要求回报敏感。</td></tr><tr><td>月度历史分位</td><td>当前倍数在月末样本的位置，不预示必然回归中位。</td></tr><tr><td>平衡价与含息价值差</td><td>平衡价使基准／熊档今日含息价值空间对称，不代表概率相等。</td></tr></tbody></table></div></section><footer><p>数据截止：财务2026-06-30，公告及公开材料核查至2026-09-07；行情为当日15:30:24–59（北京时间）已收盘快照，国债曲线为当日盘后。</p>
+<p>来源：贵州茅台FY2021–2025年报、2025及2026年一季报和半年报（发行人CAS原报，经披露索引取得）；原文见<a href="https://pdf.dfcfw.com/pdf/H2_AN202604161821275610_1.pdf">2025年报</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202604241821559413_1.pdf">2026一季报</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202608141827994408_1.pdf">2026半年报</a>。另核对回购注销、权益分派、股东会、调价、关联交易及财务公司材料；<a href="https://www.moutai.com.cn/mtjt/2026-08/21/article_2026082123470131571.html">8月21日业绩会实录节选</a>及<a href="https://www.moutai.com.cn/mtgf/qygk/gsjj/index.html">公司简介中的累计分红声明</a>。管理层说明与分析推断分别标识。</p>
+<p>市场及同业：Wind金融数据服务，原始快照、六十个月末和三个月实际返回日样本；同行最新原报核对五粮液、泸州老窖、山西汾酒。<a href="https://yield.chinabond.com.cn/cbweb-cbrc-web/cbrc/showCbrc">中债国债收益率曲线</a>；<a href="https://finance.sina.com.cn/chanjing/jync/2026-09-07/doc-iniqyeui0593557.shtml">新浪酒价内参9月7日终端参考</a>，非批发报价。</p>
+<p>审计状态：FY2025由天健出具标准无保留审计意见；H1与Q1未经审计。单季度、TTM、占比及现金代理为推算，FY2021追溯边界见历史表。估值、未来股息与风险分档为分析假设，不是公司指引。</p>
+<p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p></footer></main><script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els = document.querySelectorAll('.reveal');
@@ -684,6 +318,4 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
   els.forEach(function(e){ io.observe(e); });
 })();
-</script>
-</body>
-</html>
+</script></body></html>
