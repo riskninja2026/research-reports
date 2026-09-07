@@ -1586,6 +1586,35 @@
       "generation": "v2.7",
       "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
+    },
+    {
+      "slug": "zhongji-innolight-2026q2-fullscan",
+      "product": "fullscan",
+      "name": "中际旭创",
+      "name_en": "Zhongji Innolight",
+      "tickers": [
+        "300308.SZ",
+        "03308.HK"
+      ],
+      "ticker_label": null,
+      "venue": "SZSE",
+      "sector_zh": "信息技术",
+      "chip": "通信设备",
+      "period_label": "2026Q2",
+      "cutoff": "2026-06-30",
+      "announced": null,
+      "date_label": null,
+      "type_label": null,
+      "hook": "高速光模块升级已兑现为利润，现金回收、扩产回报与稀释后的每股收益仍需验证。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
+      "published": "2026-09-07",
+      "published_at": "2026-09-07T03:54:58-04:00",
+      "revised": null,
+      "revision": null,
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
+      "lang": "zh-CN"
     }
   ]
 }

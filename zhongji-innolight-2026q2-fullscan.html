@@ -1,0 +1,546 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>中际旭创 2026Q2 Fullscan 全景尽调</title><style>
+:root{
+  --paper:#EDEFF2;
+  --card:#F8F9FB;
+  --ink:#0F1A22;
+  --ink2:#3C4A56;
+  --ink3:#6D7B88;
+  --rule:#C9D0D8;
+  --rule-soft:#DDE2E8;
+  --indigo:#1E4B8F;
+  --indigo-deep:#122A4B;
+  --plum:#A32B57;
+  --moss:#2C6A57;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,"Roboto Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.up{color:var(--moss)}
+.down{color:var(--plum)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--indigo-deep);
+  color:#E9EDF3;
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 100%;
+  pointer-events:none;
+}
+.hero .wrap{position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7FA3D4;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,7vw,72px);
+  line-height:1.12;
+  letter-spacing:.02em;
+  font-weight:400;
+  margin:18px 0 22px;
+  color:#FFF;
+}
+.hero .lede{
+  max-width:640px;font-size:17px;line-height:1.85;color:#B9C7DA;
+}
+.hero .lede b{color:#FFF;font-weight:600}
+.dual{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:48px 0 0;border-top:1px solid rgba(255,255,255,.18);
+}
+.dual > div{padding:28px 0 44px}
+.dual > div:first-child{border-right:1px solid rgba(255,255,255,.18);padding-right:32px}
+.dual > div:last-child{padding-left:32px}
+.dual .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:#7FA3D4;margin-bottom:10px}
+.dual .big{font-family:var(--mono);font-size:clamp(44px,9vw,76px);line-height:1;font-weight:600}
+.dual .a{color:#8FB6E8}
+.dual .b{color:#F3899F}
+.dual .cap{margin-top:12px;font-size:14.5px;color:#B9C7DA;line-height:1.6}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0 8px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.slabel{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--indigo);margin-bottom:14px;
+}
+h2{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(26px,4vw,38px);line-height:1.3;letter-spacing:.02em;
+  margin-bottom:18px;
+}
+h3{font-size:16px;font-weight:650;letter-spacing:.04em;margin:36px 0 14px;color:var(--ink)}
+p{margin-bottom:16px;color:var(--ink2);max-width:76ch}
+p strong{color:var(--ink);font-weight:650}
+.small{font-size:13.5px;color:var(--ink3);line-height:1.7}
+
+/* ---------- METRIC GRID ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:8px 0 12px}
+.cell{background:var(--card);padding:22px 20px 20px}
+.cell .k{font-size:13px;color:var(--ink3);letter-spacing:.05em}
+.cell .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1.25;margin:6px 0 2px}
+.cell .u{font-size:13px;color:var(--ink3);font-family:var(--sans);margin-left:3px}
+.cell .d{font-family:var(--mono);font-size:12.5px;color:var(--ink3);display:flex;gap:14px;margin-top:8px}
+
+/* ---------- BAR ROWS ---------- */
+.rows{margin:6px 0 8px;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:150px 1fr 106px;gap:16px;align-items:center;
+  padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.row .nm{font-size:14.5px;font-weight:600}
+.row .nm span{display:block;font-weight:400;font-size:12.5px;color:var(--ink3);letter-spacing:0}
+.track{background:#DFE4EA;height:16px;position:relative}
+.fill{height:100%;background:var(--indigo)}
+.fill.alt{background:var(--plum)}
+.fill.soft{background:#8FA8CC}
+.row .fig{text-align:right;font-family:var(--mono);font-size:14.5px;font-weight:600}
+.row .fig span{display:block;font-size:12px;font-weight:400}
+
+/* ---------- COLUMNS CHART ---------- */
+.cols{display:flex;align-items:flex-end;gap:28px;height:230px;margin:26px 0 0;
+  border-bottom:1px solid var(--ink);padding:0 4px}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col .bar{width:100%;max-width:120px;background:var(--plum);position:relative}
+.col .bar.gray{background:#9AA6B2}
+.col .val{font-family:var(--mono);font-size:19px;font-weight:600;margin-bottom:8px}
+.collabels{display:flex;gap:28px;padding:10px 4px 0}
+.collabels div{flex:1;text-align:center;font-size:13px;color:var(--ink3);line-height:1.5}
+.collabels b{display:block;color:var(--ink);font-weight:600;font-size:13.5px}
+
+/* ---------- STACK ---------- */
+.stacks{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+.stack .cap{font-size:13px;color:var(--ink3);margin-bottom:8px}
+.stackbar{display:flex;height:44px;border:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:13px;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.p{background:var(--indigo)}
+.seg.q{background:var(--plum)}
+.legend{display:flex;gap:20px;margin-top:12px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:-1px}
+.legend .p{background:var(--indigo)}
+.legend .q{background:var(--plum)}
+
+/* ---------- SIGNATURE FLOW ---------- */
+.flowbox{background:var(--card);border:1px solid var(--rule);padding:26px 20px 18px;margin-top:22px;overflow-x:auto}
+.flowbox svg{display:block;min-width:660px;width:100%;height:auto}
+.flow-note{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);
+  font-size:14px;color:var(--ink2)}
+.flow-note .badge{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--moss);white-space:nowrap}
+
+/* ---------- FINDINGS ---------- */
+.finds{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:20px}
+.find{background:var(--card);padding:24px 22px}
+.find .t{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
+.find p{font-size:14.5px;line-height:1.75;margin:0;color:var(--ink2)}
+.find.warn{border-left:3px solid var(--plum)}
+.find.good{border-left:3px solid var(--moss)}
+
+/* ---------- TABLE ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14px}
+.tbl caption{text-align:left;font-size:13px;color:var(--ink3);padding-bottom:8px}
+.tbl th{text-align:right;font-weight:600;font-size:12.5px;color:var(--ink3);letter-spacing:.06em;
+  padding:9px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child{text-align:left}
+.tbl td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tbl td:first-child{text-align:left;font-family:var(--sans)}
+.tbl tbody tr:hover{background:#E4E8EE}
+.tbl .grp td{background:#E4E8EE;font-weight:650;font-family:var(--sans)}
+.tblscroll{overflow-x:auto}
+
+.quote{
+  font-family:var(--serif);font-size:clamp(20px,3vw,27px);line-height:1.65;letter-spacing:.02em;
+  color:var(--ink);border-left:3px solid var(--plum);padding:6px 0 6px 24px;margin:34px 0;max-width:44ch;
+}
+.callout{background:#E3E8EF;border-left:3px solid var(--indigo);padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--ink2)}
+.callout b{color:var(--ink)}
+
+footer{margin-top:64px;padding:34px 0 60px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink3)}
+footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stacks,.finds{grid-template-columns:1fr}
+  .dual{grid-template-columns:1fr}
+  .dual > div:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18);padding-right:0;padding-bottom:30px}
+  .dual > div:last-child{padding-left:0;padding-top:26px}
+  .row{grid-template-columns:110px 1fr 84px;gap:10px}
+  .wrap{padding:0 20px}
+  .cols{gap:14px}.collabels{gap:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
+</style></head><body><header class="hero"><div class="wrap"><div class="eyebrow">中际旭创 300308.SZ · 03308.HK ｜ 2026Q2 FULLSCAN ｜ 财务截至2026.06.30 · 行情2026.09.07盘中</div>
+<h1>利润翻倍之后，<br>谁来为增长付现金</h1>
+<p class="lede">高速光模块升级已进入利润表，单二季度归母利润继续高增，现金却在采购与扩产中流出。<b>高增长已有兑现，现金与每股回报仍待证明</b>：新融资缓解了资金约束，却没有自动提高资本回报；当前价格还要求技术领先与高盈利延续，股东最终需要看到的是回款和稀释后的收益。</p>
+<div class="dual"><div><div class="tag">推算单二季度归母净利润 · 同比</div><div class="big a">+228.2%</div><div class="cap">同口径半年累计减去一季累计；高速产品升级已形成收入和利润，未来持续性仍需验证。</div></div><div><div class="tag">推算单二季度自由现金流代理</div><div class="big b">−44.4亿元</div><div class="cap">经营现金流减购建长期资产付现；不等同股东可分配现金，也未包括全部投资支出。</div></div></div></div></header><main class="wrap"><section class="reveal on" id="tldr" ><div class="slabel">三十秒版本 · 先看结论</div><h2>先分清赚钱、收钱和每股回报</h2><div class="tldr"><ul>
+<li><b>它是谁：</b>以高速光模块为主的全球光互联供应商，客户为数据中心、网络设备及通信领域企业；不是直接出售算力的公司。</li>
+<li><b>本期成绩：</b>推算单二季度收入222.8亿元、归母79.2亿元；毛利率46.4%，产品升级已兑现为利润。</li>
+<li><b>核心矛盾：</b>推算单二季度经营现金流−15.7亿元。新融资缓解资金压力，库存、应收和扩产仍需转成现金回报。</li>
+<li><b>容易踩的坑：</b>激励用途回购不等于永久注销；子公司的融资也不必然全归母公司。利润增长快，不代表每股现金增长同样快。</li>
+<li data-verdict="neutral-cautious"><b>结论：</b>中性偏谨慎。盘中价896.87元，主方法基准≈958.1元、熊市≈411.7元；回款与扩产回报改善才改变判断。</li>
+</ul></div></section>
+<section class="reveal on" id="primer" ><div class="slabel">入门</div><h2>光模块卖的是连接能力，现金先付给供应链</h2><p><span class="g">光通信收发模块</span>将电信号变成光信号再还原，连接服务器。公司设计、采购、封装测试并交付赚取差额；收入取决于连接需求、客户架构、采购份额、交付与价格。</p>
+<div class="steps"><div class="step"><div class="n">环节 1</div><b>客户确定架构</b><p>客户选择速率、功耗和接口，通过认证才可能取得采购。</p>
+</div><div class="step"><div class="n">环节 2</div><b>采购并制造</b><p>光电芯片、基板及封装测试决定交付，部分供应需预付。</p>
+</div><div class="step"><div class="n">环节 3</div><b>交付形成利润</b><p>收入减生产及研发等成本；出货、验收与付款并不同步。</p>
+</div><div class="step"><div class="n">环节 4</div><b>回收并再投资</b><p>回款再用于采购、扩产、激励和分红，检验资本回报。</p>
+</div></div><p>本文以成交额更大的A股定价；采用中国企业会计准则（CAS）合并报表。“母公司”仅指上市主体；归母利润属于上市公司股东，已扣少数股东，合并现金流包括子公司全部现金。</p>
+<p>FY为完整财年，H1为上半年，TTM为最近十二个月。毛利是收入减营业成本。单二季度可比流量以半年减一季推算；余额、每股收益和收益率不相减。分部、产品与地区不相加。</p>
+</section>
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="semis-hardware"><div class="slabel">基础财务 · 业务地图</div><h2>规模跃升属实，现金表现与利润分离</h2><div class="grid" data-financials="consolidated"><div class="cell" ><div class="k">营业收入</div><div class="v">222.81<span class="u">亿元</span></div><div class="d"><span>2026Q2推算 · 同比+174.57%</span></div></div><div class="cell" ><div class="k">毛利 / 毛利率</div><div class="v">103.43<span class="u">亿元</span></div><div class="d"><span>推算毛利率46.42%</span></div></div><div class="cell" ><div class="k">营业利润 / 利润率</div><div class="v">96.96<span class="u">亿元</span></div><div class="d"><span>推算CAS营业利润率43.52%</span></div></div><div class="cell" ><div class="k">归母净利润 / 净利率</div><div class="v">79.17<span class="u">亿元</span></div><div class="d"><span>推算归母口径净利率35.53%</span></div></div><div class="cell" ><div class="k">经营现金流</div><div class="v">−15.68<span class="u">亿元</span></div><div class="d"><span>推算 · 上年同季10.54亿元</span></div></div><div class="cell" ><div class="k">自由现金流代理</div><div class="v">−44.41<span class="u">亿元</span></div><div class="d"><span>推算 · 经营现金流减现金资本开支</span></div></div></div><div class="tblscroll"><table class="tbl" data-financials="history"><caption>五年合并财务 · 人民币亿元；CAS，FY2025已审计、标准无保留意见；A股控制财务口径，H股仅补充资本与治理披露。毛利及各利润率为推算，ROE为净资产收益率。</caption><thead><tr><th>项目</th><th>FY2021</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th></tr>
+</thead><tbody><tr><td>营业收入</td><td>76.95</td><td>96.42</td><td>107.18</td><td>238.62</td><td>382.40</td></tr>
+<tr><td>营业成本</td><td>57.27</td><td>68.16</td><td>71.82</td><td>157.96</td><td>221.66</td></tr>
+<tr><td>毛利（推算）</td><td>19.68</td><td>28.26</td><td>35.36</td><td>80.67</td><td>160.74</td></tr>
+<tr><td>毛利率%（推算）</td><td>25.57</td><td>29.31</td><td>32.99</td><td>33.80</td><td>42.04</td></tr>
+<tr><td>CAS营业利润</td><td>9.63</td><td>13.27</td><td>24.94</td><td>60.50</td><td>135.97</td></tr>
+<tr><td>营业利润率%（推算）</td><td>12.51</td><td>13.77</td><td>23.27</td><td>25.35</td><td>35.56</td></tr>
+<tr><td>归母净利润</td><td>8.77</td><td>12.24</td><td>21.74</td><td>51.71</td><td>107.97</td></tr>
+<tr><td>归母净利率%（推算）</td><td>11.40</td><td>12.69</td><td>20.28</td><td>21.67</td><td>28.24</td></tr>
+<tr><td>每股收益EPS（元）</td><td>0.86≈</td><td>1.10≈</td><td>2.00</td><td>4.72</td><td>9.80</td></tr>
+<tr><td>加权ROE%（披露）</td><td>9.98</td><td>10.28</td><td>16.58</td><td>31.23</td><td>43.84</td></tr>
+<tr><td>经营现金流</td><td>8.13</td><td>24.49</td><td>18.97</td><td>31.65</td><td>108.96</td></tr>
+<tr><td>现金资本开支</td><td>8.40</td><td>7.92</td><td>17.04</td><td>28.66</td><td>27.60</td></tr>
+<tr><td>FCF代理（推算）</td><td>−0.27</td><td>16.57</td><td>1.93</td><td>2.98</td><td>81.36</td></tr>
+</tbody></table></div><p>四年复合增速（CAGR）推算：收入49.3%、归母87.3%；增长集中在后段，平均数不能代表平滑经营周期。每股收益为归属普通股股东的加权每股利润：历史早期值按实际转增因子机械调整并标≈，后续采用最新重列比较数；不据已舍入每股数计算复合增长率。</p>
+<div class="cols" role="img" aria-label="五年营业收入与归母利润同尺度柱状图"><div class="col"><div class="bars"><div class="bar rev" style="height:20.124000%"></div><div class="bar np" style="height:2.293354%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:25.213941%"></div><div class="bar np" style="height:3.200818%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:28.028249%"></div><div class="bar np" style="height:5.683921%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:62.401150%"></div><div class="bar np" style="height:13.523783%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:100.000000%"></div><div class="bar np" style="height:28.235545%"></div></div></div></div><div class="collabels"><div>FY2021</div><div>FY2022</div><div>FY2023</div><div>FY2024</div><div>FY2025</div></div><div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div><p class="small">收入和利润在后段同时加速。两组柱都以五年最高收入为共同标尺，数值见历史表。</p>
+<div class="tblscroll"><table class="tbl" ><caption>最新流量 · 人民币亿元；2026H1与Q1未经审计，H1 ROE不作年化。Q2两列全部推算；TTM为FY2025加本期H1减上年H1，非自然年预测。</caption><thead><tr><th>项目</th><th>2025H1</th><th>2026H1</th><th>2025Q2</th><th>2026Q2</th><th>TTM至H1</th></tr>
+</thead><tbody><tr><td>营业收入</td><td>147.89</td><td>417.78</td><td>81.15</td><td>222.81</td><td>652.29</td></tr>
+<tr><td>毛利 / 毛利率%</td><td>58.16 / 39.33%</td><td>193.23 / 46.25%</td><td>33.67 / 41.49%</td><td>103.43 / 46.42%</td><td>295.81 / 45.35%</td></tr>
+<tr><td>CAS营业利润</td><td>48.77</td><td>172.31</td><td>28.88</td><td>96.96</td><td>259.51</td></tr>
+<tr><td>归母净利润</td><td>39.95</td><td>136.51</td><td>24.12</td><td>79.17</td><td>204.53</td></tr>
+<tr><td>集团净利润，含少数股东</td><td>42.42</td><td>147.33</td><td>25.52</td><td>84.17</td><td>220.71</td></tr>
+<tr><td>经营现金流</td><td>32.18</td><td>18.00</td><td>10.54</td><td>−15.68</td><td>94.77</td></tr>
+<tr><td>现金资本开支</td><td>9.54</td><td>48.02</td><td>5.52</td><td>28.73</td><td>66.08</td></tr>
+<tr><td>FCF代理</td><td>22.65</td><td>−30.02</td><td>5.02</td><td>−44.41</td><td>28.69</td></tr>
+<tr><td>EPS / 加权ROE%（披露）</td><td>3.64 / 18.84</td><td>12.31 / 37.62</td><td>不相减</td><td>不相减</td><td>不相减</td></tr>
+</tbody></table></div><p>环比为辅助比较（推算）：单二季度收入较一季增加14.3%、归母增加38.1%，毛利率提高0.36个百分点；经营现金流由一季33.68亿元转负，FCF代理由14.38亿元转负，单季金额见上表。</p>
+<p>CAS营业利润含投资、公允价值及财务费用，不等同未计利息经营利润。现金资本开支仅取购建长期资产付现；FCF代理不是全部投资现金净额。筹资分项异常见现金章节。</p>
+<div class="tblscroll"><table class="tbl" data-financials="segments"><caption>结构地图 · 亿元；正式分部单元为“收入 / 分部全部净利”，含内部交易、未扣集团少数股东；产品单元为“外部收入 / 毛利率”。—表示分类或可比数据未取得，并非整类业务不存在；产品汇总与其子项不重复相加。</caption><thead><tr><th>层级/项目</th><th>FY2021</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>2026H1</th></tr>
+</thead><tbody><tr><td>正式：高端光模块</td><td>68.71 / 8.89</td><td>90.52 / 12.17</td><td>99.67 / 23.43</td><td>227.31 / 54.25</td><td>—</td><td>—</td></tr>
+<tr><td>正式：接入网/光组件</td><td>7.48 / 0.39</td><td>6.41 / 0.12</td><td>4.25 / −1.16</td><td>4.79 / −0.50</td><td>—</td><td>—</td></tr>
+<tr><td>正式：装备</td><td>1.06 / −0.43</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>正式：汽车电子</td><td>—</td><td>—</td><td>3.34 / −0.23</td><td>7.62 / −0.03</td><td>—</td><td>—</td></tr>
+<tr><td>正式：光模块及器件</td><td>—</td><td>—</td><td>—</td><td>—</td><td>374.92 / 117.05</td><td>413.31 / 148.06</td></tr>
+<tr><td>正式：其他</td><td>—</td><td>—</td><td>—</td><td>—</td><td>9.66 / −1.25</td><td>5.80 / −0.73</td></tr>
+<tr><td>正式：抵销</td><td>−0.29 / 0.01</td><td>−0.52 / 0.04</td><td>−0.08 / 0.04</td><td>−1.10 / 0.00</td><td>−2.18 / −0.00</td><td>−1.33 / 0.00</td></tr>
+<tr><td>产品：高端</td><td>63.64 / 27.97%</td><td>87.46 / 30.75%</td><td>97.99 / 35.06%</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>产品：低速</td><td>8.97 / 14.14%</td><td>6.66 / 17.30%</td><td>3.83 / 10.50%</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>产品：光组件</td><td>3.27 / —</td><td>2.29 / —</td><td>2.02 / —</td><td>2.14 / —</td><td>—</td><td>—</td></tr>
+<tr><td>产品：汽车电子</td><td>—</td><td>—</td><td>3.34 / —</td><td>7.62 / —</td><td>—</td><td>—</td></tr>
+<tr><td>产品：装备</td><td>1.07 / —</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>产品：光模块汇总</td><td>72.61 / 26.26%</td><td>94.13 / 29.80%</td><td>101.82 / —</td><td>228.86 / 34.65%</td><td>374.57 / 42.61%</td><td>413.55 / 46.59%</td></tr>
+<tr><td>产品：其他</td><td>—</td><td>—</td><td>—</td><td>—</td><td>7.83 / —</td><td>4.23 / —</td></tr>
+<tr><td>光模块合计销量（万只）</td><td>1,041</td><td>947</td><td>746</td><td>1,459</td><td>2,109</td><td>全球未披露</td></tr>
+<tr><td>混合每只收入（元，推算）</td><td>698</td><td>994</td><td>1,365</td><td>1,569</td><td>1,776</td><td>全球未推算</td></tr>
+</tbody></table></div><p>正式分部分类曾调整，旧类不硬接成复合增长率。早期高端/低速用当年值，后续前期分类有重列；混合每只收入受结构影响，非同型涨价。正式分部有净利和税前利润，无可比单二季度分部利润及分速率损益。</p>
+<p>集团地区收入另表披露：FY2025境内/境外36.03/346.37亿元；2025H1为20.08/127.81亿元，本期为21.63/396.15亿元，境外占比推算94.82%。本期境内/境外毛利率推算15.53%/47.93%，非地区净利润；境外集团与境外光模块销售金额略有不同。</p>
+<div class="tblscroll"><table class="tbl" ><caption>配合下图的外部产品收入 · 亿元；份额推算，与正式分部不同。</caption><thead><tr><th>期间</th><th>集团收入</th><th>光模块</th><th>其余</th><th>光模块份额</th></tr>
+</thead><tbody><tr><td>2025H1</td><td>147.89</td><td>144.32</td><td>3.57</td><td>97.58%</td></tr>
+<tr><td>2026H1</td><td>417.78</td><td>413.55</td><td>4.23</td><td>98.99%</td></tr>
+</tbody></table></div><div class="stacks"><div class="stack"><div class="cap">2025H1 · 外部产品收入</div><div class="stackbar"><div class="seg p" style="width:97.583801%"></div><div class="seg q" style="width:2.416199%"></div></div><p>光模块97.58% / 其余2.42%（推算）</p>
+</div><div class="stack"><div class="cap">2026H1 · 外部产品收入</div><div class="stackbar"><div class="seg p" style="width:98.988341%"></div><div class="seg q" style="width:1.011659%"></div></div><p>光模块98.99% / 其余1.01%（推算）</p>
+</div></div><p class="small">外部收入进一步集中于光模块。两期按同一产品收入除集团收入计算；其余项包括光组件、汽车或其他，区别于正式分部口径。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>硬件业务的必要指标 · 余额截至2026-06-30；比例和天数明确区分披露与推算。</caption><thead><tr><th>指标</th><th>当前事实或推算</th><th>阅读边界</th></tr>
+</thead><tbody><tr><td>存货及库存天数</td><td>期末净额198.26亿元；净存货÷TTM成本×365＝203.0天（推算）</td><td>减值准备2.84亿元；准备/毛额≈1.41%；不是存货必定售罄时间</td></tr>
+<tr><td>客户集中与应收</td><td>FY2025前五客户75.98%；最大客户24.06%</td><td>H1应收净额150.01亿元；期末应收÷TTM收入推算83.9天；匿名客户不作名称映射</td></tr>
+<tr><td>资本开支与产能</td><td>H1现金资本开支48.02亿元；在建工程37.07亿元</td><td>招股书披露FY2025整体利用率84.7%、2026Q1 86.2%；非H1或分速率利用率</td></tr>
+<tr><td>出货量与产品毛利</td><td>H1仅境外光模块销量1,685万只、收入395.99亿元</td><td>外部光模块毛利率46.59%；800G/1.6T各自销量、收入、单价及毛利率未披露</td></tr>
+<tr><td>研发投入与资本化</td><td>H1投入12.34亿元；费用11.53亿元，费用率2.76%（推算）</td><td>投入减费用的资本化额≈0.81亿元，≈6.57%（推算）；FY2025披露资本化率3.62%</td></tr>
+<tr><td>采购承诺与担保</td><td>H1资本性合约承诺88.04亿元，FY2025为29.25亿元；担保实际余额11.74亿元</td><td>资本性承诺不是原料长协；原料采购承诺总额及分年期限未披露。担保不等于新增合并债务</td></tr>
+<tr><td>股份支付与利润口径</td><td>H1<span class="g">股份支付（SBC）</span>4.20亿元，研发内含1.56亿元</td><td>费用已在报表中确认；估值保留持续激励成本，不加回为“现金利润”</td></tr>
+</tbody></table></div><div class="plain"><span class="pl">白话解读</span><p>盈利规模已跃升，现金尚未同步。接下来先拆利润来源，再看应收和库存何时变成回款。</p>
+</div></section>
+<section class="reveal on" id="profit" ><div class="slabel">利润来源</div><h2>规模和产品结构有效，低费用率不宜直接外推</h2><p>新增利润主要来自收入规模和毛利率，但其中也有估值与非经常项目。推算本期扣非归母73.74亿元，归母与扣非之差5.43亿元、占归母6.86%；不能把全部增量解释为产品盈利能力提高。</p>
+<div class="wfall" role="img" aria-label="单二季度归母净利润同比增量桥"><div class="wrow"><div class="nm">收入规模效应<span>固定上年同季集团毛利率</span></div><div class="wtrack"><div class="wbar up" style="left:0.000000%;width:84.239206%"></div></div><div class="fig">+58.77</div></div><div class="wrow"><div class="nm">毛利率效应<span>现期收入乘毛利率差</span></div><div class="wtrack"><div class="wbar up" style="left:84.239206%;width:15.760794%"></div></div><div class="fig">+11.00</div></div><div class="wrow"><div class="nm">营业税附加<span>费用增加为减项</span></div><div class="wtrack"><div class="wbar down" style="left:99.380975%;width:0.619025%"></div></div><div class="fig">−0.43</div></div><div class="wrow"><div class="nm">销售费用<span>保留股份支付成本</span></div><div class="wtrack"><div class="wbar down" style="left:98.977101%;width:0.403874%"></div></div><div class="fig">−0.28</div></div><div class="wrow"><div class="nm">管理费用<span>管理投入与激励</span></div><div class="wtrack"><div class="wbar down" style="left:95.893813%;width:3.083288%"></div></div><div class="fig">−2.15</div></div><div class="wrow"><div class="nm">研发费用<span>研发费用同比变动</span></div><div class="wtrack"><div class="wbar down" style="left:92.839948%;width:3.053865%"></div></div><div class="fig">−2.13</div></div><div class="wrow"><div class="nm">财务费用<span>含汇兑等财务项目</span></div><div class="wtrack"><div class="wbar down" style="left:88.059207%;width:4.780741%"></div></div><div class="fig">−3.34</div></div><div class="wrow"><div class="nm">其他营业项目<span>投资、公允价值及减值等净额</span></div><div class="wtrack"><div class="wbar up" style="left:88.059207%;width:9.517490%"></div></div><div class="fig">+6.64</div></div><div class="wrow"><div class="nm">税项及少数股东等<span>营业外、税项及少数权益</span></div><div class="wtrack"><div class="wbar down" style="left:78.895013%;width:18.681684%"></div></div><div class="fig">−13.03</div></div><div class="wrow"><div class="nm">归母同比增量<span>各项精确加总</span></div><div class="wtrack"><div class="wbar tot" style="left:0.000000%;width:78.895013%"></div></div><div class="fig">+55.04</div></div></div><p class="small">收入扩张是最大正向贡献，税项及少数股东分成是最大抵减。全部为Q2同比推算、单位亿元；规模项包含数量、价格与结构，缺少分速率销量时不拆成虚假的单价效应。</p>
+<p>桥中“其他”含公允价值与投资等项目，非主营现金。费用率下降也受收入基数和确认节奏影响；管理层解释一季部分一次性费用后续正常化，不支持永久压低研发和激励投入。</p>
+<p>本期实际税负亦提供了顺风：推算单季有效所得税率13.18%低于H1 14.49%；公司跨地区经营与税收优惠影响税率组合，不能把单季低税率当作统一法定税率。H1财务费用5.62亿元，公司归因汇兑损失增加；净利息成本低并不代表汇率敞口低。</p>
+<div class="plain"><span class="pl">白话解读</span><p>核心扩张贡献最大，但归母增量并非全来自卖模块。后续看出货增长能否保持成本后的盈利，不外推一次性或税率顺风。</p>
+</div></section>
+<section class="reveal on" id="growth" ><div class="slabel">技术迭代 · 海外经营</div><h2>领先要靠连续交付证明，路线图不是收入锁定</h2><p>竞争优势在于开发、认证、供应链和全球制造形成的交付能力，不是客户无法离开的垄断。大客户控制架构和物料分配，供给扩张会改变议价；本轮领先不保证下一轮利润份额。</p>
+<p>半年报称<span class="g">硅光</span>方案的1.6T产品已规模放量；2.4T、<span class="g">近封装光学（NPO）</span>及<span class="g">新型互联形态（XPO）</span>仍处研发、定制开发或送样阶段。8月23日管理层希望相关新形态在2027H2量产、2028更大规模出货，属于条件性目标，且部分时间表在此前交流中已经出现，不应全部视为本次新指引。</p>
+<p>管理层称收到下一年度主要客户订单、正洽谈长协；招股书却提醒客户通常不作长期采购承诺，可调整数量、规格或延期。公开材料缺少订单金额、取消条款与验收时间，方向可见度不是不可取消收入。</p>
+<p>管理层预计部分光电芯片和基板供给在2026H2至2027H1逐步释放，部分先进<span class="g">数字信号处理芯片</span>仍偏紧，以长协、预付及引入供应商应对。长协有定价、也有随行就市，并非全部锁成本；管理层称将与客户协商转嫁部分涨价压力，实现程度未量化，维持或小幅改善毛利是目标。</p>
+<p>集中度的多年方向不利于把高利润视为无条件常态：前五客户占比由FY2021 60.28%升至FY2025表列水平，前五供应商由38.60%升至51.50%；最大供应商占35.76%采购。规模扩大有助取得物料，也会放大对少数关键伙伴的依赖。关联客户销售在前五客户中占总收入8.10%；匿名客户不能据行业传闻映射为指定云厂商。</p>
+<p>生产基地包括苏州、铜陵、成都、台湾及泰国；客户所在地与制造、资金所在地不同。地区净利润、现金和<span class="g">恒定汇率增长</span>桥不足，海外增长只按报告币种陈述，不称有机增长，也不将境外利润全部视为可分配。贸易壁垒与关键物料限制可能同时影响出货和成本。</p>
+<p><span class="g">共封装光学（CPO）</span>可能重新分配模块、光引擎与封装价值。管理层称多形态将并存且有能力参与，不代表已取得订单或份额；模型只根据可验证采用判断新增业务，不将技术展示直接计入收入。</p>
+<div class="plain"><span class="pl">白话解读</span><p>更快的模块已经卖出，下一代仍待采用。供应改善、订单兑现与利润份额分别验证，时间窗口见风险表。</p>
+</div></section>
+<section class="reveal on" id="cash" ><div class="slabel">现金质量 · 资本占用</div><h2>融资能解决周转，不能替代经营回收</h2><p>利润变成现金的差额首先是营运资金问题，而非简单的付款能力问题。H1现金流调节表从集团全部净利润147.33亿元出发，存货占用−72.39亿元、经营性应收占用−92.42亿元，经营性应付释放25.56亿元；三项净占用−139.25亿元，其他净调整9.91亿元后得到表列经营现金流。这里是现金调节项目，不是资产负债表机械相减。</p>
+<p><span class="g">现金转化率</span>为经营现金流（OCF）÷集团全部净利润，H1由75.86%降至12.21%，TTM为42.94%。管理层称账期未改、期末集中发货增加应收；尚无期后回款表，该解释仍待验证，不排除延付、价格调整或坏账。</p>
+<p>H1原材料净额89.48亿元、在产品43.04亿元、产成品27.63亿元；较年末原材料推算增加99.8%、产成品增加3.3%。更接近前端备料占用，既不证明成品严重滞销，也不保证物料能按预计价格消化。跌价准备是估计，非质量担保。</p>
+<p>同口径库存天数并非同业最高，但最近层新易盛现金转化降幅更小、资本开支后现金仍正；同行备货不能替中际现金缺口免责。分层见估值表。</p>
+<p>长期预付材料另占16.05亿元，不在存货内。管理层预计小部分新厂房于2026H2交付、大部分于2027年交付；多数基建投入预计2027年开始转成收入，且保留冗余。现有利用率不等于扩产后利用率；缺少项目现金与维护支出，不估算项目<span class="g">内部收益率</span>。</p>
+<p>流动性分析以实际可用现金而非全部资产为起点。H1货币资金63.97亿元，其中受限0.33亿元，现金及等价物63.64亿元；短、长期银行借款分别3.99及4.87亿元。期后H股融资改变了资金规模，具体见资本章节；这减轻近期周转约束，却也提高了需要获得回报的资本基数。</p>
+<p>长期应付款由年末9.00亿元升至50.57亿元。招股书确认早期余额含TeraHop附回购权融资形成的<span class="g">赎回负债</span>，H1附注缺少完整性质和增量桥；将其称为供应商无息融资会误判资本结构。现金估值对这一未解释项目作保守压力扣减，同时揭示与少数权益估计重叠的可能，不能宣称拥有精确的母公司净现金。</p>
+<p>半年报预付款前五名文字金额大于总额，集中度不采用；其他筹资付款半年累计小于一季，重分类原因未明。主要损益、经营现金和现金净变动可对账，保留原口径，不编造退款，也不据局部矛盾断言造假。</p>
+<div class="plain"><span class="pl">白话解读</span><p>融资后不宜直接推论即将缺钱。关键是备料和发货能否转成回款；持续扩大占款仍会拖累资本回报。</p>
+</div></section>
+<section class="reveal on" id="capital" ><div class="slabel">资本分配 · 激励</div><h2>回购用途和少数权益，比授权金额更重要</h2><p>H股融资已改变股数；回购、奖励和子公司退出按已完成、获授权与附条件状态分别计算。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>资本与回报状态 · 截至2026-09-07；金额除注明外为人民币。</caption><thead><tr><th>事项</th><th>金额或股数</th><th>对股东的真实含义</th></tr>
+</thead><tbody><tr><td>H股融资已完成</td><td>初始及绿鞋净额合计≈60,829.7百万港元；按9月7日中间价折合≈525.96亿元</td><td>预期发行费用口径净额；换算不是实际结汇，募集资金不用于本次A股回购</td></tr>
+<tr><td>A股回购已执行</td><td>9月1–4日买入13.13亿元，对应158.52万股</td><td>不含交易费用；与授权上限分开</td></tr>
+<tr><td>回购授权</td><td>40–80亿元、价格上限1,200元/股；银行承诺贷款上限72亿元</td><td>用途为员工持股/激励；贷款承诺不等于已提款，库存股不视为永久注销</td></tr>
+<tr><td>已知奖励调整分母</td><td>已发行≈11.7791亿股；加未归属新A股≈0.1475亿股；估值分母≈11.9266亿股</td><td>保留库存股最终再发行假设；不是未知未来H股发行的绝对上限</td></tr>
+<tr><td>已批准中期股息</td><td>每股1.20元；母公司可分配利润14.15亿元</td><td>董事会依股东会授权批准，无需再提交股东会；尚未找到登记、除息或支付日</td></tr>
+<tr><td>已付与尚未宣布</td><td>H1已支付上年末期现金11.14亿元</td><td>已付部分不计未来持有回报；后续未宣布分红按零处理</td></tr>
+</tbody></table></div><p>估值含已知奖励≈1.25%增量股数并保留费用。第四期新发A股原授予价54元、当前归属价52.10元，预留价53.10元。预留年度收入门槛390亿元已被H1超过，但个人绩效和归属期仍需满足，并非已全部归属。收入考核不直接约束存货、现金或资本回报。</p>
+<p>TeraHop认股权证属于子公司；核心管理人员通过平台享有权益。外部投资者附条件退出可能由母公司发行新H股收购其权益，数量按届时估值/价格且需批准，时间超过本轮模型期限。已知奖励分母非最终稀释上限，子公司认股权证也不直接加为母公司股份。</p>
+<p>历史实际现金分红2023至2025年分别为1.57、3.55、10.00亿元；资本公积转增不算现金。资料不足以重建上市以来完整净融资/现金回报率。当前分红受母公司可分配利润约束，集团储备非母公司立即可派；章程分红原则附重大投资例外，不是固定合并利润派息承诺。</p>
+<p>拟以17.47亿元取得中石科技10.47%股权，待合规确认及过户；非控制收购，不计已实现并表收入或协同。热管理产业关联不自动证明投资回报。</p>
+<p>实控人一致行动组持股16.41%；未列非经营性占款，不等于无关联交易或利益冲突。子公司管理层持股、赎回和退出安排，都须落实至母公司可归属现金。</p>
+<div class="plain"><span class="pl">白话解读</span><p>回购股份可能交给员工，授权金额不是已拿到的现金。已批准股息可纳入本轮模型，但支付日尚待明确；奖励和子公司权益决定利润如何分。后续看股息实施、奖励归属和子公司退出条款。</p>
+</div></section>
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="正常化盈利PE"><div class="slabel">估值 · 隐含预期</div><h2>基准只留有限上行，高倍数要求更长的增长</h2><div class="grid"><div class="cell" ><div class="k">现价</div><div class="v">896.87<span class="u">元</span></div><div class="d"><span>2026-09-07 14:28:42 +08:00 · 盘中</span></div></div><div class="cell" ><div class="k">熊市价值</div><div class="v">≈411.7<span class="u">元</span></div><div class="d"><span>正常化盈利市盈率法 · 较现价−54.1%</span></div></div><div class="cell" ><div class="k">基准价值</div><div class="v">≈958.1<span class="u">元</span></div><div class="d"><span>正常化盈利市盈率法 · 较现价+6.8%</span></div></div><div class="cell" ><div class="k">牛市价值</div><div class="v">≈1,825.9<span class="u">元</span></div><div class="d"><span>正常化盈利市盈率法 · 较现价+103.6%</span></div></div><div class="cell" ><div class="k">隐含预期</div><div class="v">≈1,123<span class="u">亿元</span></div><div class="d"><span>一年后年度盈利能力的收入尺度；其余基准输入固定</span></div></div><div class="cell" data-verdict="neutral-cautious"><div class="k">判断</div><div class="v">中性偏谨慎</div><div class="d"><span>盈利继续扩张，但基准上行有限</span></div></div></div><div class="steps"><div class="step"><div class="n">方法 A</div><b>正常化盈利PE（市盈率）</b><p>市盈率是股价除每股利润。正常化后每股盈利值得多少倍？这是唯一主方法。</p>
+</div><div class="step"><div class="n">方法 B</div><b><span class="g">企业自由现金流</span>（FCFF）折现</b><p>采购占款与扩产后，经营现金支持多少价值？仅作交叉检验。</p>
+</div><div class="step"><div class="n">怎么读</div><b>先看假设，再看区间</b><p>价格反解不含股息；决策赔率另加同一期股息现值一次，不平均目标价。</p>
+</div></div>
+<h3>第一步 · 价格不低，账面倍数还受融资影响</h3><p>H股上市至9月4日共同窗口，A/H人民币日均成交额比推算14.31倍，支持A股为主；非自由流通股数比较。同日收盘A股折价6.41%（推算），非当前套利信号。</p>
+<p>全股本A价等值PE（相对归母利润）推算51.65倍，与Wind一致。2021年9月至2026年8月完整月末样本PE下四分位27.67、中位42.17、上四分位58.09倍；当前约63%月样本分位，非全日频。盈利高增压低倍数，不自动证明便宜。</p>
+<p>市净率（PB，股价除每股归母净资产）用H1账面得26.50倍，Wind为11.429倍；加IPO净额、减实际回购的<span class="g">静态备考</span>账面≈911.42亿元，对应≈11.59倍。接近不证明数据商同口径，备考不是9月已披露账面，变化不能全归因经营改善。</p>
+
+<h3>第二步 · 分层比较同业</h3><div class="tblscroll"><table class="tbl" ><caption>市场PE截至9月7日14:28:42–45；经营指标来自各公司未经审计H1合并原文。箭头2025H1→2026H1；增速、毛利率、现金转化、FCF及库存代理均推算。库存=期末净额÷H1成本×181天，不与TTM天数拼接。</caption><thead><tr><th>公司/层级</th><th>TTM PE倍</th><th>H1收入同比</th><th>毛利率</th><th>OCF/集团净利</th><th>FCF亿元</th><th>库存天</th></tr>
+</thead><tbody><tr><td>中际旭创 300308.SZ<br>研究对象</td><td>51.65</td><td>182.5%</td><td>39.3→46.3%</td><td>75.9→12.2%</td><td>−30.02</td><td>159.8</td></tr>
+<tr><td>新易盛 300502.SZ<br>最近层：模块</td><td>44.32</td><td>100.3%</td><td>47.4→48.4%</td><td>24.2→21.4%</td><td>3.53</td><td>195.7</td></tr>
+<tr><td>光迅科技 002281.SZ<br>邻近：器件+多网络</td><td>132.09</td><td>26.1%</td><td>22.5→25.5%</td><td>−30.5→−215.7%</td><td>−18.37</td><td>333.5</td></tr>
+<tr><td>天孚通信 300394.SZ<br>上游：器件/封装/代工</td><td>125.56</td><td>15.1%</td><td>50.8→60.9%</td><td>67.6→83.1%</td><td>6.93</td><td>151.9</td></tr>
+</tbody></table></div><p>中际增速高，新易盛毛利和现金转化更好，溢价需持续优势支持。天孚无源/有源一增一减，材料约束提产，高毛利含组合因素；光迅、天孚不与最近层平均倍数。</p>
+
+<h3>第三步 · 基准仍需增长</h3><p>验证与折现期为2026-09-07至2027-09-07。正常化收入是年度盈利能力尺度，非FY2027预测或管理层数值指引。基准较单季年化收入扩大≈34.6%、毛利率回落，已假设后续交付成功。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>情景假设与结果 · 全部预测为分析假设；年度盈利能力、价格现值与持有期现金严格区分。</caption><thead><tr><th>驱动/结果</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据</th></tr>
+</thead><tbody><tr><td>正常化年度收入</td><td>≈950.00亿元</td><td>≈1,200.00亿元</td><td>≈1,500.00亿元</td><td>参照H1/Q2年化及管理层需求方向；转化弱、速率升级、加速采用三档假设</td></tr>
+<tr><td>毛利率</td><td>≈39.00%</td><td>≈44.00%</td><td>≈48.00%</td><td>参考历史/H1；供需正常化、材料压力、高端组合延续三档假设</td></tr>
+<tr><td>毛利以下经营负担率</td><td>≈8.00%</td><td>≈6.00%</td><td>≈5.00%</td><td>保留研发、SBC和经营汇兑/信用成本；融资净贡献零，定义见附录</td></tr>
+<tr><td>有效税率</td><td>≈17.00%</td><td>≈15.00%</td><td>≈13.00%</td><td>参照H1/TTM；地区优惠组合不利、常态、有利三档假设</td></tr>
+<tr><td>集团利润归母比例</td><td>≈90.00%</td><td>≈92.65%</td><td>≈94.00%</td><td>基准取H1实际比例，熊牛反映少数权益变化；非法定持股</td></tr>
+<tr><td>PE倍数</td><td>≈25.00倍</td><td>≈35.00倍</td><td>≈45.00倍</td><td>熊低于自身下四分位，基准为下四分位/中位中点取整，牛靠近最近层同业</td></tr>
+<tr><td>股权要求回报Ke</td><td>≈12.00%</td><td>≈10.00%</td><td>≈9.00%</td><td>Q1公司长期贷款2.1%–2.6%作债务参照，加技术、客户和现金风险补偿，熊高牛低</td></tr>
+<tr><td>正常化归母净利润</td><td>≈219.99亿元</td><td>≈359.13亿元</td><td>≈527.48亿元</td><td>经营、税项及权益比例推算</td></tr>
+<tr><td>每股盈利</td><td>≈18.45元</td><td>≈30.11元</td><td>≈44.23元</td><td>已知奖励调整分母，非H1加权股数</td></tr>
+<tr><td>主方法价值</td><td>≈411.73元</td><td>≈958.10元</td><td>≈1,825.90元</td><td>一年后盈利能力乘PE再折现，股息另计</td></tr>
+<tr><td>PE所需后续增长</td><td>≈20.5%</td><td>≈29.1%</td><td>≈35.8%</td><td>推算五年持续EPS增长：统一Ke10%、成熟PE15倍、解释性分配率20%；非公司承诺，理由见附录</td></tr>
+<tr><td>FCFF交叉价值</td><td>≈156.7元</td><td>≈426.3元</td><td>≈933.8元</td><td>另一组五年增速与利润率衰减、现金再投资及终值假设；不与主方法加权平均</td></tr>
+</tbody></table></div><p>FCFF基准相对主方法差−55.5%，并非全是现金折价：高PE要求更长高增长，FCFF基准首末年经营税后利润复合增长仅≈5.9%并让利润率回落。两者对增长期限和再投资不同；高PE仍需长增长证据，不能由低现金模型背书。</p>
+<div class="steps chain"><div class="step"><div class="n">驱动</div><b>新速率交付兑现</b><p>客户采用、供应与产能同时转化</p>
+</div><div class="step"><div class="n">收入与成本</div><b>1,200亿元 · 毛利44%</b><p>基准经营负担6%，净融资贡献为零</p>
+</div><div class="step"><div class="n">归母盈利</div><b>≈359.1亿元</b><p>税负和少数权益扣除后，包含持续激励成本</p>
+</div><div class="step"><div class="n">倍数与折现</div><b>35倍 · Ke10% · 一年</b><p>历史锚和增长解释均见情景总表</p>
+</div><div class="step"><div class="n">每股价值</div><b>≈958.1元</b><p>已知奖励调整分母，与基准阶梯一致</p>
+</div></div><div class="tblscroll"><table class="tbl sgrid"><caption>两项最大敏感驱动 · 行：PE倍数；列：正常化年度收入（亿元）；格内元/股，其他输入固定基准。粗框为基准，底色为现价隐含；隐含行使用未舍入倍数，格值精确回到盘中价。组合格不是整体熊牛情景。</caption><thead><tr><th>PE ＼ 年收入</th><th>950</th><th>1,200</th><th>1,500</th></tr>
+</thead><tbody><tr><td>≈25.00倍</td><td>541.78</td><td>684.35</td><td>855.44</td></tr>
+<tr><td>≈32.76倍</td><td>710.02</td><td class="implied">896.87</td><td>1,121.09</td></tr>
+<tr><td>≈35.00倍</td><td>758.49</td><td class="base">958.10</td><td>1,197.62</td></tr>
+<tr><td>≈45.00倍</td><td>975.21</td><td>1,231.84</td><td>1,539.80</td></tr>
+</tbody></table></div><div class="rows" aria-label="主方法估值阶梯"><div class="row"><div class="nm">熊市<span>需求与盈利正常化</span></div><div class="track"><div class="fill alt" style="width:22.549428%"></div></div><div class="fig">411.73元<span>较现价−54.1%</span></div></div><div class="row"><div class="nm">现价<span>9月7日盘中</span></div><div class="track"><div class="fill soft" style="width:49.119338%"></div></div><div class="fig">896.87元<span>较现价0.0%</span></div></div><div class="row"><div class="nm">基准<span>交付增长并保住利润</span></div><div class="track"><div class="fill " style="width:52.472753%"></div></div><div class="fig">958.10元<span>较现价+6.8%</span></div></div><div class="row"><div class="nm">牛市<span>新形态加速采用</span></div><div class="track"><div class="fill moss" style="width:100.000000%"></div></div><div class="fig">1,825.90元<span>较现价+103.6%</span></div></div></div><p class="small">基准离现价不远，熊市下行显著大于基准上行。阶梯只用正常化盈利PE的点值，不包含股息；柱长按最高情景同比例绘制。</p>
+<div class="ffield" aria-label="各情景倍数区间与现金流交叉估值"><div class="frow"><div class="fnm">熊市·正常化盈利市盈率<span>本情景局部倍数变化</span></div><div class="ftrack"><div class="fbar alt" style="left:17.253333%;width:4.705714%"></div><div class="fmark" style="left:42.708095%"></div></div><div class="fig">362.32–461.14元</div></div><div class="frow"><div class="fnm">基准·正常化盈利市盈率<span>本情景局部倍数变化</span></div><div class="ftrack"><div class="fbar " style="left:41.712857%;width:7.821429%"></div></div><div class="fig">875.97–1,040.22元</div></div><div class="frow"><div class="fnm">牛市·正常化盈利市盈率<span>本情景局部倍数变化</span></div><div class="ftrack"><div class="fbar moss" style="left:77.286667%;width:19.321905%"></div></div><div class="fig">1,623.02–2,028.78元</div></div><div class="frow"><div class="fnm">企业现金流折现检验<span>独立假设参照</span></div><div class="ftrack"><div class="fbar alt" style="left:7.460000%;width:37.007143%"></div></div><div class="fig">156.66–933.81元</div></div><div class="frow"><div class="fnm">历史市盈率参照<span>独立假设参照</span></div><div class="ftrack"><div class="fbar " style="left:36.069524%;width:39.655714%"></div></div><div class="fig">757.46–1,590.23元</div></div></div><p class="small">现金流区间偏低。横轴0–2,100元/股，黑线为现价；三档局部PE22–28、32–38、40–50倍。历史锚为月末上下四分位乘基准每股盈利，再按Ke10%折现一年。</p>
+
+<h3>第四步 · 现价已要求进一步增长</h3><div class="tblscroll"><table class="tbl txt" data-fullscan-role="implied"><caption>现价隐含预期 · 仅反解不含股息的主方法股价价值，每行独立改变一个输入，其余维持基准。</caption><thead><tr><th>假设</th><th>基准假设</th><th>现价隐含</th><th>差距</th></tr>
+</thead><tbody><tr><td>正常化年度收入</td><td>1,200亿元</td><td>≈1,123.3亿元</td><td>−6.4%</td></tr>
+<tr><td>PE倍数</td><td>35倍</td><td>≈32.76倍</td><td>−2.24倍</td></tr>
+<tr><td>集团毛利率</td><td>44.0%</td><td>≈41.6%</td><td>−2.4个百分点</td></tr>
+<tr><td>该PE的五年持续EPS增长</td><td>≈29.1%</td><td>≈27.3%</td><td>同一成熟倍数和解释性分配率，非永续增速</td></tr>
+</tbody></table></div><div class="plain"><span class="pl">一句话总结</span><p>正常化盈利市盈率法基准≈958.1元，上行有限；最敏感的是正常化利润能值多少倍。较低的现金流检验值提醒，后续要证明盈利持续并形成现金。</p>
+</div></section>
+<section class="reveal on" id="valuation-appendix" ><div class="slabel">估值机制附录</div><h2>把经营假设、权益归属和现金放在同一公式里</h2><p>主方法：归母正常化利润＝年度收入×（毛利率−经营负担率）×（1−有效税率）×归母比例；EPS＝归母利润÷<span class="g">已知奖励调整股数</span>；股价现值＝EPS×PE÷（1＋Ke），一年折现。保留研发、股份支付、经营汇兑及信用成本，排除利息和金融投资收益；募集资金用途及收益未知，净融资贡献假设零，现金流模型沿用此未加杠杆经营口径。</p>
+<p>负担率校准（推算）：销售＋管理＋研发＋附加税＋财务费用−利息支出＋利息收入−报表带符号信用减值，再除收入，FY2025为8.00%、H1为7.04%、Q2为6.22%。原文：年报第94–95页、半年报第56页、一季报第10页。财务残差含汇兑及其他费用，非纯汇兑。熊市8%取历史回归、基准6%需略优于Q2的规模效率、牛市5%还需汇兑/信用压力减轻；均为假设，非报表重述。</p>
+<p>PE增长解释：五年盈利按20%解释性分配率支付的现值，加第五年盈利按成熟15倍的现值，统一Ke10%，求根反解增长。成熟倍数参照自身月末最低值向下取整；解释性分配率不作实际持有股息，隐含价格表不含股息，决策赔率另计一次。</p>
+<p>FCFF为未来五个连续年度经营税后利润加折旧，减资本开支及新增营运资金。首年即按主方法期末盈利能力规模经营，属收入前置、偏有利的简化，非自然年预报；此后收入增速熊市−5/0/3/3%、基准20/15/10/5%、牛市30/25/15/10%，假设技术放量渐趋成熟。经营利润率线性降至25/30/35%，折旧摊销按收入2%。</p>
+<p>现金资本开支率依次为熊市10/9/8/6/5%、基准8/7/6/5/4%、牛市7/6/5/4/3.5%，参照历史付现及新厂房建设后下降；已承诺未付资本包含在预测支出中，不另扣一次。新增营运资金按收入增量的45/32/24%，为备料和应收强度的压力假设，不称已披露净营运资金比例。终值增长率熊市2%、基准及牛市3%，对应成熟投入资本回报率（ROIC）15/20/25%，按增长÷回报率保留必要再投资；WACC分别12/10/9%，采用公司历史低借款利率加股权、技术与现金风险补偿，而非直接将贷款利率当作资本成本。</p>
+<p>企业价值以H1实际归母/集团利润比例作经济归属代理，再加静态现金桥，并非各子公司法定股权逐项估值。桥包含H1现金等价物减银行、租赁及到期义务，并保守扣全部长期应付款，再加完成IPO净额、减实际回购。长期应付款可能与少数权益代理重叠，若全数撤回该压力扣减，基准上移≈3.93元至≈430.3元；这是口径范围，不证明全部重复。模型不另加未完成投资的协同、金融资产价值，也不把子公司现金视为可全部汇回。</p>
+<p class="small">精确股数：已发行1,177,909,641股，加未归属新A股14,746,970股，得1,192,656,611股；保留库存股再发行，不含子公司认股权证，保守不加奖励认购付现。IPO按0.86465人民币/港元换算，非实际结汇。</p>
+<p>持有期一年。已批准未付股息每股1.20元，实施日期未定，假设2026-12-31支付并按各档Ke折现；未宣布股息及永久注销回购回报为零。含回报现值＝股价现值＋股息现值；赔率＝含回报现值÷现价−1；平衡价＝熊市与基准含回报现值之和÷2，非概率加权价值。名义期末股价加股息回报另算。</p>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="derivations"><caption>各行全部为推算 · 显示舍入，计算保留精度；亿元、亿股与元/股按单位相容换算。</caption><thead><tr><th>数值</th><th>输入</th><th>公式</th><th>来源（页·附注）</th></tr>
+</thead><tbody><tr><td>单二季度收入</td><td>417.7786；194.9640</td><td>(417.7786)-(194.9640) ＝ 222.81 亿元</td><td>2026H1 L3006; 文件第55；2026Q1 L493; 文件第10</td></tr>
+<tr><td>单二季度归母</td><td>136.5115；57.3450</td><td>(136.5115)-(57.3450) ＝ 79.17 亿元</td><td>2026H1 L3076–L3077; 文件第57；2026Q1 L556; 文件第11</td></tr>
+<tr><td>单二季度经营现金</td><td>17.9967；33.6757</td><td>(17.9967)-(33.6757) ＝ −15.68 亿元</td><td>2026H1 L3239; 文件第60；2026Q1 L634; 文件第12</td></tr>
+<tr><td>单二季度现金资本开支</td><td>48.0216；19.2920</td><td>(48.0216)-(19.2920) ＝ 28.73 亿元</td><td>2026H1 L3250–L3251; 文件第60；2026Q1 L645–L646; 文件第12</td></tr>
+<tr><td>TTM收入</td><td>382.3994；417.7786；147.8907</td><td>(382.3994)+(417.7786)-(147.8907) ＝ 652.29 亿元</td><td>FY2025 L5566; 文件第94；2026H1 L3006; 文件第55；2025H1 L3006; 文件第55</td></tr>
+<tr><td>TTM归母</td><td>107.9725；136.5115；39.9512</td><td>(107.9725)+(136.5115)-(39.9512) ＝ 204.53 亿元</td><td>FY2025 L5633; 文件第95；2026H1 L3076–L3077; 文件第57；2025H1 L3076–L3077; 文件第57</td></tr>
+<tr><td>TTM经营现金</td><td>108.9613；17.9967；32.1846</td><td>(108.9613)+(17.9967)-(32.1846) ＝ 94.77 亿元</td><td>FY2025 L5799; 文件第98；2026H1 L3239; 文件第60；2025H1 L3239; 文件第60</td></tr>
+<tr><td>单二季度FCF代理</td><td>−15.6790；28.7296</td><td>(-15.6790)-(28.7296) ＝ −44.41 亿元</td><td>2026H1 L3239; 文件第60；2026Q1 L634; 文件第12；2026H1 L3250–L3251; 文件第60</td></tr>
+<tr><td>TTM FCF代理</td><td>94.7734；66.0843</td><td>(94.7734)-(66.0843) ＝ 28.69 亿元</td><td>FY2025 L5799; 文件第98；2026H1 L3239; 文件第60；2025H1 L3239; 文件第60</td></tr>
+<tr><td>归母利润增量桥</td><td>58.7727；10.9961；−0.4319；−0.2818；−2.1512</td><td>(58.7727)+(10.9961)+(-0.4319)+(-0.2818)+(-2.1512)+(-2.1306)+(-3.3355)+(6.6402)+(-13.0340) ＝ 55.04 亿元</td><td>2026H1 L3006; 文件第55；2026Q1 L493; 文件第10；2025H1 L3006; 文件第55</td></tr>
+<tr><td>H1营运资金现金占用</td><td>−72.3929；−92.4184；25.5594</td><td>(-72.3929)+(-92.4184)+(25.5594) ＝ −139.25 亿元</td><td>2026H1 L8737–L8738; 文件第148；2026H1 L8740–L8741; 文件第148；2026H1 L8743–L8744; 文件第148</td></tr>
+<tr><td>已知奖励调整股数</td><td>1,192,656,611.0000</td><td>(1,192,656,611.0000)÷100000000.0 ＝ 11.93 亿股</td><td>2026-08-31 文件第2; txt L39–L39；2026-08-31 文件第7; txt L164–L165；2026-08-31 文件第7; txt L167–L168</td></tr>
+<tr><td>实际回购现金</td><td>1,313,397,242.6300</td><td>(1,313,397,242.6300)÷100000000.0 ＝ 13.13 亿元</td><td>9月1–4日各翌日披露报表，第4页</td></tr>
+<tr><td>H股净额折算</td><td>60,829.7000；0.86465</td><td>(60,829.7000)×(0.86465)÷100 ＝ 525.96 亿元</td><td>2026-07-30 文件第2; txt L45–L45；2026-08-31 文件第2; txt L42–L44；Wind 20260907</td></tr>
+<tr><td>静态备考归母账面</td><td>924.5556；13.1340</td><td>(924.5556)-(13.1340) ＝ 911.42 亿元</td><td>2026-06-30 L2890; 文件第53；2026-07-30 文件第2; txt L45–L45；2026-08-31 文件第2; txt L42–L44</td></tr>
+<tr><td>熊市正常化归母</td><td>244.4350；90.0000</td><td>(244.4350)×(90.0000)÷100 ＝ 219.99 亿元</td><td>假设见情景及机制；分析假设，依据见情景及机制</td></tr>
+<tr><td>熊市主方法价值</td><td>461.1376；12.0000；1.0000</td><td>(461.1376)÷(1+(12.0000)÷100)^(1.0000) ＝ 411.73 元/股</td><td>假设见情景及机制；2026-08-31 文件第2; txt L39–L39；2026-08-31 文件第7; txt L164–L165；2026-08-31 文件第7; txt L167–L168</td></tr>
+<tr><td>熊市含股息现值赔率</td><td>412.8879；896.8700</td><td>((412.8879)÷(896.8700)-1)×100 ＝ −53.96 %</td><td>假设见情景及机制；2026-08-31 文件第2; txt L39–L39；2026-08-31 文件第7; txt L164–L165；2026-08-31 文件第7; txt L167–L168</td></tr>
+<tr><td>基准正常化归母</td><td>387.6000；92.6543</td><td>(387.6000)×(92.6543)÷100 ＝ 359.13 亿元</td><td>假设见情景及机制；2026H1 L3076–L3077; 文件第57；2026H1 L3068; 文件第57</td></tr>
+<tr><td>基准主方法价值</td><td>1,053.9059；10.0000；1.0000</td><td>(1,053.9059)÷(1+(10.0000)÷100)^(1.0000) ＝ 958.10 元/股</td><td>假设见情景及机制；2026H1 L3076–L3077; 文件第57；2026H1 L3068; 文件第57；2026-08-31 文件第2; txt L39–L39</td></tr>
+<tr><td>基准含股息现值赔率</td><td>959.2608；896.8700</td><td>((959.2608)÷(896.8700)-1)×100 ＝ 6.96 %</td><td>假设见情景及机制；2026H1 L3076–L3077; 文件第57；2026H1 L3068; 文件第57；2026-08-31 文件第2; txt L39–L39</td></tr>
+<tr><td>牛市正常化归母</td><td>561.1500；94.0000</td><td>(561.1500)×(94.0000)÷100 ＝ 527.48 亿元</td><td>假设见情景及机制；分析假设，依据见情景及机制</td></tr>
+<tr><td>牛市主方法价值</td><td>1,990.2330；9.0000；1.0000</td><td>(1,990.2330)÷(1+(9.0000)÷100)^(1.0000) ＝ 1,825.90 元/股</td><td>假设见情景及机制；2026-08-31 文件第2; txt L39–L39；2026-08-31 文件第7; txt L164–L165；2026-08-31 文件第7; txt L167–L168</td></tr>
+<tr><td>牛市含股息现值赔率</td><td>1,827.0697；896.8700</td><td>((1,827.0697)÷(896.8700)-1)×100 ＝ 103.72 %</td><td>假设见情景及机制；2026-08-31 文件第2; txt L39–L39；2026-08-31 文件第7; txt L164–L165；2026-08-31 文件第7; txt L167–L168</td></tr>
+<tr><td>含股息平衡价</td><td>412.8879；959.2608</td><td>((412.8879)+(959.2608))÷2 ＝ 686.07 元/股</td><td>假设见情景及机制；2026-08-31 文件第2; txt L39–L39；2026-08-31 文件第7; txt L164–L165；2026-08-31 文件第7; txt L167–L168</td></tr>
+<tr><td>现价隐含PE</td><td>896.8700；10.0000；11.9266；359.1280</td><td>(896.8700)×(1+(10.0000)÷100)×(11.9266)÷(359.1280) ＝ 32.76 倍</td><td>假设见情景及机制；Wind 2026-09-07T14:28:42.000+08:00；2026-08-31 文件第2; txt L39–L39；2026-08-31 文件第7; txt L164–L165</td></tr>
+<tr><td>现价隐含年收入</td><td>1,200.0000；896.8700；958.0963</td><td>(1,200.0000)×(896.8700)÷(958.0963) ＝ 1,123.32 亿元</td><td>假设见情景及机制；Wind 2026-09-07T14:28:42.000+08:00；2026H1 L3076–L3077; 文件第57；2026H1 L3068; 文件第57</td></tr>
+<tr><td>熊市FCFF交叉值</td><td>1,868.4356；11.9266</td><td>(1,868.4356)÷(11.9266) ＝ 156.66 元/股</td><td>假设见情景及机制；FY2025 L5566; 文件第94；2026H1 L3006; 文件第55；2025H1 L3006; 文件第55</td></tr>
+<tr><td>基准FCFF交叉值</td><td>5,084.8802；11.9266</td><td>(5,084.8802)÷(11.9266) ＝ 426.35 元/股</td><td>假设见情景及机制；FY2025 L5566; 文件第94；2026H1 L3006; 文件第55；2025H1 L3006; 文件第55</td></tr>
+<tr><td>牛市FCFF交叉值</td><td>11,137.1334；11.9266</td><td>(11,137.1334)÷(11.9266) ＝ 933.81 元/股</td><td>假设见情景及机制；FY2025 L5566; 文件第94；2026H1 L3006; 文件第55；2025H1 L3006; 文件第55</td></tr>
+</tbody></table></div><div class="plain"><span class="pl">白话解读</span><p>利润还要支付采购和扩产，并在母子公司股东之间分配，每股留下的现金可能更少。后续看现金回收、实际资本支出和权益归属披露。</p>
+</div></section>
+<section class="reveal on" id="risks" ><div class="slabel">风险 · 验证窗口</div><h2>让后续现金和实产决定论点是否成立</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="risk-register"><caption>风险按对论点的破坏程度排序；概率为分析判断，不是统计违约概率。</caption><thead><tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr>
+</thead><tbody><tr><td>1</td><td>现金回收落后</td><td>2026H1营运资金占用扩大</td><td>应收、备料不能如期回收，扩张需要持续外部融资</td><td>FCF缺口及库存减值；损失金额取决于回款/物料适用性</td><td>中高</td><td>2026Q3现金流、应收账龄及库存结构；具体披露日期待公告</td></tr>
+<tr><td>2</td><td>高利润率和增长期限</td><td>2026Q2利润强，现价要求继续放量</td><td>材料涨价或竞价压缩毛利，高PE同时下修</td><td>敏感性网格量化收入与倍数影响；不把两项独立概率相乘</td><td>中</td><td>2026H2至2027H1交付、毛利和供应改善窗口是否兑现</td></tr>
+<tr><td>3</td><td>技术价值转移</td><td>2026H1已量产产品与研发产品分处不同阶段</td><td>CPO等形态改变客户架构和利润归属</td><td>新形态收入/利润未披露，无法量化替代净额</td><td>中</td><td>2027H2管理层量产目标是否转为实际出货及客户采用</td></tr>
+<tr><td>4</td><td>新增资本回报不达标</td><td>2026H1资本承诺增加，期后融资扩张资本基数</td><td>冗余产能、折旧与占款抬升，盈利增速不足以抵偿投入</td><td>缺少项目现金与维护支出拆分，不给虚构项目IRR</td><td>中</td><td>FY2026及2027厂房交付、实际利用率与增量经营现金</td></tr>
+<tr><td>5</td><td>归属利益及披露不确定性</td><td>2026H1长期应付款性质桥不完整，8月股数已有变化</td><td>少数权益/赎回/新股改变母公司每股经济性</td><td>已知奖励已计；未知条件性H股发行尚无固定股数</td><td>中</td><td>后续月报、激励条款、TeraHop退出及赎回披露；要求清楚的母公司现金桥</td></tr>
+</tbody></table></div><div class="tline"><div class="tstop warn"><div class="tw">2026Q3</div><b>先看现金回收</b><p>若收入继续增而现金回收更弱，强化占款风险；具体披露日尚待公司公告。</p>
+</div><div class="tstop "><div class="tw">2026H2至2027H1</div><b>再看供应和产能</b><p>管理层改善窗口并非保证；以交付、采购现金和利用率核对。</p>
+</div><div class="tstop warn"><div class="tw">2027H2</div><b>最后看技术商业化</b><p>管理层新形态量产目标若推迟，重估高倍数所需的增长期限。</p>
+</div></div><div class="plain"><span class="pl">白话解读</span><p>先看回款能否追上销售，再核对交付与技术采用；后两项仍是管理层条件性窗口。若推迟，需要重估增长能持续多久。</p>
+</div></section>
+<section class="reveal on" id="decision" data-fullscan-role="decision" data-verdict="neutral-cautious"><div class="slabel">最终判断</div><h2>中性偏谨慎：等每股现金追上盈利能力</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="decision-block"><caption>一张表保留投资判断需要的同期限信息；不是仓位或交易指令。</caption><thead><tr><th>项目</th><th>判断</th></tr>
+</thead><tbody><tr><td>论点</td><td>盈利扩张已成事实，估值仍取决于回款、技术耐久度与稀释后收益。</td></tr>
+<tr><td>基准对一致预期</td><td>无一致预期。9月7日较早盘中Wind仅给预测PE33.06倍，未给财年/样本，不能反称一致预期EPS；本模型正常化归母≈359.1亿元，价格单变量隐含年收入≈1,123.3亿元，见隐含预期表。</td></tr>
+<tr><td>赔率</td><td>一年同口径、含已批准股息现值：熊市−54.0%，基准+7.0%。这是折现后机会差，不是已实现或概率加权收益。</td></tr>
+<tr><td>平衡价</td><td>≈686.1元；使本报告熊市下行与基准上行相等，已将相同一年内股息各加入一次；不是由FCFF交叉值导出。</td></tr>
+<tr><td>持有回报</td><td>2026-09-07至2027-09-07：批准股息每股1.20元，按现价收益率0.13%；永久注销回购收益率0%。假设年内支付，基准股息现值≈1.16元；基准名义期末股价加股息回报≈17.6%，不与上述现值赔率混用。</td></tr>
+<tr><td>分项置信度</td><td>当期财务证据：高；技术持续性：中；估值输入：低；现金及归属：中低。最能提高薄弱项的证据，是回款恢复、扩产后资本回报及母子公司权益桥得到连续披露。</td></tr>
+<tr><td>判断</td><td>中性偏谨慎（等待验证）。下一检查点为季度现金与存货/应收变化；若回收改善并证明增长可持续，再评估估值，而非仅因公布高增速上调判断。</td></tr>
+</tbody></table></div><div class="callout"><b>最强反方意见：</b>高端迭代、制造规模及客户认证可能让新增订单持续转为现金，当前资本占用只是放量前置；若这一点成立，谨慎假设会低估长增长期。反过来，若融资后仍反复扩大占款、技术切换削弱母公司收益，则高利润的估值基础也会受损。</div></section>
+<section class="reveal on" id="glossary" ><div class="slabel">名词速查</div><h2>这些术语分别回答什么问题</h2><div class="tblscroll"><table class="tbl gloss" ><caption>只解释本报告实际用到的业务和权益口径。</caption><thead><tr><th>术语</th><th>本报告中的含义</th></tr>
+</thead><tbody><tr><td>光通信收发模块（Optical Transceiver）</td><td>完成光电转换的器件组合；不直接出售计算服务。</td></tr>
+<tr><td>硅光（Silicon Photonics）</td><td>硅基集成部分光学功能，仍依赖配套激光、封装及良率。</td></tr>
+<tr><td>近封装光学（NPO）</td><td>光学靠近主要芯片；研发/送样非量产。</td></tr>
+<tr><td>新型互联形态（XPO）</td><td>公司披露的新封装/连接方案，商业利润待客户采用。</td></tr>
+<tr><td>共封装光学（CPO）</td><td>光学与主要芯片集成，可能改变价值分配。</td></tr>
+<tr><td>数字信号处理芯片（DSP）</td><td>处理高速信号，供应和功耗影响模块出货。</td></tr>
+<tr><td>现金转化率（Cash Conversion）</td><td>本文合并OCF除合并全部净利润；不是销售回款率，也不以归母利润替代分母。</td></tr>
+<tr><td>股份支付（SBC）</td><td>以权益支付服务成本；非现金不等于没有成本。</td></tr>
+<tr><td>赎回负债（Redemption Liability）</td><td>附回购责任的融资可能形成金融负债；资金到账不一定是永久权益资本。</td></tr>
+<tr><td>企业自由现金流（FCFF）</td><td>经营税后利润加非现金折旧，减再投资；本文为预测模型，区别于历史OCF减资本开支代理。</td></tr>
+<tr><td><span class="g">加权资本成本</span>（WACC）</td><td>企业现金流折现要求，不等同贷款利率。</td></tr>
+<tr><td>已知奖励调整股数（Award-adjusted Shares）</td><td>已发行股数加当前已知未归属新股奖励的情景分母，不涵盖未知未来条件性发行。</td></tr>
+<tr><td>静态备考（Pro Forma）</td><td>在历史余额上只加入已知资本变动的算术观察；不是另一期已披露资产负债表。</td></tr>
+<tr><td>恒定汇率增长（Constant Currency）</td><td>排除汇率折算后的增长；公开资料不足以完整重建时，仅使用报告币种增长。</td></tr>
+<tr><td>内部收益率（IRR）</td><td>使项目现金净现值为零的折现率，不能用利润率代算。</td></tr>
+</tbody></table></div></section>
+</main><footer class="wrap"><p>数据截止：财务2026-06-30；后续资本事项截至2026-09-07；行情为当日14:28:42–45 +08:00盘中快照，非收盘。</p><p>来源：<a href="https://static.cninfo.com.cn/finalpage/2026-08-22/1225491753.PDF">半年报全文</a>；<a href="https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF">年度报告</a>；<a href="https://pdf.dfcfw.com/pdf/H2_AN202604161821269635_1.pdf">一季报</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400887_c.pdf">证券月报</a>；<a href="https://pdf.dfcfw.com/pdf/H2_AN202608231828345475_1.pdf">投资者关系记录</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0729/2026072901630_c.pdf">H股发售资料</a>；FY2021–2025年报、同行半年报原文、HKEX招股书及回购/股息公告。市场及汇率数据来源于万得Wind金融数据服务。</p><p>审计状态：FY2025财务已审计、标准无保留意见；H1及Q1未经审计。管理层交流为陈述，估值及单季推算为分析判断。原始公告局部不一致已在相应章节保留。</p><p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p></footer><script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script></body></html>
