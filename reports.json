@@ -50,15 +50,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "拆解 AI 云加速、电商现金牛、应用层亏损、三年算力投入、股权激励、公开电话会与会后回拨的证据边界及估值路径。",
-      "verdict": null,
-      "verdict_code": null,
+      "hook": "云增长可见，配售和长期高投入仍须通过每股资本回报验证。",
+      "verdict": "中性",
+      "verdict_code": "neutral",
       "published": "2026-08-20",
       "published_at": "2026-08-20T23:27:22-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "classic",
-      "style_hash": "e65895ac71853b897ef3203361e0c8c2",
+      "revised": "2026-09-07",
+      "revision": {
+        "date": "2026-09-07",
+        "note": "按Fullscan v2.7重建五年与新分部地图，纳入已完成配售及最新股数；统一现金约束SOTP、股份支付与可转债处理，区分公开电话会观点和申报事实。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {

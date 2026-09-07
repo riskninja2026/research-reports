@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
-<title>阿里巴巴 2026-08-20 Fullscan 全景尽调 · Alibaba FY2027 Q1</title>
+<title>阿里巴巴 FY2027Q1 · Fullscan v2.7 Fullscan 全景尽调</title>
+<!-- 标题格式固定：{名称} {期间} Fullscan 全景尽调（英文报告：{Name} {Period} Fullscan Full Diligence，且 <html lang="en">）；标题不写论点。 -->
 <style>
 :root{
   --paper:#EDEFF2;
@@ -202,370 +203,319 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   .reveal{opacity:1;transform:none;transition:none}
 }
 :focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
 </style>
 </head>
 <body>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">阿里巴巴集团 09988.HK · BABA.N ｜ FULLSCAN 全景尽调 ｜ 财务截止 2026.06.30</div>
-    <h1>云增长已经兑现，<br>现金回报仍在赊账</h1>
-    <p class="lede">市场看到的是 AI 云加速、利润率扩张与全栈能力；报表揭示的却是电商现金牛正在为算力和应用层同时融资。<b>关键不是阿里有没有 AI，而是云利润能否在资本开支与应用亏损吞噬现金之前，证明可重复的资产回报。</b></p>
-
-    <div class="dual">
-      <div>
-        <div class="tag">AI 云经调整 EBITA · 同比增量</div>
-        <div class="big a">+32.1亿</div>
-        <div class="cap">云分部规模效应已经进入利润表，增长并非只有收入。</div>
-      </div>
-      <div>
-        <div class="tag">AI 实验室与应用亏损 · 同比增量</div>
-        <div class="big b">−106.4亿</div>
-        <div class="cap">应用层新增亏损是云新增利润的约 3.3 倍，集团自我融资尚未成立。</div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main class="wrap">
-
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">基础财务与业务地图 / FINANCIALS</div>
-  <h2>收入仍在增长，利润与现金却完成了第二次变脸</h2>
-  <p>阿里通过中国电商、即时零售、国际电商和批发产生交易与广告收入，以云计算和模型服务承接 AI 需求，并用模型与消费者应用争夺下一代入口。五年记录说明，收入和毛利仍保持缓慢扩张，但经营利润、现金转化与资本强度已经从平台型经济切换到资产重型投资周期。</p>
-
-  <div class="grid" data-financials="consolidated">
-    <div class="cell">
-      <div class="k">收入</div><div class="v">2,689.53<span class="u">亿元</span></div>
-      <div class="d"><span class="up">同比 +9%</span><span>FY27Q1</span></div>
-    </div>
-    <div class="cell">
-      <div class="k">毛利 · 派生</div><div class="v">1,028.57<span class="u">亿元</span></div>
-      <div class="d"><span class="down">同比 −7.52%</span><span>毛利率 38.24%</span></div>
-    </div>
-    <div class="cell">
-      <div class="k">经营利润</div><div class="v">151.61<span class="u">亿元</span></div>
-      <div class="d"><span class="down">同比 −57%</span><span>利润率 5.6%</span></div>
-    </div>
-    <div class="cell">
-      <div class="k">归母普通股净利润</div><div class="v">105.37<span class="u">亿元</span></div>
-      <div class="d"><span class="down">同比 −76%</span><span>摊薄 EPS ¥0.46</span></div>
-    </div>
-    <div class="cell">
-      <div class="k">经营现金流</div><div class="v">229.45<span class="u">亿元</span></div>
-      <div class="d"><span class="up">同比 +11%</span><span>现金率 8.5%</span></div>
-    </div>
-    <div class="cell">
-      <div class="k">公司定义自由现金流</div><div class="v down">−446.70<span class="u">亿元</span></div>
-      <div class="d"><span>上年净流出 188.15 亿元</span><span>FCF 率 −16.6%</span></div>
-    </div>
-  </div>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>最新季度补充口径；人民币亿元，每股数据除外</caption>
-      <thead><tr><th>指标</th><th>FY26Q1</th><th>FY27Q1</th><th>同比</th></tr></thead>
-      <tbody>
-        <tr><td>经调整 EBITDA</td><td>457.35</td><td>391.43</td><td class="down">−14%</td></tr>
-        <tr><td>经调整 EBITA</td><td>388.44</td><td>273.29</td><td class="down">−30%</td></tr>
-        <tr><td>资本开支</td><td>386.76</td><td>676.78</td><td class="down">+75%</td></tr>
-        <tr><td>非 GAAP 摊薄 EPS（元）</td><td>1.84</td><td>1.07</td><td class="down">−42%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">报告口径另受所有其他分部 44.58 亿元商誉减值，以及欧盟《数字服务法案》5.5 亿欧元准备金影响；二者解释部分 GAAP 与经调整利润差异，但不改变云基础设施和应用投入对现金的压力。</p>
-
-  <h3>五个完整财年：毛利慢增，经营利润与现金先后掉头</h3>
-  <div class="tblscroll">
-    <table class="tbl" data-financials="history">
-      <caption>人民币十亿元；CAGR 为 FY22—FY26 四个年度间隔；LTM 截至 2026-06-30</caption>
-      <thead><tr><th>指标</th><th>FY22</th><th>FY23</th><th>FY24</th><th>FY25</th><th>FY26</th><th>CAGR</th><th>LTM</th></tr></thead>
-      <tbody>
-        <tr><td>收入</td><td>853.1</td><td>868.7</td><td>941.2</td><td>996.3</td><td>1,023.7</td><td>+4.7%</td><td>1,045.0</td></tr>
-        <tr><td>毛利 · 派生</td><td>313.6</td><td>319.0</td><td>354.8</td><td>398.1</td><td>407.5</td><td>+6.8%</td><td>399.2</td></tr>
-        <tr><td>毛利率</td><td>36.8%</td><td>36.7%</td><td>37.7%</td><td>39.95%</td><td>39.8%</td><td>—</td><td>38.2%</td></tr>
-        <tr><td>经营利润</td><td>69.6</td><td>100.4</td><td>113.4</td><td>140.9</td><td>50.2</td><td>−7.9%</td><td>30.3</td></tr>
-        <tr><td>经营利润率</td><td>8.2%</td><td>11.55%</td><td>12.04%</td><td>14.1%</td><td>4.9%</td><td>—</td><td>2.9%</td></tr>
-        <tr><td>归母普通股净利润</td><td>62.0</td><td>72.5</td><td>79.7</td><td>129.5</td><td>105.9</td><td>+14.3%</td><td>73.3</td></tr>
-        <tr><td>归母普通股净利率</td><td>7.26%</td><td>8.35%</td><td>8.47%</td><td>12.99%</td><td>10.35%</td><td>—</td><td>7.02%</td></tr>
-        <tr><td>基本 EPS（元）</td><td>2.87</td><td>3.46</td><td>3.95</td><td>6.89</td><td>5.70</td><td>+18.7%</td><td>—</td></tr>
-        <tr><td>平均权益 ROE</td><td>6.6%</td><td>7.48%</td><td>8.1%</td><td>12.97%</td><td>10.2%</td><td>—</td><td>—</td></tr>
-        <tr><td>经营现金流</td><td>142.8</td><td>199.8</td><td>182.6</td><td>163.5</td><td>76.2</td><td>−14.5%</td><td>78.5</td></tr>
-        <tr><td>资本开支</td><td>53.3</td><td>34.3</td><td>32.1</td><td>86.0</td><td>126.1</td><td>+24.0%</td><td>155.1</td></tr>
-        <tr><td>公司定义自由现金流（FCF）</td><td>98.9</td><td>171.7</td><td>156.2</td><td>73.9</td><td class="down">−46.6</td><td>不适用</td><td class="down">−72.5</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>新四分部：电商供血、云造血、应用与其他业务消耗</h3>
-  <div data-financials="segments">
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>FY27Q1；人民币十亿元；比较期已由公司按新架构重编</caption>
-        <thead><tr><th>分部</th><th>收入</th><th>同比</th><th>经调整 EBITA</th><th>EBITA 率</th></tr></thead>
-        <tbody>
-          <tr><td>阿里巴巴电商集团</td><td>205.862</td><td class="up">+4%</td><td>39.749</td><td>19.3%</td></tr>
-          <tr><td>AI 云与算力服务</td><td>48.437</td><td class="up">+45%</td><td>5.628</td><td>11.6%</td></tr>
-          <tr><td>AI 实验室与应用</td><td>3.338</td><td class="up">+16%</td><td class="down">−13.861</td><td class="down">−415.2%</td></tr>
-          <tr><td>所有其他</td><td>28.803</td><td>基本持平</td><td class="down">−3.343</td><td class="down">−11.6%</td></tr>
-          <tr><td>未分配</td><td>0.783</td><td>—</td><td class="down">−0.163</td><td>不适用</td></tr>
-          <tr><td>分部间抵销</td><td class="down">−18.270</td><td>—</td><td class="down">−0.681</td><td>不适用</td></tr>
-          <tr><td><strong>合并口径</strong></td><td><strong>268.953</strong></td><td>—</td><td><strong>27.329</strong></td><td><strong>10.16%</strong></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>电商集团下一层披露；人民币十亿元</caption>
-        <thead><tr><th>子分部</th><th>收入</th><th>同比</th><th>阅读方式</th></tr></thead>
-        <tbody>
-          <tr><td>中国电商</td><td>110.900</td><td class="down">−8%</td><td>CMR 82.547，报告口径 −7%；剔除视作收入冲减后 +1%</td></tr>
-          <tr><td>中国即时零售</td><td>53.295</td><td class="up">+45%</td><td>淘宝闪购、盒马、天猫超市即时配送</td></tr>
-          <tr><td>国际电商</td><td>27.761</td><td>−1%</td><td>跨境与本地平台</td></tr>
-          <tr><td>全球批发</td><td>13.906</td><td class="up">+7%</td><td>1688 与 Alibaba.com 等 B2B</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <p class="small">四个经营分部收入合计 286.440，加入未分配并扣除分部间交易后，勾稽至合并收入；分部收入占比若提及，均以四分部合计为分母，不能把内部交易重复计入集团收入。毛利为收入减营业成本。LTM 按 FY26 加 FY27Q1 减 FY26Q1；由于加权平均股数变化，不机械拼接 LTM EPS。ROE 用归母普通股净利润除以期初期末归母权益均值。FY27Q1 开始采用新四分部，季度比较数已重编，但 FY22—FY26 旧分部不能直接接成五年新口径序列。公司定义 FCF 为非 GAAP 流动性指标。</p>
+<header class="hero"><div class="wrap"><div class="eyebrow">阿里巴巴集团 09988.HK ｜ FY2027 Q1 全景尽调 ｜ 财务截至2026.06.30</div><h1>云增长可见，资本回报待验</h1><p class="lede">云业务新增经营利润值得资本化，但集团同时加大模型、应用和算力投入。<b>每股价值要扣掉为增长持续付出的资本。</b>配售让投入更有资金保障，并没有证明这些资金能赚回足够回报。</p>
+<div class="dual"><div><div class="tag">FY2027 Q1 · 云经调整息税摊销前利润（EBITA）同比增量</div><div class="big a">+32.1亿元</div><div class="cap">按本季重列的分部比较数推算；并非全部可分派现金。</div></div><div><div class="tag">同一季度 · AI实验室与应用（Labs）新增亏损 / 云新增利润</div><div class="big b">3.31倍</div><div class="cap">亏损增量的绝对值对新增云EBITA，刻画两项投入产出的不对称。</div></div></div></div></header><main class="wrap"><div class="callout"><b>修订 2026-09-07：</b>按Fullscan v2.7重建五年与新分部地图，纳入已完成配售及最新股数；统一现金约束SOTP、股份支付与可转债处理，区分公开电话会观点和申报事实。</div><section class="reveal on" id="tldr" ><div class="slabel">三十秒版本 · 先看结论</div><h2>经营机会成立，资本回报仍需验证</h2><div class="tldr"><ul><li><b>它是谁：</b>以电商收费、直营零售和云服务赚钱的集团，同时投资AI模型及应用；香港普通股与美国存托股代表同一集团权益。</li><li><b>本期成绩：</b>六月季度收入2,689.5亿元、归母利润106.1亿元；公司自由现金流为−446.7亿元。</li><li><b>核心矛盾：</b>云盈利改善，却还不足以覆盖应用投入与设备投资。融资增加现金，也让更多股份分享将来的成果。</li><li><b>容易踩的坑：</b>非GAAP利润不是股东可拿走的现金；云分部收入还含集团内部交易，不能按外部收入重复估值。</li><li data-verdict="neutral"><b>结论：</b>中性（等待验证）。现价HK$109.6，基准现值≈HK$149.9、熊市≈HK$81.8；云利润与现金投入的同步改善会改变判断。</li></ul></div></section>
+<section class="reveal on" id="primer" ><div class="slabel">入门与口径</div><h2>电商现金支持新业务，但各类收入不能等量看待</h2><p>平台向商家收营销及交易服务费，直营确认商品销售总额，云提供计算与模型服务。收入含金量不同；AI应用还需持续获取用户并支付推理成本。</p>
+<div class="steps"><div class="step"><div class="n">环节 1</div><b>客户付费</b><p>商家买流量和交易服务，消费者买商品，企业购买云能力。</p>
+</div><div class="step"><div class="n">环节 2</div><b>确认收入</b><p>平台收费按服务确认；直营还承担商品成本，收入规模不能直接比较。</p>
+</div><div class="step"><div class="n">环节 3</div><b>交付与投入</b><p>收入扣履约、研发、获客和设备耗用，才形成经营成果。</p>
+</div><div class="step"><div class="n">环节 4</div><b>形成每股权益</b><p>经营现金先支持再投资和债务，再考虑分配；新股也分享成果。</p>
+</div></div><p>开曼上市主体在香港代码09988.HK，<span class="g">美国存托股（ADS）</span>代码BABA，每份ADS代表8股普通股。部分境内业务通过<span class="g">协议控制（VIE）</span>并表，非股东直接持有运营股权。分配还受子公司利润、税项和监管约束，集团现金不等于上市主体即付现金。</p>
+<p>本文研究截至2026年6月30日的FY2027第一财季，即日历年第二季度；它是直接披露的单季，不是半年减一季。财务按美国公认会计准则（US GAAP），本季未经审计，完整年度合并报表已审计。净利润有集团、归母及普通股股东三个层次，每股收益（EPS）还可能调整摊薄分子；后文分别列示。推算只连接已披露输入，≈或假设则表示分析情景，不是公司指引。</p>
+<p>流量竞争需要商家与用户持续交易，算力竞争需要利用率和付费需求覆盖硬件更新。规模优势是否成为股东优势，取决于客户留存后的利润和再投资负担，而非访问量或装机量。</p>
 </section>
-
-<section class="reveal on">
-  <div class="slabel">投资逻辑与增长驱动 · 互联网用户与变现 / AI CLOUD</div>
-  <h2>云的收入质量在改善，但增长飞轮还没有穿过资产负债表</h2>
-  <p>本季 AI 相关产品收入为人民币 123.76 亿元，占云外部收入 35%，年化运行率约 495 亿元，并连续第十二个季度保持三位数增长。与单纯 IaaS 扩容不同，这至少证明增长正在向算力、模型服务和应用多层扩散；但披露仍缺少合同期限、续约率、客户集中度和预付款比例，无法直接等同于可持续自由现金流。</p>
-
-  <div class="flowbox">
-    <svg viewBox="0 0 920 180" role="img" aria-label="阿里 AI 云从资本开支到现金回收的循环">
-      <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1E4B8F"/></marker></defs>
-      <rect x="18" y="48" width="150" height="64" rx="3" fill="#E3E8EF" stroke="#1E4B8F"/>
-      <rect x="205" y="48" width="150" height="64" rx="3" fill="#F8F9FB" stroke="#1E4B8F"/>
-      <rect x="392" y="48" width="150" height="64" rx="3" fill="#F8F9FB" stroke="#1E4B8F"/>
-      <rect x="579" y="48" width="150" height="64" rx="3" fill="#F8F9FB" stroke="#1E4B8F"/>
-      <rect x="766" y="48" width="136" height="64" rx="3" fill="#E7EFEA" stroke="#2C6A57"/>
-      <g font-family="-apple-system, PingFang SC, sans-serif" text-anchor="middle" fill="#0F1A22"><text x="93" y="76" font-size="15" font-weight="600">资本开支</text><text x="93" y="98" font-size="12">芯片 · 数据中心</text><text x="280" y="76" font-size="15" font-weight="600">算力供给</text><text x="280" y="98" font-size="12">GPU/CPU · 存储</text><text x="467" y="76" font-size="15" font-weight="600">模型与平台</text><text x="467" y="98" font-size="12">MaaS · 数据库</text><text x="654" y="76" font-size="15" font-weight="600">客户工作负载</text><text x="654" y="98" font-size="12">训练 · 推理 · Agent</text><text x="834" y="76" font-size="15" font-weight="600">利润与现金</text><text x="834" y="98" font-size="12">利用率 · 定价</text></g>
-      <g stroke="#1E4B8F" stroke-width="2" marker-end="url(#arr)"><line x1="168" y1="80" x2="197" y2="80"/><line x1="355" y1="80" x2="384" y2="80"/><line x1="542" y1="80" x2="571" y2="80"/><line x1="729" y1="80" x2="758" y2="80"/></g>
-      <path d="M834 118 C834 160 95 164 95 122" fill="none" stroke="#A32B57" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
-      <text x="468" y="174" text-anchor="middle" font-family="-apple-system, PingFang SC, sans-serif" font-size="12" fill="#A32B57">只有现金回收重新投入，飞轮才闭合</text>
-    </svg>
-    <div class="flow-note"><div class="badge">ARR</div><div>截至 8 月，模型与应用服务（含 MaaS）ARR 超过 160 亿元；管理层维持自然年末超过 300 亿元的目标。按两个披露门槛粗算，160 到 300 对应约 87.5% 的增幅；由于起点和目标都是“超过”，实际所需增幅无法精确推出。</div></div>
-  </div>
-
-  <div class="finds">
-    <div class="find good"><div class="t">利润已随收入放大</div><p>云分部利润增长快于收入，且管理层称主动收缩低毛利业务。规模效应与组合改善已有会计证据，不只是“AI 叙事”。</p></div>
-    <div class="find good"><div class="t">模型开放不必然损害平台毛利</div><p>电话会称自研模型仍占多数，托管自研与第三方开源模型的毛利率相近。若属实，平台价值来自推理和算力，而非模型授权封闭性。</p></div>
-    <div class="find warn"><div class="t">需求强不等于回报高</div><p>供给紧张能支持短期定价，却也抬高芯片成本并刺激同行扩产。没有利用率、价格衰减和客户集中度，管理层回报框架仍待验证。</p></div>
-    <div class="find warn"><div class="t">市场份额证据来自公司转引</div><p>公司引用 Omdia 称中国 AI 云份额 38.1%，并披露自研芯片服务超过 650 家外部客户；两项均缺本报告独立第三方底稿，不进入估值倍数上调。</p></div>
-  </div>
-
-  <div class="callout"><b>公开电话会给出的下一季测试。</b>管理层预计下一季 AI 产品年化收入接近 100 亿美元，云收入继续加速、分部利润率逐季改善。三项必须同时兑现；只有收入而没有利润和现金，仍是资产扩张而不是高质量复利。</div>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">新业务与产品 · 盈利能力 / AI LABS</div>
-  <h2>应用层像内部风投，用户规模暂时不能抵消亏损</h2>
-  <p>AI 实验室与应用的季度经调整 EBITA 亏损约为其收入的 4.15 倍。分部把模型训练、千问消费者业务与千问办公放在一起，使研发、获客和推理补贴无法拆分；这既遮蔽了模型基础设施的长期价值，也让“应用商业化”难以用单位经济验证。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">千问购物体验用户</div><div class="v">2.5亿<span class="u">累计用户</span></div><div class="d"><span>不是 MAU</span><span>未披露留存</span></div></div>
-    <div class="cell"><div class="k">付费与变现</div><div class="v">未披露</div><div class="d"><span>无 ARPU</span><span>无 CAC</span></div></div>
-    <div class="cell"><div class="k">管理层近期路径</div><div class="v">环比收窄</div><div class="d"><span>训练效率</span><span>营销效率</span></div></div>
-  </div>
-
-  <p>消费者应用正在增加增值服务，千问办公则借助阿里云与钉钉进入企业工作流；两者都具备分发优势，但报告期内尚未披露独立收入、付费客户或贡献利润。公开电话会说亏损已随营销费用下降而环比收窄，并预计未来数季继续收窄，这比用户数更适合作为价值验证。</p>
-
-  <div class="callout"><b>Callback 只作低置信度观察。</b>用户提供的会后纪要进一步声称，模型训练占亏损不到一半、明年总投入可能稳定，且应用变现会降低净投入；这些拆分没有港交所或公开电话会的绝对金额支撑，因此没有进入基准预测。纪要中“亏损峰值”还与当季公开数冲突，已剔除。</div>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">现金流、资本开支与财务稳健性 / CAPITAL RETURNS</div>
-  <h2>现金足以支持扩张，却不足以证明扩张创造价值</h2>
-  <p>本季资本开支相当于经营现金流的 2.95 倍；FY26 的资本开支相当于折旧及经营租赁成本代理的 3.40 倍。集团没有短期偿债压力，但增长资本远超内部现金生成，使估值越来越依赖设备利用率、价格和回本周期，而不是传统电商利润。</p>
-
-  <div class="stacks">
-    <div class="stack">
-      <div class="cap">三年 AI 投资计划：人民币 3,800 亿元 · 管理层电话会口径</div>
-      <div class="stackbar"><div class="seg p" style="width:49.9%">已投入约一半</div><div class="seg q" style="width:50.1%">待投入约一半</div></div>
-      <div class="legend"><span><i class="p"></i>截至六月季累计约 1,900 亿元</span><span><i class="q"></i>交付节奏不均匀</span></div>
-    </div>
-    <div class="stack">
-      <div class="cap">流动性总池：有息债务与公司净现金的拆分</div>
-      <div class="stackbar"><div class="seg p" style="width:44%">净现金 44%</div><div class="seg q" style="width:56%">有息债务 56%</div></div>
-      <div class="legend"><span><i class="p"></i>可用于投资与股东回报</span><span><i class="q"></i>银行借款、票据及债券</span></div>
-    </div>
-  </div>
-
-  <h3>管理层“回本期”框架的算术，而不是项目 IRR</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>稳态近似：增长率上限约等于回本期倒数；未计税、营运资本、维护资本开支与价格衰减</caption>
-      <thead><tr><th>资产回本期</th><th>理论自融资增长上限</th><th>需要的前提</th><th>本报告判断</th></tr></thead>
-      <tbody>
-        <tr><td>3.0 年</td><td>约 33%</td><td>当前平均毛利与持续满载</td><td>管理层当前基准，尚未审计验证</td></tr>
-        <tr><td>2.5 年</td><td>约 40%</td><td>MaaS 占比、定价和利用率改善</td><td>需要连续利润率证据</td></tr>
-        <tr><td>2.0 年</td><td>约 50%</td><td>自研芯片替代、共建与客户预付</td><td>牛市假设，不进入基准</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="grid">
-    <div class="cell"><div class="k">现金及其他不受限理财投资</div><div class="v">4,745.05<span class="u">亿元</span></div><div class="d"><span>2026-06-30</span><span>流动性总池</span></div></div>
-    <div class="cell"><div class="k">有息债务合计</div><div class="v">2,665.30<span class="u">亿元</span></div><div class="d"><span>银行借款</span><span>票据及债券</span></div></div>
-    <div class="cell"><div class="k">公司口径净现金</div><div class="v up">2,079.75<span class="u">亿元</span></div><div class="d"><span>未扣租赁</span><span>未扣非控股权益</span></div></div>
-    <div class="cell"><div class="k">归母净金融资产代理</div><div class="v">1,213.93<span class="u">亿元</span></div><div class="d"><span>扣租赁代理</span><span>扣夹层与 NCI</span></div></div>
-  </div>
-  <p class="small">租赁负债使用 FY26 年末最近可得值，季末未单独披露，因此归母净金融资产仅为保守估值代理。电话会称硬件通常三年回本、使用寿命至少五年，并以旧款 GPU 仍接近满载为例；没有项目级投入资本、折旧曲线、税率或客户合同证据，不能将其等同于已实现 ROIC。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">新旧业务过渡 · 海外业务 / E-COMMERCE</div>
-  <h2>电商没有失速，增长的会计质量却发生了变化</h2>
-  <p>中国电商中约 74.4% 来自客户管理收入；新营销计划被作为收入冲减，使报告增速低估了同口径变现，但也意味着平台正在用商家让利来换取活跃度。即时零售已占电商集团收入约 25.9%，它补上规模增长的同时令分部利润率同比收缩约 0.8 个百分点——增长和补贴不能再分开阅读。</p>
-
-  <div class="finds">
-    <div class="find good"><div class="t">传统电商仍是利润锚</div><p>即使营销口径改变、即时零售加大投入，电商集团利润仅小幅下降。商家生态、广告工具和供应链协同仍能提供资源再配置能力。</p></div>
-    <div class="find warn"><div class="t">“同口径增长”不是现金回收</div><p>把视作收入冲减加回可以解释经营趋势，却不能加回报表收入、毛利或现金。若补贴长期化，旧口径恢复不代表经济利润恢复。</p></div>
-    <div class="find good"><div class="t">即时零售的证伪点清楚</div><p>公开电话会给出三个里程碑：下财年非餐饮交易超过餐饮、FY29 整体盈利、长期贡献平台 GMV 的 30%。它们比订单口号更可验证。</p></div>
-    <div class="find warn"><div class="t">海外增长缺少利润桥</div><p>国际电商与全球批发合计已具材料性；管理层承认关税和地缘政治压制短期增长，只披露跨境盈利改善，未给独立利润和现金绝对值。</p></div>
-  </div>
-
-  <p>国际业务的价值不应只用 GMV 估算：跨境平台要穿过关税、履约和本地化成本，本地平台还要证明市场级单位经济。B2B 的 Accio Work 已吸引超过 5 万名付费商家，是少数可见的 AI 付费信号，但缺少客单价和留存，暂不能资本化为独立业务。</p>
-
-  <p>国际电商与全球批发两项报告收入机械相加，约为合并收入的 15.5%；这只用于判断重要性，并非地域外部收入占比，因为公司未披露总抵销在国际电商、全球批发等子分部之间的归属，也未给恒定汇率增速、独立税率或可上划现金。FY26 年报还披露境内受限净资产 3,445.80 亿元，中国子公司向非居民企业分红一般涉及 5%—10% 预提税，并受法定储备、换汇与资本汇出限制。因此海外估值不因名义收入规模获得额外溢价，汇率、税和控股公司可得现金均留在组合折价中。</p>
-
-  <div class="callout"><b>Callback 的领先读数，不是公司公开指引。</b>会后纪要称九月季度迄今旧口径 CMR 略优于本季同口径表现、传统电商 EBITA 同比稳定，并预期即时零售全年亏损减半。这些只进入下一季核验清单；公开模型仍按已披露分部利润与 FY29 里程碑建边界。</div>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">股东回报、股权激励与治理 / CAPITAL ALLOCATION</div>
-  <h2>回购已经退居次位，普通股东承担的是“先投资、后验证”</h2>
-  <p>公司为 FY26 经营年度宣派约 25 亿美元现金股息，并在该财年回购约 10.46 亿美元；若把股息按归属年度计，同期公司定义自由现金流为负，资本回报不再由当期自由现金流覆盖。本季回购仅 1.62 亿美元、涉及 1,340 万股普通股，约为 Wind 隐含股份数的 0.07%，难以抵消投资周期对净现金的消耗。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>普通股东每股效果与治理约束</caption>
-      <thead><tr><th>项目</th><th>披露/派生</th><th>投资含义</th></tr></thead>
-      <tbody>
-        <tr><td>股权激励经济成本</td><td>季度总额 33.04 亿元，其中非现金调整 29.62 亿元；FY26 总额 148.21 亿元，集团普通股激励占 91.46 亿元</td><td>总额含现金与非现金、子公司及蚂蚁激励；都是薪酬成本，只有母公司普通股授予直接形成母股稀释</td></tr>
-        <tr><td>股数、授予与回购</td><td>季度基本/摊薄加权股数 186.71/193.24 亿；FY26 授予约 1.041 亿股、回购 0.727 亿股</td><td>授予不等于当期发行，但回购未覆盖授予规模；估值统一使用摊薄股数，较基本口径高 3.5%</td></tr>
-        <tr><td>阿里巴巴合伙</td><td>可提名董事会简单多数；修改核心权利需 95% 股东票</td><td>经济权利一股一票，但董事提名控制权高度固化</td></tr>
-        <tr><td>VIE 架构</td><td>受限制牌照由合约控制实体持有</td><td>合并会计不等于直接法定股权，政策与现金上划仍有尾部风险</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>资产负债表给管理层时间，但治理结构决定普通股东很难迫使公司缩短投资期限；因此回购应以“摊薄后净股数是否下降、是否由自由现金流覆盖”而不是公告金额评价。当前授予、归属、可转债潜在稀释与回购并存，单看已发行股数会低估每股价值的分母风险。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">业务组合估值 · 同业与市场定价 · 三年情景 / VALUATION</div>
-  <h2>现价给了云价值，却只给现金兑现一条窄路</h2>
-  <p>截至 2026-08-21 10:49 HKT，09988.HK 报 HKD 122.90，业绩后次日盘中较前收跌 2.6%；Wind 总市值约 HKD 2.357 万亿元、折合人民币 2.020 万亿元。股价较 52 周高点低 33.4%，但较低点高 38.6%。市场并非把 AI 完全免费赠送，只是在电商与云之间压低了兑现概率。</p>
-
-  <h3>同业倍数：阿里在受压盈利上并不显得便宜</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Wind 快照；港股为 2026-08-21 HKT，美股 PDD 为 2026-08-20 ET；业务结构并不完全可比</caption>
-      <thead><tr><th>公司</th><th>TTM P/E</th><th>Forward P/E</th><th>20日涨跌</th><th>年初至今</th></tr></thead>
-      <tbody>
-        <tr><td>阿里巴巴</td><td>27.9x</td><td>20.3x</td><td class="up">+11.7%</td><td class="down">−13.2%</td></tr>
-        <tr><td>腾讯</td><td>15.02x</td><td>15.03x</td><td class="up">+3.0%</td><td class="down">−24.4%</td></tr>
-        <tr><td>京东</td><td>18.98x</td><td>11.37x</td><td class="down">−2.9%</td><td class="up">+6.5%</td></tr>
-        <tr><td>百度</td><td>亏损</td><td>16.19x</td><td class="down">−12.0%</td><td class="down">−30.2%</td></tr>
-        <tr><td>拼多多</td><td>9.22x</td><td>8.06x</td><td class="up">+7.47%</td><td class="down">−21.1%</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>SOTP：把平台现金牛、云增长和应用亏损分开定价</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>基于 FY27Q1 年化运行率；AI Labs 路径与现值为人民币十亿元；使用摊薄股数；运行率不是全年预测</caption>
-      <thead><tr><th>情景</th><th>电商 EV/EBITA</th><th>云 EV/收入</th><th>AI Labs 亏损路径 → 现值</th><th>所有其他 EV/收入</th><th>组合折价</th><th>每股价值</th><th>对现价</th></tr></thead>
-      <tbody>
-        <tr><td>熊</td><td>8.0x</td><td>2.5x</td><td>−50 / −40 / −30 → −99.4</td><td>0.3x</td><td>15%</td><td>HKD 94.2</td><td class="down">−23%</td></tr>
-        <tr><td>基准</td><td>10.0x</td><td>3.5x</td><td>−40 / −25 / −10 → −65.1</td><td>0.5x</td><td>10%</td><td>HKD 130.2</td><td class="up">+6%</td></tr>
-        <tr><td>牛</td><td>12.0x</td><td>5.0x</td><td>−20 / −10 / 0 → −27.0</td><td>0.8x</td><td>7%</td><td>HKD 172.5</td><td class="up">+40%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">AI Labs 三段路径依次代表 FY27 余下期间、FY28 与 FY29 的经调整 EBITA 亏损，并沿用下表对应情景的折现率；FY29 后既不给应用期权价值，也不延续亏损，是明确的截断假设。运营组件加总后再扣组合折价，用来代理未逐项披露的分部间抵销、未分配成本、税与现金上划漏损，以及经调整利润没有完整反映的股权薪酬经济成本；这不是把内部收入当外部价值。最后加入归母净金融资产代理。每股分母统一用该季非 GAAP 摊薄加权股数，而非更低的基本或 Wind 隐含股数。</p>
-
-  <div class="callout"><b>现价反推。</b>沿用基准组合折价，若电商按 9 倍年化 EBITA、所有其他按基准收入倍数、AI Labs 按基准亏损现值计，市场隐含云 EV 约为年化收入的 3.54 倍。它与 SOTP 的基准云倍数几乎相同：现价不是免费赠送 AI 云，而是已经把一套中性云预期计入。</div>
-
-  <h3>三年现金路径：SOTP 必须经过现金桥才能归属股东</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>从 2026-06-30 起；FCF 顺序为 FY27 余下期间 / FY28 / FY29；终值折现 2.75 年；金额为人民币十亿元</caption>
-      <thead><tr><th>情景</th><th>云收入 CAGR / FY29 EBITA 率</th><th>FY29 经调整 EBITA 桥：电商/云/AI Labs/其余</th><th>FY29 capex/收入</th><th>三段 FCF</th><th>经常性 SBC 扣回</th><th>终值倍数/折现</th><th>每股现值</th><th>对现价</th></tr></thead>
-      <tbody>
-        <tr><td>熊</td><td>20% / 14%</td><td>145 / 45 / −25 / −10 = 155</td><td>12%</td><td>−90 / −40 / +10</td><td>−15</td><td>8.5x / 13.0%</td><td>HKD 51.4</td><td class="down">−58%</td></tr>
-        <tr><td>基准</td><td>30% / 19%</td><td>170 / 75 / −20 / −15 = 210</td><td>8%</td><td>−40 / +40 / +130</td><td>−20</td><td>12.5x / 11.25%</td><td>HKD 118.3</td><td class="down">−4%</td></tr>
-        <tr><td>牛</td><td>40% / 22%</td><td>185 / 107 / −5 / −12 = 275</td><td>6%</td><td>−10 / +100 / +200</td><td>−25</td><td>15x / 10.5%</td><td>HKD 191.0</td><td class="up">+55%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>云收入 CAGR 从 FY27Q1 年化运行率起算；分部利润、资本强度、现金流和持续性股权薪酬均为本报告输入，不是公司指引。终值先从经调整 EBITA 扣回经常性薪酬成本，再使用摊薄股数，避免用“排除成本的利润”和“未稀释分母”双重抬高价值。三段 FCF 是独立现金边界，因为公司没有披露分部资本开支、折旧、营运资本与现金税；强行搭桥只会制造伪精确。两种方法给出的基准价值带约为 HKD 118—131，现价落在其中，尚无明显安全边际。</p>
-  <p class="small">主导下行情景是现金路径，而不是可拆售的 SOTP：若 FY28 自由现金流仍为负、云利润率不再改善且 AI Labs 亏损未收窄，净金融资产会继续为不可单独变现的投入融资，应切换到压力边界。熊值是压力测试而非目标价；因缺少项目利用率、合同和资本开支分部数据，本报告不人为赋予情景概率，也不计算伪精确期望值。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">风险预警 · 多空辩论 · 最终判断 / VERDICT</div>
-  <h2>这是有资产防线的增长下注，不是低估值现金牛</h2>
-
-  <div class="quote">中性偏谨慎：电商和净现金提供了时间，云提供了上行，但现价已落入两种基准方法的价值带；在现金转正以前，没有足够折价补偿资产重型路线的压力风险。</div>
-
-  <div class="finds">
-    <div class="find good"><div class="t">最强多头证据</div><p>云的收入、利润率与 AI 产品组合同时改善，电商利润底仍在，资产负债表足以跨越短期投资谷底。若自研芯片与 MaaS 缩短回本期，经营杠杆会非常大。</p></div>
-    <div class="find warn"><div class="t">最强空头证据</div><p>集团收入仍增长时，自由现金流已经恶化；应用层亏损扩张快于云利润增量。需求短缺期的满载和定价，未必能穿过供给正常化与硬件折旧周期。</p></div>
-    <div class="find warn"><div class="t">最强反驳</div><p>若管理层的回本假设正确，当前现金流只是高回报产能的前置投入，现金路径会低估终值。对此不能用叙事回答，只能等待利润率、利用率代理和净现金共同验证。</p></div>
-    <div class="find warn"><div class="t">本报告裁决</div><p>现价处于基准估值带之内，而压力现金路径显著低于现价；不赋予主观概率时，上下行并不支持“偏多”。在集团现金转正以前，只适合条件性跟踪，不应把云的理论价值提前兑现。</p></div>
-  </div>
-
-  <h3>未来四个核验窗口</h3>
-  <div class="finds">
-    <div class="find"><div class="t">下一季度 · 云需求</div><p>必须看到外部云增速继续加快、AI 产品达到电话会运行率目标；若增速停滞且持续归咎于供给，下调云收入倍数。</p></div>
-    <div class="find"><div class="t">连续两季 · 分部利润</div><p>云分部利润率应环比上升，AI Labs 亏损应环比下降；两者不能同时改善，意味着回本假设失效。</p></div>
-    <div class="find"><div class="t">FY28 前 · 现金</div><p>资本开支增速应与经营现金生成重新靠拢；若净金融资产持续消耗且需要新增融资，切换到熊市现金路径。</p></div>
-    <div class="find"><div class="t">电商里程碑 · 单位经济</div><p>剔除冲减后的 CMR 与即时零售单位经济应同步改善；补贴退坡后份额或变现转弱，则下调电商利润锚。</p></div>
-  </div>
-  <p class="small">本报告不提供仓位或止损建议，因为用户未给出组合规模、持仓成本、波动承受能力与期限。对于价值投资者，最重要的不是追逐单季云增速，而是在现金路径改善前保留估值纪律。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">方法与来源 / METHODS</div>
-  <h2>硬数据回到港交所，前瞻按证据等级隔离</h2>
-  <p><strong>A 级证据：</strong>阿里巴巴在港交所发布的中文季度业绩公告与完整年度报告。FY27Q1 为未经审计季度数据；FY22—FY26 为经审计完整财年。季度分部比较数采用公司重编后的新架构。</p>
-  <p><strong>B 级证据：</strong>2026-08-20 公开业绩会的带发言人标签转写。该供应商稿包含明显 ASR 错误，例如 Qwen 被识别为 Q1、MaaS 被识别为 mass、币种和利润指标错位；所有承重数字均与港交所公告或多处口径交叉核对，管理层预测均标为主张。</p>
-  <p><strong>C 级证据：</strong>用户提供的华泰业绩后 callback 纪要。它不是公司官方逐字稿，只用于低置信度观察点和压力情景；内部冲突数字、未定义 ROIC/现金回报率以及无法确认主体的 FY29 现金流表述均未进入估值。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>主要公开来源</caption>
-      <thead><tr><th>资料</th><th>发布日期</th><th>状态</th><th>用途</th></tr></thead>
-      <tbody>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000746_c.pdf" target="_blank" rel="noopener">FY2027 Q1 季度业绩公告</a></td><td>2026-08-20</td><td>未经审计</td><td>当季、比较期、分部与现金流主来源</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0618/2026061800845_c.pdf" target="_blank" rel="noopener">FY2026 年度报告</a></td><td>2026-06-18</td><td>经审计</td><td>五年摘要、资产负债表、治理、股东回报</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0626/2025062601065_c.pdf" target="_blank" rel="noopener">FY2025 年度报告</a></td><td>2025-06-26</td><td>经审计</td><td>历史现金流与资本开支复核</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0523/2024052301570_c.pdf" target="_blank" rel="noopener">FY2024 年度报告</a></td><td>2024-05-23</td><td>经审计</td><td>历史序列复核</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0721/2023072101039_c.pdf" target="_blank" rel="noopener">FY2023 年度报告</a></td><td>2023-07-21</td><td>经审计</td><td>历史序列复核</td></tr>
-        <tr><td><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0726/2022072600088_c.pdf" target="_blank" rel="noopener">FY2022 年度报告</a></td><td>2022-07-26</td><td>经审计</td><td>五年起点</td></tr>
-        <tr><td>Wind 09988.HK 与同业快照；CFETS 港元兑人民币</td><td>2026-08-21 / 08-20</td><td>市场数据</td><td>现价、倍数、走势、汇率</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p class="small">派生计算包括毛利、利润率、同比、五年 CAGR、平均权益 ROE、LTM、分部年化运行率、净金融资产代理、SOTP、逆向估值和三年现金路径，均由独立计算账本复算并设置恒等式检查。没有把 Wind 标准化财务口径用于报表，因为本次查询返回的币种/期间映射不可靠；财务数字全部回到港交所原文。公开页面不上传电话会逐字稿、callback 原件、源文件、账本或 API 凭据。</p>
-</section>
-
-<footer>
-  <p>财务数据截止 2026-06-30；港交所文件及公开业绩会截止 2026-08-20；市场价格截止 2026-08-21 10:49 HKT。主要来源为阿里巴巴港交所中文披露、公开业绩会、Wind 市场数据及用户提供的非公开 callback 纪要。</p>
-  <p>估值是情景分析而非目标价承诺；非 GAAP 指标沿用公司定义，推算值与管理层主张均已标明。本文不构成投资建议。</p>
-</footer>
-
-</main>
-
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="internet-platform"><div class="slabel">财务与业务</div><h2>收入扩张没有阻止现金转弱，分部重组也改变了观察尺度</h2><p>完整年度显示收入温和扩张，利润和自由现金流却经历明显波动。新组织结构只重列了本季比较数，长周期应看集团轨迹，业务构成则看同口径季度，不能把两套分部名称强行接成长序列。</p>
+<div class="grid" data-financials="consolidated"><div class="cell" ><div class="k">单季收入</div><div class="v">2,689.53亿元</div><div class="d">上年同期 2,476.52；同比 8.6%</div></div><div class="cell" ><div class="k">毛利 / 毛利率</div><div class="v">1,028.57亿元</div><div class="d">38.2%；同期 44.9%（推算）</div></div><div class="cell" ><div class="k">经营利润 / 利润率</div><div class="v">151.61亿元</div><div class="d">5.6%；同期 349.88亿元</div></div><div class="cell" ><div class="k">归母净利润（GAAP）</div><div class="v">106.14亿元</div><div class="d">同比 −73.9%；归母率 3.9%</div></div><div class="cell" ><div class="k">经营现金流</div><div class="v">229.45亿元</div><div class="d">同期 206.72；同比 11.0%</div></div><div class="cell" ><div class="k">公司自由现金流</div><div class="v">−446.70亿元</div><div class="d">同期 −188.15；非GAAP流动性指标</div></div></div><div class="tblscroll"><table class="tbl" data-financials="history"><caption>集团五年及滚动十二个月（TTM）｜人民币亿元，EPS与比率另列；FY均三月末止，年度合并财务已审计，管理层FCF非审计指标；TTM截至六月末为推算</caption><thead><tr><th>项目</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>FY2026</th><th>本期TTM</th><th>四年复合增速（CAGR）</th></tr>
+</thead><tbody><tr><td>营业收入</td><td>8,530.62</td><td>8,686.87</td><td>9,411.68</td><td>9,963.47</td><td>10,236.70</td><td>10,449.71</td><td>4.7%</td></tr>
+<tr><td>毛利（推算）</td><td>3,136.12</td><td>3,189.92</td><td>3,548.45</td><td>3,980.62</td><td>4,075.34</td><td>3,991.68</td><td>—</td></tr>
+<tr><td>毛利率（推算）</td><td>36.8%</td><td>36.7%</td><td>37.7%</td><td>40.0%</td><td>39.8%</td><td>38.2%</td><td>—</td></tr>
+<tr><td>营业利润</td><td>696.38</td><td>1,003.51</td><td>1,133.50</td><td>1,409.05</td><td>501.50</td><td>303.23</td><td>−7.9%</td></tr>
+<tr><td>营业利润率（推算）</td><td>8.2%</td><td>11.6%</td><td>12.0%</td><td>14.1%</td><td>4.9%</td><td>2.9%</td><td>—</td></tr>
+<tr><td>归母净利润</td><td>622.49</td><td>727.83</td><td>800.09</td><td>1,301.09</td><td>1,035.92</td><td>735.57</td><td>13.6%</td></tr>
+<tr><td>归母净利率（推算）</td><td>7.3%</td><td>8.4%</td><td>8.5%</td><td>13.1%</td><td>10.1%</td><td>7.0%</td><td>—</td></tr>
+<tr><td>基本每股收益（EPS，人民币元/普通股）</td><td>2.87</td><td>3.46</td><td>3.95</td><td>6.89</td><td>5.70</td><td>不拼接</td><td>18.7%</td></tr>
+<tr><td>净资产收益率（ROE，推算）</td><td>6.6%</td><td>7.5%</td><td>8.1%</td><td>13.0%</td><td>10.0%</td><td>不拼接</td><td>—</td></tr>
+<tr><td>经营现金流</td><td>1,427.59</td><td>1,997.52</td><td>1,825.93</td><td>1,635.09</td><td>762.13</td><td>784.86</td><td>−14.5%</td></tr>
+<tr><td>完整资本开支（支出正数）</td><td>533.09</td><td>343.30</td><td>320.87</td><td>859.72</td><td>1,260.63</td><td>1,550.65</td><td>—</td></tr>
+<tr><td>公司FCF（非GAAP）</td><td>988.74</td><td>1,716.63</td><td>1,562.10</td><td>738.70</td><td>−466.09</td><td>−724.64</td><td>—</td></tr>
+</tbody></table></div><div class="cols" role="img" aria-label="五年收入和归母利润共享收入最大值刻度"><div class="col"><div class="bars"><div class="bar rev" style="height:83.33369%"></div><div class="bar np" style="height:6.08096%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:84.86006%"></div><div class="bar np" style="height:7.11001%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:91.94057%"></div><div class="bar np" style="height:7.81590%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:97.33088%"></div><div class="bar np" style="height:12.71005%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:100.00000%"></div><div class="bar np" style="height:10.11967%"></div></div></div></div><div class="collabels"><div><b>FY2022</b></div><div><b>FY2023</b></div><div><b>FY2024</b></div><div><b>FY2025</b></div><div><b>FY2026</b></div></div><div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div><p class="small">收入增长没有稳定地转化为更高利润。两组柱共用五年最大收入；TTM为最近全年加本季减上年同期，ROE使用期初期末归母权益均值，不以普通股EPS利润代替归母利润。</p>
+<div class="tblscroll"><table class="tbl" data-financials="segments"><caption>新分部与电商子项｜人民币亿元，各格收入 / 经调整EBITA；FY2026Q1已按本季结构重列；四分部毛收入为结构占比分母，非集团外部收入</caption><thead><tr><th>业务</th><th>FY2026Q1</th><th>FY2027Q1</th><th>本季EBITA率（推算）</th><th>结构 / 子项增速（推算）</th></tr>
+</thead><tbody><tr><td>电商集团</td><td>1,988.12 / 399.88</td><td>2,058.62 / 397.49</td><td>19.3%</td><td>71.9%</td></tr>
+<tr><td>AI云与算力服务</td><td>334.18 / 24.19</td><td>484.37 / 56.28</td><td>11.6%</td><td>16.9%</td></tr>
+<tr><td>AI实验室与应用（Labs）</td><td>28.82 / −32.24</td><td>33.38 / −138.61</td><td>−415.2%</td><td>1.2%</td></tr>
+<tr><td>所有其他</td><td>286.29 / 6.87</td><td>288.03 / −33.43</td><td>−11.6%</td><td>10.1%</td></tr>
+<tr><td>未分配</td><td>5.19 / −4.19</td><td>7.83 / −1.63</td><td>不适用</td><td>不进结构分母</td></tr>
+<tr><td>分部间抵销</td><td>−166.08 / −6.07</td><td>−182.70 / −6.81</td><td>不适用</td><td>不进结构分母</td></tr>
+<tr><td>↳中国电商</td><td>1,208.74 / 利润未披露</td><td>1,109.00 / 利润未披露</td><td>子项收入不配利润率</td><td>−8.3% 收入同比</td></tr>
+<tr><td>其中<span class="g">客户管理收入（CMR）</span></td><td>891.99 / 利润未披露</td><td>825.47 / 利润未披露</td><td>子项收入不配利润率</td><td>−7.5% 收入同比</td></tr>
+<tr><td>其中直营及其他</td><td>316.75 / 利润未披露</td><td>283.53 / 利润未披露</td><td>子项收入不配利润率</td><td>−10.5% 收入同比</td></tr>
+<tr><td>↳即时零售</td><td>367.25 / 利润未披露</td><td>532.95 / 利润未披露</td><td>子项收入不配利润率</td><td>45.1% 收入同比</td></tr>
+<tr><td>↳国际数字商业</td><td>281.77 / 利润未披露</td><td>277.61 / 利润未披露</td><td>子项收入不配利润率</td><td>−1.5% 收入同比</td></tr>
+<tr><td>↳批发商业</td><td>130.36 / 利润未披露</td><td>139.06 / 利润未披露</td><td>子项收入不配利润率</td><td>6.7% 收入同比</td></tr>
+</tbody></table></div><div class="stacks"><div class="stack"><div class="cap">FY2026Q1：电商 / 云 / Labs与其他</div><div class="stackbar"><div class="seg p" style="width:75.38153%"></div><div class="seg q" style="width:12.67076%"></div><div class="seg r" style="width:11.94771%"></div></div></div><div class="stack"><div class="cap">FY2027Q1：电商 / 云 / Labs与其他</div><div class="stackbar"><div class="seg p" style="width:71.86915%"></div><div class="seg q" style="width:16.91000%"></div><div class="seg r" style="width:11.22085%"></div></div></div></div><p class="small">毛收入结构向云倾斜，但抵销前占比不是集团外部客户占比。四分部加未分配、再减内部抵销后与集团收入及EBITA核对一致；新电商纳入盒马及部分菜鸟商业业务，云纳入平头哥，Labs另列模型和应用。</p>
+<div class="tblscroll"><table class="tbl" ><caption>平台观察表｜六月季度，会员及累计用户按行标注日期；运营数非新增会计分部</caption><thead><tr><th>指标</th><th>披露 / 边界</th></tr>
+</thead><tbody><tr><td>递延收入</td><td>841.21亿元（期末长短期合计推算）；不把全集团收入加其变动当流水。</td></tr>
+<tr><td>成交总额（GMV）、变现率、每用户收入（ARPU）</td><td>未披露同口径GMV与平均活跃用户，不由收入或会员数反推抽佣率和人均收入。</td></tr>
+<tr><td>会员 / 活跃用户</td><td>88VIP六月末约6,400万；八月公告披露千问上线以来累计2.5亿首次AI购物用户，非六月末口径。二者均非月活用户（MAU）、复购或持续付费人数。</td></tr>
+<tr><td>股份支付及非GAAP利润</td><td>股份支付33.04亿元；公司加回的非现金部分见利润对账，不能一概视作免费。</td></tr>
+<tr><td>新品 / 单位经济</td><td>模型、应用和自研芯片已有业务活动；没有可核验的统一新品定档收入。公司称即时零售单均经济环比改善，订单量、单均贡献利润未披露。</td></tr>
+<tr><td>广告与佣金</td><td>客户管理收入含营销及交易服务，见电商子项；不把直营总额收入增速视为收费率变化。</td></tr>
+</tbody></table></div><div class="plain"><span class="pl">白话解读</span><p>集团收入继续增长，但五年现金轨迹已经转弱。当前云的分部收入和利润都在扩大，电商内部却存在不同方向：即时零售增长，传统收费承压。下一节把这种结构变化接到归母利润。</p>
+</div></section>
+<section class="reveal on" id="profit" ><div class="slabel">利润传导</div><h2>经营减弱与非经营项目叠加，调整利润也必须付出薪酬</h2><p>账面销售费用下降没有抵消毛利、研发及管理费用压力。公司称部分补贴由销售费用改列收入抵减，同时存在闪购投入效率改善；这会同时影响毛利和费用，不能全当作实际节省。投资收益减少和税费增加又放大降幅。</p>
+<div class="wfall" aria-label="本季相对上年同期归母净利润增量桥"><div class="wrow"><div class="nm">毛利<span>本季减上年同期，损益带符号</span></div><div class="wtrack"><div class="wbar down" style="left:73.74054%;width:26.25946%"></div></div><div class="fig">−83.66</div></div><div class="wrow"><div class="nm">销售费用<span>本季减上年同期，损益带符号</span></div><div class="wtrack"><div class="wbar up" style="left:73.74054%;width:17.42993%"></div></div><div class="fig">+55.53</div></div><div class="wrow"><div class="nm">研发费用<span>本季减上年同期，损益带符号</span></div><div class="wtrack"><div class="wbar down" style="left:67.54135%;width:23.62912%"></div></div><div class="fig">−75.28</div></div><div class="wrow"><div class="nm">管理费用<span>本季减上年同期，损益带符号</span></div><div class="wtrack"><div class="wbar down" style="left:50.87416%;width:16.66719%"></div></div><div class="fig">−53.10</div></div><div class="wrow"><div class="nm">摊销、减值及其他经营<span>本季减上年同期，损益带符号</span></div><div class="wtrack"><div class="wbar down" style="left:37.76641%;width:13.10776%"></div></div><div class="fig">−41.76</div></div><div class="wrow"><div class="nm">利息及投资收益<span>本季减上年同期，损益带符号</span></div><div class="wtrack"><div class="wbar down" style="left:11.48812%;width:26.27829%"></div></div><div class="fig">−83.72</div></div><div class="wrow"><div class="nm">其他非经营及利息费用<span>本季减上年同期，损益带符号</span></div><div class="wtrack"><div class="wbar up" style="left:11.48812%;width:0.85690%"></div></div><div class="fig">+2.73</div></div><div class="wrow"><div class="nm">所得税<span>本季减上年同期，损益带符号</span></div><div class="wtrack"><div class="wbar down" style="left:0.00000%;width:12.34502%"></div></div><div class="fig">−39.33</div></div><div class="wrow"><div class="nm">权益法及少数股东<span>本季减上年同期，损益带符号</span></div><div class="wtrack"><div class="wbar up" style="left:0.00000%;width:5.72523%"></div></div><div class="fig">+18.24</div></div><div class="wrow"><div class="nm">归母净利润变化<span>全部损益差额加总</span></div><div class="wtrack"><div class="wbar tot" style="left:5.72523%;width:94.27477%"></div></div><div class="fig">−300.35</div></div></div><p class="small">经营压力是主要减项，金融损益和税费又扩大了降幅。人民币亿元；各条从上一条终点接续，所得税及少数股东按对归母的方向计入，最终与两期归母差额相等。</p>
+<div class="tblscroll"><table class="tbl" ><caption>利润层次与调整｜FY2027Q1，人民币亿元；EPS人民币元/普通股。加回项目不是现金可分配的证明</caption><thead><tr><th>层次 / 项目</th><th>金额</th><th>解释</th></tr>
+</thead><tbody><tr><td>集团净利润</td><td>104.44</td><td>合并子公司后、归属划分前。</td></tr>
+<tr><td>归母 → 普通股利润</td><td>106.14 → 105.37</td><td>夹层权益增值调整−0.77；两者不能混用。</td></tr>
+<tr><td>非现金股份支付（SBC） / 无形资产摊销</td><td>29.62 / 6.65</td><td><span class="g">经调整EBITA</span>及非GAAP加回，现金部分薪酬仍留在经营成本中。</td></tr>
+<tr><td>投资损益调整 / 减值及其他</td><td>−53.64 / 92.02</td><td>对集团利润带符号调整，不能只保留有利加回。</td></tr>
+<tr><td>税项调整 → 非GAAP集团利润</td><td>28.06 → 207.15</td><td>集团净利润加前述五类调整的完整对账。</td></tr>
+<tr><td>扣非现金SBC后的简化经济利润</td><td>177.53</td><td>由非GAAP集团利润减非现金SBC，未另重算税，非归母指标。</td></tr>
+<tr><td>普通股 → GAAP摊薄分子</td><td>105.37 → 89.52</td><td>另含子公司激励、可转债利息和可交换债影响。</td></tr>
+<tr><td>调整后摊薄分子 / 摊薄股数</td><td>205.83 / 19,324百万股</td><td>非GAAP摊薄EPS 1.07；不是非GAAP集团利润直接除该股数。</td></tr>
+</tbody></table></div><p>剔除减值和监管拨备不等于资本没有损失。模型从分部经调整EBITA出发，再扣持续<span class="g">股份支付（SBC）</span>经济成本，不将非GAAP净利润直接放大为价值。</p>
+<p>缺少订单与分部投入资本时，分部利润率上升不等于ROIC改善；股权投资收益也不证明主营竞争壁垒。前者还要计入为增长投入的资本，后者要区分账面变动与实际分红。</p>
+<div class="plain"><span class="pl">白话解读</span><p>调整利润没有消除薪酬与过去投资的经济成本。现金一节继续回答：这些利润之后，还要投入多少钱？</p>
+</div></section>
+<section class="reveal on" id="engine" ><div class="slabel">商业兑现</div><h2>云的增长已有证据，应用与算力投入的回收仍缺闭环</h2><p>云收入与利润同时增长，但能否在内部应用投入放缓后保持，仍看外部持续付费。内部交易抵销只解决报表相加，不证明内部需求已有独立回报。</p>
+<p>本季AI相关产品收入123.76亿元，公司披露连续12个季度三位数同比增长；外部云收入同比增长45%，但外部收入绝对金额没有单列。将季度AI收入折成年化速度为495.04亿元，只是规模刻度，不是全年已确认收入。平头哥客户超过650家，客户数也不能直接转换为芯片销量、定价或单独利润。</p>
+<p>传统电商的客户管理收入按报表下降7%；公司称若剔除特定投入的收入抵减影响，则增长1%。后者是公司定义的反事实调整，不是已实现有机增速或收款。即时零售的收入扩张混合配送、直营与交易服务，不宜推成统一GMV增长；AliExpress当季录得经营利润，也不代表整个国际商业已整体盈利。</p>
+<div class="tblscroll"><table class="tbl txt" ><caption>公开电话会：问题、回答与可验证边界｜2026-08-20，公开会议的第三方文字转录；数字优先服从港交所文件</caption><thead><tr><th>问什么</th><th>管理层回答 / 状态</th><th>仍需什么证据</th></tr>
+</thead><tbody><tr><td>AI需求是否变现</td><td>称AI产品占外部云收入约35%，模型及应用服务含<span class="g">模型即服务（MaaS）</span><span class="g">年化经常性收入（ARR）</span>在八月超过160亿元，年底目标超过300亿元；部分回答。</td><td>口径含哪些业务、重复计数、合同持续期及毛利；“年底”按本次讲话语境理解为日历年末，非确认财年指引。</td></tr>
+<tr><td>近期云增长如何</td><td>预计云增速加快、利润率改善，下一季度AI年化收入速度接近100亿美元；方向性回答。</td><td>季度确认收入、外部客户结构及同口径利润；年化美元目标不是一个季度收入。</td></tr>
+<tr><td>投入何时见回报</td><td>称AI基础设施三年计划3800亿元，累计约1900亿元；按当前毛利讨论约3年回收、可能缩短至2.5年或2年；条件性回答。</td><td>资本支付与投产、利用率、运维和更新资本的对应表；简单回收期不等于内部收益率或资本回报率。</td></tr>
+<tr><td>即时零售何时盈利</td><td>预计FY2029整体盈利；Labs亏损未来逐步收窄；前者有目标、后者无定量路径。</td><td>即时零售自身亏损与单均贡献；FY2029目标只指该业务，不是集团FCF转正承诺。</td></tr>
+</tbody></table></div><p>会议有转录误差，模糊远期收入及利润率目标不入估值。外部订阅、内部调用和应用付费尚缺独立利润；终值云盈利以内部需求可持续或由外部替代为条件，风险表检验替代不足。</p>
+<p>市场份额尚缺可比证据，竞争力要以收费和交付成本检验。</p>
+<div class="plain"><span class="pl">白话解读</span><p>AI需求已有增长，资本回收仍有条件。外部收入、利润和设备投入需要联读，调用量和累计用户不直接证明股东回报。</p>
+</div></section>
+<section class="reveal on" id="cash" ><div class="slabel">资金与投入</div><h2>融资延长投入能力，现金回报仍要扣真实资本支出</h2><p>资金缓冲仍大，经营现金却尚未覆盖设备支出。现金桥将投资理财、债务及权益归属分开，再接配售和已安排股息；净金融调整不等于可立即分配现金。</p>
+<div class="tblscroll"><table class="tbl" ><caption>现金与权益桥｜2026-06-30账面为主，人民币亿元；后续项目与估值日桥接值均明确另列</caption><thead><tr><th>项目</th><th>金额</th><th>性质与处理</th></tr>
+</thead><tbody><tr><td>不受限现金及流动投资</td><td>4,745.05</td><td>披露：现金、短投及部分其他理财；不是全部银行现金。</td></tr>
+<tr><td>受限现金及应收托管资金</td><td>425.85</td><td>披露：不加入前述不受限池。</td></tr>
+<tr><td>有息债务合计（推算）</td><td>2,665.30</td><td>银行、优先票据、可转债与可交换债；未将经营租赁重复资本化。</td></tr>
+<tr><td>净现金 → 归母净金融调整代理</td><td>2,079.75 → 1,431.19</td><td>再扣少数股东权益572.72和夹层权益75.84，均为账面代理。</td></tr>
+<tr><td>非并表投资账面余项代理（推算）</td><td>4,574.17</td><td>剔除流动池内理财代理后余额，非逐项确认的可变现战略股权总额。</td></tr>
+<tr><td>本季完整资本开支 / 公司FCF资本项</td><td>676.78 / 676.60</td><td>公司FCF另加买方保障金调整0.45，与直接OCF减完整资本开支不同。</td></tr>
+<tr><td>经营现金流（OCF）减完整资本开支（推算）</td><td>−447.33</td><td>简单现金代理，不改名为公司披露FCF。</td></tr>
+<tr><td>FY2026物业及设备折旧 / 扩大口径</td><td>349.63 / 370.67</td><td>后者含减值与土地使用权租赁成本；模型加回物业及设备折旧代理。</td></tr>
+<tr><td>配售净额折人民币（推算）</td><td>689.13</td><td>按估值汇率换算已完成交易；具体发行条款见资本一节。</td></tr>
+<tr><td>七月已安排年度股息预留（推算）</td><td>169.49</td><td>按已宣布总额和计划支付日预留，尚非取得实际现金支付确认。</td></tr>
+<tr><td>六月末至估值日经营消耗代理</td><td>338.71</td><td>以六月季FCF日均速度推算，仅基准近况假设；不含配售及股息。</td></tr>
+<tr><td>基准净金融与投资调整合计（假设）</td><td>3,899.21</td><td>桥接前述项目，并对投资余项按基准回收率折价；不是九月已报资产负债表。</td></tr>
+</tbody></table></div><p>完整资本开支为本季经营现金的2.95倍；理财赎回可抵消投资现金流，却不减少设备付款。经营现金也受预收及应付时点影响。维持性与增长性开支未拆，故不把AI投入自动当作估值可忽略的“增长开支”。</p>
+<p>投资余项用表内股权及其他投资、权益法资产，扣已进入流动池的理财代理。六月短投的受限部分缺单独拆分；全额扣短投可能少扣理财、从而多计余项。回收率因此覆盖变现、税、限制和分类误差，不宣称账面资产能足额兑现。权益法投资的利润并非分部EBITA，投资估值已含在余项，不另加一个“蚂蚁价值”。</p>
+<p>季度缺逐年到期表更新和母子公司调拨细节。集团租金留在成本，模型不加回全部租金，也不再扣一遍租赁本金；少数股东按账面扣除仅为权益归属近似，非实际市值。</p>
+<div class="plain"><span class="pl">白话解读</span><p>资本开支今天付款，折旧分期进入利润。下一份完整年报要检验经营现金能否覆盖设备投入，现金储备不替代这一证据。</p>
+</div></section>
+<section class="reveal on" id="capital" ><div class="slabel">融资与治理</div><h2>历史返还资本不能抵消新一轮融资的每股考验</h2><p>八月二十六日完成配售710,000,000股，每股HK$112.70，净额约797亿港元，新股占扩大后3.57%。拟投全球算力约60%、数据中心及存储网络约40%，用途不保证回报；估值同步加入现金与新股。</p>
+<p>FY2022至FY2026同一窗口，回购及普通股现金股息累计3,997.71亿元，普通股发行现金累计20.15亿元；并非上市以来累计。FY2026实际发行及归属扣回购注销后仍净增约106.14百万股，较期初稀释0.57%，回购金额不等于每股回报率。</p>
+<p>FY2026常规股息为每普通股0.13125美元，计划普通股于2026-07-06、ADS于2026-07-13前后支付，已公布总额约25亿美元。历史股息从六月现金预留；未来仅假设重复常规每股金额，不重复计入已安排分配，也不将计划当作实付。</p>
+<p>最新月报将已发行股份、已授出期权与<span class="g">限制性股份单位（RSU）</span>、可转债最高潜在股份分开。未授出额度不是现有稀释，季度加权摊薄数也不是九月股本。估值附录将债务留存或转换与对应股数配对，并单列激励费用重叠压力。</p>
+<p>合伙人有提名董事会过半数成员等权利，核心条款变更涉及95%投票门槛，普通股持仓不直接代表控制可转移。八月奖励不设绩效目标、最长归属四年，留人与回报约束应分别评价；缺内幕交易全量核实，不虚构管理层成本线。</p>
+<p>本季全部关联定价与交易级投资回报缺公开明细，程序合规不替代商业合理性。资本配置应以已投项目利用率、后续资金需求及每股成果检验。</p>
+<div class="plain"><span class="pl">白话解读</span><p>回购与新增股份相抵，配售与新增现金一起计算。下一份月报看实际股数，后续财报看新增资本是否形成每股成果。</p>
+</div></section>
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="SOTP"><div class="slabel">价值与预期</div><h2>基准有折价，低置信度的长期假设限制了积极判断</h2><div class="grid"><div class="cell" ><div class="k">现价</div><div class="v">HK$109.60</div><div class="d">2026-09-07 16:08:23 香港时间</div></div><div class="cell" ><div class="k">熊市</div><div class="v">≈HK$81.83</div><div class="d">较现价 −25.3%</div></div><div class="cell" ><div class="k">基准</div><div class="v">≈HK$149.86</div><div class="d">较现价 36.7%</div></div><div class="cell" ><div class="k">牛市</div><div class="v">≈HK$230.11</div><div class="d">较现价 110.0%</div></div><div class="cell" ><div class="k">隐含预期</div><div class="v">4.1% 云经营利润率</div><div class="d">经调整EBITA口径，固定其他基准输入</div></div><div class="cell" data-verdict="neutral"><div class="k">判断</div><div class="v">中性</div><div class="d">等待验证：估值输入置信度低</div></div></div><div class="steps"><div class="step"><div class="n">方法 A</div><b>现金约束分部加总（SOTP）：每股剩多少？</b><p>分部经济利润估值，扣期间投资和亏损，再接净金融资产；唯一主方法。</p>
+</div><div class="step"><div class="n">方法 B</div><b>整体税后经营利润资本化</b><p>用较宽的整体盈利倍数校验；不与主方法平均，不作为赔率来源。</p>
+</div><div class="step"><div class="n">怎么读</div><b>现值，不是一年后目标价</b><p>期限2026-09-07至2027-09-07；三档已折现，未来股息现值另列并只计一次。</p>
+</div></div><h3>第一步 · 当前盈利倍数仍受口径影响</h3><p>Wind同日市盈率（PE）25.82倍、预测PE 19.57倍，历史股息率0.91%。按最新股数及汇率，自算TTM归母PE 25.62倍、普通股盈利PE 25.70倍，非已报加权EPS倒数。供应商分母缺完整对账，预测PE缺期间及样本，不作一致预期。</p>
+<p>未取得五年市盈率/市销率分位及有效市净率，缺“五年底部”的估值证据。</p>
+<h3>第二步 · 电商同行提供机会成本，不替云业务定价</h3><div class="tblscroll"><table class="tbl" ><caption>Wind估值截面｜港股2026-09-07，PDD为2026-09-04美国收盘；无量纲倍数，不混用货币市值。预测期间口径未完全对账</caption><thead><tr><th>实体 / 层级</th><th>TTM PE</th><th>预测PE</th><th>可比性与边界</th></tr>
+</thead><tbody><tr><td>京东 09618.HK · 一级</td><td>18.00</td><td>10.73</td><td>同地电商参照，但直营占比与履约成本不同；不直接套给云。</td></tr>
+<tr><td>拼多多控股（PDD）· 二级跨市场</td><td>8.66</td><td>7.59</td><td>平台收费模式参照，海外及监管敞口不同；只比较无量纲倍数。</td></tr>
+<tr><td>美团 03690.HK · 三级</td><td>−11.17</td><td>−66.18</td><td>即时零售竞争参照；亏损倍数不表示便宜，不纳入平均。</td></tr>
+</tbody></table></div><p>阿里的溢价需要云商业化支持，不能由混合同业中位数证明。最新六月季度，京东收入−2.9%、零售经营率4.5%升至4.6%；PDD收入+8%、非GAAP经营利润+5%；美团收入+14.4%、核心本地商业经营利润+52.3%。利润定义各异，仅作两期竞争轨迹，不视为阿里预测。</p>
+<h3>第三步 · 情景的主要分歧是云兑现与持续资本需求</h3><div class="tblscroll"><table class="tbl" ><caption>唯一主方法：现金约束<span class="g">分部加总（SOTP）</span>｜前瞻均为≈分析情景，人民币经营数据，输出为港元/普通股；一年同期限，非公司指引</caption><thead><tr><th>驱动 / 输出</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据</th></tr>
+</thead><tbody><tr><td>电商收入增速 / 年化季基数</td><td>−1.0%</td><td>5.0%</td><td>10.0%</td><td>本季收入锚：压力、修复、提速。</td></tr>
+<tr><td>电商EBITA率（扣SBC前）</td><td>18.0%</td><td>20.0%</td><td>21.0%</td><td>本季率及补贴退出程度为锚。</td></tr>
+<tr><td>云收入增速 / 年化季基数</td><td>20.0%</td><td>35.0%</td><td>50.0%</td><td>本季增长及加速展望为锚。</td></tr>
+<tr><td>云EBITA率（扣SBC前）</td><td>12.0%</td><td>16.0%</td><td>20.0%</td><td>利用率和服务结构继续改善的分析假设。</td></tr>
+<tr><td>电商经济EBITA倍数</td><td>8.0倍</td><td>10.0倍</td><td>12.0倍</td><td>成熟电商机会成本加增长差异；非PE。</td></tr>
+<tr><td>云经济EBITA倍数</td><td>18.0倍</td><td>25.0倍</td><td>32.0倍</td><td>增长溢价假设，非同行交易报价。</td></tr>
+<tr><td>其他业务收入倍数</td><td>0.0倍</td><td>0.3倍</td><td>0.6倍</td><td>零至有限处置期权，终值后亏损另留准备。</td></tr>
+<tr><td>折现要求</td><td>13.0%</td><td>11.0%</td><td>10.0%</td><td>长债有效成本5.67%加风险补偿，非加权平均资本成本测算。</td></tr>
+<tr><td>未来一年资本开支</td><td>2,300亿元</td><td>1,900亿元</td><td>1,700亿元</td><td>AI计划、累计投入和新融资约束的节奏压力。</td></tr>
+<tr><td>物业及设备折旧</td><td>500亿元</td><td>600亿元</td><td>700亿元</td><td>以FY2026物业及设备折旧和设备新增为锚；不加回土地租赁。</td></tr>
+<tr><td>净营运资本占用增量</td><td>50亿元</td><td>30亿元</td><td>10亿元</td><td>扩张占款压力假设。</td></tr>
+<tr><td>未来一年Labs亏损</td><td>500亿元</td><td>350亿元</td><td>200亿元</td><td>本季亏损基数下不同收窄路径；无盈利承诺。</td></tr>
+<tr><td>未来一年其他EBITA</td><td>−100亿元</td><td>−30亿元</td><td>30亿元</td><td>持续亏损、接近盈亏平衡、小幅盈利。</td></tr>
+<tr><td>终值后Labs亏损准备</td><td>500亿元</td><td>250亿元</td><td>0亿元</td><td>只覆盖预测年之后；随后止损或盈利是条件。</td></tr>
+<tr><td>终值后其他退出准备</td><td>100亿元</td><td>30亿元</td><td>0亿元</td><td>只覆盖终值后的退出损失。</td></tr>
+<tr><td>投资余项回收比例</td><td>30.0%</td><td>50.0%</td><td>70.0%</td><td>对分类、变现、税和控制限制综合折价。</td></tr>
+<tr><td>未披露近况消耗 / 本季日均</td><td>1.5倍</td><td>1.0倍</td><td>0.5倍</td><td>六月末至估值日的运营现金代理，不含配售和股息。</td></tr>
+<tr><td>电商扣SBC后经济EBITA</td><td>1,408.14亿元</td><td>1,670.00亿元</td><td>1,842.92亿元</td><td>薪酬按现金替代成本计入。</td></tr>
+<tr><td>云扣SBC后经济EBITA</td><td>219.76亿元</td><td>359.26亿元</td><td>522.00亿元</td><td>采用分部利润而非外部收入猜测值。</td></tr>
+<tr><td>预测年企业自由现金流（FCFF）</td><td>−1,262.83亿元</td><td>−221.82亿元</td><td>552.44亿元</td><td>税仅对盈利分部计提，不自动兑现亏损税盾。</td></tr>
+<tr><td>除未来股息的每股现值</td><td>81.83港元</td><td>149.86港元</td><td>230.11港元</td><td>配对债股两端取较低值；不是未来目标价。</td></tr>
+<tr><td>未来股息现值 / 股</td><td>0.911港元</td><td>0.927港元</td><td>0.936港元</td><td>重复最近常规DPS的假设，仅从总权益现值拆分。</td></tr>
+</tbody></table></div><p>基于11%参考折现要求、税后利润80%可分配作等效检验，三档电商倍数对应约3.3% / 4.7% / 5.7%持续增长，云为7.4% / 8.4% / 9.0%。这是偏强的永续要求，非倍数验证或管理层资本回报率。</p>
+<div class="steps chain"><div class="step"><div class="n">驱动</div><b>电商修复、云商业化</b><p>基准增长和利润率取情景表。</p>
+</div><div class="step"><div class="n">利润</div><b>电商1,670、云359亿元</b><p>已扣持续SBC，收入不重复加总。</p>
+</div><div class="step"><div class="n">资本化</div><b>电商10倍、云25倍</b><p>共同成本与终值后亏损另扣。</p>
+</div><div class="step"><div class="n">现金与折现</div><b>扣投资，按11%折现一年</b><p>衔接净金融资产和成对债股压力。</p>
+</div><div class="step"><div class="n">每股现值</div><b>HK$149.86</b><p>阶梯基准档，未另加股息。</p>
+</div></div><div class="ffield" aria-label="同轴主方法局部区间、整体盈利交叉检验与已完成配售市场锚"><div class="frow"><div class="fnm">现金约束SOTP<span>熊市</span></div><div class="ftrack"><div class="fbar alt" style="left:13.49418%;width:3.32864%"></div><div class="fmark" style="left:28.38095%"></div></div><div class="fig">78.34–85.33港元</div></div><div class="frow"><div class="fnm">现金约束SOTP<span>基准</span></div><div class="ftrack"><div class="fbar " style="left:45.60194%;width:3.89996%"></div></div><div class="fig">145.76–153.95港元</div></div><div class="frow"><div class="fnm">现金约束SOTP<span>牛市</span></div><div class="ftrack"><div class="fbar moss" style="left:83.58945%;width:4.35132%"></div></div><div class="fig">225.54–234.68港元</div></div><div class="frow"><div class="fnm">整体盈利资本化<span>只作交叉检验</span></div><div class="ftrack"><div class="fbar " style="left:18.66062%;width:15.87234%"></div></div><div class="fig">89.19–122.52港元</div></div><div class="frow"><div class="fnm">已完成配售<span>独立交易价格，非价值底线</span></div><div class="ftrack"><div class="fbar alt" style="left:29.85714%;width:0.80000%"></div></div><div class="fig">112.70港元</div></div></div><p class="small">整体盈利校验保留长期Labs亏损，故较主方法低。横轴50–260港元/股；主方法仅改变电商倍数上下0.5倍，非置信区间；细标配售价，黑线现价。</p>
+<div class="tblscroll"><table class="tbl sgrid"><caption>敏感性｜行：云EBITA率%；列：电商经济EBITA倍数；格内港元/股。其他基准输入不变，粗框基准，底色现价隐含；隐含行用未舍入值计算。</caption><thead><tr><th>云EBITA率 ＼ 电商倍数</th><th>8倍</th><th>10倍</th><th>12倍</th></tr>
+</thead><tbody><tr><td>4.06%（隐含）</td><td class="">93.22</td><td class="implied">109.60</td><td class="">125.98</td></tr>
+<tr><td>12.00%</td><td class="">119.99</td><td class="">136.37</td><td class="">152.75</td></tr>
+<tr><td>16.00%</td><td class="">133.48</td><td class="base">149.86</td><td class="">166.24</td></tr>
+<tr><td>20.00%</td><td class="">146.96</td><td class="">163.34</td><td class="">179.72</td></tr>
+</tbody></table></div><h3>第四步 · 低隐含利润率，只在其他基准假设成立时成立</h3><div class="tblscroll"><table class="tbl" data-fullscan-role="implied"><caption>对现价反解主模型，每次只改变一项；不是市场参与者真实预测，也不能同时解释为两个悲观假设</caption><thead><tr><th>主方法驱动</th><th>基准假设</th><th>现价隐含</th><th>差距</th></tr>
+</thead><tbody><tr><td>云EBITA率</td><td>16.0%</td><td>4.06%</td><td>−11.94个百分点</td></tr>
+<tr><td>电商经济EBITA倍数</td><td>10倍</td><td>5.08倍</td><td>−4.92倍</td></tr>
+</tbody></table></div><div class="rows" aria-label="除股息现值的价值阶梯"><div class="row"><div class="nm">熊市<span>投入延长、兑现放缓</span></div><div class="track"><div class="fill alt" style="width:35.56299%"></div></div><div class="fig">81.83港元<span>−25.3%</span></div></div><div class="row"><div class="nm">现价<span>2026-09-07香港行情</span></div><div class="track"><div class="fill soft" style="width:47.63007%"></div></div><div class="fig">109.60港元<span>0.0%</span></div></div><div class="row"><div class="nm">基准<span>云与电商温和修复</span></div><div class="track"><div class="fill " style="width:65.12588%"></div></div><div class="fig">149.86港元<span>36.7%</span></div></div><div class="row"><div class="nm">牛市<span>利润率和资金效率改善</span></div><div class="track"><div class="fill moss" style="width:100.00000%"></div></div><div class="fig">230.11港元<span>110.0%</span></div></div></div><p class="small">基准高于现价，熊市仍有损失。按最高价值同比缩放，涨跌对现价；含息比较见判断表。</p>
+<div class="plain"><span class="pl">一句话总结</span><p>现金约束分部加总（SOTP）把各业务价值扣投入、按今天的钱分给每股。现价低于基准，关键条件却是高投入最终回落、利润转成可分配现金；后续全年要看净投入相对盈利是否下降。</p>
+</div></section>
+<section class="reveal on" id="valuation-appendix" ><div class="slabel">估值机制附录</div><h2>把费用、现金、股数与终值严格配对</h2><p>基准日2026-09-07、终值日2027-09-07：近况消耗和未来现金流不重叠。终值使用预测年末经济盈利能力代理；Labs及其他准备只覆盖终值后，随后盈利、退出或停止亏损是必要条件。</p>
+<p>未来非现金薪酬按本季年化118.48亿元，电商与云各分摊50%；共同成本及利润抵销年化33.76亿元，终值按电商倍数资本化。现金税率取25%正常化压力，只向盈利分部征税，不假设Labs、其他亏损及共同成本立即跨主体抵税。物业及设备折旧加回后扣资本开支和净营运资本增量，租赁成本仍在利润内。</p>
+<p class="small">已发行19,884,988,918股；期权27,424,000股、两类RSU 93,133,680及117,962,656股。激励上限后为20,123.509254百万股；完全转换再加692.857552百万股，同时释放母公司可转债账面549.05亿元。阿里健康可交换债不增加母公司新股，亦不随之释放。</p>
+<p>两端取低只是压力边界：转换上限含特殊事件，未精算现金结算、封顶看涨、本金账面差及行权所得。SBC费用与现有激励上限可能重叠，故为偏保守的联合压力；只用已发行股数而保留SBC费用，基准为HK$151.61。SBC全分配给电商或云，分别为HK$154.31及HK$145.41。</p>
+<p>净金融桥是当前资产调整，非终值现金。每港元及每美元折人民币分别0.86465、6.7795；人民币权益除汇率及股数。未来股息现值从总权益先拆出、判断表再加回，不新增价值；未来回购假设零，并非公司承诺。</p>
+<p>整体盈利校验用扣SBC及现金税后经营利润1,108.18亿元乘12–18倍，接相同FCFF、净金融桥及配对债股。区间为电商与云组合假设，非同行PE；Labs亏损在长期利润内，与主方法的终止假设不同。</p>
+<p>终值要求净投资降至盈利业务税后经济利润的20%，余下80%可分配。基准年度额度304.39亿元；若终值后五年维持预测年的1,330.00亿元，超额另折现后价值HK$130.89。该压力固定利润与正常额度，五年后恢复正常，非完整增长预测或已证明正常化临近。</p>
+<div class="tblscroll"><table class="tbl txt" data-fullscan-role="derivations"><caption>承重推算与情景计算｜输出单位按行；计算保留完整精度，展示舍入；熊市/基准/牛市对应相同主模型</caption><thead><tr><th>数值</th><th>输入</th><th>公式</th><th>来源（页·附注）</th></tr>
+</thead><tbody><tr><td>收入CAGR：4.66%</td><td>FY2026收入 / FY2022收入</td><td>两端比值开四次方根减1 ＝ 4.66%</td><td>相应年报合并损益表</td></tr>
+<tr><td>TTM公司FCF：−72,464.00百万元</td><td>FY2026公司FCF＋本季−上年同期</td><td>同口径累计窗口相接 ＝ −72,464.00百万元</td><td>FY2026年报管理层讨论；六月公告第25页</td></tr>
+<tr><td>归母变化：−30,035.00百万元</td><td>九项同比损益差额</td><td>各差额求和 ＝ −30,035.00百万元</td><td>六月季度公告，利润表第18页；桥接本期及同期</td></tr>
+<tr><td>云利润增量：3,209.00百万元</td><td>本季及重列同期分部EBITA</td><td>本期−同期 ＝ 3,209.00百万元</td><td>六月分部表第7页</td></tr>
+<tr><td>Labs利润变化：−10,637.00百万元</td><td>本季及重列同期分部EBITA</td><td>本期−同期 ＝ −10,637.00百万元</td><td>六月分部表第7页</td></tr>
+<tr><td>归母净金融代理：143,119.00百万元</td><td>不受限流动池4745.05−债务2665.30−少数股东572.72−夹层75.84亿元</td><td>各项带符号相加 ＝ 143,119.00百万元</td><td>六月公告第15、20页</td></tr>
+<tr><td>投资余项代理：457,417.00百万元</td><td>流动股权881.30＋非流动股权3430.18＋权益法2032.07−已入流动池理财代理1769.38亿元</td><td>投资余项净额；分类误差留在回收折价 ＝ 457,417.00百万元</td><td>六月公告资产负债表及流动性定义，第15、20页</td></tr>
+<tr><td>激励上限股数：20,123.51百万股</td><td>月末已发行股数＋已授出期权与RSU</td><td>各项股数合计，换为百万股 ＝ 20,123.51百万股</td><td>八月月报第2、3、6页</td></tr>
+<tr><td>熊市·FCFF：−126,283.39百万元</td><td>税后经营利润587.17，折旧500.00，资本开支2,300.00，周转50.00亿元</td><td>税后经营利润＋物业及设备折旧−资本开支−周转占用 ＝ −126,283.39百万元</td><td>六月分部表、八月月报/配售；情景表</td></tr>
+<tr><td>熊市·除股息现值：81.83港元/股</td><td>企业终值1,435,070.28百万元、FCFF、折现、金融桥、债股</td><td>(终值＋FCFF)折现加金融桥；配对债股每股取低−股息现值 ＝ 81.83港元/股</td><td>六月分部表、八月月报/配售；情景表</td></tr>
+<tr><td>基准·电商经济利润：167,000.08百万元</td><td>收入8,646.20亿元、利润率20.0%、薪酬分摊</td><td>收入×利润率−非现金SBC分摊 ＝ 167,000.08百万元</td><td>六月分部表、八月月报/配售；情景表</td></tr>
+<tr><td>基准·云经济利润：35,925.57百万元</td><td>收入2,615.60亿元、利润率16.0%、薪酬分摊</td><td>收入×利润率−非现金SBC分摊 ＝ 35,925.57百万元</td><td>六月分部表、八月月报/配售；情景表</td></tr>
+<tr><td>基准·FCFF：−22,181.76百万元</td><td>税后经营利润1,108.18，折旧600.00，资本开支1,900.00，周转30.00亿元</td><td>税后经营利润＋物业及设备折旧−资本开支−周转占用 ＝ −22,181.76百万元</td><td>六月分部表、八月月报/配售；情景表</td></tr>
+<tr><td>基准·企业终值：2,540,943.60百万元</td><td>各业务终值、共同成本、剩余亏损（百万元）</td><td>1,670,000.80＋898,139.20＋34,563.60−33,760.00−25,000.00−3,000.00 ＝ 2,540,943.60百万元</td><td>六月分部表、八月月报/配售；情景表</td></tr>
+<tr><td>基准·净金融桥：389,920.70百万元</td><td>金融桥、配售、股息、消耗、投资（百万元）</td><td>143,119.00＋68,912.60−16,948.75−33,870.66＋228,708.50 ＝ 389,920.70百万元</td><td>六月分部表、八月月报/配售；情景表</td></tr>
+<tr><td>基准·除股息现值：149.86港元/股</td><td>企业终值2,540,943.60百万元、FCFF、折现、金融桥、债股</td><td>(终值＋FCFF)折现加金融桥；配对债股每股取低−股息现值 ＝ 149.86港元/股</td><td>六月分部表、八月月报/配售；情景表</td></tr>
+<tr><td>牛市·FCFF：55,243.67百万元</td><td>税后经营利润1,562.44，折旧700.00，资本开支1,700.00，周转10.00亿元</td><td>税后经营利润＋物业及设备折旧−资本开支−周转占用 ＝ 55,243.67百万元</td><td>六月分部表、八月月报/配售；情景表</td></tr>
+<tr><td>牛市·除股息现值：230.11港元/股</td><td>企业终值3,910,537.86百万元、FCFF、折现、金融桥、债股</td><td>(终值＋FCFF)折现加金融桥；配对债股每股取低−股息现值 ＝ 230.11港元/股</td><td>六月分部表、八月月报/配售；情景表</td></tr>
+<tr><td>隐含云利润率：4.06%</td><td>现价及全部其他基准输入</td><td>反解SOTP除息现值等于现价 ＝ 4.06%</td><td>主模型；市场与情景表</td></tr>
+<tr><td>含息平衡价：116.76港元/股</td><td>熊市及基准除息价值、各自股息现值</td><td>四个每股现值相加再除2 ＝ 116.76港元/股</td><td>主模型同期限情景；非概率加权</td></tr>
+<tr><td>延续投资现值减项：341,491.40百万元</td><td>年度超额净投资1,025.61亿元，终值后五年</td><td>t2至t6各年末按11%折现并加总 ＝ 341,491.40百万元</td><td>情景表与本附录终值再投资条件</td></tr>
+<tr><td>延续投资每股压力值：130.89港元/股</td><td>基准权益现值减超额投资现值</td><td>配对债股每股值取低，再减股息现值 ＝ 130.89港元/股</td><td>独立延续投资压力；不叠加熊市</td></tr>
+</tbody></table></div><div class="plain"><span class="pl">白话解读</span><p>债转股让更多股份分享利润，同时解除相应债权，每股结果不只取决于股数。后续月报要核对实际归属和债券转换。</p>
+</div></section>
+<section class="reveal on" id="risks" ><div class="slabel">风险与验证</div><h2>最危险的是外部变现不足，同时内部投入不能停止</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="risk-register"><caption>按对核心机制的损害排序｜概率为定性判断，不赋予虚构数值概率；前瞻窗口为研究观察安排，非公司确认业绩日</caption><thead><tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr>
+</thead><tbody><tr><td>1</td><td>内部云需求不能由外部替代</td><td>2026-06：云含内部交易，应用亏损较大。</td><td>Labs收缩同时压低云长期盈利。</td><td>基准仅把终值云经济利润下调25%，价值为HK$138.62。</td><td>中</td><td>2026年十一月附近下一季披露窗口：外部收入与云利润是否同步增长。</td></tr>
+<tr><td>2</td><td>亏损持续时间超出准备</td><td>2026-08-20：管理层仅给Labs收窄方向。</td><td>应用继续消耗现金，终值准备不足。</td><td>终值后Labs多耗500亿元，基准降至HK$147.36。</td><td>中高</td><td>2026年末：产品收费、续订及应用亏损是否改善。</td></tr>
+<tr><td>3</td><td>资本需求难以正常化</td><td>2026-08-26：融资投向基础设施。</td><td>高投入持续侵蚀终值现金。</td><td>终值后五年净投资不回落的独立压力为HK$130.89；推导见附录。</td><td>中</td><td>FY2027全年（2027年五月附近）：净投入相对盈利是否下降。</td></tr>
+<tr><td>4</td><td>投资及现金归属高估</td><td>2026-06：余项资产、限制与少数股东仅有账面代理。</td><td>变现折价、税项或权益归属侵蚀每股净资产。</td><td>回收率比基准少20个百分点，价值为HK$144.78。</td><td>中</td><td>下一完整年报：逐项资产变现、受限短投与关联交易。</td></tr>
+<tr><td>5</td><td>监管与跨境执行</td><td>2026-06：已计欧盟罚款准备5.5亿欧元，国际业务并非统一盈利。</td><td>合规成本、处罚及资金汇回影响可分配资本。</td><td>现有拨备留报表；增量处罚与汇回敞口缺可量化上限。</td><td>中</td><td>2026年后续监管公告：金额、结案及业务整改。</td></tr>
+</tbody></table></div><p>压力均为单因素，非叠加后的新预测。投入和亏损持续而外部商业化不能补位，才是核心失败边界；短期投资前置不自动等于永久资本损失。</p>
+<div class="tline"><div class="tstop "><span class="tw">2026年十一月附近</span><b>检验外部需求</b><p>观察外部云、云利润与应用成本的同步变化。</p>
+</div><div class="tstop "><span class="tw">2026年末</span><b>检验产品变现</b><p>核对年化收入口径、持续付费与应用亏损。</p>
+</div><div class="tstop warn"><span class="tw">FY2027全年</span><b>投入兑现的反证</b><p>若现金需求扩大且外部利润不跟随，应下修终值盈利。</p>
+</div></div><div class="plain"><span class="pl">白话解读</span><p>增长仍快也可能消耗更多资本。下一季先看外部云与利润，年末看应用收费，全年再核对现金是否覆盖投入。</p>
+</div></section>
+<section class="reveal on" id="decision" data-fullscan-role="decision" data-verdict="neutral"><div class="slabel">最终判断</div><h2>中性（等待验证）：认可机会，等待资本回报证据</h2><div class="tblscroll"><table class="tbl txt" data-fullscan-role="decision-block"><caption>同一期限2026-09-07至2027-09-07；赔率为含未来股息现值的价值差，不是承诺的一年投资收益率</caption><thead><tr><th>项目</th><th>判断依据</th></tr>
+</thead><tbody><tr><td>论点</td><td>云增长有经济价值，但每股价值必须承担持续资本投入、薪酬与应用亏损。</td></tr>
+<tr><td>基准对一致预期</td><td>无一致预期可比：当前预测PE缺同口径期间与样本。基准扣SBC云经济EBITA 359.26亿元；现价条件隐含见估值反解表，不称作卖方预期差。</td></tr>
+<tr><td>赔率</td><td>计入同期限股息现值，熊市下行24.5%，基准上行37.6%。不使用交叉检验结果拼接上下行。</td></tr>
+<tr><td>平衡价</td><td>≈HK$116.76：熊市与基准含息现值的对称点，高于现价；是情景属性，不是概率加权合理价。</td></tr>
+<tr><td>持有回报</td><td>未来一年基准假设股息现值HK$0.927、相对现价0.85%；未来回购收益0。股息未宣派、未扣投资者税费；它从总价值拆出再加回，不创造额外价值。</td></tr>
+<tr><td>分项置信度</td><td>申报与论点证据：高；估值输入：低；现金与归属桥：中；治理：中。最弱项要由外部云经济利润持续性与终值后应用亏损停止证据改善。</td></tr>
+<tr><td>判断</td><td>中性（等待验证）：基准余量大于熊市损失，但高倍数、回收比例与亏损停止时间尚缺强证据，未升为积极。下一季外部收入、利润及现金投入一起检验。</td></tr>
+</tbody></table></div><div class="callout"><b>云增长可见，资本回报待验。</b>最强反方是算力供给稀缺与模型产品收费可能更快改善利用率，使电商现金支持的投入比本报告假设更快形成可持续利润。若外部云兑现同时应用亏损收窄、资本需求趋稳，应撤回等待判断；反之，持续依赖内部需求与融资而缺外部回报，应下修价值。</div></section>
+<section class="reveal on" id="glossary" ><div class="slabel">名词速查</div><h2>把收入速度、经济利润与每股权利分清</h2><div class="tblscroll"><table class="tbl gloss" ><caption>本文用到的业务与估值口径</caption><thead><tr><th>术语</th><th>解释</th></tr>
+</thead><tbody><tr><td>美国存托股（ADS）</td><td>每份代表8股普通股，价格及EPS不能直接与香港每股比较。</td></tr>
+<tr><td>协议控制（VIE）</td><td>凭合同并表，不等于直接拥有全部境内运营股权。</td></tr>
+<tr><td>客户管理收入（CMR）</td><td>商家营销及交易服务费，与直营商品总额不同。</td></tr>
+<tr><td>经调整EBITA</td><td>调整后息税摊销前经营表现，模型另扣非现金薪酬。</td></tr>
+<tr><td>股份支付（SBC）</td><td>以权益换服务的经济成本；费用与授予股数可能重叠。</td></tr>
+<tr><td>限制性股份单位（RSU）</td><td>归属后交付股份的奖励，不等于未授出计划额度。</td></tr>
+<tr><td>公司自由现金流（FCF）</td><td>公司定义的现金扣指定投资并调整保障金，非即付股息。</td></tr>
+<tr><td>企业自由现金流（FCFF）</td><td>模型扣税、投资和周转后的企业现金，先于融资分配。</td></tr>
+<tr><td>年化经常性收入（ARR）</td><td>持续收费速度年化，非全年已确认收入。</td></tr>
+<tr><td>模型即服务（MaaS）</td><td>经云接口提供模型能力并收费。</td></tr>
+<tr><td>夹层权益</td><td>普通股之外的优先索偿，影响普通股利润归属。</td></tr>
+<tr><td>分部加总（SOTP）</td><td>各业务价值扣共同负担、接净金融资产，内部交易不重复算。</td></tr>
+</tbody></table></div></section>
+<footer><p>数据截止：财务2026-06-30；股数2026-08-31；市场2026-09-07香港16:08，PDD为2026-09-04美国收盘；公开公告检索至2026-09-07。</p>
+<p>来源：<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000746_c.pdf">六月季度业绩</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0618/2026061800845_c.pdf">FY2026年报</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0626/2025062601065_c.pdf">FY2025年报</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0523/2024052301570_c.pdf">FY2024年报</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0721/2023072101039_c.pdf">FY2023年报</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0726/2022072600088_c.pdf">FY2022年报</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082601206_c.pdf">完成配售</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090401538_c.pdf">八月月报</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0824/2026082400903_c.pdf">授予奖励</a>；<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0528/2026052801168.pdf">股息安排</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0813/2026081300918_c.pdf">京东六月业绩</a>；<a href="https://www.sec.gov/Archives/edgar/data/1737806/000110465926100534/tm2623874d1_ex99-1.htm">PDD六月业绩</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800436_c.pdf">美团六月业绩</a>；Wind行情及人民银行汇率指标；2026-08-20公开业绩电话会的第三方转录，财务数字以港交所为准。</p>
+<p>审计状态：完整年度US GAAP合并财务已审计，六月单季未经审计；非GAAP、运营数据及管理层前瞻观点不代表独立鉴证。所有估值为分析假设，缺项已保留，不用未公开纪要补足公开证据。</p>
+<p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p>
+</footer></main>
 <script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
