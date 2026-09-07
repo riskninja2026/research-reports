@@ -314,8 +314,8 @@
       "name": "中国移动",
       "name_en": "China Mobile",
       "tickers": [
-        "00941.HK",
-        "600941.SH"
+        "600941.SH",
+        "00941.HK"
       ],
       "ticker_label": null,
       "venue": "HKEX",
@@ -326,15 +326,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "拆解VAT口径断点、推算单二季度、通信量价背离、算力单位经济、现金时点、人民币分红与红利估值边界。",
+      "hook": "分红有底气，增长溢价还缺现金证据：厘清税率断点、单季现金流、算力回报与除息后的分红估值。",
       "verdict": "中性偏谨慎",
       "verdict_code": "neutral-cautious",
       "published": "2026-08-29",
       "published_at": "2026-08-29T08:09:46-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "reader-first",
-      "style_hash": "bbef31b1c525728d240851053a55488c",
+      "revised": "2026-09-07",
+      "revision": {
+        "date": "2026-09-05",
+        "note": "更新股本、汇率与市场坐标；统一电信财务口径，主估值改为单一DDM，补充敏感性、隐含预期及同期限含息判断。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {
