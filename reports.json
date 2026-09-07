@@ -700,15 +700,18 @@
       "announced": null,
       "date_label": null,
       "type_label": null,
-      "hook": "拆解全网与同店分化、加盟网络杠杆、海外盈利、租赁及商誉、电话会信息边界与三年股东回报。",
-      "verdict": null,
-      "verdict_code": null,
+      "hook": "加盟改善集团利润，同店与业主回报仍待验证；保留股权薪酬、租金与稀释边界重建估值。",
+      "verdict": "中性偏谨慎",
+      "verdict_code": "neutral-cautious",
       "published": "2026-08-18",
       "published_at": "2026-08-18T01:33:18-04:00",
-      "revised": null,
-      "revision": null,
-      "generation": "classic",
-      "style_hash": "e65895ac71853b897ef3203361e0c8c2",
+      "revised": "2026-09-07",
+      "revision": {
+        "date": "2026-09-07",
+        "note": "升级至Fullscan v2.7；重建含股权薪酬的主估值，修正租赁、摊薄股份及除息口径，补入拟发债事项，并增加可复算的情景与验证条件。"
+      },
+      "generation": "v2.7",
+      "style_hash": "a23adede809a5aeaaaf531552d5907dc",
       "lang": "zh-CN"
     },
     {

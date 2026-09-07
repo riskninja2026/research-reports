@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:,">
-<title>华住集团 2026年中期业绩全景尽调</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="data:,"><title>华住集团 2026Q2 Fullscan 全景尽调</title>
 <style>
 :root{
   --paper:#EDEFF2;
@@ -202,458 +197,370 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   .reveal{opacity:1;transform:none;transition:none}
 }
 :focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- READER ORIENTATION (blessed 2026-08-26) ---------- */
+.demoband{background:var(--plum);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;padding:9px 14px;font-family:var(--mono)}
+.tldr{background:var(--card);border:1px solid var(--rule);padding:28px 28px 16px;margin:10px 0 12px}
+.tldr ul{list-style:none}
+.tldr li{position:relative;padding:0 0 15px 28px;font-size:15px;color:var(--ink2);max-width:80ch;line-height:1.8}
+.tldr li::before{content:"—";position:absolute;left:2px;color:var(--indigo);font-family:var(--mono)}
+.tldr b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;margin:20px 0 8px;border:1px solid var(--rule);background:var(--card)}
+.step{flex:1 1 170px;padding:18px 16px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:none}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--indigo);letter-spacing:.12em}
+.step b{display:block;font-size:14.5px;margin:5px 0 5px;color:var(--ink)}
+.step p{font-size:12.5px;color:var(--ink3);margin:0;line-height:1.65;max-width:none}
+.plain{background:#E7F0EB;border-left:3px solid var(--moss);padding:20px 24px 14px;margin:26px 0;max-width:none}
+.plain .pl{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:8px}
+.plain p{font-size:14.5px;line-height:1.85;margin-bottom:10px;max-width:80ch}
+.plain b{color:var(--ink)}
+.g{border-bottom:1px dotted var(--indigo)}
+.tbl.gloss td{text-align:left;font-family:var(--sans);vertical-align:top}
+.tbl.gloss td:first-child{font-weight:650;white-space:nowrap;color:var(--ink)}
+.tbl.gloss th{text-align:left}
+.fill.moss{background:var(--moss)}
+
+/* ---------- DATA VIZ (blessed 2026-08-29) ---------- */
+.cols .bars{display:flex;gap:4px;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.cols .bars .bar{width:34px;max-width:44%}
+@media(max-width:520px){.cols .bars .bar{width:20px}}
+.bar.rev{background:var(--indigo)}
+.bar.np{background:var(--moss)}
+.seg.r{background:#8FA8CC}
+.legend .m{background:var(--moss)}
+.legend .r{background:#8FA8CC}
+.wfall{margin:22px 0 8px;border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:150px 1fr 96px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.wrow .nm{font-size:13.5px;font-weight:600}
+.wrow .nm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.wtrack{position:relative;height:14px;background:#DFE4EA}
+.wbar{position:absolute;top:0;height:100%}
+.wbar.up{background:var(--moss)}
+.wbar.down{background:var(--plum)}
+.wbar.tot{background:var(--indigo)}
+.wrow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.tline{display:flex;flex-wrap:wrap;margin:24px 0 8px;border-top:2px solid var(--indigo)}
+.tstop{flex:1 1 150px;min-width:140px;padding:14px 14px 6px;border-right:1px dashed var(--rule);position:relative}
+.tstop::before{content:"";position:absolute;top:-6px;left:14px;width:10px;height:10px;border-radius:50%;background:var(--indigo)}
+.tstop.warn::before{background:var(--plum)}
+.tstop:last-child{border-right:none}
+.tstop .tw{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--indigo)}
+.tstop b{display:block;font-size:13.5px;margin:3px 0 3px;color:var(--ink)}
+.tstop p{font-size:12px;color:var(--ink3);margin:0;line-height:1.55;max-width:none}
+
+/* ---------- DATA VIZ v2 (blessed 2026-09-04) ---------- */
+.ffield{margin:22px 0 8px;border-top:1px solid var(--rule);position:relative;overflow:hidden}
+.frow{display:grid;grid-template-columns:110px 1fr 120px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.fnm{font-size:13.5px;font-weight:600}
+.fnm span{display:block;font-weight:400;font-size:12px;color:var(--ink3)}
+.ftrack{position:relative;height:12px;background:var(--rule)}
+.fbar{position:absolute;top:0;height:100%;background:var(--indigo)}
+.fbar.alt{background:var(--plum)}
+.fbar.moss{background:var(--moss)}
+.fmark{position:absolute;top:-2000px;height:4000px;width:2px;margin-left:-1px;background:var(--ink);z-index:1}
+.frow .fig{text-align:right;font-family:var(--mono);font-size:13.5px;font-weight:600}
+.frow .fig span{display:block;font-size:12px;font-weight:400;color:var(--ink3)}
+.tbl.sgrid th{text-align:center}
+.tbl.sgrid td{text-align:center;font-family:var(--mono)}
+.tbl.sgrid td:first-child{font-weight:600;color:var(--ink3)}
+.tbl.sgrid td.base{box-shadow:inset 0 0 0 2px var(--indigo);font-weight:600}
+.tbl.sgrid td.implied{background:#ECDCE4;background:color-mix(in srgb,var(--plum) 14%,var(--card))}
+.steps.chain .step{flex:1 1 120px;font-size:13px;padding:10px 12px}
+.steps.chain .step b{font-size:13px;margin:4px 0 3px}
+.steps.chain .step p{font-size:12px}
+.steps.chain .step+.step .n::before{content:"→ ";color:var(--ink3)}
+.tbl.txt th,.tbl.txt td{text-align:left;font-family:var(--sans);white-space:normal}
+.tbl.txt td:first-child{font-weight:650;color:var(--ink);white-space:nowrap}
+@media(max-width:520px){
+  .frow{grid-template-columns:84px 1fr 96px;gap:10px}
+  .fnm{font-size:12.5px}
+  .frow .fig{font-size:12.5px}
+  .tbl.sgrid th,.tbl.sgrid td{padding:8px 6px;font-size:12.5px}
+  .steps.chain .step{flex-basis:100%;border-right:none;border-bottom:1px solid var(--rule-soft)}
+  .steps.chain .step:last-child{border-bottom:none}
+  .steps.chain .step+.step .n::before{content:"↓ "}
+}
 </style>
-</head>
-<body>
+</head><body><header class="hero"><div class="wrap"><div class="eyebrow">华住集团 01179.HK · HTHT.O ｜ 2026Q2 全景尽调 ｜ 财务截至2026.06.30 · 行情2026.09.07</div>
+<h1>利润改善靠加盟，<br>估值上修还缺同店证据</h1>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">华住集团-S 01179.HK｜全景尽调｜财务截至2026.06.30｜行情截至2026.08.18午间</div>
-    <h1>利润率抬升是真的，<br>同店复苏还没回来</h1>
-    <p class="lede">华住正在把酒店网络转成更轻、更稳定的收费平台，经营利润与现金创造同步改善。<b>但成熟门店的入住需求仍弱，增长越来越依赖新店、产品升级和加盟商继续投入。</b>真正要验证的不是华住能否继续开店，而是这套扩张能否同时守住加盟商回报、门店质量与每股价值。</p>
+<p class="lede">华住的加盟收费增长快于集团收入，经营利润和现金创造继续改善。<b>但新增酒店和品牌组合的贡献，尚未变成成熟门店的需求复苏。</b>保留股权薪酬与租金后，合理盈利仍能增长；当前价格要获得更大上行，还需要加盟商回报和同店经营提供新证据。</p>
+<div class="dual"><div><div class="tag">单二季度经营利润 · 同比</div><div class="big a">+24.1%</div><div class="cap">主业结构与费用控制共同改善，不能只看归母利润的表面增速。</div></div>
+<div><div class="tag">中国成熟酒店每间可售客房收入 · 同比</div><div class="big b">−3.0%</div><div class="cap">运营至少18个月的可比酒店仍承压，全网指标转正不代表同店复苏。</div></div></div></div></header><main class="wrap">
+<div class="callout"><b>修订 2026-09-07：</b>升级至Fullscan v2.7；重建含股权薪酬的主估值，修正租赁、摊薄股份及除息口径，补入拟发债事项，并增加可复算的情景与验证条件。</div>
+<section class="reveal on" id="tldr" ><div class="slabel">三十秒版本 · 先看结论</div><h2>利润有改善，但现价没有留下同等幅度的容错</h2>
+<div class="tldr"><ul>
+<li><b>它是谁：</b>汉庭、全季、桔子等酒店品牌的经营者；越来越多收入来自向加盟商收取系统、管理和服务费用，而非自己租楼卖客房。</li>
+<li><b>本期成绩：</b>单二季度收入71.2亿元、归母净利润15.8亿元；加盟化提升利润率，净利润增速被汇兑比较基数压低。</li>
+<li><b>核心矛盾：</b>公司开店和收费增长，不等于加盟商单店回报同步改善；成熟店需求偏弱，持续扩张的质量尚待检验。</li>
+<li><b>容易踩的坑：</b>经调整利润把股权薪酬加回，净现金又没有扣租赁承诺；把两者都当作无负担收益，会高估股东真正得到的回报。</li>
+<li data-verdict="neutral-cautious"><b>结论：</b>中性偏谨慎。现价35.56港元，未来12个月基准38.00、熊市23.84港元；同店止跌且加盟利润同步，才有上调依据。</li>
+</ul></div></section>
+<section class="reveal on" id="primer" ><div class="slabel">入门</div><h2>加盟商付建店的钱，华住留下合同内的收费</h2>
+<p><span class="g">租赁及自有</span>酒店由华住承担房租、员工及日常成本，房费进入收入；<span class="g">管理加盟及特许经营</span>酒店由加盟商投入建店和维护资本，华住提供品牌、系统与管理并收取合同费用。管理加盟通常派驻经理，特许经营更多由业主自行经营；合并披露不表示两者成本相同。</p><div class="steps"><div class="step"><div class="n">环节 1</div><b>住客选择酒店</b>
+<p>通过会员直订或在线旅行平台订房，房晚与实际房价决定客房收入，另有非客房收入。</p></div><div class="step"><div class="n">环节 2</div><b>业主承担经营资本</b>
+<p>加盟商负担物业和建店投入；自营酒店的租金与经营风险留在集团。</p></div><div class="step"><div class="n">环节 3</div><b>华住按合同收费</b>
+<p>品牌管理、系统使用和经理报销形成不同性质的收入，不是全部房费都归集团。</p></div><div class="step"><div class="n">环节 4</div><b>剩余收益归股东</b>
+<p>扣掉费用、税费、必要投资及融资负担，才有可持续分配的空间。</p></div></div>
+<p>酒店竞争涉及位置、产品、获客及业主回报。新店爬坡可能稀释入住率，同一区域加密也可能分流旧店；集团规模与成熟店表现须分开读。华住商城另有供应商佣金业务，但没有独立零售经营分拆。</p>
+<p>华住为开曼注册、美港两地上市的同一集团，<span class="g">美国预托股份（ADS）</span>代表多股普通股，两地市值不相加。本页以香港披露及<span class="g">美国公认会计准则（US GAAP）</span>为主；本集团含受控子公司，金额默认人民币亿元，估值用港元普通股。</p>
+<p>公告直接列出Q2及H1损益、现金流，不靠季节性分摊。历史全年经审计，季度及中期未经审计；“推算”为披露值运算，“≈”或E为近似或假设。2026年<span class="g">中国业务（HWC）</span>与<span class="g">国际业务（HWI）</span>按境内外重划并重述比较期，不与旧地域口径拼接。</p></section>
+<section class="reveal on" id="financials" data-fullscan-role="basic-financials" data-fullscan-sector="hotels-lifestyle-retail"><div class="slabel">财务 · 经营地图</div><h2>利润恢复来自收费结构变化，而非所有门店同步提价</h2>
+<p>合并收入增长主要由加盟收费带动，自营租赁收入仍在收缩。疫情期间酒店固定成本放大亏损，复苏后的重点转为收入结构、费用纪律和现金转换；这两段历史不能用同一个复合增速解释。</p><div class="grid" data-financials="consolidated"><div class="cell" ><div class="k">营业收入</div><div class="v">71.21<span class="u">亿元</span></div><div class="d"><span>单二季度 · 同比+10.8%</span></div></div><div class="cell" ><div class="k"><span class="g">直接贡献</span> · 贡献率</div><div class="v">30.67<span class="u">亿元</span></div><div class="d"><span>推算贡献率 43.1%</span></div></div><div class="cell" ><div class="k">营业利润 · 利润率</div><div class="v">22.18<span class="u">亿元</span></div><div class="d"><span>利润率 31.1%</span></div></div><div class="cell" ><div class="k">归母净利润 · 净利率</div><div class="v">15.77<span class="u">亿元</span></div><div class="d"><span>净利率 22.1%</span></div></div><div class="cell" ><div class="k">经营现金流净额（OCF）</div><div class="v">34.08<span class="u">亿元</span></div><div class="d"><span>单二季度 · 不宜乘四年化</span></div></div><div class="cell" ><div class="k"><span class="g">自由现金流代理（FCF）</span></div><div class="v">32.41<span class="u">亿元</span></div><div class="d"><span>推算 · 现金资本开支 1.67亿元</span></div></div></div><div class="tblscroll">
+<table class="tbl" data-financials="history"><caption>本集团，HKEX中文年报控制；US GAAP，经审计。金额亿元，EPS为元；直接贡献、利润率、ROE、资本开支与FCF为推算。</caption><thead>
+<tr><th>项目</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead><tbody>
+<tr><td>营业收入</td><td>127.85</td><td>138.62</td><td>218.82</td><td>238.91</td><td>253.07</td></tr>
+<tr><td>直接贡献 / 贡献率（推算）</td><td>14.45 / 11.3%</td><td>15.40 / 11.1%</td><td>75.07 / 34.3%</td><td>85.75 / 35.9%</td><td>99.07 / 39.1%</td></tr>
+<tr><td>营业利润 / 利润率</td><td>1.64 / 1.3%</td><td>−2.94 / −2.1%</td><td>47.14 / 21.5%</td><td>52.00 / 21.8%</td><td>68.19 / 26.9%</td></tr>
+<tr><td>归母净利润 / 净利率</td><td>−4.65 / −3.6%</td><td>−18.21 / −13.1%</td><td>40.85 / 18.7%</td><td>30.48 / 12.8%</td><td>50.80 / 20.1%</td></tr>
+<tr><td>基本每股收益EPS（元）</td><td>−0.15</td><td>−0.59</td><td>1.28</td><td>0.98</td><td>1.65</td></tr>
+<tr><td>平均归母权益回报率ROE（推算）</td><td>−4.2%</td><td>−18.5%</td><td>39.2%</td><td>25.1%</td><td>40.7%</td></tr>
+<tr><td>经营现金流净额</td><td>13.42</td><td>15.64</td><td>76.74</td><td>75.18</td><td>83.79</td></tr>
+<tr><td>现金资本开支（推算）</td><td>16.75</td><td>10.53</td><td>9.01</td><td>8.98</td><td>8.38</td></tr>
+<tr><td>FCF代理（推算）</td><td>−3.33</td><td>5.11</td><td>67.73</td><td>66.20</td><td>75.41</td></tr></tbody></table></div><div class="cols"><div class="col"><div class="bars"><div class="bar rev" style="height:50.51962%"></div><div class="bar np" style="height:0.00000%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:54.77536%"></div><div class="bar np" style="height:0.00000%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:86.46620%"></div><div class="bar np" style="height:16.14178%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:94.40471%"></div><div class="bar np" style="height:12.04410%"></div></div></div><div class="col"><div class="bars"><div class="bar rev" style="height:100.00000%"></div><div class="bar np" style="height:20.07350%"></div></div></div></div><div class="collabels"><div><b>2021</b>亏损</div><div><b>2022</b>亏损</div><div><b>2023</b></div><div><b>2024</b></div><div><b>2025</b></div></div><div class="legend"><span><i class="p"></i>营业收入</span><span><i class="m"></i>归母净利润</span></div>
+<p class="small">收入修复后，利润仍受汇兑和费用影响。两组条形共用五年最高收入刻度，亏损年利润柱归零并标注；不把负数画成正柱。</p><div class="tblscroll">
+<table class="tbl" ><caption>本集团；亿元，EPS为元。季度及半年数直接披露、未经审计；TTM为2025全年减2025H1加2026H1。</caption><thead>
+<tr><th>项目</th><th>2025Q2</th><th>2026Q1</th><th>2026Q2</th><th>2025H1</th><th>2026H1</th><th>截至2026H1最近12个月（TTM）（推算）</th></tr></thead><tbody>
+<tr><td>营业收入</td><td>64.26</td><td>59.96</td><td>71.21</td><td>118.21</td><td>131.17</td><td>266.03</td></tr>
+<tr><td>直接贡献（推算）</td><td>26.63</td><td>23.23</td><td>30.67</td><td>44.43</td><td>53.90</td><td>108.54</td></tr>
+<tr><td>营业利润</td><td>17.87</td><td>14.88</td><td>22.18</td><td>28.69</td><td>37.06</td><td>76.56</td></tr>
+<tr><td>归母净利润</td><td>15.44</td><td>8.17</td><td>15.77</td><td>24.38</td><td>23.94</td><td>50.36</td></tr>
+<tr><td>基本 / 摊薄EPS（元）</td><td>0.50 / 0.48</td><td>0.27 / 0.26</td><td>0.50 / 0.49</td><td>0.79 / 0.77</td><td>0.77 / 0.74</td><td>不拼接加权EPS</td></tr>
+<tr><td>经营现金流净额</td><td>26.59</td><td>2.33</td><td>34.08</td><td>32.39</td><td>36.41</td><td>87.81</td></tr>
+<tr><td>现金资本开支（推算）</td><td>1.89</td><td>1.82</td><td>1.67</td><td>4.29</td><td>3.49</td><td>7.58</td></tr>
+<tr><td>FCF代理（推算）</td><td>24.70</td><td>0.51</td><td>32.41</td><td>28.10</td><td>32.92</td><td>80.23</td></tr></tbody></table></div>
+<p>2021—2025营业收入年均复合增速（CAGR）为18.6%，但2023—2025的可比恢复后增速只有7.5%。同一恢复后区间，加盟收入CAGR为23.3%、租赁自有收入为−3.1%，经营现金为4.5%；结构迁移比集团总量更有解释力。</p><div data-financials="segments"><div class="tblscroll">
+<table class="tbl txt" ><caption>亿元及经营单位逐行标注，比较期已重述。经调EBITDA为税息折旧摊销前经调整利润，不是净利润或现金。</caption><thead>
+<tr><th>观察项</th><th>对比期 / 范围</th><th>最新值或披露分拆</th><th>变化 / 比例</th><th>口径与限制</th></tr></thead><tbody>
+<tr><td>管理加盟及特许收入</td><td>2025H1：53.64<br>2025Q2：28.65</td><td>2026H1：65.92<br>2026Q2：35.86</td><td>H1 +22.9%</td><td>H1收入占比50.3%</td></tr>
+<tr><td>租赁及自有收入</td><td>2025H1：61.90<br>2025Q2：34.01</td><td>2026H1：59.83<br>2026Q2：32.33</td><td>H1 −3.3%</td><td>仍承担租赁与人员成本</td></tr>
+<tr><td>其他收入</td><td>2025H1：2.67<br>2025Q2：1.60</td><td>2026H1：5.42<br>2026Q2：3.02</td><td>H1 +103.0%</td><td>含商城佣金及其他配套，不是纯零售收入</td></tr>
+<tr><td>加盟收入细分</td><td>2025全年</td><td>系统43.01；持续管理39.57；经理报销21.79；初始费1.81；其他10.78</td><td>2026Q2未细分</td><td>年报合同确认口径；收入之和为116.96亿元</td></tr>
+<tr><td>HWC收入 /<br>经调EBITDA</td><td>2025Q2：51.15 / 21.06</td><td>2026Q2：58.76 / 25.94</td><td>收入+14.9%</td><td>最新经调EBITDA率44.1%</td></tr>
+<tr><td>HWI收入 / 经调EBITDA</td><td>2025Q2：13.30 / 1.64</td><td>2026Q2：12.53 / 1.31</td><td>收入−5.8%</td><td>最新经调EBITDA率10.5%</td></tr>
+<tr><td>集团收入抵销</td><td>2025Q2：−0.19</td><td>2026Q2：−0.08</td><td>H1：−0.15</td><td>分部收入相加后扣抵销，不将权重凑成整百</td></tr>
+<tr><td>酒店及房间数</td><td>2026-06-30</td><td>HWC 13,417家 / 1,310,091间；HWI 122家 / 25,354间</td><td>HWC加盟客房占94.4%</td><td>中国加盟12,933家、自营484家；国际自营63家</td></tr>
+<tr><td>毛开 / 关闭 / 净开</td><td>HWC 2026Q2</td><td>498 / 176 / 322家</td><td>关闭/毛开35.3%</td><td>不是同一新开批次的失败率</td></tr>
+<tr><td>待开业管线</td><td>2026-06-30</td><td>HWC 3,054家；HWI 35家</td><td>国际加盟管线27家</td><td>签约不等于完成建设，更不是当期收入</td></tr>
+<tr><td>全网<span class="g">平均每日房价（ADR）</span><br><span class="g">入住率（OCC）</span><br><span class="g">每间可售客房收入（RevPAR）</span></td><td>HWC 2026Q2</td><td>298元 / 79.8% / 238元</td><td>RevPAR同比+1.1%</td><td>包含新店与不同品牌组合</td></tr>
+<tr><td>同店ADR / 入住率 / RevPAR</td><td>HWC 2026Q2</td><td>292元 / 79.9% / 233元</td><td>ADR同比−0.1%；入住率−2.4个百分点</td><td>运营至少18个月、9,563家可比酒店</td></tr>
+<tr><td>国际全网ADR / 入住率 / RevPAR</td><td>HWI 2026Q2</td><td>139美元 / 70.5% / 98美元</td><td>RevPAR同比−3.8%</td><td>固定美元口径，不等于人民币收入增速</td></tr>
+<tr><td>会员及直订</td><td>2025年末 / 2025年度</td><td>累计会员（亿人）超过3.11；会员间夜73%；自有渠道间夜77%</td><td>旧Legacy Huazhu口径</td><td>不是活跃会员、付费用户或收入占比</td></tr>
+<tr><td>加盟商 / 零售经济性</td><td>最新披露边界</td><td>单店投入、现金回收期、加盟商内部回报率未披露；商城独立收入成本未披露</td><td>不从集团利润率代推</td><td>平台净额佣金不能当商品零售毛额</td></tr></tbody></table></div></div><div class="stacks"><div class="stack"><div class="cap">2025Q2集团收入构成</div><div class="stackbar"><div class="seg p" style="width:52.92561%"></div><div class="seg q" style="width:44.58450%"></div><div class="seg r" style="width:2.48988%"></div></div></div><div class="stack"><div class="cap">2026Q2集团收入构成</div><div class="stackbar"><div class="seg p" style="width:45.40093%"></div><div class="seg q" style="width:50.35810%"></div><div class="seg r" style="width:4.24098%"></div></div></div></div><div class="legend"><span><i class="p"></i>租赁自有</span><span><i class="q"></i>加盟管理</span><span><i class="r"></i>其他</span></div>
+<p class="small">加盟收入权重提高，其他业务也在扩大。每期以集团收入为分母，三类合计完整收入；这是收入组合，不是利润贡献。</p>
+<div class="plain"><span class="pl">白话解读</span>
+<p>加盟收入上升、自营收入下降，利润与现金恢复；旧店入住率仍低于去年，网络扩张不等于旧店更赚钱。下一节检验收费增长能否持续。</p></div>
+<p>直接贡献不是GAAP毛利，尚未扣销售、管理及开业前费用。ROE使用平均归母权益，不混入租赁负债。</p></section>
+<section class="reveal on" id="engine" ><div class="slabel">加盟 · 兑现</div><h2>收费可以先于业主利润增长，持续性仍要由单店回报检验</h2>
+<p>加盟增长依赖业主续约、升级和再开店。品牌与系统标准化可以降低集团增量资本需求，但收费仍由加盟店的经营现金支付；需求不足时，合同收费可能短期比业主利润稳定，长期却会影响续约与品牌质量。</p>
+<p>年报系统费及持续管理费占加盟收入70.6%，经理报销占18.6%，后者对应人员成本。预收初始费按合同期直线确认，不是开业当天利润。年报Legacy Huazhu管理加盟合同初始期通常8—10年，月费通常约酒店总收入3%—6.5%，另有系统与经理费用；不代表国际合同。</p>
+<p>合同不代表无限提费权。业主比较的是扣租金、人工、更新装修、融资及平台费后的回报；品牌需提高入住或降低获客采购成本才可能支撑更高收费。集团资本开支少，不能证明加盟商投资划算。</p>
+<p>全年集团收入指引从2%—6%上调至4%—8%，加盟收入从12%—16%上调至16%—20%。将已实现上半年从全年目标扣除后，集团下半年收入同比区间为−2.1%至+5.4%，加盟为+10.2%至+17.5%（均推算）。因此，集团指引可以在较低下半年增速下完成，真正需要延续的是加盟收费，而不是上半年总收入增速。</p>
+<p>全年中国毛开目标维持2,200—2,300家，上半年已开1,035家，下半年需再开1,165—1,265家。毛开目标并未扣除关闭；完成目标不保证净增速度，更不保证新店已经成熟。管理层将上半年节奏归因为基数与供应链波动，这仍是解释，不是可逐月核对的交付排期。</p>
+<h3>电话会给了方向，关键量化边界仍然空缺</h3>
+<p>8月17日英语传译电话会的五组问答均为部分回答。以下保留管理层归因与未知边界，分析师提问不视为公司确认。</p><div class="finds"><div class="find"><div class="t">花旗 · 同店需求</div>
+<p>部分回答。金辉承认暑期前段部分市场低于预期，称8月正在恢复，维持全年RevPAR看法；未给第三季区间。因此收入指引上修不等于同店需求指引上修。</p></div><div class="find"><div class="t">摩根士丹利 · 开店与升级</div>
+<p>部分回答。维持毛开目标，称汉庭新版本表现更好；未量化升级投入、同店改善幅度和回收期。后续应比较同批次新旧产品，不能将品牌组合变化当纯提价。</p></div><div class="find"><div class="t">中信证券 · 中高档产品</div>
+<p>部分回答。全季大观6月末已有2家在营、441间房及18家管线；会日称管线超过20家并仍在打磨模式。数量进展已披露，单店资本回报尚缺，暂不给新品牌单独估值。</p></div><div class="find"><div class="t">美国银行 · 会员与渠道</div>
+<p>部分回答。金辉称在线旅行平台贡献约20%—25%且稳定，新市场仍需要第三方流量；未给同分母的最新会员活跃率和直订比例。累计会员规模不直接证明增量获客成本下降。</p></div><div class="find"><div class="t">高盛 · 利润率与海外</div>
+<p>部分回答。首席财务官Arthur Yu预期中长期利润率受轻资产化支持，同时保留人才、科技与品牌投入；维持HWI全年盈利目标，但未说明利润口径或金额。该表态不足以写成GAAP净利润保证。</p></div></div>
+<p>集团报表支持扩张能力，对加盟商回报的证据较弱。区分新增需求与网络内部迁移，需要成熟店房晚、关店原因、升级后的同批次现金回收及续签行为共同验证。</p>
+<div class="plain"><span class="pl">白话解读</span>
+<p>华住少付建店的钱，业主仍要付房租、装修和工资。新店也可能分流旧店；下一份季报需同看成熟店需求和加盟利润，不能只数门店。</p></div></section>
+<section class="reveal on" id="profit" ><div class="slabel">利润 · 海外</div><h2>汇兑遮住主业改善，股权薪酬与海外成本却不能抹掉</h2>
+<p>经营改善不是汇兑创造的，归母利润却受汇兑高基数拖累。同比桥区分经营变化与非经营因素，再确定估值应保留哪些成本。</p><div class="tblscroll">
+<table class="tbl" ><caption>同口径US GAAP归母利润同比桥；不是经调整EBITDA桥。</caption><thead>
+<tr><th>桥项目</th><th>同比影响（亿元，推算）</th><th>定义</th></tr></thead><tbody>
+<tr><td>直接贡献</td><td>+4.04</td><td>2026Q2减2025Q2；正数为有利变化</td></tr>
+<tr><td>销售、管理及开业前费用</td><td>−0.65</td><td>2026Q2减2025Q2；正数为有利变化</td></tr>
+<tr><td>其他净经营利润</td><td>+0.92</td><td>2026Q2减2025Q2；正数为有利变化</td></tr>
+<tr><td>净利息</td><td>+0.31</td><td>2026Q2减2025Q2；正数为有利变化</td></tr>
+<tr><td>其他非经营及证券变动</td><td>−0.29</td><td>2026Q2减2025Q2；正数为有利变化</td></tr>
+<tr><td>汇兑净收益</td><td>−3.17</td><td>2026Q2减2025Q2；正数为有利变化</td></tr>
+<tr><td>所得税</td><td>−1.22</td><td>2026Q2减2025Q2；正数为有利变化</td></tr>
+<tr><td>联营利润及非控股权益</td><td>+0.39</td><td>2026Q2减2025Q2；正数为有利变化</td></tr>
+<tr><td>归母净利润同比净增加</td><td>0.33</td><td>八项变化合计，与披露归母利润差相等</td></tr></tbody></table></div><div class="wfall"><div class="wrow"><div class="nm">直接贡献<span>同比影响 · 亿元</span></div><div class="wtrack"><div class="wbar up" style="left:1.282051%;width:86.324786%"></div></div><div class="fig">+4.04</div></div><div class="wrow"><div class="nm">销售、管理及开业前费用<span>同比影响 · 亿元</span></div><div class="wtrack"><div class="wbar down" style="left:73.717949%;width:13.888889%"></div></div><div class="fig">−0.65</div></div><div class="wrow"><div class="nm">其他净经营利润<span>同比影响 · 亿元</span></div><div class="wtrack"><div class="wbar up" style="left:73.717949%;width:19.658120%"></div></div><div class="fig">+0.92</div></div><div class="wrow"><div class="nm">净利息<span>同比影响 · 亿元</span></div><div class="wtrack"><div class="wbar up" style="left:93.376068%;width:6.623932%"></div></div><div class="fig">+0.31</div></div><div class="wrow"><div class="nm">其他非经营及证券变动<span>同比影响 · 亿元</span></div><div class="wtrack"><div class="wbar down" style="left:93.803419%;width:6.196581%"></div></div><div class="fig">−0.29</div></div><div class="wrow"><div class="nm">汇兑净收益<span>同比影响 · 亿元</span></div><div class="wtrack"><div class="wbar down" style="left:26.068376%;width:67.735043%"></div></div><div class="fig">−3.17</div></div><div class="wrow"><div class="nm">所得税<span>同比影响 · 亿元</span></div><div class="wtrack"><div class="wbar down" style="left:0.000000%;width:26.068376%"></div></div><div class="fig">−1.22</div></div><div class="wrow"><div class="nm">联营利润及非控股权益<span>同比影响 · 亿元</span></div><div class="wtrack"><div class="wbar up" style="left:0.000000%;width:8.333333%"></div></div><div class="fig">+0.39</div></div><div class="wrow"><div class="nm">归母净增<span>全部变化合计</span></div><div class="wtrack"><div class="wbar tot" style="left:1.282051%;width:7.051282%"></div></div><div class="fig">+0.33</div></div></div>
+<p class="small">经营层面的增益大部分被汇兑与税费抵销。每条从上一条累计终点继续，末条回到净增加；共同刻度包含途中低于零的累计值。</p>
+<p>单季经调整归母利润17.12亿元，加回薪酬并剔除汇兑及证券波动。本文扣回<span class="g">股权薪酬（SBC）</span>1.79亿元，得到<span class="g">经营观察利润</span>15.33亿元；沿用公司对账、不另估税效，是分析值而非GAAP指标。</p>
+<p>TTM经营观察利润51.65亿元；2025全年观察净利率17.9%、2026H1为19.2%，作为正常化假设起点。租金、利息与人员成本保留，不直接外推旺季利润率。</p>
+<p>IFRS对账的2026H1归母利润为16.27亿元，低于US GAAP 32.0%（推算）。可转债、租赁、减值及激励确认不同，不是另一份现金；估值不混用两套准则。</p>
+<h3>国际业务的低利润，还连接着收购资产的减值检验</h3>
+<p>HWI最新收入中94.6%来自租赁酒店，成本刚性明显高于中国加盟网络。上半年经调整EBITDA仅0.75亿元，利润率3.4%；第二季较第一季转正不能单独证明全年资本回报达标。欧洲RevPAR改善是管理层分区观察，现有披露尚不能把地域收入、利润、现金和总部成本完整勾稽。</p>
+<p>集团商誉52.91亿元，占归母权益37.6%，因此海外整合不只是收入增长问题。2025年Legacy DH商誉测试<span class="g">减值余量</span>为70%，但收购中的某品牌名称仅≈9%；后者在2024年已确认3.91亿元减值。不能拿商誉的大余量替品牌资产担保，也不能把年度测试视为最新中期的安全保证。</p>
+<p>年报敏感性测试中，假设德意志酒店（DH）预测现金流下调5%或折现率相对上调5%，均不会触发商誉减值；相对上调不是上调百分点。品牌另以特许权使用费减免法测试。减值可能先于现金实际受损；熊市估值不另扣全部商誉。</p>
+<div class="plain"><span class="pl">白话解读</span>
+<p>净利润增长慢，不代表酒店主业只改善了一点；员工股份奖励也不是免费成本。海外仍需兑现盈利，部分品牌账面价值更容易因经营不达标而减记；下次业绩和减值测试须分别核对。</p></div></section>
+<section class="reveal on" id="cash" ><div class="slabel">现金 · 负债</div><h2>流动性有缓冲，但科目搬移与转股不能算经营改善</h2>
+<p>单季现金跳升不是全年可分配现金的可靠速度。营运资本第一季吸收、第二季释放资金，宜半年合看；现金增加夹杂投资到期，债务减少夹杂转股，都不能全归功于经营。</p><div class="tblscroll">
+<table class="tbl txt" ><caption>本集团；人民币亿元。各期存量与现金流明确区分，组合项为推算。</caption><thead>
+<tr><th>项目</th><th>基期 / 流入</th><th>最新 / 流出</th><th>判断边界</th></tr></thead><tbody>
+<tr><td>营运资本对OCF影响</td><td>2026Q1：−11.19</td><td>2026Q2：+12.32；H1：+1.13</td><td>季度间回摆，不能把Q2乘四</td></tr>
+<tr><td>现金 / 受限现金</td><td>2025末：103.86 / 1.46</td><td>2026中：142.49 / 1.42</td><td>受限现金不等于可自由分配现金</td></tr>
+<tr><td>短期投资</td><td>2025末：48.94</td><td>2026中：13.15</td><td>理财及存款到期可改变科目组合</td></tr>
+<tr><td>流动资源合计（推算）</td><td>2025末：154.26</td><td>2026中：157.06</td><td>现金、受限现金及短期投资，尚未扣承诺</td></tr>
+<tr><td>传统债务 / 当中流动部分</td><td>2025末：58.16 / 53.37</td><td>2026中：42.26 / 9.11</td><td>不含租赁；转股会改变负债与权益</td></tr>
+<tr><td>公司口径净现金（推算）</td><td>2025末：47.16</td><td>2026中：101.65</td><td>现金及受限现金减传统债务，不含短期投资</td></tr>
+<tr><td>经营 / 融资租赁负债</td><td>2025末：271.31 / 31.22</td><td>2026中：270.15 / 29.93</td><td>总额不是本期现金流出</td></tr>
+<tr><td>2026H1借款现金流</td><td>取得债务：37.46</td><td>偿还债务：−18.13</td><td>债务余额下降不能等同净现金偿债</td></tr>
+<tr><td>融资租赁本金支出</td><td>2025全年：0.57</td><td>2026H1：未单列</td><td>最新FCF代理尚未扣该项，非最终股东自由现金</td></tr></tbody></table></div>
+<p>经营租赁付款已进OCF，不再扣一遍租金；融资租赁本金列融资现金流，漏扣会高估可用现金。最新融资“其他”没有细分该项，故保留FCF代理称谓，独立现金估值改用披露完整的年度数。</p>
+<p>应收、预收及会员负债不是可永久占用的无成本资本。加盟商装修、续租及维修也未完整进入集团资本开支；现金转换优势不等于体系外资本需求消失。</p>
+<p>融资到期结构缓和，不代表长期租赁和地域现金调度风险消失。9月拟发债仍无最终金额、票息或期限，不计入净现金、不假设用于回购；待条款确定后再判断资金成本与用途。</p>
+<div class="plain"><span class="pl">白话解读</span>
+<p>现金增加可能来自投资到期，债务减少可能来自转股，并非酒店多赚了同等的钱。长期租金仍靠经营支付，债券条款落地后再更新融资负担。</p></div></section>
+<section class="reveal on" id="capital" ><div class="slabel">回报 · 治理</div><h2>已付回报是证据，未执行额度不是锁定收益</h2>
+<p>资本回报已有执行记录，但计划规模不等于每年收到的现金。董事会决定股息与回购组合，实际付款、除净、未来授权和新增稀释须分开判断。</p><div class="tblscroll">
+<table class="tbl txt" ><caption>股东回报和激励统一普通股 / ADS映射；股份、费用、授权与付款不互相替代。</caption><thead>
+<tr><th>观察项</th><th>日期 / 原始披露</th><th>金额及运算</th><th>约束</th></tr></thead><tbody>
+<tr><td>已支付股息 / 回购</td><td>2026H1：28.44 / 18.57亿元</td><td>合计47.01亿元；为同期FCF代理142.8%</td><td>是现金执行，不是新计划未来年度承诺</td></tr>
+<tr><td>新股东回报计划</td><td>25亿美元，3年<br>2026-08-17生效</td><td>首笔≈2.75亿美元已宣派；剩余≈22.25亿美元（推算）</td><td>董事会决定执行；均匀情景按2029-08-17届满计算</td></tr>
+<tr><td>每股普通股股息</td><td>0.087美元</td><td>香港除净2026-09-02；记录2026-09-08；支付2026-09-15</td><td>9月7日新买者无本次股息权利</td></tr>
+<tr><td>Q2基本 / 摊薄加权股数</td><td>31.53 / 32.53亿股</td><td>同比+2.63% / +0.37%</td><td>均为期间加权数，不是当前期末完全摊薄股数</td></tr>
+<tr><td>到期可转债结算</td><td>2026-05-01</td><td>≈4.996亿美元本金转13百万ADS；≈0.004亿美元赎回</td><td>转股≈130百万普通股（推算），不是现金偿还</td></tr>
+<tr><td>奖励存量与后续费用</td><td>2025-12-31</td><td>未归属受限制股份113.3百万；未行权期权24.4百万</td><td>期权加权行权价2.80美元；扣估计没收后受限制股份未确认费用15.20亿元，预计于加权平均5.66年内确认</td></tr>
+<tr><td>控制与关联交易</td><td>2026-03-31 / 2025全年</td><td>季琦实益持股23.5%；携程预订佣金3.07亿元、技术服务收入1.16亿元</td><td>持股不是9月最新比例；关联交易需持续验证定价与商业实质</td></tr></tbody></table></div>
+<p>员工购股权计划管理委员会仅由季琦组成，授予决策较集中。2009计划单次限制与2023计划年度限制不是同一规则；未来绩效归属缺少完整可复算门槛，也不将历史未归属奖励全部再加到当期摊薄股数。</p>
+<p>回购超过激励费用不必然缩股：股份归属、行权及转股另有节奏。模型固定摊薄加权普通股数，不预设回购增厚；待真实净缩股且现金未受损再改分母，避免回报与每股价值重复记账。</p>
+<p>未来12个月<span class="g">计入持有回报</span>只认已锁定且新买者享有的分配，现为零，非停止回报预测。剩余计划若均匀执行，年额≈51.25亿元、占模型权益额5.12%（推算）；时点及净缩股未定。</p>
+<p>基准2027年FCF代理为该年额≈1.57倍，未扣SBC替代成本及融资租赁本金，只检验承受力。回购不是留存股东的现金收入；核实净缩股与资金消耗前，不将毛回购金额计入持有回报。</p>
+<p>近年回报可验证，但上市以来融资与分配缺少一致币种累计桥，暂不能判断累计净融资还是净分配。当前重点是新债用途、实际分配、稀释及关联费用的商业条件。</p>
+<div class="plain"><span class="pl">白话解读</span>
+<p>公司确实在把钱还给股东，但回购也可能被新股份抵消。已经除净的股息属于原股东，不能算作今天买入后的收入；后续公告若把新计划变成确定付款，或证明净缩股，才提高模型计入的持有回报。</p></div></section>
+<section class="reveal on" id="valuation" data-fullscan-role="valuation" data-primary-method="正常化归母利润PE"><div class="slabel">估值 · 预期</div><h2>基准盈利能增长，但现价的上行不及下行容错</h2>
+<p>主方法是<span class="g">正常化归母利润PE</span>：剔除短期波动，保留租金及股份报酬；PE是每1元年度利润愿付的价格。采用2027E持续盈利，情景价对应未来12个月至2027年9月7日，非今日折现价值或成交保证。</p><div class="grid"><div class="cell" ><div class="k">现价</div><div class="v">35.56<span class="u">港元</span></div><div class="d"><span>2026-09-07 16:08:18 HKT</span></div></div><div class="cell" ><div class="k">熊市</div><div class="v">23.84<span class="u">港元</span></div><div class="d"><span>较现价 −33.0%</span></div></div><div class="cell" ><div class="k">基准</div><div class="v">38.00<span class="u">港元</span></div><div class="d"><span>较现价 +6.9%</span></div></div><div class="cell" ><div class="k">牛市</div><div class="v">53.39<span class="u">港元</span></div><div class="d"><span>较现价 +50.1%</span></div></div><div class="cell" ><div class="k">隐含预期</div><div class="v">19.18<span class="u">%</span></div><div class="d"><span>2027持续净利率：按基准收入、每1元年利润付18元</span></div></div><div class="cell" data-verdict="neutral-cautious"><div class="k">判断</div><div class="v">中性偏谨慎</div><div class="d"><span>等待同店与加盟利润共同验证</span></div></div></div><div class="steps"><div class="step"><div class="n">方法 A</div><b>正常化归母利润PE：持续盈利值多少钱？</b>
+<p>盈利保留租金及股权薪酬。</p></div><div class="step"><div class="n">方法 B</div><b>年度现金收益率：盈利有现金支持吗？</b>
+<p>扣年度融资租赁本金和薪酬替代成本校验。</p></div><div class="step"><div class="n">怎么读</div><b>主方法决定判断</b>
+<p>其他区间是交叉观察，不与主方法平均。</p></div></div>
+<h3>第一步 · 便宜于自己的恢复期，并不等于便宜于同业</h3>
+<p>Wind当前TTM PE为19.00倍，预测PE为17.38倍，后者没有预测年度或EPS口径，不能称作2027一致预期。按本文假设稀释分母和TTM经营观察利润，自算参考PE为19.37倍；供应商股数与历史价格指标仅交叉检查，不反推精确当前市值。</p>
+<p>五年月度数据含疫情亏损及早期恢复的小利润分母，整段分位会失真。仅看2024年初至2026年8月的32个月末观察值，中位PE22.03倍、四分位范围20.03—23.66倍，现价供应商PE位于≈16分位（推算）。这是限定区间的历史位置，不是五年低估证明；历史字段亦未逐期交代分母更新方式。</p>
+<h3>第二步 · 溢价要买到持续增长，而非只有规模</h3><div class="tblscroll">
+<table class="tbl txt" ><caption>Wind快照；三年观察对应两年CAGR。预测年度未标明；亚朵EPS股类未说明，只比较其自身序列，不横比绝对每股值。</caption><thead>
+<tr><th>公司</th><th>市场时点</th><th>PE TTM（倍）</th><th>预测PE（倍）</th><th>2023—2025 EPS CAGR / 净利率轨迹</th><th>可比层级</th></tr></thead><tbody>
+<tr><td>华住集团</td><td>香港9月7日</td><td>19.00</td><td>17.38</td><td>中国加盟与国际租赁并存</td><td>主体现有模式</td></tr>
+<tr><td>亚朵 ATAT.O</td><td>美国9月4日</td><td>16.20</td><td>15.21</td><td>+46.4%；销售净利率15.84%→17.56%→16.56%</td><td>一级战略比较：酒店平台，但品牌、规模与零售结构不同</td></tr>
+<tr><td>锦江酒店 600754.SH</td><td>A股9月7日</td><td>19.10</td><td>18.10</td><td>−3.6%；销售净利率8.72%→8.14%→7.16%</td><td>二级国内连锁：所有权及地域组合不同</td></tr>
+<tr><td>首旅酒店 600258.SH</td><td>A股9月7日</td><td>15.74</td><td>14.59</td><td>+1.0%；销售净利率10.41%→10.58%→10.70%</td><td>二级国内连锁：增长及直营组合不同</td></tr></tbody></table></div>
+<p>加盟模式不足以单独支持同业最高倍数。亚朵成长更快但利润率非单向上升，锦江与首旅恢复节奏不同；华住溢价须由收费持续性和利润质量支撑。全球品牌商地域、资产和回购模式不同，不直接用于抬高主估值。</p>
+<h3>第三步 · 把收入指引、利润率与合理倍数接成同一条链</h3><div class="tblscroll">
+<table class="tbl txt" ><caption>分析假设与推算。年度及货币逐行标明；股数固定，汇率采用2026-09-07中间价。</caption><thead>
+<tr><th>驱动 / 结果</th><th>熊市</th><th>基准</th><th>牛市</th><th>依据：来源与假设</th></tr></thead><tbody>
+<tr><td>经营路径</td><td>同店继续弱、开店后置</td><td>同店逐步稳定、加盟效率延续</td><td>同店回升、国际成本改善</td><td>分析情景；分别对应低个位数、高个位数、低双位数可&#8288;持&#8288;续&#8288;利&#8288;润&#8288;增&#8288;长</td></tr>
+<tr><td>2026 / 2027 / 2028<br>收入增长</td><td>4%&nbsp;/&nbsp;4%&nbsp;/&nbsp;4%</td><td>6%&nbsp;/&nbsp;8%&nbsp;/&nbsp;7%</td><td>8%&nbsp;/&nbsp;11%&nbsp;/&nbsp;10%</td><td>2026取集团指引下限、中值、上限；后两年按扩&#8288;张&#8288;与&#8288;同&#8288;店&#8288;恢&#8288;复程度推演</td></tr>
+<tr><td>2026 / 2027 / 2028<br>正常化净利率</td><td>17.0%&nbsp;/&nbsp;17.5%&nbsp;/&nbsp;18.0%</td><td>19.5%&nbsp;/&nbsp;20.5%&nbsp;/&nbsp;21.0%</td><td>21.0%&nbsp;/&nbsp;22.5%&nbsp;/&nbsp;23.5%</td><td>参照历&#8288;史&#8288;观&#8288;察&#8288;利&#8288;润&#8288;率，保留SBC、租金和利息</td></tr>
+<tr><td>2026 / 2027 / 2028<br>收入（亿元，≈）</td><td>263.19&nbsp;/&nbsp;273.72&nbsp;/&nbsp;284.67</td><td>268.25&nbsp;/&nbsp;289.71&nbsp;/&nbsp;309.99</td><td>273.32&nbsp;/&nbsp;303.38&nbsp;/&nbsp;333.72</td><td>依次由收入增长及正&#8288;常&#8288;化&#8288;净&#8288;利&#8288;率&#8288;计&#8288;算；非公司盈利指引</td></tr>
+<tr><td>2026 / 2027 / 2028<br>正常化归母利润<br>（亿元，≈）</td><td>44.74&nbsp;/&nbsp;47.90&nbsp;/&nbsp;51.24</td><td>52.31&nbsp;/&nbsp;59.39&nbsp;/&nbsp;65.10</td><td>57.40&nbsp;/&nbsp;68.26&nbsp;/&nbsp;78.42</td><td>依次由收入增长及正&#8288;常&#8288;化&#8288;净&#8288;利&#8288;率&#8288;计&#8288;算；非公司盈利指引</td></tr>
+<tr><td>2027 OCF/利润<br>现金资本开支率</td><td>1.35倍&nbsp;/&nbsp;3.2%</td><td>1.50倍&nbsp;/&nbsp;3.0%</td><td>1.65倍&nbsp;/&nbsp;2.8%</td><td>参考年度、半年现&#8288;金&#8288;转&#8288;换&#8288;及&#8288;历&#8288;史&#8288;投&#8288;资&#8288;强&#8288;度；随加盟化温和改善</td></tr>
+<tr><td>2027 FCF代理<br>（亿元，≈）</td><td>55.91</td><td>80.40</td><td>104.14</td><td>OCF减现金资本开支，尚未扣融资租赁本金；只检验再&#8288;投&#8288;资&#8288;及&#8288;分&#8288;配&#8288;承&#8288;受&#8288;力</td></tr>
+<tr><td>正常化利润PE</td><td>14倍</td><td>18倍</td><td>22倍</td><td>参照国&#8288;内&#8288;同&#8288;业&#8288;及&#8288;恢&#8288;复&#8288;期&#8288;历&#8288;史；依次对应低个位数、高个位数、低双位数长期盈利增长，不以现价反定倍数</td></tr>
+<tr><td>普通股分母（亿股）<br>计入回报（港元）</td><td>32.53&nbsp;/&nbsp;0</td><td>32.53&nbsp;/&nbsp;0</td><td>32.53&nbsp;/&nbsp;0</td><td>以Q2摊薄加权数固定；未&#8288;来&#8288;付&#8288;款&#8288;与&#8288;净&#8288;缩&#8288;股&#8288;未&#8288;锁&#8288;定，零非实际分配预测</td></tr>
+<tr><td>未来12个月情景价<br>（港元）</td><td>23.84</td><td>38.00</td><td>53.39</td><td>2027正&#8288;常&#8288;化&#8288;归&#8288;母&#8288;利&#8288;润乘PE，再按普通股分母和当前港元汇率换算</td></tr></tbody></table></div><div class="steps chain"><div class="step"><div class="n">增长</div><b>2027收入增长8%</b>
+<p>基准延续加盟扩张，同店逐步稳定</p></div><div class="step"><div class="n">收入 / 利润率</div><b>289.71亿元 / 20.5%</b>
+<p>保留薪酬、租金与财务费用</p></div><div class="step"><div class="n">归母利润</div><b>59.39亿元</b>
+<p>正常化利润，不是公司指引</p></div><div class="step"><div class="n">倍数</div><b>18倍PE</b>
+<p>对应高个位数长期增长，参照国内同业与恢复期历史</p></div><div class="step"><div class="n">普通股价值</div><b>38.00港元</b>
+<p>使用同一假设稀释分母与汇率</p></div></div><div class="ffield" aria-label="正常化PE情景、年度现金校验及历史市场锚"><div class="frow"><div class="fnm">熊市<span>PE上下1倍</span></div><div class="ftrack"><div class="fbar alt" style="left:5.342601%;width:8.514246%"></div><div class="fmark" style="left:38.900000%"></div></div><div class="fig">22.14–25.54港元</div></div><div class="frow"><div class="fnm">基准<span>PE上下1倍</span></div><div class="ftrack"><div class="fbar" style="left:39.731285%;width:10.556622%"></div></div><div class="fig">35.89–40.12港元</div></div><div class="frow"><div class="fnm">牛市<span>PE上下1倍</span></div><div class="ftrack"><div class="fbar moss" style="left:77.397244%;width:12.133071%"></div></div><div class="fig">50.96–55.81港元</div></div><div class="frow"><div class="fnm">年度现金检验<span>交叉观察区间</span></div><div class="ftrack"><div class="fbar" style="left:39.685755%;width:24.459751%"></div></div><div class="fig">35.87–45.66港元</div></div><div class="frow"><div class="fnm">恢复期市场锚<span>交叉观察区间</span></div><div class="ftrack"><div class="fbar" style="left:55.722192%;width:19.154858%"></div></div><div class="fig">42.29–49.95港元</div></div></div>
+<p class="small">倍数变化足以改变情景结果，现金区间与历史坐标不是自动加价。横轴20–60港元；黑线为现价；三档利润固定后PE各上下1倍，其他区间机制见附录。</p><div class="tblscroll">
+<table class="tbl sgrid"><caption>行：2027正常化净利率（%）；列：PE（倍）；每格为港元普通股价值。固定基准收入与分母；隐含行使用未舍入净利率，基准格与现价格分别标记。</caption><thead>
+<tr><th>净利率 ＼ PE</th><th>14倍</th><th>18倍</th><th>22倍</th></tr></thead><tbody>
+<tr><td>17.5%</td><td>25.23</td><td>32.44</td><td>39.65</td></tr>
+<tr><td>19.18%（现价隐含）</td><td>27.66</td><td class="implied">35.56</td><td>43.46</td></tr>
+<tr><td>20.5%</td><td>29.56</td><td class="base">38.00</td><td>46.45</td></tr>
+<tr><td>23.5%</td><td>33.88</td><td>43.57</td><td>53.25</td></tr></tbody></table></div>
+<h3>第四步 · 现价主要要求利润率稳定，额外上行要靠再定价</h3><div class="tblscroll">
+<table class="tbl txt" data-fullscan-role="implied"><caption>同一模型每次只反推一个变量；隐含值不是市场一致预测。</caption><thead>
+<tr><th>固定前提下反推</th><th>基准假设</th><th>现价隐含</th><th>差距</th></tr></thead><tbody>
+<tr><td>2027正常化利润；PE固定18倍</td><td>59.39亿元</td><td>55.57亿元</td><td>基准高6.9%</td></tr>
+<tr><td>2027正常化净利率；收入固定</td><td>20.5%</td><td>19.18%</td><td>现价所需盈利率接近最新半年经营观察水平</td></tr>
+<tr><td>PE；正常化利润固定</td><td>18倍</td><td>16.84倍</td><td>现价不要求立即回到恢复期历史中位</td></tr></tbody></table></div>
+<p>净利率与倍数最敏感。费用投入若抵销加盟效率，收入指引达标仍可能伴随利润不达标；同店、加盟利润及海外现金共同改善，才支持盈利与倍数同时提高。</p><div class="rows"><div class="row"><div class="nm">熊市<span>十二个月主方法</span></div><div class="track"><div class="fill alt" style="width:44.656104%"></div></div><div class="fig">23.84港元<span>−33.0%</span></div></div><div class="row"><div class="nm">现价<span>9月7日快照</span></div><div class="track"><div class="fill soft" style="width:66.609833%"></div></div><div class="fig">35.56港元<span>市场价格</span></div></div><div class="row"><div class="nm">基准<span>十二个月主方法</span></div><div class="track"><div class="fill" style="width:71.187551%"></div></div><div class="fig">38.00港元<span>+6.9%</span></div></div><div class="row"><div class="nm">牛市<span>十二个月主方法</span></div><div class="track"><div class="fill moss" style="width:100.000000%"></div></div><div class="fig">53.39港元<span>+50.1%</span></div></div></div>
+<p class="small">基准距离现价较近，熊市折价更深。条长按主方法价格相对牛市绘制，百分比均对现价计算；此处不另加未锁定分配。</p>
+<div class="plain"><span class="pl">一句话总结</span>
+<p>现价35.56港元离基准38.00港元不远，却明显高于熊市23.84港元。模型没有认定华住不再成长，而是要求成长证据先于更高倍数；最有用的新增证据是成熟店需求与加盟利润一起改善。</p></div></section>
+<section class="reveal on" id="valuation-appendix" ><div class="slabel">估值机制附录</div><h2>利润、股数、汇率与回报必须用同一套边界</h2>
+<p>情景价＝正常化利润×PE÷假设普通股数÷汇率。9月7日中间价为人民币0.86465元/港元、6.7795元/美元，非成交报价。利润含利息收入及租金，因此不追加全部现金，也不扣全部租赁负债。</p>
+<p>分母固定采用2026Q2摊薄加权普通股，不称为当前完全摊薄股数，也不预测净缩股。披露摊薄EPS可能另调整可转债利息分子，不能用净利润直接除股份去校验所有时期EPS。</p>
+<p>2025年FCF扣融资租赁本金及SBC替代成本，现金交叉输入为70.64亿元。要求收益率5.5%—7%，参考国内酒店盈利收益率并补偿营运资本波动；高于2025末总部抵押贷款2.55%，但最新其他融资利率不全，后者不是当前成本上限。该现金代理非承诺分红。</p>
+<p>现金区间是历史年度资本化，不是独立预测的2027年9月目标价。市场锚将恢复期PE四分位用于基准利润；两者不与主方法平均。敏感性固定基准收入，角点不等于熊牛情景。2027仍属利润率修复过渡年，高个位数增长指其后持续假设。</p><div class="tblscroll">
+<table class="tbl txt" data-fullscan-role="derivations"><caption>承重推算以原始单位展示，逐步使用未舍入值；金额百万元，股数百万股，汇率人民币/港元。表内简写的完整定义见前文。</caption><thead>
+<tr><th>数值</th><th>输入（按公式顺序）</th><th>公式</th><th>来源（页·附注）</th></tr></thead><tbody>
+<tr><td>Q2直接贡献：<br>3,067百万元</td><td>7121百万元；-4030百万元；-24百万元</td><td>收入−两类经营成本绝对值</td><td>2026Q2公告第16页</td></tr>
+<tr><td>Q2经营观察利润：<br>1,533百万元</td><td>1712百万元；179百万元</td><td>经调归母−SBC</td><td>2026Q2公告第20页；2026Q2公告第18页</td></tr>
+<tr><td>TTM经营观察利润：<br>5,165百万元</td><td>5603百万元；438百万元</td><td>TTM经调归母−TTM SBC</td><td>本页情景及财务地图</td></tr>
+<tr><td>Q2归母净增：<br>33百万元</td><td>404百万元；-65百万元；92百万元；31百万元；-29百万元；-317百万元；-122百万元；39百万元</td><td>八项有符号变化加总</td><td>利润桥</td></tr>
+<tr><td>
+<p class="small">假设普通股分母：<br>3,253.335432百万股</p></td><td>
+<p class="small">3253335432股</p></td><td>披露加权股数÷1,000,000，作为固定假设</td><td>2026Q2公告第17页</td></tr>
+<tr><td>熊市正常化利润：<br>4,790.11百万元</td><td>27372.05百万元；17.5%</td><td>2027收入×正常化净利率</td><td>本页情景及财务地图</td></tr>
+<tr><td>熊市情景价：<br>23.84港元/股</td><td>4790.11百万元；14倍；本表固定普通股分母；0.86465CNY/HKD</td><td>2027利润×PE÷百万股÷汇率</td><td>9月7日Wind中间价</td></tr>
+<tr><td>基准正常化利润：<br>5,939.15百万元</td><td>28971.45百万元；20.5%</td><td>2027收入×正常化净利率</td><td>本页情景及财务地图</td></tr>
+<tr><td>基准情景价：<br>38.00港元/股</td><td>5939.15百万元；18倍；本表固定普通股分母；0.86465CNY/HKD</td><td>2027利润×PE÷百万股÷汇率</td><td>9月7日Wind中间价</td></tr>
+<tr><td>牛市正常化利润：<br>6,826.06百万元</td><td>30338.03百万元；22.5%</td><td>2027收入×正常化净利率</td><td>本页情景及财务地图</td></tr>
+<tr><td>牛市情景价：<br>53.39港元/股</td><td>6826.06百万元；22倍；本表固定普通股分母；0.86465CNY/HKD</td><td>2027利润×PE÷百万股÷汇率</td><td>9月7日Wind中间价</td></tr>
+<tr><td>现价隐含正常化利润：<br>5,557.23百万元</td><td>100030.15百万元；18倍</td><td>假设权益额÷基准PE</td><td>本页情景及财务地图</td></tr>
+<tr><td>现价隐含正常化净利率：<br>19.18%</td><td>5557.23百万元；28971.45百万元</td><td>隐含利润÷基准收入×100%</td><td>本页情景及财务地图</td></tr>
+<tr><td>年度现金交叉输入：<br>7,064百万元</td><td>7541百万元；-57百万元；420百万元</td><td>年度FCF−本金流出绝对值−SBC</td><td>2025年报第237页；2025年报第236页</td></tr>
+<tr><td>现金检验下端：<br>35.87港元/股</td><td>7064百万元；7%；本表固定普通股分母；0.86465CNY/HKD</td><td>年度现金÷收益率÷百万股÷汇率</td><td>9月7日Wind中间价</td></tr>
+<tr><td>现金检验上端：<br>45.66港元/股</td><td>7064百万元；5.5%；本表固定普通股分母；0.86465CNY/HKD</td><td>年度现金÷收益率÷百万股÷汇率</td><td>9月7日Wind中间价</td></tr>
+<tr><td>熊市含计入回报：<br>−33.0%</td><td>23.84港元/股；0港元/股；35.56港币</td><td>(情景价＋计入回报)÷现价−1</td><td>20260907披露</td></tr>
+<tr><td>基准含计入回报：<br>6.9%</td><td>38.0港元/股；0港元/股；35.56港币</td><td>(情景价＋计入回报)÷现价−1</td><td>20260907披露</td></tr>
+<tr><td>两情景平衡价：<br>30.92港元/股</td><td>38.0港元/股；23.84港元/股；0港元/股</td><td>(基准＋熊市)÷2＋计入回报</td><td>本页情景及财务地图</td></tr></tbody></table></div>
+<div class="plain"><span class="pl">白话解读</span>
+<p>利润、股数与汇率共同决定每股港元价值，股息资格和租赁口径也不能混用。后续披露改变输入，再重算判断。</p></div></section>
+<section class="reveal on" id="risks" ><div class="slabel">风险 · 验证</div><h2>最强反证是增长留在平台收入，却没有留在业主回报</h2><div class="tblscroll">
+<table class="tbl txt" data-fullscan-role="risk-register"><caption>按对主论点的伤害排序；概率为分析定性等级，不是统计预测；观察线不是公司指引。</caption><thead>
+<tr><th>排序</th><th>风险</th><th>现状</th><th>传导</th><th>敞口</th><th>概率</th><th>下一观察点</th></tr></thead><tbody>
+<tr><td>1</td><td>加盟扩张透支旧店需求</td><td>2026Q2同店入住率仍下降，新增酒店持续进入</td><td>业主回报降低，续签、新签和服务质量承压</td><td>基准净利率每低1个百分点，2027利润少≈2.90亿元、价值少≈1.85港元（推算）</td><td>中高：同店压力已存在</td><td>2026Q3：同店RevPAR至少改善至−1%或以上，并观察入住率；阈值为分析观察线</td></tr>
+<tr><td>2</td><td>费收入增长快于可保留利润</td><td>2026Q2经理报销、运营及战略投入并存</td><td>加盟商支持或人员科技投入消耗组合效益</td><td>熊市正常化利润与PE同时承压，不能只降低一个变量</td><td>中：取决于费用纪律及业主支持</td><td>2026Q3：加盟收入增速能否守住15%，且经营观察利润不转为下降</td></tr>
+<tr><td>3</td><td>HWI经营兑现与品牌减值</td><td>2026H1国际利润薄、最近年度品牌测试余量较窄</td><td>租赁业务现金恶化，继而压低可回收金额</td><td>仅凭当前披露不能量化地域现金缺口；商誉和品牌余量需分别测试</td><td>中：非现金减值与经营损失有不同时间路径</td><td>2026年报：HWI全年盈利口径、区域现金与品牌减值测试</td></tr>
+<tr><td>4</td><td>回购被稀释抵销</td><td>2026Q2回购后基本与摊薄加权股份仍同比增加</td><td>回报金额大而每股增厚弱</td><td>固定分母假设若失效，应下修每股情景价，不把授权全额计入回报</td><td>中：转换、授予及执行价格决定结果</td><td>2026Q3及2026年报：净回购股数、奖励归属和摊薄股份变动</td></tr>
+<tr><td>5</td><td>融资用途与资金负担变化</td><td>2026-09-04仅提出境外人民币债券发售</td><td>新增资金成本及用途可能改变净现金与分配空间</td><td>本金、票息、期限未定，尚不能给金额敞口</td><td>中：方案执行与条款待定</td><td>2026年内后续定价公告：规模、票息、抵押担保与用途</td></tr></tbody></table></div>
+<p>熊市假设业主回报走弱、扩张效率下降，集团增加支持支出。单季入住率受天气或假日影响，不足以否定长期模式，需同店、费用与关闭原因共振。关闭/毛开若连续两季高于30%，应按品牌、城市和店龄核查，而非视为失败率。</p><div class="tline"><div class="tstop warn"><span class="tw">2026Q3</span><b>同店与加盟利润共振</b>
+<p>若收入继续扩张而经营观察利润下滑，先下修正常化净利率。</p></div><div class="tstop"><span class="tw">2026年内</span><b>拟发债变为确定条款</b>
+<p>按票息、规模与用途更新资金负担，不提前计入融资款。</p></div><div class="tstop warn"><span class="tw">2026年报</span><b>海外与股份分母落地</b>
+<p>核对HWI盈利口径、品牌测试及净回购后的实际稀释。</p></div></div>
+<div class="plain"><span class="pl">白话解读</span>
+<p>旧店少住客、业主少赚钱、集团却多花钱稳网络，才最伤估值。若扩张没有利润与现金同步，基准需重算；后续依次检验季度经营、融资条款和年度兑现。</p></div></section>
+<section class="reveal on" id="decision" data-fullscan-role="decision" data-verdict="neutral-cautious"><div class="slabel">最终判断</div><h2>中性偏谨慎：增长仍在，价格却需要更扎实的业主端证据</h2><div class="tblscroll">
+<table class="tbl txt" data-fullscan-role="decision-block"><thead>
+<tr><th>项目</th><th>结论</th></tr></thead><tbody>
+<tr><td>论点</td><td>加盟化已经改善集团经营，但成熟门店和加盟商现金回报的证据不足以支撑无条件倍数上修。</td></tr>
+<tr><td>基准对一致预期</td><td>无一致预期可比：9月7日预测PE没有年度及每股口径。改用现价隐含检验，基准2027正常化利润59.39亿元，较同倍数下现价所需高6.9%，差异来自正常化利润率假设。</td></tr>
+<tr><td>赔率</td><td>未来12个月同一期限、主方法含计入持有回报：熊市−33.0%，基准+6.9%。已除净股息排除，未锁定的未来分配暂未记入，所以下行大于基准上行。</td></tr>
+<tr><td>平衡价</td><td>30.92港元（推算）：本报告两情景在同一期间、含计入回报后，上行等于下行的价格；是模型性质，不是交易指示。</td></tr>
+<tr><td>持有回报</td><td>2026-09-07至2027-09-07：计入股息收益率0%、计入净回购收益率0%。新买者不享有已除净分配，未来额度未分配；不是预测公司实际停止回报。</td></tr>
+<tr><td>分项置信度</td><td>论点证据 中；估值输入 中；现金及资产负债表 中；治理 中。最弱为加盟商经济性：2026年报若给出可比店回收期及续签现金回报，可提高把握。</td></tr>
+<tr><td>判断</td><td>中性偏谨慎（等待验证）：回报能力不差，但基准上行不足补偿熊市损失。下一检查点是2026Q3成熟店入住和加盟利润是否一起改善。</td></tr></tbody></table></div>
+<div class="callout"><b>最强反方观点：</b>同店仍弱时，加盟规模效率与资本回报也可能先兑现。若需求和加盟利润持续共进，并出现真实净缩股，谨慎判断应上调；反之，收入增而经营观察利润降、业主回报承压，就是下修边界。</div></section>
+<section class="reveal on" id="glossary" ><div class="slabel">名词速查</div><h2>先分清酒店、报表与股份的三个分母</h2><div class="tblscroll">
+<table class="tbl gloss" ><thead>
+<tr><th>术语</th><th>白话解释</th></tr></thead><tbody>
+<tr><td>租赁及自有</td><td>集团承担房租及人员等成本，确认酒店经营收入。</td></tr>
+<tr><td>管理加盟及特许经营</td><td>加盟商承担建店资本，集团收合同费及经理报销，并非纯特许权费。</td></tr>
+<tr><td>美国预托股份（ADS）</td><td>美国挂牌的存托凭证，每ADS代表10股普通股；本页价格及分母统一普通股。</td></tr>
+<tr><td>美国公认会计准则（US GAAP）</td><td>本页会计主轴；与IFRS对账不混用。</td></tr>
+<tr><td>中国业务（HWC）</td><td>2026年起重划为中国境内酒店，比较期已重述；不是旧年度Legacy Huazhu名称的简单替换。</td></tr>
+<tr><td>国际业务（HWI）</td><td>中国境外酒店组合，仍较依赖租赁经营；业务规模与利润贡献分开观察。</td></tr>
+<tr><td>平均每日房价（ADR）</td><td>已售房晚均价，变化也可能来自产品或城市组合。</td></tr>
+<tr><td>入住率（OCC）</td><td>已售房晚占可售房晚比例，不用期末酒店数计算。</td></tr>
+<tr><td>每间可售客房收入（RevPAR）</td><td>房价与入住情况的综合指标；比较样本须一致。</td></tr>
+<tr><td>直接贡献</td><td>收入扣两类直接经营成本，尚未扣管理等费用，非GAAP毛利。</td></tr>
+<tr><td>经营观察利润</td><td>公司经调利润减SBC；沿用公司对账、不另估税效。</td></tr>
+<tr><td>股权薪酬（SBC）</td><td>股票或期权报酬；非现金支出仍有成本及潜在稀释。</td></tr>
+<tr><td>减值余量</td><td>可回收价值超出账面价值的幅度；商誉与品牌分别测试。</td></tr>
+<tr><td>正常化归母利润PE</td><td>剔短期波动、留租金及股份报酬，再按每1元年利润愿付的价格估值。</td></tr>
+<tr><td>计入持有回报</td><td>情景中明确计入的股息及净回购等值；未计入非零分配预测。</td></tr>
+<tr><td>自由现金流代理（FCF）</td><td>经营现金减资本开支；未扣最新融资租赁本金，非最终可分配现金。</td></tr></tbody></table></div></section><footer>
+<p>数据截止：财务截至2026-06-30；公司公告检索截至2026-09-07；港股行情2026-09-07 16:08:18 HKT，A股9月7日，美股9月4日快照。正文以本集团US GAAP及港元普通股为主。</p>
 
-    <div class="dual">
-      <div>
-        <div class="tag">单二季度经营利润｜同比</div>
-        <div class="big a">+24.1%</div>
-        <div class="cap">商业模式迁移带来的利润弹性明显强于收入增长。</div>
-      </div>
-      <div>
-        <div class="tag">HWC成熟酒店RevPAR｜同比</div>
-        <div class="big b">−3.0%</div>
-        <div class="cap">综合指标转正并不等于存量门店需求已经修复。</div>
-      </div>
-    </div>
-  </div>
-</header>
+<p>来源：<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081701104_c.pdf">华住2026Q2及中期业绩公告（8月17日）</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042403647_c.pdf">2025中文年报</a>及2021—2024中文年报；2026Q1业绩公告；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081701120_c.pdf">普通股息公告</a>；<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400064_c.pdf">建议发售人民币债券公告（9月4日）</a>。</p>
 
-<main class="wrap">
+<p>来源补充：2026-08-17英语传译业绩会逐字稿（earningscalls.dev）；Wind行情、同业及人民银行中间价序列。</p>
 
-<section class="reveal on" id="financials" data-fullscan-role="basic-financials">
-  <div class="slabel">公司概况 · 主营业务 · 五年财务</div>
-  <h2>五年修复的核心，是从经营客房转向经营网络</h2>
-  <p>华住是开曼群岛控股公司，纳斯达克HTHT为第一上市地、港交所01179为第二上市地，以美国公认会计原则（US GAAP）编制主报表并提供国际财务报告准则对账。截至2026年6月末，全球网络覆盖13,539家酒店、1,335,445间客房；公司所称「酒店营业额」是全网络房费与非房费交易总额，不等于合并收入。</p>
-  <p>华住以租赁及自有、管理加盟和特许经营三种模式连接住客、会员与酒店业主。前一种模式承担物业、人员和经营风险，后两种模式由加盟商投入酒店资本，华住输出品牌、预订、会员、技术与管理并收取费用。2025年管理加盟及特许收入中，系统使用费与持续管理费合计约占70.6%，经理费用报销约占18.63%；收入修复背后，更重要的变化是持续性平台收费逐步替代重资产客房收入。</p>
+<p>审计状态：历史全年经审计；2026Q2及中期未经审计。分析推算及假设的核心公式见估值机制附录。</p>
 
-  <h3>2026单二季度HWC全网经营参考</h3>
-  <div class="grid">
-    <div class="cell"><div class="k">平均每日房价（ADR）</div><div class="v">298<span class="u">元</span></div><div class="d"><span class="up">同比 +2.6%</span></div></div>
-    <div class="cell"><div class="k">入住率</div><div class="v">79.8<span class="u">%</span></div><div class="d"><span class="down">同比 −1.2pt</span></div></div>
-    <div class="cell"><div class="k">每间可售客房收入（RevPAR）</div><div class="v">238<span class="u">元</span></div><div class="d"><span class="up">同比 +1.1%</span></div></div>
-  </div>
-
-  <div class="grid" data-financials="consolidated">
-    <div class="cell"><div class="k">单二季度收入</div><div class="v">71.21<span class="u">亿元</span></div><div class="d"><span class="up">同比 +10.8%</span><span>US GAAP</span></div></div>
-    <div class="cell"><div class="k">估算经营毛利</div><div class="v">30.67<span class="u">亿元</span></div><div class="d"><span class="up">同比 +15.2%</span><span>估算毛利率 43.1%</span></div></div>
-    <div class="cell"><div class="k">经营利润</div><div class="v">22.18<span class="u">亿元</span></div><div class="d"><span class="up">利润率 31.1%</span><span>主营结构改善</span></div></div>
-    <div class="cell"><div class="k">归母净利润</div><div class="v">15.77<span class="u">亿元</span></div><div class="d"><span>同比 +2.1%</span><span>净利率 22.1%</span></div></div>
-    <div class="cell"><div class="k">经营活动现金流量净额</div><div class="v">34.08<span class="u">亿元</span></div><div class="d"><span class="up">同比 +28.2%</span><span>含营运资金季节性</span></div></div>
-    <div class="cell"><div class="k">自由现金流代理</div><div class="v">32.41<span class="u">亿元</span></div><div class="d"><span class="up">同比 +31.2%</span><span>现金资本开支 1.67亿元</span></div></div>
-  </div>
-
-  <h3>最新每股与资本效率</h3>
-  <div class="grid">
-    <div class="cell"><div class="k">单二季度基本 / 稀释EPS</div><div class="v">0.50 / 0.49<span class="u">元</span></div><div class="d"><span>普通股口径</span></div></div>
-    <div class="cell"><div class="k">上半年ROE代理</div><div class="v">17.8<span class="u">%</span></div><div class="d"><span>归母利润 / 平均归母权益</span><span>未年化</span></div></div>
-    <div class="cell"><div class="k">每股归母权益（近似）</div><div class="v">约4.45<span class="u">元</span></div><div class="d"><span>6月末权益 / 8月股息公告隐含约31.61亿股</span></div></div>
-  </div>
-
-  <h3>2026上半年合并成绩</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>人民币亿元，EPS为元；自由现金流为经营活动现金流量净额减现金资本开支。</caption>
-      <thead><tr><th>收入</th><th>估算经营毛利</th><th>经营利润</th><th>归母净利润</th><th>基本 / 稀释EPS</th><th>经营现金流</th><th>资本开支</th><th>自由现金流</th></tr></thead>
-      <tbody><tr class="grp"><td>131.17</td><td>53.90</td><td>37.06</td><td>23.94</td><td>0.77 / 0.74</td><td>36.41</td><td>3.49</td><td>32.92</td></tr></tbody>
-    </table>
-  </div>
-
-  <h3>五年合并财务</h3>
-  <div class="tblscroll">
-    <table class="tbl" data-financials="history">
-      <caption>人民币亿元，EPS为元。公司不披露公认会计原则毛利，故以估算经营毛利＝收入－酒店经营成本－其他经营成本作为行业替代指标；自由现金流＝经营活动现金流量净额－现金资本开支。租赁调整ROIC＝税后经营利润÷平均（归母权益＋传统债务＋全部租赁负债－现金、受限现金及短期投资）。</caption>
-      <thead><tr><th>财年</th><th>收入</th><th>估算经营毛利 / 估算毛利率</th><th>经营利润 / 利润率</th><th>归母净利润 / 净利率</th><th>每股收益（EPS）</th><th>ROE / 租赁调整ROIC</th><th>经营现金流</th><th>资本开支</th><th>自由现金流</th></tr></thead>
-      <tbody>
-        <tr><td>2021</td><td>127.85</td><td>14.45 / 11.3%</td><td>1.64 / 1.3%</td><td>−4.65 / −3.6%</td><td>−0.15</td><td>−4.2% / 0.3%</td><td>13.42</td><td>16.75</td><td>−3.33</td></tr>
-        <tr><td>2022</td><td>138.62</td><td>15.40 / 11.1%</td><td>−2.94 / −2.12%</td><td>−18.21 / −13.1%</td><td>−0.59</td><td>−18.5% / −0.5%</td><td>15.64</td><td>10.53</td><td>5.11</td></tr>
-        <tr><td>2023</td><td>218.82</td><td>75.07 / 34.3%</td><td>47.14 / 21.5%</td><td>40.85 / 18.7%</td><td>1.28</td><td>39.2% / 8.4%</td><td>76.74</td><td>9.01</td><td>67.73</td></tr>
-        <tr><td>2024</td><td>238.91</td><td>85.75 / 35.9%</td><td>52.00 / 21.8%</td><td>30.48 / 12.8%</td><td>0.98</td><td>25.1% / 10.5%</td><td>75.18</td><td>8.98</td><td>66.20</td></tr>
-        <tr><td>2025</td><td>253.07</td><td>99.07 / 39.1%</td><td>68.19 / 26.9%</td><td>50.80 / 20.1%</td><td>1.65</td><td>40.7% / 14.6%</td><td>83.79</td><td>8.38</td><td>75.41</td></tr>
-        <tr class="grp"><td>2021—25 CAGR</td><td>18.6%</td><td>61.8% / —</td><td>不具意义</td><td>不具意义</td><td>不具意义</td><td>不具意义</td><td>58.1%</td><td>−15.9%</td><td>不具意义</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>收入模型与分部</h3>
-  <div data-financials="segments">
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>收入流为2025全年及2026上半年；CAGR使用2023—2025可比端点。人民币亿元。</caption>
-        <thead><tr><th>收入流</th><th>2025收入 / 占比</th><th>两年CAGR</th><th>2026H1收入 / 同比</th><th>经济含义</th></tr></thead>
-        <tbody>
-          <tr><td>租赁及自有</td><td>129.43 / 51.1%</td><td>−3.1%</td><td>59.83 / −3.3%</td><td>承担租金、人员与门店经营风险</td></tr>
-          <tr class="grp"><td>管理加盟及特许经营</td><td>116.96 / 46.2%</td><td>23.3%</td><td>65.92 / +22.9%</td><td>系统费、持续管理费及经理费用等</td></tr>
-          <tr><td>其他</td><td>6.68 / 2.64%</td><td>30.54%</td><td>5.42 / +103.0%</td><td>酒店生态及配套收入</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="tblscroll">
-      <table class="tbl">
-        <caption>2026上半年分部；HWC为中国境内，HWI为中国境外。人民币亿元。</caption>
-        <thead><tr><th>分部</th><th>收入 / 集团占比</th><th>同比</th><th>经调整EBITDA</th><th>分部利润率</th></tr></thead>
-        <tbody>
-          <tr class="grp"><td>HWC</td><td>109.07 / 83.1%</td><td>+13.8%</td><td>45.08</td><td>41.3%</td></tr>
-          <tr><td>HWI</td><td>22.25 / 16.96%</td><td>−1.4%</td><td>0.75</td><td>3.4%</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <p class="small">分部收入在抵销前列示，上半年抵销0.15亿元，因此HWC与HWI占比合计约100.1%。2021—2022处于疫情异常期，长期复合增速不能视为正常化增速；2023—2025的正常化CAGR为：收入7.5%、估算经营毛利14.9%、经营现金流4.49%、自由现金流5.5%。2026年起公司由Legacy Huazhu / Legacy DH改为HWC / HWI并重述比较期，不把旧分部与新分部机械拼接。经调整EBITDA在2024年扩大定义，早期年度不完全可比。所有复合增长率使用未四舍五入端点重算。</p>
-
-  <h3>最近十二个月运行率</h3>
-  <div class="grid">
-    <div class="cell"><div class="k">经调整EBITDA</div><div class="v">92.90<span class="u">亿元</span></div><div class="d"><span>2025H2加2026H1</span></div></div>
-    <div class="cell"><div class="k">经调整归母净利润</div><div class="v">56.03<span class="u">亿元</span></div><div class="d"><span>统一非公认会计准则口径</span></div></div>
-    <div class="cell"><div class="k">自由现金流代理</div><div class="v">80.23<span class="u">亿元</span></div><div class="d"><span>经营现金流87.81亿元</span><span>现金资本开支7.58亿元</span></div></div>
-  </div>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">投资逻辑与增长 · 行业及品牌渠道</div>
-  <h2>网络扩张托住综合指标，成熟门店仍在消化需求压力</h2>
-  <p>本季最重要的经营分歧，来自「全网」与「同店」两个统计口径。全网数据包含新店、城市层级和产品版本变化，适合观察平台增长；运营至少十八个月的同店指标更接近存量需求。前者改善而后者承压，说明利润增长目前主要由网络和结构驱动。</p>
-
-  <div class="flowbox">
-    <svg viewBox="0 0 920 260" role="img" aria-label="集团客房网络扩张与华住中国酒店营业额、管理加盟收入和经调整EBITDA的增长链">
-      <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6D7B88"/></marker></defs>
-      <text x="20" y="30" fill="#122A4B" font-size="15" font-weight="600">集团规模 / HWC业绩｜2026Q2同比</text>
-      <line x1="205" y1="125" x2="235" y2="125" stroke="#6D7B88" stroke-width="2" marker-end="url(#arrow)"/>
-      <line x1="425" y1="125" x2="455" y2="125" stroke="#6D7B88" stroke-width="2" marker-end="url(#arrow)"/>
-      <line x1="645" y1="125" x2="675" y2="125" stroke="#6D7B88" stroke-width="2" marker-end="url(#arrow)"/>
-      <rect x="20" y="70" width="185" height="110" fill="#8FA8CC"/><text x="112" y="103" text-anchor="middle" fill="#122A4B" font-size="12">集团客房数量</text><text x="112" y="147" text-anchor="middle" fill="#122A4B" font-size="27" font-weight="600">+12.7%</text>
-      <rect x="235" y="70" width="190" height="110" fill="#1E4B8F"/><text x="330" y="103" text-anchor="middle" fill="#E9EDF3" font-size="12">HWC酒店营业额</text><text x="330" y="147" text-anchor="middle" fill="#FFFFFF" font-size="27" font-weight="600">+15.3%</text>
-      <rect x="455" y="70" width="190" height="110" fill="#2C6A57"/><text x="550" y="103" text-anchor="middle" fill="#E9EDF3" font-size="12">HWC管理加盟收入</text><text x="550" y="147" text-anchor="middle" fill="#FFFFFF" font-size="27" font-weight="600">+25.4%</text>
-      <rect x="675" y="70" width="225" height="110" fill="#2C6A57"/><text x="787" y="103" text-anchor="middle" fill="#E9EDF3" font-size="12">HWC经调整EBITDA</text><text x="787" y="147" text-anchor="middle" fill="#FFFFFF" font-size="27" font-weight="600">+23.2%</text>
-    </svg>
-    <div class="flow-note"><span class="badge">结构驱动</span><span>客房数与全网交易扩大后，收费收入和利润池被放大；这条链证明平台杠杆，却不能替代成熟门店的需求检验。</span></div>
-  </div>
-
-  <h3>全年指引上修，隐含下半年总收入门槛并不高</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026全年同比指引及由半年数据机械反推的下半年同比；不是新增季度指引。</caption>
-      <thead><tr><th>口径</th><th>原指引</th><th>新指引</th><th>隐含2026H2同比</th><th>解读</th></tr></thead>
-      <tbody>
-        <tr><td>集团收入</td><td>+2%—+6%</td><td>+4%—+8%</td><td>−2.1%—+5.4%</td><td>上修后仍容许下半年低个位数增长</td></tr>
-        <tr><td>HWC收入（不含DH）</td><td>+5%—+9%</td><td>+7%—+11%</td><td>未机械推算</td><td>中国网络与产品结构是主要增量</td></tr>
-        <tr class="grp"><td>管理加盟及特许经营收入</td><td>+12%—+16%</td><td>+16%—+20%</td><td>+10.2%—+17.5%</td><td>下半年仍需保持双位数平台收费增长</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>同店拆分把「提价」还原成量价组合</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>HWC运营至少十八个月酒店，2026Q2；金额为人民币元。</caption>
-      <thead><tr><th>成熟酒店口径</th><th>ADR / 同比</th><th>入住率 / 同比</th><th>RevPAR</th><th>判断</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>全部成熟酒店</td><td>292 / −0.1%</td><td>79.9% / −2.4pt</td><td>233</td><td>价格近乎持平，缺口主要在入住率</td></tr>
-        <tr><td>经济型</td><td>220 / 持平</td><td>80.4% / −3.1pt</td><td>177</td><td>大众需求频次没有完全转成间夜</td></tr>
-        <tr><td>中档及以上</td><td>342 / −0.4%</td><td>79.6% / −1.9pt</td><td>272</td><td>升级仍能守价，但未摆脱量压</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>管理层称中国业务ADR已连续四个季度正增长；同店价格却几乎没有变化，说明品牌升级、城市组合和新版本贡献了相当部分的表观提价。旅游人次增长但人均每次花费下降的环境下，真正的需求拐点要由成熟门店入住率确认。</p>
-
-  <h3>开店目标可达，净增长质量仍未被回答</h3>
-  <div class="grid">
-    <div class="cell"><div class="k">HWC在营酒店</div><div class="v">13,417<span class="u">家</span></div><div class="d"><span>覆盖多层级城市</span></div></div>
-    <div class="cell"><div class="k">待开业管线</div><div class="v">3,054<span class="u">家</span></div><div class="d"><span>约等于在营网络 22.8%</span></div></div>
-    <div class="cell"><div class="k">单二季度开 / 关 / 净增</div><div class="v">498 / 176 / 322<span class="u">家</span></div><div class="d"><span class="down">关店相当于新开 35.3%</span></div></div>
-  </div>
-  <p>上半年新开一千零三十五家后，全年二千二百至二千三百家的指引要求下半年再开 <strong>1,165—1,265家</strong>，比上半年多约13%至略高于两成。电话会把前半年的放缓归因于基数与供应链波动，却没有给逐月排期、签约转开业率或关闭展望。毛开店完成并不自动等于净网络质量提升。</p>
-
-  <h3>加盟与会员是真护城河，也是真正的数据缺口</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>合同与渠道事实来自2025年报及本次电话会；并非加盟商回报测算。</caption>
-      <thead><tr><th>机制</th><th>已披露证据</th><th>投资含义</th></tr></thead>
-      <tbody>
-        <tr><td>加盟合同</td><td>HWC初始期通常八至十年；月费为酒店总收入3%—6.5%，另有系统、会员及经理费用</td><td>收费持续性强，但业主承担绝大部分门店资本与亏损</td></tr>
-        <tr><td>核心品牌</td><td>汉庭、全季与桔子占全球酒店数71.6%</td><td>规模集中提升系统效率，也放大单一品牌组合风险</td></tr>
-        <tr><td>会员资产</td><td>2025年末超过3.11亿会员，约77%间夜来自自有渠道</td><td>成熟市场获客成本有优势</td></tr>
-        <tr><td>平台获客</td><td>电话会称OTA贡献稳定在20%—25%</td><td>下沉、入境和休闲场景仍需第三方流量</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>汉庭新版本被描述为优于旧版，全季大观管线超过二十家，但管理层没有披露升级投入、成熟期、单店RevPAR增幅或加盟商资本回报。产品得到「认可」是定性证据；续签率、关闭率和可比店现金回报才是资本质量证据。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">盈利能力深度分析</div>
-  <h2>主营改善被汇兑噪音遮住，调整项又不能全部忽略</h2>
-  <p>收费收入提高了利润率，但报表净利润没有同步放大，原因主要在经营利润以下。反过来，经调整利润更接近主营方向，却剔除了股权激励等真实经济成本。两种口径必须同时看。</p>
-
-  <div class="stacks">
-    <div class="stack">
-      <div class="cap">2025Q2收入结构</div>
-      <div class="stackbar"><div class="seg p" style="width:52.9%">租赁 52.9%</div><div class="seg q" style="width:44.6%">加盟 44.6%</div></div>
-    </div>
-    <div class="stack">
-      <div class="cap">2026Q2收入结构</div>
-      <div class="stackbar"><div class="seg p" style="width:45.4%">租赁 45.4%</div><div class="seg q" style="width:50.4%">加盟 50.4%</div></div>
-    </div>
-  </div>
-  <div class="legend"><span><i class="p"></i>租赁及自有</span><span><i class="q"></i>管理加盟及特许经营</span><span>未着色部分为其他收入</span></div>
-  <p>收费业务已连续贡献过半收入，是集团经营杠杆的直接来源。不过管理层口径下，相关经营毛利润同比增长18.5%，慢于收入增长25.2%；新增收入包含经理费用报销等非同质项目，不能把整条收入流都视作纯特许权费。</p>
-
-  <h3>经营利润到归母净利润的差距</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>单二季度同比桥，人民币亿元；正数表示当期水平或同比有利变化。</caption>
-      <thead><tr><th>项目</th><th>2025Q2</th><th>2026Q2</th><th>变化 / 解释</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>经营利润</td><td>17.87</td><td>见财务底图</td><td>主营及其他经营项目共同改善</td></tr>
-        <tr><td>汇兑净收益</td><td>3.66</td><td>0.49</td><td class="down">减少3.17，抵销大部分经营增量</td></tr>
-        <tr><td>所得税费用</td><td>5.65</td><td>6.87</td><td class="down">增加1.22</td></tr>
-        <tr><td>经调整归母净利润</td><td>13.49</td><td>17.12</td><td class="up">同比 +26.91%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>上半年汇兑由收益转为亏损，形成6.91亿元不利摆动，因此经营利润上升与归母利润略降并不矛盾。评价主营时，经调整结果更有解释力；评价每股经济价值时，则必须把股权激励重新纳入成本，并把潜在稀释纳入每股分母判断。</p>
-
-  <h3>香港披露同时暴露美国准则与国际准则差异</h3>
-  <div class="callout"><b>会计边界：</b>2026上半年按国际财务报告准则对账后的归母净利润为16.27亿元，较首节所列同期US GAAP归母数低32.0%。差异主要来自可转换票据、租赁、长期资产减值及股权激励的确认口径；这不是额外现金流，也不能在估值中把两个利润数并列相加。</div>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">海外业务 · 商誉减值</div>
-  <h2>海外收入已经重要，海外利润仍不足以证明第二曲线</h2>
-  <p>HWI的收入权重远高于利润权重，且当前仍以租赁酒店为主。欧洲经营有所改善，东南亚处于爬坡，中东风险敞口较轻；这些区域变化尚未形成可复算的利润桥。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">HWI单二季度收入</div><div class="v">12.53<span class="u">亿元</span></div><div class="d"><span class="down">同比 −5.8%</span><span>占集团 17.6%</span></div></div>
-    <div class="cell"><div class="k">HWI经调整EBITDA</div><div class="v">1.31<span class="u">亿元</span></div><div class="d"><span class="down">同比 −20.1%</span><span>利润率为低双位数</span></div></div>
-    <div class="cell"><div class="k">租赁收入权重</div><div class="v">94.6<span class="u">%</span></div><div class="d"><span>轻资产迁移仍在早期</span></div></div>
-  </div>
-
-  <div class="rows">
-    <div class="row"><div class="nm">HWI ADR<span>固定美元口径</span></div><div class="track"><div class="fill soft" style="width:100%"></div></div><div class="fig">$139<span>同比 +0.9%</span></div></div>
-    <div class="row"><div class="nm">HWI 入住率<span>全部在营酒店</span></div><div class="track"><div class="fill alt" style="width:72%"></div></div><div class="fig">70.5%<span>−3.5pt</span></div></div>
-    <div class="row"><div class="nm">HWI RevPAR<span>固定美元口径</span></div><div class="track"><div class="fill alt" style="width:70.5%"></div></div><div class="fig">$98<span>同比 −3.8%</span></div></div>
-  </div>
-  <p class="small">横条按展示水平相对最大值标准化，不代表收入或利润贡献。</p>
-  <p>欧洲RevPAR小幅增长，但公司没有披露区域收入或现金贡献。中东及埃及二十多家酒店全部采用管理加盟或特许模式，直接影响有限；HWI全年实现正利润的目标仍然有效，但「正数」只是低门槛，不能等同于资本回报达标。季度资料也没有拆分海外增长中的收购与内生贡献、总部成本分摊、区域税负及资金汇回，因而不足以独立计算HWI的投入资本回报。</p>
-
-  <h3>商誉测试把海外执行变成资产负债表问题</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026年6月末账面值及2025年度减值测试；人民币亿元。</caption>
-      <thead><tr><th>项目</th><th>水平</th><th>压力测试读法</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>商誉</td><td>52.91 / 归母权益37.6%</td><td>达到需单独审视的集中度</td></tr>
-        <tr><td>商誉加无形资产</td><td>101.12 / 归母权益71.8%</td><td>集团收购与品牌类资产占权益基数较高</td></tr>
-        <tr><td>2025年商誉分配</td><td>Legacy Huazhu 30.32 / Legacy DH 23.96</td><td>本期公告未更新报告单位拆分</td></tr>
-        <tr><td>Legacy Huazhu减值余量</td><td>&gt;100%</td><td>估计公允价值显著高于账面值</td></tr>
-        <tr><td>Legacy DH减值余量</td><td>70%</td><td>收购报告单位仍有缓冲，但取决于海外预测</td></tr>
-        <tr><td>DH收购的一项品牌名称</td><td>减值余量约9%</td><td>最接近确认减值的可识别资产</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>商誉报告单位使用贴现现金流量模型，关键变量是酒店收入、增长率、经营成本与折现率；品牌名称另用特许权使用费减免法。年报没有披露基础折现率或增长率点值，但披露Legacy DH预测现金流下降5%或折现率提高5%仍不减值；品牌名称在折现率提高5%或特许权使用费节省率下降5%时亦不减值。该品牌在2024年曾确认3.91亿元非现金减值并令账面值减少16%，说明缓冲收窄会直接打击报表利润。</p>
-  <p>期内商誉账面值下降并无减值披露，不能自行归因为处置或损失。真正的下行触发是HWI利润与现金长期低于测试假设，尤其是租赁酒店退出、欧洲效率和东南亚新店成熟度无法兑现。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">现金流与资本开支 · 财务稳健性</div>
-  <h2>现金创造足够扎实，租赁承诺让「净现金」不是终点</h2>
-  <p>加盟化降低了公司资本开支强度，但酒店经营的固定负担没有完全消失：租赁酒店的长期租金留在资产负债表，加盟商的建店资本则移到体系之外。华住的偿债风险不高，经营杠杆仍然真实。</p>
-
-  <h3>单季现金改善主要是营运资金回摆</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>经营资产及负债变动对经营现金流的贡献，人民币亿元。</caption>
-      <thead><tr><th>期间</th><th>营运资金贡献</th><th>经营现金流读法</th></tr></thead>
-      <tbody>
-        <tr><td>2026Q1</td><td>−11.19</td><td>季初支出与结算造成现金吸收</td></tr>
-        <tr class="grp"><td>2026Q2</td><td>+12.32</td><td>回款与负债变动推动单季跃升</td></tr>
-        <tr><td>2026H1</td><td>+1.13</td><td>合并后显示半年增量较温和</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>现金流改善可由报表分项勾稽，但单二季度不能简单年化。加盟酒店的装修、物业和大部分运营资本由业主承担，所以公司自由现金流代理上升并不意味着全体系资本需求下降。</p>
-
-  <h3>流动性改善来自短期投资回笼与债务下降</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2026年6月末资产负债表，人民币亿元；租赁与传统债务分列。</caption>
-      <thead><tr><th>项目</th><th>期末水平</th><th>较年初</th><th>解释</th></tr></thead>
-      <tbody>
-        <tr><td>现金及受限制现金</td><td>143.91</td><td>+38.59</td><td>其中相当部分来自短期投资到期回笼</td></tr>
-        <tr><td>短期投资</td><td>13.15</td><td>−35.79</td><td>与现金科目合看，流动资源仅小幅增加</td></tr>
-        <tr class="grp"><td>传统债务</td><td>42.26</td><td>−15.90</td><td>短期到期集中度已明显缓解</td></tr>
-        <tr><td>公司口径净现金</td><td>101.65</td><td>+54.49</td><td>不含短期投资，亦不扣租赁负债</td></tr>
-        <tr><td>全部租赁负债</td><td>300.08</td><td>−2.45</td><td>约为传统债务7.1倍</td></tr>
-        <tr><td>流动比率</td><td>1.21×</td><td>+0.30×</td><td>短期流动性已回到一倍以上</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>传统债务只占总资产6.6%，本身不构成短期偿付压力；全部租赁负债占资产47.2%，则揭示需求下行时仍有刚性支出。把经营租赁当作普通银行债会重复惩罚已经计入成本的租金，把它完全忽略又会高估现金弹性，正确做法是分层观察。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">股东回报 · 管理团队及治理</div>
-  <h2>股东回报有现金覆盖，能否变成每股增厚取决于执行价格和稀释</h2>
-  <p>新计划把资本配置从临时特别分红升级为三年框架，上一计划提前完成也增强了可信度。不过董事会可自行决定股息与回购组合，年度节奏并不固定；计划规模只能视作累计承诺，不能写成保证股息率。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">三年股东回报计划</div><div class="v">25<span class="u">亿美元</span></div><div class="d"><span>当前ADS市值约17.0%</span></div></div>
-    <div class="cell"><div class="k">简单年均回报规模</div><div class="v">56.54<span class="u">亿元</span></div><div class="d"><span>约为市值5.7% / 年</span><span>非保证收益率</span></div></div>
-    <div class="cell"><div class="k">首笔普通现金股息</div><div class="v">约2.75<span class="u">亿美元</span></div><div class="d"><span>每ADS 0.87美元</span><span>单次收益率约1.87%</span></div></div>
-  </div>
-
-  <h3>现金覆盖与执行约束</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>自由现金流为经营活动现金流量净额减现金资本开支；人民币亿元。2026上半年为现金支付，2025年度为公司披露的宣派及回购规模，两者并非同一现金流时点。</caption>
-      <thead><tr><th>观察期</th><th>自由现金流代理</th><th>股息及回购</th><th>覆盖含义</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>三年计划运行率</td><td>最近十二个月见财务首节</td><td>计划年均值见上</td><td>FCF覆盖约1.42倍</td></tr>
-        <tr><td>2026H1实际</td><td>见财务首节</td><td>47.01</td><td class="down">当期分配约为现金创造1.43倍，动用了存量流动性</td></tr>
-        <tr><td>2025年度披露</td><td>见五年表</td><td>约7.60亿美元</td><td>证明既有计划并非只停留在授权层面</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>回购之后仍要看稀释后分母</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>股权激励费用为人民币亿元；股份为普通股口径。</caption>
-      <thead><tr><th>观察项</th><th>披露值</th><th>投资含义</th></tr></thead>
-      <tbody>
-        <tr><td>费用节奏</td><td>2023 / 2024 / 2025 / 2026H1：1.43 / 3.22 / 4.20 / 2.65</td><td>费用已由低基数上升；单二季度为1.79</td></tr>
-        <tr class="grp"><td>当期基本 / 摊薄加权股数</td><td>31.53亿 / 32.53亿，差3.2%</td><td>含期权、受限制股份及可转换票据影响</td></tr>
-        <tr><td>基本股数同比</td><td>+2.63%</td><td>5月可转债转换新增一亿三千万股普通股，按季内天数粗算已几乎解释增幅；回购尚未抵消该影响</td></tr>
-        <tr><td>2025年末未归属奖励</td><td>1.133亿受限制股份 + 0.244亿期权</td><td>毛额约为当年基本加权股数4.5%</td></tr>
-        <tr><td>期权与未确认费用</td><td>期权行权价2.80美元；RSU未确认费用15.20亿元</td><td>后者预计在加权平均5.66年确认</td></tr>
-        <tr><td>一般归属条件</td><td>第二周年归属50%，余额随后两年分期归属</td><td>部分奖励另有截至2027年的绩效条件，具体财务门槛未披露</td></tr>
-        <tr><td>受益人集中</td><td>季琦持约3,600万未归属受限制股份及724万期权</td><td>计划管理委员会目前仅由季琦一人组成，授予纪律需独立监督</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>截至2026年3月31日，季琦实益持股23.5%，携程持股7.2%；董事会七席中五席为独立董事。华住在2025年向携程支付3.07亿元预订佣金，并确认1.16亿元技术服务收入。关联规模不决定集团利润，却要求独立定价与审核透明。评价回购效果应以摊薄后股份数和每股现金流为准，而不是只看回购金额。</p>
-  <p>公开资料没有提供从美国首次公开发售、香港上市、可转债到历次回购与分红的一致币种累计桥，因此不能可靠地把公司归为上市以来的「净给予者」或「净索取者」。本报告只判断当前三年计划的现金覆盖、执行价格与稀释后效果。</p>
-  <p class="small">普通股一股一票。少量受限互联网及旅行社业务采用VIE，历史收入、利润与资产均低于集团1%，法律结构风险存在但财务规模有限。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">风险因素与预警信号</div>
-  <h2>管理层回答了方向，没有回答单位经济性</h2>
-  <p>earningscalls.dev取得的完整逐字稿包含五组分析师问答。管理层在准备稿中强调高质量增长，在问答环节则转为谨慎：承认七月极端天气使部分市场低于预期，八月有所恢复，但没有量化第三季度RevPAR。所有问题都有回应，关键追问均只获得部分答案。</p>
-
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>逐问审查；五组回答均提供了方向性增量，但没有给分析师要求的关键量化边界。</caption>
-      <thead><tr><th>机构</th><th>追问主题</th><th>管理层新增信息</th><th>仍未回答</th></tr></thead>
-      <tbody>
-        <tr><td>花旗</td><td>暑期、天气与全年RevPAR</td><td>八月较七月恢复，全年看法维持</td><td>月度、第三季度和全年具体区间</td></tr>
-        <tr><td>摩根士丹利</td><td>开店节奏与汉庭升级</td><td>维持全年目标，新版本相对表现更好</td><td>供应链排期、升级投入和回收期</td></tr>
-        <tr><td>中信证券</td><td>中高档供需与全季大观</td><td>商业模式仍在打磨，扩张保持谨慎</td><td>单店表现、投资额、成熟期与IRR</td></tr>
-        <tr><td>美国银行</td><td>会员与获客渠道</td><td>新市场仍需OTA，会员策略分三条推进</td><td>最新会员间夜、活跃率和获客成本</td></tr>
-        <tr><td>高盛</td><td>中国利润率与海外盈利</td><td>中长期利润率受规模与组合驱动</td><td>下半年分部利润率和战略投入金额</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="quote">收入指引上修，不等于管理层上调了同店需求判断。</div>
-  <p>逐字稿最有价值的不是乐观形容词，而是回答边界：公司对加盟收入与开店方向的把握，明显强于对短期RevPAR和单店资本回报的量化能力。因此，规模扩张已经得到数据支持，存量需求和新产品回报仍需后续披露确认。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">估值分析与市场定价 · 盈利预测</div>
-  <h2>业绩跳涨后仍有重估空间，但已经不是深度低估</h2>
-  <p>业绩在美股开盘前发布，HTHT当日收涨11.29%；港股次日截至香港时间12:35报36.08港元，午间上涨10.40%，尚不是完整收盘。市场把加盟增速、收入指引上修和可核算的股东回报同时视作正面，价格已经先行反映了一部分利润率改善。</p>
-  <p>港股首日午间成交额1.30亿港元，已超过前一日全天的0.91亿；股价仍比五十二周高点低16.3%，年初至今仅上涨0.42%。量价表现更像低预期修复，而不是高位继续追价。</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">当前EV / LTM经调整EBITDA</div><div class="v">9.52<span class="u">×</span></div><div class="d"><span>公司净现金口径</span></div></div>
-    <div class="cell"><div class="k">融资租赁调整后</div><div class="v">9.84<span class="u">×</span></div><div class="d"><span>经营租赁不重复并入普通净债务</span></div></div>
-    <div class="cell"><div class="k">2026E预测PE观察区间</div><div class="v">16—18<span class="u">×</span></div><div class="d"><span>Wind不同端点的预测样本有差异</span></div></div>
-  </div>
-  <div class="callout"><b>现价反向预期：</b>按十八倍经调整市盈率反推，当前权益价值要求2026年经调整归母净利润约54.76亿元，较2025年增长10.83%。市场并未要求利润延续本季高增，进一步重估主要取决于投资者是否愿意提高质量倍数。</div>
-  <p class="small">当前市值按股息公告隐含的现有普通股估算；公司在2026年5月完成可转债转换，旧Wind股本不再用于自算市值。Wind同业企业倍数采用供应商定义，与本页按公司净现金及LTM经调整EBITDA自算的口径并不完全相同。</p>
-
-  <h3>同业倍数只解释位置，不直接生成目标价</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>Wind同一查询口径的企业倍数；中国公司为香港午间或A股同期快照，美国公司为前一交易日收盘。</caption>
-      <thead><tr><th>公司</th><th>企业倍数</th><th>可比边界</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>华住</td><td>9.70×</td><td>中国平台、HWI、自营租赁与净现金并存</td></tr>
-        <tr><td>亚朵</td><td>12.88×</td><td>更接近中国纯资产轻平台</td></tr>
-        <tr><td>锦江 / 首旅</td><td>7.63× / 6.26×</td><td>A股酒店运营商，增速与资本回报不同</td></tr>
-        <tr><td>万豪 / 希尔顿</td><td>22.99× / 29.11×</td><td>全球品牌商，海外成熟度与回购历史不可直接复制</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>三年经营与现金情景</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>人民币亿元；依次为2026E / 2027E / 2028E。仅2026收入增速锚定公司指引，其他均为分析假设。</caption>
-      <thead><tr><th>情景</th><th>收入</th><th>经调整EBITDA</th><th>经调整净利润</th><th>自由现金流代理</th><th>数值化驱动假设</th></tr></thead>
-      <tbody>
-        <tr><td>悲观</td><td>263.2 / 273.7 / 284.7</td><td>89.5 / 93.1 / 97.4</td><td>48.7 / 50.1 / 52.7</td><td>67.9 / 72.0 / 76.3</td><td>2026取指引下限，其后收入年增4%；EBITDA率约34%持平；经调整净利率维持约18%—19%；FCF率25.8%升至26.8%</td></tr>
-        <tr class="grp"><td>基准</td><td>268.3 / 289.7 / 310.0</td><td>95.2 / 105.8 / 114.7</td><td>56.3 / 63.2 / 68.8</td><td>77.8 / 86.9 / 94.6</td><td>2026取指引中值，其后收入增8%再增7%；EBITDA率35.5%升至37.0%；经调整净利率21.0%升至22.2%；FCF率由约29%升至约31%</td></tr>
-        <tr><td>乐观</td><td>273.3 / 303.4 / 333.7</td><td>98.4 / 115.3 / 130.2</td><td>60.1 / 71.3 / 81.8</td><td>85.3 / 100.1 / 113.5</td><td>2026取指引上限，其后收入增11%再增10%；EBITDA率36.0%升至39.0%；经调整净利率22.0%升至24.5%；FCF率由约31%升至约三分之一</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>两种方法相互约束，而不是简单平均</h3>
-  <div class="tblscroll">
-    <table class="tbl">
-      <caption>2027年每股价值，港元；采用上文当期稀释加权股数和人民币兑港元1.157，股东回报不重复加到目标价。</caption>
-      <thead><tr><th>方法</th><th>悲观</th><th>基准</th><th>乐观</th><th>假设</th></tr></thead>
-      <tbody>
-        <tr class="grp"><td>经调整PE｜主方法</td><td>24.94</td><td>40.43</td><td>55.78</td><td>十四 / 十八 / 二十二倍</td></tr>
-        <tr><td>EV / 经调整EBITDA｜交叉校验</td><td>30.75</td><td>46.88</td><td>63.80</td><td>8× / 11× / 14×；2027净现金120 / 155 / 180亿元为情景假设，以现金章节期末净现金为锚，结合后续FCF与回报计划作保守取整，并非逐期现金流机械外推</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>PE更直接反映华住当前的每股盈利与回购逻辑，作为主锚；企业倍数用于检验租赁、海外与净现金处理。两者给出的基准价值区间为40—47港元，代表中等而非巨大的安全边际。悲观区间提醒：若加盟收入放缓且利润率回落，本次跳涨后的价格仍有两位数下行可能。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">多空辩论 · 最终投资建议</div>
-  <h2>审慎偏多：平台质量上升，需求证据仍需补齐</h2>
-  <p>华住已经证明自己能用品牌、会员和加盟网络把收入增长转成更快的经营利润与现金流；这支持高于传统酒店运营商的估值。最强反方是，加盟商承担了报表之外的资本风险，而成熟门店仍弱，快速开店可能把增长从需求创造变成供给搬运。当前估值已从「便宜」切换为「等待经营兑现」，上行取决于验证而非单纯均值回归。</p>
-  <p class="small">以下为未来6—12个月的上行确认与投资逻辑失效阈值，均属分析判断。</p>
-  <div class="finds">
-    <div class="find good"><div class="t">成熟店止跌</div><p>2026Q3 HWC成熟酒店RevPAR同比应回到<strong>−1%或以上</strong>，且改善不能只来自房价。</p></div>
-    <div class="find good"><div class="t">加盟利润同步</div><p>下一季管理加盟经营毛利润与收入增速的差距应收窄至<strong>4个百分点以内</strong>。</p></div>
-    <div class="find good"><div class="t">海外达标</div><p>2026全年HWI经调整EBITDA应超过<strong>1亿元</strong>，并在下半年保持正贡献。</p></div>
-    <div class="find warn"><div class="t">开店质量</div><p>若连续两个季度关店数超过新开店数的<strong>30%</strong>，管线不再等于高质量增长。</p></div>
-    <div class="find warn"><div class="t">现金覆盖</div><p>最近十二个月自由现金流代理若跌破<strong>78亿元</strong>，回报计划对净现金的依赖将上升。</p></div>
-    <div class="find warn"><div class="t">每股稀释</div><p>若回购继续执行而摊薄后股数连续<strong>2个季度</strong>同比增加，应下调每股增厚假设。</p></div>
-  </div>
-  <p>结论改变的顺序很清楚：先看成熟门店与加盟利润的同步性，再看HWI和现金覆盖，最后才讨论向全球品牌商倍数靠拢。单纯完成开店目标或提高总交易额，都不足以单独升级投资评级。</p>
-</section>
-
-<section class="reveal on">
-  <div class="slabel">方法与来源</div>
-  <h2>港交所中文公告控制会计事实，逐字稿只提供增量</h2>
-  <p>主要会计与酒店经营数据来自华住集团在港交所发布的<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081701104_c.pdf">2026年第二季度及中期未经审核财务业绩</a>；五年历史、加盟合同、会员渠道、治理及商誉测试来自<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042403647_c.pdf">2025年中文年报</a>及更早中文年报；股息条款由<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0817/2026081701120_c.pdf">普通股息公告</a>复核。</p>
-  <p>earningscalls.dev成功返回HTHT在业绩发布日举行的完整英语传译逐字稿，Call ID为256243。报告逐问检查了分析师问题、回答度与未回答部分；会计数字不以转写覆盖公告，转写冲突的员工数和无法确认的产品名均未采用。</p>
-  <p>行情、同业倍数及汇率来自Wind，港股为香港时间午间快照，美股为上一完整交易日收盘。估值采用经调整PE为主方法、EV / 经调整EBITDA作交叉校验；三年情景、资本回报覆盖、同店与全网差异及两套会计准则对账均按公告口径推算并交叉复核。证据置信度对公告财务为高，对管理层定性陈述为中，对未披露的加盟商单位经济性为低。</p>
-</section>
-
-<footer>
-  <p>财务文件截至2026年6月30日，主公告发布于2026年8月17日且未经审核；历史年报经审计。行情截至2026年8月18日香港午间，不能视作当日收盘。来源以港交所中文披露为主，电话会、Wind与行业政策为补充。</p>
-  <p>推算族包括估算经营毛利、单季及半年利润率、复合增长率、ROE与租赁调整ROIC、自由现金流、流动性与租赁桥、股东回报覆盖、三年经营情景及两种估值敏感度。小数显示可能产生舍入差异。本报告不构成投资建议。</p>
-</footer>
-
-</main>
-
-<script>
+<p>本报告为个人研究记录，仅供参考，不构成任何证券投资建议、要约或推介；作者不持有证券投资咨询资质，报告中的判断分档、情景价值与平衡价均为分析假设的推演，不是买卖指示。投资有风险，决策需独立判断。</p></footer></main><script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els = document.querySelectorAll('.reveal');
@@ -668,6 +575,4 @@ footer p{font-size:13px;color:var(--ink3);max-width:none;margin-bottom:8px}
   }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
   els.forEach(function(e){ io.observe(e); });
 })();
-</script>
-</body>
-</html>
+</script></body></html>
