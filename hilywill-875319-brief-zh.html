@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, nofollow">
+<meta name="format-detection" content="telephone=no">
+<title>海力威 875319 尽调简报</title>
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* Layout: an inspection dossier. EN = index rail + wide sheets for a laptop; ZH = one thumb-width column for a phone. */
+:root{
+  --bg:#edf0f3; --surface:#fcfcfb; --surface-2:#f3f5f7;
+  --ink:#101820; --ink-2:#44515d; --ink-3:#6f7b86;
+  --rule:#d3d9df; --rule-2:#e4e8ec;
+  --accent:#1c5cab; --accent-soft:#e2ecf8;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s-mute:#aab3bc;
+  --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --crit:#d03b3b;
+  --good-ink:#0a5c0a; --warn-ink:#6f4a00; --serious-ink:#8a3614; --crit-ink:#9c1f1f;
+  --good-bg:#e3f3e3; --warn-bg:#fcefcc; --serious-bg:#fae5da; --crit-bg:#f7dddd;
+  --font-display:"PingFang SC","HarmonyOS Sans SC","MiSans","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --font-body:"PingFang SC","HarmonyOS Sans SC","MiSans","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --font-mono:"PingFang SC","HarmonyOS Sans SC","MiSans","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111315; --surface:#1a1a19; --surface-2:#222423;
+    --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#93928a;
+    --rule:#36393c; --rule-2:#2a2c2e;
+    --accent:#7fb2ee; --accent-soft:#1b2a3c;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s-mute:#5c6268;
+    --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --crit:#d03b3b;
+    --good-ink:#6fd66f; --warn-ink:#fac452; --serious-ink:#f0a182; --crit-ink:#f09393;
+    --good-bg:#16301a; --warn-bg:#3a2d0c; --serious-bg:#3b2318; --crit-bg:#3d1b1b;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111315; --surface:#1a1a19; --surface-2:#222423;
+  --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#93928a;
+  --rule:#36393c; --rule-2:#2a2c2e;
+  --accent:#7fb2ee; --accent-soft:#1b2a3c;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s-mute:#5c6268;
+  --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --crit:#d03b3b;
+  --good-ink:#6fd66f; --warn-ink:#fac452; --serious-ink:#f0a182; --crit-ink:#f09393;
+  --good-bg:#16301a; --warn-bg:#3a2d0c; --serious-bg:#3b2318; --crit-bg:#3d1b1b;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 72px}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible,[tabindex]:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+p{margin:0}
+h1,h2,h3,h4{margin:0;font-family:var(--font-display);text-wrap:balance;line-height:1.15}
+.num{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.muted{color:var(--ink-3)}
+.stack{display:flex;flex-direction:column;gap:14px}
+.stack-lg{display:flex;flex-direction:column;gap:22px}
+.prose{max-width:68ch}
+.prose p + p{margin-top:.8em}
+
+/* ---------- page frame ---------- */
+.page{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:196px minmax(0,1fr);gap:52px;align-items:start}
+.main{min-width:0;display:flex;flex-direction:column;gap:64px}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 24px);font-size:13px}
+.toc-id{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--ink-3);padding-bottom:12px;border-bottom:1px solid var(--rule);margin-bottom:10px}
+.toc ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px;position:relative}
+.toc a{display:block;padding:6px 8px;color:var(--ink-2);text-decoration:none;border-radius:4px}
+.toc a:hover{background:var(--surface);color:var(--ink)}
+.toc a.on{background:var(--surface);color:var(--ink);font-weight:600}
+.toc-foot{margin-top:14px;padding-top:12px;border-top:1px solid var(--rule);color:var(--ink-3);font-size:11.5px;line-height:1.5}
+
+/* ---------- title plate ---------- */
+.plate{border:1px solid var(--ink);background:var(--surface)}
+.plate-top{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
+.plate-name{padding:26px 28px 24px;border-right:1px solid var(--ink);display:flex;flex-direction:column;gap:12px;min-width:0}
+.eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.plate h1{font-size:46px;font-weight:700;letter-spacing:-.01em}
+.plate h1 small{display:block;font-size:19px;font-weight:500;color:var(--ink-2);margin-top:8px;letter-spacing:0}
+.plate-lede{font-size:16px;color:var(--ink-2);max-width:60ch}
+.plate-fields{display:grid;grid-template-columns:1fr 1fr;align-content:stretch}
+.field{padding:11px 14px;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule);min-width:0}
+.field:nth-child(2n){border-right:0}
+.field:nth-last-child(-n+2){border-bottom:0}
+.field dt{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.field dd{margin:3px 0 0;font-size:14px;font-weight:600;overflow-wrap:anywhere}
+.plate-fields{margin:0}
+.plate-note{border-top:1px solid var(--ink);padding:11px 28px;font-size:13.5px;color:var(--ink-2);background:var(--surface-2)}
+.plate-note b{color:var(--ink)}
+
+/* ---------- sections ---------- */
+section{display:flex;flex-direction:column;gap:22px;scroll-margin-top:calc(env(safe-area-inset-top,0px) + 20px)}
+.sec-head{display:flex;flex-direction:column;gap:8px;padding-top:14px;border-top:2px solid var(--ink)}
+.sec-head h2{font-size:30px;font-weight:700}
+.sec-head .dek{font-size:16px;color:var(--ink-2);max-width:70ch}
+h3{font-size:19px;font-weight:600}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.cols-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.cols > *, .cols-3 > *{min-width:0}
+
+/* ---------- key takeaways ---------- */
+.takes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.takes li{background:var(--surface);padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.takes b{font-family:var(--font-display);font-size:17px;font-weight:600;line-height:1.25}
+.takes span{color:var(--ink-2);font-size:14.5px}
+
+/* ---------- stat grid ---------- */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.kpi{background:var(--surface);padding:14px 16px 15px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.kpi .k{font-size:12.5px;color:var(--ink-3)}
+.kpi .v{font-family:var(--font-display);font-size:28px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi .v small{font-size:14px;font-weight:500;color:var(--ink-2);margin-left:3px}
+.kpi .d{font-size:12.5px;color:var(--ink-2)}
+
+/* ---------- figures ---------- */
+.fig{background:var(--surface);border:1px solid var(--rule);padding:16px 18px 14px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.fig-h{display:flex;flex-direction:column;gap:2px}
+.fig-h b{font-size:14.5px;font-weight:600}
+.fig-h span{font-size:12.5px;color:var(--ink-3)}
+.fig-cap{font-size:12.5px;color:var(--ink-3);line-height:1.5}
+.chart{width:100%;min-width:0}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .axis{stroke:var(--rule);stroke-width:1;fill:none}
+.chart .grid{stroke:var(--rule-2);stroke-width:1;fill:none}
+.chart .ref{stroke:var(--ink-3);stroke-width:1;fill:none}
+.chart .tick{fill:var(--ink-3);font-family:var(--font-mono);font-size:11px}
+.chart .val{fill:var(--ink);font-family:var(--font-mono);font-size:11.5px;font-weight:500}
+.chart .nd{fill:var(--ink-3);font-family:var(--font-mono);font-size:10.5px}
+.chart .lbl{fill:var(--ink-2);font-family:var(--font-body);font-size:11.5px}
+.chart .bar.s1{fill:var(--s1)} .chart .bar.s2{fill:var(--s2)} .chart .bar.s3{fill:var(--s3)}
+.chart .line.s1{stroke:var(--s1);stroke-width:2;fill:none;stroke-linejoin:round;stroke-linecap:round}
+.chart .dot.s1{fill:var(--s1);stroke:var(--surface);stroke-width:2}
+.chart .dot.s2{fill:var(--s2);stroke:var(--surface);stroke-width:2}
+.chart .hit{fill:transparent;cursor:default}
+.chart .mark:hover .bar,.chart .mark:focus .bar{opacity:.82}
+.chart .mark{outline:none}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--ink-2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.sw1{background:var(--s1)} .sw2{background:var(--s2)} .sw3{background:var(--s3)} .sw0{background:var(--s-mute)}
+.legend i.ln{height:0;border-top:1px solid var(--ink-3);border-radius:0;vertical-align:3px;width:14px;background:none}
+.tip{position:absolute;z-index:30;max-width:260px;background:var(--ink);color:var(--bg);padding:8px 10px;border-radius:4px;font-size:12.5px;line-height:1.45;pointer-events:none;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.tip .tip-h{font-weight:600;margin-bottom:2px}
+
+/* horizontal bars (HTML) */
+.hbars{display:flex;flex-direction:column;gap:9px}
+.hbar{display:grid;grid-template-columns:minmax(120px,38%) minmax(0,1fr) 62px;gap:12px;align-items:center;font-size:13.5px;outline:none}
+.hbar-l{min-width:0;color:var(--ink);line-height:1.3}
+.hbar-l small{display:block;color:var(--ink-3);font-size:12px}
+.hbar-t{height:14px;border-left:1px solid var(--rule);display:flex;align-items:center}
+.hbar-f{display:block;height:12px;border-radius:0 4px 4px 0;min-width:2px}
+.hbar-f.s1{background:var(--s1)} .hbar-f.s2{background:var(--s2)} .hbar-f.s3{background:var(--s3)} .hbar-f.s0{background:var(--s-mute)}
+.hbar-v{text-align:right;font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-size:12.5px;color:var(--ink)}
+.hbar:hover .hbar-f,.hbar:focus .hbar-f{opacity:.82}
+
+/* stacked mix bar */
+.mix{display:flex;gap:2px;height:20px}
+.mix span{display:block;height:100%;min-width:3px}
+.mix span:first-child{border-radius:4px 0 0 4px} .mix span:last-child{border-radius:0 4px 4px 0}
+.mixkey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 18px;font-size:13px}
+.mixkey div{min-width:0}
+.mixkey b{display:block;font-family:var(--font-mono);font-weight:500;font-size:15px;font-variant-numeric:tabular-nums}
+.mixkey i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px}
+.mixkey span{color:var(--ink-2)}
+
+/* segment cards */
+.seg{background:var(--surface);border:1px solid var(--rule);padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.seg-h{display:flex;align-items:baseline;gap:8px}
+.seg-h i{flex:none;width:10px;height:10px;border-radius:2px;display:inline-block}
+.seg-h h3{font-size:18px}
+.seg p{font-size:14px;color:var(--ink-2)}
+.seg dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:5px 12px;font-size:13.5px;border-top:1px solid var(--rule-2);padding-top:10px}
+.seg dt{color:var(--ink-3)} .seg dd{margin:0;text-align:right;font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+
+/* tables */
+.tbl-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--rule)}
+table.tbl{border-collapse:collapse;width:100%;font-size:13.5px}
+.tbl th,.tbl td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--rule-2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.tbl th:first-child,.tbl td:first-child{text-align:left;white-space:normal}
+.tbl thead th{font-size:12px;font-weight:600;color:var(--ink-3);border-bottom:1px solid var(--rule);background:var(--surface-2)}
+.tbl tbody tr:last-child td{border-bottom:0}
+.tbl td.t{font-family:var(--font-body)} .tbl td{font-family:var(--font-mono)}
+.tbl td:first-child{font-family:var(--font-body)}
+.tbl tr.hi td{background:var(--accent-soft);font-weight:600}
+.tbl tr.sub td{color:var(--ink-3)}
+.tbl .neg{color:var(--crit-ink)}
+.tbl td small{display:block;color:var(--ink-3);font-size:11.5px;font-family:var(--font-body);font-weight:400}
+
+/* notes */
+.note{border:1px solid var(--rule);background:var(--surface-2);padding:12px 16px;font-size:13.5px;color:var(--ink-2);display:flex;flex-direction:column;gap:4px}
+.note b.tagline{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
+.note strong{color:var(--ink)}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.tl li{display:grid;grid-template-columns:156px 17px minmax(0,1fr);gap:0 14px;padding-bottom:16px;position:relative}
+.tl time{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-2);text-align:right;padding-top:1px}
+.tl .pin{position:relative;display:flex;justify-content:center}
+.tl .pin::before{content:"";position:absolute;top:6px;bottom:-22px;width:1px;background:var(--rule)}
+.tl li:last-child .pin::before{display:none}
+.tl .pin i{position:relative;margin-top:5px;width:9px;height:9px;border-radius:50%;background:var(--surface);border:2px solid var(--ink-3)}
+.tl li.key .pin i{background:var(--s1);border-color:var(--s1)}
+.tl li.bad .pin i{background:var(--crit);border-color:var(--crit)}
+.tl li.fut .pin i{background:var(--surface);border-color:var(--s2);border-style:dashed}
+.tl b{font-weight:600}
+.tl p{color:var(--ink-2);font-size:14px;margin-top:2px}
+
+/* risk register */
+.risks{display:flex;flex-direction:column;border:1px solid var(--rule);background:var(--surface)}
+.risk{display:grid;grid-template-columns:118px minmax(0,1.5fr) minmax(0,1fr);gap:18px;padding:16px 18px;border-bottom:1px solid var(--rule-2)}
+.risk:last-child{border-bottom:0}
+.risk h3{font-size:16.5px;margin-bottom:4px}
+.risk p{font-size:14px;color:var(--ink-2)}
+.risk .watch{font-size:13.5px;color:var(--ink-2)}
+.risk .watch b{display:block;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:3px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 9px 3px 7px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap;align-self:start;justify-self:start}
+.chip svg{width:10px;height:10px;flex:none}
+.chip.c-high{background:var(--crit-bg);color:var(--crit-ink)} .chip.c-high svg{fill:var(--crit)}
+.chip.c-med{background:var(--warn-bg);color:var(--warn-ink)} .chip.c-med svg{fill:var(--warn)}
+.chip.c-low{background:var(--good-bg);color:var(--good-ink)} .chip.c-low svg{fill:var(--good)}
+
+/* pros / cons */
+.pc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.pc > div{background:var(--surface);padding:16px 18px;min-width:0}
+.pc h3{font-size:16px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.pc ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:7px;font-size:14px;color:var(--ink-2)}
+.pc li::marker{color:var(--ink-3)}
+
+/* checklist */
+.checks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border:1px solid var(--rule);background:var(--surface)}
+.checks li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;padding:13px 18px;border-bottom:1px solid var(--rule-2)}
+.checks li:last-child{border-bottom:0}
+.checks .box{width:16px;height:16px;border:1.5px solid var(--ink-3);border-radius:3px;margin-top:3px}
+.checks b{font-weight:600}
+.checks p{font-size:14px;color:var(--ink-2);margin-top:2px}
+
+/* sources */
+.src{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:var(--ink-2)}
+.src a{overflow-wrap:anywhere}
+.fine{font-size:12.5px;color:var(--ink-3);line-height:1.6;max-width:90ch}
+
+/* ---------- narrower screens (shared) ---------- */
+@media (max-width:980px){
+  .page{display:block}
+  .toc{position:static;margin-bottom:22px}
+  .toc ol{flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:4px;scrollbar-width:none}
+  .toc ol::-webkit-scrollbar{display:none}
+  .toc a{white-space:nowrap;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;background:var(--surface)}
+  .toc-id,.toc-foot{display:none}
+}
+@media (max-width:760px){
+  .plate-top{grid-template-columns:1fr}
+  .plate-name{border-right:0;border-bottom:1px solid var(--ink);padding:20px 18px}
+  .plate h1{font-size:34px}
+  .plate-note{padding:11px 18px}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .takes,.cols,.cols-3,.pc{grid-template-columns:1fr}
+  .mixkey{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .risk{grid-template-columns:1fr;gap:8px}
+  .hbar{grid-template-columns:minmax(0,1fr) 62px;gap:4px 10px}
+  .hbar-l{grid-column:1 / -1}
+  .tl li{grid-template-columns:17px minmax(0,1fr);gap:0 12px}
+  .tl time{grid-column:2;grid-row:1;text-align:left}
+  .tl .pin{grid-column:1;grid-row:1 / span 2}
+  .tl .body{grid-column:2;grid-row:2}
+  .sec-head h2{font-size:25px}
+  .main{gap:48px}
+  /* tables become label/value cards */
+  .tbl.cards thead{display:none}
+  .tbl.cards, .tbl.cards tbody, .tbl.cards tr, .tbl.cards td{display:block;width:100%}
+  .tbl.cards tr{padding:10px 14px;border-bottom:1px solid var(--rule)}
+  .tbl.cards tbody tr:last-child{border-bottom:0}
+  .tbl.cards td{border:0;padding:3px 0;display:flex;justify-content:space-between;gap:16px;text-align:right;white-space:normal}
+  .tbl.cards td::before{content:attr(data-l);color:var(--ink-3);font-family:var(--font-body);font-weight:400;text-align:left;flex:none}
+  .tbl.cards td:first-child{font-weight:600;font-size:15px;padding-bottom:5px}
+  .tbl.cards td:first-child::before{display:none}
+  .tbl.cards tr.hi{background:var(--accent-soft)} .tbl.cards tr.hi td{background:none}
+}
+
+
+body{font-size:17px;line-height:1.8}
+.page{display:block;max-width:680px}
+.wrap{padding-block:0 72px}
+.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;background:var(--bg);margin:0 0 18px;padding:10px 0 8px;border-bottom:1px solid var(--rule);font-size:14.5px}
+.toc ol{flex-direction:row;overflow-x:auto;gap:8px;scrollbar-width:none;padding-bottom:2px}
+.toc ol::-webkit-scrollbar{display:none}
+.toc a{white-space:nowrap;border:1px solid var(--rule);border-radius:999px;padding:7px 14px;background:var(--surface);min-height:36px;display:flex;align-items:center}
+.toc a.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.toc-id, .toc-foot{display:none}
+section{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 68px)}
+.main{gap:44px}
+h1,h2,h3{line-height:1.3;letter-spacing:.01em}
+.plate-top{grid-template-columns:1fr}
+.plate-name{border-right:0;border-bottom:1px solid var(--ink);padding:20px 18px}
+.plate h1{font-size:34px}
+.plate h1 small{font-size:16px}
+.plate-lede{font-size:17px}
+.plate-note{padding:12px 18px;font-size:15px}
+.eyebrow{letter-spacing:.06em;font-size:12px;text-transform:none}
+.field dt{font-size:12px;letter-spacing:.02em;text-transform:none}
+.field dd{font-size:15.5px}
+.sec-head h2{font-size:25px}
+.sec-head .dek{font-size:16.5px}
+h3{font-size:18.5px}
+.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+.kpi .k{font-size:13.5px} .kpi .v{font-size:27px} .kpi .d{font-size:13.5px}
+.takes, .cols, .cols-3, .pc{grid-template-columns:1fr}
+.takes b{font-size:17.5px} .takes span{font-size:16px}
+.mixkey{grid-template-columns:repeat(2,minmax(0,1fr));font-size:14px}
+.seg p, .risk p, .pc ul, .checks p, .tl p{font-size:15.5px}
+.seg dl{font-size:14.5px}
+.risk{grid-template-columns:1fr;gap:8px}
+.risk h3{font-size:17.5px}
+.risk .watch{font-size:15px}
+.risk .watch b, .note b.tagline{font-size:12px;letter-spacing:.04em;text-transform:none}
+.chip{font-size:13px}
+.hbar{grid-template-columns:minmax(0,1fr) 66px;gap:4px 10px;font-size:15px}
+.hbar-l{grid-column:1 / -1}
+.hbar-l small{font-size:13px}
+.hbar-v{font-size:13.5px}
+.fig{padding:14px 14px 12px}
+.fig-h b{font-size:16px} .fig-h span, .fig-cap{font-size:13.5px}
+.legend{font-size:13.5px}
+.note{font-size:15px}
+.tl li{grid-template-columns:17px minmax(0,1fr);gap:0 12px}
+.tl time{grid-column:2;grid-row:1;text-align:left;font-size:13.5px}
+.tl .pin{grid-column:1;grid-row:1 / span 2}
+.tl .body{grid-column:2;grid-row:2}
+table.tbl{font-size:14.5px}
+.tbl thead th{font-size:13px}
+.src{font-size:14.5px} .fine{font-size:13.5px}
+.tbl.cards thead{display:none}
+.tbl.cards, .tbl.cards tbody, .tbl.cards tr, .tbl.cards td{display:block;width:100%}
+.tbl.cards tr{padding:10px 14px;border-bottom:1px solid var(--rule)}
+.tbl.cards tbody tr:last-child{border-bottom:0}
+.tbl.cards td{border:0;padding:3px 0;display:flex;justify-content:space-between;gap:16px;text-align:right;white-space:normal}
+.tbl.cards td::before{content:attr(data-l);color:var(--ink-3);font-family:var(--font-body);font-weight:400;text-align:left;flex:none}
+.tbl.cards td:first-child{font-weight:600;font-size:16px;padding-bottom:5px}
+.tbl.cards td:first-child::before{display:none}
+.tbl.cards tr.hi{background:var(--accent-soft)} .tbl.cards tr.hi td{background:none}
+
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}</style>
+</head>
+<body>
+<div class="wrap"><div class="page"><nav class="toc" aria-label="目录"><div class="toc-id">875319.NQ · 海力威</div><ol><li><a href="#overview">概览</a></li><li><a href="#business">业务</a></li><li><a href="#numbers">业绩</a></li><li><a href="#customers">客户</a></li><li><a href="#balance">资产负债</a></li><li><a href="#owners">股东</a></li><li><a href="#price">股价</a></li><li><a href="#peers">同行估值</a></li><li><a href="#history">历程</a></li><li><a href="#buyback">回购条款</a></li><li><a href="#risks">风险</a></li><li><a href="#access">怎么买卖</a></li><li><a href="#checklist">待核实</a></li><li><a href="#sources">来源</a></li></ol><div class="toc-foot">2026年11月26日整理。</div></nav><main class="main"><section id="overview"><header class="plate"><div class="plate-top"><div class="plate-name"><span class="eyebrow">尽调简报 · 2026年11月26日</span><h1>海力威<small>青岛海力威新材料科技股份有限公司</small></h1><p class="plate-lede">一家成立22年的青岛制造企业：给重卡发动机做橡胶密封件，给高铁做防水、减振产品和复合轨枕。公司赚钱，负债不算高，刚获批在新三板挂牌。但新三板的股票不好买，更不好卖。</p></div><dl class="plate-fields"><div class="field"><dt>证券代码</dt><dd>875319.NQ</dd></div><div class="field"><dt>挂牌市场</dt><dd>新三板基础层 · 集合竞价</dd></div><div class="field"><dt>成立</dt><dd>2004年 · 山东青岛</dd></div><div class="field"><dt>总股本</dt><dd>1.08亿股</dd></div><div class="field"><dt>实际控制人</dt><dd>张万明、李素滨夫妇 · 34.08%</dd></div><div class="field"><dt>主办券商</dt><dd>开源证券</dd></div><div class="field"><dt>审计机构</dt><dd>容诚会计师事务所</dd></div><div class="field"><dt>同意挂牌函</dt><dd>2026年9月30日</dd></div></dl></div><div class="plate-note"><b>先核对名字：</b>公司的证券简称是“海力威”，不是“海利威”。代码875319对应的就是这家公司，下文说的都是它。</div></header><ul class="takes"><li><b>生意是实的，客户是大牌</b><span>密封件卖给潍柴、康明斯、卡特彼勒、一汽；轨道产品用在川藏铁路等国家重点线路。2025年收入5.37亿元，净利润6,026万元。</span></li><li><b>利润起伏很大</b><span>净利润2022年7,725万元，2023年只有1,087万元，2024年1,604万元，2025年回到6,026万元。毛利率从47%跌到32%，现在只回到36%。</span></li><li><b>最近一次转让价：每股约6.5元</b><span>2025年12月有6笔股份转让，价格6.35–6.80元，均价6.48元，对应公司总价值约7亿元，约为2025年净利润的11.6倍、净资产的1.5倍。2021年基金入股价是12.50元。</span></li><li><b>老板身上有个对赌期限</b><span>如果拿到挂牌函后12个月内（约2027年9月30日前）上市申请没被受理，或2027年底前没完成上市，实控人要按“本金加年息7%”回购4家基金手里7.9%的股份，约6,228万元。</span></li><li><b>这是第二次冲击资本市场</b><span>2015–2017年挂过一次新三板；之后申请上交所主板上市，2023年11月因业绩下滑撤回。截至2026年9月中旬，公司还没有启动北交所上市的辅导备案。</span></li><li><b>最现实的风险是卖不掉</b><span>股票在新三板基础层：每天只撮合5次，成交稀少，买家还要有200万元证券资产。到目前为止我没有查到任何一笔成交。钱投进去，可能几年都拿不出来，没有保证的退出渠道。</span></li></ul><div class="kpis"><div class="kpi"><span class="k">2025年营业收入</span><span class="v">5.37<small>亿元</small></span><span class="d">同比 +20.6%</span></div><div class="kpi"><span class="k">2025年净利润</span><span class="v">6,026<small>万元</small></span><span class="d">2024年1,604万 · 2022年7,725万</span></div><div class="kpi"><span class="k">2025年毛利率</span><span class="v">36.2<small>%</small></span><span class="d">2024年32.0% · 2022年46.9%</span></div><div class="kpi"><span class="k">2025年净资产收益率</span><span class="v">13.2<small>%</small></span><span class="d">2024年3.6%</span></div><div class="kpi"><span class="k">参考总价值</span><span class="v">≈7.0<small>亿元</small></span><span class="d">6.48元 × 1.08亿股</span></div><div class="kpi"><span class="k">市盈率（参考）</span><span class="v">11.6<small>×</small></span><span class="d">按6.48元、2025年每股收益0.56元</span></div><div class="kpi"><span class="k">市净率（参考）</span><span class="v">1.48<small>×</small></span><span class="d">每股净资产4.37元</span></div><div class="kpi"><span class="k">2025年末净负债</span><span class="v">1.52<small>亿元</small></span><span class="d">有息负债2.33亿 − 现金0.81亿</span></div></div><div class="note"><b class="tagline">估值数字怎么读</b><div>这只股票目前没有公开市场价格。这里的“参考价值”用的是挂牌文件披露的2025年12月股份转让均价，可以用来衡量别人给出的报价贵不贵，并不代表在新三板上真能按这个价成交。</div></div></section><section id="business"><div class="sec-head"><h2>公司做什么</h2><p class="dek">两块成熟业务，面对完全不同的客户；另有一块还很小的锂电池新业务。</p></div><div class="cols-3"><div class="seg"><div class="seg-h"><i class="sw1"></i><h3>高性能橡胶密封件</h3></div><p>发动机、车桥、工程机械用的旋转油封、往复油封、O形圈、密封垫。这是起家的老本行，也是最大的一块。客户多采用“寄售”：货先放到客户仓库，领用了才算销售。</p><dl><dt>2025年收入</dt><dd>2.85亿元</dd><dt>收入占比</dt><dd>53.1%</dd><dt>同比增长</dt><dd>+13.9%</dd><dt>毛利率 2024 → 2025</dt><dd>36.4% → 38.7%</dd></dl></div><div class="seg"><div class="seg-h"><i class="sw2"></i><h3>轨道交通产品</h3></div><p>隧道止水带、复合轨枕（纤维增强聚氨酯）、桥梁梁端弹性体防水装置、喷涂防水材料。核心技术多由铁科院授权使用，生意跟着铁路项目走，一条线一条线地做。</p><dl><dt>2025年收入</dt><dd>2.16亿元</dd><dt>收入占比</dt><dd>40.1%</dd><dt>同比增长</dt><dd>+24.1%</dd><dt>毛利率 2024 → 2025</dt><dd>30.1% → 37.1%</dd></dl></div><div class="seg"><div class="seg-h"><i class="sw3"></i><h3>锂电池产品</h3></div><p>电芯盖板橡胶密封件、碳纳米管导电浆料，在胶州租厂房生产。这是新业务：2024年卖一块亏一块，2025年才勉强有毛利。</p><dl><dt>2025年收入</dt><dd>2,982万元</dd><dt>收入占比</dt><dd>5.5%</dd><dt>同比增长</dt><dd>+82.7%</dd><dt>毛利率 2024 → 2025</dt><dd>−12.7% → 8.5%</dd></dl></div></div><div class="fig"><div class="fig-h"><b>收入从哪里来</b><span>2025年营业收入5.37亿元的构成</span></div><div class="mix" role="img" aria-label="2025年收入构成"><span class="sw1" style="flex:53.10" tabindex="0" data-tip="橡胶密封件|2.85亿元 · 53.1%"></span><span class="sw2" style="flex:40.10" tabindex="0" data-tip="轨道交通产品|2.16亿元 · 40.1%"></span><span class="sw3" style="flex:5.55" tabindex="0" data-tip="锂电池产品|2,982万元 · 5.5%"></span><span class="sw0" style="flex:1.25" tabindex="0" data-tip="其他|673万元 · 1.3%"></span></div><div class="mixkey"><div><b>53.1%</b><i class="sw1"></i><span>橡胶密封件</span></div><div><b>40.1%</b><i class="sw2"></i><span>轨道交通</span></div><div><b>5.5%</b><i class="sw3"></i><span>锂电池</span></div><div><b>1.3%</b><i class="sw0"></i><span>其他</span></div></div></div><div class="cols"><div class="stack"><h3>厂在哪里</h3><div class="prose"><p>总部和密封件工厂在青岛红岛。轨道产品由平度的全资子公司生产（已投入1.17亿元）。锂电材料子公司在胶州租了约8,000平方米厂房。</p><p>公司正在往海外走：2025年12月起在泰国春武里租了约6,200平方米厂房，2024年12月设了美国子公司，2025年底又设了新加坡、香港两家持股公司。境外收入占比从2024年的5.6%升到2025年的12.6%。</p></div></div><div class="stack"><h3>靠什么立足</h3><div class="prose"><p>发动机厂认证一家密封件供应商要好几年，认证后很少更换；铁路产品必须有CRCC认证（公司持有13张）。公司有汽车行业IATF 16949和铁路行业ISO 22163认证，2020年被评为国家级专精特新“小巨人”。</p><p>但轨道这块的护城河没有看上去那么深：核心技术是铁科院“非独家”授权，同样的技术也可以授权给竞争对手；公司轨道产品毛利率37%，明显低于上市同行的42%–52%。</p></div></div></div></section><section id="numbers"><div class="sec-head"><h2>六年业绩</h2><p class="dek">收入比2022年多了三分之一，利润却没跟上：上市申请失败之前的利润率，比之后高得多。</p></div><div class="cols"><div class="fig"><div class="fig-h"><b>营业收入</b><span>亿元</span></div><div class="chart" data-chart="col" data-cfg="{&quot;aria&quot;: &quot;历年营业收入&quot;, &quot;cats&quot;: [&quot;2020&quot;, &quot;2021&quot;, &quot;2022&quot;, &quot;2023&quot;, &quot;2024&quot;, &quot;2025&quot;], &quot;vals&quot;: [399.77, 365.68, 405.73, 437.09, 445.58, 537.46], &quot;labels&quot;: [&quot;4.00&quot;, &quot;3.66&quot;, &quot;4.06&quot;, &quot;4.37&quot;, &quot;4.46&quot;, &quot;5.37&quot;], &quot;tips&quot;: [&quot;2020年|营业收入 4.00亿元&quot;, &quot;2021年|营业收入 3.66亿元&quot;, &quot;2022年|营业收入 4.06亿元&quot;, &quot;2023年|营业收入 4.37亿元（未经审计）&quot;, &quot;2024年|营业收入 4.46亿元&quot;, &quot;2025年|营业收入 5.37亿元&quot;], &quot;nd&quot;: &quot;未披露&quot;}"></div></div><div class="fig"><div class="fig-h"><b>净利润</b><span>万元</span></div><div class="chart" data-chart="col" data-cfg="{&quot;aria&quot;: &quot;历年净利润&quot;, &quot;cats&quot;: [&quot;2020&quot;, &quot;2021&quot;, &quot;2022&quot;, &quot;2023&quot;, &quot;2024&quot;, &quot;2025&quot;], &quot;vals&quot;: [77.36, 60.92, 77.25, 10.87, 16.04, 60.26], &quot;labels&quot;: [&quot;7,736&quot;, &quot;6,092&quot;, &quot;7,725&quot;, &quot;1,087&quot;, &quot;1,604&quot;, &quot;6,026&quot;], &quot;tips&quot;: [&quot;2020年|净利润 7,736万元&quot;, &quot;2021年|净利润 6,092万元&quot;, &quot;2022年|净利润 7,725万元&quot;, &quot;2023年|净利润 1,087万元（未经审计）&quot;, &quot;2024年|净利润 1,604万元&quot;, &quot;2025年|净利润 6,026万元&quot;], &quot;nd&quot;: &quot;未披露&quot;}"></div></div><div class="fig"><div class="fig-h"><b>毛利率</b><span>占营业收入的百分比</span></div><div class="chart" data-chart="col" data-cfg="{&quot;aria&quot;: &quot;历年毛利率&quot;, &quot;cats&quot;: [&quot;2020&quot;, &quot;2021&quot;, &quot;2022&quot;, &quot;2023&quot;, &quot;2024&quot;, &quot;2025&quot;], &quot;vals&quot;: [47.28, 43.67, 46.94, 36.84, 31.97, 36.24], &quot;labels&quot;: [&quot;47.3%&quot;, &quot;43.7%&quot;, &quot;46.9%&quot;, &quot;36.8%&quot;, &quot;32.0%&quot;, &quot;36.2%&quot;], &quot;tips&quot;: [&quot;2020年|毛利率 47.3%&quot;, &quot;2021年|毛利率 43.7%&quot;, &quot;2022年|毛利率 46.9%&quot;, &quot;2023年|毛利率 36.8%（未经审计）&quot;, &quot;2024年|毛利率 32.0%&quot;, &quot;2025年|毛利率 36.2%&quot;], &quot;nd&quot;: &quot;未披露&quot;, &quot;max&quot;: 50}"></div></div><div class="fig"><div class="fig-h"><b>经营现金流净额</b><span>万元</span></div><div class="chart" data-chart="col" data-cfg="{&quot;aria&quot;: &quot;历年经营现金流&quot;, &quot;cats&quot;: [&quot;2020&quot;, &quot;2021&quot;, &quot;2022&quot;, &quot;2023&quot;, &quot;2024&quot;, &quot;2025&quot;], &quot;vals&quot;: [60.82, 39.79, 69.44, null, 31.42, 66.87], &quot;labels&quot;: [&quot;6,082&quot;, &quot;3,979&quot;, &quot;6,944&quot;, null, &quot;3,142&quot;, &quot;6,687&quot;], &quot;tips&quot;: [&quot;2020年|经营现金流净额 6,082万元&quot;, &quot;2021年|经营现金流净额 3,979万元&quot;, &quot;2022年|经营现金流净额 6,944万元&quot;, &quot;2023年|现有披露文件中没有&quot;, &quot;2024年|经营现金流净额 3,142万元&quot;, &quot;2025年|经营现金流净额 6,687万元&quot;], &quot;nd&quot;: &quot;未披露&quot;}"></div></div></div><div class="cols"><div class="stack"><h3>2023–2024年利润为什么大跌</h3><div class="prose"><p>过去的利润主要靠一个产品撑着。桥梁梁端弹性体防水装置毛利率高达75%，2022年占轨道收入的61%；到2024年，它在轨道收入里已不到1%，取而代之的是毛利低得多的隧道止水带，锂电池产品还在亏本卖。</p><p>同时费用却在涨：期间费用从2022年的9,311万元升到2023年的1.37亿元，公司的解释是市场开拓、新产品验证、质保费用，以及撤回上市后一次性计入的中介费用。此后费用回落到1.13亿元左右。</p></div></div><div class="stack"><h3>2025年为什么回升</h3><div class="prose"><p>毛利增加了5,229万元，而费用基本没变，于是几乎全部变成了营业利润（从1,789万元到7,024万元）。主要靠的是一个新的高毛利产品：复合轨枕毛利率约45%，占轨道收入的比例升到41%，其中包括印尼客户的第一笔2,065万元订单。</p><p>2026年上半年大致保持了这个水平：收入2.53亿元，净利润2,950万元（均未经审计）。回头看这几年，规律很清楚：利润高低取决于当年卖得动的是哪一种轨道产品。</p></div></div></div><div class="tbl-wrap"><table class="tbl cards"><thead><tr><th>年份</th><th>营业收入</th><th>净利润</th><th>扣非净利润</th><th>毛利率</th><th>净利率</th><th>经营现金流</th><th>总资产</th><th>净资产</th></tr></thead><tbody><tr><td data-l="年份">2020年</td><td data-l="营业收入">4.00亿</td><td data-l="净利润">7,736万</td><td data-l="扣非净利润">7,828万</td><td data-l="毛利率">47.3%</td><td data-l="净利率">19.4%</td><td data-l="经营现金流">6,082万</td><td data-l="总资产">6.19亿</td><td data-l="净资产">3.77亿</td></tr><tr><td data-l="年份">2021年</td><td data-l="营业收入">3.66亿</td><td data-l="净利润">6,092万</td><td data-l="扣非净利润">5,554万</td><td data-l="毛利率">43.7%</td><td data-l="净利率">16.7%</td><td data-l="经营现金流">3,979万</td><td data-l="总资产">6.22亿</td><td data-l="净资产">4.05亿</td></tr><tr><td data-l="年份">2022年</td><td data-l="营业收入">4.06亿</td><td data-l="净利润">7,725万</td><td data-l="扣非净利润">7,044万</td><td data-l="毛利率">46.9%</td><td data-l="净利率">19.0%</td><td data-l="经营现金流">6,944万</td><td data-l="总资产">7.81亿</td><td data-l="净资产">4.61亿</td></tr><tr class="sub"><td data-l="年份">2023年<small>未经审计</small></td><td data-l="营业收入">4.37亿</td><td data-l="净利润">1,087万</td><td data-l="扣非净利润">未披露</td><td data-l="毛利率">36.8%</td><td data-l="净利率">2.5%</td><td data-l="经营现金流">未披露</td><td data-l="总资产">未披露</td><td data-l="净资产">未披露</td></tr><tr><td data-l="年份">2024年</td><td data-l="营业收入">4.46亿</td><td data-l="净利润">1,604万</td><td data-l="扣非净利润">1,455万</td><td data-l="毛利率">32.0%</td><td data-l="净利率">3.6%</td><td data-l="经营现金流">3,142万</td><td data-l="总资产">8.69亿</td><td data-l="净资产">4.41亿</td></tr><tr class="hi"><td data-l="年份">2025年</td><td data-l="营业收入">5.37亿</td><td data-l="净利润">6,026万</td><td data-l="扣非净利润">6,246万</td><td data-l="毛利率">36.2%</td><td data-l="净利率">11.2%</td><td data-l="经营现金流">6,687万</td><td data-l="总资产">8.55亿</td><td data-l="净资产">4.72亿</td></tr></tbody></table></div><p class="fig-cap">单位：元。数据来源：万得（Wind），取自2023年招股书及2026年挂牌审计报告；2023年数据取自公司对第二轮审核问询的回复。</p><div class="note"><b class="tagline">2025年费用结构</b><div>销售费用2,845万元（占收入5.3%），管理费用4,611万元（8.6%），研发费用3,131万元（5.8%），财务费用695万元（1.3%）。利润总额6,882万元，所得税850万元，实际税负约12%（享受高新技术企业15%税率）。</div></div></section><section id="customers"><div class="sec-head"><h2>钱从谁那里来</h2><p class="dek">客户名头很硬，但集中度不低：前五大客户贡献了45%的收入。</p></div><div class="cols"><div class="fig"><div class="fig-h"><b>2025年前五大客户</b><span>占营业收入比例，合计44.6%</span></div><div class="hbars"><div class="hbar" tabindex="0" data-tip="潍柴控股集团及关联方|1.04亿元 · 19.28%（占2025年收入）"><div class="hbar-l">潍柴控股集团及关联方<small>发动机、重卡</small></div><div class="hbar-t"><span class="hbar-f s1" style="width:96.4%"></span></div><div class="hbar-v">19.3%</div></div><div class="hbar" tabindex="0" data-tip="川藏铁路有限公司|6,892万元 · 12.82%（占2025年收入）"><div class="hbar-l">川藏铁路有限公司<small>铁路建设业主 · 止水带</small></div><div class="hbar-t"><span class="hbar-f s1" style="width:64.1%"></span></div><div class="hbar-v">12.8%</div></div><div class="hbar" tabindex="0" data-tip="卡特彼勒|2,627万元 · 4.89%（占2025年收入）"><div class="hbar-l">卡特彼勒<small>工程机械</small></div><div class="hbar-t"><span class="hbar-f s1" style="width:24.4%"></span></div><div class="hbar-v">4.9%</div></div><div class="hbar" tabindex="0" data-tip="PT Dasa Prima Lestari Unggul|2,065万元 · 3.84%（占2025年收入）"><div class="hbar-l">PT Dasa Prima Lestari Unggul<small>印度尼西亚 · 复合轨枕，2025年新客户</small></div><div class="hbar-t"><span class="hbar-f s1" style="width:19.2%"></span></div><div class="hbar-v">3.8%</div></div><div class="hbar" tabindex="0" data-tip="康明斯|2,020万元 · 3.76%（占2025年收入）"><div class="hbar-l">康明斯<small>发动机</small></div><div class="hbar-t"><span class="hbar-f s1" style="width:18.8%"></span></div><div class="hbar-v">3.8%</div></div></div><p class="fig-cap">来源：2025年度审计报告。</p></div><div class="stack-lg"><div class="stack"><h3>一家客户占了五分之一</h3><p class="prose">潍柴一家就占收入的19%，而潍柴的景气跟着国内重卡周期走。2025年密封件业务回暖，就是因为重卡市场回暖。</p></div><div class="stack"><h3>轨道收入是一笔一笔的</h3><p class="prose">川藏铁路业主单位2024年采购8,480万元、2025年采购6,892万元，都来自2024年3月签的一份1.81亿元止水带合同。说明书显示这份合同已经履行完毕，也就是说，相当于2025年收入13%的这一块，得靠新项目补上。</p></div><div class="stack"><h3>37%的销售是寄售</h3><p class="prose">货放在客户仓库里，客户报告领用后才确认收入。这在发动机配套行业很常见，但也意味着收入确认时点依赖客户的领用清单，货在被领用之前一直算海力威的存货。</p></div></div></div><div class="note"><b class="tagline">值得弄清楚的一点</b><div>公开转让说明书专门有一节披露“既是供应商又是客户”的对象，包括铁科腾跃等铁科院下属公司（铁科院也是轨道技术的授权方），以及一家青岛贸易公司。具体金额我没能取到。</div></div></section><section id="balance"><div class="sec-head"><h2>家底与现金</h2><p class="dek">净资产4.72亿元，撑起了一半多一点的资产；净负债大约是去年经营现金流的2.2倍。</p></div><div class="kpis"><div class="kpi"><span class="k">资产负债率</span><span class="v">44.8<small>%</small></span><span class="d">2024年49.3%</span></div><div class="kpi"><span class="k">流动比率</span><span class="v">1.61<small>×</small></span><span class="d">2024年1.38</span></div><div class="kpi"><span class="k">应收账款 / 收入</span><span class="v">38<small>%</small></span><span class="d">约148天的销售额</span></div><div class="kpi"><span class="k">一年内要还的借款</span><span class="v">1.70<small>亿元</small></span><span class="d">手头现金0.81亿元</span></div></div><div class="cols"><div class="stack"><div class="tbl-wrap"><table class="tbl cards"><thead><tr><th>12月31日</th><th>2024</th><th>2025</th><th>变动</th></tr></thead><tbody><tr><td data-l="12月31日">货币资金</td><td data-l="2024">7,673万</td><td data-l="2025">8,113万</td><td data-l="变动">+440万</td></tr><tr><td data-l="12月31日">应收账款<small>客户欠的货款</small></td><td data-l="2024">2.29亿</td><td data-l="2025">2.06亿</td><td data-l="变动">−2,266万</td></tr><tr><td data-l="12月31日">存货</td><td data-l="2024">1.16亿</td><td data-l="2025">1.03亿</td><td data-l="变动">−1,273万</td></tr><tr><td data-l="12月31日">固定资产</td><td data-l="2024">2.74亿</td><td data-l="2025">2.66亿</td><td data-l="变动">−822万</td></tr><tr class="hi"><td data-l="12月31日">资产合计</td><td data-l="2024">8.69亿</td><td data-l="2025">8.55亿</td><td data-l="变动">−1,355万</td></tr><tr><td data-l="12月31日">短期借款</td><td data-l="2024">1.68亿</td><td data-l="2025">1.31亿</td><td data-l="变动">−3,677万</td></tr><tr><td data-l="12月31日">一年内到期的长期负债</td><td data-l="2024">1,665万</td><td data-l="2025">3,886万</td><td data-l="变动">+2,221万</td></tr><tr><td data-l="12月31日">长期借款</td><td data-l="2024">3,541万</td><td data-l="2025">4,741万</td><td data-l="变动">+1,200万</td></tr><tr><td data-l="12月31日">应付账款</td><td data-l="2024">1.34亿</td><td data-l="2025">8,185万</td><td data-l="变动">−5,167万</td></tr><tr class="hi"><td data-l="12月31日">负债合计</td><td data-l="2024">4.28亿</td><td data-l="2025">3.83亿</td><td data-l="变动">−4,525万</td></tr><tr class="hi"><td data-l="12月31日">股东权益合计</td><td data-l="2024">4.41亿</td><td data-l="2025">4.72亿</td><td data-l="变动">+3,171万</td></tr></tbody></table></div><p class="fig-cap">单位：元。来源：经审计的合并资产负债表。</p></div><div class="stack-lg"><div class="stack"><h3>总体稳健，有两处要留意</h3><p class="prose">负债水平适中，2025年还有所下降。第一处要留意的是应收账款：客户欠款2.06亿元，相当于将近五个月的销售额，审计师把应收账款减值列为“关键审计事项”，铁路施工单位付款普遍偏慢。第二处是续贷：一年内到期的银行借款约1.70亿元，手头现金只有0.81亿元，要靠银行不断续贷。2025年公司新借2.06亿元、归还2.10亿元。</p></div><div class="stack"><h3>现金流与分红</h3><p class="prose">2025年经营现金流6,687万元，覆盖2,330万元的资本开支后还有富余。按未分配利润的变动倒推，2025年大约分红3,200万元，折合每股约0.30元。这是我推算的，取到的文件里没有直接写明分红金额。此前媒体报道过，公司在主板上市申报前几年累计分红超过8,000万元。</p></div></div></div></section><section id="owners"><div class="sec-head"><h2>谁是股东</h2><p class="dek">一对持股比例不高的创始人夫妇，一位多年的境外合伙人，再加上一批等着退出的基金。</p></div><div class="cols"><div class="fig"><div class="fig-h"><b>前十大股东</b><span>合计持股81.8%</span></div><div class="legend"><span><i class="sw1"></i>控股股东</span><span><i class="sw2"></i>有回购权的股东</span><span><i class="sw0"></i>其他股东</span></div><div class="hbars"><div class="hbar" tabindex="0" data-tip="环力投资|34.08%（总股本1.08亿股）"><div class="hbar-l">环力投资<small>实控人张万明、李素滨夫妇全资持有</small></div><div class="hbar-t"><span class="hbar-f s1" style="width:94.7%"></span></div><div class="hbar-v">34.08%</div></div><div class="hbar" tabindex="0" data-tip="ZHONG TENG YAO|15.78%（总股本1.08亿股）"><div class="hbar-l">ZHONG TENG YAO<small>境外自然人，2009年入股</small></div><div class="hbar-t"><span class="hbar-f s0" style="width:43.8%"></span></div><div class="hbar-v">15.78%</div></div><div class="hbar" tabindex="0" data-tip="融章投资|8.33%（总股本1.08亿股）"><div class="hbar-l">融章投资<small>私募基金，2018年入股</small></div><div class="hbar-t"><span class="hbar-f s0" style="width:23.1%"></span></div><div class="hbar-v">8.33%</div></div><div class="hbar" tabindex="0" data-tip="鲁信皖能|4.72%（总股本1.08亿股）"><div class="hbar-l">鲁信皖能<small>基金，2025年12月入股，有回购权</small></div><div class="hbar-t"><span class="hbar-f s2" style="width:13.1%"></span></div><div class="hbar-v">4.72%</div></div><div class="hbar" tabindex="0" data-tip="聂海涛|4.50%（总股本1.08亿股）"><div class="hbar-l">聂海涛<small>自然人</small></div><div class="hbar-t"><span class="hbar-f s0" style="width:12.5%"></span></div><div class="hbar-v">4.50%</div></div><div class="hbar" tabindex="0" data-tip="青岛德嘉|4.08%（总股本1.08亿股）"><div class="hbar-l">青岛德嘉<small>投资公司，2009年入股</small></div><div class="hbar-t"><span class="hbar-f s0" style="width:11.3%"></span></div><div class="hbar-v">4.08%</div></div><div class="hbar" tabindex="0" data-tip="吕兆洪|3.24%（总股本1.08亿股）"><div class="hbar-l">吕兆洪<small>自然人，股份受让自环力投资</small></div><div class="hbar-t"><span class="hbar-f s0" style="width:9.0%"></span></div><div class="hbar-v">3.24%</div></div><div class="hbar" tabindex="0" data-tip="王浩|2.49%（总股本1.08亿股）"><div class="hbar-l">王浩<small>自然人</small></div><div class="hbar-t"><span class="hbar-f s0" style="width:6.9%"></span></div><div class="hbar-v">2.49%</div></div><div class="hbar" tabindex="0" data-tip="刘静轩|2.31%（总股本1.08亿股）"><div class="hbar-l">刘静轩<small>自然人</small></div><div class="hbar-t"><span class="hbar-f s0" style="width:6.4%"></span></div><div class="hbar-v">2.31%</div></div><div class="hbar" tabindex="0" data-tip="蚌埠安芙兰|2.22%（总股本1.08亿股）"><div class="hbar-l">蚌埠安芙兰<small>基金，2021年以12.50元入股</small></div><div class="hbar-t"><span class="hbar-f s0" style="width:6.2%"></span></div><div class="hbar-v">2.22%</div></div></div><p class="fig-cap">来源：公开转让说明书（2026年10月）。</p></div><div class="stack-lg"><div class="stack"><h3>控制权只靠34%</h3><p class="prose">董事长张万明（1968年生，高分子材料专业出身，公司创始人）与妻子通过环力投资一家公司持有34.08%，没有直接持股。2023年招股书里还是37.78%，之后环力投资向两名自然人转让了400万股；公司说明，他的个人债务是靠转让股份和分红还清的。34%的持股再稀释的余地不大，而实控人已表示，如需筹措回购款，可能质押这部分股份。</p></div><div class="stack"><h3>第二大股东是一位境外自然人</h3><p class="prose">ZHONG TENG YAO，澳大利亚籍，1962年生，持股15.78%。披露文件称，他是张万明在深圳工作时认识的朋友，2009年通过一家香港公司接下了原加拿大合资方的股权，该香港公司后来已注销。上次上市审核时，监管问过他是否替他人代持，公司的答复是不存在代持。</p></div><div class="stack"><h3>历史上有过代持，2021年已还原</h3><p class="prose">曾有两名自然人替他人代持股份，2021年3月已还原并披露。这在国内非上市公司里不少见，但上次上市审核中监管反复追问的正是这类股权问题。</p></div><div class="stack"><h3>挂牌时46.5%的股份限售</h3><p class="prose">控股股东和另外4名大股东的股份分三批解禁：挂牌当日、满一年、满两年各三分之一；总经理的115.56万股激励股份锁定3年。挂牌首日可转让的有5,776万股（53.5%），但都集中在少数基金和自然人手里，其中一家基金已把所持2%的股份质押。</p></div></div></div></section><section id="price"><div class="sec-head"><h2>股份过去的成交价</h2><p class="dek">没有公开市场价格，过去的非公开转让是唯一的价值线索。它们指向每股6.5元左右。</p></div><div class="cols"><div class="fig"><div class="fig-h"><b>这些年股份成交过什么价</b><span>元/股，按现在的1.08亿股本</span></div><div class="legend"><span><i class="sw1" style="border-radius:50%"></i>投资者之间转让</span><span><i class="sw2" style="border-radius:50%"></i>公司回购 / 管理层激励</span><span><i class="ln"></i>每股净资产</span></div><div class="chart" data-chart="price" data-cfg="{&quot;aria&quot;: &quot;2021–2025年股份转让价格&quot;, &quot;pts&quot;: [{&quot;t&quot;: 2021.75, &quot;v&quot;: 12.5, &quot;k&quot;: &quot;a&quot;, &quot;label&quot;: &quot;12.50&quot;, &quot;tip&quot;: &quot;2021年9–10月|每股12.50元|上市申报前，3家基金受让320万股&quot;}, {&quot;t&quot;: 2023.5, &quot;v&quot;: 7.0, &quot;k&quot;: &quot;a&quot;, &quot;label&quot;: &quot;7.00&quot;, &quot;anchor&quot;: &quot;end&quot;, &quot;tip&quot;: &quot;2023年|每股7.00元|挂牌文件提到的2023年转让，具体月份未核实&quot;}, {&quot;t&quot;: 2024.04, &quot;v&quot;: 6.78, &quot;k&quot;: &quot;a&quot;, &quot;label&quot;: &quot;6.78&quot;, &quot;tip&quot;: &quot;2024年1月|每股6.78元|自然人之间转让5.4万股&quot;}, {&quot;t&quot;: 2024.79, &quot;v&quot;: 3.5, &quot;k&quot;: &quot;b&quot;, &quot;label&quot;: &quot;3.50&quot;, &quot;pos&quot;: &quot;below&quot;, &quot;tip&quot;: &quot;2024年10月|每股3.50元|公司向一名股东回购115.56万股（1.07%）&quot;}, {&quot;t&quot;: 2025.58, &quot;v&quot;: 3.5, &quot;k&quot;: &quot;b&quot;, &quot;label&quot;: &quot;3.50&quot;, &quot;pos&quot;: &quot;below&quot;, &quot;tip&quot;: &quot;2025年8月|每股3.50元|上述股份作为股权激励授予总经理&quot;}, {&quot;t&quot;: 2025.95, &quot;v&quot;: 6.48, &quot;k&quot;: &quot;a&quot;, &quot;label&quot;: &quot;6.48&quot;, &quot;tip&quot;: &quot;2025年12月|6.35–6.80元，均价6.48元|6笔转让共856万股，受让方为4家基金&quot;}], &quot;t0&quot;: 2021.0, &quot;t1&quot;: 2026.6, &quot;ymax&quot;: 14, &quot;yTicks&quot;: [0, 5, 10], &quot;years&quot;: [2021, 2022, 2023, 2024, 2025, 2026], &quot;bv&quot;: 4.37, &quot;bvLabel&quot;: &quot;2025年末每股净资产 4.37&quot;}"></div><p class="fig-cap">以上都是挂牌文件披露的非公开转让，不是市场交易价格。来源：公开转让说明书、审计报告、法律意见书。</p></div><div class="stack-lg"><div class="stack"><h3>2021年进来的基金账面亏了近一半</h3><p class="prose">上市申报前以12.50元入股的基金，四年后同类股份的成交价是6.35–6.80元。中间经历了撤回上市申请和2023–2024年利润大跌。</p></div><div class="stack"><h3>3.50元那两笔不是市场价</h3><p class="prose">公司以低于每股净资产的3.50元从一名股东手里回购，再以同样价格授予总经理。会计上已把它与公允价（6.35–6.80元）之间的差额确认为股份支付费用。</p></div><div class="stack"><h3>最新进来的基金有保护，外部买家没有</h3><p class="prose">2025年12月以约6.48元入股的4家基金，如果上市不成，可以按“本金加年息7%”把股份卖回给实控人。在新三板上按同样价格买入的人，没有这层保底。</p></div></div></div><div class="note"><b class="tagline">更早的几轮融资</b><div>公司曾在2011年、2018年、2019年分别以每股7.50元、8.00元、9.60元增发新股，当时总股本只有5,000万–6,000万股。后来股本增至1.08亿股，具体方式我没能核实，所以这几个价格不能直接和上图比较。</div></div></section><section id="peers"><div class="sec-head"><h2>参考价放在同行里看</h2><p class="dek">把同行业上市公司的估值，和海力威最近一次转让价放在一起比较。</p></div><div class="cols"><div class="fig"><div class="fig-h"><b>和上市同行比市盈率</b><span>倍。同行为最近12个月口径</span></div><div class="legend"><span><i class="sw1"></i>海力威（按6.48元）</span><span><i class="sw0"></i>上市同行</span></div><div class="hbars"><div class="hbar" tabindex="0" data-tip="朗博科技|市盈率 44.2×"><div class="hbar-l">朗博科技</div><div class="hbar-t"><span class="hbar-f s0" style="width:96.1%"></span></div><div class="hbar-v">44.2×</div></div><div class="hbar" tabindex="0" data-tip="祥和实业|市盈率 25.3×"><div class="hbar-l">祥和实业</div><div class="hbar-t"><span class="hbar-f s0" style="width:55.0%"></span></div><div class="hbar-v">25.3×</div></div><div class="hbar" tabindex="0" data-tip="盛帮股份|市盈率 22.1×"><div class="hbar-l">盛帮股份</div><div class="hbar-t"><span class="hbar-f s0" style="width:48.0%"></span></div><div class="hbar-v">22.1×</div></div><div class="hbar" tabindex="0" data-tip="铁科轨道|市盈率 16.3×"><div class="hbar-l">铁科轨道</div><div class="hbar-t"><span class="hbar-f s0" style="width:35.4%"></span></div><div class="hbar-v">16.3×</div></div><div class="hbar" tabindex="0" data-tip="海力威（参考）|市盈率 11.6×"><div class="hbar-l">海力威（参考）</div><div class="hbar-t"><span class="hbar-f s1" style="width:25.2%"></span></div><div class="hbar-v">11.6×</div></div><div class="hbar" tabindex="0" data-tip="正裕工业、天铁科技|近12个月亏损，无市盈率"><div class="hbar-l">正裕工业 · 天铁科技</div><div class="hbar-t"></div><div class="hbar-v">亏损</div></div></div></div><div class="stack-lg"><div class="stack"><h3>按利润算比同行便宜，但便宜有原因</h3><p class="prose">盈利的同行市盈率在16–44倍之间，海力威按最近的转让价约12倍；按净资产算则处在中间（1.5倍，同行1.2–3.6倍）。这个差距主要是“流动性折价”：同行的股票每个交易日都能卖，海力威不能。</p></div><div class="stack"><h3>只有真正上了交易所，折价才会收窄</h3><p class="prose">如果能转到北交所上市，股票才有连续交易的市场，基金赌的就是这一步。作个参照：2025年1月到2026年9月在北交所上市的公司，发行市盈率平均约14–15倍；2026年9月北交所股票市盈率中位数约28倍。如果上不了，折价可能长期存在；而且这个倍数还得靠2025年的利润水平能保持住，2023、2024年的业绩说明这一点并不能想当然。</p></div></div></div><div class="tbl-wrap"><table class="tbl cards"><thead><tr><th>公司</th><th>总市值</th><th>市盈率(TTM)</th><th>市净率</th><th>2025年收入</th><th>2025年净利润</th><th>毛利率</th><th>净资产收益率</th></tr></thead><tbody><tr class="hi"><td data-l="公司">海力威<small>按6.48元参考价；市盈率按2025年净利润</small></td><td data-l="总市值">≈7.0亿</td><td data-l="市盈率(TTM)">11.6倍</td><td data-l="市净率">1.48倍</td><td data-l="2025年收入">5.37亿</td><td data-l="2025年净利润">6,026万</td><td data-l="毛利率">36.2%</td><td data-l="净资产收益率">13.2%</td></tr><tr><td data-l="公司">朗博科技 603655<small>汽车用橡胶O形圈、轴封</small></td><td data-l="总市值">20.1亿</td><td data-l="市盈率(TTM)">44.2倍</td><td data-l="市净率">3.57倍</td><td data-l="2025年收入">2.70亿</td><td data-l="2025年净利润">4,525万</td><td data-l="毛利率">39.6%</td><td data-l="净资产收益率">8.2%</td></tr><tr><td data-l="公司">盛帮股份 301233<small>汽车、电力用橡胶密封件</small></td><td data-l="总市值">16.5亿</td><td data-l="市盈率(TTM)">22.1倍</td><td data-l="市净率">1.62倍</td><td data-l="2025年收入">4.41亿</td><td data-l="2025年净利润">8,714万</td><td data-l="毛利率">37.3%</td><td data-l="净资产收益率">9.1%</td></tr><tr><td data-l="公司">正裕工业 603089<small>减震器、发动机密封件</small></td><td data-l="总市值">21.1亿</td><td data-l="市盈率(TTM)">亏损</td><td data-l="市净率">1.16倍</td><td data-l="2025年收入">27.80亿</td><td data-l="2025年净利润">1.05亿</td><td data-l="毛利率">20.8%</td><td data-l="净资产收益率">7.8%</td></tr><tr><td data-l="公司">铁科轨道 688569<small>高铁扣件系统</small></td><td data-l="总市值">38.4亿</td><td data-l="市盈率(TTM)">16.3倍</td><td data-l="市净率">1.27倍</td><td data-l="2025年收入">12.75亿</td><td data-l="2025年净利润">1.71亿</td><td data-l="毛利率">42.1%</td><td data-l="净资产收益率">5.9%</td></tr><tr><td data-l="公司">祥和实业 603500<small>轨道扣件零部件</small></td><td data-l="总市值">30.1亿</td><td data-l="市盈率(TTM)">25.3倍</td><td data-l="市净率">2.83倍</td><td data-l="2025年收入">8.35亿</td><td data-l="2025年净利润">1.34亿</td><td data-l="毛利率">32.1%</td><td data-l="净资产收益率">13.3%</td></tr><tr><td data-l="公司">天铁科技 300587<small>轨道减振橡胶制品</small></td><td data-l="总市值">40.5亿</td><td data-l="市盈率(TTM)">亏损</td><td data-l="市净率">1.65倍</td><td data-l="2025年收入">15.80亿</td><td data-l="2025年净利润"><span class="neg">−2.18亿</span></td><td data-l="毛利率">19.9%</td><td data-l="净资产收益率"><span class="neg">−9.5%</span></td></tr></tbody></table></div><p class="fig-cap">单位：元。同行股价为2026年11月26日收盘（万得）。这6家是公司自己在公开转让说明书里选的可比公司。</p></section><section id="history"><div class="sec-head"><h2>一路走来</h2><p class="dek">22年，两次新三板挂牌，一次撤回的主板上市申请。</p></div><ol class="tl"><li><time>2004年7月</time><span class="pin"><i></i></span><div class="body"><b>以中外合资企业设立</b><p>青岛环力密封持股60%，一家加拿大工业用品公司持股40%，注册资本260万美元。</p></div></li><li><time>2008–2009年</time><span class="pin"><i></i></span><div class="body"><b>加拿大合资方退出</b><p>股权转给ZHONG TENG YAO的香港公司，同期引入其他早期投资者。</p></div></li><li><time>2010年5月</time><span class="pin"><i></i></span><div class="body"><b>整体变更为股份公司</b><p>股本4,500万股，更名为青岛海力威新材料科技股份有限公司。</p></div></li><li class="key"><time>2015年12月</time><span class="pin"><i></i></span><div class="body"><b>第一次在新三板挂牌（代码834835）</b><p>当时采用协议转让方式。</p></div></li><li><time>2017年12月</time><span class="pin"><i></i></span><div class="body"><b>主动从新三板摘牌</b><p>2017年12月27日终止挂牌，为申报上市做准备。</p></div></li><li><time>2018–2019年</time><span class="pin"><i></i></span><div class="body"><b>私募基金入股，开始筹备上市</b><p>分别以每股8.00元、9.60元增资；2018年6月聘请国元证券做上市辅导；在平度设立轨道产品子公司。</p></div></li><li><time>2020年</time><span class="pin"><i></i></span><div class="body"><b>获评国家级专精特新“小巨人”；更换保荐机构</b><p>当年收入4.00亿元，净利润7,736万元。保荐机构换成东亚前海证券，向国元证券支付违约金400万元。</p></div></li><li><time>2021年9月</time><span class="pin"><i></i></span><div class="body"><b>基金以12.50元入股</b><p>有记录以来的最高价，对应公司总价值13.5亿元。</p></div></li><li class="key"><time>2022年6月–2023年3月</time><span class="pin"><i></i></span><div class="body"><b>申报上交所主板上市</b><p>计划募资5.08亿元，其中8,000万元补充流动资金；而2020–2022年公司累计分红8,640万元。2022年6月29日证监会受理，2023年3月4日平移至上交所。</p></div></li><li class="bad"><time>2023年11月</time><span class="pin"><i></i></span><div class="body"><b>撤回上市申请</b><p>2023年9月30日因财务资料过期中止审核，11月16日终止。审核中监管问询了实控人的个人大额借款和股权历史等问题。公司后来向股转公司说明，撤回是“受业绩下滑影响”。</p></div></li><li class="bad"><time>2023–2024年</time><span class="pin"><i></i></span><div class="body"><b>净利润跌到1,087万元、1,604万元</b><p>2024年10月，公司以每股3.50元回购1.07%的股份。</p></div></li><li><time>2025年</time><span class="pin"><i></i></span><div class="body"><b>业绩回升，引入新投资者</b><p>净利润6,026万元；租下泰国厂房；4家基金以约6.48元受让7.9%股份，并带有回购权。</p></div></li><li class="key"><time>2026年6–9月</time><span class="pin"><i></i></span><div class="body"><b>第二次申请新三板挂牌获批</b><p>6月申报，主办券商为开源证券；经过两轮问询；9月30日取得同意挂牌函，进入基础层。截至2026年11月26日，我没有查到正式挂牌日期和成交记录。</p></div></li><li class="fut"><time>约2027年9月30日前</time><span class="pin"><i></i></span><div class="body"><b>上市申请须获受理</b><p>否则4家基金的回购权恢复效力。</p></div></li><li class="fut"><time>2027年12月31日前</time><span class="pin"><i></i></span><div class="body"><b>须完成上市</b><p>股东协议约定的最后期限。</p></div></li></ol></section><section id="buyback"><div class="sec-head"><h2>实控人的回购承诺</h2><p class="dek">这是给4家基金的承诺，也决定了接下来所有事情的时间表。</p></div><div class="kpis"><div class="kpi"><span class="k">涉及股份</span><span class="v">856<small>万股</small></span><span class="d">占总股本7.93%</span></div><div class="kpi"><span class="k">基金入股成本</span><span class="v">5,547<small>万元</small></span><span class="d">每股约6.48元</span></div><div class="kpi"><span class="k">回购价格</span><span class="v">7<small>% 年息</small></span><span class="d">按本金单利计算，扣除已得分红</span></div><div class="kpi"><span class="k">测算回购金额</span><span class="v">6,228<small>万元</small></span><span class="d">按2027年9月30日；年底为6,329万</span></div></div><div class="cols"><div class="stack"><h3>协议怎么约定</h3><div class="prose"><p>鲁信皖能、拥湾精材、开源财金惠风、经韬国器这4家基金，2025年12月受让老股时与实控人签了股东协议。为了申请新三板挂牌，这些特殊权利暂时终止；但如果公司在拿到同意挂牌函后12个月内上市申请没被受理，或者到2027年12月31日还没完成上市，权利就自动恢复。</p><p>协议里还有业绩承诺：2025年净利润不低于6,000万元（实际6,026万元，刚好达标），2026年不低于7,000万元。回购义务人是张万明和环力投资，不是海力威公司本身。实控人披露的个人资产约为金融资产480万元、房产1,500万元，并向监管说明，其余资金来自公司分红和股份质押贷款。</p></div></div><div class="stack"><h3>对外部买家意味着什么</h3><div class="prose"><p>实控人有很强的个人动力在2027年内申报交易所上市，但时间很紧。北交所只接受在新三板创新层挂牌满12个月的公司；海力威目前在基础层，截至2026年9月17日还没有办理上市辅导备案。近期北交所项目从受理到上市平均要一年左右。</p><p>这份保护只属于那4家基金。上市不成，他们连本带息拿钱走人；普通的新三板买家手里剩下的还是股票。</p><p>一旦触发回购，公司可能被要求大比例分红（而公司自身还有2.33亿元银行借款），或者控股权被质押。出现任何一种情况都值得警惕。</p></div></div></div></section><section id="risks"><div class="sec-head"><h2>可能出什么问题</h2><p class="dek">按对外部股东可能造成的损失大小排序。等级是我根据披露文件做的判断。</p></div><div class="risks"><div class="risk"><span class="chip c-high"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 0.5 9.6 9.5H0.4Z"/></svg>风险：高</span><div><h3>可能卖不出去</h3><p>基础层股票每天只撮合5次，很多股票几天甚至几周没有一笔成交。2026年8月，整个新三板5,791家公司合计成交35.67亿元，按我的折算，平均每家公司每个交易日只有约3万元。买家还要有200万元证券资产。公司上一次挂牌新三板，最后是主动摘牌离开。</p></div><div class="watch"><b>要盯什么</b>正式交易后的真实成交量和成交价；能不能进入创新层。</div></div><div class="risk"><span class="chip c-high"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 0.5 9.6 9.5H0.4Z"/></svg>风险：高</span><div><h3>利润波动大</h3><p>净利润2022到2023年跌了86%，至今没回到原来的水平。每一次大起大落，都是因为某一种轨道产品放量或者断档。2025年最大的那份轨道合同已经交付完毕。</p></div><div class="watch"><b>要盯什么</b>2026年全年业绩能否达到7,000万元的承诺；新签的轨道合同。</div></div><div class="risk"><span class="chip c-high"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 0.5 9.6 9.5H0.4Z"/></svg>风险：高</span><div><h3>上市计划期限很紧，且有前车之鉴</h3><p>要获得流动性，得先升到创新层，再让北交所上市申请在2027年9月前后被受理。而上一次交易所上市申请是撤回收场。</p></div><div class="watch"><b>要盯什么</b>是否公告在青岛证监局办理上市辅导备案；层级调整；有没有更换保荐机构。</div></div><div class="risk"><span class="chip c-high"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 0.5 9.6 9.5H0.4Z"/></svg>风险：高</span><div><h3>新能源卡车替代柴油机</h3><p>电动卡车没有发动机，也就不需要发动机油封。国内商用车新能源占比2025年是26.9%，2026年前10个月升到36.6%；重卡的单月新能源占比在2026年9月已到50%左右。而密封件占海力威收入的53%。公司在开发电驱动用密封件、扩大出口，但目前的核心还是发动机配套。</p></div><div class="watch"><b>要盯什么</b>密封件收入中新能源客户和海外客户的占比；潍柴柴油机销量。</div></div><div class="risk"><span class="chip c-med"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 0.3 9.7 5 5 9.7 0.3 5Z"/></svg>风险：中</span><div><h3>客户集中</h3><p>潍柴占收入19%，前五大客户占45%。重卡销量2025年增长27%，但2026年10月同比下降16%。</p></div><div class="watch"><b>要盯什么</b>国内重卡销量；潍柴发动机销量。</div></div><div class="risk"><span class="chip c-med"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 0.3 9.7 5 5 9.7 0.3 5Z"/></svg>风险：中</span><div><h3>轨道技术是授权来的</h3><p>轨道产品背后是铁科院授予的8项技术使用权，而且是非独家授权。在我读到的说明书文本中，止水带和两项钢构件技术的授权期到2025年12月31日，喷涂防水技术到2026年6月2日，是否已续期我没能核实。复合轨枕的授权期到2038年。</p></div><div class="watch"><b>要盯什么</b>到期的授权是否已经续签，授权费条件有没有变化。</div></div><div class="risk"><span class="chip c-med"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 0.3 9.7 5 5 9.7 0.3 5Z"/></svg>风险：中</span><div><h3>高铁新建在放缓</h3><p>到2025年底全国高铁里程约5万公里，规划2035年达到7万公里。公司自己测算，今后年均新建约2,000公里，低于前几年的高峰。全国铁路固定资产投资2024年增长11%，2025年增长6%，2026年前10个月只增长0.9%；而更新维护的需求还没有大规模到来。</p></div><div class="watch"><b>要盯什么</b>每年的铁路固定资产投资；印尼等海外轨道订单。</div></div><div class="risk"><span class="chip c-med"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 0.3 9.7 5 5 9.7 0.3 5Z"/></svg>风险：中</span><div><h3>回款慢，短债多</h3><p>应收账款相当于收入的38%；一年内到期的银行借款约1.70亿元，现金0.81亿元。</p></div><div class="watch"><b>要盯什么</b>应收账款周转天数；坏账计提；银行是否持续续贷。</div></div><div class="risk"><span class="chip c-med"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 0.3 9.7 5 5 9.7 0.3 5Z"/></svg>风险：中</span><div><h3>公司治理</h3><p>控制权只靠34%的持股。问询回复披露：2020年初董事长个人负债1.13亿元，其中炒股亏损约3,277万元，借款来自员工、朋友、民间借贷和一家股东基金；公司称这些债务已在2024年前通过转让股份和分红还清。文件还披露历史上有过股份代持，以及公司曾回购一笔股份、再以外部投资者入股价的一半左右授予总经理。</p></div><div class="watch"><b>要盯什么</b>控股股东股份有没有质押；关联交易；分红决策。</div></div><div class="risk"><span class="chip c-low"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4.4"/></svg>风险：较低</span><div><h3>锂电池业务未必能做起来</h3><p>这块业务只占收入的5.5%，毛利率8.5%。碳纳米管导电浆料的龙头天奈科技，2024年占国内约一半的份额，毛利率约35%。海力威为此租了厂房，已投入5,000万元。</p></div><div class="watch"><b>要盯什么</b>这块业务的毛利率；有没有继续追加投资。</div></div><div class="risk"><span class="chip c-low"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4.4"/></svg>风险：较低</span><div><h3>税收优惠与原材料</h3><p>母公司和轨道子公司都按高新技术企业15%税率缴税。子公司证书2023年11月取得，母公司2024年11月取得，有效期均为三年。橡胶、钢材价格波动会影响毛利。</p></div><div class="watch"><b>要盯什么</b>子公司的高新证书眼下正到续期的时候。</div></div></div></section><section id="access"><div class="sec-head"><h2>怎么买进，怎么退出</h2><p class="dek">新三板不是通常意义上的股票交易所。最实际的问题是：将来怎么卖。</p></div><div class="prose"><p>海力威的同意挂牌函写明交易方式为集合竞价。在基础层，买卖委托集中到9:30、10:30、11:30、14:00、15:00五个时点各撮合一次；想卖的时候，得正好有人在同一次撮合里愿意按您能接受的价格买。单日价格可在前收盘价的−50%到+100%之间波动。数量大的可以走大宗交易（不少于10万股或100万元）。</p><p>现实中的退出途径只有几条：公司以后转到北交所上市；私下协商大宗转让；或者公司被收购。哪一条都不由投资者自己决定。有一点是有利的：新三板股票持有满一年，分红免征个人所得税（现行政策执行到2027年底）。</p></div><div class="tbl-wrap"><table class="tbl cards"><thead><tr><th>市场层级</th><th>资产门槛</th><th>撮合方式</th></tr></thead><tbody><tr class="hi"><td data-l="市场层级">新三板基础层<small>海力威目前所在层级</small></td><td data-l="资产门槛">200万元</td><td data-l="撮合方式">集合竞价，每天撮合5次</td></tr><tr><td data-l="市场层级">新三板创新层</td><td data-l="资产门槛">100万元</td><td data-l="撮合方式">集合竞价每10分钟一次，或做市交易</td></tr><tr><td data-l="市场层级">北交所</td><td data-l="资产门槛">50万元</td><td data-l="撮合方式">连续竞价，和沪深交易所一样</td></tr></tbody></table></div><p class="fig-cap">门槛指日均证券资产（新三板按近10个交易日，北交所按近20个交易日）；三者都另外要求2年以上投资经验或符合条件的从业背景。以上为2021年发布的规则，我没有查到之后有调整。</p><div class="note"><b class="tagline">通往北交所的路</b><div>申请北交所上市，公司必须在创新层、在新三板连续挂牌满12个月，并满足四套财务标准之一。最常用的一套是：市值不低于2亿元，最近一年净利润不低于2,500万元且净资产收益率不低于8%。按2025年的数字，海力威的利润指标够了，但“创新层”和“满12个月”这两条还没达到。北交所2024年新上市23家，2025年26家，2026年到11月中旬69家，另有约207家在排队。</div></div><div class="pc"><div><h3>对投资者有利的方面</h3><ul><li>业务成熟、经过审计、持续盈利，客户合作多年。</li><li>参考价约为12倍市盈率、1.5倍市净率，低于上市同行。</li><li>实控人有明确期限的个人动力去推动交易所上市。</li><li>多数年份现金流为正，2025年有现金分红。</li></ul></div><div><h3>对投资者不利的方面</h3><ul><li>没有可靠的卖出渠道；退出要靠一次曾经失败过的上市。</li><li>利润两年里跌掉过五分之四，现在的水平部分依赖单一铁路项目。</li><li>最新入股的基金有保底条款，普通买家没有。</li><li>核心产品绑定柴油发动机，而卡车正在电动化。</li></ul></div></div></section><section id="checklist"><div class="sec-head"><h2>掏钱之前要先弄清楚的问题</h2><p class="dek">这些是文件里没有答案、或者只有卖方、券商、公司才能回答的问题。</p></div><ul class="checks"><li><span class="box"></span><div><b>谁在卖？什么价？通过什么渠道？</b><p>把报价和2025年12月的转让价（6.35–6.80元）、每股净资产（4.37元）比一比。如果是中间人介绍的场外转让，要看清卖方的持股登记，以及过户怎么办理。</p></div></li><li><span class="box"></span><div><b>您有没有新三板交易权限？</b><p>基础层要求200万元证券资产和2年投资经验，要由开户的证券公司确认并开通权限。如果有人说可以“绕开门槛”，那本身就是危险信号。</p></div></li><li><span class="box"></span><div><b>股票到底开始交易了没有？</b><p>同意挂牌函是2026年9月30日出的，但我没有查到正式挂牌日、行情和成交。可以请券商确认首个交易日，以及之后有没有成交价。</p></div></li><li><span class="box"></span><div><b>2026年下半年的业绩怎么样？</b><p>上半年净利润2,950万元，只完成了对基金承诺的全年7,000万元的42%。可以要三季度数据和在手订单，尤其是川藏铁路合同履行完之后的情况。</p></div></li><li><span class="box"></span><div><b>轨道技术授权续上了吗？</b><p>按我读到的文本，有几项在2025年12月31日到期，一项在2026年6月到期。轨道业务占收入的40%。</p></div></li><li><span class="box"></span><div><b>上市时间表是什么？</b><p>公司打算什么时候进创新层？上市辅导备案了没有？保荐机构是谁？打算在2027年9月之前的什么时候申报？</p></div></li><li><span class="box"></span><div><b>如果上市不成，普通股东怎么办？</b><p>4家基金可以被回购。要问清楚其他股东有没有同等安排，以及实控人拿出6,228万元时会不会伤到公司。</p></div></li><li><span class="box"></span><div><b>实控人的股份有没有质押？个人债务还清了吗？</b><p>文件说此前的个人大额负债已还清、股份没有质押。可以要求确认截至目前仍然如此。</p></div></li><li><span class="box"></span><div><b>这笔钱能放多久不动？</b><p>如果三五年内可能要用到这笔钱，那么“卖不掉”的风险比这份简报里其他任何一条都重要。</p></div></li></ul><p class="fine">我是AI研究助手，不是持牌投资顾问，也不了解您的财务状况和目标。这份简报只是把公开资料整理清楚，供您自己判断，不构成买入或卖出的建议。</p></section><section id="sources"><div class="sec-head"><h2>资料来源与局限</h2><p class="dek">数字从哪里来，以及哪些我没能核实。</p></div><div class="cols"><div class="stack"><h3>资料来源</h3><ol class="src"><li>海力威《公开转让说明书》（2026年9月）：<a href="https://pdf.dfcfw.com/pdf/H2_AN202609301830055710_1.pdf" target="_blank" rel="noopener">PDF</a></li><li>第一轮、第二轮审核问询回复（2026年8月18日、9月17日）：<a href="https://pdf.dfcfw.com/pdf/H2_AN202608181828115891_1.pdf" target="_blank" rel="noopener">第一轮</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202609171829527731_1.pdf" target="_blank" rel="noopener">第二轮</a></li><li>2024–2025年度审计报告（容诚）、法律意见书（通力）、主办券商推荐报告（开源证券）、同意挂牌函（股转函〔2026〕2333号），通过万得查阅</li><li>上交所主板招股说明书（申报稿，2023年3月）：<a href="http://static.sse.com.cn/stock/disclosure/announcement/c/202303/001550_20230304_VPH4.pdf" target="_blank" rel="noopener">PDF</a></li><li>万得（Wind）金融数据服务：公司2020–2025年财务数据；同行2026年11月26日收盘市值与估值</li><li>关于撤回主板上市的媒体报道：<a href="https://www.stcn.com/article/detail/1041279.html" target="_blank" rel="noopener">证券时报</a>、<a href="https://www.21jingji.com/article/20231122/herald/0991c1606f3e3cb682b0df00c80f0b4e.html" target="_blank" rel="noopener">21世纪经济报道</a>、<a href="https://m.jiemian.com/article/10412759.html" target="_blank" rel="noopener">界面新闻</a></li><li>关于获批挂牌的报道（2026年10月14日）：<a href="https://wap.stockstar.com/detail/IG2026101400018190" target="_blank" rel="noopener">挖贝网（证券之星转载）</a></li><li>公司官网 hilywill.com（荣誉与动态）</li><li>新三板、北交所规则：<a href="https://www.neeq.com.cn/class_f/1260.html" target="_blank" rel="noopener">投资者适当性</a>、<a href="https://www.neeq.com.cn/class_d/200011041.html" target="_blank" rel="noopener">交易规则</a>、<a href="https://www.bse.cn/cxjg_list/200025638.html" target="_blank" rel="noopener">上市规则</a></li><li>新三板、北交所市场统计：<a href="https://pdf.dfcfw.com/pdf/H3_AP202610071830191023_1.pdf" target="_blank" rel="noopener">开源证券研究报告（2026年10月7日）</a></li><li>重卡与铁路数据：<a href="https://www.sohu.com/a/1100126311_120774496" target="_blank" rel="noopener">中汽协2026年1–10月数据</a>、<a href="https://www.news.cn/20261116/1269a4db67ef46d39de2389661eae9cc/c.html" target="_blank" rel="noopener">新华社关于铁路投资的报道</a>、<a href="https://www.yicai.com/news/103227347.html" target="_blank" rel="noopener">第一财经</a></li><li>碳纳米管导电浆料市场：<a href="https://pdf.dfcfw.com/pdf/H3_AP202505281680621792_1.pdf" target="_blank" rel="noopener">中信建投关于天奈科技的报告（2025年5月）</a></li></ol></div><div class="stack"><h3>没能核实的地方</h3><ul class="src"><li><strong>没有市场价格。</strong>截至2026年11月26日，我没有查到875319的正式挂牌日、行情或成交记录。所有估值数字都基于2025年12月的非公开转让价。</li><li><strong>2023年和2026年上半年的数字未经审计。</strong>它们来自公司对问询的回复和公开转让说明书。2023年的资产负债表和现金流量表没有取到，2026年三季度数据也没有。</li><li><strong>2025年分红金额是我的推算</strong>，依据是未分配利润的变动。</li><li><strong>轨道技术授权</strong>在2025–2026年到期后是否续签，没有核实。</li><li><strong>股本如何从6,000万股变成1.08亿股</strong>没有核实，所以2021年以前的融资价格不能和之后的直接比较。</li><li><strong>“既是供应商又是客户”的交易金额</strong>没有取到。</li><li><strong>行业数据</strong>（重卡销量、铁路投资、交易所统计）来自媒体和券商报告，没有逐一对照原始发布。</li><li><strong>可比公司是公司自己选的</strong>，其中有些规模比海力威大得多。</li><li>挂牌文件我是通过万得的文本摘录阅读的，另有一遍对PDF原文的检索；凡能与万得结构化数据对照的数字都做了核对。</li></ul></div></div></section></main></div></div>
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg';
+  function el(tag,attrs,parent,text){var e=document.createElementNS(NS,tag);for(var k in attrs){e.setAttribute(k,attrs[k]);}if(text!=null){e.textContent=text;}if(parent){parent.appendChild(e);}return e;}
+
+  /* tooltip shared by every mark that carries data-tip ("title|line|line") */
+  var tip=document.createElement('div');tip.className='tip';tip.hidden=true;document.body.appendChild(tip);
+  function showTip(t,ev){
+    var raw=t.getAttribute('data-tip');if(!raw){return;}
+    tip.textContent='';
+    raw.split('|').forEach(function(line,i){var d=document.createElement('div');if(i===0){d.className='tip-h';}d.textContent=line;tip.appendChild(d);});
+    tip.hidden=false;
+    var r=t.getBoundingClientRect(),tw=tip.offsetWidth,th=tip.offsetHeight;
+    var cx=(ev&&typeof ev.clientX==='number'&&ev.clientX>0)?ev.clientX:(r.left+r.width/2);
+    var x=Math.max(8,Math.min(cx-tw/2,document.documentElement.clientWidth-tw-8));
+    var y=r.top-th-10;if(y<8){y=r.bottom+10;}
+    tip.style.left=(x+window.scrollX)+'px';tip.style.top=(y+window.scrollY)+'px';
+  }
+  function hideTip(){tip.hidden=true;}
+  function tipTarget(e){return e.target&&e.target.closest?e.target.closest('[data-tip]'):null;}
+  document.addEventListener('pointerover',function(e){var t=tipTarget(e);if(t){showTip(t,e);}else{hideTip();}});
+  document.addEventListener('pointermove',function(e){var t=tipTarget(e);if(t&&e.pointerType==='mouse'){showTip(t,e);}});
+  document.addEventListener('focusin',function(e){var t=tipTarget(e);if(t){showTip(t);}});
+  document.addEventListener('focusout',hideTip);
+  window.addEventListener('scroll',hideTip,{passive:true});
+
+  function colChart(node){
+    var c=JSON.parse(node.getAttribute('data-cfg'));
+    var W=Math.max(240,Math.floor(node.clientWidth)),H=c.h||168,mt=24,mb=26,ml=4,mr=4;
+    node.textContent='';
+    var svg=el('svg',{viewBox:'0 0 '+W+' '+H,role:'img','aria-label':c.aria||''},node);
+    var n=c.cats.length,band=(W-ml-mr)/n,bw=Math.min(24,band*0.5),y0=H-mb,ph=y0-mt;
+    var max=c.max||Math.max.apply(null,c.vals.filter(function(v){return v!=null;}));
+    el('line',{x1:ml,x2:W-mr,y1:y0+0.5,y2:y0+0.5,'class':'axis'},svg);
+    c.vals.forEach(function(v,i){
+      var cx=ml+band*(i+0.5);
+      el('text',{x:cx,y:H-8,'class':'tick','text-anchor':'middle'},svg,c.cats[i]);
+      if(v==null){
+        var g0=el('g',{'class':'mark',tabindex:0,'data-tip':c.tips[i]},svg);
+        el('rect',{x:cx-band/2,y:0,width:band,height:y0,'class':'hit'},g0);
+        el('text',{x:cx,y:y0-8,'class':'nd','text-anchor':'middle'},g0,c.nd);
+        return;
+      }
+      var h=Math.max(2,ph*v/max),x=cx-bw/2,y=y0-h,r=Math.min(4,h);
+      var d='M'+x+','+y0+'V'+(y+r)+'Q'+x+','+y+' '+(x+r)+','+y+'H'+(x+bw-r)+'Q'+(x+bw)+','+y+' '+(x+bw)+','+(y+r)+'V'+y0+'Z';
+      var g=el('g',{'class':'mark',tabindex:0,'data-tip':c.tips[i]},svg);
+      el('rect',{x:cx-band/2,y:0,width:band,height:y0,'class':'hit'},g);
+      el('path',{d:d,'class':'bar '+(c.cls||'s1')},g);
+      el('text',{x:cx,y:y-6,'class':'val','text-anchor':'middle'},g,c.labels[i]);
+    });
+  }
+
+  function priceChart(node){
+    var c=JSON.parse(node.getAttribute('data-cfg'));
+    var W=Math.max(260,Math.floor(node.clientWidth)),H=c.h||250,mt=20,mb=28,ml=30,mr=16;
+    node.textContent='';
+    var svg=el('svg',{viewBox:'0 0 '+W+' '+H,role:'img','aria-label':c.aria||''},node);
+    function X(t){return ml+(t-c.t0)/(c.t1-c.t0)*(W-ml-mr);}
+    function Y(v){return mt+(1-v/c.ymax)*(H-mt-mb);}
+    c.yTicks.forEach(function(v){
+      el('line',{x1:ml,x2:W-mr,y1:Y(v)+0.5,y2:Y(v)+0.5,'class':v===0?'axis':'grid'},svg);
+      el('text',{x:ml-6,y:Y(v)+4,'class':'tick','text-anchor':'end'},svg,String(v));
+    });
+    c.years.forEach(function(yr){el('text',{x:X(yr),y:H-8,'class':'tick','text-anchor':'middle'},svg,String(yr));});
+    el('line',{x1:ml,x2:W-mr,y1:Y(c.bv)+0.5,y2:Y(c.bv)+0.5,'class':'ref'},svg);
+    el('text',{x:ml+4,y:Y(c.bv)-5,'class':'lbl'},svg,c.bvLabel);
+    var path='';c.pts.forEach(function(p){if(p.k==='a'){path+=(path?'L':'M')+X(p.t)+','+Y(p.v);}});
+    el('path',{d:path,'class':'line s1'},svg);
+    c.pts.forEach(function(p){
+      var x=X(p.t),y=Y(p.v);
+      var g=el('g',{'class':'mark',tabindex:0,'data-tip':p.tip},svg);
+      el('circle',{cx:x,cy:y,r:16,'class':'hit'},g);
+      el('circle',{cx:x,cy:y,r:5,'class':'dot '+(p.k==='a'?'s1':'s2')},g);
+      var anchor=p.anchor||'middle',dx=anchor==='start'?9:(anchor==='end'?-9:0);
+      el('text',{x:x+dx,y:p.pos==='below'?y+19:(dx?y+4:y-11),'class':'val','text-anchor':anchor},g,p.label);
+    });
+  }
+
+  function renderAll(){
+    document.querySelectorAll('[data-chart="col"]').forEach(colChart);
+    document.querySelectorAll('[data-chart="price"]').forEach(priceChart);
+  }
+  renderAll();
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(renderAll,160);});
+
+  /* contents: mark the section being read; keep the chip in view on the phone layout */
+  var links=[].slice.call(document.querySelectorAll('.toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var byId={};links.forEach(function(a){byId[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(a){a.classList.remove('on');});
+          var a=byId[e.target.id];
+          if(a){a.classList.add('on');var ol=a.closest('ol');if(ol&&ol.scrollWidth>ol.clientWidth){ol.scrollTo({left:a.offsetLeft-ol.clientWidth/2+a.offsetWidth/2,behavior:'auto'});}}
+        }
+      });
+    },{rootMargin:'-18% 0px -72% 0px'});
+    document.querySelectorAll('main section[id]').forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>
